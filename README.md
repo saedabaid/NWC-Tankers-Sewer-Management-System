@@ -23,6 +23,7 @@ The system manages operational workflows, service requests, scheduling, and trac
 ### Backend
 
 * ASP.NET MVC
+* Dapper
 * C#
 * CQRS Pattern
 * Entity Framework
