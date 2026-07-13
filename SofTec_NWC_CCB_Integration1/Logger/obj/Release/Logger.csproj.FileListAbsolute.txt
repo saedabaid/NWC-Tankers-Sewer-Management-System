@@ -1,0 +1,13 @@
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\Logger\bin\Release\configHandler\loggerConfig.config
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\Logger\bin\Release\Logger.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\Logger\bin\Release\Logger.pdb
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\Logger\obj\Release\Logger.csprojAssemblyReference.cache
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\Logger\obj\Release\Logger.csproj.CoreCompileInputs.cache
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\Logger\obj\Release\Logger.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\Logger\obj\Release\Logger.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\Logger\bin\Release\configHandler\loggerConfig.config
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\Logger\bin\Release\Logger.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\Logger\bin\Release\Logger.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\Logger\obj\Release\Logger.csproj.CoreCompileInputs.cache
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\Logger\obj\Release\Logger.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\Logger\obj\Release\Logger.pdb

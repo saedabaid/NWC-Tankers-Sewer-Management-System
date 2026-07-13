@@ -1,0 +1,368 @@
+2021-08-25 09:37:27.0548 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 09:37:40.4711 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfZsaAtWQYczgO2Y5HzFVUc4znvn96TqdOJ81i04qWQNm","TimeStamp":"2021-08-25T09:37:40.2058566+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:03:12.8626 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:03:29.2216 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:03:40.8637 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-0219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:04:23.1831 INFO -- SaveTankerPermit - Response: "517bd6ef-077f-4953-8bdf-e9d8df8648dc" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:09:10.0891 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-0219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"0001-01-01T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:09:10.2164 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:09:18.7059 INFO -- SaveTankerPermit - Request: {"PlateNo":"T00-0219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"0001-01-01T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:09:20.9733 INFO -- SaveTankerPermit - Response: "c5761c39-6dea-44a1-95a3-c851a9453295" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:11:12.5727 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-0219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:11:12.8559 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:11:18.0042 INFO -- SaveTankerPermit - Request: {"PlateNo":"T30-0219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:11:21.1697 INFO -- SaveTankerPermit - Response: "589893c5-8056-48eb-accf-f33e6fc036e3" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:12:26.4515 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-0219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:12:26.7248 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:12:37.4631 INFO -- SaveTankerPermit - Request: {"PlateNo":"T40-0219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:12:40.9657 INFO -- SaveTankerPermit - Response: "144f7a87-a9c0-4fae-b3a1-1b6cf37884d9" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:13:55.8166 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-0219","transporterBrand":"4324234234","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:13:55.9771 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:14:02.0888 INFO -- SaveTankerPermit - Request: {"PlateNo":"T55-0219","transporterBrand":"4324234234","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:14:03.6416 INFO -- SaveTankerPermit - Response: "4439098c-74e8-4e53-8e21-7fe24ebd2ae5" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:22:54.3187 INFO -- SaveTankerPermit - Request: {"PlateNo":"T55-0219","transporterBrand":"4324234234","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":null,"entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:22:54.4973 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:23:15.4021 INFO -- SaveTankerPermit - Request: {"PlateNo":"T30-1219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":null,"entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:23:15.5462 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:23:42.7949 INFO -- SaveTankerPermit - Request: {"PlateNo":"T30-1219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":null,"entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 10:23:42.9929 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:24:23.8374 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:24:31.3048 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfSJ4dcy2P0-E-nNES_3aXsQTjfJNm7HUW6JLeViN9FEB","TimeStamp":"2021-08-25T11:24:30.9746249+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:24:43.3071 INFO -- SaveTankerPermit - Request: {"PlateNo":"T30-1219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:25:00.2998 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:25:09.1027 INFO -- SaveTankerPermit - Request: {"PlateNo":"T30-1219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:25:24.5004 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:25:47.7717 INFO -- SaveTankerPermit - Request: {"PlateNo":"T30-1219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:26:03.1905 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:27:38.9907 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:27:50.8204 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfSCaYmuBUd1w7ooMwitVULlEHsL8n6CdUh_I3YDHVwnZ","TimeStamp":"2021-08-25T11:27:50.7306784+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:28:00.4747 INFO -- SaveTankerPermit - Request: {"PlateNo":"T30-1219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:28:05.5834 INFO -- SaveTankerPermit - Response: "13654d77-bfe5-418a-9b99-d620b6323818" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:45:50.5289 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:45:55.4822 INFO -- AuthenticateUser - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:45:55.4822 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at FromCCBToNWC.API.Controllers.UserController.AuthenticateUser(ElmAccountDTO accountDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\UserController.cs:line 53
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:47:42.2819 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:47:43.7997 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfbTfc4kYTvY_Y5Ygmo5a9BuJRESGw1DCbSyv5UKs-26z","TimeStamp":"2021-08-25T11:47:43.7748097+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:47:58.8104 INFO -- SaveTankerPermit - Request: {"PlateNo":"T30-1219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:47:59.9169 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:48:09.5830 INFO -- SaveTankerPermit - Request: {"PlateNo":"T301-1219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:48:14.7563 INFO -- SaveTankerPermit - Response: "5e6ea518-4e75-45dd-b928-47db2814feac" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:51:38.6835 INFO -- SaveTankerPermit - Request: {"PlateNo":"T301-1214","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:51:41.1129 INFO -- SaveTankerPermit - Response: "35b44895-c539-49dc-9b15-cbc74cf3145b" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:53:07.6730 INFO -- SaveTankerPermit - Request: {"PlateNo":"T301-1014","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:53:10.7514 INFO -- SaveTankerPermit - Response: "b8dd2ed2-af7d-4a14-a290-628bf25fd70b" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:57:56.3421 INFO -- SaveTankerPermit - Request: {"PlateNo":"T301-1024","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 11:58:05.1499 INFO -- SaveTankerPermit - Response: "9b72e339-84e9-4910-8b3f-fc1fe0b9f31a" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:11:31.5020 INFO -- SaveTankerPermit - Request: {"PlateNo":"T301-1724","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:11:43.6484 INFO -- SaveTankerPermit - Response: "7a5fd602-907a-4217-9649-a9f79e06ec7b" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:14:46.6547 INFO -- SaveTankerPermit - Request: {"PlateNo":"T301-1724","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:14:47.5151 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:14:53.2747 INFO -- SaveTankerPermit - Request: {"PlateNo":"T301-1324","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:15:01.3991 INFO -- SaveTankerPermit - Response: "b18da487-0285-4f97-815e-452b8685c6cb" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:52:46.1627 INFO -- SaveTankerPermit - Request: {"PlateNo":"T301-1324","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":null,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:52:50.4090 INFO -- SaveTankerPermit - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:52:50.4090 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:7335
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ELM_NWC_Integration.Controllers.TankerController.SaveTankerPermit(TankerDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 62
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:7335
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:7335
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:54:19.1198 INFO -- SaveTankerPermit - Request: {"PlateNo":"T301-1324","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":null,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:54:27.6532 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:55:50.2943 INFO -- SaveTankerPermit - Request: {"PlateNo":"T301-1324","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":null,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:55:50.3772 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:55:54.2333 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:55:54.5866 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfY7XPDQmsuAukbIFN5QfiMdu2x6m5zEWHAdEVS2XRlkc","TimeStamp":"2021-08-25T12:55:54.5218682+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:56:02.4668 INFO -- SaveTankerPermit - Request: {"PlateNo":"T301-1324","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":null,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:56:02.6114 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:56:23.6247 INFO -- SaveTankerPermit - Request: {"PlateNo":"T301-1324","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":null,"TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:56:23.8648 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:58:32.6401 INFO -- SaveTankerPermit - Request: {"PlateNo":"T301-1324","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:58:33.5802 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:58:39.0537 INFO -- SaveTankerPermit - Request: {"PlateNo":"Tf01-1324","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-25 12:58:51.0490 INFO -- SaveTankerPermit - Response: "062b837e-7f70-435b-a12e-beb011cac2e3" --  
+
+----------------------------------------------------------------------------
+ 

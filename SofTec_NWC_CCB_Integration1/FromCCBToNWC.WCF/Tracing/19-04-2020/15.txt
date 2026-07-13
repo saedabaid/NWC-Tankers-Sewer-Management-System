@@ -1,0 +1,45 @@
+>>>>>>>>>>>>>>>>>(CCB->NWC) (WCF-service)  (Create-Order) (recived-XML-schema): schema:{Input: {Order: {ORDERNUMBER : 10000000022, CREDTTM: 19-04-2020 9:02:00.000, SCHEDDTTM: 19-04-2020 9:02:00.000, SERVICETYPE: W, CONTACTNAME: dd, CONTACTMOBILE: 2342342341, TANKERSIZE: 32, COMMENT: test comment, CONFIRMATIONCODE: 4356781, SOURCEAPPLICATION: NWC, CISDIVISION: AS, TRANSACTIONID: , TANKERACCESSORIES: System.Collections.Generic.List`1[System.String] }, Account: {ACCOUNTID: ACC00502, CUSTOMERCLASS: 1 }, Person: {PERSONID : PERSONID0502, PERSONPRIMARYNAME: أحمد على, PERSONIDTYPE : 1, PERSONIDVALUE: IQAMA502, MOBILENUMBER: 4564564555 }, Premise: {PREMISEID: PREM05021, XYCOORDINATESGF: 46.693553 24.687140} }} >>>>>>>>>>>>>>>>> Time:19/04/2020 3:57:11 PM
+
+>>>>>>>>>>>>>>>>>(CCB->NWC) (WCF-service)  (Create-Order) (parseTO-XML): <Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Input>
+    <Order>
+      <ORDERNUMBER>10000000022</ORDERNUMBER>
+      <CREDTTM>19-04-2020 9:02:00.000</CREDTTM>
+      <SCHEDDTTM>19-04-2020 9:02:00.000</SCHEDDTTM>
+      <SERVICETYPE>W</SERVICETYPE>
+      <CONTACTNAME>dd</CONTACTNAME>
+      <CONTACTMOBILE>2342342341</CONTACTMOBILE>
+      <TANKERSIZE>32</TANKERSIZE>
+      <COMMENT>test comment</COMMENT>
+      <CONFIRMATIONCODE>4356781</CONFIRMATIONCODE>
+      <TANKERACCESSORIES />
+      <SOURCEAPPLICATION>NWC</SOURCEAPPLICATION>
+      <CISDIVISION>AS</CISDIVISION>
+      <TRANSACTIONID />
+    </Order>
+    <Account>
+      <ACCOUNTID>ACC00502</ACCOUNTID>
+      <CUSTOMERCLASS>1</CUSTOMERCLASS>
+    </Account>
+    <Person>
+      <PERSONID>PERSONID0502</PERSONID>
+      <PERSONPRIMARYNAME>أحمد على</PERSONPRIMARYNAME>
+      <PERSONIDTYPE>1</PERSONIDTYPE>
+      <PERSONIDVALUE>IQAMA502</PERSONIDVALUE>
+      <MOBILENUMBER>4564564555</MOBILENUMBER>
+    </Person>
+    <Premise>
+      <PREMISEID>PREM05021</PREMISEID>
+      <XYCOORDINATESGF>46.693553 24.687140</XYCOORDINATESGF>
+    </Premise>
+  </Input>
+</Schema> >>>>>>>>>>>>>>>>> Time:19/04/2020 3:57:11 PM
+
+>>>>>>>>>>>>>>>>>(CCB->NWC) (WCF-service)  (Create-Order) (parseTO-DTO): NWC_CCB_Integration.DTO.Models.WorkOrderRequestDTO >>>>>>>>>>>>>>>>> Time:19/04/2020 3:57:11 PM
+
+>>>>>>>>>>>>>>>>>(CCB->NWC) (WCF-service)  (Create-Order) (validate-DTO): 10000000022 >>>>>>>>>>>>>>>>> Time:19/04/2020 3:57:14 PM
+
+>>>>>>>>>>>>>>>>>(CCB->NWC) (WCF-service)  (Create-Order) (validate-DTO): 10000000022 (IsValid): False >>>>>>>>>>>>>>>>> Time:19/04/2020 3:57:14 PM
+
+>>>>>>>>>>>>>>>>>(CCB->NWC) (WCF-service)  (Create-Order) (validate-DTO): 10000000022 (Validations-Errors): OrderNumberAlreadyExist >>>>>>>>>>>>>>>>> Time:19/04/2020 3:57:14 PM
+

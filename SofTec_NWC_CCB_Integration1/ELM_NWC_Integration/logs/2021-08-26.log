@@ -1,0 +1,551 @@
+2021-08-26 10:33:43.3597 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:33:43.8071 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfQY752k1sJGy_y19wJfpQAHG0NOwUWz4e1yjCY-E4lyY","TimeStamp":"2021-08-26T10:33:43.7653162+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:34:01.7344 INFO -- SaveTankerPermit - Request: {"PlateNo":"T8v01-1324","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:34:15.9416 INFO -- SaveTankerPermit - Response: "5df78a89-1eb1-4de3-9044-410359562bff" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:48:02.9330 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:48:07.2038 INFO -- AuthenticateUser - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:48:07.2038 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at FromCCBToNWC.API.Controllers.UserController.AuthenticateUser(ElmAccountDTO accountDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\UserController.cs:line 53
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:50:37.0613 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":null,"Password":null,"StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:50:37.6945 INFO -- AuthenticateUser - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:51:03.2346 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:51:07.2278 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfZOta4eWSFoCuV8I3QF3-ojVfyDt27cTZ4kpckyVPBGY","TimeStamp":"2021-08-26T10:51:07.15967+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:51:21.4732 INFO -- SaveTankerPermit - Request: {"PlateNo":"ب ب ب 5555","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:51:27.3437 INFO -- SaveTankerPermit - Response: "ffcedefd-5c9d-4e25-9550-9b5b77beb9df" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:57:29.6867 INFO -- SaveTankerPermit - Request: {"PlateNo":"ب ب ب 5555","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:57:38.8939 INFO -- SaveTankerPermit - Response: "cc2fa681-c6e8-40ab-92ff-ae6518692360" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:57:56.3613 INFO -- TankerAccessDTO - Request: {"PlateNo":"ب ب ب 5555","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:57:56.7723 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:58:06.6632 INFO -- TankerAccessDTO - Request: {"PlateNo":"ب ب ب 5555","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:58:07.5647 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:59:37.2047 INFO -- TankerAccessDTO - Request: {"PlateNo":"ب ب ب 5555","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 10:59:37.5636 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:00:17.0052 INFO -- TankerAccessDTO - Request: {"PlateNo":"ب ب ب 5555","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:00:17.6222 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:01:22.9669 INFO -- TankerAccessDTO - Request: {"PlateNo":"ب ب ب 5555","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:03:03.2978 INFO -- TankerAccessAuthorization - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:03:03.2978 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ELM_NWC_Integration.Controllers.TankerController.TankerAccessAuthorization(TankerAccessDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 157
+---> (Inner Exception #0) System.Threading.Tasks.TaskCanceledException: A task was canceled.<---
+ -- System.Threading.Tasks.TaskCanceledException: A task was canceled. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:06:23.7037 INFO -- TankerAccessDTO - Request: {"PlateNo":"ب ب ب 5555","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:06:26.0333 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"346dabdb-37af-4f39-9350-fdb9f9d14124","ResponseTime":"2021-08-26T11:06:25.8458704+03:00","Value":true} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:06:34.1488 INFO -- SaveTankerPermit - Request: {"PlateNo":"س ب ب 5555","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:06:37.9793 INFO -- SaveTankerPermit - Response: "1f021f60-ea14-46cc-91f2-6bcb88ee20d1" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:07:00.5721 INFO -- TankerAccessDTO - Request: {"PlateNo":"س ب ب 5555","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:07:03.4818 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"a4bfdb06-3924-4248-b188-17fa86e33872","ResponseTime":"2021-08-26T11:07:03.4002578+03:00","Value":true} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:09:03.1129 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:09:05.1147 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWffQM7ER6B_KSfv_ajtwzGkLyU5cZiNpx60Mblk-F8fuM","TimeStamp":"2021-08-26T11:09:05.1048154+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:09:25.4137 INFO -- SaveTankerPermit - Request: {"PlateNo":"ش ب ب 5555","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:09:29.4447 INFO -- SaveTankerPermit - Response: "b1995013-868a-4c45-b985-5bb28549a3a4" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:09:49.6343 INFO -- TankerAccessDTO - Request: {"PlateNo":"ش ب ب 5555","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:09:52.3826 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:09:58.7651 INFO -- TankerAccessDTO - Request: {"PlateNo":"ش ب ب 5555","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:10:00.4818 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:10:49.6197 INFO -- TankerAccessDTO - Request: {"PlateNo":"ش ب ب 5555","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:10:52.9441 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"7dd6b613-fbd2-45a9-8acc-c1f1b1dfecbe","ResponseTime":"2021-08-26T11:10:52.864345+03:00","Value":true} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:11:00.6906 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:11:01.7714 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWffkOEM4FLx_rpGA997A2ar7Az-DTaBhNl_qY4T9jX4Na","TimeStamp":"2021-08-26T11:11:01.7664869+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:11:16.9572 INFO -- SaveTankerPermit - Request: {"PlateNo":"ش ش ب 5555","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:11:19.0570 INFO -- SaveTankerPermit - Response: "a3c0eca9-97d2-4a00-b57a-ed0d7ca6c2a8" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:11:48.4893 INFO -- SaveTankerPermit - Request: {"PlateNo":"ش ش ب ي555","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:11:50.2664 INFO -- SaveTankerPermit - Response: "5122ce8c-b9e2-49cb-9359-8596078af19e" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:12:29.0091 INFO -- SaveTankerPermit - Request: {"PlateNo":"ش ش ب ي5552","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:12:32.5696 INFO -- SaveTankerPermit - Response: "9fc7253e-c10d-4c96-bba8-2be167500bfe" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:17:31.1991 INFO -- SaveTankerPermit - Request: {"PlateNo":"ش ش ب ي5552","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:17:32.0307 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:17:41.6444 INFO -- SaveTankerPermit - Request: {"PlateNo":"ش ش ب ي55521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:17:44.7068 INFO -- SaveTankerPermit - Response: "00195d94-40ca-4271-9bfa-54b7976e853c" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:19:57.0331 INFO -- TankerAccessDTO - Request: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:20:00.5560 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:20:38.0301 INFO -- TankerAccessDTO - Request: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:20:42.1792 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:21:19.2864 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"0001-01-01T00:00:00","Value":false,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:21:19.4355 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:21:41.4503 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"0001-01-01T00:00:00","Value":false,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:21:41.5735 INFO -- TankerCheckStatus - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:21:56.1914 INFO -- TankerAccessDTO - Request: {"PlateNo":"T10-g219","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"0001-01-01T00:00:00","Value":false,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:21:56.3399 INFO -- TankerCheckStatus - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:22:17.3288 INFO -- TankerAccessDTO - Request: {"PlateNo":"T10-g219","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"0001-01-01T00:00:00","Value":true,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:22:17.4884 INFO -- TankerCheckStatus - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:36:39.2608 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:36:54.1658 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfREwmsd_4C6BRCC5XMLRhu5ckIYb_mEotgjc1zEbE2D7","TimeStamp":"2021-08-26T11:36:54.0097135+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:38:05.8713 INFO -- SaveTankerPermit - Request: {"PlateNo":"a ش ب ي55521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:38:17.4503 INFO -- SaveTankerPermit - Response: "306d6249-72a3-44d9-975a-049339646a48" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:39:06.7165 INFO -- SaveTankerPermit - Sending wrong, expired or invalid authentication token. --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:39:28.2695 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش ب ي55521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"2629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:39:29.8133 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"09c8ea22-5fa8-4c5a-8ad6-444c96476225","ResponseTime":"2021-08-26T11:39:29.6660655+03:00","Value":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:41:42.3531 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش ب ي55521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"2629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:41:43.6003 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"1f6fb6f0-3fef-4335-99ce-09bfdfc664b0","ResponseTime":"2021-08-26T11:41:43.4576955+03:00","status":true} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:41:58.0729 INFO -- TankerAccessDTO - Request: {"PlateNo":"T10-g219","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"0001-01-01T00:00:00","status":true,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:41:58.9220 INFO -- TankerCheckStatus - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:42:22.9931 INFO -- TankerAccessDTO - Request: {"PlateNo":"T10-g219","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"2021-08-08T00:00:00","status":true,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:42:24.7393 INFO -- TankerCheckStatus - Response: {"TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","ResponseTime":"2021-08-26T11:42:23.7128553+03:00","status":true} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:42:35.3117 INFO -- TankerAccessDTO - Request: {"PlateNo":"T10-g219","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 11:42:35.6653 INFO -- TankerCheckStatus - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:08:29.5681 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:08:34.3382 INFO -- AuthenticateUser - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:08:34.3382 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at FromCCBToNWC.API.Controllers.UserController.AuthenticateUser(ElmAccountDTO accountDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\UserController.cs:line 53
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:10:38.5112 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:12:06.3114 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfaz2D96mOPM4tWLjUK5G0ydEcgoryf0VpkZYzUKH4HVE","TimeStamp":"2021-08-26T15:12:06.1303712+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:12:27.4358 INFO -- SaveTankerPermit - Request: {"PlateNo":"a ش 0 ي55521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:12:40.1306 INFO -- SaveTankerPermit - Response: "4e74b8f9-6da2-4d2a-b00e-a3d154d86765" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:13:14.1150 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش 0 ي55521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"2629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:13:15.3779 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:13:28.0319 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش 0 ي55521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"2629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:13:29.2659 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:14:18.8220 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش 0 ي55521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"2629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:14:19.3987 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"1aacc584-3dbf-4a04-808d-c2dbf92db1a7","ResponseTime":"2021-08-26T15:14:19.2817457+03:00","status":true} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:15:02.2483 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش 0 ي55521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:15:02.3361 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:15:12.0818 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش 0 ي55521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:15:12.8778 INFO -- TankerCheckStatus - Response: {"TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","ResponseTime":"2021-08-26T15:15:12.7980757+03:00","status":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:20:36.0922 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش 0 ي55521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"2629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:20:36.9370 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"b01f62ff-dda6-4c63-bdf9-fae5eff1b0ca","ResponseTime":"2021-08-26T15:20:36.7490268+03:00","status":true} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:20:51.1918 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش 0 ي55521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:20:51.3471 INFO -- TankerCheckStatus - Response: {"TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","ResponseTime":"2021-08-26T15:20:51.3402119+03:00","status":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:31:56.4315 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:32:13.0966 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfeQ4cuI9UQi2TXtsf4n2nzQ93ckNIZIeF6q0JRBd3ZzP","TimeStamp":"2021-08-26T15:32:12.5477035+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:32:36.4199 INFO -- SaveTankerPermit - Request: {"PlateNo":"a ش 0 15521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:32:45.2570 INFO -- SaveTankerPermit - Response: "9198bbad-28f8-4e75-b0e0-2700f92ab8ff" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:33:09.8774 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش 0 15521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"2629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:33:10.8534 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:33:32.4679 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش 0 15521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"2629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:33:33.2187 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"7a14e5a3-a8f5-4c1e-b9b6-6d0a0e095a36","ResponseTime":"2021-08-26T15:33:33.1968561+03:00","value":true} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:33:49.9043 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش 0 15521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:33:50.0091 INFO -- TankerCheckStatus - Response: {"TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","ResponseTime":"2021-08-26T15:33:49.953887+03:00","value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:33:55.9157 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش 0 15521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"2021-08-08T00:00:00","status":true,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:33:56.4882 INFO -- TankerCheckStatus - Response: {"TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","ResponseTime":"2021-08-26T15:33:56.0413875+03:00","value":true} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:34:00.7560 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش 0 15521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:34:00.8541 INFO -- TankerCheckStatus - Response: {"TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","ResponseTime":"2021-08-26T15:34:00.8481402+03:00","value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:34:08.9982 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش 0 15521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:34:09.0820 INFO -- TankerCheckStatus - Response: {"TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","ResponseTime":"2021-08-26T15:34:09.0760937+03:00","value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:34:13.3176 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش 0 15521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"2021-08-08T00:00:00","status":true,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:34:13.4790 INFO -- TankerCheckStatus - Response: {"TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","ResponseTime":"2021-08-26T15:34:13.4076291+03:00","value":true} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:34:18.4416 INFO -- TankerAccessDTO - Request: {"PlateNo":"a ش 0 15521","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-26 15:34:18.5643 INFO -- TankerCheckStatus - Response: {"TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","ResponseTime":"2021-08-26T15:34:18.5587924+03:00","value":false} --  
+
+----------------------------------------------------------------------------
+ 

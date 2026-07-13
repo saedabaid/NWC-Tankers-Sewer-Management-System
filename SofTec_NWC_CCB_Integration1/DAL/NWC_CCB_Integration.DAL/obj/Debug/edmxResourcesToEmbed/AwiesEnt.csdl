@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AltairStagingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="NWC_Int_ObjectStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StatusID" Type="Int32" />
+    <Property Name="StatusTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTypeID" Type="Int32" />
+    <Property Name="DTO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="XML" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Token" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Retrials" Type="Int32" Nullable="false" />
+    <Property Name="FailureMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="AltairStagingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="NWC_Int_ObjectStatus" EntityType="Self.NWC_Int_ObjectStatus" />
+  </EntityContainer>
+</Schema>

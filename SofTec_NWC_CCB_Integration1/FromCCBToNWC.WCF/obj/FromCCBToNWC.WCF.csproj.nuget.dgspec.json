@@ -1,0 +1,194 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\FromCCBToNWC.WCF\\FromCCBToNWC.WCF.csproj": {}
+  },
+  "projects": {
+    "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\BLL\\NWC_CCB_Integration.BLL\\NWC_CCB.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\BLL\\NWC_CCB_Integration.BLL\\NWC_CCB.BLL.csproj",
+        "projectName": "NWC_CCB.BLL",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\BLL\\NWC_CCB_Integration.BLL\\NWC_CCB.BLL.csproj",
+        "packagesPath": "C:\\Users\\saed\\.nuget\\packages\\",
+        "outputPath": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\BLL\\NWC_CCB_Integration.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\saed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\DAL\\NWC_CCB_Integration.DAL\\NWC_CCB.DAL.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\DAL\\NWC_CCB_Integration.DAL\\NWC_CCB.DAL.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\DTO\\NWC_CCB_Integration.DTO\\NWC_CCB.DTO.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\DTO\\NWC_CCB_Integration.DTO\\NWC_CCB.DTO.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.6.2, )"
+            },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\DAL\\NWC_CCB_Integration.DAL\\NWC_CCB.DAL.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\DAL\\NWC_CCB_Integration.DAL\\NWC_CCB.DAL.csproj",
+        "projectName": "NWC_CCB.DAL",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\DAL\\NWC_CCB_Integration.DAL\\NWC_CCB.DAL.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\DTO\\NWC_CCB_Integration.DTO\\NWC_CCB.DTO.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\DTO\\NWC_CCB_Integration.DTO\\NWC_CCB.DTO.csproj",
+        "projectName": "NWC_CCB.DTO",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\DTO\\NWC_CCB_Integration.DTO\\NWC_CCB.DTO.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\Logger\\Logger.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\Logger\\Logger.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\FromCCBToNWC.WCF\\FromCCBToNWC.WCF.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\FromCCBToNWC.WCF\\FromCCBToNWC.WCF.csproj",
+        "projectName": "FromCCBToNWC.WCF",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\FromCCBToNWC.WCF\\FromCCBToNWC.WCF.csproj",
+        "packagesPath": "C:\\Users\\saed\\.nuget\\packages\\",
+        "outputPath": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\FromCCBToNWC.WCF\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\saed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\BLL\\NWC_CCB_Integration.BLL\\NWC_CCB.BLL.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\BLL\\NWC_CCB_Integration.BLL\\NWC_CCB.BLL.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\DAL\\NWC_CCB_Integration.DAL\\NWC_CCB.DAL.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\DAL\\NWC_CCB_Integration.DAL\\NWC_CCB.DAL.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\DTO\\NWC_CCB_Integration.DTO\\NWC_CCB.DTO.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\DTO\\NWC_CCB_Integration.DTO\\NWC_CCB.DTO.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.9, )"
+            },
+            "NLog.Config": {
+              "target": "Package",
+              "version": "[4.7.9, )"
+            },
+            "NLog.Schema": {
+              "target": "Package",
+              "version": "[4.7.9, )"
+            },
+            "NLog.Web": {
+              "target": "Package",
+              "version": "[4.12.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\Logger\\Logger.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\Logger\\Logger.csproj",
+        "projectName": "Logger",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_NWC_CCB_Integration1\\Logger\\Logger.csproj"
+      },
+      "frameworks": {
+        "net45": {}
+      }
+    }
+  }
+}

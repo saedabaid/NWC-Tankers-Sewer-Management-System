@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="56362d65-b27d-4bc3-923a-62df06455788" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:12572/WorkOrder.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WorkOrder.disco" MetadataType="Disco" ID="3f8c5f90-ea47-425b-a52a-a2dec4a88acb" SourceId="1" SourceUrl="http://localhost:12572/WorkOrder.svc?disco" />
+    <MetadataFile FileName="WorkOrder1.xsd" MetadataType="Schema" ID="ebe7dfc8-e18d-4040-b954-cd04e188383d" SourceId="1" SourceUrl="http://localhost:12572/WorkOrder.svc?xsd=xsd2" />
+    <MetadataFile FileName="WorkOrder2.xsd" MetadataType="Schema" ID="9f45ed8c-c158-490d-af72-d775ce47c934" SourceId="1" SourceUrl="http://localhost:12572/WorkOrder.svc?xsd=xsd1" />
+    <MetadataFile FileName="WorkOrder3.xsd" MetadataType="Schema" ID="deb98f3a-5eb1-454e-a067-90c6444a74f2" SourceId="1" SourceUrl="http://localhost:12572/WorkOrder.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="752467d8-3b9b-4ff1-8f09-1b00adeb840e" SourceId="1" SourceUrl="http://localhost:12572/WorkOrder.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

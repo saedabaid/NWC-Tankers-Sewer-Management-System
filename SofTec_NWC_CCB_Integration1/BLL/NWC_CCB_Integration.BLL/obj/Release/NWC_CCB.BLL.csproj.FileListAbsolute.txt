@@ -1,0 +1,44 @@
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Release\NWC_CCB_Integration.BLL.dll.config
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Release\NWC_CCB_Integration.BLL.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Release\NWC_CCB_Integration.BLL.pdb
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Release\EntityFramework.SqlServer.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Release\EntityFramework.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Release\FluentValidation.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Release\System.Net.Http.Formatting.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Release\Newtonsoft.Json.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Release\System.ComponentModel.Annotations.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Release\NWC_CCB_Integration.DAL.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Release\NWC_CCB_Integration.DTO.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Release\NWC_CCB_Integration.DAL.pdb
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Release\NWC_CCB_Integration.DAL.dll.config
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Release\NWC_CCB_Integration.DTO.pdb
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\obj\Release\NWC_CCB.BLL.csprojAssemblyReference.cache
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\obj\Release\NWC_CCB.BLL.csproj.CoreCompileInputs.cache
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\obj\Release\NWC_CCB.BLL.csproj.CopyComplete
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\obj\Release\NWC_CCB_Integration.BLL.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\obj\Release\NWC_CCB_Integration.BLL.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\obj\Release\NWC_CCB.BLL.csproj.AssemblyReference.cache
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\obj\Release\NWC_CCB.BLL.csproj.CoreCompileInputs.cache
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\obj\Release\NWC_CCB_Integration.BLL.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\obj\Release\NWC_CCB_Integration.BLL.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\NWC_CCB_Integration.BLL.dll.config
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\NWC_CCB_Integration.BLL.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\NWC_CCB_Integration.BLL.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\EntityFramework.SqlServer.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\EntityFramework.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\FluentValidation.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\System.Net.Http.Formatting.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\Newtonsoft.Json.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\System.ComponentModel.Annotations.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\Logger.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\NWC_CCB_Integration.DAL.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\NWC_CCB_Integration.DTO.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\System.Web.ApplicationServices.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\System.Web.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\NWC_CCB_Integration.DAL.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\NWC_CCB_Integration.DAL.dll.config
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\NWC_CCB_Integration.DTO.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\Logger.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\System.Web.xml
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\bin\Release\System.Web.ApplicationServices.xml
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\BLL\NWC_CCB_Integration.BLL\obj\Release\NWC_CCB.BLL.csproj.CopyComplete

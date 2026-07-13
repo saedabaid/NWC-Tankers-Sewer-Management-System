@@ -1,0 +1,546 @@
+2021-08-04 19:26:21.4168 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","Name":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:26:26.3325 INFO -- AuthenticateUser - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:26:26.3653 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at FromCCBToNWC.API.Controllers.UserController.AuthenticateUser(AccountDTO accountDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\UserController.cs:line 51
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:27:43.4246 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","Name":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:28:05.5580 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfbx9VUUM-5wkDDBiSBWDoE2b2BP4XiLNbkE4yQx2ee28","TimeStamp":"2021-08-04T19:28:05.294454+03:00","Status":0,"Context":{"MobileAccount":null}} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:29:02.1390 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":null,"transporterProductionYear":null,"licenseNo":null,"licenseExpiryDate":null,"entranceDate":null,"TankCapacity":null,"plateNo_Numbers":null,"plateNo_Characters":null,"TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:29:04.0111 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:30:34.9059 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":null,"transporterProductionYear":null,"licenseNo":null,"licenseExpiryDate":null,"entranceDate":null,"TankCapacity":null,"plateNo_Numbers":null,"plateNo_Characters":null,"TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:31:27.4125 INFO -- SaveTankerPermit - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:31:27.4125 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at ELM_NWC_Integration.Controllers.TankerController.SaveTankerPermit(String token, TankerDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 52
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:41:18.2247 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":null,"transporterProductionYear":null,"licenseNo":null,"licenseExpiryDate":null,"entranceDate":null,"TankCapacity":null,"plateNo_Numbers":null,"plateNo_Characters":null,"TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:41:38.8662 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:42:44.5218 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":null,"transporterProductionYear":null,"licenseNo":null,"licenseExpiryDate":null,"entranceDate":null,"TankCapacity":null,"plateNo_Numbers":null,"plateNo_Characters":null,"TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:45:14.4443 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:45:34.5956 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":null,"transporterProductionYear":null,"licenseNo":null,"licenseExpiryDate":null,"entranceDate":null,"TankCapacity":null,"plateNo_Numbers":null,"plateNo_Characters":null,"TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:45:42.2834 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:53:27.0257 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":null,"transporterProductionYear":null,"licenseNo":null,"licenseExpiryDate":null,"entranceDate":null,"TankCapacity":null,"plateNo_Numbers":null,"plateNo_Characters":null,"TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:53:33.2001 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:54:35.8244 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":null,"transporterProductionYear":null,"licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:54:41.6647 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:54:51.0100 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":null,"transporterProductionYear":null,"licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:54:53.8483 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:55:48.8211 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":null,"transporterProductionYear":null,"licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:55:51.9126 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:56:02.4050 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":null,"transporterProductionYear":null,"licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:56:02.5855 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:56:39.5526 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":null,"transporterProductionYear":null,"licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:57:10.6485 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:57:29.8807 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":null,"transporterProductionYear":null,"licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:58:24.0040 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 19:58:43.3933 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":null,"transporterProductionYear":null,"licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:01:27.9922 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":null,"transporterProductionYear":null,"licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:01:34.1493 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:28:01.9793 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":"12","transporterProductionYear":"08/03/2021","licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:28:56.1931 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:29:06.9234 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","Name":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:29:21.7201 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfR8naA2y9CrwLTPwSSYjQOmthu9Zw7Z5JICx8nyg7Mc1","TimeStamp":"2021-08-04T20:29:21.2508419+03:00","Status":0,"Context":{"MobileAccount":null}} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:29:37.1621 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":"12","transporterProductionYear":"08/03/2021","licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:31:05.4850 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:31:28.2245 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":"12","transporterProductionYear":"08/03/2021","licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:32:19.9958 INFO -- SaveTankerPermit - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:32:19.9958 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ELM_NWC_Integration.Controllers.TankerController.SaveTankerPermit(String token, TankerDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 52
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:34:03.2982 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":"12","transporterProductionYear":"08/03/2021","licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:34:44.7447 INFO -- SaveTankerPermit - Response: "" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:35:21.9856 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":"12","transporterProductionYear":"08/03/2021","licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:49:59.2009 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":"12","transporterProductionYear":"08/03/2021","licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:52:22.5249 INFO -- SaveTankerPermit - Response: "" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:52:40.6413 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":"12","transporterProductionYear":"08/03/2021","licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:53:15.8409 INFO -- SaveTankerPermit - Response: "" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:53:35.2869 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":"12","transporterProductionYear":"08/03/2021","licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:54:08.0301 INFO -- SaveTankerPermit - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:54:08.0301 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ELM_NWC_Integration.Controllers.TankerController.SaveTankerPermit(String token, TankerDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 52
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:56:10.3799 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":"12","transporterProductionYear":"08/03/2021","licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:57:24.6197 INFO -- SaveTankerPermit - Response: "" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:57:55.5879 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":"12","transporterProductionYear":"08/03/2021","licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:58:26.0685 INFO -- SaveTankerPermit - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 20:58:26.0685 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ELM_NWC_Integration.Controllers.TankerController.SaveTankerPermit(String token, TankerDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 52
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:00:02.6157 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":"12","transporterProductionYear":"08/03/2021","licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:01:10.1530 INFO -- SaveTankerPermit - Response: "3a9bc7c2-46a0-4211-8c37-71db12cf6262" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:03:55.4449 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":"12","transporterProductionYear":"44","licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:04:29.0569 INFO -- SaveTankerPermit - Response: "f629a4d1-c945-46e7-9cea-a8d3bca19475" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:12:00.6052 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":"12","transporterProductionYear":"44","licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:12:01.8891 INFO -- SaveTankerPermit - Response: "7624a6b8-3188-49de-9620-2546167c00e1" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:14:05.3666 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-6242","permitNo":"7624a6b8-3188-49de-9620-2546167c00e1","TransactionId":null,"DateTime":"0001-01-01T00:00:00","Status":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:14:06.0221 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:14:20.8769 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-6242","permitNo":"7624a6b8-3188-49de-9620-2546167c00e1","TransactionId":null,"DateTime":"0001-01-01T00:00:00","Status":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:14:21.0649 INFO -- TankerAccessAuthorization - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:14:21.0649 ERROR -- System.FormatException: The format of value '"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfR8naA2y9CrwLTPwSSYjQOmthu9Zw7Z5JICx8nyg7Mc1' is invalid.
+   at System.Net.Http.Headers.HttpHeaderParser.ParseValue(String value, Object storeValue, Int32& index)
+   at System.Net.Http.Headers.HttpHeaders.ParseAndAddValue(String name, HeaderStoreItemInfo info, String value)
+   at System.Net.Http.Headers.HttpHeaders.Add(String name, String value)
+   at ELM_NWC_Integration.Controllers.TankerController.TankerAccessAuthorization(String token, TankerAccessDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 114 -- System.FormatException: The format of value '"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfR8naA2y9CrwLTPwSSYjQOmthu9Zw7Z5JICx8nyg7Mc1' is invalid.
+   at System.Net.Http.Headers.HttpHeaderParser.ParseValue(String value, Object storeValue, Int32& index)
+   at System.Net.Http.Headers.HttpHeaders.ParseAndAddValue(String name, HeaderStoreItemInfo info, String value)
+   at System.Net.Http.Headers.HttpHeaders.Add(String name, String value)
+   at ELM_NWC_Integration.Controllers.TankerController.TankerAccessAuthorization(String token, TankerAccessDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 114 
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:14:50.7651 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-6242","permitNo":"7624a6b8-3188-49de-9620-2546167c00e1","TransactionId":null,"DateTime":"0001-01-01T00:00:00","Status":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:14:50.8413 INFO -- TankerAccessAuthorization - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:14:50.8413 ERROR -- System.FormatException: The format of value '"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfR8naA2y9CrwLTPwSSYjQOmthu9Zw7Z5JICx8nyg7Mc1' is invalid.
+   at System.Net.Http.Headers.HttpHeaderParser.ParseValue(String value, Object storeValue, Int32& index)
+   at System.Net.Http.Headers.HttpHeaders.ParseAndAddValue(String name, HeaderStoreItemInfo info, String value)
+   at System.Net.Http.Headers.HttpHeaders.Add(String name, String value)
+   at ELM_NWC_Integration.Controllers.TankerController.TankerAccessAuthorization(String token, TankerAccessDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 114 -- System.FormatException: The format of value '"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfR8naA2y9CrwLTPwSSYjQOmthu9Zw7Z5JICx8nyg7Mc1' is invalid.
+   at System.Net.Http.Headers.HttpHeaderParser.ParseValue(String value, Object storeValue, Int32& index)
+   at System.Net.Http.Headers.HttpHeaders.ParseAndAddValue(String name, HeaderStoreItemInfo info, String value)
+   at System.Net.Http.Headers.HttpHeaders.Add(String name, String value)
+   at ELM_NWC_Integration.Controllers.TankerController.TankerAccessAuthorization(String token, TankerAccessDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 114 
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:15:05.6962 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-6242","permitNo":"7624a6b8-3188-49de-9620-2546167c00e1","TransactionId":null,"DateTime":"0001-01-01T00:00:00","Status":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:15:10.1651 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"a5d3a722-5957-49a3-a3bd-91e217cc59e8","permitNo":"7624a6b8-3188-49de-9620-2546167c00e1","plateNo":"TF-6242","CreationTime":"2021-08-04T21:15:09.6055587+03:00","Status":false,"Reason":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:15:36.6832 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-6242","permitNo":"7624a6b8-3188-49de-9620-2546167c00e1","TransactionId":null,"DateTime":"0001-01-01T00:00:00","Status":false,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 21:15:38.1072 INFO -- TankerCheckStatus - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 22:07:02.1050 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","Name":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 22:07:21.4416 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfXFZ7OMQ6RmDwx0x-CeUPB4ynBf61zyBguEN1oheasd4","TimeStamp":"2021-08-04T22:07:21.2175416+03:00","Status":0,"Context":{"MobileAccount":null}} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 22:07:59.8280 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-6242","transporterBrand":"12","transporterProductionYear":"44","licenseNo":"1","licenseExpiryDate":"2021-08-03T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 22:08:08.1255 INFO -- SaveTankerPermit - Response: "d4eadcd8-e9a7-4786-a24d-a692976c499b" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 22:08:45.6095 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-6242","permitNo":"d4eadcd8-e9a7-4786-a24d-a692976c499b","TransactionId":null,"DateTime":"0001-01-01T00:00:00","Status":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 22:08:45.9756 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 22:08:56.3254 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-6242","permitNo":"d4eadcd8-e9a7-4786-a24d-a692976c499b","TransactionId":null,"DateTime":"0001-01-01T00:00:00","Status":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 22:08:57.1855 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 22:09:54.2398 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-6242","permitNo":"d4eadcd8-e9a7-4786-a24d-a692976c499b","TransactionId":null,"DateTime":"0001-01-01T00:00:00","Status":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 22:09:55.3789 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"2068686a-be70-427f-bc5c-b50518afc502","permitNo":"d4eadcd8-e9a7-4786-a24d-a692976c499b","plateNo":"TF-6242","CreationTime":"2021-08-04T22:09:55.0510877+03:00","Status":false,"Reason":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 22:10:10.1506 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-6242","permitNo":"d4eadcd8-e9a7-4786-a24d-a692976c499b","TransactionId":null,"DateTime":"0001-01-01T00:00:00","Status":false,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 22:10:10.5305 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 22:10:19.6799 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-6242","permitNo":"d4eadcd8-e9a7-4786-a24d-a692976c499b","TransactionId":null,"DateTime":"0001-01-01T00:00:00","Status":false,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-04 22:10:20.5843 INFO -- TankerCheckStatus - Response: null --  
+
+----------------------------------------------------------------------------
+ 

@@ -1,0 +1,136 @@
+Exception : Time:19/04/2020 1:27:46 PM
+---------
+System.Xml.XmlException: Data at the root level is invalid. Line 1, position 1.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Xml.Linq.XElement.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XElement.Parse(String text, LoadOptions options)
+   at System.Xml.Linq.XElement.Parse(String text)
+   at NWC_CCB_Integration.DTO.Helpers.XMLConverter.ToXElement[T](Object obj) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DTO\NWC_CCB_Integration.DTO\Helpers\XMLConverter.cs:line 22
+   at FromCCBToNWC.WCF.WorkOrder.CreateWorkOrder(Schema schema) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\WorkOrder.svc.cs:line 42
+
+Source :
+---------
+System.Xml
+
+StackTrace :
+---------
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Xml.Linq.XElement.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XElement.Parse(String text, LoadOptions options)
+   at System.Xml.Linq.XElement.Parse(String text)
+   at NWC_CCB_Integration.DTO.Helpers.XMLConverter.ToXElement[T](Object obj) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DTO\NWC_CCB_Integration.DTO\Helpers\XMLConverter.cs:line 22
+   at FromCCBToNWC.WCF.WorkOrder.CreateWorkOrder(Schema schema) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\WorkOrder.svc.cs:line 42
+__________________________________
+
+Exception : Time:19/04/2020 1:30:36 PM
+---------
+System.Xml.XmlException: Data at the root level is invalid. Line 1, position 1.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Xml.Linq.XElement.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XElement.Parse(String text, LoadOptions options)
+   at System.Xml.Linq.XElement.Parse(String text)
+   at NWC_CCB_Integration.DTO.Helpers.XMLConverter.ToXElement[T](Object obj) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DTO\NWC_CCB_Integration.DTO\Helpers\XMLConverter.cs:line 22
+   at FromCCBToNWC.WCF.WorkOrder.CreateWorkOrder(Schema schema) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\WorkOrder.svc.cs:line 42
+
+Source :
+---------
+System.Xml
+
+StackTrace :
+---------
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Xml.Linq.XElement.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XElement.Parse(String text, LoadOptions options)
+   at System.Xml.Linq.XElement.Parse(String text)
+   at NWC_CCB_Integration.DTO.Helpers.XMLConverter.ToXElement[T](Object obj) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DTO\NWC_CCB_Integration.DTO\Helpers\XMLConverter.cs:line 22
+   at FromCCBToNWC.WCF.WorkOrder.CreateWorkOrder(Schema schema) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\WorkOrder.svc.cs:line 42
+__________________________________
+
+Exception : Time:19/04/2020 1:39:50 PM
+---------
+System.Xml.XmlException: Data at the root level is invalid. Line 1, position 1.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Xml.Linq.XElement.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XElement.Parse(String text, LoadOptions options)
+   at System.Xml.Linq.XElement.Parse(String text)
+   at NWC_CCB_Integration.DTO.Helpers.XMLConverter.ToXElement[T](Object obj) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DTO\NWC_CCB_Integration.DTO\Helpers\XMLConverter.cs:line 22
+   at FromCCBToNWC.WCF.WorkOrder.CreateWorkOrder(Schema schema) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\WorkOrder.svc.cs:line 42
+
+Source :
+---------
+System.Xml
+
+StackTrace :
+---------
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Xml.Linq.XElement.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XElement.Parse(String text, LoadOptions options)
+   at System.Xml.Linq.XElement.Parse(String text)
+   at NWC_CCB_Integration.DTO.Helpers.XMLConverter.ToXElement[T](Object obj) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DTO\NWC_CCB_Integration.DTO\Helpers\XMLConverter.cs:line 22
+   at FromCCBToNWC.WCF.WorkOrder.CreateWorkOrder(Schema schema) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\WorkOrder.svc.cs:line 42
+__________________________________
+
+Exception : Time:19/04/2020 1:44:46 PM
+---------
+System.Xml.XmlException: Data at the root level is invalid. Line 1, position 1.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Xml.Linq.XElement.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XElement.Parse(String text, LoadOptions options)
+   at System.Xml.Linq.XElement.Parse(String text)
+   at NWC_CCB_Integration.DTO.Helpers.XMLConverter.ToXElement[T](Object obj) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DTO\NWC_CCB_Integration.DTO\Helpers\XMLConverter.cs:line 22
+   at FromCCBToNWC.WCF.WorkOrder.CreateWorkOrder(Schema schema) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\WorkOrder.svc.cs:line 42
+
+Source :
+---------
+System.Xml
+
+StackTrace :
+---------
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Xml.Linq.XElement.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XElement.Parse(String text, LoadOptions options)
+   at System.Xml.Linq.XElement.Parse(String text)
+   at NWC_CCB_Integration.DTO.Helpers.XMLConverter.ToXElement[T](Object obj) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DTO\NWC_CCB_Integration.DTO\Helpers\XMLConverter.cs:line 22
+   at FromCCBToNWC.WCF.WorkOrder.CreateWorkOrder(Schema schema) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\WorkOrder.svc.cs:line 42
+__________________________________
+

@@ -1,0 +1,120 @@
+2021-09-05 11:13:45.0339 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"1030758351","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:13:50.4548 INFO -- AuthenticateUser - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:14:17.6632 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:14:18.1097 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfT5pIJUYwNNj5T7a5tuSBALHgf6J_aytmpzMu3LVUEQp","TimeStamp":"2021-09-05T11:14:18.0786142+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:18:16.9004 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:18:17.2613 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfZ1iNZSxnqPyUDobGNy4Tr6f3tsQtcG-pRqTwCHUCUaH","TimeStamp":"2021-09-05T11:18:17.2514125+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:18:44.4525 INFO -- SaveTankerPermit - Request: {"PlateNo":"x1سf3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2023-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed4","DriverIDType":"2","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:18:49.1191 INFO -- SaveTankerPermit - Response: "d99c589d-2622-4cb3-8b2d-dd07398bcfa0" --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:20:40.8217 INFO -- SaveTankerPermit - Request: {"PlateNo":"x1سf3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2023-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed4","DriverIDType":"2","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:20:41.6090 INFO -- SaveTankerPermit - Response: "d99c589d-2622-4cb3-8b2d-dd07398bcfa0" --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:23:39.0582 INFO -- SaveTankerPermit - Request: {"PlateNo":"x1سf3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2023-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed4","DriverIDType":"2","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:23:40.3147 INFO -- SaveTankerPermit - Response: "d99c589d-2622-4cb3-8b2d-dd07398bcfa0" --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:26:58.3888 INFO -- SaveTankerPermit - Request: {"PlateNo":"x1سf3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2023-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed4","DriverIDType":"2","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:26:59.6901 INFO -- SaveTankerPermit - Response: "d99c589d-2622-4cb3-8b2d-dd07398bcfa0" --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:32:13.5585 INFO -- SaveTankerPermit - Request: {"PlateNo":"x1سf3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2023-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed4","DriverIDType":"2","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:32:18.0203 INFO -- SaveTankerPermit - Response: "d99c589d-2622-4cb3-8b2d-dd07398bcfa0" --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:43:42.5687 INFO -- SaveTankerPermit - Request: {"PlateNo":"x1سf3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2023-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed55","DriverIDType":"3","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:43:43.4562 INFO -- SaveTankerPermit - Response: "d99c589d-2622-4cb3-8b2d-dd07398bcfa0" --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:44:08.2627 INFO -- SaveTankerPermit - Request: {"PlateNo":"x1سf3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2023-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed55","DriverIDType":"3","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:44:09.0540 INFO -- SaveTankerPermit - Response: "d99c589d-2622-4cb3-8b2d-dd07398bcfa0" --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:46:05.5304 INFO -- SaveTankerPermit - Request: {"PlateNo":"x1سf3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2023-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed55","DriverIDType":"3","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:46:06.3972 INFO -- SaveTankerPermit - Response: "d99c589d-2622-4cb3-8b2d-dd07398bcfa0" --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:50:25.2686 INFO -- SaveTankerPermit - Request: {"PlateNo":"x1سf3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2023-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed55","DriverIDType":"3","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:50:30.7931 INFO -- SaveTankerPermit - Response: "d99c589d-2622-4cb3-8b2d-dd07398bcfa0" --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:53:20.5687 INFO -- SaveTankerPermit - Request: {"PlateNo":"x1سf3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2023-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed55","DriverIDType":"3","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:53:22.0631 INFO -- SaveTankerPermit - Response: "d99c589d-2622-4cb3-8b2d-dd07398bcfa0" --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:56:52.6745 INFO -- SaveTankerPermit - Request: {"PlateNo":"x1سf3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2023-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed55","DriverIDType":"3","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 11:56:54.0202 INFO -- SaveTankerPermit - Response: "d99c589d-2622-4cb3-8b2d-dd07398bcfa0" --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 12:12:08.2664 INFO -- SaveTankerPermit - Request: {"PlateNo":"x1سf3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2023-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed577","DriverIDType":"3","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-05 12:12:09.9733 INFO -- SaveTankerPermit - Response: "d99c589d-2622-4cb3-8b2d-dd07398bcfa0" --  
+
+----------------------------------------------------------------------------
+ 

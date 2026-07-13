@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NWC_CCB_Integration.DTO.Models.AvailableTankerSize" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NWC_CCB_Integration.DTO.Models.AvailableTankerSize" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Schema">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Input" nillable="true" type="tns:Input" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Schema" nillable="true" type="tns:Schema" />
+  <xs:complexType name="Input">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="XCOORDINATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YCOORDINATE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Input" nillable="true" type="tns:Input" />
+  <xs:complexType name="Output">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ERRORCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ERRORDESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RESPONSECODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RESPONSEDESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TANKERSIZES" nillable="true" type="tns:ArrayOfTankerSize" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Output" nillable="true" type="tns:Output" />
+  <xs:complexType name="ArrayOfTankerSize">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TankerSize" nillable="true" type="tns:TankerSize" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTankerSize" nillable="true" type="tns:ArrayOfTankerSize" />
+  <xs:complexType name="TankerSize">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TANKERACCESSORIZES" nillable="true" type="tns:ArrayOfTankerAccessorize" />
+      <xs:element minOccurs="0" name="TANKERDELIVERYDDTM" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TANKERPRICE" type="xs:float" />
+      <xs:element minOccurs="0" name="TANKERSIZEVALUE" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TankerSize" nillable="true" type="tns:TankerSize" />
+  <xs:complexType name="ArrayOfTankerAccessorize">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TankerAccessorize" nillable="true" type="tns:TankerAccessorize" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTankerAccessorize" nillable="true" type="tns:ArrayOfTankerAccessorize" />
+  <xs:complexType name="TankerAccessorize">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACCESSORIZEID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ACCESSORIZEPRICE" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TankerAccessorize" nillable="true" type="tns:TankerAccessorize" />
+</xs:schema>

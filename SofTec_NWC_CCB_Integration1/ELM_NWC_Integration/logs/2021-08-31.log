@@ -1,0 +1,97 @@
+2021-08-31 12:25:58.6095 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-31 12:26:38.8057 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfWQ8fsks74kPM0ivvAb4R3uCk3c9z2fmdIfbyekKhxuC","TimeStamp":"2021-08-31T12:26:38.5952178+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-31 12:27:50.8977 INFO -- SaveTankerPermit - Request: {"PlateNo":"x2 s f3","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":null,"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-31 12:29:26.3365 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-31 12:29:38.7899 INFO -- SaveTankerPermit - Request: {"PlateNo":"x2 s f3","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":null,"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-31 12:30:44.7093 INFO -- SaveTankerPermit - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-31 12:30:44.7123 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ELM_NWC_Integration.Controllers.TankerController.SaveTankerPermit(TankerDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 62
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-08-31 12:34:18.4647 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-31 12:34:25.7521 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWffdzRGW4Z-1WINcQd5L2Wk_-vUg21Tx8NapAF0r4sWzm","TimeStamp":"2021-08-31T12:34:25.682459+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-31 12:34:50.4151 INFO -- SaveTankerPermit - Request: {"PlateNo":"x2 s s 3","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":null,"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-31 12:34:59.7948 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-31 12:35:23.1079 INFO -- SaveTankerPermit - Request: {"PlateNo":"x2 s f3","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-31 12:35:24.9904 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-31 12:35:43.7163 INFO -- SaveTankerPermit - Request: {"PlateNo":"x2 s ds3","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-31 12:35:51.7710 INFO -- SaveTankerPermit - Response: "0dcd98dd-bfbd-4c4f-bafb-513f54594b6e" --  
+
+----------------------------------------------------------------------------
+ 

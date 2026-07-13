@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WL5G3N2:definitions xmlns:WL5G3N3="http://www.echannelGetLocationInfoProject.org" xmlns:WL5G3N5="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:WL5G3N0="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:WL5G3N1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:WL5G3N4="http://xmlns.oracle.com/eChannelApplication/echannelGetLocationInfoProject/echannelGetLocationInfo" name="echannelGetLocationInfo" targetNamespace="http://xmlns.oracle.com/eChannelApplication/echannelGetLocationInfoProject/echannelGetLocationInfo" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/">
+  <WL5G3N0:Policy WL5G3N1:Id="wss_username_token_service_policy">
+    <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+      <wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+          <wsp:Policy>
+            <sp:WssUsernameToken10 />
+          </wsp:Policy>
+        </sp:UsernameToken>
+      </wsp:Policy>
+    </sp:SupportingTokens>
+  </WL5G3N0:Policy>
+  <WL5G3N2:types>
+    <xsd:schema xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.oracle.com/eChannelApplication/echannelGetLocationInfoProject/echannelGetLocationInfo" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://www.echannelGetLocationInfoProject.org" xmlns:inp1="http://www.echannelGetLocationInfoProject.org" xmlns:WL5G3N2="http://xmlns.oracle.com/eChannelApplication/echannelGetLocationInfoProject/echannelGetLocationInfo" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="http://10.56.59.80:21303/NwcCompass/echannelGetLocationInfoProject/echannelGetLocationInfoHttp?SCHEMA%2FechannelGetLocationInfoProject%2FResources%2FSchemas%2FechannelGetLocationInfo" namespace="http://www.echannelGetLocationInfoProject.org" />
+    </xsd:schema>
+  </WL5G3N2:types>
+  <WL5G3N2:message name="requestMessage">
+    <WL5G3N2:part name="echannelGetLocationInfoInputMessage" element="WL5G3N3:echannelGetLocationInfoRequest" />
+  </WL5G3N2:message>
+  <WL5G3N2:message name="replyMessage">
+    <WL5G3N2:part name="echannelGetLocationInfoOutputMessage" element="WL5G3N3:echannelGetLocationInfoResponse" />
+  </WL5G3N2:message>
+  <WL5G3N2:portType name="echannelGetLocationInfoPortType">
+    <WL5G3N2:operation name="echannelGetLocationInfoOperation">
+      <WL5G3N2:input message="WL5G3N4:requestMessage" />
+      <WL5G3N2:output message="WL5G3N4:replyMessage" />
+    </WL5G3N2:operation>
+  </WL5G3N2:portType>
+  <WL5G3N2:binding name="echannelGetLocationInfoBinding" type="WL5G3N4:echannelGetLocationInfoPortType">
+    <WL5G3N5:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <WL5G3N0:Policy>
+      <WL5G3N0:PolicyReference URI="#wss_username_token_service_policy" />
+    </WL5G3N0:Policy>
+    <WL5G3N2:operation name="echannelGetLocationInfoOperation">
+      <WL5G3N5:operation soapAction="echannelGetLocationInfoOperation" style="document" />
+      <WL5G3N2:input>
+        <WL5G3N5:body use="literal" namespace="http://xmlns.oracle.com/eChannelApplication/echannelGetLocationInfoProject/echannelGetLocationInfo" />
+      </WL5G3N2:input>
+      <WL5G3N2:output>
+        <WL5G3N5:body use="literal" namespace="http://xmlns.oracle.com/eChannelApplication/echannelGetLocationInfoProject/echannelGetLocationInfo" />
+      </WL5G3N2:output>
+    </WL5G3N2:operation>
+  </WL5G3N2:binding>
+  <WL5G3N2:service name="echannelGetLocationInfoService">
+    <WL5G3N2:documentation>OSB Service</WL5G3N2:documentation>
+    <WL5G3N2:port name="echannelGetLocationInfoPort" binding="WL5G3N4:echannelGetLocationInfoBinding">
+      <WL5G3N5:address location="http://10.56.59.80:21303/NwcCompass/echannelGetLocationInfoProject/echannelGetLocationInfoHttp" />
+    </WL5G3N2:port>
+  </WL5G3N2:service>
+</WL5G3N2:definitions>

@@ -1,0 +1,177 @@
+2021-08-14 12:33:19.5429 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-123452","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 12:34:02.0449 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 12:38:25.5514 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 12:40:05.7395 INFO -- AuthenticateUser - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 12:40:05.7395 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at FromCCBToNWC.API.Controllers.UserController.AuthenticateUser(ElmAccountDTO accountDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\UserController.cs:line 53
+---> (Inner Exception #0) System.Threading.Tasks.TaskCanceledException: A task was canceled.<---
+ -- System.Threading.Tasks.TaskCanceledException: A task was canceled. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 12:41:37.5674 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 12:41:38.2897 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfRX5JPIwr2GGlKLWJcgE2W1nUwqOUNR_F0DNB2n8YnMQ","TimeStamp":"2021-08-14T12:41:38.2219638+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 12:41:54.0399 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-123452","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 12:41:56.5794 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 12:42:27.1704 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12340","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 12:42:28.2013 INFO -- SaveTankerPermit - Response: "dd19f518-0cf3-4db3-b339-5c110e1461ae" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 12:42:47.3727 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"dd19f518-0cf3-4db3-b339-5c110e1461ae","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 12:42:48.6048 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 12:42:59.5754 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"dd19f518-0cf3-4db3-b339-5c110e1461ae","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 12:43:00.5685 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"174685cb-bf65-4f95-92db-9299fba2caab","ResponseTime":"2021-08-14T12:43:00.4359272+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 12:51:53.0840 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"dd19f518-0cf3-4db3-b339-5c110e1461ae","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 12:58:55.0535 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"66c162c9-9ac3-4d9d-9342-b4ff8abb32b7","ResponseTime":"2021-08-14T12:52:12.7493468+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 13:00:08.1338 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"dd19f518-0cf3-4db3-b339-5c110e1461ae","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 13:02:08.0214 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"b26857e1-1360-47f9-bda5-573825308973","ResponseTime":"2021-08-14T13:01:13.6509894+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 13:02:14.0067 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"dd19f518-0cf3-4db3-b339-5c110e1461ae","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 13:04:37.3019 INFO -- TankerAccessAuthorization - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 13:04:37.3019 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ELM_NWC_Integration.Controllers.TankerController.TankerAccessAuthorization(TankerAccessDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 138
+---> (Inner Exception #0) System.Threading.Tasks.TaskCanceledException: A task was canceled.<---
+ -- System.Threading.Tasks.TaskCanceledException: A task was canceled. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 13:20:50.0730 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"dd19f518-0cf3-4db3-b339-5c110e1461ae","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 13:24:07.7637 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"b201ef9a-8495-48f7-ad68-b509f9f6c795","ResponseTime":"2021-08-14T13:22:13.7897741+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 13:24:17.4235 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"dd19f518-0cf3-4db3-b339-5c110e1461ae","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 13:26:30.3229 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"a17e0c71-2a36-47bf-8061-74fb0146152d","ResponseTime":"2021-08-14T13:24:19.5126225+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 13:26:57.4656 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"dd19f518-0cf3-4db3-b339-5c110e1461ae","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 13:28:37.5356 INFO -- TankerAccessAuthorization - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 13:28:37.5356 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ELM_NWC_Integration.Controllers.TankerController.TankerAccessAuthorization(TankerAccessDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 138
+---> (Inner Exception #0) System.Threading.Tasks.TaskCanceledException: A task was canceled.<---
+ -- System.Threading.Tasks.TaskCanceledException: A task was canceled. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 18:20:10.8246 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 18:21:01.9984 INFO -- AuthenticateUser - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 18:21:53.6365 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 18:22:22.5249 INFO -- AuthenticateUser - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 18:23:33.5326 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 18:24:23.3325 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfTbGG8pyH2ONXtOQfgE0obaJVjdrgLLpw3f9pcQnofxk","TimeStamp":"2021-08-14T18:24:10.7137239+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 18:25:06.8847 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12340","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 18:25:24.8956 INFO -- SaveTankerPermit - Response: "8e4f5b76-0ea5-446d-89cf-88ad2131517b" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 18:51:17.7471 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"dd19f518-0cf3-4db3-b339-5c110e1461ae","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-14 18:52:32.1039 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 

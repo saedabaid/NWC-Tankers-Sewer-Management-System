@@ -1,0 +1,302 @@
+2021-09-29 08:41:38.8068 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000","Source":"ELM","TransactionId":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNz"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 08:41:45.7869 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfbk5S511uVxyxDOr9vacyndcN1ExL8NPeL_Cm-57mSUV","TimeStamp":"2021-09-29T08:41:45.6193244+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 08:46:32.8205 INFO -- SaveTankerPermit - Request: {"PlateNo":"أ أ أ 23895","transporterBrand":"TOYOTA","transporterProductionYear":"2019","licenseNo":"98959022","licenseExpiryDate":"2021-11-30T00:00:00","entranceDate":"2021-08-31T20:09:26.88","TankCapacity":22.0,"plateNo_Numbers":"9895","plateNo_Characters":"أ أ أ","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"2020-08-08"}],"PermitVersion":"01.00","PermitIssue":"2021-08-31","PermitExpiration":"2022-08-31T00:00:00","Source":"ELM","TransactionId":"fe767687-12b7-4340-92d9-a633e7b1b0a3"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 08:46:36.4315 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 08:46:45.2075 INFO -- SaveTankerPermit - Request: {"PlateNo":"أ أ أ ءx23895","transporterBrand":"TOYOTA","transporterProductionYear":"2019","licenseNo":"98959022","licenseExpiryDate":"2021-11-30T00:00:00","entranceDate":"2021-08-31T20:09:26.88","TankCapacity":22.0,"plateNo_Numbers":"9895","plateNo_Characters":"أ أ أ","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"2020-08-08"}],"PermitVersion":"01.00","PermitIssue":"2021-08-31","PermitExpiration":"2022-08-31T00:00:00","Source":"ELM","TransactionId":"fe767687-12b7-4340-92d9-a633e7b1b0a3"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 08:46:46.0954 INFO -- SaveTankerPermit - Response: "18645c2e-d430-4cdd-bd37-e282aecec37e" --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 08:47:53.0917 INFO -- TankerAccessDTO - Request: {"PlateNo":"x55س4f3","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"2629623e-6403-430e-a40c-d03dd3386d31","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 08:47:53.9914 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"be555eb1-ab2a-4dcf-89cb-47582c30d7cb","ResponseTime":"2021-09-29T08:47:53.7792265+03:00","value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:02:43.3876 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000","Source":"ELM","TransactionId":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNz"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:03:15.9996 INFO -- AuthenticateUser - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:04:28.4539 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":null,"Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000","Source":"ELM","TransactionId":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNz"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:04:28.8564 INFO -- AuthenticateUser - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:04:33.0126 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000","Source":"ELM","TransactionId":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNz"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:05:01.9803 INFO -- AuthenticateUser - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:05:16.4972 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000","Source":"ELM","TransactionId":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNz"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:06:17.3353 INFO -- AuthenticateUser - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:06:17.3353 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at FromCCBToNWC.API.Controllers.UserController.AuthenticateUser(ElmAccountDTO accountDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\UserController.cs:line 53
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:08:10.0609 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000","Source":"ELM","TransactionId":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNz"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:08:41.2761 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfXx0huuRCGdCS9KsdzerGEbTxHFM38r3jiyTs0y-tDM_","TimeStamp":"2021-09-29T10:08:41.0709748+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:08:52.4448 INFO -- SaveTankerPermit - Request: {"PlateNo":"أ أ أ ءx23895","transporterBrand":"TOYOTA","transporterProductionYear":"2019","licenseNo":"98959022","licenseExpiryDate":"2021-11-30T00:00:00","entranceDate":"2021-08-31T20:09:26.88","TankCapacity":22.0,"plateNo_Numbers":"9895","plateNo_Characters":"أ أ أ","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"2020-08-08"}],"PermitVersion":"01.00","PermitIssue":"2021-08-31","PermitExpiration":"2022-08-31T00:00:00","Source":"ELM","TransactionId":"fe767687-12b7-4340-92d9-a633e7b1b0a3"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:09:03.9303 INFO -- SaveTankerPermit - Response: "7a1d54c1-9a6a-4f50-af47-951bad8eb864" --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:09:54.2670 INFO -- TankerAccessDTO - Request: {"PlateNo":"أ أ أ ءx23895","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"2629623e-6403-430e-a40c-d03dd3386d31","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:09:56.5899 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:20:20.1355 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000","Source":"ELM","TransactionId":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNz"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:21:10.4345 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfW9dE_inPugNuSd8LI9i83MSp5plX8s_clqX3rh31TPB","TimeStamp":"2021-09-29T10:21:10.2256777+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:23:20.1318 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000","Source":"ELM","TransactionId":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNz"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:23:25.0773 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfaa8MAuQP9zDNgyf4vX4NpD7Xy-Fsfz9t6WRvxdYIeQL","TimeStamp":"2021-09-29T10:23:25.0193318+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:23:38.3443 INFO -- TankerAccessDTO - Request: {"PlateNo":"أ أ أ ءx23895","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"2629623e-6403-430e-a40c-d03dd3386d31","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:23:41.2086 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:24:29.0617 INFO -- TankerAccessDTO - Request: {"PlateNo":"أ أ أ ءx23895","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"2629623e-6403-430e-a40c-d03dd3386d31","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:26:09.4384 INFO -- TankerAccessAuthorization - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:26:09.4445 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ELM_NWC_Integration.Controllers.TankerController.TankerAccessAuthorization(TankerAccessDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 157
+---> (Inner Exception #0) System.Threading.Tasks.TaskCanceledException: A task was canceled.<---
+ -- System.Threading.Tasks.TaskCanceledException: A task was canceled. 
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:33:51.7483 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000","Source":"ELM","TransactionId":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNz"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:34:06.4739 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfXkroXB7_xhgu0r9xWJg1oKrQ0rMZ0A5ZUUv6ELX2ztn","TimeStamp":"2021-09-29T10:34:06.2327486+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:34:17.1087 INFO -- TankerAccessDTO - Request: {"PlateNo":"أ أ أ ءx23895","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"2629623e-6403-430e-a40c-d03dd3386d31","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:34:43.0105 INFO -- TankerAccessAuthorization - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:34:43.0105 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ELM_NWC_Integration.Controllers.TankerController.TankerAccessAuthorization(TankerAccessDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 157
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:35:38.7946 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000","Source":"ELM","TransactionId":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNz"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:36:06.7144 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfZfTG_ICrYMY1BHU8FDVV7gTfsmIHjJN6SjolVzCFLcE","TimeStamp":"2021-09-29T10:36:06.5143546+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:36:17.0453 INFO -- TankerAccessDTO - Request: {"PlateNo":"أ أ أ ءx23895","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"2629623e-6403-430e-a40c-d03dd3386d31","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:36:36.0623 INFO -- TankerAccessAuthorization - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:36:36.0623 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ELM_NWC_Integration.Controllers.TankerController.TankerAccessAuthorization(TankerAccessDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 157
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:41:51.3986 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000","Source":"ELM","TransactionId":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNz"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:42:06.0651 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfbedVlwhGk73jYGy08K4DTEbwEWFGCBSB5ShUZJ6rlIn","TimeStamp":"2021-09-29T10:42:05.7173133+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:42:23.2727 INFO -- TankerAccessDTO - Request: {"PlateNo":"أ أ أ ءx23895","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"2629623e-6403-430e-a40c-d03dd3386d31","RequestTime":"2021-08-08T00:00:00","status":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-29 10:42:25.0874 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"9e0349ee-b4e6-48ed-aec0-a2e924e21b3a","ResponseTime":"2021-09-29T10:42:24.9107115+03:00","value":true} --  
+
+----------------------------------------------------------------------------
+ 

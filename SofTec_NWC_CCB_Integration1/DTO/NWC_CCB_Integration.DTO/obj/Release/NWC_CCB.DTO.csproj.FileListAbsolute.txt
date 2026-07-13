@@ -1,0 +1,10 @@
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\DTO\NWC_CCB_Integration.DTO\bin\Release\configHandler\loggerConfig.config
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\DTO\NWC_CCB_Integration.DTO\bin\Release\NWC_CCB_Integration.DTO.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\DTO\NWC_CCB_Integration.DTO\bin\Release\NWC_CCB_Integration.DTO.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\DTO\NWC_CCB_Integration.DTO\bin\Release\Logger.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\DTO\NWC_CCB_Integration.DTO\bin\Release\Logger.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\DTO\NWC_CCB_Integration.DTO\obj\Release\NWC_CCB.DTO.csproj.AssemblyReference.cache
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\DTO\NWC_CCB_Integration.DTO\obj\Release\NWC_CCB.DTO.csproj.CoreCompileInputs.cache
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\DTO\NWC_CCB_Integration.DTO\obj\Release\NWC_CCB.DTO.csproj.CopyComplete
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\DTO\NWC_CCB_Integration.DTO\obj\Release\NWC_CCB_Integration.DTO.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\DTO\NWC_CCB_Integration.DTO\obj\Release\NWC_CCB_Integration.DTO.pdb

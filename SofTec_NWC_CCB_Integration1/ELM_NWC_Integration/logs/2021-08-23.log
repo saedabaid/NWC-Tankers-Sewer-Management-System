@@ -1,0 +1,83 @@
+2021-08-23 13:35:40.2283 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:35:58.1458 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWffeTRNOOH0PdGns27kiEASS2uZpts8_rwYCb1mvXu6Ld","TimeStamp":"2021-08-23T13:35:58.0559304+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:36:12.7721 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:37:53.0022 INFO -- SaveTankerPermit - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:37:53.0022 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ELM_NWC_Integration.Controllers.TankerController.SaveTankerPermit(TankerDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 62
+---> (Inner Exception #0) System.Threading.Tasks.TaskCanceledException: A task was canceled.<---
+ -- System.Threading.Tasks.TaskCanceledException: A task was canceled. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:39:22.9983 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:39:45.1551 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:39:51.7559 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:40:08.7511 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:42:19.7982 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:42:25.1763 INFO -- SaveTankerPermit - Response: "88c7af13-151b-48ac-a9b5-96442c2e2aad" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:42:49.4758 INFO -- TankerAccessDTO - Request: {"PlateNo":"T10-g219","permitNo":"88c7af13-151b-48ac-a9b5-96442c2e2aad","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:42:52.1093 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:43:04.7687 INFO -- TankerAccessDTO - Request: {"PlateNo":"T10-g219","permitNo":"88c7af13-151b-48ac-a9b5-96442c2e2aad","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:43:05.7807 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:43:23.0645 INFO -- TankerAccessDTO - Request: {"PlateNo":"T10-g219","permitNo":"88c7af13-151b-48ac-a9b5-96442c2e2aad","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:43:24.1662 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"1ca9dd50-a922-4073-9e3d-fa4dc746f8df","ResponseTime":"2021-08-23T13:43:24.0255122+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:43:29.1395 INFO -- TankerAccessDTO - Request: {"PlateNo":"T10-g219","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-23 13:43:31.1336 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"caf2f37b-68f4-4c9a-a218-f15e523dcf52","ResponseTime":"2021-08-23T13:43:30.9758112+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 

@@ -1,0 +1,52 @@
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\FromCCBToNWC.WCF.dll.config
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\FromCCBToNWC.WCF.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\FromCCBToNWC.WCF.pdb
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\EntityFramework.SqlServer.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\EntityFramework.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\FluentValidation.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\System.Net.Http.Formatting.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\Newtonsoft.Json.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\System.ComponentModel.Annotations.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\NWC_CCB_Integration.BLL.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\NWC_CCB_Integration.DAL.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\NWC_CCB_Integration.DTO.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\NWC_CCB_Integration.BLL.pdb
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\NWC_CCB_Integration.BLL.dll.config
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\NWC_CCB_Integration.DAL.pdb
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\NWC_CCB_Integration.DAL.dll.config
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\NWC_CCB_Integration.DTO.pdb
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\obj\Release\FromCCBToNWC.WCF.csprojAssemblyReference.cache
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\obj\Release\FromCCBToNWC.WCF.csproj.CoreCompileInputs.cache
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\obj\Release\FromCCBToNWC.WCF.csproj.CopyComplete
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\obj\Release\FromCCBToNWC.WCF.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\obj\Release\FromCCBToNWC.WCF.pdb
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\configHandler\loggerConfig.config
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\Logger.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\FromCCBToNWC.WCF\bin\Logger.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\obj\Release\FromCCBToNWC.WCF.csproj.AssemblyReference.cache
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\obj\Release\FromCCBToNWC.WCF.csproj.CoreCompileInputs.cache
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\obj\Release\FromCCBToNWC.WCF.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\obj\Release\FromCCBToNWC.WCF.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\NLog.config
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\FromCCBToNWC.WCF.dll.config
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\FromCCBToNWC.WCF.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\FromCCBToNWC.WCF.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\EntityFramework.SqlServer.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\EntityFramework.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\FluentValidation.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\System.Net.Http.Formatting.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\Newtonsoft.Json.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\NLog.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\NLog.Web.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\System.ComponentModel.Annotations.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\Logger.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\NWC_CCB_Integration.BLL.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\NWC_CCB_Integration.DAL.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\NWC_CCB_Integration.DTO.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\NWC_CCB_Integration.BLL.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\NWC_CCB_Integration.BLL.dll.config
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\NWC_CCB_Integration.DAL.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\NWC_CCB_Integration.DAL.dll.config
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\NWC_CCB_Integration.DTO.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\bin\Logger.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\FromCCBToNWC.WCF\obj\Release\FromCCBToNWC.WCF.csproj.CopyComplete

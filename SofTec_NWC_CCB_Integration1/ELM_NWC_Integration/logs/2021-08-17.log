@@ -1,0 +1,581 @@
+2021-08-17 11:23:52.9956 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"2851e777-6d01-4ff8-9327-38ffe623f0b4","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 11:23:53.6483 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 11:24:00.7562 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 11:24:15.8114 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfQl5uncgGmDPI6DSugXnmT97cWuxPTvlTjpJ9kdzoMoY","TimeStamp":"2021-08-17T11:24:15.4538534+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 11:24:36.2801 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12340","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 11:24:39.1606 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 11:24:52.0941 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12310","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 11:24:53.2003 INFO -- SaveTankerPermit - Response: "1cf3dc5e-e20f-46c4-8116-0084f5b8b323" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:12:33.4512 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:12:41.1674 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfc9wvGRgGyPjbCxvjG5kCXEavo_Lr7nBP4M9-hur8EEc","TimeStamp":"2021-08-17T13:12:40.9707967+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:12:58.7830 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12319","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:12:59.0494 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:13:08.1178 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12319","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:13:08.9905 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:13:29.9390 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12319","transporterBrand":"ar","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:13:31.0168 INFO -- SaveTankerPermit - Response: "5c446244-1a20-49b6-81dc-26ce1bfefaec" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:14:37.8744 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12319","transporterBrand":"اللغة","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:14:38.4384 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:15:30.6692 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12319","transporterBrand":"έξυπνος","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:15:31.2250 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:15:37.4947 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12319","transporterBrand":"abc","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:15:38.0555 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:16:42.6218 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12319","transporterBrand":"ar","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:16:43.5003 INFO -- SaveTankerPermit - Response: "111db1a8-805b-4b9d-8cbb-d3ef94ff5041" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:17:02.9785 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12319","permitNo":"111db1a8-805b-4b9d-8cbb-d3ef94ff5041","TransactionId":null,"DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:17:03.1620 ERROR -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:17:19.3778 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12319","permitNo":"111db1a8-805b-4b9d-8cbb-d3ef94ff5041","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:17:19.4232 ERROR -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:17:21.6643 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12319","permitNo":"111db1a8-805b-4b9d-8cbb-d3ef94ff5041","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:17:21.7126 ERROR -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:19:01.0804 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12319","permitNo":"111db1a8-805b-4b9d-8cbb-d3ef94ff5041","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:19:01.1448 ERROR -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:19:38.5787 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12319","permitNo":"111db1a8-805b-4b9d-8cbb-d3ef94ff5041","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:20:14.8514 ERROR -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:20:22.5696 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12319","permitNo":"111db1a8-805b-4b9d-8cbb-d3ef94ff5041","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:20:24.5884 ERROR -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:20:59.9030 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12319","permitNo":"111db1a8-805b-4b9d-8cbb-d3ef94ff5041","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:21:35.2362 ERROR -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:21:46.5243 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12319","permitNo":"111db1a8-805b-4b9d-8cbb-d3ef94ff5041","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"2021-08-08T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:27:09.5494 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:27:26.0725 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfcrsyWrBRteyw4O25BONqLLMPVILJHcvx484rLwl5a4Y","TimeStamp":"2021-08-17T13:27:25.8235088+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:27:40.5270 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12319","transporterBrand":"ar","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:27:41.8500 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:27:54.9327 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-02319","transporterBrand":"ar","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:27:55.7395 INFO -- SaveTankerPermit - Response: "15019766-f04b-469f-9f6f-5ac6a8f47361" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:28:31.1267 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:28:32.5713 ERROR -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:29:24.8301 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"00000000-0000-0000-0000-000000000000","RequestTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:29:25.8240 ERROR -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:30:01.1119 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:30:35.8512 ERROR -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL -- System.Exception: TankerAccessAuthorization - COMMIT_FAIL 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:31:02.5443 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:31:28.0516 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"9d5d3625-5048-4b28-b9a4-75eaf16ed2f1","ResponseTime":"2021-08-17T13:31:27.041318+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:31:51.6197 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:31:58.5649 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"f1ad44a8-1e3b-4076-8da4-56cd63180515","ResponseTime":"2021-08-17T13:31:55.590973+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:32:09.0298 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"00000000-0000-0000-0000-000000000000","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:32:09.6440 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:32:34.3907 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"00000000-0000-0000-0000-000000000000","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:32:35.0071 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:32:40.7719 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:32:41.6877 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"d7cd3bfb-c1fb-4858-b01f-cb3d2226750f","ResponseTime":"2021-08-17T13:32:41.461276+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:32:52.6150 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"00000000-0000-0000-0000-000000000000","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:32:53.2144 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:38:02.3581 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"00000000-0000-0000-0000-000000000000","RequestTime":"0001-01-01T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:38:02.9705 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:58:54.7868 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-02319","transporterBrand":"ar","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:58:56.1891 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:59:07.5073 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-02319","transporterBrand":"ar","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 13:59:08.0397 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:01:46.6575 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-02319","transporterBrand":"ar","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"","DriverIDType":null,"DriverIDValue":"","DriverMobileNumber":"","DriverDrivingLicenseNumber":"","DriverDrivingLicenseExpiryDate":""}]} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:01:51.0771 INFO -- SaveTankerPermit - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:01:51.0941 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:7335
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ELM_NWC_Integration.Controllers.TankerController.SaveTankerPermit(TankerDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 62
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:7335
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:7335
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:01:58.3975 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-02319","transporterBrand":"ar","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"","DriverIDType":null,"DriverIDValue":"","DriverMobileNumber":"","DriverDrivingLicenseNumber":"","DriverDrivingLicenseExpiryDate":""}]} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:02:36.7482 INFO -- SaveTankerPermit - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:02:36.7482 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:7335
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ELM_NWC_Integration.Controllers.TankerController.SaveTankerPermit(TankerDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 62
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:7335
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:7335
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:03:32.1450 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-02319","transporterBrand":"ar","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"","DriverIDType":null,"DriverIDValue":"","DriverMobileNumber":"","DriverDrivingLicenseNumber":"","DriverDrivingLicenseExpiryDate":""}]} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:03:58.1269 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:04:58.7425 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-g2319","transporterBrand":"ar","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"","DriverIDType":null,"DriverIDValue":"","DriverMobileNumber":"","DriverDrivingLicenseNumber":"","DriverDrivingLicenseExpiryDate":""}]} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:05:00.8525 INFO -- SaveTankerPermit - Response: "9a1e82c3-2785-4de5-88fa-6169d2778b77" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:08:19.8652 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-g2319","transporterBrand":"ar","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"","DriverIDType":null,"DriverIDValue":"","DriverMobileNumber":"","DriverDrivingLicenseNumber":"","DriverDrivingLicenseExpiryDate":""}]} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:08:37.4249 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:09:58.0116 INFO -- SaveTankerPermit - Request: {"PlateNo":"T1-g2319","transporterBrand":"ar","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"","DriverIDType":null,"DriverIDValue":"","DriverMobileNumber":"","DriverDrivingLicenseNumber":"","DriverDrivingLicenseExpiryDate":""}]} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:10:00.1875 INFO -- SaveTankerPermit - Response: "afcda5c6-9264-41cc-888b-0f877f49e209" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:15:59.6110 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"0001-01-01T00:00:00","Value":true,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:15:59.8575 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:16:12.5298 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"0001-01-01T00:00:00","Value":true,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:16:14.3734 INFO -- TankerCheckStatus - Response: {"TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","ResponseTime":"2021-08-17T14:16:13.1440918+03:00","Value":true} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:18:21.8072 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"0001-01-01T00:00:00","Value":true,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:18:23.5591 INFO -- TankerCheckStatus - Response: {"TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","ResponseTime":"2021-08-17T14:18:22.6609634+03:00","Value":true} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:18:32.1329 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"00000000-0000-0000-0000-000000000000","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:18:33.0519 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"5e2f171a-aff3-483d-8829-0a79f19305c3","ResponseTime":"2021-08-17T14:18:32.8335766+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:18:37.9136 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"00000000-0000-0000-0000-000000000000","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 14:18:38.4993 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:20:21.9949 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:20:38.1076 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfR59KcJAuu-B8N4xBrwsEcgD2cXb_QzISXouOrgi4MfE","TimeStamp":"2021-08-17T16:20:37.6592721+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:21:19.7988 INFO -- SaveTankerPermit - Request: {"PlateNo":"T8-g2319","transporterBrand":"ar","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"","PermitIssue":"","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:21:52.1252 INFO -- SaveTankerPermit - Response: "8207c471-5ded-474a-8c8f-1b3c40fe8c84" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:27:33.8140 INFO -- SaveTankerPermit - Request: {"PlateNo":"T8-g2319","transporterBrand":"ar","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:27:38.0566 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:27:44.8029 INFO -- SaveTankerPermit - Request: {"PlateNo":"T8-g219","transporterBrand":"ar","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:27:48.6393 INFO -- SaveTankerPermit - Response: "5f82ffde-1a0e-463c-b218-4a4c62840b39" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:31:30.6746 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"00000000-0000-0000-0000-000000000000","RequestTime":"0001-01-01T00:00:00","Value":true,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:31:31.3535 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:31:45.9654 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","RequestTime":"0001-01-01T00:00:00","Value":true,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:31:51.4337 INFO -- TankerCheckStatus - Response: {"TransactionId":"b0e39428-3bc2-4350-83ce-006d777b2df8","ResponseTime":"2021-08-17T16:31:48.0042994+03:00","Value":true} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:32:01.6711 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"00000000-0000-0000-0000-000000000000","RequestTime":"0001-01-01T00:00:00","Value":true,"Reason":"cancelled","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:32:03.2808 INFO -- TankerCheckStatus - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:33:55.4668 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"0001-01-01T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:33:56.1141 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:34:11.6159 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:34:14.3323 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"ae96e5f1-03b0-4db4-9660-a4b760fabeb1","ResponseTime":"2021-08-17T16:34:13.7432828+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:34:19.4825 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"0001-01-01T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:34:21.9101 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"21a80506-360f-455f-9cc3-e2bd38cbb64d","ResponseTime":"2021-08-17T16:34:21.3563344+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:35:09.3761 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"0001-01-01T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:35:11.7924 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"d7a6068b-fcea-45db-a655-6827e0ca6873","ResponseTime":"2021-08-17T16:35:11.233187+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:36:58.8326 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"0001-01-01T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:37:12.9875 INFO -- TankerAccessAuthorization - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:37:12.9875 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ELM_NWC_Integration.Controllers.TankerController.TankerAccessAuthorization(TankerAccessDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 157
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:38:39.8286 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"0001-01-01T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:39:12.0586 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:39:16.9643 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-17 16:39:19.9453 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"d564ca40-664d-49e7-8110-176fae837d63","ResponseTime":"2021-08-17T16:39:18.8669219+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 

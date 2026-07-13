@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NWC_CCBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="NWC_DefaultTankerSize">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TankerSize" Type="int" Nullable="false" />
+          <Property Name="TankerPrince" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="TankerDeleviryTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NWC_DeferredWorkOrder">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ORDERNUMBER" Type="nvarchar" MaxLength="50" />
+          <Property Name="CISDIVISION" Type="nvarchar" MaxLength="50" />
+          <Property Name="COMMENT" Type="nvarchar" MaxLength="4000" />
+          <Property Name="CONFIRMATIONCODE" Type="nvarchar" MaxLength="50" />
+          <Property Name="CONTACTMOBILE" Type="nvarchar" MaxLength="50" />
+          <Property Name="CONTACTNAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="CREDTTM" Type="nvarchar" MaxLength="50" />
+          <Property Name="SCHEDDTTM" Type="nvarchar" MaxLength="50" />
+          <Property Name="SERVICETYPE" Type="nvarchar" MaxLength="50" />
+          <Property Name="SOURCEAPPLICATION" Type="nvarchar" MaxLength="50" />
+          <Property Name="TANKERSIZE" Type="nvarchar" MaxLength="50" />
+          <Property Name="TRANSACTIONID" Type="nvarchar" MaxLength="50" />
+          <Property Name="ACCOUNTID" Type="nvarchar" MaxLength="50" />
+          <Property Name="CUSTOMERCLASS" Type="nvarchar" MaxLength="50" />
+          <Property Name="MOBILENUMBER" Type="nvarchar" MaxLength="50" />
+          <Property Name="PERSONID" Type="nvarchar" MaxLength="50" />
+          <Property Name="PERSONIDTYPE" Type="nvarchar" MaxLength="50" />
+          <Property Name="PERSONIDVALUE" Type="nvarchar" MaxLength="50" />
+          <Property Name="PERSONPRIMARYNAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="PREMISEID" Type="nvarchar" MaxLength="50" />
+          <Property Name="XYCOORDINATESGF" Type="nvarchar" MaxLength="50" />
+          <Property Name="StatusId" Type="int" />
+          <Property Name="ErrorMSG" Type="nvarchar(max)" />
+          <Property Name="LastUpdatedBy" Type="uniqueidentifier" />
+          <Property Name="LastUpdatedTime" Type="datetime" />
+          <Property Name="CreateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="NWC_DeferredWorkOrderStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="NWC_Int_ObjectLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="OperationTypeID" Type="int" />
+          <Property Name="OperationStepID" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="NWC_Int_ObjectLogDTO">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LogID" Type="bigint" Nullable="false" />
+          <Property Name="DTO" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="NWC_Int_ObjectStatus">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="StatusID" Type="int" />
+          <Property Name="StatusTime" Type="datetime" />
+          <Property Name="OperationTypeID" Type="int" />
+          <Property Name="DTO" Type="nvarchar(max)" />
+          <Property Name="XML" Type="nvarchar(max)" />
+          <Property Name="Token" Type="nvarchar(max)" />
+          <Property Name="Retrials" Type="int" Nullable="false" />
+          <Property Name="FailureMessage" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_NWC_DeferredWorkOrder_NWC_DeferredWorkOrderStatus">
+          <End Role="NWC_DeferredWorkOrderStatus" Type="Self.NWC_DeferredWorkOrderStatus" Multiplicity="0..1" />
+          <End Role="NWC_DeferredWorkOrder" Type="Self.NWC_DeferredWorkOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NWC_DeferredWorkOrderStatus">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NWC_DeferredWorkOrder">
+              <PropertyRef Name="StatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NWC_Int_ObjectLogDto_ObjectLog">
+          <End Role="NWC_Int_ObjectLog" Type="Self.NWC_Int_ObjectLog" Multiplicity="1" />
+          <End Role="NWC_Int_ObjectLogDTO" Type="Self.NWC_Int_ObjectLogDTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NWC_Int_ObjectLog">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="NWC_Int_ObjectLogDTO">
+              <PropertyRef Name="LogID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="NWC_CCBModelStoreContainer">
+          <EntitySet Name="NWC_DefaultTankerSize" EntityType="Self.NWC_DefaultTankerSize" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NWC_DeferredWorkOrder" EntityType="Self.NWC_DeferredWorkOrder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NWC_DeferredWorkOrderStatus" EntityType="Self.NWC_DeferredWorkOrderStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NWC_Int_ObjectLog" EntityType="Self.NWC_Int_ObjectLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NWC_Int_ObjectLogDTO" EntityType="Self.NWC_Int_ObjectLogDTO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NWC_Int_ObjectStatus" EntityType="Self.NWC_Int_ObjectStatus" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_NWC_DeferredWorkOrder_NWC_DeferredWorkOrderStatus" Association="Self.FK_NWC_DeferredWorkOrder_NWC_DeferredWorkOrderStatus">
+            <End Role="NWC_DeferredWorkOrderStatus" EntitySet="NWC_DeferredWorkOrderStatus" />
+            <End Role="NWC_DeferredWorkOrder" EntitySet="NWC_DeferredWorkOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NWC_Int_ObjectLogDto_ObjectLog" Association="Self.FK_NWC_Int_ObjectLogDto_ObjectLog">
+            <End Role="NWC_Int_ObjectLog" EntitySet="NWC_Int_ObjectLog" />
+            <End Role="NWC_Int_ObjectLogDTO" EntitySet="NWC_Int_ObjectLogDTO" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NWC_CCBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="NWC_CCBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NWC_Int_ObjectLog" EntityType="NWC_CCBModel.NWC_Int_ObjectLog" />
+          <EntitySet Name="NWC_Int_ObjectLogDTO" EntityType="NWC_CCBModel.NWC_Int_ObjectLogDTO" />
+          <AssociationSet Name="FK_NWC_Int_ObjectLogDto_ObjectLog" Association="NWC_CCBModel.FK_NWC_Int_ObjectLogDto_ObjectLog">
+            <End Role="NWC_Int_ObjectLog" EntitySet="NWC_Int_ObjectLog" />
+            <End Role="NWC_Int_ObjectLogDTO" EntitySet="NWC_Int_ObjectLogDTO" />
+          </AssociationSet>
+          <EntitySet Name="NWC_DefaultTankerSize" EntityType="NWC_CCBModel.NWC_DefaultTankerSize" />
+          <EntitySet Name="NWC_DeferredWorkOrderStatus" EntityType="NWC_CCBModel.NWC_DeferredWorkOrderStatus" />
+          <EntitySet Name="NWC_DeferredWorkOrder" EntityType="NWC_CCBModel.NWC_DeferredWorkOrder" />
+          <AssociationSet Name="FK_NWC_DeferredWorkOrder_NWC_DeferredWorkOrderStatus" Association="NWC_CCBModel.FK_NWC_DeferredWorkOrder_NWC_DeferredWorkOrderStatus">
+            <End Role="NWC_DeferredWorkOrderStatus" EntitySet="NWC_DeferredWorkOrderStatus" />
+            <End Role="NWC_DeferredWorkOrder" EntitySet="NWC_DeferredWorkOrder" />
+          </AssociationSet>
+          <EntitySet Name="NWC_Int_ObjectStatus" EntityType="NWC_CCBModel.NWC_Int_ObjectStatus" />
+        </EntityContainer>
+        <EntityType Name="NWC_Int_ObjectLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderNumber" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="OperationTypeID" Type="Int32" />
+          <Property Name="OperationStepID" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="NWC_Int_ObjectLogDTO" Relationship="NWC_CCBModel.FK_NWC_Int_ObjectLogDto_ObjectLog" FromRole="NWC_Int_ObjectLog" ToRole="NWC_Int_ObjectLogDTO" />
+        </EntityType>
+        <EntityType Name="NWC_Int_ObjectLogDTO">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LogID" Type="Int64" Nullable="false" />
+          <Property Name="DTO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NWC_Int_ObjectLog" Relationship="NWC_CCBModel.FK_NWC_Int_ObjectLogDto_ObjectLog" FromRole="NWC_Int_ObjectLogDTO" ToRole="NWC_Int_ObjectLog" />
+        </EntityType>
+        <Association Name="FK_NWC_Int_ObjectLogDto_ObjectLog">
+          <End Type="NWC_CCBModel.NWC_Int_ObjectLog" Role="NWC_Int_ObjectLog" Multiplicity="1" />
+          <End Type="NWC_CCBModel.NWC_Int_ObjectLogDTO" Role="NWC_Int_ObjectLogDTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NWC_Int_ObjectLog">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="NWC_Int_ObjectLogDTO">
+              <PropertyRef Name="LogID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="NWC_DefaultTankerSize">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TankerSize" Type="Int32" Nullable="false" />
+          <Property Name="TankerPrince" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="TankerDeleviryTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="NWC_DeferredWorkOrderStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="NWC_DeferredWorkOrder" Relationship="NWC_CCBModel.FK_NWC_DeferredWorkOrder_NWC_DeferredWorkOrderStatus" FromRole="NWC_DeferredWorkOrderStatus" ToRole="NWC_DeferredWorkOrder" />
+        </EntityType>
+        <EntityType Name="NWC_DeferredWorkOrder">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ORDERNUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CISDIVISION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="COMMENT" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="CONFIRMATIONCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CONTACTMOBILE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CONTACTNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CREDTTM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SCHEDDTTM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SERVICETYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SOURCEAPPLICATION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TANKERSIZE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TRANSACTIONID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ACCOUNTID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CUSTOMERCLASS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MOBILENUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PERSONID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PERSONIDTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PERSONIDVALUE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PERSONPRIMARYNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PREMISEID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="XYCOORDINATESGF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StatusId" Type="Int32" />
+          <Property Name="ErrorMSG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedBy" Type="Guid" />
+          <Property Name="LastUpdatedTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="NWC_DeferredWorkOrderStatus" Relationship="NWC_CCBModel.FK_NWC_DeferredWorkOrder_NWC_DeferredWorkOrderStatus" FromRole="NWC_DeferredWorkOrder" ToRole="NWC_DeferredWorkOrderStatus" />
+        </EntityType>
+        <Association Name="FK_NWC_DeferredWorkOrder_NWC_DeferredWorkOrderStatus">
+          <End Type="NWC_CCBModel.NWC_DeferredWorkOrderStatus" Role="NWC_DeferredWorkOrderStatus" Multiplicity="0..1" />
+          <End Type="NWC_CCBModel.NWC_DeferredWorkOrder" Role="NWC_DeferredWorkOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NWC_DeferredWorkOrderStatus">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NWC_DeferredWorkOrder">
+              <PropertyRef Name="StatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="NWC_Int_ObjectStatus">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderNumber" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="StatusID" Type="Int32" />
+          <Property Name="StatusTime" Type="DateTime" Precision="3" />
+          <Property Name="OperationTypeID" Type="Int32" />
+          <Property Name="DTO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="XML" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Token" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Retrials" Type="Int32" Nullable="false" />
+          <Property Name="FailureMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NWC_CCBModelStoreContainer" CdmEntityContainer="NWC_CCBEntities">
+          <EntitySetMapping Name="NWC_Int_ObjectLog">
+            <EntityTypeMapping TypeName="NWC_CCBModel.NWC_Int_ObjectLog">
+              <MappingFragment StoreEntitySet="NWC_Int_ObjectLog">
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="OperationStepID" ColumnName="OperationStepID" />
+                <ScalarProperty Name="OperationTypeID" ColumnName="OperationTypeID" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NWC_Int_ObjectLogDTO">
+            <EntityTypeMapping TypeName="NWC_CCBModel.NWC_Int_ObjectLogDTO">
+              <MappingFragment StoreEntitySet="NWC_Int_ObjectLogDTO">
+                <ScalarProperty Name="DTO" ColumnName="DTO" />
+                <ScalarProperty Name="LogID" ColumnName="LogID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NWC_DefaultTankerSize">
+            <EntityTypeMapping TypeName="NWC_CCBModel.NWC_DefaultTankerSize">
+              <MappingFragment StoreEntitySet="NWC_DefaultTankerSize">
+                <ScalarProperty Name="TankerDeleviryTime" ColumnName="TankerDeleviryTime" />
+                <ScalarProperty Name="TankerPrince" ColumnName="TankerPrince" />
+                <ScalarProperty Name="TankerSize" ColumnName="TankerSize" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NWC_DeferredWorkOrderStatus">
+            <EntityTypeMapping TypeName="NWC_CCBModel.NWC_DeferredWorkOrderStatus">
+              <MappingFragment StoreEntitySet="NWC_DeferredWorkOrderStatus">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NWC_DeferredWorkOrder">
+            <EntityTypeMapping TypeName="NWC_CCBModel.NWC_DeferredWorkOrder">
+              <MappingFragment StoreEntitySet="NWC_DeferredWorkOrder">
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LastUpdatedTime" ColumnName="LastUpdatedTime" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="ErrorMSG" ColumnName="ErrorMSG" />
+                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+                <ScalarProperty Name="XYCOORDINATESGF" ColumnName="XYCOORDINATESGF" />
+                <ScalarProperty Name="PREMISEID" ColumnName="PREMISEID" />
+                <ScalarProperty Name="PERSONPRIMARYNAME" ColumnName="PERSONPRIMARYNAME" />
+                <ScalarProperty Name="PERSONIDVALUE" ColumnName="PERSONIDVALUE" />
+                <ScalarProperty Name="PERSONIDTYPE" ColumnName="PERSONIDTYPE" />
+                <ScalarProperty Name="PERSONID" ColumnName="PERSONID" />
+                <ScalarProperty Name="MOBILENUMBER" ColumnName="MOBILENUMBER" />
+                <ScalarProperty Name="CUSTOMERCLASS" ColumnName="CUSTOMERCLASS" />
+                <ScalarProperty Name="ACCOUNTID" ColumnName="ACCOUNTID" />
+                <ScalarProperty Name="TRANSACTIONID" ColumnName="TRANSACTIONID" />
+                <ScalarProperty Name="TANKERSIZE" ColumnName="TANKERSIZE" />
+                <ScalarProperty Name="SOURCEAPPLICATION" ColumnName="SOURCEAPPLICATION" />
+                <ScalarProperty Name="SERVICETYPE" ColumnName="SERVICETYPE" />
+                <ScalarProperty Name="SCHEDDTTM" ColumnName="SCHEDDTTM" />
+                <ScalarProperty Name="CREDTTM" ColumnName="CREDTTM" />
+                <ScalarProperty Name="CONTACTNAME" ColumnName="CONTACTNAME" />
+                <ScalarProperty Name="CONTACTMOBILE" ColumnName="CONTACTMOBILE" />
+                <ScalarProperty Name="CONFIRMATIONCODE" ColumnName="CONFIRMATIONCODE" />
+                <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+                <ScalarProperty Name="CISDIVISION" ColumnName="CISDIVISION" />
+                <ScalarProperty Name="ORDERNUMBER" ColumnName="ORDERNUMBER" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NWC_Int_ObjectStatus">
+            <EntityTypeMapping TypeName="NWC_CCBModel.NWC_Int_ObjectStatus">
+              <MappingFragment StoreEntitySet="NWC_Int_ObjectStatus">
+                <ScalarProperty Name="FailureMessage" ColumnName="FailureMessage" />
+                <ScalarProperty Name="Retrials" ColumnName="Retrials" />
+                <ScalarProperty Name="Token" ColumnName="Token" />
+                <ScalarProperty Name="XML" ColumnName="XML" />
+                <ScalarProperty Name="DTO" ColumnName="DTO" />
+                <ScalarProperty Name="OperationTypeID" ColumnName="OperationTypeID" />
+                <ScalarProperty Name="StatusTime" ColumnName="StatusTime" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

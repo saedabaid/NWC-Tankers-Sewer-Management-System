@@ -1,0 +1,144 @@
+Exception : Time:2/2/2020 12:01:30 PM
+---------
+System.IO.FileLoadException: Could not load file or assembly 'Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed'
+   at NWC_CCB_Integration.BLL.IntegrationBLL.SaveLogOperation(RequestTypeEnum opType, OperationStepEnum opStep, String orderNo, Object[] dtos)
+   at FromCCBToNWC.API.Controllers.WorkOrderController.CreateWorkOrder(WorkOrderRequestDTO request, String token) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\CCB_NWC_Integration\Controllers\WorkOrderController.cs:line 236
+
+=== Pre-bind state information ===
+LOG: DisplayName = Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+ (Fully-specified)
+LOG: Appbase = file:///E:/TFS/Trans/Tanker Management System (TMS)- NWC/NWC_Integration/NWC_CCB_Integration/CCB_NWC_Integration/
+LOG: Initial PrivatePath = E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\CCB_NWC_Integration\bin
+Calling assembly : NWC_CCB_Integration.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\CCB_NWC_Integration\web.config
+LOG: Using host configuration file: C:\Users\karim.abdo\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+LOG: Attempting download of new URL file:///C:/Users/karim.abdo/AppData/Local/Temp/Temporary ASP.NET Files/vs/7a4d3715/d97c89b8/Newtonsoft.Json.DLL.
+LOG: Attempting download of new URL file:///C:/Users/karim.abdo/AppData/Local/Temp/Temporary ASP.NET Files/vs/7a4d3715/d97c89b8/Newtonsoft.Json/Newtonsoft.Json.DLL.
+LOG: Attempting download of new URL file:///E:/TFS/Trans/Tanker Management System (TMS)- NWC/NWC_Integration/NWC_CCB_Integration/CCB_NWC_Integration/bin/Newtonsoft.Json.DLL.
+WRN: Comparing the assembly name resulted in the mismatch: Major Version
+ERR: Failed to complete setup of assembly (hr = 0x80131040). Probing terminated.
+
+
+Source :
+---------
+NWC_CCB_Integration.BLL
+
+StackTrace :
+---------
+   at NWC_CCB_Integration.BLL.IntegrationBLL.SaveLogOperation(RequestTypeEnum opType, OperationStepEnum opStep, String orderNo, Object[] dtos)
+   at FromCCBToNWC.API.Controllers.WorkOrderController.CreateWorkOrder(WorkOrderRequestDTO request, String token) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\CCB_NWC_Integration\Controllers\WorkOrderController.cs:line 236
+__________________________________
+
+Exception : Time:2/2/2020 12:53:05 PM
+---------
+System.IO.FileLoadException: Could not load file or assembly 'Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed'
+   at NWC_CCB_Integration.BLL.IntegrationBLL.SaveLogOperation(RequestTypeEnum opType, OperationStepEnum opStep, String orderNo, Object[] dtos)
+   at FromCCBToNWC.API.Controllers.WorkOrderController.CreateWorkOrder(WorkOrderRequestDTO request, String token) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\CCB_NWC_Integration\Controllers\WorkOrderController.cs:line 236
+
+=== Pre-bind state information ===
+LOG: DisplayName = Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+ (Fully-specified)
+LOG: Appbase = file:///E:/TFS/Trans/Tanker Management System (TMS)- NWC/NWC_Integration/NWC_CCB_Integration/CCB_NWC_Integration/
+LOG: Initial PrivatePath = E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\CCB_NWC_Integration\bin
+Calling assembly : NWC_CCB_Integration.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\CCB_NWC_Integration\web.config
+LOG: Using host configuration file: C:\Users\karim.abdo\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+LOG: Attempting download of new URL file:///C:/Users/karim.abdo/AppData/Local/Temp/Temporary ASP.NET Files/vs/7a4d3715/d97c89b8/Newtonsoft.Json.DLL.
+LOG: Attempting download of new URL file:///C:/Users/karim.abdo/AppData/Local/Temp/Temporary ASP.NET Files/vs/7a4d3715/d97c89b8/Newtonsoft.Json/Newtonsoft.Json.DLL.
+LOG: Attempting download of new URL file:///E:/TFS/Trans/Tanker Management System (TMS)- NWC/NWC_Integration/NWC_CCB_Integration/CCB_NWC_Integration/bin/Newtonsoft.Json.DLL.
+WRN: Comparing the assembly name resulted in the mismatch: Major Version
+ERR: Failed to complete setup of assembly (hr = 0x80131040). Probing terminated.
+
+
+Source :
+---------
+NWC_CCB_Integration.BLL
+
+StackTrace :
+---------
+   at NWC_CCB_Integration.BLL.IntegrationBLL.SaveLogOperation(RequestTypeEnum opType, OperationStepEnum opStep, String orderNo, Object[] dtos)
+   at FromCCBToNWC.API.Controllers.WorkOrderController.CreateWorkOrder(WorkOrderRequestDTO request, String token) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\CCB_NWC_Integration\Controllers\WorkOrderController.cs:line 236
+__________________________________
+
+Exception : Time:2/2/2020 12:53:30 PM
+---------
+System.IO.FileLoadException: Could not load file or assembly 'Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed'
+   at NWC_CCB_Integration.BLL.IntegrationBLL.SaveLogOperation(RequestTypeEnum opType, OperationStepEnum opStep, String orderNo, Object[] dtos)
+   at FromCCBToNWC.API.Controllers.WorkOrderController.CreateWorkOrder(WorkOrderRequestDTO request, String token) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\CCB_NWC_Integration\Controllers\WorkOrderController.cs:line 236
+
+=== Pre-bind state information ===
+LOG: DisplayName = Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+ (Fully-specified)
+LOG: Appbase = file:///E:/TFS/Trans/Tanker Management System (TMS)- NWC/NWC_Integration/NWC_CCB_Integration/CCB_NWC_Integration/
+LOG: Initial PrivatePath = E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\CCB_NWC_Integration\bin
+Calling assembly : NWC_CCB_Integration.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\CCB_NWC_Integration\web.config
+LOG: Using host configuration file: C:\Users\karim.abdo\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+LOG: Attempting download of new URL file:///C:/Users/karim.abdo/AppData/Local/Temp/Temporary ASP.NET Files/vs/7a4d3715/d97c89b8/Newtonsoft.Json.DLL.
+LOG: Attempting download of new URL file:///C:/Users/karim.abdo/AppData/Local/Temp/Temporary ASP.NET Files/vs/7a4d3715/d97c89b8/Newtonsoft.Json/Newtonsoft.Json.DLL.
+LOG: Attempting download of new URL file:///E:/TFS/Trans/Tanker Management System (TMS)- NWC/NWC_Integration/NWC_CCB_Integration/CCB_NWC_Integration/bin/Newtonsoft.Json.DLL.
+WRN: Comparing the assembly name resulted in the mismatch: Major Version
+ERR: Failed to complete setup of assembly (hr = 0x80131040). Probing terminated.
+
+
+Source :
+---------
+NWC_CCB_Integration.BLL
+
+StackTrace :
+---------
+   at NWC_CCB_Integration.BLL.IntegrationBLL.SaveLogOperation(RequestTypeEnum opType, OperationStepEnum opStep, String orderNo, Object[] dtos)
+   at FromCCBToNWC.API.Controllers.WorkOrderController.CreateWorkOrder(WorkOrderRequestDTO request, String token) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\CCB_NWC_Integration\Controllers\WorkOrderController.cs:line 236
+__________________________________
+
+Exception : Time:2/2/2020 12:54:07 PM
+---------
+System.IO.FileLoadException: Could not load file or assembly 'Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed'
+   at NWC_CCB_Integration.BLL.IntegrationBLL.SaveLogOperation(RequestTypeEnum opType, OperationStepEnum opStep, String orderNo, Object[] dtos)
+   at FromCCBToNWC.API.Controllers.WorkOrderController.CreateWorkOrder(WorkOrderRequestDTO request, String token) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\CCB_NWC_Integration\Controllers\WorkOrderController.cs:line 236
+
+=== Pre-bind state information ===
+LOG: DisplayName = Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+ (Fully-specified)
+LOG: Appbase = file:///E:/TFS/Trans/Tanker Management System (TMS)- NWC/NWC_Integration/NWC_CCB_Integration/CCB_NWC_Integration/
+LOG: Initial PrivatePath = E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\CCB_NWC_Integration\bin
+Calling assembly : NWC_CCB_Integration.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\CCB_NWC_Integration\web.config
+LOG: Using host configuration file: C:\Users\karim.abdo\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+LOG: Attempting download of new URL file:///C:/Users/karim.abdo/AppData/Local/Temp/Temporary ASP.NET Files/vs/7a4d3715/d97c89b8/Newtonsoft.Json.DLL.
+LOG: Attempting download of new URL file:///C:/Users/karim.abdo/AppData/Local/Temp/Temporary ASP.NET Files/vs/7a4d3715/d97c89b8/Newtonsoft.Json/Newtonsoft.Json.DLL.
+LOG: Attempting download of new URL file:///E:/TFS/Trans/Tanker Management System (TMS)- NWC/NWC_Integration/NWC_CCB_Integration/CCB_NWC_Integration/bin/Newtonsoft.Json.DLL.
+WRN: Comparing the assembly name resulted in the mismatch: Major Version
+ERR: Failed to complete setup of assembly (hr = 0x80131040). Probing terminated.
+
+
+Source :
+---------
+NWC_CCB_Integration.BLL
+
+StackTrace :
+---------
+   at NWC_CCB_Integration.BLL.IntegrationBLL.SaveLogOperation(RequestTypeEnum opType, OperationStepEnum opStep, String orderNo, Object[] dtos)
+   at FromCCBToNWC.API.Controllers.WorkOrderController.CreateWorkOrder(WorkOrderRequestDTO request, String token) in E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\CCB_NWC_Integration\Controllers\WorkOrderController.cs:line 236
+__________________________________
+

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NWC_CCBModelStoreContainer" CdmEntityContainer="NWC_CCBEntities">
+    <EntitySetMapping Name="NWC_Int_ObjectLog">
+      <EntityTypeMapping TypeName="NWC_CCBModel.NWC_Int_ObjectLog">
+        <MappingFragment StoreEntitySet="NWC_Int_ObjectLog">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="OperationStepID" ColumnName="OperationStepID" />
+          <ScalarProperty Name="OperationTypeID" ColumnName="OperationTypeID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NWC_Int_ObjectLogDTO">
+      <EntityTypeMapping TypeName="NWC_CCBModel.NWC_Int_ObjectLogDTO">
+        <MappingFragment StoreEntitySet="NWC_Int_ObjectLogDTO">
+          <ScalarProperty Name="DTO" ColumnName="DTO" />
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NWC_DefaultTankerSize">
+      <EntityTypeMapping TypeName="NWC_CCBModel.NWC_DefaultTankerSize">
+        <MappingFragment StoreEntitySet="NWC_DefaultTankerSize">
+          <ScalarProperty Name="TankerDeleviryTime" ColumnName="TankerDeleviryTime" />
+          <ScalarProperty Name="TankerPrince" ColumnName="TankerPrince" />
+          <ScalarProperty Name="TankerSize" ColumnName="TankerSize" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NWC_DeferredWorkOrderStatus">
+      <EntityTypeMapping TypeName="NWC_CCBModel.NWC_DeferredWorkOrderStatus">
+        <MappingFragment StoreEntitySet="NWC_DeferredWorkOrderStatus">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NWC_DeferredWorkOrder">
+      <EntityTypeMapping TypeName="NWC_CCBModel.NWC_DeferredWorkOrder">
+        <MappingFragment StoreEntitySet="NWC_DeferredWorkOrder">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastUpdatedTime" ColumnName="LastUpdatedTime" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+          <ScalarProperty Name="ErrorMSG" ColumnName="ErrorMSG" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="XYCOORDINATESGF" ColumnName="XYCOORDINATESGF" />
+          <ScalarProperty Name="PREMISEID" ColumnName="PREMISEID" />
+          <ScalarProperty Name="PERSONPRIMARYNAME" ColumnName="PERSONPRIMARYNAME" />
+          <ScalarProperty Name="PERSONIDVALUE" ColumnName="PERSONIDVALUE" />
+          <ScalarProperty Name="PERSONIDTYPE" ColumnName="PERSONIDTYPE" />
+          <ScalarProperty Name="PERSONID" ColumnName="PERSONID" />
+          <ScalarProperty Name="MOBILENUMBER" ColumnName="MOBILENUMBER" />
+          <ScalarProperty Name="CUSTOMERCLASS" ColumnName="CUSTOMERCLASS" />
+          <ScalarProperty Name="ACCOUNTID" ColumnName="ACCOUNTID" />
+          <ScalarProperty Name="TRANSACTIONID" ColumnName="TRANSACTIONID" />
+          <ScalarProperty Name="TANKERSIZE" ColumnName="TANKERSIZE" />
+          <ScalarProperty Name="SOURCEAPPLICATION" ColumnName="SOURCEAPPLICATION" />
+          <ScalarProperty Name="SERVICETYPE" ColumnName="SERVICETYPE" />
+          <ScalarProperty Name="SCHEDDTTM" ColumnName="SCHEDDTTM" />
+          <ScalarProperty Name="CREDTTM" ColumnName="CREDTTM" />
+          <ScalarProperty Name="CONTACTNAME" ColumnName="CONTACTNAME" />
+          <ScalarProperty Name="CONTACTMOBILE" ColumnName="CONTACTMOBILE" />
+          <ScalarProperty Name="CONFIRMATIONCODE" ColumnName="CONFIRMATIONCODE" />
+          <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+          <ScalarProperty Name="CISDIVISION" ColumnName="CISDIVISION" />
+          <ScalarProperty Name="ORDERNUMBER" ColumnName="ORDERNUMBER" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NWC_Int_ObjectStatus">
+      <EntityTypeMapping TypeName="NWC_CCBModel.NWC_Int_ObjectStatus">
+        <MappingFragment StoreEntitySet="NWC_Int_ObjectStatus">
+          <ScalarProperty Name="FailureMessage" ColumnName="FailureMessage" />
+          <ScalarProperty Name="Retrials" ColumnName="Retrials" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="XML" ColumnName="XML" />
+          <ScalarProperty Name="DTO" ColumnName="DTO" />
+          <ScalarProperty Name="OperationTypeID" ColumnName="OperationTypeID" />
+          <ScalarProperty Name="StatusTime" ColumnName="StatusTime" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

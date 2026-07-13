@@ -1,0 +1,12 @@
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DAL\NWC_CCB_Integration.DAL\bin\Debug\NWC_CCB_Integration.DAL.dll.config
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DAL\NWC_CCB_Integration.DAL\bin\Debug\NWC_CCB_Integration.DAL.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DAL\NWC_CCB_Integration.DAL\bin\Debug\NWC_CCB_Integration.DAL.pdb
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DAL\NWC_CCB_Integration.DAL\bin\Debug\EntityFramework.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DAL\NWC_CCB_Integration.DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DAL\NWC_CCB_Integration.DAL\bin\Debug\EntityFramework.xml
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DAL\NWC_CCB_Integration.DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DAL\NWC_CCB_Integration.DAL\obj\Debug\NWC_CCB_Integration.DAL.csproj.CoreCompileInputs.cache
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DAL\NWC_CCB_Integration.DAL\obj\Debug\NWC_CCB_Integration.DAL.csproj.CopyComplete
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DAL\NWC_CCB_Integration.DAL\obj\Debug\NWC_CCB_Integration.DAL.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DAL\NWC_CCB_Integration.DAL\obj\Debug\NWC_CCB_Integration.DAL.pdb
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\DAL\NWC_CCB_Integration.DAL\obj\Debug\NWC_CCB_Integration.DAL.csprojAssemblyReference.cache

@@ -1,0 +1,16 @@
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Debug\NWC_CCB_Integration.BLL.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Debug\NWC_CCB_Integration.BLL.pdb
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Debug\EntityFramework.SqlServer.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Debug\EntityFramework.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Debug\System.Net.Http.Formatting.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Debug\Newtonsoft.Json.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Debug\NWC_CCB_Integration.DAL.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Debug\NWC_CCB_Integration.DTO.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Debug\NWC_CCB_Integration.DAL.pdb
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Debug\NWC_CCB_Integration.DAL.dll.config
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\bin\Debug\NWC_CCB_Integration.DTO.pdb
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\obj\Debug\NWC_CCB_Integration.BLL.csprojAssemblyReference.cache
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\obj\Debug\NWC_CCB_Integration.BLL.csproj.CoreCompileInputs.cache
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\obj\Debug\NWC_CCB_Integration.BLL.csproj.CopyComplete
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\obj\Debug\NWC_CCB_Integration.BLL.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\BLL\NWC_CCB_Integration.BLL\obj\Debug\NWC_CCB_Integration.BLL.pdb

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:12572/Tanker.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NWC_CCB_Integration.DTO.Models.AvailableTankerSize" />
+  <xs:element name="GetAvailableTankerSizes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NWC_CCB_Integration.DTO.Models.AvailableTankerSize" minOccurs="0" name="schema" nillable="true" type="q1:Schema" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableTankerSizesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/NWC_CCB_Integration.DTO.Models.AvailableTankerSize" minOccurs="0" name="GetAvailableTankerSizesResult" nillable="true" type="q2:Output" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

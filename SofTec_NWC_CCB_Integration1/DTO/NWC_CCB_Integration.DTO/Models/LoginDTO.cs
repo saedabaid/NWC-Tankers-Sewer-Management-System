@@ -1,0 +1,16 @@
+﻿using NWC_CCB_Integration.DTO.Enums;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace NWC_CCB_Integration.DTO.Models
+{
+    public class LoginDTO
+    {
+        public string Token { get; set; }
+        public LoginStatus Status { get; set; }
+        public MembershipContext Context { get; set; }
+    }
+}

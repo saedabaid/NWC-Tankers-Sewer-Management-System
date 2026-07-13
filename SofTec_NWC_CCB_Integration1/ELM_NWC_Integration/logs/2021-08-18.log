@@ -1,0 +1,224 @@
+2021-08-18 11:22:41.8506 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 11:22:49.6906 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfZU-Wt3H6qf0zV2zAIwkB47xTp1tJO9zXZzv1B45Ds-u","TimeStamp":"2021-08-18T11:22:49.5140515+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 11:23:19.8397 INFO -- SaveTankerPermit - Request: {"PlateNo":"T7-g219","transporterBrand":"ar","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 11:23:34.5324 INFO -- SaveTankerPermit - Response: "efd09287-b7fc-4102-ac75-fa35e351b318" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 11:23:42.0561 INFO -- SaveTankerPermit - Request: {"PlateNo":"T7-g219","transporterBrand":"سش","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 11:23:46.7654 INFO -- SaveTankerPermit - Response: "39f67368-3bc0-40f4-9eaf-e39d575f3f3e" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 11:24:04.8788 INFO -- SaveTankerPermit - Request: {"PlateNo":"T7-g219","transporterBrand":"έξυπνος","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 11:24:07.0623 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 11:45:44.3552 INFO -- SaveTankerPermit - Request: {"PlateNo":"T7-g219","transporterBrand":"سشث يشي  يش ي","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 11:45:45.0975 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 11:45:56.7734 INFO -- SaveTankerPermit - Request: {"PlateNo":"T7-g219","transporterBrand":"سشثيشييشي","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 11:45:57.6039 INFO -- SaveTankerPermit - Response: "a3abc2da-b79a-4d76-990b-c6f05c6f0051" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 11:47:40.6999 INFO -- SaveTankerPermit - Request: {"PlateNo":"T7-g219","transporterBrand":"we ","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 11:47:41.2892 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 11:47:44.6299 INFO -- SaveTankerPermit - Request: {"PlateNo":"T7-g219","transporterBrand":"we","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 11:47:45.4949 INFO -- SaveTankerPermit - Response: "3d3f7bc6-8d35-4d21-bff8-4ac9921b577d" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:30:27.8748 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:30:47.0020 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfQisKiSoiiREvveFBOR9cIYlBoTmEJYVEVLlaViO8Gbt","TimeStamp":"2021-08-18T12:30:45.94009+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:32:27.7834 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"we","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:32:32.2846 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:33:06.8987 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"we","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:33:06.9656 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:33:15.5294 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"we","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:33:15.5949 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:33:17.6995 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"we","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:33:17.9304 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:33:20.4299 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:33:20.7510 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfV4EoGCFyzu2JkKQUjcJKXtZIv2lH5K75VgTIk-MX1L8","TimeStamp":"2021-08-18T12:33:20.7480381+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:33:29.6825 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"we","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:33:45.1276 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:38:43.5236 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:38:50.7287 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfe8mjTXE2CuaTuxyy4mfMBBMFZMKU_9jzOmT6hOcgM2V","TimeStamp":"2021-08-18T12:38:50.6396392+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:39:01.2284 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"we","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:39:02.3250 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:40:12.7927 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"we","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:40:42.5576 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:40:49.1337 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"we","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":null,"DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:42:09.2426 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:42:53.3517 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"we","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:42:57.3208 INFO -- SaveTankerPermit - Response: "4b4535a2-141b-4a0c-bc41-401b48fdbd59" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:43:58.4153 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"έξυπνος","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:44:01.5440 INFO -- SaveTankerPermit - Response: "66bddedc-f485-4125-b66f-2d1c3b4fd023" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:52:17.2978 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:53:26.6715 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfQd4XHCNWRmw7iMiaGAOnNNhD2Nir2x4YDo_dwWCSi5K","TimeStamp":"2021-08-18T12:53:26.3538328+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:53:51.3172 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"έξυπνος","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:54:07.6407 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:54:16.7442 INFO -- SaveTankerPermit - Request: {"PlateNo":"T10-g219","transporterBrand":"sdf","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"08/08/2020"}],"PermitVersion":"v1.0","PermitIssue":"32","PermitExpiration":"2021-08-03T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:54:19.0062 INFO -- SaveTankerPermit - Response: "275fe2d0-445c-486d-9950-03285dd91310" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:54:52.1057 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:54:53.2653 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"b31b229a-d3cb-408a-b05d-48a3163e1864","ResponseTime":"2021-08-18T12:54:52.9753355+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:55:02.7876 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"00000000-0000-0000-0000-000000000000","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:55:03.4264 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:55:12.6734 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"0001-01-01T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:55:13.3178 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:55:15.8074 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-02319","permitNo":"15019766-f04b-469f-9f6f-5ac6a8f47361","TransactionId":"6629623e-6403-430e-a40c-d03dd1386d31","RequestTime":"2021-08-08T00:00:00","Value":false,"Reason":null,"token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-18 12:55:16.7335 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"f5226def-244d-40c5-8182-1c0d0e2d095f","ResponseTime":"2021-08-18T12:55:16.5150527+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 

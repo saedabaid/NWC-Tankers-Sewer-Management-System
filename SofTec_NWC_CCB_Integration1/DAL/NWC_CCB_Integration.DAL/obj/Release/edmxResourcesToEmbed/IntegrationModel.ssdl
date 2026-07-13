@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NWC_CCBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="NWC_DefaultTankerSize">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TankerSize" Type="int" Nullable="false" />
+    <Property Name="TankerPrince" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="TankerDeleviryTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NWC_DeferredWorkOrder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ORDERNUMBER" Type="nvarchar" MaxLength="50" />
+    <Property Name="CISDIVISION" Type="nvarchar" MaxLength="50" />
+    <Property Name="COMMENT" Type="nvarchar" MaxLength="4000" />
+    <Property Name="CONFIRMATIONCODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="CONTACTMOBILE" Type="nvarchar" MaxLength="50" />
+    <Property Name="CONTACTNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="CREDTTM" Type="nvarchar" MaxLength="50" />
+    <Property Name="SCHEDDTTM" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVICETYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SOURCEAPPLICATION" Type="nvarchar" MaxLength="50" />
+    <Property Name="TANKERSIZE" Type="nvarchar" MaxLength="50" />
+    <Property Name="TRANSACTIONID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACCOUNTID" Type="nvarchar" MaxLength="50" />
+    <Property Name="CUSTOMERCLASS" Type="nvarchar" MaxLength="50" />
+    <Property Name="MOBILENUMBER" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONID" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONIDTYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONIDVALUE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONPRIMARYNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="PREMISEID" Type="nvarchar" MaxLength="50" />
+    <Property Name="XYCOORDINATESGF" Type="nvarchar" MaxLength="50" />
+    <Property Name="StatusId" Type="int" />
+    <Property Name="ErrorMSG" Type="nvarchar(max)" />
+    <Property Name="LastUpdatedBy" Type="uniqueidentifier" />
+    <Property Name="LastUpdatedTime" Type="datetime" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NWC_Int_ObjectLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="OperationTypeID" Type="int" />
+    <Property Name="OperationStepID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NWC_Int_ObjectLogDTO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LogID" Type="bigint" Nullable="false" />
+    <Property Name="DTO" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="NWC_Int_ObjectStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="StatusTime" Type="datetime" />
+    <Property Name="OperationTypeID" Type="int" />
+    <Property Name="DTO" Type="nvarchar(max)" />
+    <Property Name="XML" Type="nvarchar(max)" />
+    <Property Name="Token" Type="nvarchar(max)" />
+    <Property Name="Retrials" Type="int" Nullable="false" />
+    <Property Name="FailureMessage" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_NWC_Int_ObjectLogDto_ObjectLog">
+    <End Role="NWC_Int_ObjectLog" Type="Self.NWC_Int_ObjectLog" Multiplicity="1" />
+    <End Role="NWC_Int_ObjectLogDTO" Type="Self.NWC_Int_ObjectLogDTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NWC_Int_ObjectLog">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="NWC_Int_ObjectLogDTO">
+        <PropertyRef Name="LogID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NWC_CCBModelStoreContainer">
+    <EntitySet Name="NWC_DefaultTankerSize" EntityType="Self.NWC_DefaultTankerSize" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NWC_DeferredWorkOrder" EntityType="Self.NWC_DeferredWorkOrder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NWC_Int_ObjectLog" EntityType="Self.NWC_Int_ObjectLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NWC_Int_ObjectLogDTO" EntityType="Self.NWC_Int_ObjectLogDTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NWC_Int_ObjectStatus" EntityType="Self.NWC_Int_ObjectStatus" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_NWC_Int_ObjectLogDto_ObjectLog" Association="Self.FK_NWC_Int_ObjectLogDto_ObjectLog">
+      <End Role="NWC_Int_ObjectLog" EntitySet="NWC_Int_ObjectLog" />
+      <End Role="NWC_Int_ObjectLogDTO" EntitySet="NWC_Int_ObjectLogDTO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

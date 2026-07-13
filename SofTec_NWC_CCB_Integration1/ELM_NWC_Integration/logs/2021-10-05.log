@@ -1,0 +1,16 @@
+2021-10-05 10:55:17.4213 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000","Source":"ELM","TransactionId":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNz"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-10-05 10:55:23.8668 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWffx99hVbT_lKCSItXtfGw40vXyg27dmqQqaVL7RGPOD9","TimeStamp":"2021-10-05T10:55:23.7141286+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-10-05 11:13:15.0806 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000","Source":"ELM","TransactionId":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNz"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-10-05 11:13:22.1927 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfW1a7EUijHAWBGzdeRJnBMBHSqmjVqEBBig9s8e756bR","TimeStamp":"2021-10-05T11:13:22.1147902+03:00"} --  
+
+----------------------------------------------------------------------------
+ 

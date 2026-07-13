@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="20e5516d-253f-4863-8d5b-4086d7268f95" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.56.59.80:21303/NwcCompass/echannelGetLocationInfoProject/echannelGetLocationInfoHttp?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="echannelGetLocationInfoHttp.xsd" MetadataType="Schema" ID="c5bd361c-5425-41a3-a00a-eb04b7211d04" SourceId="1" SourceUrl="http://10.56.59.80:21303/NwcCompass/echannelGetLocationInfoProject/echannelGetLocationInfoHttp?SCHEMA%2FechannelGetLocationInfoProject%2FResources%2FSchemas%2FechannelGetLocationInfo" />
+    <MetadataFile FileName="echannelGetLocationInfo.wsdl" MetadataType="Wsdl" ID="e7f6cc39-2e9a-4d65-be04-12399ebb8a14" SourceId="1" SourceUrl="http://10.56.59.80:21303/NwcCompass/echannelGetLocationInfoProject/echannelGetLocationInfoHttp?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

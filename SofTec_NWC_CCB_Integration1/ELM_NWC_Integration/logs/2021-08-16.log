@@ -1,0 +1,390 @@
+2021-08-16 14:22:29.6701 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"22581345984","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 14:22:32.1757 INFO -- AuthenticateUser - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 14:23:08.5076 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"225813453984","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 14:23:08.5864 INFO -- AuthenticateUser - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 14:24:08.0555 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":" 1044476156","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 14:24:08.1508 INFO -- AuthenticateUser - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 15:35:53.1480 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":" 2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 15:36:00.2206 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7JNHj6fWksPQ355-LcnfeON7_-pDW2nBkY4qLdqYuRwXEIpx9_3b0RZTW2kRGykDh644Q2FYF6eL-Vy4BvaDgnbPeOlMd_JDnVG3NBsv0sN5cPfTvDWdrw7o6wOX48ZbiS","TimeStamp":"2021-08-16T15:35:59.9526617+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 15:36:12.3257 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12340","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 15:36:16.8913 INFO -- SaveTankerPermit - Response: "c67a23db-654f-4a11-b3f3-450192899dfb" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 15:43:53.8176 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12340","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 15:43:58.0241 INFO -- SaveTankerPermit - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 15:43:58.0241 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:7335
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ELM_NWC_Integration.Controllers.TankerController.SaveTankerPermit(TankerDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 55
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:7335
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:7335
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 15:45:04.5273 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12340","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 15:45:49.7258 INFO -- SaveTankerPermit - Response: "bc0031d7-5645-4cd1-815f-c956d1c34bf5" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 15:51:47.2953 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12340","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 15:52:06.0757 INFO -- SaveTankerPermit - Response: "bfd4fb10-1e55-4c22-ba26-77f50df3ddf2" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 15:53:49.3086 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12340","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:00:00.7166 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12340","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:00:16.0543 INFO -- SaveTankerPermit - Response: "ef22bc53-829d-4d94-a6ad-fff08923ec53" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:00:37.6381 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":" 2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:00:44.0394 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7JNHj6fWksPQ355-LcnfeON7_-pDW2nBkY4qLdqYuRwXEIpx9_3b0RZTW2kRGykDh644Q2FYF6eL-Vy4BvaDgnbIsmFZvk-OdpPLiFy6aLQ-u6Z77Dqups3Jq8AxYKiDv0","TimeStamp":"2021-08-16T16:00:43.9684869+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:09:24.6077 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":" 2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:10:03.5720 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7JNHj6fWksPQ355-LcnfeON7_-pDW2nBkY4qLdqYuRwXEIpx9_3b0RZTW2kRGykDh644Q2FYF6eL-Vy4BvaDgnbL6zqFwefDIXI0ua1VZpyiWM6MmyqFtTni7j3cf-XQlz","TimeStamp":"2021-08-16T16:10:03.3955102+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:13:55.6348 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":" 2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:14:04.7704 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7JNHj6fWksPQ355-LcnfeON7_-pDW2nBkY4qLdqYuRwXEIpx9_3b0RZTW2kRGykDh644Q2FYF6eL-Vy4BvaDgnbEcT7brs-0JSVDYAE1-yNrO-w3ANVVW1m-kYJoRvCnQL","TimeStamp":"2021-08-16T16:14:04.6622422+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:14:17.3969 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:14:17.8965 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfYRY92XKbG6NC2bLULj0K3YLzydUKEjV9bdP6tdCa7U1","TimeStamp":"2021-08-16T16:14:17.894573+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:19:45.5805 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:19:51.1439 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfVhO-dAEbZIU_T8VwGaK8D_TPD45b3E74IdeelMBzQ3o","TimeStamp":"2021-08-16T16:19:51.0611213+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:21:46.9279 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12340","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:21:57.3710 INFO -- SaveTankerPermit - Response: "ed9790a2-410c-4d22-9bd2-a4fc98ea2ff7" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:23:53.6614 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:24:26.3130 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfanyG5Uv8mYrhG29CvS1qF77PNXobuQ-ZD6rqBp2szbz","TimeStamp":"2021-08-16T16:24:26.2083684+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:29:49.5778 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:30:59.4126 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfbAoDHl-HyhHdw4EVS_PaW7aHmmrmZbednc21QNTrUJ2","TimeStamp":"2021-08-16T16:30:33.6999384+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:33:20.2066 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:33:28.9751 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfdeHaDG18d2zVsbUoZgIQuzklJqoKxju2D3Bx9PQoLBN","TimeStamp":"2021-08-16T16:33:20.922288+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:36:12.9553 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:39:10.6782 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:42:29.6878 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:42:30.3317 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfQYxHDlaPfAOXAoV0idz8b04ROkXOl6F6k_Lh9033roY","TimeStamp":"2021-08-16T16:42:30.3177384+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:42:54.0635 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:42:54.6282 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfcnOItsnSpLvsXMqKk-F5bKsrWGSFdO3-kj2och2wKnW","TimeStamp":"2021-08-16T16:42:54.606339+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:43:39.2947 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:43:39.7905 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfQlGZaPR9uSn-eQiCGze0zI5QaFHuxm1fSQ5MbpR5l14","TimeStamp":"2021-08-16T16:43:39.7835312+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:43:45.4516 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:43:45.9649 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfeIdA09pRVT1B4uDQevgd0ZYp6nQ07j_88LToGjs5QkC","TimeStamp":"2021-08-16T16:43:45.9629619+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:44:45.8983 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:44:46.4902 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfQ_NdnATqj_oeHtMVW5ld1DJHVIHB7qpvhepBI1_j0Tw","TimeStamp":"2021-08-16T16:44:46.4791724+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:45:01.4252 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12340","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:45:17.1736 INFO -- SaveTankerPermit - Response: "cdc8d17d-9ae5-4505-9867-e940c3a6b1bf" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:45:35.8075 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:45:36.3086 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfUza9vNE6zy3Y3ZUMGVGuoiIrYJguRpk84lQftKe-B1Z","TimeStamp":"2021-08-16T16:45:36.306627+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:45:41.2404 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12340","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:45:56.0471 INFO -- SaveTankerPermit - Response: "dd2ecb1a-2459-4b90-bbc7-f1e8aaaffbbc" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:49:10.3879 INFO -- SaveTankerPermit - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:49:10.3879 ERROR -- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ELM_NWC_Integration.Controllers.TankerController.SaveTankerPermit(TankerDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 34 -- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ELM_NWC_Integration.Controllers.TankerController.SaveTankerPermit(TankerDTO TankerDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\TankerController.cs:line 34 
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:54:31.4639 INFO -- SaveTankerPermit - Sending wrong, expired or invalid authentication token. --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:58:51.9643 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"dd19f518-0cf3-4db3-b339-5c110e1461ae","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:58:54.8914 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:59:26.0808 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"dd19f518-0cf3-4db3-b339-5c110e1461ae","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:59:29.4522 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:59:41.4414 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"dd19f518-0cf3-4db3-b339-5c110e1461ae","TransactionId":null,"DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 16:59:42.6163 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:00:28.0456 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"dd19f518-0cf3-4db3-b339-5c110e1461ae","TransactionId":"","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:00:29.1898 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:04:04.4005 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"dd19f518-0cf3-4db3-b339-5c110e1461ae","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:04:10.0512 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:04:16.2450 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"dd19f518-0cf3-4db3-b339-5c110e1461ae","TransactionId":"","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:04:17.4785 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:04:27.7651 INFO -- SaveTankerPermit - Sending wrong, expired or invalid authentication token. --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:04:37.9026 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12340","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:04:38.2731 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:04:45.5581 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:04:51.2281 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfSFMpGeiMRFNLeJN4yCz22ChZ0HK6rIFKuK97PDEv4br","TimeStamp":"2021-08-16T17:04:51.0657972+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:05:00.9082 INFO -- SaveTankerPermit - Request: {"PlateNo":"TF-12340","transporterBrand":"12","transporterProductionYear":"1234","licenseNo":"1","licenseExpiryDate":"2021-01-09T00:00:00","entranceDate":"2021-08-03T00:00:00","TankCapacity":12.5,"plateNo_Numbers":"2","plateNo_Characters":"6","TransporterColor":null,"DriverFullNameAR":null,"DriverIDType":null,"DriverMobileNumber":null,"DriverDrivingLicenseNumber":null,"DriverDrivingLicenseExpiryDate":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:05:02.5186 INFO -- SaveTankerPermit - Response: "2851e777-6d01-4ff8-9327-38ffe623f0b4" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:05:36.7237 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"2851e777-6d01-4ff8-9327-38ffe623f0b4","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:05:37.9055 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:07:09.7924 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"2851e777-6d01-4ff8-9327-38ffe623f0b4","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:07:11.9047 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"7c618f40-7eff-4d6b-b707-206e904f48e6","ResponseTime":"2021-08-16T17:07:11.6032227+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:07:15.5445 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"2851e777-6d01-4ff8-9327-38ffe623f0b4","TransactionId":"","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:07:16.8375 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:07:23.9462 INFO -- TankerAccessDTO - Request: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:07:25.0951 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:07:36.5382 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"2851e777-6d01-4ff8-9327-38ffe623f0b4","TransactionId":null,"DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:07:37.6810 INFO -- TankerAccessAuthorization - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:07:42.3820 INFO -- TankerAccessDTO - Request: {"PlateNo":"TF-12340","permitNo":"2851e777-6d01-4ff8-9327-38ffe623f0b4","TransactionId":"6629623E-6403-430E-A40C-D03DD1386D31","DateTime":"0001-01-01T00:00:00","Value":false,"Reason":"","token":null} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-16 17:07:43.9313 INFO -- TankerAccessAuthorization - Response: {"TransactionId":"061e1ec3-274e-46b8-9348-ce8d08d50334","ResponseTime":"2021-08-16T17:07:43.5787944+03:00","Value":false} --  
+
+----------------------------------------------------------------------------
+ 

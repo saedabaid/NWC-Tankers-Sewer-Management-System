@@ -1,0 +1,160 @@
+2021-09-14 13:16:22.2836 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:16:29.9198 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfcKskszpCyUtRM9_SUir1cvQaUoFPXJ62E3TBdASLBC5","TimeStamp":"2021-09-14T13:16:29.6131413+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:46:40.0439 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:46:44.5878 INFO -- AuthenticateUser - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:46:44.5968 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at FromCCBToNWC.API.Controllers.UserController.AuthenticateUser(ElmAccountDTO accountDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\UserController.cs:line 53
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:46:51.2584 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:46:55.3695 INFO -- AuthenticateUser - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:46:55.3695 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at FromCCBToNWC.API.Controllers.UserController.AuthenticateUser(ElmAccountDTO accountDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\UserController.cs:line 53
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:51:55.4477 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:52:08.8398 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfWM320XIFq8LeHdy9itcdlaT_NybjAWEIdX9OYUfvp9H","TimeStamp":"2021-09-14T13:52:08.7142316+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:55:15.4226 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:55:16.6831 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfXzfbuJiojmyRazkmPDR6HoURlE-x6tbPt3f5cwikbDI","TimeStamp":"2021-09-14T13:55:16.2308265+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:56:38.3725 INFO -- SaveTankerPermit - Request: {"PlateNo":"x55س42f3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2010-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed577","DriverIDType":"3","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:56:55.7670 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:57:08.1667 INFO -- SaveTankerPermit - Request: {"PlateNo":"x55س42f3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2010-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed577","DriverIDType":"3","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:57:23.5256 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:58:40.2443 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:58:40.6305 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfRl-FgbyXGy-4Z0A6JnBEhCFcJo4a8nP-GPp4N7YBjSt","TimeStamp":"2021-09-14T13:58:40.6135633+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:58:53.8081 INFO -- SaveTankerPermit - Request: {"PlateNo":"x55س42f3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2010-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed577","DriverIDType":"3","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 13:59:09.5863 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 14:02:42.6562 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 14:02:55.0053 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfXLMulEkABcFWjku8etB_iYlmVo7Dzbh4zGIg0usa_Pu","TimeStamp":"2021-09-14T14:02:54.9305713+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 14:03:17.1022 INFO -- SaveTankerPermit - Request: {"PlateNo":"x55س42f3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2010-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed577","DriverIDType":"3","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 14:03:20.7926 INFO -- SaveTankerPermit - Response: "28be65d8-14c6-48a5-83fa-4fd7a5e725e6" --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 14:16:45.6825 INFO -- SaveTankerPermit - Request: {"PlateNo":"x55س42f3","transporterBrand":"Nissan","transporterProductionYear":"2015","licenseNo":"98557766","licenseExpiryDate":"2010-04-06T00:00:00","entranceDate":"2021-08-19T16:18:23.377","TankCapacity":5.0,"plateNo_Numbers":"7788","plateNo_Characters":"ط ل ل","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed577","DriverIDType":"3","DriverIDValue":"2009667515","DriverMobileNumber":"0567251284","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"19/08/2020"}],"PermitVersion":"v2.0","PermitIssue":"32","PermitExpiration":"2022-08-19T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-14 14:16:57.5204 INFO -- SaveTankerPermit - Response: "28be65d8-14c6-48a5-83fa-4fd7a5e725e6" --  
+
+----------------------------------------------------------------------------
+ 

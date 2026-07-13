@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AltairStagingModelStoreContainer" CdmEntityContainer="AltairStagingEntities">
+    <EntitySetMapping Name="NWC_Int_ObjectStatus">
+      <EntityTypeMapping TypeName="AltairStagingModel.NWC_Int_ObjectStatus">
+        <MappingFragment StoreEntitySet="NWC_Int_ObjectStatus">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="StatusTime" ColumnName="StatusTime" />
+          <ScalarProperty Name="OperationTypeID" ColumnName="OperationTypeID" />
+          <ScalarProperty Name="DTO" ColumnName="DTO" />
+          <ScalarProperty Name="XML" ColumnName="XML" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="Retrials" ColumnName="Retrials" />
+          <ScalarProperty Name="FailureMessage" ColumnName="FailureMessage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

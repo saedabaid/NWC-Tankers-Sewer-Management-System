@@ -1,0 +1,360 @@
+2021-08-29 11:52:47.7991 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 11:52:52.4488 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfT76agiNXn01P6-qlY-rVIw8fO1YRo7WrFXXMevRiGVR","TimeStamp":"2021-08-29T11:52:52.3294211+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 11:53:06.5454 INFO -- SaveTankerPermit - Request: {"PlateNo":"a ش 0 15521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 11:53:22.9142 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 11:58:00.7362 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 11:58:02.6720 INFO -- AuthenticateUser - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:00:10.4626 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:00:14.5068 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfQT-XIgb_94CNck8vBFSSNNuNOZBPdeGaY_uTzWcOk3u","TimeStamp":"2021-08-29T12:00:14.4130736+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:01:21.6771 INFO -- SaveTankerPermit - Request: {"PlateNo":"44 ش 0 15521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:01:26.0868 INFO -- SaveTankerPermit - Response: "e0c6866e-a272-484f-bb27-984fec41e938" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:05:44.6774 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:06:06.5527 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfZ-rcaKLmiRzEAuf0BZXkADnaSH88onyc8ueKGnyJ-dU","TimeStamp":"2021-08-29T12:06:06.4849596+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:38:26.9862 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:38:37.6829 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfQWNqd5gu1l2uH8pMsTbVYKm_jSOpGv0tlQk2u3u5F_I","TimeStamp":"2021-08-29T12:38:37.3319199+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:38:50.5083 INFO -- SaveTankerPermit - Request: {"PlateNo":"aa4 ش 0 15521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:39:00.4471 INFO -- SaveTankerPermit - Response: "395eb905-40b1-4861-bcb6-8e5984d622a7" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:50:54.8367 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:51:00.6439 INFO -- AuthenticateUser - Exception --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:51:00.6439 ERROR -- System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at FromCCBToNWC.API.Controllers.UserController.AuthenticateUser(ElmAccountDTO accountDTO) in G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\ELM_NWC_Integration\Controllers\UserController.cs:line 53
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+ -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:52:03.8686 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:52:12.1807 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfcZzG5e0WC016tl2nZBTPZn7tuaPNDPVB8qbfQ62PeRE","TimeStamp":"2021-08-29T12:52:12.0647405+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:52:29.2034 INFO -- SaveTankerPermit - Request: {"PlateNo":"aff4 ش 0 15521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:52:38.0941 INFO -- SaveTankerPermit - Response: "fd090049-bfc4-45b3-b488-052d46b8b8a5" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:55:11.6542 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:55:25.8191 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfaC87FbVE6LGHE7_gG9sohyk2qersMWHft7WtBKjX0mf","TimeStamp":"2021-08-29T12:55:25.7333734+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:55:46.0785 INFO -- SaveTankerPermit - Request: {"PlateNo":"aسسf4 ش 0 15521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:55:51.8943 INFO -- SaveTankerPermit - Response: "c0ff473c-ec2c-4b46-b05c-dad86d7a9684" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:58:17.2389 INFO -- SaveTankerPermit - Request: {"PlateNo":"aسسf4 ش 0 15521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:58:18.9835 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:58:23.5785 INFO -- SaveTankerPermit - Request: {"PlateNo":"1سسf4 ش 0 15521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:58:23.7507 INFO -- SaveTankerPermit - Response: "5f9bf77d-cdbd-40aa-9f2a-e6bd0fb49889" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:58:53.3795 INFO -- SaveTankerPermit - Request: {"PlateNo":"1سسf4 ش 2 15521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:58:53.9477 INFO -- SaveTankerPermit - Response: "73ec5352-7f3d-4e60-a0b9-58ead7bf7292" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:59:50.4472 INFO -- SaveTankerPermit - Request: {"PlateNo":"1سسf4 ش 2 15521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:59:51.1910 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:59:55.5293 INFO -- SaveTankerPermit - Request: {"PlateNo":"dسسf4 ش 2 15521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 12:59:55.7733 INFO -- SaveTankerPermit - Response: "b7938105-c1d3-4cdd-a294-64dc32de6cec" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:00:51.3560 INFO -- SaveTankerPermit - Request: {"PlateNo":"vسسf4 ش 2 15521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:00:51.7947 INFO -- SaveTankerPermit - Response: "a2614488-976a-455d-a441-956d4737f09d" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:01:34.0566 INFO -- SaveTankerPermit - Request: {"PlateNo":"vسسfb ش 2 15521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:01:34.4608 INFO -- SaveTankerPermit - Response: "11fc6647-06b2-48d1-bca2-7bc75763b35c" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:02:13.3098 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:02:13.4473 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfcloCnxoQorpuxMV07X6zrmI1NoTxejydT8DA6x1fCkc","TimeStamp":"2021-08-29T13:02:13.4363395+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:02:25.3251 INFO -- SaveTankerPermit - Request: {"PlateNo":"vسسfb ش 2 15521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:02:25.4895 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:02:30.8059 INFO -- SaveTankerPermit - Request: {"PlateNo":"cسسfb ش 2 15521","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:02:30.9859 INFO -- SaveTankerPermit - Response: "33622c6e-8262-457f-a203-561c6cca20a1" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:04:18.0298 INFO -- SaveTankerPermit - Request: {"PlateNo":"cسسfb ش 2 15s1","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:04:19.3489 INFO -- SaveTankerPermit - Response: "4852fe8b-eaa5-450f-adcf-42a4ec885728" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:06:03.4076 INFO -- SaveTankerPermit - Request: {"PlateNo":"cسسfb ش 2 رر5s1","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:06:08.8606 INFO -- SaveTankerPermit - Response: "7ea5d0e7-732c-47a0-8dc8-e33da56a8c07" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:08:24.7607 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:08:24.9315 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfUv87uIU7gKUoWKOx4FHQ_wMH3HC5fMv_BXltDq36UYf","TimeStamp":"2021-08-29T13:08:24.9205644+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:08:32.4013 INFO -- SaveTankerPermit - Request: {"PlateNo":"cسسfb ش سرر5s1","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:08:33.5314 INFO -- SaveTankerPermit - Response: "ed9b0fa3-0a34-431f-8fdd-4df968ed1fc5" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:09:15.8125 INFO -- SaveTankerPermit - Request: {"PlateNo":"ي ي","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:09:18.5321 INFO -- SaveTankerPermit - Response: "37f20812-16ea-4bb2-b65e-837dafc98390" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:19:27.2211 INFO -- SaveTankerPermit - Request: {"PlateNo":"ي ي","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:19:32.3217 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:19:37.3779 INFO -- SaveTankerPermit - Request: {"PlateNo":"ي ي ي","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:19:37.8072 INFO -- SaveTankerPermit - Response: "7a3860a3-35fa-40ee-8a14-75eea9da58a2" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:22:29.4792 INFO -- SaveTankerPermit - Request: {"PlateNo":"ي ي ي2","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:22:34.4978 INFO -- SaveTankerPermit - Response: "47ee9df5-c43f-48d7-8e71-6e4f1860672f" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:55:22.1044 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:55:32.8633 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfaF2vvBGUOI3J9xxtdUa7j4ftDOzhLFtREqfzdMlCN8-","TimeStamp":"2021-08-29T13:55:32.6875047+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:56:30.9962 INFO -- SaveTankerPermit - Request: {"PlateNo":"ي ي ي2","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:56:35.4015 INFO -- SaveTankerPermit - Response: "949b454c-c6a1-4f03-b21e-8d3ef2c37eb9" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:57:20.7185 INFO -- SaveTankerPermit - Request: {"PlateNo":"ي33 ي2","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 13:57:22.8181 INFO -- SaveTankerPermit - Response: "6aaec796-14b8-42d7-87be-ffa510d9bef3" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 14:04:43.3388 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 14:04:43.3699 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfVvfe3puQ7dsoyDk3JhVK10jieSB4fxqqxjPL1lmIqnQ","TimeStamp":"2021-08-29T14:04:43.3669893+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 14:04:59.0357 INFO -- SaveTankerPermit - Request: {"PlateNo":"يdd3 ي2","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 14:04:59.1869 INFO -- SaveTankerPermit - Response: "c940cef3-73d2-4346-83cb-8a24261031a2" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 14:10:39.3765 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 14:10:47.6278 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfTyPIWFXhqfqwRKrU42mi5td0tnJCDMIEe0_ARgcT6vB","TimeStamp":"2021-08-29T14:10:47.5312867+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 14:11:22.8999 INFO -- SaveTankerPermit - Request: {"PlateNo":"يdd3d2","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 14:11:30.3801 INFO -- SaveTankerPermit - Response: "ef788483-260a-4402-87ba-c50a20f5deed" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 16:53:04.4361 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 16:53:23.3221 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWff3faixqvT5Rv86CepCiUW1mME8NEDBpZXpMtXPk1JNS","TimeStamp":"2021-08-29T16:53:23.1238619+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 16:53:45.1415 INFO -- SaveTankerPermit - Request: {"PlateNo":"dd3mm","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 16:53:50.7923 INFO -- SaveTankerPermit - Response: "4e9feb1c-d4db-4f17-9803-cac8e3d5b3b7" --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 16:57:11.5999 INFO -- SaveTankerPermit - Request: {"PlateNo":"dd3cc","transporterBrand":"LEXUS","transporterProductionYear":"2019","licenseNo":"123445555","licenseExpiryDate":"2021-10-20T00:00:00","entranceDate":"2021-08-26T10:35:25.393","TankCapacity":5.0,"plateNo_Numbers":"5555","plateNo_Characters":"ب ب ب","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"ahmed alah","DriverIDType":"1","DriverIDValue":"1001470334","DriverMobileNumber":"0585555555","DriverDrivingLicenseNumber":"1001470334","DriverDrivingLicenseExpiryDate":"2024-01-01"}],"PermitVersion":"01.00","PermitIssue":"2021-08-26","PermitExpiration":"2022-08-26T00:00:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-08-29 16:57:27.8118 INFO -- SaveTankerPermit - Response: "40f57e62-73e9-4061-902c-0bc40352b9a4" --  
+
+----------------------------------------------------------------------------
+ 

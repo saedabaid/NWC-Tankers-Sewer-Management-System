@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d038a1db-52d7-44ef-b971-2ecdc6ba4a63" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:12572/Tanker.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Tanker.disco" MetadataType="Disco" ID="61868c7d-4361-443a-94b7-dc09f94ee89d" SourceId="1" SourceUrl="http://localhost:12572/Tanker.svc?disco" />
+    <MetadataFile FileName="Tanker.xsd" MetadataType="Schema" ID="3bdba875-ec4e-4e75-a18e-a7752155e053" SourceId="1" SourceUrl="http://localhost:12572/Tanker.svc?xsd=xsd0" />
+    <MetadataFile FileName="Tanker.wsdl" MetadataType="Wsdl" ID="c9fc2db5-ebe7-4efe-98c1-6b55385e536e" SourceId="1" SourceUrl="http://localhost:12572/Tanker.svc?wsdl" />
+    <MetadataFile FileName="Tanker1.xsd" MetadataType="Schema" ID="c6a472d3-772f-4231-aca9-70aa7e2e8a98" SourceId="1" SourceUrl="http://localhost:12572/Tanker.svc?xsd=xsd1" />
+    <MetadataFile FileName="Tanker2.xsd" MetadataType="Schema" ID="a5541ed1-d441-4ad9-bc1d-3eaa132c4942" SourceId="1" SourceUrl="http://localhost:12572/Tanker.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

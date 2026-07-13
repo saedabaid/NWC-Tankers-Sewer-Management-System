@@ -1,0 +1,21 @@
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\Logger\bin\Debug\configHandler\loggerConfig.config
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\Logger\bin\Debug\Logger.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\Logger\bin\Debug\Logger.pdb
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\Logger\obj\Debug\Logger.csprojAssemblyReference.cache
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\Logger\obj\Debug\Logger.csproj.CoreCompileInputs.cache
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\Logger\obj\Debug\Logger.dll
+E:\TFS\Trans\Tanker Management System (TMS)- NWC\NWC_Integration\NWC_CCB_Integration\Logger\obj\Debug\Logger.pdb
+D:\softechSource\TMS_SC_20210126_\TMS_SC_20210126\NWC_Integration\NWC_CCB_Integration\Logger\bin\Debug\configHandler\loggerConfig.config
+D:\softechSource\TMS_SC_20210126_\TMS_SC_20210126\NWC_Integration\NWC_CCB_Integration\Logger\bin\Debug\Logger.dll
+D:\softechSource\TMS_SC_20210126_\TMS_SC_20210126\NWC_Integration\NWC_CCB_Integration\Logger\bin\Debug\Logger.pdb
+D:\softechSource\TMS_SC_20210126_\TMS_SC_20210126\NWC_Integration\NWC_CCB_Integration\Logger\obj\Debug\Logger.csprojAssemblyReference.cache
+D:\softechSource\TMS_SC_20210126_\TMS_SC_20210126\NWC_Integration\NWC_CCB_Integration\Logger\obj\Debug\Logger.csproj.CoreCompileInputs.cache
+D:\softechSource\TMS_SC_20210126_\TMS_SC_20210126\NWC_Integration\NWC_CCB_Integration\Logger\obj\Debug\Logger.dll
+D:\softechSource\TMS_SC_20210126_\TMS_SC_20210126\NWC_Integration\NWC_CCB_Integration\Logger\obj\Debug\Logger.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\Logger\bin\Debug\configHandler\loggerConfig.config
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\Logger\bin\Debug\Logger.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\Logger\bin\Debug\Logger.pdb
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\Logger\obj\Debug\Logger.csproj.AssemblyReference.cache
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\Logger\obj\Debug\Logger.csproj.CoreCompileInputs.cache
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\Logger\obj\Debug\Logger.dll
+G:\SofTec_TMS\SofTec_NWC_CCB_Integration1\Logger\obj\Debug\Logger.pdb

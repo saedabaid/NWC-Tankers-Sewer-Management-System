@@ -1,0 +1,64 @@
+2021-09-22 10:58:03.8530 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000","Source":"ELM","TransactionId":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNz"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-22 10:58:13.1739 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfQYfdNzB0BXIDLYi5i1SLWgyIumC17l3fSKPaFY5qpAd","TimeStamp":"2021-09-22T10:58:13.0671192+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-22 10:58:55.7141 INFO -- SaveTankerPermit - Request: {"PlateNo":"أ أ أ 9895","transporterBrand":"TOYOTA","transporterProductionYear":"2019","licenseNo":"98959022","licenseExpiryDate":"2021-11-30T00:00:00","entranceDate":"2021-08-31T20:09:26.88","TankCapacity":22.0,"plateNo_Numbers":"9895","plateNo_Characters":"أ أ أ","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"2020-08-08"}],"PermitVersion":"01.00","PermitIssue":"2021-08-31","PermitExpiration":"2022-08-31T00:00:00","Source":"ELM","TransactionId":"fe767687-12b7-4340-92d9-a633e7b1b0a3"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-22 10:59:13.8481 ERROR -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. -- System.Exception: SaveTankerPermit - Sending wrong, expired or invalid authentication token. 
+
+----------------------------------------------------------------------------
+ 
+2021-09-22 11:01:48.1868 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000","Source":"ELM","TransactionId":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNz"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-22 11:02:27.0109 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfXvPLrfgoik_R5LaeKxAF4h5H5KihiRdtFKBQ1NSQwH1","TimeStamp":"2021-09-22T11:02:26.9091977+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-22 11:02:45.9818 INFO -- SaveTankerPermit - Request: {"PlateNo":"أ أ أ 9895","transporterBrand":"TOYOTA","transporterProductionYear":"2019","licenseNo":"98959022","licenseExpiryDate":"2021-11-30T00:00:00","entranceDate":"2021-08-31T20:09:26.88","TankCapacity":22.0,"plateNo_Numbers":"9895","plateNo_Characters":"أ أ أ","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"2020-08-08"}],"PermitVersion":"01.00","PermitIssue":"2021-08-31","PermitExpiration":"2022-08-31T00:00:00","Source":"ELM","TransactionId":"fe767687-12b7-4340-92d9-a633e7b1b0a3"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-22 11:02:50.6438 INFO -- SaveTankerPermit - Response: null --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-22 11:03:15.8395 INFO -- SaveTankerPermit - Request: {"PlateNo":"أ أ أ 23895","transporterBrand":"TOYOTA","transporterProductionYear":"2019","licenseNo":"98959022","licenseExpiryDate":"2021-11-30T00:00:00","entranceDate":"2021-08-31T20:09:26.88","TankCapacity":22.0,"plateNo_Numbers":"9895","plateNo_Characters":"أ أ أ","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"2020-08-08"}],"PermitVersion":"01.00","PermitIssue":"2021-08-31","PermitExpiration":"2022-08-31T00:00:00","Source":"ELM","TransactionId":"fe767687-12b7-4340-92d9-a633e7b1b0a3"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-22 11:03:16.8577 INFO -- SaveTankerPermit - Response: "8d8cf2b4-9e6c-440e-af9c-37a30f736dce" --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-22 11:07:26.9608 INFO -- SaveTankerPermit - Request: {"PlateNo":"أ أ أ 23895","transporterBrand":"TOYOTA","transporterProductionYear":"2019","licenseNo":"98959022","licenseExpiryDate":"2021-11-30T00:00:00","entranceDate":"2021-08-31T20:09:26.88","TankCapacity":22.0,"plateNo_Numbers":"9895","plateNo_Characters":"أ أ أ","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"2020-08-08"}],"PermitVersion":"01.00","PermitIssue":"2021-08-31","PermitExpiration":"2022-08-31T00:00:00","Source":"ELM","TransactionId":"fe767687-12b7-4340-92d9-a633e7b1b0a3"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-22 11:07:28.0659 INFO -- SaveTankerPermit - Response: "eedb150a-58dd-40d1-b73d-f8d89c72289f" --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-22 11:15:19.2894 INFO -- AuthenticateUser - Request: {"ID":"00000000-0000-0000-0000-000000000000","UserName":"2258134598","Password":"P@ssw0rd32","StaffID":"00000000-0000-0000-0000-000000000000","SubID":"00000000-0000-0000-0000-000000000000","Source":"ELM","TransactionId":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNz"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-22 11:15:57.2762 INFO -- AuthenticateUser - Response: {"Token":"fKXdECQcCCcMSxkDt71Ygc4oukmm-rkYYNzfOpGfH23E1oqwPvL5kCrQBZngVY7Jv6qelvlpeekfmRTISu5nIs2_U5Q_IVKK7Z2FpPVHNhW28ndh0X3mGB2W6AOggLDc9Zulrg8lwERNTynhntGWfT42ZDG1a7v7eppcNi51DyEMZP0JGqg-91zzO4GROHfs","TimeStamp":"2021-09-22T11:15:57.2034182+03:00"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-22 11:16:19.5312 INFO -- SaveTankerPermit - Request: {"PlateNo":"أ أ أ 23895","transporterBrand":"TOYOTA","transporterProductionYear":"2019","licenseNo":"98959022","licenseExpiryDate":"2021-11-30T00:00:00","entranceDate":"2021-08-31T20:09:26.88","TankCapacity":22.0,"plateNo_Numbers":"9895","plateNo_Characters":"أ أ أ","TransporterColor":null,"Drivers":[{"DriverFullNameAR":"saed2","DriverIDType":"2","DriverIDValue":"2","DriverMobileNumber":"966225646","DriverDrivingLicenseNumber":"15","DriverDrivingLicenseExpiryDate":"2020-08-08"}],"PermitVersion":"01.00","PermitIssue":"2021-08-31","PermitExpiration":"2022-08-31T00:00:00","Source":"ELM","TransactionId":"fe767687-12b7-4340-92d9-a633e7b1b0a3"} --  
+
+----------------------------------------------------------------------------
+ 
+2021-09-22 11:16:20.6780 INFO -- SaveTankerPermit - Response: "05ea53b2-a6d4-484e-b3b5-c311c8dae15b" --  
+
+----------------------------------------------------------------------------
+ 
