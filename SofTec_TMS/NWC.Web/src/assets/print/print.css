@@ -1,0 +1,18 @@
+#printSection {
+  display: block !important;
+  text-align: right;
+  direction: rtl;
+  width: 100vw;
+  padding: 0px;
+  margin: 0px;
+}
+
+#printSection .person_details,
+#printSection .signature_details {
+  margin-top: 50px;
+}
+
+#printSection .text-direction-left {
+  text-align: left;
+  direction: ltr;
+}

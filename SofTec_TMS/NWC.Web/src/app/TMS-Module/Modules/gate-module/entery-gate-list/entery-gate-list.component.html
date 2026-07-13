@@ -1,0 +1,239 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6 padding-10">
+      <span class="page-title">{{ "gates" | translate }}</span>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+      <span class="page-title currentpage">{{ "entry gate" | translate }}</span>
+    </div>
+  </div>
+</div>
+<div class="inner-div">
+  <div class="row form-row">
+    <div class="col-md-6">
+      <label class="col-sm-3 title">{{ "vehicle" | translate }}</label>
+      <div class="col-sm-6">
+        <input
+          class="form-control"
+          [(ngModel)]="vehicleSearchText"
+          (keyup.enter)="this.onSearchSubmit()"
+          placeholder="{{ 'Search...' | translate }}"
+        />
+        <!-- <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="vehicleList"
+                     (SearchVAlue)="getVehicles($event)"
+                     (selectedListChange)="onVehicleDDLChanged($event)"
+                     [options]="selectMenuOptions"
+                     [selectedList]="bindingModel_Vehicles"
+                     [loading]="Vehicle_loading">
+        </select-menu> -->
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label class="col-sm-3 title">{{ "order number" | translate }} </label>
+      <div class="col-sm-6">
+        <input
+          class="form-control"
+          [(ngModel)]="workOrderVehicleSC.WorkOrderNumber"
+          (keyup.enter)="this.onSearchSubmit()"
+          placeholder="{{ 'Search...' | translate }}"
+        />
+
+        <!-- <search-component class="col-md-6" (searchKeyword)="onWorkOrderDDLChanged($event)" 
+        (searchClicked)="onWorkOrderDDLClicked($event)"
+        [isTypeahead]="true"
+        [typeaheadFunction]='getWorkOrderNumbers.bind(this)' [field]="'Name'"
+        [(_value)]="workOrderVehicleSC.WorkOrderNumber">
+      </search-component> -->
+      </div>
+    </div>
+  </div>
+  <div class="row form-row">
+    <div class="col-md-6">
+      <label class="col-sm-3 title"> {{ "permission" | translate }}</label>
+      <div class="col-sm-6">
+        <input
+          class="form-control"
+          [(ngModel)]="driverSearchText"
+          (keyup.enter)="this.onSearchSubmit()"
+          placeholder="{{ 'Search...' | translate }}"
+        />
+        <!-- <select-menu [label]="'Name'" [itemKey]="'Id'"
+        [dropDownListInputs]="driverList"
+        (SearchVAlue)="getDrivers($event)"
+        (selectedListChange)="onDriverDDLChanged($event)"
+        [options]="selectMenuOptions"
+        [selectedList]="bindingModel_Drivers"
+        [loading]="Driver_Loading">
+      </select-menu> -->
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <button
+        class="btn btn-default margin-5 pull-right"
+        (click)="clearSearch()"
+      >
+        {{ "Clear" | translate }}
+      </button>
+      <button
+        class="btn btn-danger margin-5 pull-right"
+        (click)="onSearchSubmit()"
+      >
+        {{ "Search" | translate }}
+      </button>
+    </div>
+  </div>
+  <h4 class="ttl">
+    {{ "IncomingTankers" | translate }} <span>{{ "entry" | translate }}</span>
+  </h4>
+
+  <div class="row form-row holder-list-vehicles">
+    <div class="col-md-6 flot-ar">
+      <ul class="list-tankers">
+        <li *ngFor="let item of stateVeicleSearchResult.Result; let i = index">
+          <div
+            class="box-data"
+            [style.border-right-color]="item.VehicleStatusColorCode"
+            [style.border-left-color]="item.VehicleStatusColorCode"
+          >
+            <div class="row">
+              <div class="col-md-9">
+                <br />
+                <label class="tanker">
+                  <i class="fa fa-truck"></i>
+                  <span class="tanker-plt">
+                    {{ item.VehicleCode }} | {{ item.VehicleCodePlateNo }} -
+                  </span>
+                  <span>
+                    {{ item.Capacity }} {{ "M" | translate }}<sup>3</sup> -
+                  </span>
+                  <span class="stat">{{ item.VehicleStatusName }}</span>
+                </label>
+                <label class="tanker-name">
+                  <i class="fa fa-user"></i>
+                  <span class="name">{{ item.DriverName }} | {{ item.DriverCode }} |</span>
+                  <span class="mob">{{ item.DriverMobileNumber }}</span>
+                </label>
+                <label class="tanker-name" *ngIf="item.Expirationdate">
+                  <i class="fa fa-credit-card"></i>
+                  <span class="name">{{ item.PermitNumber  }} | {{ item.PermitStatus }} |</span>
+                </label>
+                <div class="w-75 mt-3"
+                     *ngIf="item.CitySettings_ShowCustomerClassEntryGate">
+                  <select-menu [label]="'Name'"
+                               [itemKey]="'Id'"
+                               [dropDownListInputs]="customerClassList"
+                               [(selectedList)]="item.CustLocationClasses"
+                               (selectedListChange)="onClassDDLChange($event, item)"
+                               [options]="selectMenuOptions2">
+                  </select-menu>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <button
+                  class="btn btn-default"
+                  *ngIf="item.VehicleStatusId == 13"
+                  (click)="onArrivedVehicleToStation(item)"
+                >
+                  {{ "Arrived Station" | translate }}
+                </button>
+
+                <button
+                  class="btn btn-info"
+                  *ngIf="item.VehicleStatusId == 12"
+                  (click)="viewVehicleViolation(item.VehicleID)"
+                >
+                  {{ "ViewViolations" | translate }}
+                </button>
+
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6 flot-ar">
+      <ul class="list-tankers">
+        <li
+          *ngFor="let item of stateWOVeicleSearchResult.Result; let i = index"
+        >
+          <div
+            class="box-data"
+            [style.border-right-color]="item.VehicleStatusColorCode"
+            [style.border-left-color]="item.VehicleStatusColorCode"
+          >
+            <div class="row">
+              <div class="col-md-8">
+                <span class="cod">#{{ item.WorkOrderNumber }}</span>
+                <span class="date">
+                  <date [date]="item.LastStatusTime" [ShowTime]="true"></date>
+                </span>
+
+                <label class="tanker">
+                  <i class="fa fa-truck"></i>
+                  <span class="tanker-plt">
+                    {{ item.VehicleCode }} | {{ item.VehicleCodePlateNo }} -
+                  </span>
+                  <span>
+                    {{ item.Capacity }} {{ "M" | translate }}<sup>3</sup> -
+                  </span>
+                  <span class="stat">
+                    {{
+                    IsArabic ? item.VehicleStatusNameAr : item.VehicleStatusName
+                    }}
+                  </span>
+                </label>
+                <label class="tanker-name">
+                  <i class="fa fa-user"></i>
+                  <span class="name">
+                    {{ item.DriverName }} | {{ item.DriverCode }} |
+                  </span>
+                  <span class="mob">{{ item.DriverMobileNumber }}</span>
+                </label>
+                <label class="tanker-name" *ngIf="item.Expirationdate">
+                  <i class="fa fa-credit-card"></i>
+                  <span class="name">{{ item.PermitNumber  }} | {{ item.PermitStatus }} |</span>
+                </label>
+                <div class="w-75 mt-3"
+                     *ngIf="item.CitySettings_ShowCustomerClassEntryGate">
+                  <select-menu [label]="'Name'"
+                               [itemKey]="'Id'"
+                               [dropDownListInputs]="customerClassList"
+                               [(selectedList)]="item.CustLocationClasses"
+                               (selectedListChange)="onClassDDLChange($event, item)"
+                               [options]="selectMenuOptions2">
+                  </select-menu>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="paid"
+                    [(ngModel)]="item.IsPaid"
+                  />
+                  <label class="form-check-label mr-4 ml-4" for="paid">
+                    {{ "paid" | translate }}
+                  </label>
+                </div>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="{{ 'EnterCode' | translate }}"
+                  [(ngModel)]="item.ConfirmationCode"
+                />
+                <button class="btn btn-default mt-1" (click)="onArrivedStation(item)">
+                  {{ "Arrived Station" | translate }}
+                </button>
+                <span class="total"
+                  >{{ "total" | translate }} : {{ item.TotalCost }}
+                  {{ "SAR" | translate }}</span
+                >
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

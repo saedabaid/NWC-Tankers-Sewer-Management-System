@@ -1,0 +1,96 @@
+.uploaded-file {
+    width: 100%;
+    display: block;
+    height: 50px;
+    padding: 15px 10px;
+    background: #f7f7f7;
+    margin-bottom: 10px;
+  
+    .file-icon {
+      font-size: 16pt;
+      vertical-align: text-bottom;
+    }
+  
+    .file-name {
+      font-size: 11pt;
+      color: #333;
+      margin-left: 5px;
+      vertical-align: top;
+      width: 85%;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  
+    .remove-icon {
+      float: right;
+      color: #d8272d;
+      font-size: 14pt;
+      vertical-align: middle;
+    }
+  }
+  .browse-btn {
+    background: #d8272d;
+    border-color: #d8272d;
+    color: #fff !important;
+    padding-right: 10px !important;
+    line-height: 19px;
+    margin-right: 10px;
+    margin-left: 0 !important;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  
+   
+  
+  }
+
+  .hidden{
+    visibility: hidden;
+
+  }
+  @media(max-width: 1500px){
+    input {
+      font-size: 9pt;
+      height: 30px;
+    }
+    .remove-icon {
+      font-size: 12pt;
+    }
+    .file-icon {
+      font-size: 12pt;
+    }
+    .file-name {
+      font-size: 9pt;
+      padding-top: 2px;
+    }
+    .btn {
+      font-size: 9pt;
+      padding: 5px 10px 6px;
+    }
+  }
+  .rtl  {
+  
+    .browse-btn {
+
+        margin-left: 10px !important;
+        margin-right: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        border-radius: 4px;
+
+
+    }
+
+    .input-group {
+        .form-control:first-child {
+            border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+        }
+    }
+  }
+
+  .up-btn{
+    background-color: #00a8d4;
+    color: #fff; 
+  }

@@ -1,0 +1,22 @@
+<div class="row" style="padding:30px;">
+  <div class="col-md-6 padding-10">
+    <label>{{ "Customer" | translate }}</label>
+    <app-print-ticket-customer></app-print-ticket-customer>
+  </div>
+
+  <div class="col-md-6 padding-10">
+    <label>{{ "Driver" | translate }}</label>
+    <app-print-ticket-driver></app-print-ticket-driver>
+  </div>
+</div>
+<style>
+  .qrcode img {
+    width: 100px;
+  }
+
+  @media print {
+    .qrcode img {
+      width: 100px;
+    }
+  }
+</style>

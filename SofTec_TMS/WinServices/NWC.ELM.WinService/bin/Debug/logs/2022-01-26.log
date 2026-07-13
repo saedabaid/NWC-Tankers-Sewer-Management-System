@@ -1,0 +1,114 @@
+2022-01-26 17:41:11.4267 INFO -- ***** start to generate token  --  
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 17:41:11.4211 INFO -- ***** start to generate token  --  
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 17:41:16.4622 ERROR -- AuthenticationManager.AuthenticateUser : One or more errors occurred. -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 17:41:16.4622 ERROR -- ***** Error At  :26/01/22 5:41:16 PM - Object reference not set to an instance of an object. --  
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 17:41:16.4622 ERROR -- AuthenticationManager.AuthenticateUser : One or more errors occurred. -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 17:41:16.4622 ERROR -- ***** Error At  :26/01/22 5:41:16 PM - Object reference not set to an instance of an object. --  
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 21:27:19.8464 INFO -- ***** start to generate token  --  
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 21:27:19.8347 INFO -- ***** start to generate token  --  
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 21:27:24.9477 ERROR -- AuthenticationManager.AuthenticateUser : One or more errors occurred. -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 21:27:24.9540 ERROR -- ***** Error At  :26/01/22 9:27:24 PM - Object reference not set to an instance of an object. --  
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 21:27:24.9477 ERROR -- AuthenticationManager.AuthenticateUser : One or more errors occurred. -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 21:27:24.9540 ERROR -- ***** Error At  :26/01/22 9:27:24 PM - Object reference not set to an instance of an object. --  
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 22:57:58.0153 INFO -- ***** start to generate token  --  
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 22:57:58.0153 INFO -- ***** start to generate token  --  
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 22:58:02.9131 ERROR -- AuthenticationManager.AuthenticateUser : One or more errors occurred. -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 22:58:02.9131 ERROR -- ***** Error At  :26/01/22 10:58:02 PM - Object reference not set to an instance of an object. --  
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 22:58:02.9131 ERROR -- AuthenticationManager.AuthenticateUser : One or more errors occurred. -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2022-01-26 22:58:02.9131 ERROR -- ***** Error At  :26/01/22 10:58:02 PM - Object reference not set to an instance of an object. --  
+
+----------------------------------------------------------------------------
+ 

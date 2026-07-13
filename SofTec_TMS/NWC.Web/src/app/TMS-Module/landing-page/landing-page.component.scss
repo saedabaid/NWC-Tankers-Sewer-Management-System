@@ -1,0 +1,75 @@
+.w-200px {
+  width: 90px;
+  height: 130px;
+}
+
+.box {
+  border-radius: 20px;
+  width: 190px;
+  height: 160px;
+}
+.bg-blue {
+  background-color: #024884 !important;
+}
+
+///// Departments / Sections /////
+.landing__page {
+  a {
+    margin: 10px 0;
+    display: block;
+  }
+  justify-content: fex-start;
+  .each__item {
+    &:hover {
+      img {
+        transform: scale(1.7) rotate(22.3deg);
+        opacity: 0.5;
+        }
+      }
+    h5 {
+      font-weight: 600;
+      font-size: 1.7rem;
+    }
+    .title__item {
+      background-color: #f1f1f1;
+      align-items: center;
+      display: flex;
+      border-radius: 10px;
+      box-shadow: 3px 3px 3px rgb(0 0 0 / 35%);
+      .icon__item {
+          background: #024884;
+          margin-right: 25px;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          width: 75px;
+          border-radius: 10px 0 0 10px;
+          overflow: hidden;
+        img {
+          height: 40px;
+          margin: auto;
+          transition: all ease-in-out .5s;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+//// RTL ////
+:host-context(.rtl) {
+  .each__item {
+    .title__item {
+      padding: 0 !important;
+      .icon__item {
+        border-radius: 0 10px 10px 0;
+        margin-right: 0;
+        margin-left: 25px;
+      }
+    }
+  }
+}

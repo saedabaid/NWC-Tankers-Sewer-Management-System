@@ -1,0 +1,15 @@
+<div class="search-parent">
+  <input type="text" [id]="name" placeholder="{{placeholder | translate }}"
+         (keyup.enter)="searchByClicked()"
+        class="form-control shadow-sm bg-white rounded"
+        [(ngModel)]="asyncSelected"
+        [typeahead]="dataSource"
+        (typeaheadOnSelect)="typeaheadOnSelect($event);"
+        typeaheadWaitMs="400"
+        typeaheadOptionField="{{field}}"
+
+        (ngModelChange)="searchByKeyword()"
+        [ngClass]="_loading ? 'loading-DropDownList':'' "/>
+  <!-- <i  [ngClass]="_loading ? '' : 'fa fa-search search-btn' " (click)="searchByClicked()" ></i> -->
+</div>
+<!-- (ngModelChange)="searchByKeyword()"-->

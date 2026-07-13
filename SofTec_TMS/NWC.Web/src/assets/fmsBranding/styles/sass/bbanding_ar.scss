@@ -1,0 +1,1247 @@
+//@extend-elements
+//original selectors
+//.RadGrid_Sunset .rgHeader, .HeaderStyle
+%extend_1 {
+	background: none !important;
+	background-color: #5f7583 !important;
+	height: 35px !important;
+	color: #fff;
+	text-align: right !important;
+	font-family: DINReg !important;
+}
+
+//original selectors
+//a.ic_edit, .ic_edit a
+%extend_2 {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(/assets/fmsBranding/styles/Icons/ic_edit.png) center center no-repeat;
+}
+
+//original selectors
+//a.ic_user, .ic_user a
+%extend_3 {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(/assets/fmsBranding/styles/Icons/ic_user.png) center center no-repeat;
+}
+
+//original selectors
+//a.ic_delete, .ic_delete input
+%extend_4 {
+	width: 16px;
+	height: 16px;
+	background: url(/assets/fmsBranding/styles/Icons/ic_delete.png) center center no-repeat;
+	display: inline-block;
+}
+
+//original selectors
+//.RadButton_Bootstrap.btn-primary, .btn-primary
+%extend_5 {
+	font-family: DINReg !important;
+	background-color: #d8272d !important;
+	color: #fff !important;
+	//Instead of the line below you could use @include border-top-left-radius($radius)
+	border-top-left-radius: 5px !important;
+	//Instead of the line below you could use @include border-bottom-left-radius($radius)
+	border-bottom-left-radius: 5px !important;
+	//Instead of the line below you could use @include border-bottom-left-radius($radius)
+	border-bottom-left-radius: 0 !important;
+	//Instead of the line below you could use @include border-top-left-radius($radius)
+	border-top-left-radius: 0 !important;
+	border: 1px solid #d8272d !important;
+}
+
+//original selectors
+//.RadButton_Bootstrap.btn-primary[disabled*= 'disabled'] input, .btn-primary[disabled*= 'disabled']:Hover, .btn-primary[disabled*= 'disabled'], .btn-primary[disabled*= 'disabled']:Hover
+%extend_6 {
+	background-color: #f8f8f8;
+	border-color: #f2f2f2;
+	color: #cbcbcb;
+	cursor: auto;
+}
+
+
+@font-face {
+	font-family: DINReg;
+	src: url(/assets/fmsBranding/styles/fonts/DINNextLTArabic-Regular.ttf);
+}
+@font-face {
+	font-family: DINMed;
+	src: url(/assets/fmsBranding/styles/fonts/DINNextLTArabic-Medium.ttf);
+}
+body {
+	background: #fff;
+	background-repeat: repeat-x;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	#qm0:hover a.qmactive span {
+		&.qm-ibcss-active span {
+			border-color: #f4bb42;
+		}
+		&.qm-ibcss-static span {
+			border-color: #f4bb42;
+		}
+	}
+}
+label {
+	font-weight: normal;
+	font-family: DINReg !important;
+}
+a {
+	border: 0;
+	text-decoration: none;
+	&:hover {
+		color: #d72734;
+	}
+	&.ic_edit {
+		@extend %extend_2;
+		&:Hover {
+			background: url(/assets/fmsBranding/styles/Icons/ic_edithover.png) center center no-repeat;
+		}
+	}
+	&.ic_user {
+		@extend %extend_3;
+	}
+	&.ic_delete {
+		@extend %extend_4;
+		&:Hover {
+			background: url(/assets/fmsBranding/styles/Icons/ic_deletehover.png) center center no-repeat;
+		}
+	}
+	&.ic_duplicate {
+		width: 16px;
+		height: 16px;
+		background: url(/assets/fmsBranding/styles/Icons/ic_duplicate.png) center center no-repeat;
+		display: block;
+		&:Hover {
+			background: url(/assets/fmsBranding/styles/Icons/ic_duplicatehover.png) center center no-repeat;
+		}
+	}
+	&.ic_calentar {
+		width: 16px;
+		height: 16px;
+		background: url(/assets/fmsBranding/styles/Icons/ic_calentar.png) center center no-repeat;
+		&:hover {
+			background: url(/assets/fmsBranding/styles/Icons/ic_calentarhover.png) center center no-repeat;
+		}
+	}
+}
+.h1 {
+	font-family: DINReg !important;
+}
+.h2 {
+	font-family: DINReg !important;
+}
+.h3 {
+	font-family: DINReg !important;
+}
+.h4 {
+	font-family: DINReg !important;
+}
+.h5 {
+	font-family: DINReg !important;
+}
+.h6 {
+	font-family: DINReg !important;
+}
+h1 {
+	font-family: DINReg !important;
+}
+h2 {
+	font-family: DINReg !important;
+}
+h3 {
+	font-family: DINReg !important;
+}
+h4 {
+	font-family: DINReg !important;
+}
+h5 {
+	font-family: DINReg !important;
+}
+h6 {
+	font-family: DINReg !important;
+}
+input {
+	font-family: DINReg !important;
+}
+.Required {
+	font-family: DINReg !important;
+}
+#qm0 {
+	ul {
+		background-color: #010101;
+		border-color: #707070;
+		padding: 0;
+		a {
+			line-height: 30px;
+			text-indent: 10px;
+			font-size: 10pt;
+			&:hover {
+				color: #000000;
+				background-color: #ccc;
+			}
+		}
+	}
+	a:hover {
+		color: #f4bb42;
+	}
+}
+.div-grey-blck {
+	border-bottom: 0 solid #cccccc;
+	width: 97%;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+.HeaderContainer {
+	.nav {
+		color: #ffffff;
+	}
+	li ul a {
+		&:hover {
+			color: #5b92df;
+		}
+		&:active {
+			color: #5b92df;
+		}
+	}
+}
+.Savebtn {
+	border: 1px solid #113267;
+	padding: 3px 5px 5px;
+	color: #ffffff;
+	background-color: #314d7c;
+	cursor: pointer;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 3px 3px 3px 3px;
+	&:hover {
+		background-color: #6194ea;
+	}
+}
+#footr_altairlogo {
+	display: block;
+	background: url(/assets/fmsBranding/styles/images/altair_logo.png) no-repeat;
+	height: 50px;
+}
+.RadTreeView_Sunset {
+	.BranchView {
+		border: 1px solid #337ab7;
+	}
+	.landmarkDIV {
+		background-color: #fcfcfc;
+		border: 1px solid #cccccc;
+	}
+}
+.ul_controlpanel {
+	width: 100%;
+	margin: 25px;
+	padding: 0;
+	list-style: none;
+	overflow-y: auto;
+	li {
+		float: left;
+		width: 19%;
+		margin: 25px 5px;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		a {
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			padding-top: 10px;
+			border: 1px solid #fff;
+			&:Hover {
+				background-color: #f9f9f9;
+				border: 1px solid #00a8d445;
+			}
+			span {
+				display: block;
+				color: #000;
+				font-size: 15px;
+				line-height: 45px;
+				font-size: 10.5pt;
+			}
+		}
+		&:Hover a div.panel_desc {
+			display: block;
+		}
+	}
+}
+.Footer {
+	display: none;
+}
+.ElmFooter {
+	display: block !important;
+	background: #363636;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	* {
+		color: #ddd;
+		font-weight: 400;
+		font-size: 14px;
+	}
+	.content {
+		padding: 5px;
+	}
+}
+.container::before {
+	content: " ";
+	display: table;
+}
+.container::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+.row::before {
+	content: " ";
+	display: table;
+}
+.row::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+.dl::before {
+	content: " ";
+	display: table;
+}
+.dl::after {
+	content: " ";
+	display: table;
+}
+.contact-info::before {
+	content: " ";
+	display: table;
+}
+.contact-info::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+dl::after {
+	clear: both;
+}
+.brand {
+	position: relative;
+	top: 7px;
+	color: #c17726 !important;
+}
+dl {
+	font-style: normal;
+	margin: 0;
+	padding: 5px;
+	display: inline-block;
+}
+dt {
+	display: inline-block;
+	font-size: 11px;
+	line-height: 20px;
+}
+.footer_left {
+	text-align: left;
+}
+.footer_right {
+	text-align: right;
+}
+.RadGrid_Sunset {
+	.rgHeader {
+		@extend %extend_1;
+	}
+	.rgEditForm {
+		a {
+			color: #337ab7 !important;
+			font-family: DINReg !important;
+		}
+		table {
+			font-family: DINReg !important;
+			font-size: 14px !important;
+		}
+	}
+	.rgMasterTable {
+		font-family: DINReg !important;
+		font-size: 14px !important;
+	}
+	.rgDetailTable {
+		font-family: DINReg !important;
+		font-size: 14px !important;
+	}
+	thead .rgCommandCell {
+		padding: 5px !important;
+	}
+	.rgRow a {
+		color: #337ab7 !important;
+		font-family: DINReg !important;
+	}
+	.rgAltRow a {
+		color: #337ab7 !important;
+		font-family: DINReg !important;
+	}
+	.rgEditRow a {
+		color: #337ab7 !important;
+		font-family: DINReg !important;
+	}
+	.rgFooter a {
+		color: #337ab7 !important;
+		font-family: DINReg !important;
+	}
+	.rgGroupPanel table {
+		font-family: DINReg !important;
+		font-size: 14px !important;
+	}
+	.rgCommandRow table {
+		font-family: DINReg !important;
+		font-size: 14px !important;
+	}
+	.rgPager table {
+		font-family: DINReg !important;
+		font-size: 14px !important;
+	}
+}
+.HeaderStyle {
+	@extend %extend_1;
+}
+.GridHeader {
+	color: #ffffff;
+	background-color: #1a7f57 !important;
+}
+.MasterGridHeader {
+	color: #ffffff;
+	background-color: #4b78a1;
+}
+.RadGrid_Bootstrap {
+	.rgHeader {
+	}
+	&.mygrid {
+		.rgHeader {
+			background-color: #5f7583 !important;
+			color: #fff !important;
+			font-family: DINReg !important;
+			height: 45px;
+			a {
+				color: #fff !important;
+				font-family: DINReg !important;
+				text-decoration: underline !important;
+			}
+		}
+		.rgCommandRow {
+			background-color: #eee !important;
+			color: #fff !important;
+		}
+		.rgExpXLS {
+			background-image: url(/assets/fmsBranding/styles/icons/WebResource.axd.png) !important;
+		}
+		.rgExpDOC {
+			background-image: url(/assets/fmsBranding/styles/icons/WebResource.axd.png) !important;
+		}
+		.rgExpPDF {
+			background-image: url(/assets/fmsBranding/styles/icons/WebResource.axd.png) !important;
+		}
+		.rgExpCSV {
+			background-image: url(/assets/fmsBranding/styles/icons/WebResource.axd.png) !important;
+		}
+		thead .rgCommandCell {
+			padding: 5px !important;
+		}
+		.rgCommandTable tbody tr td {
+			&:nth-child(1) {
+				text-align: right !important;
+			}
+			&:nth-child(2) {
+				text-align: left !important;
+			}
+		}
+	}
+	.rgRow {
+		a {
+			color: #337ab7 !important;
+			font-family: DINReg !important;
+		}
+		td {
+			font-family: DINReg !important;
+		}
+	}
+	.rgAltRow {
+		a {
+			color: #337ab7 !important;
+			font-family: DINReg !important;
+		}
+		td {
+			font-family: DINReg !important;
+		}
+	}
+	.rgPagerCell {
+		.rgPageFirst {
+			float: left !important;
+			font-family: DINReg !important;
+		}
+		.rgPageNext {
+			float: left !important;
+			font-family: DINReg !important;
+		}
+		.rgNumPart a.rgCurrentPage {
+			background-color: #5f7583 !important;
+			border: none !important;
+		}
+	}
+	span {
+		font-family: DINReg !important;
+	}
+	.rgSelectedRow {
+		> td {
+			background-color: #d0e4e9 !important;
+		}
+		td.rgSorted {
+			background-color: #d0e4e9 !important;
+		}
+	}
+	.rgEditRow a {
+		color: #337ab7 !important;
+		font-family: DINReg !important;
+	}
+	.rgFooter a {
+		color: #337ab7 !important;
+		font-family: DINReg !important;
+	}
+	.rgEditForm a {
+		color: #337ab7 !important;
+		font-family: DINReg !important;
+	}
+	.rgCommandCell a {
+		font-family: DINReg !important;
+	}
+	.rgMasterTable .rgSelectedCell {
+		background-color: #d0e4e9 !important;
+	}
+	td.rgEditRow .rgSelectedRow {
+		background-color: #d0e4e9 !important;
+	}
+}
+.RadGridRTL {
+	.rgWrap {
+		float: left !important;
+		font-family: DINReg !important;
+	}
+	.rgInfoPart {
+		text-align: right !important;
+		float: right !important;
+		font-family: DINReg !important;
+	}
+}
+.RadComboBoxDropDown {
+	label {
+		font-family: DINReg !important;
+	}
+	ul.rcbList li {
+		font-family: DINReg !important;
+	}
+	div.rcbMoreResults {
+		a {
+			font-family: DINReg !important;
+		}
+		span {
+			font-family: DINReg !important;
+		}
+	}
+}
+.RadTabStrip_MetroTouch {
+	margin-bottom: 20px !important;
+	.rtsLevel1 {
+		border-bottom: 3px solid #00a8d4 !important;
+		.rtsSelected {
+			background-color: #00a8d4 !important;
+			border-color: #00a8d4 !important;
+			color: #fff !important;
+			&:hover {
+				background-color: #00a8d4 !important;
+				border-color: #00a8d4 !important;
+				color: #fff !important;
+				background-color: #00a8d4 !important;
+				border-color: #00a8d4 !important;
+				color: #fff !important;
+				.rtsLink {
+					background-color: #00a8d4 !important;
+					border-color: #00a8d4 !important;
+					color: #fff !important;
+				}
+			}
+			.rtsLink {
+				background-color: #00a8d4 !important;
+				border-color: #00a8d4 !important;
+				color: #fff !important;
+			}
+		}
+	}
+	span {
+		font-family: DINReg !important;
+	}
+	.rtsLink i.fa {
+		line-height: 20px;
+		font-size: 23px;
+	}
+}
+.label-style {
+	color: #5f7583;
+	font-size: 1em;
+}
+.name-style {
+	color: #d72734;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: capitalize;
+	display: inline-block;
+	margin: 10px;
+}
+.sign-style {
+	font-family: DINReg !important;
+	font-size: 0.8em;
+	padding: 0 5px;
+}
+.div_AdvancedSearch {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	background-color: #f8f8f8;
+	//Instead of the line below you could use @include border-top-left-radius($radius)
+	border-top-left-radius: 0;
+	//Instead of the line below you could use @include border-top-right-radius($radius)
+	border-top-right-radius: 0;
+	//Instead of the line below you could use @include border-bottom-left-radius($radius)
+	border-bottom-left-radius: 10px;
+	//Instead of the line below you could use @include border-bottom-right-radius($radius)
+	border-bottom-right-radius: 10px;
+	padding: 10px;
+	border-top: 1px dashed #ccc;
+	margin-bottom: 10px;
+}
+a[id*="lnk_expand"] {
+	color: #00a8d4 !important;
+	font-size: 10pt !important;
+	padding: 0 10px;
+}
+.ic_delete {
+	input {
+		@extend %extend_4;
+	}
+	&:Hover input {
+		background: url(/assets/fmsBranding/styles/Icons/ic_deletehover.png) center center no-repeat;
+	}
+}
+.ic_calentar {
+	a {
+		width: 16px;
+		height: 16px;
+		background: url(/assets/fmsBranding/styles/Icons/ic_calentar.png) center center no-repeat;
+	}
+	&:hover a {
+		background: url(/assets/fmsBranding/styles/Icons/ic_calentarhover.png) center center no-repeat;
+	}
+}
+.img_new {
+	display: inline-block;
+	height: 23px;
+	background-image: url(/assets/fmsBranding/styles/icons/ic_new.png);
+	&:hover {
+		background-image: url(/assets/fmsBranding/styles/icons/ic_newhover.png);
+	}
+}
+.img_newmulti {
+	display: inline-block;
+	width: 31px;
+	background-image: url(/assets/fmsBranding/styles/icons/ic_multi.png);
+	&:hover {
+		background-image: url(/assets/fmsBranding/styles/icons/ic_multihover.png);
+	}
+}
+.img_fuel {
+	display: inline-block;
+	width: 21px;
+	background-image: url(/assets/fmsBranding/styles/icons/ic_fuel.png);
+	&:hover {
+		background-image: url(/assets/fmsBranding/styles/icons/ic_fuelhover.png);
+	}
+}
+.img_milage {
+	display: inline-block;
+	width: 29px;
+	background-image: url(/assets/fmsBranding/styles/icons/ic_milage.png);
+	&:hover {
+		background-image: url(/assets/fmsBranding/styles/icons/ic_milagehover.png);
+	}
+}
+.img_excel {
+	display: inline-block;
+	width: 21px;
+	background-image: url(/assets/fmsBranding/styles/icons/ic_excel.png);
+	&:Hover {
+		background-image: url(/assets/fmsBranding/styles/icons/ic_excelhover.png);
+	}
+}
+.btn_Refresh {
+	background: url(/assets/fmsBranding/styles/icons/ic_refresh.png) no-repeat center;
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 3px;
+	&:Hover {
+		background: url(/assets/fmsBranding/styles/icons/ic_refreshhover.png) no-repeat center;
+	}
+}
+.img_getFromTamm {
+	display: inline-block;
+	width: 30px;
+	background-image: url(/assets/fmsBranding/styles/icons/ic_tamm.png);
+	background-repeat: no-repeat;
+	&:Hover {
+		background-image: url(/assets/fmsBranding/styles/icons/ic_tamm.png);
+	}
+}
+.RadButton_Bootstrap {
+	.btn {
+		font-family: DINReg !important;
+	}
+	&.btn-primary {
+		@extend %extend_5;
+		.rbDecorated {
+			color: #fff !important;
+		}
+		&:hover {
+			background-color: #616161 !important;
+			border-color: #616161 !important;
+		}
+	}
+	&.btn-primary[disabled*= 'disabled'] input {
+		@extend %extend_6;
+	}
+}
+.btn {
+	font-family: DINReg !important;
+	input {
+		font-family: DINReg !important;
+	}
+}
+.btn-primary {
+	@extend %extend_5;
+	&:hover {
+		background-color: #616161 !important;
+		border-color: #616161 !important;
+	}
+}
+.btn-search {
+	padding: 1px 12px !important;
+}
+.innerwhhiteDIV {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #fff;
+	margin-bottom: 20px;
+}
+.header {
+	border-bottom: 4px solid #5f7583;
+	height: 80px;
+	background: linear-gradient(#f1f1f1, #f7f7f7);
+	border-top: 2px solid #fff;
+}
+.header::before {
+	content: " ";
+	display: table;
+}
+.header::after {
+	content: " ";
+	display: table;
+}
+.navbar-header::before {
+	content: " ";
+	display: table;
+}
+.navbar-header::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+.navbar-header {
+	float: right;
+	position: relative;
+	padding-right: 10px;
+	padding-top: 4px;
+}
+.aside-md {
+	widows: 220px;
+}
+.menu_icon::before {
+	content: " ";
+	display: table;
+}
+.menu_icon::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+.menu_icon {
+	float: right;
+	height: 74px;
+	p {
+		position: relative;
+		top: 50%;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(-50%);
+		padding-left: 35px;
+		height: 40px;
+	}
+}
+.navbar-right::before {
+	content: " ";
+	display: table;
+}
+.navbar-right::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+.navbar-right {
+	float: left !important;
+	display: block;
+	margin: 0;
+	list-style: outside none none;
+	padding: 2px;
+	> li {
+		float: right;
+		display: block;
+		> {
+			.dropdown-menu {
+				position: absolute;
+				width: 140px;
+				background-color: #fff;
+				left: 0;
+				padding: 7px;
+				border-top: 2px solid #00a8d4;
+			}
+			#lang_Dropdown {
+				left: 72px;
+			}
+		}
+		> a {
+			padding-bottom: 15px;
+			padding-top: 15px;
+			color: #00a8d4 !important;
+			display: block;
+			padding: 23px 15px;
+			position: relative;
+			&:Hover {
+				color: #d72734;
+			}
+		}
+	}
+}
+.open {
+	display: block;
+}
+.thumb-sm {
+	display: inline-block;
+	width: 36px;
+}
+.avatar {
+	display: block;
+	white-space: nowrap;
+	margin-right: 30px;
+	margin-top: -19px;
+	width: 60px;
+	background: #eee;
+	img {
+		height: 60px;
+		max-width: 60px;
+		vertical-align: middle;
+	}
+	&.pull-right {
+		float: left !important;
+	}
+}
+.pull-right {
+	float: left !important;
+	: ;
+}
+.pull-left {
+	float: right !important;
+	: ;
+}
+.fa-fw {
+	text-align: center;
+	width: 1.28571em;
+	font-size: 1.5em !important;
+}
+.badge {
+	background-color: #fb6b5b;
+	border: 2px solid #fff;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 10px;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 82%;
+	font-weight: bold;
+	line-height: 12px;
+	min-width: 17px;
+	padding: 2px 6px 3px 5px;
+	position: absolute;
+	text-align: center;
+	top: 14px;
+	left: 10px;
+	vertical-align: baseline;
+	white-space: nowrap;
+}
+.lnk_Resources_Selected {
+	background: url(/assets/fmsBranding/styles/icons/menu_1.png) no-repeat 97%;
+	text-indent: 32px;
+}
+.lnk_Maintenance_Selected {
+	background: url(/assets/fmsBranding/styles/icons/menu_2.png) no-repeat 97%;
+	text-indent: 32px;
+}
+.lnk_Operation_Selected {
+	background: url(/assets/fmsBranding/styles/icons/menu_3.png) no-repeat 97%;
+	text-indent: 32px;
+}
+.lnk_Track_Selected {
+	background: url(/assets/fmsBranding/styles/icons/menu_4.png) no-repeat 97%;
+	text-indent: 32px;
+}
+.lnk_Reports_Selected {
+	background: url(/assets/fmsBranding/styles/icons/menu_5.png) no-repeat 97%;
+	text-indent: 32px;
+}
+.lnk_Rental_Selected {
+	background: url(/assets/fmsBranding/styles/icons/menu_6.png) no-repeat 97%;
+	text-indent: 32px;
+}
+.lnk_Resources {
+	background: url(/assets/fmsBranding/styles/icons/menu_resources.png) no-repeat 97%;
+	text-indent: 30px;
+	&:Hover {
+		background: #1d3944 url(/assets/fmsBranding/styles/icons/menu_resources.png) no-repeat 97% !important;
+	}
+}
+.lnk_Maintenance {
+	background: url(/assets/fmsBranding/styles/icons/menu_Maintenance.png) no-repeat 97%;
+	text-indent: 30px;
+	&:Hover {
+		background: #1d3944 url(/assets/fmsBranding/styles/icons/menu_Maintenance.png) no-repeat 97% !important;
+	}
+}
+.lnk_Operation {
+	background: url(/assets/fmsBranding/styles/icons/menu_operation.png) no-repeat 97%;
+	text-indent: 30px;
+	&:Hover {
+		background: #1d3944 url(/assets/fmsBranding/styles/icons/menu_operation.png) no-repeat 97 !important;
+	}
+}
+.lnk_Track {
+	background: url(/assets/fmsBranding/styles/icons/menu_gps.png) no-repeat 97%;
+	text-indent: 30px;
+	&:Hover {
+		background: #1d3944 url(/assets/fmsBranding/styles/icons/menu_gps.png) no-repeat 97% !important;
+	}
+}
+.lnk_Reports {
+	background: url(/assets/fmsBranding/styles/icons/menu_reports.png) no-repeat 97%;
+	text-indent: 30px;
+	&:Hover {
+		background: #1d3944 url(/assets/fmsBranding/styles/icons/menu_reports.png) no-repeat 97% !important;
+	}
+}
+.lnk_Rental {
+	background: url(/assets/fmsBranding/styles/icons/menu_Rental.png) no-repeat 97%;
+	text-indent: 30px;
+	&:Hover {
+		background: #1d3944 url(/assets/fmsBranding/styles/icons/menu_Rental.png) no-repeat 97% !important;
+	}
+}
+.mp-menu {
+	right: 0;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translate3d(100%, 0, 0);
+	ul {
+		li::before {
+			left: 10px;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: rotate(0deg);
+		}
+		li > a {
+			padding: 10px 7px;
+		}
+	}
+	&.mp-overlap h2::before {
+		left: 0;
+		margin-left: 8px;
+		padding-left: 3px;
+	}
+}
+.mp-level {
+	right: 0;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translate3d(100%, 0, 0);
+}
+.CalanderHeader {
+	background-color: #5f7583 !important;
+}
+.crType {
+	background-color: #ffffff;
+	border: 2px solid #e8e8e8;
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding: 10px;
+}
+.crTypeImg {
+	border: medium none;
+	float: right;
+	left: 0;
+	width: 230px;
+	margin: 15px 7px 0 15px;
+	max-height: 174px;
+}
+.crTypeTitle {
+	color: #6a6666;
+	font-size: 2em;
+	margin: 0 0 10px;
+}
+.crTypeArea {
+	float: right;
+	width: 51%;
+}
+.crClear {
+	clear: both;
+	height: 1px;
+}
+.crTypeRight {
+	float: left;
+	overflow: hidden;
+	width: 22%;
+	padding: 5px;
+}
+.crTypePrice {
+	background-color: #fdfdfd;
+	border: 2px solid #ebebeb;
+	margin: 0 0 10px;
+	overflow: hidden;
+	padding: 6px;
+	text-align: center;
+	p {
+		color: #737476;
+		font-size: 16px;
+		font-weight: bold;
+		margin: 0;
+		padding: 4px 0 0;
+	}
+}
+.crPrice {
+	color: #0e0f0f;
+	display: block;
+	height: 35px;
+	line-height: 27px;
+	position: relative;
+	strong {
+		font-size: 25px;
+		font-weight: bold;
+	}
+}
+.crPriceBtn {
+	color: #909092;
+	text-align: center;
+	.crGray {
+		font-size: 17px;
+		padding-bottom: 10px;
+	}
+}
+.seats {
+	background: url(/assets/fmsBranding/styles/icons/ic_seat.png) center right no-repeat;
+	text-indent: 30px;
+	padding: 5px 0;
+	font-size: 13px;
+	color: #666;
+}
+.bags {
+	background: url(/assets/fmsBranding/styles/icons/ic_bag.png) center right no-repeat;
+	text-indent: 30px;
+	padding: 5px 0;
+	font-size: 13px;
+	color: #666;
+}
+.door {
+	background: url(/assets/fmsBranding/styles/icons/ic_door.png) center right no-repeat;
+	text-indent: 30px;
+	padding: 5px 0;
+	font-size: 13px;
+	color: #666;
+}
+.trans {
+	background: url(/assets/fmsBranding/styles/icons/ic_trans.png) center right no-repeat;
+	text-indent: 30px;
+	padding: 5px 0;
+	font-size: 13px;
+	color: #666;
+}
+.air {
+	background: url(/assets/fmsBranding/styles/icons/ic_air.png) center right no-repeat;
+	text-indent: 30px;
+	padding: 5px 0;
+	font-size: 13px;
+	color: #666;
+}
+.driver {
+	background: url(/assets/fmsBranding/styles/icons/ic_user.png) center left no-repeat;
+	text-indent: 30px;
+	padding: 5px 0;
+	font-size: 13px;
+	color: #666;
+	border: 0 !important;
+}
+.fuel {
+	background: url(/assets/fmsBranding/styles/icons/ic_fue2l.png) center right no-repeat;
+	text-indent: 30px;
+	padding: 5px 0;
+	font-size: 13px;
+	color: #666;
+}
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2c3e50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+.top-item {
+	background: #ccc;
+	padding: 5px;
+	width: 99%;
+	margin: 0 auto;
+	text-align: left;
+	position: relative;
+	td {
+		color: #fff;
+		font-size: 17px;
+		span.light {
+			color: #3e4863;
+		}
+		i.light {
+			color: #3e4863;
+		}
+	}
+}
+.crBoxWTop {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: content-box;
+	color: #0e0f0f;
+	font-size: 15px;
+	font-weight: bold;
+	height: 32px;
+	line-height: 32px;
+	padding: 5px 10px;
+	position: relative;
+}
+#dLabel {
+	color: #565353;
+	font-size: 14px;
+}
+.c-btn {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 5px !important;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none !important;
+}
+@media(max-width: 1500px) {
+	.c-btn {
+		height: 30px;
+		padding: 5px !important;
+	}
+}
+.collapsedItem a {
+	border: 0;
+	text-decoration: none;
+}
+.RadComboBox select {
+	font-family: DINReg !important;
+}
+ul#qm0 li:Hover a.First {
+	text-decoration: none;
+	color: #f4bb42;
+}
+.RadDataPager_Bootstrap .rdpNumPart a.rdpCurrentPage {
+	background-color: #5f7583 !important;
+	border: none !important;
+}
+.RadTabStrip .rtsLevel .rtsIn {
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+}
+.tbl_control th {
+	text-align: right;
+	padding: 0 10px 5px;
+	color: #555555;
+	font-weight: normal;
+	margin-bottom: 14px;
+	display: inline-block !important;
+}
+.ic_edit a {
+	@extend %extend_2;
+	&:Hover {
+		background: url(/assets/fmsBranding/styles/Icons/ic_edithover.png) center center no-repeat;
+	}
+}
+.ic_user a {
+	@extend %extend_3;
+}
+.btn-primary[disabled*= 'disabled'] {
+	@extend %extend_6;
+	&:Hover {
+		@extend %extend_6;
+		@extend %extend_6;
+	}
+}
+span.RadButton_Bootstrap.rbSkinnedButton.btn-primary input {
+	color: #fff !important;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0 !important;
+}
+.mp-overlap .mp-level.mp-level-open {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 1px 0 2px rgba(0,0,0,0.2);
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translate3d(40px, 0, 0);
+}
+.icon:before {
+	margin-left: 0.6em;
+}
+.icon-arrow-left:before {
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: rotateY(180deg);
+}
+.crAttributeBar ul {
+	margin: 0;
+	padding: 0;
+}
+#double li.driver {
+	width: 100%;
+}
+#toastr-container > .toastr-error {
+	background-color: red;
+}

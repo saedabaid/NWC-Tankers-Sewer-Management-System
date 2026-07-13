@@ -1,0 +1,88 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:19/07/2020 9:01:03 AM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"6854993448","cisDivision":19,"orderStatus":1,"updateDateTime":"19-07-2020 09:01:05","parameters":[{"parameterName":"TMSID","parameterValue":"6854993448"},{"parameterName":"COMMENT","parameterValue":""}]} Time:19/07/2020 9:01:05 AM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:19/07/2020 9:07:40 AM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:19/07/2020 9:07:53 AM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:19/07/2020 9:09:57 AM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:19/07/2020 09:09:57 ص
+
+CreateWorkOrder Time:19/07/2020 09:09:57 ص
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5537,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:19/07/2020 09:09:57 ص
+
+Valid Time:19/07/2020 09:09:57 ص
+
+Create WorkOrder: Partially Success Time:19/07/2020 09:09:58 ص
+
+customerAccount: 5537 Time:19/07/2020 9:09:58 AM
+
+customerLocation: 5537 Time:19/07/2020 9:09:58 AM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:19/07/2020 9:09:58 AM
+
+OrderNumber: 0644850252 Time:19/07/2020 9:09:58 AM
+
+workOrderID: 46002 Time:19/07/2020 9:09:58 AM
+
+scheduledDeliveryTime: 19/07/2020 9:09:57 AM Time:19/07/2020 9:09:58 AM
+
+customerLocationClassID: 1 Time:19/07/2020 9:09:58 AM
+
+serviceTypeID: 1 Time:19/07/2020 9:09:58 AM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:19/07/2020 9:09:58 AM
+
+orderQuantity: 20 Time:19/07/2020 9:09:58 AM
+
+Net Cost: -1 Time:19/07/2020 9:09:58 AM
+
+Create WorkOrder: Success Time:19/07/2020 9:09:59 AM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:19/07/2020 9:10:13 AM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:19/07/2020 09:10:13 ص
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 0644850252 - TransporterID ea41e26d-8521-4f10-a5a8-2eaf5ba39d46 - TransportrStatus: 0 Time:19/07/2020 09:10:14 ص
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:19/07/2020 09:10:14 ص
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:19/07/2020 9:10:14 AM
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 0644850252 - TransporterID: ea41e26d-8521-4f10-a5a8-2eaf5ba39d46 - TransporterStatus: 11 Time:19/07/2020 9:10:15 AM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 0644850252 - TransporterID: ea41e26d-8521-4f10-a5a8-2eaf5ba39d46 - TransporterStatus: 11 Time:19/07/2020 09:10:15 ص
+
+SMS: تم تخصيص رقم الطلب 0644850252 ويمكن التواصل على جوال العميل 032453245345 موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:19/07/2020 9:10:15 AM
+
+Start Inserting Customer SMS: OrderNo:0644850252, VehicleId:ea41e26d-8521-4f10-a5a8-2eaf5ba39d46, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:19/07/2020 9:10:15 AM
+
+SMS: عميلنا العزيز: نفيدكم بتخصيص ناقلة مياه لطلبكم رقم 0644850252 Time:19/07/2020 9:10:16 AM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"0644850252","cisDivision":19,"orderStatus":4,"updateDateTime":"19-07-2020 09:10:16","parameters":[{"parameterName":"TMSID","parameterValue":"0644850252"},{"parameterName":"COMMENT","parameterValue":""}]} Time:19/07/2020 9:10:16 AM
+
+----------------------------------------AssignWorkOrder - Denormalizer - End---------------------------------------- Time:19/07/2020 9:10:37 AM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:19/07/2020 9:10:42 AM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"0644850252","cisDivision":19,"orderStatus":5,"updateDateTime":"19-07-2020 09:10:43","parameters":[{"parameterName":"TMSID","parameterValue":"0644850252"},{"parameterName":"COMMENT","parameterValue":""}]} Time:19/07/2020 9:10:43 AM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:19/07/2020 9:11:03 AM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"0644850252","cisDivision":19,"orderStatus":3,"updateDateTime":"19-07-2020 09:11:03","parameters":[{"parameterName":"TMSID","parameterValue":"0644850252"},{"parameterName":"COMMENT","parameterValue":""}]} Time:19/07/2020 9:11:03 AM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:19/07/2020 9:12:18 AM
+
+----------------------------------------GetMatchedWorkOrderToAssign---------------------------------------- Time:19/07/2020 09:12:20 ص
+
+Get available vehicle by ID - VehicleID: ea41e26d-8521-4f10-a5a8-2eaf5ba39d46 - StationID: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:19/07/2020 09:12:21 ص
+
+Get vehicle classes - Classes Count: 5 Time:19/07/2020 09:12:21 ص
+
+Get WorkOrder - dtFrom: 19/07/2020 09:12:21 ص Time:19/07/2020 09:12:21 ص
+
+Get WorkOrder - Order List: null or empty Time:19/07/2020 09:12:21 ص
+

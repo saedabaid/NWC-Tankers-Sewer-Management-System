@@ -1,0 +1,203 @@
+<div class="col-md-12 holder main-div">
+ 
+  <div class="row">
+    <div class="col-md-6  padding-10">
+      <span (click)="close()" class="page-title">{{'ContractorList' | translate}}</span>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title  currentpage">{{(updateMode ? 'UpdateContractor' : 'NewContractor') | translate}}</span>
+    </div>
+
+    <div class="col-md-6">
+
+      
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- body & buttons-->
+
+  <div class="row mb-2 margin-0">
+
+    <div class="col-md-6 basic-info">
+      <div class="col-md-12">
+        <label class="col-sm-3 title">{{'ContractorName' | translate}} <span class="required">*</span> </label>
+        <div class="pad-right col-sm-9">
+          <input type="text" class="form-control" placeholder="{{'ContractorName' | translate}}" [(ngModel)]="contractorDTO.ContractorFullName">
+        </div>
+      </div>
+      <div class="col-md-12">
+        <label class="col-sm-3 title">{{'ContractorCode' | translate}} <span class="required">*</span> </label>
+        <div class="pad-right col-sm-9">
+          <input type="text" class="form-control" placeholder="{{'ContractorCode' | translate}}" [(ngModel)]="contractorDTO.Code">
+
+        </div>
+      </div>
+      <div class="col-md-12">
+        <label class="col-sm-3 title">{{'commercialid' | translate}} <span class="required">*</span> </label>
+        <div class="pad-right col-sm-9">
+          <input type="text" class="form-control" placeholder="{{'commercialid' | translate}}" [(ngModel)]="contractorDTO.CommercialIDNumber" OnlyNumber="true">
+
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <label class="col-sm-3 title">{{'TaxNumber' | translate}} <span class="required">*</span> </label>
+        <div class="pad-right col-sm-9">
+          <input type="text" class="form-control" placeholder="{{'TaxNumber' | translate}}" [(ngModel)]="contractorDTO.TaxNumber" OnlyNumber="true">
+
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <label class="col-sm-3 title">{{'moi' | translate}} <span class="required">*</span> </label>
+        <div class="pad-right col-sm-9">
+          <input type="text" class="form-control" placeholder="{{'moi' | translate}}" [(ngModel)]="contractorDTO.MOI" OnlyNumber="true">
+
+        </div>
+      </div>
+
+
+      <div class="col-md-12">
+        <label class="col-sm-3 title">{{'ContractorAdress' | translate}} </label>
+        <div class="pad-right col-sm-9">
+          <input type="text" class="form-control" placeholder="{{'postal/code' | translate}}" [(ngModel)]="contractorDTO.CompanyAddressPostalCode">
+        </div>
+      </div>
+      <div class="col-md-12">
+        <label class="col-sm-3 title"> </label>
+        <div class="pad-right col-sm-9">
+          <input type="text" class="form-control" placeholder="{{'enterbuiliding' | translate}}" [(ngModel)]="contractorDTO.CompanyAddress">
+
+        </div>
+      </div>
+      <div class="col-md-12">
+        <label class="col-sm-3 title">{{'Branch' | translate}} <span class="required">*</span> </label>
+        <div class="col-sm-6">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="AreaList"
+            (SearchVAlue)="getAreas($event)" (selectedListChange)="onAreaDDLChanged($event)"
+            [options]="selectMenuOptions" [selectedList]="bindingModel_Areas"
+            [loading]="Area_Loading">
+          </select-menu>
+        </div>
+        <div class="col-sm-3 pad-right">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="CityList"
+            (SearchVAlue)="getCityBasedOnArea($event)" (selectedListChange)="onCityDDLChanged($event)"
+            [options]="selectMenuOptions" [selectedList]="bindingModel_Cities"
+            [loading]="City_Loading">
+          </select-menu>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+
+        <div class="box">
+          <div class="atta-title">
+            <h6>{{'Attachments' | translate}}</h6>
+          </div>
+          <div class="box-upload">
+            <uploud-files [ListFiles]="ListFiles" [AttachmentType]="3" [IsAllowPdf]="true"></uploud-files>
+
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+    <div class="col-md-6 person-contact">
+      <h4>{{'Contactperson' | translate}}</h4>
+      <div class="col-md-12">
+        <label class="col-sm-3 title">{{'Name' | translate}} </label>
+        <div class="pad-right col-sm-3">
+          <input type="text" class="form-control" placeholder="{{'first' | translate}}" [(ngModel)]="contractorDTO.FirstName">
+        </div>
+        <div class="pad-right col-sm-3">
+          <input type="text" class="form-control" placeholder="{{'middle' | translate}}" [(ngModel)]="contractorDTO.SecondName">
+        </div>
+        <div class="pad-right col-sm-3">
+          <input type="text" class="form-control" placeholder="{{'family' | translate}}" [(ngModel)]="contractorDTO.LastName">
+        </div>
+      </div>
+      <div class="col-md-12">
+        <label class="col-sm-3 title">{{'Position' | translate}} </label>
+        <div class="pad-right col-sm-9">
+          <input type="text" class="form-control" placeholder="{{'Position' | translate}}" [(ngModel)]="contractorDTO.Position">
+
+        </div>
+      </div>
+      <div class="col-md-12">
+        <label class="col-sm-3 title">{{'Mobile' | translate}} </label>
+        <div class="pad-right col-sm-9">
+          <input type="text" class="form-control" placeholder="{{'Mobile' | translate}}" [(ngModel)]="contractorDTO.Mobile" OnlyNumber="true">
+
+        </div>
+      </div>
+      <div class="col-md-12">
+        <label class="col-sm-3 title">{{'Landline' | translate}} </label>
+        <div class="pad-right col-sm-9">
+          <input type="text" class="form-control" placeholder="{{'Landline' | translate}}" [(ngModel)]="contractorDTO.LandlineNumber" OnlyNumber="true">
+
+        </div>
+      </div>
+      <div class="col-md-12">
+        <label class="col-sm-3 title">{{'Email' | translate}} </label>
+        <div class="pad-right col-sm-9">
+          <input type="text" class="form-control" placeholder="{{'Email' | translate}}" [(ngModel)]="contractorDTO.Email">
+
+        </div>
+      </div>
+      <div class="col-md-12">
+        <label class="col-sm-3 title">{{'IDtype' | translate}} </label>
+        <div class="pad-right col-sm-9">
+          <select class=" form-control" [(ngModel)]="contractorDTO.PersonalIDType">
+            <option value="null" selected>{{'Select' | translate}}</option>
+            <option *ngFor="let item of PersonalIDTypes; let i = index" value="{{item.Id}}">{{item.Name}}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <label class="col-sm-3 title">{{'IDNumber' | translate}} </label>
+        <div class="pad-right col-sm-9">
+          <input type="text" class="form-control" placeholder="{{'IDNumber' | translate}}" [(ngModel)]="contractorDTO.PersonalIDNumber" OnlyNumber="true">
+
+        </div>
+      </div>
+      <div class="col-md-12">
+        <label class="col-sm-3 title">{{'Adress' | translate}} </label>
+        <div class="pad-right col-sm-9">
+          <input type="text" class="form-control" placeholder="{{'postal/code' | translate}}" [(ngModel)]="contractorDTO.PersonAddressPostalCode">
+
+        </div>
+      </div>
+      <div class="col-md-12">
+        <label class="col-sm-3 title"> </label>
+        <div class="pad-right col-sm-9">
+          <input type="text" class="form-control" placeholder="{{'enterbuiliding' | translate}}" [(ngModel)]="contractorDTO.PersonAddress">
+
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+
+  </div>
+<div class="row">
+  <div class="col-md-12  ">
+    <button class="btn btn-default margin-5 pull-right" (click)=close()>{{ 'cancel' | translate }}</button>
+    <button class="btn btn-danger margin-5 pull-right" (click)="save()">{{ 'Save' | translate }}</button>
+  </div>
+</div>
+  
+</div>
+

@@ -1,0 +1,205 @@
+<div class="container-fluid main-div bg-light">
+  <div class="row">
+    <div class="col-md-6 padding-10">
+      <span class="page-title">{{ 'Resources' | translate }}</span>
+      <span class="page-title"><i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title currentpage">{{ 'StaffList' | translate }}</span>
+    </div>
+
+    <div class="col-md-6 justify-content-end d-flex">
+      <label class="btn btn-icon margin-5 pull-right" (click)="uploadExcel()">
+        <span class="fas fa-file-upload"></span>
+        {{ "ImportStaff" | translate }}
+      </label>
+      <a *ngIf="
+          pagePermission == 'Full Control' || pagePermission == 'Add and Edit'
+        "
+         routerLink="create"
+         title="  {{ 'NewStaff' | translate }}">
+        <i class="glyphicon glyphicon-plus-sign p-2"></i>
+      </a>
+
+
+    </div>
+  </div>
+</div>
+<div class="inner-div">
+  <div class="row form-row">
+    <div class="col-md-12 custome-dropdown row">
+      <div class="col-md-12">
+        <label class="title mr-3">{{ 'Staff' | translate }}</label>
+
+        <input
+          class="w-25 mr-2 d-inline-block form-control shadow-sm bg-white rounded"
+          [(ngModel)]="SearchCriteria.FilterModel.SearchKeyword"
+          (keyup.enter)="onSearchSubmit()"
+          placeholder="{{ 'Search...' | translate }}"
+        />
+
+        <button class="btn btn-default margin-5" (click)="clearSearch()">
+          {{ 'Clear' | translate }}
+        </button>
+        <button class="btn btn-danger margin-5" (click)="onSearchSubmit()">
+          {{ 'Search' | translate }}
+        </button>
+
+        <a class="mr-2 ml-2 link-route" (click)="showAdvanced()">
+          {{
+            advancedDiv
+              ? ('HideAdvancedSearch' | translate)
+              : ('AdvancedSearch' | translate)
+          }}
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Start Advanced Search box -->
+  <div [hidden]="!advancedDiv" id="advanced-search" class="clearfix">
+    <!--row 1 -->
+
+    <div class="col-md-12 row justify-content-between">
+      <!-- Role -->
+      <div class="col-md-3 row">
+        <label class="col-md-4 align-items-center d-flex">
+          {{ 'Role' | translate }}
+        </label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="StaffRoleList"
+            (SearchVAlue)="getRoles($event)"
+            (selectedListChange)="onRoleDDLChanged($event)"
+            [options]="selectMenuOptions"
+            
+            [loading]="Area_loading"
+          ></select-menu>
+        </div>
+      </div>
+
+      <!-- Branch -->
+      <div class="col-md-3 row">
+        <label class="col-md-4 align-items-center d-flex">
+          {{ 'Branch' | translate }}
+        </label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="StaffBranchList"
+            (SearchVAlue)="getBranch($event)"
+            (selectedListChange)="onBranchDDLChanged($event)"
+            [options]="selectMenuOptions"
+          
+          ></select-menu>
+        </div>
+      </div>
+
+      <!-- SubBranch -->
+      <div class="col-md-3 row" hidden>
+        <label class="col-md-4 align-items-center d-flex">
+          {{ 'SubBranch' | translate }}
+        </label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+           
+            (SearchVAlue)="getZones($event)"
+            [options]="selectMenuOptions"
+           
+          ></select-menu>
+        </div>
+      </div>
+
+      <!-- Landmark -->
+      <div class="col-md-3 row">
+        <label class="col-md-4 align-items-center d-flex">
+          {{ 'Landmark' | translate }}
+        </label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="staffLandmarkList"
+            (SearchVAlue)="getLandmark($event)"
+            (selectedListChange)="onLandmarkDDLChanged($event)"
+            [options]="selectMenuOptions"
+           
+          ></select-menu>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Advanced Search box -->
+  </div>
+
+  <!-- fixed header  -->
+  <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row'">
+    <div class="col-md-12 scroll-x-table">
+      <!--#region  table loading ********************************************** -->
+      <div [ngClass]="tableLoading ? 'container-gif show' : 'container-gif'">
+        <div class="uil-ring-css table-loader" style="transform: scale(0.6);">
+          <div></div>
+        </div>
+      </div>
+      <!--#endregion  table loading -->
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <!-- <th class="wid50"></th>
+            <th class="wid50"></th> -->
+            <th class="wid130">{{ 'StaffCode' | translate }}</th>
+            <th class="wid100">{{ 'Name' | translate }}</th>
+            <th class="wid130">{{ 'Allocation' | translate }}</th>
+            <th class="wid130">{{ 'Role' | translate }}</th>
+
+            <th class="wid100"></th>
+            <th class="wid130"></th>
+            <th class="wid130"></th>
+          </tr>
+        </thead>
+        <tbody [class]="advancedDiv ? ' mini' : ' '">
+          <tr class="text-center p-2 font-4" *ngIf="!searchResult.Result">
+            <td colspan="13">
+              {{ 'NoDataFound' | translate }}
+            </td>
+          </tr>
+          <tr *ngFor="let item of searchResult.Result; let i = index">
+            <!-- <td class="wid50"><input type="checkbox" name="" id="" /></td>
+            <td class="wid50"></td> -->
+            <td class="wid130">{{ item.StaffCode }}</td>
+            <td class="wid100">{{ item.StaffName }}</td>
+            <td class="wid130">{{ item.Allocation }}</td>
+            <td class="wid130">{{ item.StaffRole }}</td>
+
+            <td class="wid100">
+              <button class="btn btn-link">
+                <i class="fas fa-calendar-alt"></i>
+              </button>
+            </td>
+            <td class="wid130">
+              <button class="btn btn-link" (click)="editStaffItem(item.Id)">
+                <i class="fas fa-pen"></i>
+              </button>
+            </td>
+            <td class="wid130">
+              <button class="btn btn-link" (click)="deleteStaffItem(item.Id)">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <app-pagination-component
+    [ItemsCount]="searchResult.TotalCount"
+    [(PageSize)]="this.SearchCriteria.FilterModel.PageFilter.PageSize"
+    [pageIndex]="this.SearchCriteria.FilterModel.PageFilter.PageIndex"
+    (PageSizeChange)="onPageSizeChanged($event)"
+    (pageNavigated)="onPageIndexChanged($event)"
+  ></app-pagination-component>
+</div>

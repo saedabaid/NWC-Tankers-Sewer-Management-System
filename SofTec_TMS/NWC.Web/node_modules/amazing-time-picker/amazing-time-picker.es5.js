@@ -1,0 +1,775 @@
+import { ApplicationRef, Component, ComponentFactoryResolver, Directive, EventEmitter, HostListener, Injectable, Injector, NgModule, Output, ViewChild, ViewContainerRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Subject as Subject$1 } from 'rxjs/Subject';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
+var AtpCoreService = (function () {
+    function AtpCoreService() {
+    }
+    /**
+     * @param {?} min
+     * @param {?} max
+     * @return {?}
+     */
+    AtpCoreService.prototype.allowedTimes = function (min, max) {
+        var /** @type {?} */ allTimes = [];
+        var /** @type {?} */ nowMinHour = +min.split(':')[0];
+        var /** @type {?} */ nowMaxHour = +max.split(':')[0];
+        var /** @type {?} */ nowMinMin = +min.split(':')[1];
+        var /** @type {?} */ nowMaxMin = +max.split(':')[1];
+        for (var /** @type {?} */ i = nowMinHour; i <= nowMaxHour; i++) {
+            var /** @type {?} */ j = 0, /** @type {?} */ jDest = 59;
+            if (i === nowMinHour) {
+                j = nowMinMin;
+            }
+            else if (i === nowMaxHour) {
+                jDest = nowMaxMin;
+            }
+            for (j; j <= jDest; j++) {
+                var /** @type {?} */ hour = i <= 12 ? i : i - 12;
+                var /** @type {?} */ minute = j;
+                var /** @type {?} */ ampm = i < 12 ? 'AM' : 'PM';
+                allTimes.push(hour + ':' + minute + ' ' + ampm);
+            }
+        }
+        return allTimes;
+    };
+    /**
+     * @param {?} type
+     * @return {?}
+     */
+    AtpCoreService.prototype.ClockMaker = function (type) {
+        var /** @type {?} */ items = [];
+        var /** @type {?} */ timeVal = (type === 'minute') ? 60 : 12;
+        var /** @type {?} */ timeStep = (type === 'minute') ? 5 : 1;
+        var /** @type {?} */ timeStart = (type === 'minute') ? 0 : 1;
+        var /** @type {?} */ r = 124;
+        var /** @type {?} */ j = r - 25;
+        for (var /** @type {?} */ min = timeStart; min <= timeVal; min += timeStep) {
+            if (min !== 60) {
+                var /** @type {?} */ str = String(min);
+                var /** @type {?} */ x = j * Math.sin(Math.PI * 2 * (min / timeVal));
+                var /** @type {?} */ y = j * Math.cos(Math.PI * 2 * (min / timeVal));
+                items.push({
+                    time: str,
+                    left: (x + r - 17) + 'px',
+                    top: (-y + r - 17) + 'px',
+                    type: type
+                });
+            }
+        }
+        return items;
+    };
+    /**
+     * @param {?} time
+     * @return {?}
+     */
+    AtpCoreService.prototype.TimeToString = function (time) {
+        var ampm = time.ampm, minute = time.minute, hour = time.hour;
+        var /** @type {?} */ hh = ampm === 'PM' ? +hour + 12 : +hour;
+        if (ampm === 'AM' && hh === 12) {
+            hh = 0;
+        }
+        if (hh === 24) {
+            hh = 12;
+        }
+        hh = hh < 10 ? '0' + hh : ('' + hh);
+        var /** @type {?} */ mm = minute < 10 ? '0' + minute : minute;
+        return hh + ":" + mm;
+    };
+    /**
+     * Converts 00:00 format to ITime object
+     * @param {?} time
+     * @return {?}
+     */
+    AtpCoreService.prototype.StringToTime = function (time) {
+        var _a = time.split(':'), h = _a[0], m = _a[1];
+        var /** @type {?} */ hour = +h > 12 ? +h - 12 : +h;
+        hour = hour === 0 ? 12 : hour;
+        var /** @type {?} */ ampm = +h >= 12 ? 'PM' : 'AM';
+        return {
+            ampm: ampm, minute: +m, hour: hour
+        };
+    };
+    /**
+     * \@experimental
+     * @param {?} ele
+     * @param {?} parrentPos
+     * @param {?} step
+     * @return {?}
+     */
+    AtpCoreService.prototype.CalcDegrees = function (ele, parrentPos, step) {
+        var /** @type {?} */ clock = {
+            width: ele.currentTarget.offsetWidth,
+            height: ele.currentTarget.offsetHeight
+        };
+        var /** @type {?} */ targetX = clock.width / 2;
+        var /** @type {?} */ targetY = clock.height / 2;
+        var /** @type {?} */ Vx = Math.round((ele.clientX - parrentPos.left) - targetX);
+        var /** @type {?} */ Vy = Math.round(targetY - (ele.clientY - parrentPos.top));
+        var /** @type {?} */ radians = -Math.atan2(Vy, Vx);
+        radians += 2.5 * Math.PI;
+        var /** @type {?} */ degrees = Math.round(radians * 180 / Math.PI);
+        var /** @type {?} */ degMod = degrees % step;
+        if (degMod >= step / 2) {
+            degrees = degrees + (step - degMod);
+        }
+        else if (degMod < step / 2) {
+            degrees = degrees - degMod;
+        }
+        return degrees;
+    };
+    return AtpCoreService;
+}());
+AtpCoreService.decorators = [
+    { type: Injectable },
+];
+/**
+ * @nocollapse
+ */
+AtpCoreService.ctorParameters = function () { return []; };
+var TimePickerComponent = (function () {
+    /**
+     * @param {?} core
+     */
+    function TimePickerComponent(core$$1) {
+        var _this = this;
+        this.core = core$$1;
+        this.subject = null;
+        this.activeModal = false;
+        this.clockType = 'hour';
+        this.time = {
+            ampm: 'AM',
+            minute: 0,
+            hour: 12
+        };
+        this.nowTime = this.time.hour;
+        this.isPopup = true;
+        this.clockMaker = function () {
+            var /** @type {?} */ type = _this.clockType;
+            _this.clockObject = _this.core.ClockMaker(type);
+            _this.setArrow(null);
+        };
+        this.setActiveTime = function () {
+            _this.nowTime = (_this.clockType === 'minute' ? _this.time.minute : _this.time.hour);
+        };
+        this.setArrow = function (obj) {
+            if (obj) {
+                _this.clockType = obj.type;
+                if (_this.clockType === 'minute') {
+                    _this.time.minute = obj.time;
+                }
+                else {
+                    _this.time.hour = obj.time;
+                }
+            }
+            var /** @type {?} */ step = (_this.clockType === 'minute') ? 6 : 30;
+            var /** @type {?} */ time = (_this.clockType === 'minute') ? _this.time.minute : _this.time.hour;
+            var /** @type {?} */ degrees = time * step;
+            _this.rotationClass(degrees);
+            _this.setActiveTime();
+        };
+        this.rotationClass = function (degrees) {
+            _this.degree = degrees;
+        };
+        this.getDegree = function (ele) {
+            var /** @type {?} */ step = _this.clockType === 'minute' ? 6 : 30;
+            var /** @type {?} */ parrentPos = ele.currentTarget.getBoundingClientRect();
+            if (_this.isClicked && (ele.currentTarget === ele.target || ele.target.nodeName === 'BUTTON')) {
+                var /** @type {?} */ clock = {
+                    width: ele.currentTarget.offsetWidth,
+                    height: ele.currentTarget.offsetHeight
+                };
+                var /** @type {?} */ degrees = _this.core.CalcDegrees(ele, parrentPos, step);
+                var /** @type {?} */ hour = _this.time.hour, /** @type {?} */ minute = _this.time.minute;
+                if (_this.clockType === 'hour') {
+                    hour = (degrees / step);
+                    hour = (hour > 12) ? hour - 12 : hour;
+                }
+                else if (_this.clockType === 'minute') {
+                    minute = (degrees / step);
+                    minute = (minute > 59) ? minute - 60 : minute;
+                }
+                var /** @type {?} */ min = _this.config.rangeTime.start, /** @type {?} */ max = _this.config.rangeTime.end;
+                var /** @type {?} */ nowMinHour = +min.split(':')[0] < 12 ? +min.split(':')[0] : +min.split(':')[0] - 12;
+                var /** @type {?} */ nowMaxHour = +max.split(':')[0] < 12 ? +max.split(':')[0] : +max.split(':')[0] - 12;
+                var /** @type {?} */ nowMinMin = +min.split(':')[1];
+                var /** @type {?} */ nowMaxMin = +max.split(':')[1];
+                var /** @type {?} */ nowTime = _this.GetNowTime(hour, _this.time.ampm, minute);
+                if (_this.allowed.indexOf(nowTime) > -1) {
+                    _this.time.hour = hour;
+                    _this.time.minute = minute;
+                    _this.rotationClass(degrees);
+                    _this.setActiveTime();
+                }
+                else if (_this.clockType === 'hour' && (hour === nowMinHour && minute <= nowMinMin)) {
+                    _this.time.hour = nowMinHour;
+                    _this.time.minute = nowMinMin;
+                }
+                else if (_this.clockType === 'hour' && (hour === nowMaxHour && minute >= nowMaxMin)) {
+                    _this.time.hour = nowMaxHour;
+                    _this.time.minute = nowMaxMin;
+                }
+            }
+        };
+    }
+    /**
+     * @param {?} time
+     * @return {?}
+     */
+    TimePickerComponent.prototype.ParseStringToTime = function (time) {
+        time = (time === '' || time === undefined || time === null) ? this.time.hour + ':' + this.time.minute : time;
+        this.time = this.core.StringToTime(time);
+    };
+    /**
+     * @return {?}
+     */
+    TimePickerComponent.prototype.GetTime = function () {
+        var /** @type {?} */ time = this.core.TimeToString(this.time);
+        this.subject.next(time);
+    };
+    /**
+     * @return {?}
+     */
+    TimePickerComponent.prototype.setTime = function () {
+        this.isClicked = false;
+        if (this.config.changeToMinutes && this.clockType === 'hour') {
+            this.clockType = 'minute';
+            this.clockMaker();
+        }
+    };
+    /**
+     * @param {?} hour
+     * @param {?} ampm
+     * @param {?} minute
+     * @return {?}
+     */
+    TimePickerComponent.prototype.GetNowTime = function (hour, ampm, minute) {
+        var /** @type {?} */ Hour = (hour === 12 && ampm === 'AM') ? '0' : hour;
+        var /** @type {?} */ nowTime = Hour + ':' + minute + ' ' + ampm;
+        return nowTime;
+    };
+    /**
+     * @return {?}
+     */
+    TimePickerComponent.prototype.checkBet = function () {
+        var /** @type {?} */ nowTime = this.GetNowTime(this.time.hour, this.time.ampm, this.time.minute);
+        if (this.allowed.indexOf(nowTime) === -1) {
+            this.ParseStringToTime(this.config.rangeTime.start);
+            this.setArrow(null);
+            this.setActiveTime();
+        }
+    };
+    /**
+     * @return {?}
+     */
+    TimePickerComponent.prototype.modalAnimation = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.activeModal = true;
+        }, 1);
+    };
+    /**
+     * @return {?}
+     */
+    TimePickerComponent.prototype.ngOnInit = function () {
+        this.allowed = this.core.allowedTimes(this.config.rangeTime.start, this.config.rangeTime.end);
+        if (this.config && this.config.onlyMinute) {
+            this.clockType = 'minute';
+        }
+        if (this.config && this.config.onlyPM) {
+            this.time.ampm = 'PM';
+        }
+        this.clockMaker();
+        this.modalAnimation();
+    };
+    /**
+     * @return {?}
+     */
+    TimePickerComponent.prototype.MinuteClick = function () {
+        /**
+         * We are not permitting user to select the minute.
+         * but anyway, it will return the standard time, if provided the default time.
+         */
+        if (this.config && this.config.onlyHour) {
+            return false;
+        }
+        this.clockType = 'minute';
+        this.clockMaker();
+    };
+    /**
+     * @return {?}
+     */
+    TimePickerComponent.prototype.HourClick = function () {
+        /**
+         * We are not permitting user to select the minute.
+         * but anyway, it will return the standard time, if provided the default time.
+         */
+        if (this.config && this.config.onlyMinute) {
+            return false;
+        }
+        this.clockType = 'hour';
+        this.clockMaker();
+    };
+    /**
+     * @return {?}
+     */
+    TimePickerComponent.prototype.SetAM = function () {
+        if (this.config && this.config.onlyPM) {
+            return false;
+        }
+        this.time.ampm = 'AM';
+        this.checkBet();
+    };
+    /**
+     * @return {?}
+     */
+    TimePickerComponent.prototype.SetPM = function () {
+        if (this.config && this.config.onlyAM) {
+            return false;
+        }
+        this.time.ampm = 'PM';
+        this.checkBet();
+    };
+    /**
+     * @param {?} e
+     * @return {?}
+     */
+    TimePickerComponent.prototype.Close = function (e) {
+        var _this = this;
+        if (e.target === e.currentTarget) {
+            if (this.isPopup === true) {
+                this.activeModal = false;
+                setTimeout(function () {
+                    _this.appRef.detachView(_this._ref.hostView);
+                    _this._ref.destroy();
+                }, 400);
+            }
+        }
+    };
+    /**
+     * @return {?}
+     */
+    TimePickerComponent.prototype.GetSeparator = function () {
+        if (this.preference && this.preference.separator) {
+            return this.preference.separator;
+        }
+        return ':';
+    };
+    /**
+     * @param {?} period
+     * @return {?}
+     */
+    TimePickerComponent.prototype.GetPeriod = function (period) {
+        if (this.preference && this.preference.period) {
+            return this.preference.period(period);
+        }
+        return period;
+    };
+    /**
+     * @return {?}
+     */
+    TimePickerComponent.prototype.GetMinute = function () {
+        if (this.preference && this.preference.minute) {
+            return this.preference.minute(this.time.minute);
+        }
+        var /** @type {?} */ min = this.time.minute.toString();
+        if (+min < 10) {
+            min = '0' + min;
+        }
+        return min;
+    };
+    /**
+     * @return {?}
+     */
+    TimePickerComponent.prototype.GetHour = function () {
+        if (this.preference && this.preference.hour) {
+            return this.preference.hour(this.time.hour);
+        }
+        return this.time.hour;
+    };
+    /**
+     * @param {?} clock
+     * @return {?}
+     */
+    TimePickerComponent.prototype.GetClockTime = function (clock) {
+        if (!this.preference) {
+            return clock.time;
+        }
+        if (this.clockType === 'hour' && this.preference.clockHour) {
+            return this.preference.clockHour(clock.time);
+        }
+        if (this.clockType === 'minute' && this.preference.clockMinute) {
+            return this.preference.clockMinute(clock.time);
+        }
+        return clock.time;
+    };
+    /**
+     * @param {?} key
+     * @return {?}
+     */
+    TimePickerComponent.prototype.GetLabel = function (key) {
+        var /** @type {?} */ defaults = {
+            'ok': 'Ok',
+            'cancel': 'Cancel'
+        };
+        if ((this.preference && this.preference.labels && this.preference.labels.ok)) {
+            defaults.ok = this.preference.labels.ok;
+        }
+        if ((this.preference && this.preference.labels && this.preference.labels.cancel)) {
+            defaults.cancel = this.preference.labels.cancel;
+        }
+        return defaults[key];
+    };
+    return TimePickerComponent;
+}());
+TimePickerComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'time-picker',
+                template: "\n    <div id=\"time-picker-wrapper\" class=\"{{config.theme}}\" [ngClass]=\"{'active': activeModal, 'static': !isPopup}\" (click)=\"Close($event);\">\n      <div id=\"time-picker\" [ngClass]=\"{'active': activeModal, 'static': !isPopup}\">\n        <div class=\"time-picker-header\">\n          <div class=\"time-picker-selected-time\">\n              <div class=\"time-picker-hour\" (click)=\"HourClick()\" [attr.disabled]=\"(config.onlyMinute) ? 'disabled' : null\"\n                [ngClass]=\"{'selected' : clockType == 'hour'}\">{{GetHour()}}</div>\n              <span class=\"time-seprator\">{{GetSeparator()}}</span>\n              <div class=\"time-picker-minute\" (click)=\"MinuteClick();\" [attr.disabled]=\"(config.onlyHour) ? 'disabled' : null\"\n                [ngClass]=\"{'selected' : clockType == 'minute'}\">{{GetMinute()}}</div>\n          </div>\n          <div class=\"time-picker-selected-ampm\">\n            <div class=\"time-picker-am\" (click)=\"SetAM();\" [attr.disabled]=\"(config.onlyPM) ? 'disabled' : null\" [ngClass]=\"{'selected' : time.ampm == 'AM'}\">{{GetPeriod('AM')}}</div>\n            <div class=\"time-picker-pm\" (click)=\"SetPM();\" [attr.disabled]=\"(config.onlyAM) ? 'disabled' : null\" [ngClass]=\"{'selected' : time.ampm == 'PM'}\">{{GetPeriod('PM')}}</div>\n\n          </div>\n        </div>\n        <div class=\"time-picker-content\">\n            <div class=\"time-picker-clock\" (mousemove)=\"getDegree($event);\" (mousedown)=\"isClicked=true; getDegree($event);\" (mouseup)=\"setTime()\">\n              <button *ngFor=\"let clock of clockObject\" [ngClass]=\"{'active' : nowTime == clock.time}\" \n                [id]=\"'timepicker-item-id-' + clock.time\" \n                [ngStyle]=\"{top: clock.top,left: clock.left, color: nowTime == clock.time ? config.arrowStyle.color :  '', background: nowTime == clock.time ? config.arrowStyle.background : 'transparent'}\">\n                {{GetClockTime(clock)}}\n              </button>\n              <div class=\"time-picker-clock-origin\" [ngStyle]=\"{ background: config.arrowStyle.background}\"></div>\n              <div id=\"tpc-arrow\" class=\"time-picker-clock-arrow\" [ngStyle]=\"{transform: 'rotate(' + this.degree + 'deg)','-webkit-transform': 'rotate(' + this.degree + 'deg)', background: config.arrowStyle.background}\">\n                <span [ngStyle]=\"{ background: config.arrowStyle.background }\"></span>\n              </div>\n            </div>\n        </div>\n        <div class=\"time-picker-footer\">\n            <button (click)=\"Close($event);\">{{GetLabel('cancel')}}</button>\n            <button (click)=\"GetTime();Close($event);\" class=\"atp-ref-dialog-close\">{{GetLabel('ok')}}</button>\n        </div>\n      </div>\n    </div>\n  ",
+                styles: ["\n    #time-picker-wrapper {\n      position: fixed;\n      top: 0;\n      bottom: 0;\n      left: 0;\n      right: 0;\n      background: transparent;\n      -webkit-transition: background 0.4s;\n      transition: background 0.4s;\n      font-family: 'Roboto', sans-serif;\n      z-index: 1000; }\n      #time-picker-wrapper.static {\n        position: relative !important;\n        background: transparent !important;\n        display: inline-block;\n        z-index: 0; }\n      #time-picker-wrapper.active {\n        background: rgba(0, 0, 0, 0.3); }\n      #time-picker-wrapper.dark #time-picker {\n        background: #424242; }\n        #time-picker-wrapper.dark #time-picker .time-picker-header {\n          border-bottom: none;\n          background: #555555; }\n          #time-picker-wrapper.dark #time-picker .time-picker-header .time-picker-selected-time {\n            color: #999; }\n            #time-picker-wrapper.dark #time-picker .time-picker-header .time-picker-selected-time div.selected {\n              color: #fff; }\n          #time-picker-wrapper.dark #time-picker .time-picker-header .time-picker-selected-ampm {\n            color: #999; }\n            #time-picker-wrapper.dark #time-picker .time-picker-header .time-picker-selected-ampm div.selected {\n              color: #fff; }\n        #time-picker-wrapper.dark #time-picker .time-picker-clock {\n          background: #555555; }\n          #time-picker-wrapper.dark #time-picker .time-picker-clock > button {\n            color: #fff; }\n        #time-picker-wrapper.dark #time-picker .time-picker-footer {\n          border-top: none; }\n          #time-picker-wrapper.dark #time-picker .time-picker-footer button {\n            background: #555555;\n            color: #fff; }\n            #time-picker-wrapper.dark #time-picker .time-picker-footer button:hover {\n              background: #777; }\n      #time-picker-wrapper.light #time-picker {\n        background: #fff; }\n        #time-picker-wrapper.light #time-picker .time-picker-header {\n          border-bottom: 1px solid #e1e1e1; }\n          #time-picker-wrapper.light #time-picker .time-picker-header .time-picker-selected-time {\n            color: #aaa; }\n            #time-picker-wrapper.light #time-picker .time-picker-header .time-picker-selected-time div.selected {\n              color: #000; }\n          #time-picker-wrapper.light #time-picker .time-picker-header .time-picker-selected-ampm {\n            color: #aaa; }\n            #time-picker-wrapper.light #time-picker .time-picker-header .time-picker-selected-ampm div.selected {\n              color: #000; }\n        #time-picker-wrapper.light #time-picker .time-picker-clock {\n          background: #ededed; }\n          #time-picker-wrapper.light #time-picker .time-picker-clock > button {\n            color: #000; }\n            #time-picker-wrapper.light #time-picker .time-picker-clock > button.active {\n              background: blue;\n              color: #fff; }\n          #time-picker-wrapper.light #time-picker .time-picker-clock .time-picker-clock-origin {\n            background: blue; }\n          #time-picker-wrapper.light #time-picker .time-picker-clock .time-picker-clock-arrow {\n            background: blue; }\n            #time-picker-wrapper.light #time-picker .time-picker-clock .time-picker-clock-arrow span {\n              background: blue; }\n        #time-picker-wrapper.light #time-picker .time-picker-footer {\n          border-top: 1px solid #e1e1e1; }\n          #time-picker-wrapper.light #time-picker .time-picker-footer button {\n            background: #f1f1f1; }\n            #time-picker-wrapper.light #time-picker .time-picker-footer button:hover {\n              background: #ddd; }\n      #time-picker-wrapper.material-green #time-picker {\n        background: #fff; }\n        #time-picker-wrapper.material-green #time-picker .time-picker-header {\n          background-color: #00897b;\n          border-bottom: 1px solid #e1e1e1; }\n          #time-picker-wrapper.material-green #time-picker .time-picker-header .time-picker-selected-time {\n            color: rgba(255, 255, 255, 0.4); }\n            #time-picker-wrapper.material-green #time-picker .time-picker-header .time-picker-selected-time div.selected {\n              color: #fff; }\n          #time-picker-wrapper.material-green #time-picker .time-picker-header .time-picker-selected-ampm {\n            color: rgba(255, 255, 255, 0.4); }\n            #time-picker-wrapper.material-green #time-picker .time-picker-header .time-picker-selected-ampm div.selected {\n              color: #fff; }\n        #time-picker-wrapper.material-green #time-picker .time-picker-clock {\n          background: #ededed; }\n          #time-picker-wrapper.material-green #time-picker .time-picker-clock > button {\n            color: #000; }\n            #time-picker-wrapper.material-green #time-picker .time-picker-clock > button.active {\n              background: #00897b;\n              color: #fff; }\n          #time-picker-wrapper.material-green #time-picker .time-picker-clock .time-picker-clock-origin {\n            background: #00897b; }\n          #time-picker-wrapper.material-green #time-picker .time-picker-clock .time-picker-clock-arrow {\n            background: #00897b; }\n            #time-picker-wrapper.material-green #time-picker .time-picker-clock .time-picker-clock-arrow span {\n              background: #00897b; }\n        #time-picker-wrapper.material-green #time-picker .time-picker-footer {\n          border-top: 1px solid #e1e1e1; }\n          #time-picker-wrapper.material-green #time-picker .time-picker-footer button {\n            font-weight: bold;\n            text-transform: uppercase;\n            background: transparent;\n            color: #00897b; }\n            #time-picker-wrapper.material-green #time-picker .time-picker-footer button:hover {\n              background: #ddd; }\n      #time-picker-wrapper.material-blue #time-picker {\n        background: #fff; }\n        #time-picker-wrapper.material-blue #time-picker .time-picker-header {\n          background-color: #3F51B5;\n          border-bottom: 1px solid #e1e1e1; }\n          #time-picker-wrapper.material-blue #time-picker .time-picker-header .time-picker-selected-time {\n            color: rgba(255, 255, 255, 0.4); }\n            #time-picker-wrapper.material-blue #time-picker .time-picker-header .time-picker-selected-time div.selected {\n              color: #fff; }\n          #time-picker-wrapper.material-blue #time-picker .time-picker-header .time-picker-selected-ampm {\n            color: rgba(255, 255, 255, 0.4); }\n            #time-picker-wrapper.material-blue #time-picker .time-picker-header .time-picker-selected-ampm div.selected {\n              color: #fff; }\n        #time-picker-wrapper.material-blue #time-picker .time-picker-clock {\n          background: #ededed; }\n          #time-picker-wrapper.material-blue #time-picker .time-picker-clock > button {\n            color: #000; }\n            #time-picker-wrapper.material-blue #time-picker .time-picker-clock > button.active {\n              background: #3F51B5;\n              color: #fff; }\n          #time-picker-wrapper.material-blue #time-picker .time-picker-clock .time-picker-clock-origin {\n            background: #3F51B5; }\n          #time-picker-wrapper.material-blue #time-picker .time-picker-clock .time-picker-clock-arrow {\n            background: #3F51B5; }\n            #time-picker-wrapper.material-blue #time-picker .time-picker-clock .time-picker-clock-arrow span {\n              background: #3F51B5; }\n        #time-picker-wrapper.material-blue #time-picker .time-picker-footer {\n          border-top: 1px solid #e1e1e1; }\n          #time-picker-wrapper.material-blue #time-picker .time-picker-footer button {\n            font-weight: bold;\n            text-transform: uppercase;\n            background: transparent;\n            color: #3F51B5; }\n            #time-picker-wrapper.material-blue #time-picker .time-picker-footer button:hover {\n              background: #ddd; }\n      #time-picker-wrapper.material-red #time-picker {\n        background: #fff; }\n        #time-picker-wrapper.material-red #time-picker .time-picker-header {\n          background-color: #F44336;\n          border-bottom: 1px solid #e1e1e1; }\n          #time-picker-wrapper.material-red #time-picker .time-picker-header .time-picker-selected-time {\n            color: rgba(255, 255, 255, 0.4); }\n            #time-picker-wrapper.material-red #time-picker .time-picker-header .time-picker-selected-time div.selected {\n              color: #fff; }\n          #time-picker-wrapper.material-red #time-picker .time-picker-header .time-picker-selected-ampm {\n            color: rgba(255, 255, 255, 0.4); }\n            #time-picker-wrapper.material-red #time-picker .time-picker-header .time-picker-selected-ampm div.selected {\n              color: #fff; }\n        #time-picker-wrapper.material-red #time-picker .time-picker-clock {\n          background: #ededed; }\n          #time-picker-wrapper.material-red #time-picker .time-picker-clock > button {\n            color: #000; }\n            #time-picker-wrapper.material-red #time-picker .time-picker-clock > button.active {\n              background: #F44336;\n              color: #fff; }\n          #time-picker-wrapper.material-red #time-picker .time-picker-clock .time-picker-clock-origin {\n            background: #F44336; }\n          #time-picker-wrapper.material-red #time-picker .time-picker-clock .time-picker-clock-arrow {\n            background: #F44336; }\n            #time-picker-wrapper.material-red #time-picker .time-picker-clock .time-picker-clock-arrow span {\n              background: #F44336; }\n        #time-picker-wrapper.material-red #time-picker .time-picker-footer {\n          border-top: 1px solid #e1e1e1; }\n          #time-picker-wrapper.material-red #time-picker .time-picker-footer button {\n            font-weight: bold;\n            text-transform: uppercase;\n            background: transparent;\n            color: #F44336; }\n            #time-picker-wrapper.material-red #time-picker .time-picker-footer button:hover {\n              background: #ddd; }\n      #time-picker-wrapper.material-purple #time-picker {\n        background: #fff; }\n        #time-picker-wrapper.material-purple #time-picker .time-picker-header {\n          background-color: #9C27B0;\n          border-bottom: 1px solid #e1e1e1; }\n          #time-picker-wrapper.material-purple #time-picker .time-picker-header .time-picker-selected-time {\n            color: rgba(255, 255, 255, 0.4); }\n            #time-picker-wrapper.material-purple #time-picker .time-picker-header .time-picker-selected-time div.selected {\n              color: #fff; }\n          #time-picker-wrapper.material-purple #time-picker .time-picker-header .time-picker-selected-ampm {\n            color: rgba(255, 255, 255, 0.4); }\n            #time-picker-wrapper.material-purple #time-picker .time-picker-header .time-picker-selected-ampm div.selected {\n              color: #fff; }\n        #time-picker-wrapper.material-purple #time-picker .time-picker-clock {\n          background: #ededed; }\n          #time-picker-wrapper.material-purple #time-picker .time-picker-clock > button {\n            color: #000; }\n            #time-picker-wrapper.material-purple #time-picker .time-picker-clock > button.active {\n              background: #9C27B0;\n              color: #fff; }\n          #time-picker-wrapper.material-purple #time-picker .time-picker-clock .time-picker-clock-origin {\n            background: #9C27B0; }\n          #time-picker-wrapper.material-purple #time-picker .time-picker-clock .time-picker-clock-arrow {\n            background: #9C27B0; }\n            #time-picker-wrapper.material-purple #time-picker .time-picker-clock .time-picker-clock-arrow span {\n              background: #9C27B0; }\n        #time-picker-wrapper.material-purple #time-picker .time-picker-footer {\n          border-top: 1px solid #e1e1e1; }\n          #time-picker-wrapper.material-purple #time-picker .time-picker-footer button {\n            font-weight: bold;\n            text-transform: uppercase;\n            background: transparent;\n            color: #9C27B0; }\n            #time-picker-wrapper.material-purple #time-picker .time-picker-footer button:hover {\n              background: #ddd; }\n      #time-picker-wrapper.material-orange #time-picker {\n        background: #fff; }\n        #time-picker-wrapper.material-orange #time-picker .time-picker-header {\n          background-color: #FF9800;\n          border-bottom: 1px solid #e1e1e1; }\n          #time-picker-wrapper.material-orange #time-picker .time-picker-header .time-picker-selected-time {\n            color: rgba(255, 255, 255, 0.4); }\n            #time-picker-wrapper.material-orange #time-picker .time-picker-header .time-picker-selected-time div.selected {\n              color: #fff; }\n          #time-picker-wrapper.material-orange #time-picker .time-picker-header .time-picker-selected-ampm {\n            color: rgba(255, 255, 255, 0.4); }\n            #time-picker-wrapper.material-orange #time-picker .time-picker-header .time-picker-selected-ampm div.selected {\n              color: #fff; }\n        #time-picker-wrapper.material-orange #time-picker .time-picker-clock {\n          background: #ededed; }\n          #time-picker-wrapper.material-orange #time-picker .time-picker-clock > button {\n            color: #000; }\n            #time-picker-wrapper.material-orange #time-picker .time-picker-clock > button.active {\n              background: #FF9800;\n              color: #fff; }\n          #time-picker-wrapper.material-orange #time-picker .time-picker-clock .time-picker-clock-origin {\n            background: #FF9800; }\n          #time-picker-wrapper.material-orange #time-picker .time-picker-clock .time-picker-clock-arrow {\n            background: #FF9800; }\n            #time-picker-wrapper.material-orange #time-picker .time-picker-clock .time-picker-clock-arrow span {\n              background: #FF9800; }\n        #time-picker-wrapper.material-orange #time-picker .time-picker-footer {\n          border-top: 1px solid #e1e1e1; }\n          #time-picker-wrapper.material-orange #time-picker .time-picker-footer button {\n            font-weight: bold;\n            text-transform: uppercase;\n            background: transparent;\n            color: #FF9800; }\n            #time-picker-wrapper.material-orange #time-picker .time-picker-footer button:hover {\n              background: #ddd; }\n      #time-picker-wrapper #time-picker {\n        width: 325px;\n        height: auto;\n        -webkit-box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);\n                box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);\n        border-radius: 2px;\n        margin: 15vh auto !important;\n        -webkit-transform: scale(0.5) !important;\n                transform: scale(0.5) !important;\n        -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;\n        transition: opacity 0.3s, -webkit-transform 0.3s;\n        transition: transform 0.3s, opacity 0.3s;\n        transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;\n        opacity: 0; }\n        #time-picker-wrapper #time-picker.static {\n          margin: 0px !important;\n          -webkit-box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 0 7px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);\n                  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 0 7px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12); }\n        #time-picker-wrapper #time-picker.active {\n          -webkit-transform: scale(1) !important;\n                  transform: scale(1) !important;\n          opacity: 1; }\n        #time-picker-wrapper #time-picker .time-picker-header {\n          text-align: center;\n          padding: 15px 0px; }\n          #time-picker-wrapper #time-picker .time-picker-header .time-picker-selected-time {\n            font-size: 35px;\n            padding: 5px 0px; }\n            #time-picker-wrapper #time-picker .time-picker-header .time-picker-selected-time div {\n              display: inline-block;\n              cursor: pointer; }\n              #time-picker-wrapper #time-picker .time-picker-header .time-picker-selected-time div[disabled=true] {\n                cursor: default; }\n          #time-picker-wrapper #time-picker .time-picker-header .time-picker-selected-ampm {\n            font-size: 18px; }\n            #time-picker-wrapper #time-picker .time-picker-header .time-picker-selected-ampm div {\n              display: inline-block;\n              padding: 0 5px;\n              cursor: pointer; }\n              #time-picker-wrapper #time-picker .time-picker-header .time-picker-selected-ampm div[disabled=true] {\n                cursor: default; }\n        #time-picker-wrapper #time-picker .time-picker-content .time-picker-clock {\n          width: 200px;\n          height: 200px;\n          padding: 24px;\n          border-radius: 50%;\n          cursor: pointer;\n          margin: 25px auto;\n          position: relative;\n          user-select: none;\n          -moz-user-select: none;\n          -ms-user-select: none;\n          -webkit-user-select: none; }\n          #time-picker-wrapper #time-picker .time-picker-content .time-picker-clock button {\n            border: none;\n            position: absolute;\n            width: 35px;\n            height: 35px;\n            border-radius: 50%;\n            cursor: pointer;\n            font-size: 17px;\n            text-align: center;\n            padding: 0;\n            -webkit-transition: all .2s;\n            transition: all .2s;\n            z-index: 3; }\n          #time-picker-wrapper #time-picker .time-picker-content .time-picker-clock .time-picker-clock-origin {\n            width: 6px;\n            height: 6px;\n            border-radius: 50%;\n            position: absolute;\n            left: 50%;\n            top: 50%;\n            margin-left: -3px;\n            margin-top: -3px; }\n          #time-picker-wrapper #time-picker .time-picker-content .time-picker-clock .time-picker-clock-arrow {\n            width: 2px;\n            height: 41%;\n            position: absolute;\n            left: 0;\n            top: 22px;\n            right: 0;\n            margin: auto;\n            -webkit-transform-origin: top left;\n            transform-origin: bottom; }\n            #time-picker-wrapper #time-picker .time-picker-content .time-picker-clock .time-picker-clock-arrow span {\n              width: 8px;\n              height: 8px;\n              border-radius: 50%;\n              position: absolute;\n              top: 0;\n              right: -3px; }\n        #time-picker-wrapper #time-picker .time-picker-footer {\n          padding: 15px;\n          text-align: right; }\n          #time-picker-wrapper #time-picker .time-picker-footer button {\n            border: transparent;\n            margin-left: 10px;\n            padding: 10px;\n            font-size: 14px;\n            border-radius: 2px;\n            cursor: pointer; }\n\n    * {\n      outline: none;\n      -webkit-box-sizing: content-box;\n              box-sizing: content-box; }\n  "]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+TimePickerComponent.ctorParameters = function () { return [
+    { type: AtpCoreService, },
+]; };
+var AtpTimePickerComponent = (function () {
+    /**
+     * @param {?} resolver
+     * @param {?} appRef
+     */
+    function AtpTimePickerComponent(resolver, appRef) {
+        this.resolver = resolver;
+        this.appRef = appRef;
+        this.timeSelected = new EventEmitter();
+        this.config = {};
+    }
+    /**
+     * @return {?}
+     */
+    AtpTimePickerComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var /** @type {?} */ config = this.config;
+        config = {
+            time: config.time || '00:00',
+            theme: ['light', 'dark', 'material'].indexOf(config.theme) > 0 ? config.theme : 'light' || config.theme || 'light',
+            rangeTime: config.rangeTime || { start: '0:0', end: '24:0' },
+            arrowStyle: config.arrowStyle || {}
+        };
+        config.arrowStyle = {
+            background: (config.arrowStyle.background) ?
+                config.arrowStyle.background : config.theme !== undefined ?
+                config.theme === 'dark' ? 'rgb(128, 203, 196)' : 'blue' : 'blue',
+            color: config.arrowStyle.color || '#fff'
+        };
+        var /** @type {?} */ cfr = this.resolver.resolveComponentFactory(TimePickerComponent);
+        var /** @type {?} */ tsc = this.container.createComponent(cfr);
+        tsc.instance.subject = new Subject$1();
+        tsc.instance._ref = tsc;
+        tsc.instance.appRef = this.appRef;
+        tsc.instance.timerElement = '';
+        tsc.instance.config = config;
+        tsc.instance.activeModal = true;
+        tsc.instance.isPopup = false;
+        tsc.instance.ParseStringToTime(config.time);
+        tsc.instance.subject.asObservable().subscribe(function (time) {
+            _this.timeSelected.emit(time);
+        });
+    };
+    return AtpTimePickerComponent;
+}());
+AtpTimePickerComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'atp-time-picker',
+                template: "\n    <div #container></div>\n  ",
+                styles: ["\n    .atp-time-picker .icon-container {\n      display: inline-block;\n      margin-right: .2em; }\n      .atp-time-picker .icon-container svg {\n        cursor: pointer;\n        position: relative;\n        top: .5em; }\n      .atp-time-picker .icon-container /deep/ i {\n        cursor: pointer; }\n  "]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+AtpTimePickerComponent.ctorParameters = function () { return [
+    { type: ComponentFactoryResolver, },
+    { type: ApplicationRef, },
+]; };
+AtpTimePickerComponent.propDecorators = {
+    'container': [{ type: ViewChild, args: ['container', { read: ViewContainerRef },] },],
+    'timeSelected': [{ type: Output },],
+};
+var arabic = new Intl.NumberFormat('ar-AE');
+var persian = new Intl.NumberFormat('fa-IR');
+var PersianPreference = {
+    hour: function (x) { return persian.format(x); },
+    minute: function (x) {
+        var /** @type {?} */ exp = persian.format(x);
+        if (exp.length === 1) {
+            exp = persian.format(0) + exp;
+        }
+        return exp;
+    },
+    separator: ':',
+    period: function (x) { return x === 'AM' ? 'صبح' : 'عصر'; },
+    clockHour: function (x) { return persian.format(x); },
+    clockMinute: function (x) { return persian.format(x); },
+    labels: {
+        ok: 'تایید',
+        cancel: 'لغو'
+    }
+};
+var ArabicPreference = {
+    hour: function (x) { return arabic.format(x); },
+    minute: function (x) {
+        var /** @type {?} */ exp = arabic.format(x);
+        if (exp.length === 1) {
+            exp = arabic.format(0) + exp;
+        }
+        return exp;
+    },
+    separator: ':',
+    period: function (x) { return x === 'AM' ? 'صباحا' : 'مساء'; },
+    clockHour: function (x) { return arabic.format(x); },
+    clockMinute: function (x) { return arabic.format(x); },
+    labels: {
+        ok: 'حسنا',
+        cancel: 'إلغاء'
+    }
+};
+var ChinesePreference = {
+    hour: function (x) { return x; },
+    minute: function (x) {
+        var /** @type {?} */ exp = x;
+        if (exp.length === 1) {
+            exp = '۰' + exp;
+        }
+        return exp;
+    },
+    separator: ':',
+    period: function (x) { return x === 'AM' ? '上午' : '下午'; },
+    clockHour: function (x) { return x; },
+    clockMinute: function (x) { return x; },
+    labels: {
+        ok: '好',
+        cancel: '取消'
+    }
+};
+var Preference = function (locale) {
+    switch (locale) {
+        case 'fa':
+            return PersianPreference;
+        case 'ar':
+            return ArabicPreference;
+        case 'ch':
+            return ChinesePreference;
+        default:
+            return null;
+    }
+};
+var AmazingTimePickerService = (function () {
+    /**
+     * @param {?} resolver
+     * @param {?} appRef
+     * @param {?} injector
+     */
+    function AmazingTimePickerService(resolver, appRef, injector) {
+        this.resolver = resolver;
+        this.appRef = appRef;
+        this.injector = injector;
+    }
+    /**
+     * @param {?=} config
+     * @return {?}
+     */
+    AmazingTimePickerService.prototype.open = function (config) {
+        var /** @type {?} */ thems = ['light', 'dark', 'material-red', 'material-green', 'material-blue', 'material-purple', 'material-orange'];
+        config = config || {};
+        config = ({
+            time: config.time || '00:00',
+            theme: thems.indexOf(config.theme) > 0 ? config.theme : 'light' || config.theme || 'light',
+            rangeTime: config.rangeTime || { start: '0:0', end: '24:0' },
+            arrowStyle: config.arrowStyle || {},
+            locale: config.locale || 'en',
+            changeToMinutes: config.changeToMinutes || false,
+            preference: config.preference || null,
+            onlyHour: config.onlyHour || false,
+            onlyMinute: config.onlyMinute || false,
+            onlyAM: config.onlyAM || false,
+            onlyPM: config.onlyPM || false,
+        });
+        config.rangeTime = {
+            start: config.rangeTime.start || '0:0',
+            end: config.rangeTime.end || '24:0',
+        };
+        config.arrowStyle = {
+            background: (config.arrowStyle.background) ?
+                config.arrowStyle.background : config.theme !== undefined ?
+                config.theme === 'dark' ? 'rgb(128, 203, 196)' : '' : '',
+            color: config.arrowStyle.color || ''
+        };
+        var /** @type {?} */ componentRef = this.resolver.resolveComponentFactory(TimePickerComponent);
+        var /** @type {?} */ tsc = componentRef.create(this.injector);
+        this.appRef.attachView(tsc.hostView);
+        var /** @type {?} */ domElem = (((tsc.hostView)).rootNodes[0]);
+        document.body.appendChild(domElem);
+        tsc.instance.subject = new Subject$1();
+        tsc.instance._ref = tsc;
+        tsc.instance.appRef = this.appRef;
+        tsc.instance.timerElement = '';
+        tsc.instance.config = config;
+        if (config.preference) {
+            tsc.instance.preference = config.preference;
+        }
+        else {
+            tsc.instance.preference = Preference(config.locale);
+        }
+        tsc.instance.ParseStringToTime(config.time);
+        return {
+            afterClose: function () {
+                return tsc.instance.subject.asObservable();
+            }
+        };
+    };
+    return AmazingTimePickerService;
+}());
+AmazingTimePickerService.decorators = [
+    { type: Injectable },
+];
+/**
+ * @nocollapse
+ */
+AmazingTimePickerService.ctorParameters = function () { return [
+    { type: ComponentFactoryResolver, },
+    { type: ApplicationRef, },
+    { type: Injector, },
+]; };
+var AtpDirective = (function () {
+    /**
+     * @param {?} viewContainerRef
+     * @param {?} atp
+     */
+    function AtpDirective(viewContainerRef, atp) {
+        this.viewContainerRef = viewContainerRef;
+        this.atp = atp;
+        this.myClick = new EventEmitter();
+        this.onChange = function (x) { };
+        this.elementRef = this.viewContainerRef.element;
+    }
+    /**
+     * @param {?} e
+     * @return {?}
+     */
+    AtpDirective.prototype.onClick = function (e) {
+        var _this = this;
+        var /** @type {?} */ ele = this.viewContainerRef.element.nativeElement;
+        var /** @type {?} */ time = ele.value;
+        var /** @type {?} */ theme = ele.getAttribute('theme');
+        var /** @type {?} */ start = ele.getAttribute('start');
+        var /** @type {?} */ end = ele.getAttribute('end');
+        var /** @type {?} */ locale = ele.getAttribute('locale') || 'en';
+        var /** @type {?} */ changeToMinutes = ele.getAttribute('changeToMinutes') === 'true';
+        var /** @type {?} */ preference = ele.getAttribute('preference') || null;
+        var /** @type {?} */ onlyHour = ele.getAttribute('onlyHour') || false;
+        var /** @type {?} */ onlyMinute = ele.getAttribute('onlyMinute') || false;
+        var /** @type {?} */ onlyAM = ele.getAttribute('onlyAM') || false;
+        var /** @type {?} */ onlyPM = ele.getAttribute('onlyPM') || false;
+        var /** @type {?} */ arrowStyle = ele.getAttribute('arrowStyle');
+        arrowStyle = (arrowStyle) ? JSON.parse(arrowStyle.replace(new RegExp('\'', 'g'), '"')) : '';
+        var /** @type {?} */ timePickerFunction = this.atp.open({
+            time: time,
+            theme: theme,
+            rangeTime: { start: start, end: end },
+            'arrowStyle': arrowStyle,
+            locale: locale,
+            changeToMinutes: changeToMinutes,
+            onlyHour: onlyHour,
+            onlyMinute: onlyMinute,
+            onlyAM: onlyAM,
+            onlyPM: onlyPM,
+            preference: preference
+        });
+        timePickerFunction.afterClose().subscribe(function (retTime) {
+            _this.writeValue(retTime); // update the native element
+            _this.onChange(retTime); // update the form value (if there's a form)
+        });
+    };
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+    AtpDirective.prototype.writeValue = function (value) {
+        if (this.elementRef) {
+            this.elementRef.nativeElement.value = value;
+        }
+    };
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    AtpDirective.prototype.registerOnChange = function (fn) {
+        this.onChange = fn;
+    };
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    AtpDirective.prototype.registerOnTouched = function (fn) { };
+    return AtpDirective;
+}());
+AtpDirective.decorators = [
+    { type: Directive, args: [{
+                selector: 'input[atp-time-picker]',
+                providers: [{
+                        provide: NG_VALUE_ACCESSOR,
+                        useExisting: AtpDirective,
+                        multi: true
+                    }]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+AtpDirective.ctorParameters = function () { return [
+    { type: ViewContainerRef, },
+    { type: AmazingTimePickerService, },
+]; };
+AtpDirective.propDecorators = {
+    'myClick': [{ type: Output },],
+    'onClick': [{ type: HostListener, args: ['click', ['$event'],] },],
+};
+var AmazingTimePickerModule = (function () {
+    function AmazingTimePickerModule() {
+    }
+    return AmazingTimePickerModule;
+}());
+AmazingTimePickerModule.decorators = [
+    { type: NgModule, args: [{
+                imports: [
+                    CommonModule,
+                ],
+                declarations: [
+                    TimePickerComponent,
+                    AtpTimePickerComponent,
+                    AtpDirective
+                ],
+                providers: [
+                    AmazingTimePickerService,
+                    AtpCoreService
+                ],
+                entryComponents: [TimePickerComponent],
+                exports: [
+                    TimePickerComponent,
+                    AtpTimePickerComponent,
+                    AtpDirective
+                ]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+AmazingTimePickerModule.ctorParameters = function () { return []; };
+/**
+ * Generated bundle index. Do not edit.
+ */
+export { AmazingTimePickerModule, AmazingTimePickerService, AtpCoreService as ɵb, AtpTimePickerComponent as ɵc, AtpDirective as ɵd, TimePickerComponent as ɵa };
+//# sourceMappingURL=amazing-time-picker.es5.js.map

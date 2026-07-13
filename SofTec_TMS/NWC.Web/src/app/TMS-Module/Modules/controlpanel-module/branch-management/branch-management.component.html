@@ -1,0 +1,124 @@
+<div class="container-fluid main-div bg-light">
+  <div class="row">
+    <div class="col-md-6 padding-10">
+      <span class="page-title">{{ 'ControlPanel' | translate }}</span>
+      <span class="page-title"><i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title currentpage">{{ 'BranchManagement' | translate }}</span>
+    </div>
+
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="col-sm-12 text-right">
+      <button class="btn btn-success">
+        <i class="fa fa-plus-circle fa-lg"></i> Add Branch</button>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="container">
+      <div class="col-sm-6">
+        <app-tree [treeData]="nodes" #tree></app-tree>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="branch-management container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <span class="actions d-flex justify-content-end mb-3">
+        <a class="add-btn" (click)="showModal(modaleTemplate, {name: 'area', action: 'add'})">
+          <i class="fas fa-plus"></i>
+          addArea
+        </a>
+      </span>
+
+      <div class="level-areas" id="areas">
+        <div class="item d-flex justify-content-between align-items-center">
+
+          <div class="btn btn-link collapsed"
+            data-toggle="collapse"
+            data-target="#area-1">
+            <div class="btn btn-link icon">
+              <i class="fas fa-plus"></i>
+              <i class="fas fa-minus"></i>
+            </div>
+            Area title
+          </div>
+          <span class="actions">
+            <a class="add-btn" (click)="showModal(modaleTemplate, {name: 'city', action: 'add', id: 1})">
+              <i class="fas fa-plus"></i>
+              addCity
+            </a>
+            <a class="edit-btn" (click)="showModal(modaleTemplate, {name: 'area', action: 'edit', id: 1})">
+              <i class="fas fa-pen"></i>
+              edit
+            </a>
+            <a class="delete-btn" (click)="delete({name: 'area', id: 1})">
+              <i class="fas fa-trash-alt"></i>
+              delete
+            </a>
+          </span>
+        </div>
+
+
+        <div id="area-1" class="collapse" data-parent="#areas">
+          <div class="level-cities" id="cities">
+
+            <div class="item d-flex justify-content-between align-items-center">
+
+              <div class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#city-2">
+                <div class="btn btn-link icon">
+                  <i class="fas fa-plus"></i>
+                  <i class="fas fa-minus"></i>
+                </div>
+                City title
+              </div>
+              <span class="actions">
+                <a class="add-btn" (click)="showModal(modaleTemplate, {name: 'landmark', action: 'add', id: 1})">
+                  <i class="fas fa-plus"></i>
+                  addLandmark
+                </a>
+                <a class="edit-btn" (click)="showModal(modaleTemplate, {name: 'city', action: 'edit', id: 1})">
+                  <i class="fas fa-pen"></i>
+                  edit
+                </a>
+                <a class="delete-btn" (click)="delete({name: 'city', id: 1})">
+                  <i class="fas fa-trash-alt"></i>
+                  delete
+                </a>
+              </span>
+            </div>
+            <div id="city-2" class="collapse" data-parent="#cities">
+              <div class="level-landmarks">
+                <ul>
+                  <li class="item d-flex justify-content-between align-items-center">
+                    landmark name
+                    <span class="actions">
+
+                      <a class="edit-btn" (click)="showModal(modaleTemplate, {name: 'landmark', action: 'edit', id: 1})">
+                        <i class="fas fa-pen"></i>
+                        edit
+                      </a>
+                      <a class="delete-btn" (click)="delete({name: 'landmark', id: 1})">
+                        <i class="fas fa-trash-alt"></i>
+                        delete
+                      </a>
+                    </span>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+</div> -->

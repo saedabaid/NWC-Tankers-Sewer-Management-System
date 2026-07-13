@@ -1,0 +1,24 @@
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:11/10/2020 02:48:27 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 5749654037 - TransporterID 72325280-ee3e-4c33-acb4-7ec3f743b504 - TransportrStatus: 0 Time:11/10/2020 02:48:28 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:11/10/2020 02:48:28 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:11/10/2020 2:48:28 PM
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 5749654037 - TransporterID: 72325280-ee3e-4c33-acb4-7ec3f743b504 - TransporterStatus: 11 Time:11/10/2020 2:48:29 PM
+
+Start Inserting Driver SMS: OrderNo:5749654037, VehicleId:72325280-ee3e-4c33-acb4-7ec3f743b504, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:11/10/2020 2:48:29 PM
+
+SMS: تم تخصيص رقم الطلب 5749654037 ويمكن التواصل على جوال العميل 032453245345 موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:11/10/2020 2:48:29 PM
+
+Start Inserting Customer SMS: OrderNo:5749654037, VehicleId:72325280-ee3e-4c33-acb4-7ec3f743b504, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:11/10/2020 2:48:29 PM
+
+SMS: عميلنا العزيز: نفيدكم بتخصيص ناقلة مياه لطلبكم رقم 5749654037 Time:11/10/2020 2:48:29 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 5749654037 - TransporterID: 72325280-ee3e-4c33-acb4-7ec3f743b504 - TransporterStatus: 11 Time:11/10/2020 02:48:29 م
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"5749654037","cisDivision":19,"orderStatus":4,"updateDateTime":"11-10-2020 14:48:30","parameters":[{"parameterName":"TMSID","parameterValue":"5749654037"},{"parameterName":"COMMENT","parameterValue":""}]} Time:11/10/2020 2:48:30 PM
+
+----------------------------------------AssignWorkOrder - Denormalizer - End---------------------------------------- Time:11/10/2020 2:48:51 PM
+

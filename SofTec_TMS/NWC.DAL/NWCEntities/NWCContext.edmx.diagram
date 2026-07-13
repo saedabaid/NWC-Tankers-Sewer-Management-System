@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="389bf8786f6f4abf8dcaabc7c0f36567" Name="Diagram1" ZoomLevel="19">
+        <EntityTypeShape EntityType="NWCModel.aspnet_Membership" Width="1.5" PointX="20" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.aspnet_Users" Width="1.5" PointX="17.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_Accessory" Width="1.5" PointX="3" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_BalanceUnit" Width="1.5" PointX="19.5" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ComplaintCategory" Width="1.5" PointX="15.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ComplaintPriority" Width="1.5" PointX="13.5" PointY="45.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ComplaintStatus" Width="1.5" PointX="13.5" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContactPerson" Width="1.5" PointX="6" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractTerminationReason" Width="1.5" PointX="1.5" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractType" Width="1.5" PointX="1.5" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_CustomerLocationPriority" Width="1.5" PointX="9" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_CustomerLocationStatus" Width="1.5" PointX="9" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_DeviceMeter" Width="1.5" PointX="5.25" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_DeviceMeterReading" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_Event" Width="1.5" PointX="14.25" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_EventType" Width="1.5" PointX="12" PointY="42.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_PaymentType" Width="1.5" PointX="19.5" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_PersonalIDType" Width="1.5" PointX="6.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_StationCustomerLocationClass" Width="1.5" PointX="8.25" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_StationOwnership" Width="1.5" PointX="0.75" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_StationServiceType" Width="1.5" PointX="8.25" PointY="31.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_StationStatus" Width="1.5" PointX="0.75" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_StationWaterSource" Width="1.5" PointX="0.75" PointY="34.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_StatusReason" Width="1.5" PointX="18" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_TermsCategory" Width="1.5" PointX="0.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_UserLandmarkPermission" Width="1.5" PointX="5.25" PointY="50.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_VehicleAccessory" Width="1.5" PointX="19.5" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_VehicleCustomerLocationClass" Width="1.5" PointX="19.5" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ViolationPaymentStatus" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_WorkOrderComplaint" Width="1.5" PointX="15.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_WorkOrderPlannedRout" Width="1.5" PointX="10.125" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_WorkOrderStatus" Width="1.5" PointX="15.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ZoneStations" Width="1.5" PointX="11.25" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.Pages" Width="1.5" PointX="3.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.StaffRoles" Width="1.5" PointX="6" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.Transporter_Staff" Width="1.5" PointX="16.5" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NWCModel.UserBranchPermission" Width="1.5" PointX="3" PointY="41.375" IsExpanded="true" />
+        <AssociationConnector Association="NWCModel.FK__aspnet_Me__UserI__15502E78" ManuallyRouted="false" />
+        <AssociationConnector Association="NWCModel.FK_NWC_VehicleAccessory_NWC_Accessory" ManuallyRouted="false" />
+        <AssociationConnector Association="NWCModel.FK_NWC_WorkOrderComplaint_NWC_ComplaintCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="NWCModel.FK_NWC_WorkOrderComplaint_NWC_ComplaintPriority" ManuallyRouted="false" />
+        <AssociationConnector Association="NWCModel.FK_NWC_WorkOrderComplaint_NWC_ComplaintStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="NWCModel.FK_NWC_Event_NWC_EventType" ManuallyRouted="false" />
+        <AssociationConnector Association="NWCModel.FK_NWC_StatusReason_NWC_WorkOrderStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="NWCModel.FK_StaffRole_Pages" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="NWCModel.TransporterStatus" Width="1.5" PointX="12" PointY="31.5" />
+        <AssociationConnector Association="NWCModel.FK_NWC_StatusReason_TransporterStatus" />
+        <EntityTypeShape EntityType="NWCModel.StaffRoleModulePermissions" Width="1.5" PointX="13.25" PointY="0.75" />
+        <AssociationConnector Association="NWCModel.FK_StaffRoleModulePermissions_Pages" />
+        <AssociationConnector Association="NWCModel.FK_StaffRoleModulePermissions_StaffRoles" />
+        <EntityTypeShape EntityType="NWCModel.Modules" Width="1.5" PointX="0.75" PointY="1.75" />
+        <AssociationConnector Association="NWCModel.FK_Pages_Modules" />
+        <AssociationConnector Association="NWCModel.FK_StaffRoleModulePermissions_Modules" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ActionLogType" Width="1.5" PointX="18.75" PointY="36.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ChangesLogs" Width="2.125" PointX="11.125" PointY="5.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_WorkOrderComment" Width="1.5" PointX="28.25" PointY="33.875" />
+        <EntityTypeShape EntityType="NWCModel.TransporterType" Width="1.5" PointX="9.75" PointY="39.375" />
+        <EntityTypeShape EntityType="NWCModel.ContactPerson" Width="1.5" PointX="0.75" PointY="25.875" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ContractWorkOrderAccessory" Width="1.5" PointX="16.75" PointY="17.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_WorkOrderAccessory" Width="1.5" PointX="30.5" PointY="25.25" />
+        <AssociationConnector Association="NWCModel.FK_NWC_WorkOrderAccessory_NWC_Accessory" />
+        <EntityTypeShape EntityType="NWCModel.NWC_Zone" Width="1.5" PointX="3" PointY="45.25" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ChangesLogsLocationData" Width="1.5" PointX="16.375" PointY="12.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ZoneList" Width="1.5" PointX="20.5" PointY="0.75" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ZoneStations_NWC_Zone" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractAccessory" Width="1.5" PointX="5.5" PointY="20.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractPrice" Width="1.5" PointX="19.25" PointY="31.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractStations" Width="1.5" PointX="8.5" PointY="20.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractStationViolation" Width="1.5" PointX="31.5" PointY="20.5" />
+        <AssociationConnector Association="NWCModel.FK_NWC_StationAccessory_NWC_Accessory" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractStations_NWC_ContactPerson" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ContractPriceList" Width="1.5" PointX="11.375" PointY="12.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ContractStations" Width="1.5" PointX="19.375" PointY="11.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractTerms" Width="1.5" PointX="5.625" PointY="33.875" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractStationViolation_NWC_ContractTerms" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractTerms_NWC_TermsCategory" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ContractTerms" Width="1.5" PointX="30.375" PointY="28.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractAttachment" Width="1.5" PointX="3" PointY="9.375" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractStatus" Width="1.5" PointX="1.5" PointY="13.375" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ContractList" Width="1.5" PointX="16.375" PointY="24.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_WorkOrderInvoiceStatus" Width="1.5" PointX="26.375" PointY="6.875" />
+        <EntityTypeShape EntityType="NWCModel.NWC_WorkOrderTransaction" Width="1.5" PointX="30.5" PointY="40.875" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ContractAccessory" Width="1.5" PointX="5.375" PointY="25.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_Contractor" Width="1.5" PointX="1.5" PointY="50.25" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ContractorList" Width="1.5" PointX="30.375" PointY="0.75" />
+        <AssociationConnector Association="NWCModel.FK_NWC_Contractor_NWC_ContactPerson" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractorAttachment" Width="1.5" PointX="3.75" PointY="54.75" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractorAttachment_NWC_Contract" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_DeviceMeterReading" Width="1.5" PointX="16.375" PointY="31.75" />
+        <AssociationConnector Association="NWCModel.FK_NWC_DeviceMeterReading_NWC_DeviceMeter" />
+        <EntityTypeShape EntityType="NWCModel.NWC_Contract" Width="1.5" PointX="16.75" PointY="45" />
+        <AssociationConnector Association="NWCModel.FK_NWC_Contract_NWC_Contractor" />
+        <AssociationConnector Association="NWCModel.FK_NWC_Contract_NWC_ContractStatus" />
+        <AssociationConnector Association="NWCModel.FK_NWC_Contract_NWC_ContractTerminationReason" />
+        <AssociationConnector Association="NWCModel.FK_NWC_Contract_NWC_ContractType" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractAccessory_NWC_Contract" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractAttachment_NWC_Contract" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractPrice_NWC_Contract" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractStations_NWC_Contract" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractTerms_NWC_Contract" />
+        <EntityTypeShape EntityType="NWCModel.NWC_TanckerCapacity" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractTariff" Width="1.5" PointX="22" PointY="24.625" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ContractTariff" Width="1.5" PointX="24.375" PointY="26.125" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractTariaff_NWC_Contract" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractTariff_NWC_TanckerCapacity" />
+        <EntityTypeShape EntityType="NWCModel.NWC_RestrictedZoneVehicleType" Width="1.5" PointX="12" PointY="39.25" />
+        <AssociationConnector Association="NWCModel.FK_NWC_RestrictedZoneVehicleType_NWC_Zone" />
+        <AssociationConnector Association="NWCModel.FK_NWC_RestrictedZoneVehicleType_TransporterType" />
+        <EntityTypeShape EntityType="NWCModel.NWC_DeferredWorkOrder" Width="1.5" PointX="36.625" PointY="1.125" />
+        <EntityTypeShape EntityType="NWCModel.NWC_DeferredWorkOrderStatus" Width="1.5" PointX="34.375" PointY="3.5" />
+        <AssociationConnector Association="NWCModel.FK_NWC_DeferredWorkOrder_NWC_DeferredWorkOrderStatus" />
+        <EntityTypeShape EntityType="NWCModel.NWC_DriverSMS" Width="1.5" PointX="22.375" PointY="6.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_TermsValueUnits" Width="1.5" PointX="26.375" PointY="25.875" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractTerms_NWC_TermsValueUnits" />
+        <EntityTypeShape EntityType="NWCModel.NWC_CustomerLocationBalance" Width="1.5" PointX="24.5" PointY="38" />
+        <EntityTypeShape EntityType="NWCModel.NWC_CustomerLocationCategory" Width="1.5" PointX="9.5" PointY="55.875" />
+        <EntityTypeShape EntityType="NWCModel.NWC_CustomerLocationClass" Width="1.5" PointX="0.5" PointY="29.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ServiceType" Width="1.5" PointX="0.75" PointY="25.25" />
+        <AssociationConnector Association="NWCModel.FK_NWC_CustomerLocationBalance_NWC_BalanceUnit" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractPrice_NWC_CustomerLocationClass" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractPrice_NWC_ServiceType" />
+        <AssociationConnector Association="NWCModel.FK_NWC_CustomerLocationBalance_NWC_PaymentType" />
+        <AssociationConnector Association="NWCModel.FK_NWC_CustomerLocationBalance_NWC_ServiceType" />
+        <AssociationConnector Association="NWCModel.FK_NWC_StationCustomerLocationClass_NWC_CustomerLocationClass" />
+        <AssociationConnector Association="NWCModel.FK_NWC_VehicleCustomerLocationClass_NWC_CustomerLocationClass" />
+        <AssociationConnector Association="NWCModel.FK_NWC_StationServiceType_NWC_ServiceType" />
+        <EntityTypeShape EntityType="NWCModel.NWC_CustomerSMS" Width="1.5" PointX="11.375" PointY="22" />
+        <EntityTypeShape EntityType="NWCModel.NWC_UserServicePermission" Width="1.5" PointX="33" PointY="16.5" />
+        <AssociationConnector Association="NWCModel.FK_NWC_UserServicePermission_NWC_ServiceType" />
+        <EntityTypeShape EntityType="NWCModel.NWC_CustomerLocation" Width="1.5" PointX="19.75" PointY="40" />
+        <AssociationConnector Association="NWCModel.FK_NWC_CustomerLocation_NWC_CustomerLocationCategory" />
+        <AssociationConnector Association="NWCModel.FK_NWC_CustomerLocation_NWC_CustomerLocationClass" />
+        <AssociationConnector Association="NWCModel.FK_NWC_CustomerLocation_NWC_CustomerLocationPriority" />
+        <AssociationConnector Association="NWCModel.FK_NWC_CustomerLocation_NWC_CustomerLocationStatus" />
+        <AssociationConnector Association="NWCModel.FK_NWC_CustomerLocation_NWC_Zone" />
+        <AssociationConnector Association="NWCModel.FK_NWC_CustomerLocationBalance_NWC_CustomerLocation" />
+        <EntityTypeShape EntityType="NWCModel.NWC_VehicleLogType" Width="1.5" PointX="7.375" PointY="28.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_StaffRoleModulePermissions" Width="1.5" PointX="34.375" PointY="8.75" />
+        <EntityTypeShape EntityType="NWCModel.SubscriberAdminSettings" Width="1.5" PointX="27.375" PointY="37.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_Report_VehicleLog" Width="1.5" PointX="30.375" PointY="34.75" />
+        <EntityTypeShape EntityType="NWCModel.Branch" Width="1.5" PointX="3" PointY="58.875" />
+        <AssociationConnector Association="NWCModel.FK_Branch_Branch" />
+        <AssociationConnector Association="NWCModel.FK_Branch_ContactPerson" />
+        <AssociationConnector Association="NWCModel.FK_NWC_Zone_Branch" />
+        <AssociationConnector Association="NWCModel.FK_UserBranch_Branch" />
+        <EntityTypeShape EntityType="NWCModel.NWC_CustomerAccount" Width="1.5" PointX="22" PointY="42.75" />
+        <AssociationConnector Association="NWCModel.FK_NWC_CustomerAccount_NWC_CustomerLocation" />
+        <AssociationConnector Association="NWCModel.FK_NWC_CustomerAccount_NWC_ServiceType" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_CustomerAccount" Width="1.5" PointX="22.375" PointY="11.125" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_Report_SoqyaSchedule" Width="1.5" PointX="24.375" PointY="11.125" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_Report_VehicleData" Width="1.5" PointX="33.375" PointY="38.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractViolationAttachment" Width="1.5" PointX="42.875" PointY="21.5" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractTermsViolations" Width="1.5" PointX="40.625" PointY="20.125" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractTermsViolations_NWC_ContractTerms" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractTermsViolations_NWC_WorkOrderInvoiceStatus" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractViolationAttachment_NWC_ContractTermsViolations" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_AvailableTankerSizes" Width="1.5" PointX="16.375" PointY="20.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_VehicleLog" Width="1.5" PointX="26.375" PointY="0.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_Customer" Width="1.5" PointX="9" PointY="47" />
+        <AssociationConnector Association="NWCModel.FK_NWC_Customer_NWC_PersonalIDType" />
+        <AssociationConnector Association="NWCModel.FK_NWC_CustomerAccount_NWC_Customer" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_CustomerAccountZone" Width="1.5" PointX="40.375" PointY="7.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_CustomerAccountCity" Width="1.5" PointX="40.375" PointY="13.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_VehicleNWCSettings" Width="1.5" PointX="40.375" PointY="26.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_VehicleViolation" Width="1.5" PointX="41.375" PointY="0.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractTermsViolationStatus" Width="1.5" PointX="8.375" PointY="17.75" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractTermsViolations_NWC_ContractTermsViolationStatus" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractTermsViolationCancelReason" Width="1.5" PointX="41.375" PointY="31.875" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractTermsViolations_NWC_ContractTermsViolationCancelReason" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractTermsViolationsLogs" Width="1.5" PointX="41.375" PointY="34.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ContractTermsViolationsLogs" Width="1.5" PointX="41.375" PointY="41.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_PrintVehicleInvoice" Width="1.5" PointX="26.375" PointY="28.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_UserLandmarkPermission" Width="1.5" PointX="24.375" PointY="22.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ContractTermsViolations" Width="1.5" PointX="37.375" PointY="33.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_WorkOrderLog" Width="1.5" PointX="45.875" PointY="20.125" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_WorkOrderLogs" Width="1.5" PointX="34.375" PointY="20.75" />
+        <AssociationConnector Association="NWCModel.FK_NWC_WorkOrderLog_NWC_ActionLogType" />
+        <AssociationConnector Association="NWCModel.FK_NWC_WorkOrderLog_NWC_WorkOrderStatus" />
+        <AssociationConnector Association="NWCModel.FK_NWC_WorkOrderLog_TransporterStatus" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_Report_StationOrderCapacitySummary" Width="1.5" PointX="30.375" PointY="8.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_Report_TankersPermissionsStatus" Width="1.5" PointX="30.375" PointY="13.125" />
+        <EntityTypeShape EntityType="NWCModel.NWC_Hayat_OrderStatusLog" Width="1.5" PointX="42.375" PointY="15.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ContractTermsViolationsInvoices" Width="1.5" PointX="43.375" PointY="0.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ContractTermsViolationsInvoices" Width="1.5" PointX="44.375" PointY="4.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_SoqyaSchedules" Width="1.5" PointX="45.875" PointY="40.125" />
+        <AssociationConnector Association="NWCModel.FK_NWC_SoqyaSchedules_NWC_CustomerAccount" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_SoqyaSchedule" Width="1.5" PointX="45.375" PointY="11.875" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_Report_StationServiceTimeSummary" Width="1.5" PointX="32.375" PointY="31.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_Report_SoqyaScheduledQuantities" Width="1.5" PointX="26.375" PointY="44.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_WorkOrderBasicDetails" Width="1.5" PointX="46.375" PointY="45.75" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractTariaff_NWC_CustomerLocationClass" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractTariaff_NWC_ServiceType" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_Report_OrdersPerZone" Width="1.5" PointX="8.375" PointY="4.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_AssignableVehicles" Width="1.5" PointX="11.375" PointY="16.75" />
+        <EntityTypeShape EntityType="NWCModel.StaffRoleCategory" Width="1.5" PointX="21.375" PointY="15.875" />
+        <AssociationConnector Association="NWCModel.FK_StaffRoles_StaffRoleCategory" />
+        <EntityTypeShape EntityType="NWCModel.TransporterBrand" Width="1.5" PointX="12" PointY="51.25" />
+        <EntityTypeShape EntityType="NWCModel.TransporterGroup" Width="1.5" PointX="25.375" PointY="34.75" />
+        <EntityTypeShape EntityType="NWCModel.TransporterProductionYear" Width="1.5" PointX="34.375" PointY="33.875" />
+        <EntityTypeShape EntityType="NWCModel.TransporterManufacturer" Width="1.5" PointX="0.75" PointY="44" />
+        <AssociationConnector Association="NWCModel.FK_TransporterBrand_TransporterManufacturer" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_StateVehicle" Width="1.5" PointX="36.375" PointY="9.125" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_WorkOrderVehicle" Width="1.5" PointX="30.375" PointY="44.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_Report_DailyOrderDetails" Width="1.5" PointX="35.375" PointY="44.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_StateWorkOrder" Width="1.5" PointX="43.625" PointY="36.875" />
+        <AssociationConnector Association="NWCModel.FK_NWC_StateWorkOrder_NWC_CustomerAccount" />
+        <AssociationConnector Association="NWCModel.FK_NWC_StateWorkOrder_NWC_WorkOrderInvoiceStatus" />
+        <AssociationConnector Association="NWCModel.FK_NWC_WorkOrderComment_NWC_StateWorkOrder" />
+        <AssociationConnector Association="NWCModel.FK_NWC_WorkOrderComplaint_NWC_StateWorkOrder" />
+        <AssociationConnector Association="NWCModel.FK_NWC_WorkOrderLog_NWC_StateWorkOrder" />
+        <AssociationConnector Association="NWCModel.FK_NWC_SoqyaSchedules_NWC_StateWorkOrder" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_WorkOrderList" Width="1.5" PointX="36.375" PointY="15.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_Report_OrderReassignment" Width="1.5" PointX="37.375" PointY="44.75" />
+        <EntityTypeShape EntityType="NWCModel.aspnet_Applications" Width="1.5" PointX="15.5" PointY="0.75" />
+        <EntityTypeShape EntityType="NWCModel.aspnet_Roles" Width="1.5" PointX="17.75" PointY="56" />
+        <EntityTypeShape EntityType="NWCModel.Offer" Width="1.5" PointX="20" PointY="56.125" />
+        <EntityTypeShape EntityType="NWCModel.vw_aspnet_Roles" Width="1.5" PointX="5.375" PointY="48.875" />
+        <AssociationConnector Association="NWCModel.FK__aspnet_Me__Appli__145C0A3F" />
+        <AssociationConnector Association="NWCModel.FK__aspnet_Ro__Appli__32E0915F" />
+        <AssociationConnector Association="NWCModel.FK_aspnet_Users_aspnet_Applications" />
+        <AssociationConnector Association="NWCModel.FK__Offer__Role__6A70BD6B" />
+        <AssociationConnector Association="NWCModel.FK_StaffRoleModulePermissions_aspnet_Roles" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_PrintCustomerInvoice" Width="1.5" PointX="46.375" PointY="29.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_PrintDriverInvoice" Width="1.5" PointX="47.375" PointY="7.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_LandmarkNWCSettings" Width="1.5" PointX="23.375" PointY="1" />
+        <EntityTypeShape EntityType="NWCModel.NWC_DeassignReason" Width="1.5" PointX="13.375" PointY="12.875" />
+        <AssociationConnector Association="NWCModel.FK_NWC_WorkOrderLog_NWC_DeassignReason" />
+        <EntityTypeShape EntityType="NWCModel.NWC_WorkOrderCategory" Width="1.5" PointX="22.375" PointY="18.75" />
+        <EntityTypeShape EntityType="NWCModel.Staff" Width="1.5" PointX="27" PointY="11.125" />
+        <AssociationConnector Association="NWCModel.FK_Staff_aspnet_Users" />
+        <AssociationConnector Association="NWCModel.FK_Staff_Branch" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractStationViolation_Staff" />
+        <AssociationConnector Association="NWCModel.FK_NWC_UserLandmarkPermission_Staff" />
+        <AssociationConnector Association="NWCModel.FK_NWC_UserServicePermission_Staff" />
+        <AssociationConnector Association="NWCModel.FK_NWC_WorkOrderComment_Staff" />
+        <AssociationConnector Association="NWCModel.FK_NWC_WorkOrderComplaint_Staff" />
+        <AssociationConnector Association="NWCModel.FK_Staff_Staff" />
+        <AssociationConnector Association="NWCModel.FK_Staff_StaffRoles" />
+        <AssociationConnector Association="NWCModel.FK_Transporter_Staff_Staff" />
+        <AssociationConnector Association="NWCModel.FK_UserBranch_Staff" />
+        <EntityTypeShape EntityType="NWCModel.NWC_EventWorkOrder" Width="1.5" PointX="50.875" PointY="29.625" />
+        <AssociationConnector Association="NWCModel.FK_NWC_EventWorkOrder_NWC_DeassignReason" />
+        <AssociationConnector Association="NWCModel.FK_NWC_EventWorkOrder_NWC_Event" />
+        <AssociationConnector Association="NWCModel.FK_NWC_EventWorkOrder_Staff" />
+        <AssociationConnector Association="NWCModel.FK_NWC_WorkOrderAccessory_NWC_EventWorkOrder" />
+        <AssociationConnector Association="NWCModel.FK_NWC_WorkOrderTransaction_NWC_EventWorkOrder" />
+        <EntityTypeShape EntityType="NWCModel.Landmark" Width="1.5" PointX="14.25" PointY="51.125" />
+        <AssociationConnector Association="NWCModel.FK_Landmark_Branch" />
+        <AssociationConnector Association="NWCModel.FK_Landmark_ContactPerson" />
+        <AssociationConnector Association="NWCModel.FK_Landmark_NWC_StationOwnership" />
+        <AssociationConnector Association="NWCModel.FK_Landmark_NWC_StationStatus" />
+        <AssociationConnector Association="NWCModel.FK_Landmark_NWC_StationWaterSource" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractPrice_Landmark" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractStations_Landmark" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractStationViolation_Landmark" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractTariaff_Landmark" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractTerms_Landmark" />
+        <AssociationConnector Association="NWCModel.FK_NWC_DeviceMeter_Landmark" />
+        <AssociationConnector Association="NWCModel.FK_NWC_StationAccessory_Landmark" />
+        <AssociationConnector Association="NWCModel.FK_NWC_StationCustomerLocationClass_Landmark" />
+        <AssociationConnector Association="NWCModel.FK_NWC_StationServiceType_Landmark" />
+        <AssociationConnector Association="NWCModel.FK_NWC_UserLandmarkPermission_Landmark" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ZoneStations_Landmark" />
+        <AssociationConnector Association="NWCModel.FK_Staff_Landmark" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_Report_DailyOrderSummary" Width="1.5" PointX="21.375" PointY="31.75" />
+        <!--<EntityTypeShape EntityType="NWCModel.NWC_StationDefaultTankers" Width="1.5" PointX="16.5" PointY="37.375" />-->
+        <!--<AssociationConnector Association="NWCModel.FK_NWC_StationDefaultTankers_Landmark" />-->
+        <!--<AssociationConnector Association="NWCModel.FK_NWC_StationDefaultTankers_NWC_TankerCapacity" />-->
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_StationSizes" Width="1.5" PointX="13.375" PointY="24.75" />
+        <EntityTypeShape EntityType="NWCModel.ELM_Tanker" Width="1.5" PointX="13.375" PointY="16.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_StationDefaultTankers" Width="1.5" PointX="16.5" PointY="37" />
+        <AssociationConnector Association="NWCModel.FK_NWC_StationDefaultTankers_Landmark" />
+        <AssociationConnector Association="NWCModel.FK_NWC_StationDefaultTankers_NWC_TankerCapacity" />
+        <!--<EntityTypeShape EntityType="NWCModel.vw_NWC_StationSizes" Width="1.5" PointX="13.375" PointY="24.75" />-->
+        <EntityTypeShape EntityType="NWCModel.NWC_DefaultTankerSize" Width="1.5" PointX="13.375" PointY="28.125" />
+        <EntityTypeShape EntityType="NWCModel.ELMTransaction" Width="1.5" PointX="13.375" PointY="20.75" />
+        <EntityTypeShape EntityType="NWCModel.NWC_BranchSetting" Width="1.5" PointX="5.25" PointY="61.125" />
+        <AssociationConnector Association="NWCModel.FK_Branch_NWC_BranchSetting" />
+        <!--<EntityTypeShape EntityType="NWCModel.ELMTransaction" Width="1.5" PointX="13.375" PointY="20.75" />-->
+        <EntityTypeShape EntityType="NWCModel.PermitDeclarationAttachment" Width="1.5" PointX="56.125" PointY="32.75" />
+        <EntityTypeShape EntityType="NWCModel.PermitDetectionformAttachment" Width="1.5" PointX="56.125" PointY="36.375" />
+        <EntityTypeShape EntityType="NWCModel.PermitOtherFIleAttachment" Width="1.5" PointX="56.125" PointY="29" />
+        <EntityTypeShape EntityType="NWCModel.Permit" Width="1.5" PointX="53.875" PointY="30" />
+        <AssociationConnector Association="NWCModel.FK_Permit_Staff" />
+        <EntityTypeShape EntityType="NWCModel.vw_permitList" Width="1.5" PointX="46.375" PointY="0.75" />
+        <EntityTypeShape EntityType="NWCModel.Transporter" Width="1.5" PointX="48.625" PointY="32.75" />
+        <AssociationConnector Association="NWCModel.FK_Transporter_Branch" />
+        <AssociationConnector Association="NWCModel.FK_Transporter_Branch1" />
+        <AssociationConnector Association="NWCModel.FK_Transporter_Landmark" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ContractStationViolation_Transporter" />
+        <AssociationConnector Association="NWCModel.FK_NWC_EventWorkOrder_Transporter" />
+        <AssociationConnector Association="NWCModel.FK_Transporter_NWC_ServiceType" />
+        <AssociationConnector Association="NWCModel.FK_NWC_VehicleAccessory_Transporter" />
+        <AssociationConnector Association="NWCModel.FK_NWC_VehicleCustomerLocationClass_Transporter" />
+        <AssociationConnector Association="NWCModel.FK_Permit_Transporter" />
+        <AssociationConnector Association="NWCModel.FK_Transporter_Staff_Transporter" />
+        <AssociationConnector Association="NWCModel.FK_Transporter_TransporterBrand" />
+        <AssociationConnector Association="NWCModel.FK_Transporter_TransporterManufacturer" />
+        <AssociationConnector Association="NWCModel.FK_Transporter_TransporterProductionYear" />
+        <AssociationConnector Association="NWCModel.FK_Transporter_TransporterStatus1" />
+        <AssociationConnector Association="NWCModel.FK_Transporter_TransporterType" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ViolationsApprovals" Width="1.5" PointX="29.25" PointY="21.125" />
+        <EntityTypeShape EntityType="NWCModel.NWC_ViolationsApprovalsLogs" Width="1.5" PointX="42.875" PointY="25.625" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ViolationsApprovals_Landmark" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ViolationsApprovalsLogs_NWC_ContractTermsViolations" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ViolationsApprovals_Staff" />
+        <AssociationConnector Association="NWCModel.FK_NWC_ViolationsApprovalsLogs_NWC_ViolationsApprovals" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ZoneWithNoPrices" Width="1.5" PointX="13.375" PointY="27.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_BranchSetting" Width="1.5" PointX="43.375" PointY="29.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ViolationsApprovals" Width="1.5" PointX="42.375" PointY="11.75" />
+        <EntityTypeShape EntityType="NWCModel.vw_NWC_ViolationsApprovalsLogs" Width="1.5" PointX="48.375" PointY="0.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

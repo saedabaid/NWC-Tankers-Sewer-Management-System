@@ -1,0 +1,36 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:22/07/2020 4:19:01 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:22/07/2020 04:19:01 م
+
+CreateWorkOrder Time:22/07/2020 04:19:01 م
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5541,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:22/07/2020 04:19:01 م
+
+Valid Time:22/07/2020 04:19:01 م
+
+Create WorkOrder: Partially Success Time:22/07/2020 04:19:01 م
+
+customerAccount: 5541 Time:22/07/2020 4:19:02 PM
+
+customerLocation: 5541 Time:22/07/2020 4:19:02 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:22/07/2020 4:19:02 PM
+
+OrderNumber: 6619485070 Time:22/07/2020 4:19:02 PM
+
+workOrderID: 46027 Time:22/07/2020 4:19:02 PM
+
+scheduledDeliveryTime: 22/07/2020 4:19:01 PM Time:22/07/2020 4:19:02 PM
+
+customerLocationClassID: 1 Time:22/07/2020 4:19:02 PM
+
+serviceTypeID: 2 Time:22/07/2020 4:19:02 PM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:22/07/2020 4:19:02 PM
+
+orderQuantity: 20 Time:22/07/2020 4:19:02 PM
+
+Net Cost: -1 Time:22/07/2020 4:19:02 PM
+
+Create WorkOrder: Success Time:22/07/2020 4:19:02 PM
+

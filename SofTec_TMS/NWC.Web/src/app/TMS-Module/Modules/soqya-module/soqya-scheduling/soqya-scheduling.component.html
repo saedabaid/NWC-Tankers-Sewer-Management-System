@@ -1,0 +1,309 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-md-6  padding-10">
+            <a routerLink="/tms">
+                <span class="page-title">{{ "TMS" | translate }}</span>
+            </a>
+          <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+    
+          <span class="page-title  currentpage">{{ "SoqyaScheduling" | translate }}</span>
+        </div>
+
+        <div class="col-md-6 text-right padding-10">
+
+          <label class="btn btn-icon" (click)="uploadExcel()">
+            <span class="fas fa-file-upload"></span>    {{'ImportSchedule' | translate }}
+        </label>
+        </div>
+    </div>
+
+    <div class="row">
+
+       
+        <div class="col-3" >
+          <div class="row">
+            <label class="title col-4">{{ "Customer" | translate }} </label>
+            <div class="col-8">
+              <select-menu
+              [label]="'Name'"
+              [itemKey]="'Id'"
+              [dropDownListInputs]="customerNameList"
+              (SearchVAlue)="SearchCustomers($event)"
+              (selectedListChange)="onCustomerDDLChanged($event)"
+              [options]="selectMenuOptions"
+              [loading]="Customer_Loading"
+            >
+            </select-menu>
+            </div>
+              
+          </div>
+           
+        </div>
+
+        <div class="col-3" >
+          <div class="row">
+            <label class="title col-4">{{ "CustomerAccount" | translate }} </label>
+            <div class="col-8">
+              <select-menu
+              [label]="'Name'"
+              [itemKey]="'Id'"
+              [dropDownListInputs]="customerAccountList"
+              (selectedListChange)="oncustomerAccountDDLChanged($event)"
+              [loading]="CustomerAccount_Loading"
+              [options]="selectMenuOptions3"
+            >
+            </select-menu>
+            </div>
+          </div>  
+        </div>
+
+        <div class="col-3" >
+          <div class="row">
+            <label class="title col-4">{{ "Month/Year" | translate }} </label>
+            <div class="col-8">
+              <select-menu
+              [label]="'Name'"
+              [itemKey]="'Id'"
+              [dropDownListInputs]="MonthYearList"
+              (selectedListChange)="onMonthYearDDLChanged($event)"
+              [loading]="Balance_Loading"
+              [options]="selectMenuOptions3"
+              [selectedList]="bindingModel_MonthYearList"
+            >
+            </select-menu>  
+            </div>
+          </div>
+            
+            
+        </div>
+
+        <div class="col-3" >
+            <div class="row">
+            <button class="btn btn-danger col-3" (click)="search()">
+                {{ "Search" | translate }}
+            </button>
+            <label class="title col-8">{{ "Balance" | translate }} {{SoqyaBalance.UsedQuantity}}/{{SoqyaBalance.Balance}} {{'M' | translate}}<sup>3</sup></label>
+          </div>
+        </div>
+        
+    </div>
+
+    <br />
+    <div class="row" *ngIf="show">
+      <div class="col-3">
+        <div class="row">
+          <label class="title col-4">{{ "Location" }}</label>
+          <div class="col-8">
+            <label class="title">{{ customerLocationList[0]?.Name }} </label>
+            <!-- <select-menu
+              [label]="'Name'"
+              [itemKey]="'Id'"
+              [dropDownListInputs]="customerLocationList"
+              (selectedListChange)="oncustomerAccountDDLChanged($event)"
+              [loading]="Customer_Loading"
+              [options]="selectMenuOptions3"
+            >
+            </select-menu> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="row">
+          <label class="title col-4">{{ "Station" }}</label>
+          <div class="col-8">
+            <label class="title">{{ customerAccountStationsList[0]?.Name }}</label>
+            <!-- <select-menu
+              [label]="'Name'"
+              [itemKey]="'Id'"
+              [dropDownListInputs]="customerAccountStationsList"
+              [loading]="CustomerAccount_Loading"
+              [options]="selectMenuOptions3"
+            >
+            </select-menu> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="addingArea" *ngIf="AddingArea &&((pagePermission == 'Full Control') || (pagePermission == 'Add and Edit'))">
+  <div class="row">
+    <div class="col-4">
+    <div class="row">
+      <label class="title col-5">{{ "ScheduledDate" | translate }} </label>
+      <div class="col-7">
+        <select-menu *ngIf="editMoode==false;else date "
+              [label]="'Name'"
+              [itemKey]="'Id'"
+              [dropDownListInputs]="DayNumbers"
+              (selectedListChange)="onDayNumbersDDLChanged($event)"
+              [options]="selectMenuOptions2"
+              [selectedList]="bindingModel_DayNumbers"
+            >
+            </select-menu> 
+            <ng-template #date >
+              <app-datepicker
+              [(selecteddate)]="SoqyaScheduleDTO.ScheduleDate"
+              DateID="date"
+              ></app-datepicker>
+            </ng-template>
+      </div>
+      
+    </div>
+      
+
+    </div>
+    <div class="col-3">
+      <div class="row">
+        <label class="title col-6">{{'Quantity' | translate}} ( {{'M' | translate}}<sup>3</sup> ) </label>
+      
+        <input type="number" class="form-control col-3"  [(ngModel)]="SoqyaScheduleDTO.Quantity" (blur)="onQuantityChanged()" >  
+        <!-- <label class="col-3"> (m<sup>3</sup>)</label> -->
+        
+        
+      </div>
+      
+    </div>
+
+    <div class="col-5">
+      <div class="row">
+        <label class="title col-3">{{ "TimeSlots" | translate }} </label>
+        <div class="col-4 padding-0">
+          <app-amazing-timepicker
+            id="timeFrom"
+            [(selectedTime)]="SoqyaScheduleDTO.TimeSlotFrom"
+          ></app-amazing-timepicker>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-4 padding-0">
+          <app-amazing-timepicker
+            id="timeTo"
+            [(selectedTime)]="SoqyaScheduleDTO.TimeSlotTo"
+          ></app-amazing-timepicker> 
+        </div>
+      </div>
+     
+      
+      
+    </div>
+  </div>
+
+  <br>
+  
+  <div class="row"  >
+    <div class="col-6">
+      <div class="row" *ngIf="!editMoode">
+        <div class="col-6">
+          <div class="form-check">
+            <input type="checkbox" id="RepeateCommingMonth_Checkbox" [(checked)]="RepeateCommingMonth" (click)="onRepeateCommingMonth()">
+            <label for="RepeateCommingMonth_Checkbox" class="title form-check-label">
+              {{ "Repeate the pattern for comming month" | translate }}
+            </label>
+          </div> 
+        </div>
+        <div class="col-6" *ngIf = "RepeateCommingMonth">
+          <select-menu
+          [label]="'Name'"
+          [itemKey]="'Id'"
+          [dropDownListInputs]="nextMonthYearList"
+          [loading]="nextBalance_Loading"
+          [options]="selectMenuOptions2"
+          (selectedListChange)="onNextMonthYearDDLChanged($event)"
+          [selectedList]="bindingModel_nextMonthYearList"
+        >
+        </select-menu>  
+        </div>
+      </div>
+      
+     
+    </div>
+    <div class="col-3"></div>
+    <div class="col-3" >
+      <button class="btn btn-default" (click)="cancel()">
+        {{ "Clear" | translate }}
+      </button>
+      <button class="btn btn-danger" (click)="save()">
+          {{ "Save" | translate }}
+      </button>
+    </div>
+   
+  </div>
+</div>
+
+ <!-- fixed header  -->
+ <div *ngIf="AddingArea" [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row'">
+    <div class="col-md-12 scroll-x-table list-body">
+
+      <table class="table   table-striped Dtable ">
+        <thead>
+          <tr>
+            <th class="wid130">{{'Customer' | translate}}</th>
+            <th class="wid200">{{'CustomerAccount' | translate}} </th>
+            <th class="wid130">{{'ScheduledDate' | translate}} </th>
+            <th class="wid130">{{'TimeSlot' | translate}}</th>
+            <th class="wid100">{{'Quantity' | translate}} ( {{'M' | translate}}<sup>3</sup> )</th>
+            <th class="wid100">{{'OrderNo' | translate}} </th>
+            <th class="wid100">{{'Status' | translate}} </th> 
+            <th  class="wid50"></th> 
+            <th  class="wid50"></th> 
+          </tr>
+        </thead>
+        <tbody >
+          <tr class="text-center p-2 font-4 "  *ngIf="searchResult.Result.length==0">
+            <td colspan="9">
+              {{"NoDataFound" | translate}}
+            </td>
+          </tr>
+          <tr *ngFor="let item of searchResult.Result; let i = index">
+         
+            <td class="wid130 ">
+              <a class="btn btn-link">{{item.CustomerName}}</a>
+            </td>
+            <td class="wid200 ">
+              {{item.CustomerLocationAddress}}, {{item.ZoneName}}, {{item.CityName}}
+              <!-- {{item.CustomerAccountId}} -->
+            </td>
+            <td class="wid130 ">
+              <date [date]="item.ScheduleDate" [ShowTime]="false" ></date>
+              <!-- {{item.ScheduleDate}} -->
+            </td>
+            <td class="wid130 ">
+              {{item.TimeSlotFrom}} &nbsp; &nbsp; &nbsp; {{item.TimeSlotTo}}
+            </td>
+            <td class="wid100 ">
+              {{item.Quantity}}
+            </td>
+            <td class="wid100 ">
+              {{item.OrderNumber}}
+            </td>
+            <td class="wid100 ">
+              {{ (IsArabic ? item.LastStatusNameAr : item.LastStatusNameEn) }}
+            </td>
+            <td class="wid50"> 
+              <a class="glyphicon glyphicon-pencil margin-5 pull-right" 
+                title="{{'edit' | translate}}" (click)="edit(item)"
+                *ngIf="canEdit(item)" ></a>
+            </td>
+            <td class="wid50"> 
+              <a *ngIf="canDelete(item)" 
+                class="glyphicon glyphicon-trash margin-5 pull-right"  
+                title="{{'Delete' | translate}}" (click)="delete(item.Id)"></a>
+            </td>
+            <!--
+              
+             
+             -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <app-pagination-component
+  *ngIf="AddingArea"
+    [ItemsCount]="searchResult.TotalCount"
+    [(PageSize)]="this.SearchCriteria.PageFilter.PageSize"
+    [pageIndex]="this.SearchCriteria.PageFilter.PageIndex"
+    (PageSizeChange)="onPageSizeChanged($event)"
+    (pageNavigated)="onPageIndexChanged($event)"
+  >
+  </app-pagination-component>

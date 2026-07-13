@@ -1,0 +1,232 @@
+<div class="row form-row">
+  <div class="col-md-3">
+    <label class="col-sm-4 title"
+      >{{ "stationName" | translate }} <span class="required">*</span></label
+    >
+    <div class="col-sm-8">
+      <select-menu
+        *ngIf="updateMode == false"
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="contractStationsList"
+        (selectedListChange)="onStationsDDLChanged($event)"
+        [selectedList]="bindingModel_Stations"
+      >
+      </select-menu>
+
+      <select
+        *ngIf="updateMode == true"
+        class="form-control"
+        [(ngModel)]="tariff.StationID"
+      >
+        <option
+          *ngFor="let item of contractStationsList; let i = index"
+          value="{{ item.Id }}"
+          >{{ item.Name }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label class="col-sm-4 title">{{ "Zone" | translate }} </label>
+    <div class="col-sm-8">
+      <select-menu
+        *ngIf="updateMode == false"
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="zoneList"
+        (SearchVAlue)="getZones($event)"
+        [options]="selectMenuOptions"
+        (selectedListChange)="onZonesDDLChanged($event)"
+        [selectedList]="bindingModel_Zones"
+        [loading]="Zone_Loading"
+      >
+      </select-menu>
+
+      <select-menu
+        *ngIf="updateMode == true"
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="zoneList"
+        (SearchVAlue)="getZones($event)"
+        [options]="selectMenuOptions2"
+        (selectedListChange)="onZonesDDLChanged($event)"
+        [selectedList]="bindingModel_Zones"
+        [loading]="Zone_Loading"
+      >
+      </select-menu>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label class="col-sm-4 title"
+      >{{ "Class" | translate }} <span class="required">*</span></label
+    >
+    <div class="col-sm-8">
+      <select-menu
+        *ngIf="updateMode == false"
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="customerClassList"
+        (selectedListChange)="onClassDDLChanged($event)"
+        [selectedList]="bindingModel_Classes"
+      >
+      </select-menu>
+
+      <select
+        *ngIf="updateMode == true"
+        class="form-control"
+        [(ngModel)]="tariff.CustomerLocationClassID"
+      >
+        <option
+          *ngFor="let item of customerClassList; let i = index"
+          value="{{ item.Id }}"
+          >{{ item.Name }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label class="col-sm-4 title"
+      >{{ "ServiceType" | translate }} <span class="required">*</span></label
+    >
+    <div class="col-sm-8">
+      <select-menu
+        *ngIf="updateMode == false"
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="customerServiceList"
+        (selectedListChange)="onServiceDDLChanged($event)"
+        [selectedList]="bindingModel_ServiceTypes"
+      >
+      </select-menu>
+
+      <select
+        *ngIf="updateMode == true"
+        class="form-control"
+        [(ngModel)]="tariff.ServiceTypeID"
+      >
+        <option
+          *ngFor="let item of customerServiceList; let i = index"
+          value="{{ item.Id }}"
+          >{{ item.Name }}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="row form-row">
+  <div class="col-md-3">
+    <label class="col-sm-4 title"
+      >{{ "TanckerCapacity" | translate }}
+      <!-- <span class="required">*</span> -->
+    </label>
+    <div class="col-sm-8">
+      <select-menu
+        *ngIf="updateMode == false"
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="TanckerCapacityList"
+        (selectedListChange)="onTanckerCapacityDDLChanged($event)"
+        [selectedList]="bindingModel_TanckerCapacities"
+      >
+      </select-menu>
+
+      <select
+        *ngIf="updateMode == true"
+        class="form-control"
+        [(ngModel)]="tariff.TanckerCapacityId"
+      >
+        <option
+          *ngFor="let item of TanckerCapacityList; let i = index"
+          value="{{ item.Id }}"
+          >{{ item.Name }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <label class="col-sm-4 title"
+      >{{ "ChargesSarM" | translate }}
+      <!-- <span class="required">*</span> -->
+    </label>
+    <div class="col-sm-8">
+      <input
+        type="number"
+        class="form-control"
+        [(ngModel)]="tariff.CubicMeterCharge"
+        (blur)="onCubicMeterChargeChanged()"
+      />
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label class="col-sm-4 title"
+      >{{ "ChargesSarK" | translate }}
+      <!-- <span class="required">*</span> -->
+    </label>
+    <div class="col-sm-8">
+      <input
+        type="number"
+        class="form-control"
+        [(ngModel)]="tariff.DistanceCharge"
+        (blur)="onDistanceChargeChanged()"
+      />
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label class="col-sm-4 title"
+      >{{ "AfterFirstKM" | translate }}
+      <!-- <span class="required">*</span> -->
+    </label>
+    <div class="col-sm-8">
+      <input
+        type="number"
+        class="form-control"
+        [(ngModel)]="tariff.AfterFirstKM"
+        (blur)="onAfterFirstKMChanged()"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="row form-row">
+  <div class="col-md-3">
+    <label class="col-sm-4 title">{{ "From" | translate }} </label>
+    <div class="col-sm-8">
+      <!-- <datePicker-gregorian-hijri [(selectedDate)]="tariff.DateFrom" ></datePicker-gregorian-hijri> -->
+      <!-- <app-datepicker [(selecteddate)]="tariff.DateFrom" DateID=dateFrom></app-datepicker> -->
+      <datepicker-islamicumalqura
+        [(selectedDate)]="tariff.DateFromHijri"
+      ></datepicker-islamicumalqura>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label class="col-sm-4 title">{{ "To" | translate }} </label>
+    <div class="col-sm-8">
+      <!-- <datePicker-gregorian-hijri [(selectedDate)]="tariff.DateTo" ></datePicker-gregorian-hijri> -->
+      <!-- <app-datepicker [(selecteddate)]="tariff.DateTo" DateID=dateTo></app-datepicker> -->
+      <datepicker-islamicumalqura
+        [(selectedDate)]="tariff.DateToHijri"
+      ></datepicker-islamicumalqura>
+    </div>
+  </div>
+
+  <div class="col-md-2"></div>
+  <div class="col-md-4">
+    <!-- <button class="btn btn-default margin-5 pull-right" (click)="uploadExcel()">
+            <span class="fas fa-file-upload"></span>
+            {{ 'ImportTariffs' | translate }}
+        </button> -->
+
+    <label class="btn btn-icon margin-5 pull-right" (click)="uploadExcel()">
+      <span class="fas fa-file-upload"></span> {{ "ImportTariffs" | translate }}
+    </label>
+
+    <button class="btn btn-default margin-5 pull-right" (click)="cancel()">
+      {{ "Clear" | translate }}
+    </button>
+    <button class="btn btn-danger margin-5 pull-right" (click)="saveTariff()">
+      {{ "Save" | translate }}
+    </button>
+  </div>
+</div>

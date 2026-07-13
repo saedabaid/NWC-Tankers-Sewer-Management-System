@@ -1,0 +1,598 @@
+.rtl {
+  direction: rtl;
+  text-align: right;
+
+  .col-md-1,
+  .col-md-10,
+  .col-md-11,
+  .col-md-12,
+  .col-md-2,
+  .col-md-3,
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8,
+  .col-md-9 {
+    float: right !important;
+  }
+
+  .col-sm-1,
+  .col-sm-10,
+  .col-sm-11,
+  .col-sm-12,
+  .col-sm-2,
+  .col-sm-3,
+  .col-sm-4,
+  .col-sm-5,
+  .col-sm-6,
+  .col-sm-7,
+  .col-sm-8,
+  .col-sm-9 {
+    float: right;
+  }
+
+  .col-xs-1,
+  .col-xs-10,
+  .col-xs-11,
+  .col-xs-12,
+  .col-xs-2,
+  .col-xs-3,
+  .col-xs-4,
+  .col-xs-5,
+  .col-xs-6,
+  .col-xs-7,
+  .col-xs-8,
+  .col-xs-9 {
+    float: right;
+  }
+
+  .col-lg-1,
+  .col-lg-10,
+  .col-lg-11,
+  .col-lg-12,
+  .col-lg-2,
+  .col-lg-3,
+  .col-lg-4,
+  .col-lg-5,
+  .col-lg-6,
+  .col-lg-7,
+  .col-lg-8,
+  .col-lg-9 {
+    float: right;
+  }
+
+  #toastr-container {
+    text-align: center !important;
+  }
+
+  angular2-multiselect {
+    &.no-arrow {
+      .c-btn {
+        border-radius: 0 3px 3px 0;
+      }
+    }
+
+    .c-btn {
+      border-radius: 0 3px 3px 0;
+
+      .c-angle-down,
+      .c-angle-up {
+        left: 10px !important;
+        right: auto !important;
+      }
+    }
+
+    .countplaceholder {
+      left: 30px !important;
+      right: auto !important;
+    }
+
+    .selected-list {
+      .c-token {
+        float: right !important;
+        padding-right: 8px !important;
+        padding-left: 25px !important;
+
+        .c-label {
+          float: right !important;
+          padding: 5px;
+        }
+
+        .c-remove {
+          right: auto !important;
+          left: 8px !important;
+        }
+      }
+    }
+  }
+
+  table thead tr th {
+    text-align: right;
+  }
+
+  .checkbox-custom + .checkbox-custom-label:before {
+    margin-left: 7px;
+  }
+
+  .fa-chevron-right {
+    transform: rotate(180deg);
+  }
+
+  .calender-btn {
+    right: unset !important;
+    left: 10px;
+  }
+
+  angular2-multiselect {
+    .select-all {
+      text-align: right !important;
+    }
+
+    .selected-list {
+      .c-angle-down,
+      .c-angle-up {
+        right: auto !important;
+        left: 10px;
+      }
+    }
+
+    .arrow-up,
+    .arrow-down {
+      margin-right: 15px;
+    }
+
+    .pure-checkbox {
+      label {
+        text-align: right !important;
+        padding-right: 2em;
+        padding-left: unset !important;
+
+        &:after {
+          right: 4px;
+          left: unset !important;
+        }
+
+        &::before {
+          right: 0;
+          left: unset !important;
+        }
+      }
+    }
+
+    .dropdown-list {
+      ul {
+        li {
+          text-align: right !important;
+        }
+      }
+    }
+
+    .list-filter {
+      input {
+        padding-right: 8px !important;
+      }
+    }
+  }
+  // .student-badge {
+  //   .student-data {
+  //     .student-controls {
+  //       border-radius: 10px 0px 0px 10px !important;
+  //       left: -25px !important;
+  //       right: unset !important;
+  //     }
+  //     .student-image {
+  //       .student-name {
+  //         .student-options-btn {
+  //           float: left !important;
+  //         }
+  //       }
+  //     }
+  //     &.active {
+  //       &::before {
+  //         right: unset !important;
+  //         left: 5px;
+  //       }
+  //     }
+  //     .student-infos {
+  //       .info {
+  //         .pickup-bus {
+  //           border-left: 1px solid #c8c8c8;
+  //           border-right: none !important;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // .browse-btn {
+  //   border-radius: 5px 0 0 5px !important;
+  // }
+  // .guardian-form {
+  //   .form-section-title {
+  //     float: right !important;
+  //   }
+  // }
+  // .busses-info.active {
+  //   .bus-header {
+  //     .glyphicon {
+  //       float: left !important;
+  //     }
+  //   }
+  // }
+  // .busses-info.active {
+  //   .bus-header {
+  //     button {
+  //       float: left !important;
+  //     }
+  //   }
+  // }
+  .pagination > li > a,
+  .pagination > li > span {
+    float: right;
+  }
+
+  .srch-btn {
+    float: left !important;
+  }
+  // .btn-primary {
+  //   @extend .srch-btn;
+  // }
+  .col-sm-3 {
+    .btn-primary {
+      float: none !important;
+    }
+  }
+
+  .navbar-header {
+    float: right;
+  }
+
+  .navbar-right {
+    float: left !important;
+    margin-left: -15px;
+  }
+
+  .menu_icon {
+    float: right;
+    height: 74px;
+  }
+
+  .navbar-right > li {
+    float: right;
+    display: block;
+  }
+
+  .pull-right {
+    float: left !important;
+  }
+  // .guardian-card {
+  //   .card-options {
+  //     left: 0 !important;
+  //     right: unset !important;
+  //   }
+  // }
+  // .guardian-form {
+  //   .form-group {
+  //     label {
+  //       white-space: nowrap !important;
+  //       padding-right: 10px !important;
+  //     }
+  //   }
+  // }
+  // .switch {
+  //   margin-right: 10px;
+  // }
+  // .bord-left {
+  //   border-right: 1px dashed #5f7583;
+  // }
+  .nav-tabs {
+    float: right;
+  }
+
+  .bs-datepicker-container {
+    direction: rtl !important;
+  }
+  // .student-badge {
+  //   .student-data {
+  //     .student-image {
+  //       .picktrip {
+  //         .rtone:after {
+  //           right: 104px !important;
+  //           left: unset !important;
+  //         }
+  //         .rtone:before {
+  //           right: 111px !important;
+  //           left: unset !important;
+  //         }
+  //         .rttwo:after {
+  //           right: 103px !important;
+  //           left: unset !important;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // .wizard {
+  //   .wizard-buttons {
+  //     li {
+  //       float: right;
+  //       margin-left: 28px;
+  //       position: relative;
+  //       &::after {
+  //         right: 60% !important;
+  //         left: unset !important;
+  //       }
+  //     }
+  //   }
+  // }
+  .wid-13 {
+    width: 13.2%;
+    padding-right: 15px !important;
+  }
+
+  .pad-right-3 {
+    padding-right: 3px !important;
+  }
+
+  .wid-85 {
+    width: 85.2%;
+  }
+
+  .text-right {
+    text-align: left !important;
+  }
+
+  .inner-div {
+    .tabel-height {
+      min-height: 370px !important;
+      max-height: 375px !important;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .Dtable {
+      .glyphicon-chevron-right {
+        transform: rotate(180deg);
+      }
+    }
+
+    .expand-table {
+      margin-right: 30px;
+
+      &::before {
+        right: -18px;
+        left: unset;
+      }
+    }
+
+    .form-row {
+      .form-control {
+        text-align: right;
+      }
+    }
+  }
+
+  .pagination-options {
+    text-align: left !important;
+    margin: 10px 0 !important;
+  }
+  //      .create-route-form {
+  //       .input-hand {
+  //         margin-left: 5px;
+  //     }
+  //       .dnd-item:after {
+  //         right: 22px;
+  // left: unset;
+  //       }
+  //       a {
+  //         .glyphicon-plus-sign{
+  //           right: 15px;
+  //           left: unset;
+  //         }
+  //       }
+  //      }
+  .autocomplete-container {
+    .input-container {
+      .x {
+        left: 10px;
+        right: unset;
+      }
+    }
+  }
+
+  .main-div {
+    .page-title {
+      float: right;
+
+      .glyphicon-chevron-right {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  @media (max-width: 1500px) {
+    .wid-13 {
+      padding-right: 15px !important;
+      padding-left: 15px !important;
+    }
+
+    .pad-right-3 {
+      padding-right: 3px !important;
+    }
+
+    .pagination {
+      margin: 10px 0 !important;
+      float: right !important;
+
+      .pagination-options {
+        margin: 10px 5px !important;
+        float: right !important;
+      }
+    }
+
+    .wizard {
+      .wizard-buttons {
+        li {
+          margin-right: 160px;
+        }
+      }
+    }
+
+    #Button_SaveCheckOut {
+      float: left;
+      margin-left: 20px;
+    }
+
+    .cer-btn {
+      border-radius: 50%;
+      font-size: 10px !important;
+      width: 30px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #d8272d;
+      float: left !important;
+
+      .glyphicon {
+        top: 1px;
+        right: -1px !important;
+        left: unset !important;
+      }
+    }
+
+    .date-input {
+      padding-left: 0;
+      padding-right: 15px !important;
+
+      input {
+        padding-right: 5px;
+      }
+
+      .glyphicon {
+        left: 20px;
+      }
+    }
+
+    .time-input {
+      padding-right: 3px;
+      padding-left: 15px !important;
+
+      input {
+        padding-right: 0px;
+        padding-left: 20px !important;
+      }
+
+      .glyphicon {
+        left: 20px;
+      }
+    }
+
+    input[type="radio"] {
+      + .radio-label {
+        &:before {
+          content: "";
+          top: -0.1em;
+          margin-left: 5px;
+        }
+      }
+
+      &:checked {
+        + .radio-label {
+          &:before {
+          }
+        }
+      }
+
+      &:focus {
+        + .radio-label {
+          &:before {
+          }
+        }
+      }
+
+      &:disabled {
+        + .radio-label {
+          &:before {
+          }
+        }
+      }
+
+      + .radio-label {
+        &:empty {
+          &:before {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .srch-btn {
+      margin-left: 16px !important;
+    }
+    // .student-badge {
+    //   float: right;
+    //   .student-data {
+    //     .student-controls {
+    //       border-radius: 10px 0px 0px 10px !important;
+    //       left: -20px !important;
+    //       right: unset !important;
+    //       .switch {
+    //         margin: 10px 5px 0 0px !important;
+    //       }
+    //     }
+    //   }
+    // }
+    // .student-info {
+    //   height: calc( 100vh - 128px);
+    //   overflow-y: scroll;
+    // }
+  }
+
+  .ico-time {
+    position: absolute;
+    right: auto;
+    left: 22%;
+    top: 5px;
+    font-size: 1.3em;
+  }
+
+  .pad-right {
+    padding-left: 0 !important;
+    padding-right: inherit !important;
+  }
+
+  .time-control {
+    text-align: right !important;
+  }
+
+  .uploaded-file {
+    .remove-icon {
+      float: left !important;
+    }
+  }
+
+  .pr-ar-0 {
+    padding-right: 0 !important;
+  }
+
+  .pl-ar-0 {
+    padding-left: 0 !important;
+  }
+  //// LandingPage RTL ////
+  .landing__page {
+    .each__item {
+      .title__item {
+        padding: 10px 20px 10px 5px !important;
+
+        .icon__item {
+          right: -50px;
+          top: -10px;
+        }
+      }
+    }
+  }
+  //Padding End//
+  .per-0 {
+    padding-left: 0px;
+    padding-right: 15px!important;
+  }
+}

@@ -1,0 +1,75 @@
+<div class="container-fluid main-div bg-light">
+  <div class="row">
+    <div class="col-md-6 padding-10">
+      <span class="page-title">{{ 'ControlPanel' | translate }}</span>
+      <span class="page-title"><i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title currentpage">{{ 'VehicleTypes' | translate }}</span>
+    </div>
+
+    <div class="col-md-6 justify-content-end d-flex">
+      <a *ngIf="
+          pagePermission == 'Full Control' || pagePermission == 'Add and Edit'
+        "
+         routerLink="create"
+         title="  {{ 'NewVehicleType' | translate }}">
+        <i class="glyphicon glyphicon-plus-sign p-2"></i>
+      </a>
+    </div>
+  </div>
+  <div class="row  mb-1 form-row">
+    <div class="col-md-12 custome-dropdown">
+      <label class="col-md-2 title wid-6">{{'VehicleTypes' | translate }} </label>
+      <input type="text" [(ngModel)]="Name" class="col-md-3" placeholder="Search By Vehicle Type">
+      <button class="btn btn-default margin-5 pull-right" (click)="Clear()">{{ 'Clear'| translate }}</button>
+      <button class="btn btn-danger margin-5 pull-right" (click)="searchVehicleType(Name)">{{ 'Search' | translate }}</button>
+    </div>
+
+  </div>
+</div>
+<div class="inner-div">
+  <!-- fixed header  -->
+  <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row'">
+    <div class="col-md-12 scroll-x-table">
+      <!--#region  table loading ********************************************** -->
+      <div [ngClass]="tableLoading ? 'container-gif show' : 'container-gif'">
+        <div class="uil-ring-css table-loader">
+          <div></div>
+        </div>
+      </div>
+      <!--#endregion  table loading -->
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th class="wid100">{{ 'Name' | translate }}</th>
+            <th class="wid130">{{ 'Icon' | translate }}</th>
+            <th class="wid130">{{ 'Description' | translate }}</th>
+
+            <th class="wid130"></th>
+          </tr>
+        </thead>
+        <tbody [class]="advancedDiv ? ' mini' : ' '">
+          <tr class="text-center d-block p-2 font-4" *ngIf="!VehicleList || VehicleList.length < 1">{{'NoDataFound' | translate}}</tr>
+
+          <tr *ngFor="let item of VehicleList; let i = index">
+            <td class="wid130">{{ item.Name }}</td>
+            <td class="wid100">{{ item.Icon }}</td>
+            <td class="wid130">{{ item.Description }}</td>
+
+            <td class="wid130">
+              <button class="btn btn-link" (click)="deleteItem(item.ID)">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <app-pagination-component [ItemsCount]='TotalCount'
+                                [(PageSize)]="this.SearchCriteria.PageFilter.PageSize"
+                                [pageIndex]="this.SearchCriteria.PageFilter.PageIndex" (PageSizeChange)="onPageSizeChanged($event)"
+                                (pageNavigated)="onPageIndexChanged($event)">
+      </app-pagination-component>
+    </div>
+  </div>
+</div>

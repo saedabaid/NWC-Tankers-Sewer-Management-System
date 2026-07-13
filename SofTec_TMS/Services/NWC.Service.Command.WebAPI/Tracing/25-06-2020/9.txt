@@ -1,0 +1,38 @@
+--------------------------------------------------------------------------------------------------------------------------- Time:25/06/2020 9:30:30 AM
+
+CreateWorkOrder Time:25/06/2020 9:30:30 AM
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":5,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5538,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:25/06/2020 9:30:30 AM
+
+Valid Time:25/06/2020 9:30:30 AM
+
+Create WorkOrder: Partially Success Time:25/06/2020 9:30:31 AM
+
+customerAccount: 5538 Time:25/06/2020 9:30:31 AM
+
+customerLocation: 5538 Time:25/06/2020 9:30:31 AM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:25/06/2020 9:30:31 AM
+
+OrderNumber: 2082511211 Time:25/06/2020 9:30:31 AM
+
+workOrderID: 45938 Time:25/06/2020 9:30:31 AM
+
+scheduledDeliveryTime: 25/06/2020 9:30:30 AM Time:25/06/2020 9:30:31 AM
+
+customerLocationClassID: 1 Time:25/06/2020 9:30:31 AM
+
+serviceTypeID: 1 Time:25/06/2020 9:30:31 AM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:25/06/2020 9:30:31 AM
+
+orderQuantity: 5 Time:25/06/2020 9:30:31 AM
+
+Net Cost: -1 Time:25/06/2020 9:30:32 AM
+
+Create WorkOrder: Success Time:25/06/2020 9:30:32 AM
+
+start sending SMS: orderNo:2082511211, VehicleId:0f46ecf1-040d-4a2b-a9a8-07521e2aa93b, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationId:61391 Time:25/06/2020 9:59:02 AM
+
+SMS: تم تخصيص رقم الطلب 2082511211 ويمكن التواصل على جوال العميل  موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:25/06/2020 9:59:02 AM
+

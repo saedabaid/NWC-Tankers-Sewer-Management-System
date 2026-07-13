@@ -1,0 +1,278 @@
+@import "./../../../../../assets/fmsBranding/styles/sass/rtl.scss";
+
+.newzone {
+  font-size: 18pt;
+  color: #555;
+  vertical-align: middle;
+}
+
+.title {
+  white-space: nowrap;
+
+  text-transform: capitalize;
+  padding-top: 7px;
+}
+
+.wid-6 {
+  width: 10%;
+}
+.padding-0 {
+  padding: 0;
+}
+#advanced-search {
+  background-color: #f2f2f2;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-bottom: 1px dotted #5f7583;
+
+  .col-sm-9 {
+    padding: 0;
+  }
+}
+
+.Dtable {
+  max-height: 366px;
+  min-height: 150px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.table-heigh {
+  // overflow-x: hidden;
+  // max-height: 360px;
+  // overflow-y: hidden;
+  // margin-bottom: 10px;
+
+  td {
+    white-space: pre-line;
+  }
+}
+
+.table-advans {
+  // max-height: 175px;
+  //   overflow-y: hidden;
+  //   overflow-x: hidden;
+
+  .orange {
+    color: orange;
+  }
+
+  .green {
+    color: green;
+  }
+
+  .red {
+    color: red;
+  }
+}
+
+.hold-option {
+  .fa-ellipsis-v {
+    font-size: 16px;
+    color: #d9534f;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .dropdown-menu {
+    right: auto !important;
+    left: 0 !important;
+    background-color: #5f7583;
+  }
+
+  .dropdown-menu {
+    li {
+      a {
+        padding: 2px 5px;
+        font-size: 10pt !important;
+
+        cursor: pointer;
+        color: #fff;
+
+        &:hover {
+          width: 100%;
+          color: #5f7583 !important;
+          padding: 2px 5px !important;
+          display: inline-block;
+        }
+
+        &.dimmed {
+          pointer-events: none;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    .fa {
+      margin-right: 5px;
+    }
+  }
+}
+
+.scroll-x-table {
+  overflow-x: auto;
+  flex: none;
+  max-width: none;
+
+  table {
+    width: auto;
+
+    td {
+      font-size: 9pt;
+      font-weight: normal;
+      padding-bottom: 0px !important;
+      padding-top: 0px !important;
+      vertical-align: unset;
+      border-top: 0px solid #ddd !important;
+      text-transform: capitalize;
+    }
+
+    th {
+      padding: 5px 10px;
+      background-color: #5f7583;
+      border-color: #5f7583;
+      color: #ffffff;
+    }
+  }
+
+  .table-loader {
+    margin: 9% auto;
+  }
+}
+.list-body {
+  background: white;
+  padding: 15px 0;
+  border-radius: 10px;
+
+  tbody {
+    height: calc(74vh - 180px);
+  }
+  .mini {
+    height: calc(45vh - 180px);
+  }
+}
+.wid200 {
+  width: 180px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.wid100 {
+  width: 110px;
+}
+.wid50 {
+  width: 50px;
+}
+
+.wid130 {
+  width: 130px;
+}
+.rtl {
+  .custome-dropdown {
+    .cuppa-dropdown {
+      margin: 0 10px 0 10px;
+    }
+  }
+
+  .open {
+    .wo-dropdown-menu {
+      right: -150px;
+      left: unset;
+    }
+  }
+
+  .hold-option {
+    .dropdown-menu {
+      right: 0px !important;
+      left: auto !important;
+      background-color: #5f7583;
+    }
+  }
+
+  .list-body {
+    tbody {
+      height: calc(71vh - 180px) !important;
+    }
+
+    .mini {
+      height: calc(41vh - 180px) !important;
+    }
+  }
+
+  .scroll-x-table {
+    table {
+      th {
+        padding: 5px 15px !important;
+      }
+
+      td {
+        border-top: 0px solid #ddd !important;
+      }
+    }
+  }
+}
+//**************************************************************
+@media (min-width: 1900px) {
+  .ico-time {
+    left: 120px !important;
+    right: auto !important;
+  }
+
+  .scroll-x-table {
+    table {
+      th {
+        padding: 5px 15px 5px 5px !important;
+      }
+    }
+  }
+  .table-heigh {
+    // min-height: 400px;
+    // max-height: 715px;
+
+    // overflow-y: auto;
+  }
+  .list-body {
+    tbody {
+      height: calc(84vh - 180px);
+    }
+
+    .mini {
+      height: calc(63vh - 180px);
+    }
+  }
+  .table-advans {
+    // min-height: 400px;
+    // max-height: 460px;
+
+    // overflow-y: auto;
+  }
+
+  .rtl {
+    .open {
+      .wo-dropdown-menu {
+        right: -150px;
+        left: unset;
+      }
+    }
+    .ico-time {
+      font-size: 1.3em;
+      right: 130px !important;
+      left: auto !important;
+    }
+    .scroll-x-table {
+      table {
+        th {
+          padding: 5px 15px 5px 5px !important;
+        }
+      }
+    }
+    .list-body {
+      tbody {
+        height: calc(84vh - 180px) !important;
+      }
+
+      .mini {
+        height: calc(63vh - 180px) !important;
+      }
+    }
+  }
+}

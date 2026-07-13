@@ -1,0 +1,58 @@
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:12/07/2020 11:29:30 AM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:12/07/2020 11:29:41 AM
+
+CreateWorkOrder Time:12/07/2020 11:29:42 AM
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":7,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":2,"StationID":"725dce85-5268-4972-9f89-852136c38952","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:12/07/2020 11:29:42 AM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:12/07/2020 11:45:28 AM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:12/07/2020 11:45:30 AM
+
+CreateWorkOrder Time:12/07/2020 11:45:30 AM
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":7,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":2,"StationID":"725dce85-5268-4972-9f89-852136c38952","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:12/07/2020 11:45:31 AM
+
+Valid Time:12/07/2020 11:45:50 AM
+
+Create WorkOrder: Partially Success Time:12/07/2020 11:45:56 AM
+
+customerAccount: 2 Time:12/07/2020 11:46:02 AM
+
+customerLocation: 2 Time:12/07/2020 11:46:02 AM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:12/07/2020 11:46:02 AM
+
+OrderNumber: 4622849210 Time:12/07/2020 11:46:02 AM
+
+workOrderID: 46078 Time:12/07/2020 11:46:02 AM
+
+scheduledDeliveryTime: 12/07/2020 11:45:33 AM Time:12/07/2020 11:46:02 AM
+
+customerLocationClassID: 1 Time:12/07/2020 11:46:02 AM
+
+serviceTypeID: 1 Time:12/07/2020 11:46:02 AM
+
+zoneStation: 725dce85-5268-4972-9f89-852136c38952 Time:12/07/2020 11:46:02 AM
+
+orderQuantity: 7 Time:12/07/2020 11:46:02 AM
+
+contract == null: False Time:12/07/2020 11:46:03 AM
+
+contractID: 10040 Time:12/07/2020 11:46:03 AM
+
+contractStationTariaff == null: False Time:12/07/2020 11:46:03 AM
+
+contractStationTariaffID: 319 Time:12/07/2020 11:46:03 AM
+
+totalQuantityCost: 16.1000 Time:12/07/2020 11:46:03 AM
+
+extraKMCost: 0.0000 Time:12/07/2020 11:46:03 AM
+
+totalCost: 16.1000 Time:12/07/2020 11:46:03 AM
+
+Net Cost: 16.1000 Time:12/07/2020 11:46:03 AM
+
+Create WorkOrder: Success Time:12/07/2020 11:46:10 AM
+

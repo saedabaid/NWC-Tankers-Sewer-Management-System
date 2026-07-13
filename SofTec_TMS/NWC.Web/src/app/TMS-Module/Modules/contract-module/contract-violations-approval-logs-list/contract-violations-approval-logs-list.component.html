@@ -1,0 +1,47 @@
+<!-- fixed header  -->
+
+
+<div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row'" >
+  <div class="col-md-12 scroll-x-table list-body">
+
+
+    <table class="table   table-striped scrollable-table">
+      <thead>
+        <tr>
+
+          <th class="wid100">{{'Level' | translate}} </th>
+          <th class="wid100">{{'CreatedBy' | translate}} </th>
+          <th class="wid100">{{'CreatedDate' | translate}}</th>
+          <th class="wid100">{{'DecisionType' | translate}}</th>
+
+
+        </tr>
+      </thead>
+      <tbody [class]="advancedDiv ? ' mini' : ' '">
+        <tr class="text-center  d-block p-2 font-4 " *ngIf="!logs">
+          {{"NoDataFound" | translate}}
+        </tr>
+        <tr *ngFor="let item of logs; let i = index">
+          <td class="wid100">
+            {{ item.LevelID }}
+          </td>
+          <td class="wid100">
+            {{ item.CreatedByName }}
+          </td>
+          <td class="wid100">
+            <date [date]="item.CreatedDate"
+                  [ShowTime]="true"
+                  [TimeUnderDate]="true"></date>
+          </td>
+          <td class="wid100">
+            {{ item.DecisionType }}
+          </td>
+
+
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

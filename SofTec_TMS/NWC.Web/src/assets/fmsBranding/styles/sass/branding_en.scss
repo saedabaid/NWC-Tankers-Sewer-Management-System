@@ -1,0 +1,155 @@
+@font-face {
+	font-family: DINReg;
+	src: url(/assets/fmsBranding/styles/fonts/DINNextLTArabic-Regular.ttf);
+}
+@font-face {
+	font-family: DINMed;
+	src: url(/assets/fmsBranding/styles/fonts/DINNextLTArabic-Medium.ttf);
+}
+body {
+	background: #fff;
+	background-repeat: repeat-x;
+	padding: 0 !important;
+	margin: 0 !important;
+	height: 100%;
+	overflow-x: hidden;
+}
+#toastr-container {
+	text-align: center !important;
+	> div {
+		text-align: center;
+	}
+	> .toastr-error {
+		background-color: red;
+	}
+}
+a {
+	border: 0;
+	text-decoration: none;
+	&:hover {
+		color: #d72734;
+	}
+}
+.header {
+	border-bottom: 4px solid #5f7583;
+	height: 80px;
+	background: linear-gradient(#f1f1f1, #f7f7f7);
+	border-top: 2px solid #fff;
+}
+.menu_icon {
+	float: left;
+	height: 74px;
+	p {
+		position: relative;
+		top: 50%;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(-50%);
+		padding-left: 35px;
+		height: 40px;
+	}
+}
+.navbar-right {
+	float: right;
+	display: block;
+	margin: 0;
+	list-style: outside none none;
+	padding: 2px;
+	> li {
+		float: left;
+		display: block;
+		> {
+			.dropdown-menu {
+				position: absolute;
+				width: 140px;
+				background-color: #fff;
+				right: 0;
+				padding: 7px;
+				border-top: 2px solid #00a8d4;
+			}
+			#lang_Dropdown {
+				right: 72px;
+				margin-top: 4px;
+			}
+		}
+		> a {
+			padding-bottom: 15px;
+			padding-top: 15px;
+			color: #00a8d4;
+			display: block;
+			padding: 23px 15px;
+			position: relative;
+			&:hover {
+				color: #d72734 !important;
+			}
+		}
+	}
+}
+#dLabel {
+	color: #565353;
+	font-size: 14px;
+}
+.avatar {
+	display: block;
+	white-space: nowrap;
+	margin-left: 30px;
+	margin-top: -19px;
+	width: 60px;
+	background: #eee;
+}
+.fa-fw {
+	text-align: center;
+	width: 1.28571em;
+	font-size: 1.5em !important;
+}
+.menu-trigger {
+	position: relative;
+	padding-left: 60px;
+	font-size: 0.9em;
+	display: block;
+	height: 32px;
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 28px;
+		height: 3px;
+		background: transparent;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 #d72734, 0 9px #d72734, 0 18px #d72734, 0 27px #d72734;
+		content: '';
+	}
+	&:hover:before {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 #27414b, 0 9px #27414b, 0 18px #27414b, 0 27px #27414b;
+	}
+}
+.c-btn {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 5px !important;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none !important;
+}
+@media(max-width: 1500px) {
+	.c-btn {
+		height: 30px;
+		padding: 5px !important;
+	}
+}
+.alerts {
+	right: 5px;
+	width: 235px;
+}
+.collapsedItem a {
+	border: 0;
+	text-decoration: none;
+}

@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F8F370F-517D-45B1-B1C2-DAF7AE4F8164}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NWC.BLL</RootNamespace>
+    <AssemblyName>NWC.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentValidation.8.5.1\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqKit, Version=1.1.16.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LinqKit.1.1.16\lib\net45\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Logger">
+      <HintPath>..\..\..\..\LTS_TMS\SofTec_TMS\packages\Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="Logger">
+      <HintPath>..\..\packages\Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ComponentModel.Annotations.4.4.1\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\BlacklistServiceRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\GISServiceRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ELM\IELMUserService.cs" />
+    <Compile Include="Interfaces\ELM\ITankerService.cs" />
+    <Compile Include="Interfaces\IControlPanelService.cs" />
+    <Compile Include="Interfaces\IDashboardService.cs" />
+    <Compile Include="Interfaces\IReportService.cs" />
+    <Compile Include="Interfaces\ISoqyaService.cs" />
+    <Compile Include="Interfaces\ICustomerSMSService.cs" />
+    <Compile Include="Interfaces\IStationService.cs" />
+    <Compile Include="Interfaces\IDriverSMSService.cs" />
+    <Compile Include="Interfaces\IViolationService.cs" />
+    <Compile Include="Interfaces\IVehicleService.cs" />
+    <Compile Include="Interfaces\IContractorService.cs" />
+    <Compile Include="Interfaces\IContractService.cs" />
+    <Compile Include="Interfaces\ICustomerService.cs" />
+    <Compile Include="Interfaces\IDeviceMeterService.cs" />
+    <Compile Include="Interfaces\ILoggedInUserService.cs" />
+    <Compile Include="Interfaces\ILookupService.cs" />
+    <Compile Include="Interfaces\IMapUtilsService.cs" />
+    <Compile Include="Interfaces\IWorkOrderService.cs" />
+    <Compile Include="Interfaces\IWorkOrderVehicleService.cs" />
+    <Compile Include="Interfaces\ISettingService.cs" />
+    <Compile Include="Interfaces\IZoneService.cs" />
+    <Compile Include="Interfaces\IUserService.cs" />
+    <Compile Include="Interfaces\TMS\IBranchManagementService.cs" />
+    <Compile Include="Interfaces\TMS\IControlPanelService.cs" />
+    <Compile Include="Interfaces\TMS\ILandmarksService.cs" />
+    <Compile Include="Interfaces\TMS\ISignalRService.cs" />
+    <Compile Include="Interfaces\TMS\ISewerService.cs" />
+    <Compile Include="Interfaces\TMS\IStaffService.cs" />
+    <Compile Include="Interfaces\TMS\IVehicleTypeService.cs" />
+    <Compile Include="KeyConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ControlPanelService.cs" />
+    <Compile Include="Services\DashboardService.cs" />
+    <Compile Include="Services\ELM\ELMUserService.cs" />
+    <Compile Include="Services\ELM\TankerService.cs" />
+    <Compile Include="Services\ReportService.cs" />
+    <Compile Include="Services\SettingService.cs" />
+    <Compile Include="Services\SoqyaService.cs" />
+    <Compile Include="Services\CustomerSMSService.cs" />
+    <Compile Include="Services\StationService.cs" />
+    <Compile Include="Services\DriverSMSService.cs" />
+    <Compile Include="Services\TMS\ControlPanelService.cs" />
+    <Compile Include="Services\TMS\SignalRService.cs" />
+    <Compile Include="Services\TMS\SewerService.cs" />
+    <Compile Include="Services\TMS\LandmarksService.cs" />
+    <Compile Include="Services\TMS\StaffService.cs" />
+    <Compile Include="Services\TMS\VehicleTypeService.cs" />
+    <Compile Include="Services\ViolationService.cs" />
+    <Compile Include="Services\VehicleService.cs" />
+    <Compile Include="Services\ContractorService.cs" />
+    <Compile Include="Services\ContractService.cs" />
+    <Compile Include="Services\CustomerService.cs" />
+    <Compile Include="Services\DeviceMeterService.cs" />
+    <Compile Include="Services\LoggedInUserService.cs" />
+    <Compile Include="Services\LookupService.cs" />
+    <Compile Include="Services\MapUtilsService.cs" />
+    <Compile Include="Services\WorkOrderService.cs" />
+    <Compile Include="Services\WorkOrderVehicleService.cs" />
+    <Compile Include="Services\ZoneService.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="Interfaces\TMS\ITransporterService.cs" />
+    <Compile Include="Services\TMS\TransporterService.cs" />
+    <Compile Include="Validators\ContractorValidator.cs" />
+    <Compile Include="Validators\ContractPriceValidator.cs" />
+    <Compile Include="Validators\ContractStationValidator.cs" />
+    <Compile Include="Validators\ContractAccessoryValidator.cs" />
+    <Compile Include="Validators\ContractTariffValidator.cs" />
+    <Compile Include="Validators\ContractTermViolationValidator.cs" />
+    <Compile Include="Validators\CustomerLocationValidator.cs" />
+    <Compile Include="Validators\CustomerValidator.cs" />
+    <Compile Include="Validators\DeviceMeterValidator.cs" />
+    <Compile Include="Validators\DeviceMeterReadingValidator.cs" />
+    <Compile Include="Validators\SoyaScheduleValidator.cs" />
+    <Compile Include="Validators\TMS\BranchValidator.cs" />
+    <Compile Include="Validators\TMS\LandmarksValidator.cs" />
+    <Compile Include="Validators\TMS\StaffListValidator.cs" />
+    <Compile Include="Validators\TMS\StaffValidator.cs" />
+    <Compile Include="Validators\TMS\TransporterValidator.cs" />
+    <Compile Include="Validators\WorkOrderValidator.cs" />
+    <Compile Include="Validators\ContractTermsValidator.cs" />
+    <Compile Include="Validators\ContractValidator.cs" />
+    <Compile Include="Validators\ZoneValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Infrastructure\Common.Infrastructure.csproj">
+      <Project>{ee8886ea-48bd-4fc9-a454-49c48d979ad0}</Project>
+      <Name>Common.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NWC.DAL\NWC.DAL.csproj">
+      <Project>{4c4462a1-46dc-45e8-a89c-9e885dcb3667}</Project>
+      <Name>NWC.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NWC.DTO\NWC.DTO.csproj">
+      <Project>{664986d0-09c1-4508-811e-623362a95c47}</Project>
+      <Name>NWC.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NWC.Localization\NWC.Localization.csproj">
+      <Project>{68B007DD-FCA0-440B-80B2-8C3EF430178C}</Project>
+      <Name>NWC.Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NWC.Web\NWC.Web.csproj">
+      <Project>{cecb5b44-b80c-4c43-bdec-292d371a0221}</Project>
+      <Name>NWC.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NWC.BL.Denormalizer\NWC.BL.Denormalizer.csproj">
+      <Project>{063cee94-a163-445e-8f62-575219115eaf}</Project>
+      <Name>NWC.BL.Denormalizer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Connected Services\BlacklistServiceRef\eChannelCheckPersonInBlacklist.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BlacklistServiceRef\eChannelCheckPersonInBlacklist1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BlacklistServiceRef\eChannelGetRequestCount.wsdl" />
+    <None Include="Connected Services\BlacklistServiceRef\NWC.BLL.BlacklistServiceRef.CheckPersonInBlackListExecuteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BlacklistServiceRef\NWC.BLL.BlacklistServiceRef.CheckPersonInBlackListResponseResults.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GISServiceRef\echannelGetLocationInfo.wsdl" />
+    <None Include="Connected Services\GISServiceRef\echannelGetLocationInfoHttp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GISServiceRef\NWC.BLL.GISServiceRef.echannelGetLocationInfoOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GISServiceRef\NWC.BLL.GISServiceRef.echannelGetLocationInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\BlacklistServiceRef\" />
+    <WCFMetadataStorage Include="Connected Services\GISServiceRef\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GISServiceRef\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GISServiceRef\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GISServiceRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BlacklistServiceRef\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BlacklistServiceRef\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BlacklistServiceRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

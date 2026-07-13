@@ -1,0 +1,70 @@
+--------------------------------------------------------------------------------------------------------------------------- Time:03/06/2020 11:34:43 ص
+
+CreateWorkOrder Time:03/06/2020 11:34:43 ص
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":60469,"ServiceTypeID":1,"StationID":"57bdf73c-0842-4a42-933b-6e9cdabdabff","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:03/06/2020 11:34:43 ص
+
+Valid Time:03/06/2020 11:34:45 ص
+
+Create WorkOrder: Partially Success Time:03/06/2020 11:34:46 ص
+
+customerLocation: 60469 Time:03/06/2020 11:34:47 AM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:03/06/2020 11:34:47 AM
+
+OrderNumber: 1377782562 Time:03/06/2020 11:34:47 AM
+
+workOrderID: 45561 Time:03/06/2020 11:34:47 AM
+
+scheduledDeliveryTime: 03/06/2020 11:34:43 AM Time:03/06/2020 11:34:47 AM
+
+customerLocationClassID: 1 Time:03/06/2020 11:34:47 AM
+
+serviceTypeID: 1 Time:03/06/2020 11:34:47 AM
+
+zoneStation: 57bdf73c-0842-4a42-933b-6e9cdabdabff Time:03/06/2020 11:34:47 AM
+
+orderQuantity: 20 Time:03/06/2020 11:34:47 AM
+
+contract == null: False Time:03/06/2020 11:34:47 AM
+
+contractID: 10040 Time:03/06/2020 11:34:47 AM
+
+contractStationTariaff == null: False Time:03/06/2020 11:34:47 AM
+
+contractStationTariaffID: 199 Time:03/06/2020 11:34:47 AM
+
+totalQuantityCost: 1000.0000 Time:03/06/2020 11:34:47 AM
+
+extraKMCost: 50.00000000 Time:03/06/2020 11:34:47 AM
+
+totalCost: 1050.00000000 Time:03/06/2020 11:34:47 AM
+
+Net Cost: 1050.00000000 Time:03/06/2020 11:34:47 AM
+
+Create WorkOrder: Success Time:03/06/2020 11:34:48 AM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:03/06/2020 11:43:36 ص
+
+CreateWorkOrder Time:03/06/2020 11:43:36 ص
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":20469,"ServiceTypeID":1,"StationID":"c9cbad76-1085-4075-b4ad-ccc1d5a45c1c","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:03/06/2020 11:43:36 ص
+
+Not-Valid - Errors: ["StationDoesNotAssignedToContract"] Time:03/06/2020 11:43:36 ص
+
+--------------------------------------------------------------------------------------------------------------------------- Time:03/06/2020 11:44:09 ص
+
+CreateWorkOrder Time:03/06/2020 11:44:09 ص
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":20469,"ServiceTypeID":1,"StationID":"c9cbad76-1085-4075-b4ad-ccc1d5a45c1c","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:03/06/2020 11:44:09 ص
+
+Not-Valid - Errors: ["StationDoesNotAssignedToContract"] Time:03/06/2020 11:44:09 ص
+
+--------------------------------------------------------------------------------------------------------------------------- Time:03/06/2020 11:44:30 ص
+
+CreateWorkOrder Time:03/06/2020 11:44:30 ص
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":30469,"ServiceTypeID":1,"StationID":"744a3dab-6de7-45df-a70f-70e0136a1b3b","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:03/06/2020 11:44:30 ص
+
+Not-Valid - Errors: ["StationDoesNotAssignedToContract"] Time:03/06/2020 11:44:30 ص
+

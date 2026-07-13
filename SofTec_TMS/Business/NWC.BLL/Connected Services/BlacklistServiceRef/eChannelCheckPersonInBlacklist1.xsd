@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:ecs="http://www.eChannelService.nwc.com.sa" xmlns:xgrc="http://nwc.com.sa/xmlns/echannelCheckAcctPerInBlackList" elementFormDefault="qualified" targetNamespace="http://nwc.com.sa/xmlns/echannelCheckAcctPerInBlackList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://csitosbprt.dev.hq.nwc:21303/NwcCompass/eChannelCheckPersonInBlacklistProject/eChannelCheckPersonInBlacklist?SCHEMA%2FeChannelCommonServices%2FResources%2FSchemas%2FeChannelService" namespace="http://www.eChannelService.nwc.com.sa" />
+  <xsd:element name="CheckPersonInBlackListRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" maxOccurs="1" name="transactionId" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Transaction id represent Id to identify your transaction</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element minOccurs="1" maxOccurs="1" name="cisDivison" type="ecs:cisDivison" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="nidNumber">
+          <xsd:annotation>
+            <xsd:documentation>NationalId Number</xsd:documentation>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:pattern value="[1-2][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element minOccurs="0" maxOccurs="1" name="accountId">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="10" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element minOccurs="0" maxOccurs="1" name="sourceApplication">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:enumeration value="EBRANCH" />
+              <xsd:enumeration value="MOBAPP" />
+              <xsd:enumeration value="IVR" />
+              <xsd:enumeration value="NOKHBA" />
+              <xsd:enumeration value="TMS" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="CheckPersonInBlackListResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" name="transactionId" nillable="true" type="xsd:string" />
+        <xsd:element minOccurs="0" name="sourceApplication" nillable="true" type="xsd:string" />
+        <xsd:element minOccurs="1" name="status" nillable="true" type="xsd:string" />
+        <xsd:element minOccurs="1" name="responseCode" type="xsd:string" />
+        <xsd:element minOccurs="0" name="responseDescription" type="xsd:string" />
+        <xsd:element minOccurs="0" name="errorCode" type="xsd:string" />
+        <xsd:element minOccurs="0" name="errorDescription" type="xsd:string" />
+        <xsd:element minOccurs="0" name="rowcount" type="xsd:decimal" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="results">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element minOccurs="0" name="nidNumber" nillable="true" type="xsd:string" />
+              <xsd:element minOccurs="0" name="acctId">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                    <xsd:maxLength value="10" />
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+              <xsd:element minOccurs="0" name="meterStatus" type="xsd:string" />
+              <xsd:element minOccurs="0" name="meterLockReason" type="xsd:string" />
+              <xsd:element minOccurs="0" name="customerClass" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

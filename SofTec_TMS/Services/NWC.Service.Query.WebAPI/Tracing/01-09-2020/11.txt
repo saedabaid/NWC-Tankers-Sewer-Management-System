@@ -1,0 +1,114 @@
+SendAsync - Headers Count: 14 Time:01/09/2020 11:08:50 AM
+
+SendAsync - Headers Token: haEXgDE-Y8veTPIx64X5E9_RdPMCPhCHH81KYFDZ_dNMxQ0QigfsArbXIVbBjLvMa8UHT5bl2UXn44MRW_LF7Qo096RIKGuofQmy3-WGO7Go56y2GO_pGGrxzS0sstRTnW9tmBDDyhgwNBYP_cm5FHWI_iNVDSxGtAnwjBtY-E4 Time:01/09/2020 11:08:51 AM
+
+SendAsync - Headers host: localhost:7295 Time:01/09/2020 11:08:51 AM
+
+SendAsync - Headers AcceptLanguage: en-US, en; q=0.9 Time:01/09/2020 11:08:51 AM
+
+SendAsync - Headers Token: en-US, en; q=0.9 Time:01/09/2020 11:08:51 AM
+
+SendAsync - Headers Token: haEXgDE-Y8veTPIx64X5E9_RdPMCPhCHH81KYFDZ_dNMxQ0QigfsArbXIVbBjLvMa8UHT5bl2UXn44MRW_LF7Qo096RIKGuofQmy3-WGO7Go56y2GO_pGGrxzS0sstRTnW9tmBDDyhgwNBYP_cm5FHWI_iNVDSxGtAnwjBtY-E4 Time:01/09/2020 11:08:53 AM
+
+SendAsync - Headers host: localhost:7295 Time:01/09/2020 11:08:53 AM
+
+SendAsync - Headers AcceptLanguage: en-US, en; q=0.9 Time:01/09/2020 11:08:53 AM
+
+SendAsync - Headers Token: en-US, en; q=0.9 Time:01/09/2020 11:08:53 AM
+
+SendAsync - Headers key: Connection Time:01/09/2020 11:08:53 AM
+
+SendAsync - Headers value: keep-alive Time:01/09/2020 11:08:56 AM
+
+SendAsync - Headers value: keep-alive Time:01/09/2020 11:08:56 AM
+
+SendAsync - Headers key: Accept Time:01/09/2020 11:09:01 AM
+
+SendAsync - Headers value: application/json, text/plain, */* Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: Accept-Encoding Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: gzip, deflate, br Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: Accept-Language Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: en-US, en; q=0.9 Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: Authorization Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: haEXgDE-Y8veTPIx64X5E9_RdPMCPhCHH81KYFDZ_dNMxQ0QigfsArbXIVbBjLvMa8UHT5bl2UXn44MRW_LF7Qo096RIKGuofQmy3-WGO7Go56y2GO_pGGrxzS0sstRTnW9tmBDDyhgwNBYP_cm5FHWI_iNVDSxGtAnwjBtY-E4 Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: Host Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: localhost:7295 Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: Referer Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: http://localhost:39645/tms/defaultpage/haEXgDE-Y8veTPIx64X5E9_RdPMCPhCHH81KYFDZ_dNMxQ0QigfsArbXIVbBjLvMa8UHT5bl2UXn44MRW_LF7Qo096RIKGuofQmy3-WGO7Go56y2GO_pGGrxzS0sstRTnW9tmBDDyhgwNBYP_cm5FHWI_iNVDSxGtAnwjBtY-E4/en-GB Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: User-Agent Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: Mozilla/5.0, (Windows NT 10.0; Win64; x64), AppleWebKit/537.36, (KHTML, like Gecko), Chrome/85.0.4183.83, Safari/537.36 Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: lang Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: en Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: test123 Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: haEXgDE-Y8veTPIx64X5E9_RdPMCPhCHH81KYFDZ_dNMxQ0QigfsArbXIVbBjLvMa8UHT5bl2UXn44MRW_LF7Qo096RIKGuofQmy3-WGO7Go56y2GO_pGGrxzS0sstRTnW9tmBDDyhgwNBYP_cm5FHWI_iNVDSxGtAnwjBtY-E4 Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: Origin Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: http://localhost:39645 Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: Sec-Fetch-Site Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: same-site Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: Sec-Fetch-Mode Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: cors Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: Sec-Fetch-Dest Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: empty Time:01/09/2020 11:09:03 AM
+
+SendAsync - Authorization Token: haEXgDE-Y8veTPIx64X5E9_RdPMCPhCHH81KYFDZ_dNMxQ0QigfsArbXIVbBjLvMa8UHT5bl2UXn44MRW_LF7Qo096RIKGuofQmy3-WGO7Go56y2GO_pGGrxzS0sstRTnW9tmBDDyhgwNBYP_cm5FHWI_iNVDSxGtAnwjBtY-E4 Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: Referer Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: http://localhost:39645/tms/defaultpage/haEXgDE-Y8veTPIx64X5E9_RdPMCPhCHH81KYFDZ_dNMxQ0QigfsArbXIVbBjLvMa8UHT5bl2UXn44MRW_LF7Qo096RIKGuofQmy3-WGO7Go56y2GO_pGGrxzS0sstRTnW9tmBDDyhgwNBYP_cm5FHWI_iNVDSxGtAnwjBtY-E4/en-GB Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: User-Agent Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: Mozilla/5.0, (Windows NT 10.0; Win64; x64), AppleWebKit/537.36, (KHTML, like Gecko), Chrome/85.0.4183.83, Safari/537.36 Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: lang Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: en Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: test123 Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: haEXgDE-Y8veTPIx64X5E9_RdPMCPhCHH81KYFDZ_dNMxQ0QigfsArbXIVbBjLvMa8UHT5bl2UXn44MRW_LF7Qo096RIKGuofQmy3-WGO7Go56y2GO_pGGrxzS0sstRTnW9tmBDDyhgwNBYP_cm5FHWI_iNVDSxGtAnwjBtY-E4 Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: Origin Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: http://localhost:39645 Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: Sec-Fetch-Site Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: same-site Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: Sec-Fetch-Mode Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: cors Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers key: Sec-Fetch-Dest Time:01/09/2020 11:09:03 AM
+
+SendAsync - Headers value: empty Time:01/09/2020 11:09:03 AM
+
+SendAsync - Authorization Token: haEXgDE-Y8veTPIx64X5E9_RdPMCPhCHH81KYFDZ_dNMxQ0QigfsArbXIVbBjLvMa8UHT5bl2UXn44MRW_LF7Qo096RIKGuofQmy3-WGO7Go56y2GO_pGGrxzS0sstRTnW9tmBDDyhgwNBYP_cm5FHWI_iNVDSxGtAnwjBtY-E4 Time:01/09/2020 11:09:03 AM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:01/09/2020 11:09:07 AM
+

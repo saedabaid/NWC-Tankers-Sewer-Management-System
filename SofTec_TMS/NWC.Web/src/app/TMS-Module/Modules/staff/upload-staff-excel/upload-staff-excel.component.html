@@ -1,0 +1,32 @@
+<div class="modal-header">
+  {{ "ImportStaffFromExcel" | translate }}
+</div>
+<div class="modal-body text-center">
+  <h6>
+    {{ "PleaseChooseExcelfiletoImport" | translate }}
+  </h6>
+  <label class="btn btn-secondary" for="importPackages">
+    <span class="fas fa-file-upload"></span> {{ "Chooseyourfile" | translate }}
+  </label>
+  <input
+    type="file"
+    class="d-none"
+    id="importPackages"
+    (change)="changeExcelFile($event)"
+  />
+
+  <p>
+    {{ "Youcandownload" | translate }}
+    <a href="/assets/docs/Staff_Template.xls">
+      {{ "Template" | translate }}
+    </a>
+  </p>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-default margin-5 pull-right" (click)="cancel()">
+    {{ "close" | translate }}
+  </button>
+  <button class="btn btn-danger margin-5 pull-right" (click)="saveList()">
+    {{ "Save" | translate }}
+  </button>
+</div>

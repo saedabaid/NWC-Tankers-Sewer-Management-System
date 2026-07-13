@@ -1,0 +1,6 @@
+G:\SofTec_TMS\SofTec_TMS\NWC.Localization\bin\Release\NWC.Localization.dll
+G:\SofTec_TMS\SofTec_TMS\NWC.Localization\bin\Release\NWC.Localization.pdb
+G:\SofTec_TMS\SofTec_TMS\NWC.Localization\obj\Release\NWC.Localization.csproj.AssemblyReference.cache
+G:\SofTec_TMS\SofTec_TMS\NWC.Localization\obj\Release\NWC.Localization.csproj.CoreCompileInputs.cache
+G:\SofTec_TMS\SofTec_TMS\NWC.Localization\obj\Release\NWC.Localization.dll
+G:\SofTec_TMS\SofTec_TMS\NWC.Localization\obj\Release\NWC.Localization.pdb

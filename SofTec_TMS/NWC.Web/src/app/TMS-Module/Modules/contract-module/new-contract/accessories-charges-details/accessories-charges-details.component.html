@@ -1,0 +1,72 @@
+<div class="mrg-top-5">
+  <div class="row form-row">
+    <div class="col-md-3">
+      <label class="col-sm-4 title">{{'stationName' | translate }} <span class="required">*</span> </label>
+      <div class="col-sm-8">
+        <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="contractStations"
+          (selectedListChange)="onStationChanged($event)" [selectedList]="selectedStations"
+          [options]="selectMenuOptions" [singleSelect]="isEditMode" >
+        </select-menu>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label class="col-sm-4 title">{{'Accessories' | translate }} <span class="required">*</span> </label>
+      <div class="col-sm-8">
+        <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="Accessories"
+          (selectedListChange)="onAccessoriesChanged($event)" [selectedList]="selectedAccessories"
+          [options]="selectMenuOptions" [singleSelect]="isEditMode">
+        </select-menu>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label class="col-sm-4 title">{{'chargesSAR' | translate}}</label>
+      <div class="col-sm-8">
+        <input type="number" placeholder="{{'chargesSAR' | translate}}" class="form-control" [(ngModel)]="charge" (blur)="onChargeChanged()">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-default margin-5 pull-right" (click)="onClear()">{{ 'Clear'| translate }}</button>
+      <button class="btn btn-danger margin-5 pull-right" (click)="onSave()">{{ 'Save' | translate }}</button>
+    </div>
+  </div>
+  <!-- Table -->
+  <!-- fixed header  -->
+  <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row' ">
+    <div class="col-md-12 scroll-x-table list-body">
+      <table class="table   table-striped scrollable-table">
+        <thead>
+          <tr>
+            <th class="wid150">{{'stationName' | translate}}</th>
+            <th class="wid150">{{'Accessories' | translate}} </th>
+            <th class="wid100">{{'chargesSAR' | translate}}</th>
+            <th class="wid50"></th>
+            <th class="wid50"> </th>
+          </tr>
+        </thead>
+        <tbody [class]="advancedDiv ? ' mini' : ' '">
+          <tr *ngFor="let acc of contractAccessoryList.Result">
+            <td class="wid150"> {{acc.StationName}} </td>
+            <td class="wid150"> {{acc.AccessoryName}} </td>
+            <td class="wid100"> {{acc.Charge}} </td>
+            <td class="wid50">
+              <i class="glyphicon glyphicon-pencil" (click)="onEdit(acc)"></i>
+            </td>
+            <td class="wid50">
+              <i class="glyphicon glyphicon-trash" (click)="onDelete(acc)"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <app-pagination-component [ItemsCount]='contractAccessoryList.TotalCount'
+    [(PageSize)]="this.searchCriteria.PageFilter.PageSize"
+    [pageIndex]="this.searchCriteria.PageFilter.PageIndex"
+    (PageSizeChange)="onPageSizeChanged($event)" (pageNavigated)="onPageIndexChanged($event)">
+  </app-pagination-component>
+</div>
+<div class="col-md-12 mrg-top-10">
+  <button class="btn btn-default margin-5 pull-right" (click)="close()">{{ 'close'| translate }}</button>
+  <button class="btn btn-danger margin-5 pull-right" (click)="nextBtn()">{{ 'next' | translate }}</button>
+  <button class="btn btn-default margin-5 pull-right" (click)="backBtn()">{{ 'back'| translate }}</button>
+</div>

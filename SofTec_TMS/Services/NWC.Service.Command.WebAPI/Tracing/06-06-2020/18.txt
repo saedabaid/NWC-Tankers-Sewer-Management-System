@@ -1,0 +1,8 @@
+--------------------------------------------------------------------------------------------------------------------------- Time:06/06/2020 6:23:31 PM
+
+CreateWorkOrder Time:06/06/2020 6:23:31 PM
+
+{"WorkOrderID":0,"OrderNumber":"5890188674","CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"2020-06-02T05:22:24Z","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":31,"CustomerLocationID":61384,"ServiceTypeID":1,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":"1520","IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":"طلب صهريج مياه حجم - 31 m3,رقم الهويه :1070936016 , المدينة:أحد رفيدة","VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":"HAYAT","CISDivision":"AS","TransactionID":"a0975ac1-ca56-4b83-aa84-50c9eef35dd7"} Time:06/06/2020 6:23:31 PM
+
+Not-Valid - Errors: ["StationDoesNotAssignedToContract"] Time:06/06/2020 6:23:32 PM
+

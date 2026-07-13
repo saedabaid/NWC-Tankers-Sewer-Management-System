@@ -1,0 +1,44 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 5:15:31 PM
+
+----------------------------------------GetMatchedWorkOrderToAssign---------------------------------------- Time:15/09/2020 05:15:33 م
+
+Get available vehicle by ID - VehicleID: 242cf6c6-3b1a-45f0-9120-000026e2f9c0 - StationID: e10abb62-7076-4539-bf24-e5b1230e4c02 Time:15/09/2020 05:15:33 م
+
+Get zone vehicle landmark - StationID: e10abb62-7076-4539-bf24-e5b1230e4c02 - ZoneID: 1961 Time:15/09/2020 05:15:33 م
+
+Check restricted zone vehicle type - VehicleTypeID: c96ee17c-5430-ea11-80cf-00155d0bce06 - Is Restricted: False Time:15/09/2020 05:15:33 م
+
+Get vehicle classes - Classes Count: 2 Time:15/09/2020 05:15:34 م
+
+Get WorkOrder - dtFrom: 15/09/2020 05:12:34 م Time:15/09/2020 05:15:34 م
+
+Get WorkOrder - Order List: null or empty Time:15/09/2020 05:15:34 م
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 5:16:33 PM
+
+----------------------------------------GetMatchedWorkOrderToAssign---------------------------------------- Time:15/09/2020 05:16:36 م
+
+Get available vehicle by ID - VehicleID: 4723c36e-f122-4b36-a24f-52f231afa4e5 - StationID: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:15/09/2020 05:16:37 م
+
+Get zone vehicle landmark - StationID: 02e7a5d6-2540-489e-a51e-03755ed89da9 - ZoneID: 1043 Time:15/09/2020 05:16:37 م
+
+Check restricted zone vehicle type - VehicleTypeID: a2576391-5430-ea11-80cf-00155d0bce06 - Is Restricted: False Time:15/09/2020 05:16:37 م
+
+Get vehicle classes - Classes Count: 1 Time:15/09/2020 05:16:37 م
+
+Get WorkOrder - dtFrom: 15/09/2020 05:13:37 م Time:15/09/2020 05:16:37 م
+
+Get WorkOrder - Order List: null or empty Time:15/09/2020 05:16:37 م
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 5:16:50 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 5:17:39 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 5:20:05 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"1624353408","cisDivision":19,"orderStatus":5,"updateDateTime":"15-09-2020 17:20:06","parameters":[{"parameterName":"TMSID","parameterValue":"1624353408"},{"parameterName":"COMMENT","parameterValue":""}]} Time:15/09/2020 5:20:06 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 5:20:55 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"1624353408","cisDivision":19,"orderStatus":3,"updateDateTime":"15-09-2020 17:20:55","parameters":[{"parameterName":"TMSID","parameterValue":"1624353408"},{"parameterName":"COMMENT","parameterValue":""}]} Time:15/09/2020 5:20:55 PM
+

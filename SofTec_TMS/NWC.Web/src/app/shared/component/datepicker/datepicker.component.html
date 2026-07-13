@@ -1,0 +1,14 @@
+<div class="hold-datepicker">
+  <input type="text" [disabled]="viewOnly" [id]="DateID" placeholder="{{ placeHolder | translate }}"
+    [bsConfig]="datePickerConfig" class="form-control" (bsValueChange)="onChange($event)"
+    bsDatepicker [(ngModel)]="selecteddate" (blur)="onBlur()" [minDate]="minDate" (onShown)="onOpenCalendar($event)"
+    placement="bottom" />
+  <label class="glyphicon glyphicon-calendar calender-btn" [for]="DateID"></label>
+</div>
+
+<!-- <div class="col-xs-12 col-12 col-md-4 form-group">
+      <input type="text"
+             placeholder="Daterangepicker"
+             class="form-control"
+             bsDaterangepicker>
+    </div> -->

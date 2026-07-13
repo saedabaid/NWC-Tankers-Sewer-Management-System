@@ -1,0 +1,61 @@
+
+
+<div class="authentication-wrapper authentication-2 ui-bg-cover ui-bg-overlay-container px-4" style="background-image: url('/assets/TMSBranding/styles/img/nwc2.png');">
+  <div class="ui-bg-overlay bg-dark opacity-25"></div>
+
+  <div class="authentication-inner py-5">
+      <div class="card">
+          <div class="p-4 p-sm-4">
+              <!-- Logo -->
+              <div class="row">
+                  <div class="col-sm-6 border-right-1 pt-4">
+                    <img src="/assets/TMSBranding/styles/img/nwc-logo-en.png" width="150" alt="NWC">
+                  </div>
+
+                  <div *ngIf="logoSrc" class="col-sm-6">
+                      <img src="{{ logoSrc }}" width="150" alt="NWC">
+                  </div>
+              </div>
+              <!-- / Logo -->
+              <form>
+
+              <!-- Form -->
+              <label class="text-success">{{"UserLogin" | translate}}</label>
+
+              <div class="form-group {{errorObj.Message ? 'has-error': ''}}">
+                  <input class="form-control form-control text-box single-line" [(ngModel)]="username" name="Username" placeholder="Username">
+              </div>
+
+              <div class="form-group {{errorObj.ErrorMetadata === 3 ? 'has-error': ''}}">
+                  <input class="form-control form-control" name="Password" [(ngModel)]="password" placeholder="Password" type="password">
+              </div>
+
+              <span class="field-validation-valid text-danger" *ngIf="errorObj.Message">{{errorObj.Message}}</span>
+
+              <!-- <div class="d-flex justify-content-between align-items-center m-0">
+                <label class="custom-control custom-checkbox m-0">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label">Remember me</span>
+                </label>
+              </div> -->
+              <div class="form-group text-center">
+                  <button type="submit" (click)="login()" [disabled]="!username || !password || loadingIcon" class="btn btn-login">{{"Login" | translate}} <i *ngIf="loadingIcon" class="fas fa-spinner fa-pulse"></i></button>
+              </div>
+              <!-- / Form -->
+              <div class="text-center">
+                  <a class="d-block text-success">Forgot password?</a>
+              </div>
+            </form>
+
+
+          </div>
+
+      </div>
+
+      <p class="info-login">
+          <span class="">&copy; 2021 {{ "productCopyright" | translate }} </span>
+          <a href="https://lts.sa/" target="_blank">LTS</a>
+      </p>
+
+  </div>
+</div>

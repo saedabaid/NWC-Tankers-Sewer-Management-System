@@ -1,0 +1,87 @@
+<div class="mrg-top-5">
+
+  <add-edit-tariff></add-edit-tariff>
+
+  <!-- Table -->
+
+  <!-- fixed header  -->
+  <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row' ">
+    <div class="col-md-12 scroll-x-table list-body">
+      <table class="table   table-striped scrollable-table">
+        <thead>
+          <tr>
+            <th class="wid100">{{'stationName' | translate}}</th>
+            <th class="wid100">{{'Zone' | translate}} </th>
+            <th class="wid100">{{'Class' | translate}}</th>
+            <th class="wid150">{{'ServiceType' | translate}}</th>
+            <th class="wid100">{{'TanckerCapacity' | translate}}</th>
+            <th class="wid130">{{'From' | translate}} </th>
+            <th class="wid130">{{'To' | translate}} </th>
+            <th class="wid100">{{'ChargesSarM' | translate}}</th>
+            <th class="wid100">{{'ChargesSarK' | translate}}</th>
+            <th class="wid100">{{'AfterFirstKM' | translate}} </th>
+            <th class="wid50"></th>
+            <th class="wid50"> </th>
+          </tr>
+        </thead>
+        <tbody [class]="advancedDiv ? ' mini' : ' '">
+
+          <tr class="text-center d-block p-2 font-4" *ngIf="!searchResult.Result">{{'NoDataFound' | translate}}</tr>
+          <tr *ngFor="let item of searchResult.Result; let i = index">
+            <td class="wid100"> {{item.StationName}} </td>
+            <td class="wid100"> {{item.ZoneName}} </td>
+            <td class="wid100"> {{item.CustomerClassName}} </td>
+            <td class="wid150">
+              {{item.ServiceTypeName}}
+            </td>
+            <td class="wid100"> {{item.TanckerCapacityId}} </td>
+            <td class="wid130">              
+              <!-- <date [date]="item.DateFrom"  ></date> -->
+              <datepicker-islamicumalqura [selectedDate]="item.DateFromHijri" [viewOnly]="true"></datepicker-islamicumalqura>
+
+            </td>
+            <td class="wid130">
+              <!-- <date [date]="item.DateTo"  ></date>  -->
+              <datepicker-islamicumalqura [selectedDate]="item.DateToHijri" [viewOnly]="true"></datepicker-islamicumalqura>
+
+            </td>
+            <td class="wid100">
+              {{item.CubicMeterCharge}}
+            </td>
+            <td class="wid100">
+              {{item.DistanceCharge}}
+            </td>
+            <td class="wid100">
+              {{item.AfterFirstKM}}
+            </td>
+            <td class="wid50">
+              <a title="  {{'Edit' | translate}}" (click)="editTariff(item)">
+                <i class="glyphicon glyphicon-pencil"></i>
+              </a>
+            </td>
+            <td class="wid50">
+              <a title="  {{'Delete' | translate}}" (click)="deleteTariff(item)">
+                <i class="glyphicon glyphicon-trash"></i>
+              </a>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+
+  </div>
+  <app-pagination-component [ItemsCount]='searchResult.TotalCount' [(PageSize)]="this.filter.PageFilter.PageSize"
+    [pageIndex]="this.filter.PageFilter.PageIndex" (PageSizeChange)="onPageSizeChanged($event)"
+    (pageNavigated)="onPageIndexChanged($event)">
+  </app-pagination-component>
+</div>
+
+<div class="col-md-12 mrg-top-10">
+  <button class="btn btn-default margin-5 pull-right" (click)="close()">{{ 'close'| translate }}</button>
+  <button class="btn btn-danger margin-5 pull-right" (click)="nextBtn()">{{ 'next' | translate }}</button>
+  <button class="btn btn-default margin-5 pull-right" (click)="backBtn()">{{ 'back'| translate }}</button>
+
+</div>

@@ -1,0 +1,706 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-4 padding-10">
+      <a routerLink="/tms"><span class="page-title">{{ "TMS" | translate }}</span></a>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+      <a routerLink="/tms/permits/list"><span class="page-title">{{ "Permit List" | translate }}</span></a>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+      <span class="page-title  currentpage">{{ (editMode ? 'edit permit': 'add permit') | translate }}</span>
+
+    </div>
+    <div class="col-md-3 padding-10">
+      <button class="btn btn-primary"
+              printTitle="Driver Print"
+              printSectionId="printsection2"
+              styleSheetFile="/assets/TMSBranding/styles/css/component.css"
+              ngxPrint>
+        {{ "print" | translate }}
+      </button>
+    </div>
+  </div>
+
+</div>
+<div class="inner-div">
+  <div class="row form-row">
+    <div class="col-md-6">
+      <label class="col-sm-3 title">{{ "Driver ID" | translate }}</label>
+      <div class="col-sm-6">
+        <input class="form-control"
+               [(ngModel)]="SearchCriteria.DriverIDSearchText"
+               (keyup.enter)="this.onSearchSubmit()"
+               placeholder="{{ 'Search...' | translate }}" />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <!--<label class="col-sm-3 title">{{ "Driver Mobile" | translate }} </label>
+      <div class="col-sm-6">
+        <input class="form-control"
+               [(ngModel)]="SearchCriteria.DriverMobileSearchText"
+               (keyup.enter)="this.onSearchSubmit()"
+               placeholder="{{ 'Search...' | translate }}" />
+      </div>-->
+    </div>
+  </div>
+  <div class="row form-row">
+    <div class="col-md-6">
+      <label class="col-sm-3 title"> {{ "Tanker Code" | translate }}</label>
+      <div class="col-sm-6">
+        <input class="form-control"
+               [(ngModel)]="SearchCriteria.TankerNumberSearchText"
+               (keyup.enter)="this.onSearchSubmit()"
+               placeholder="{{ 'Search...' | translate }}" />
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <button class="btn btn-default margin-5 pull-right"
+              (click)="clearSearch()">
+        {{ "Clear" | translate }}
+      </button>
+      <button class="btn btn-danger margin-5 pull-right"
+              (click)="onSearchSubmit()">
+        {{ "Search" | translate }}
+      </button>
+    </div>
+  </div>
+  <div class="col-sm-12 p-0" *ngIf="show">
+    <mat-tab-group>
+      <mat-tab label=' {{ "Tanker Information" | translate }}'>
+
+        <div class="inner-div">
+          <div class="row form-row">
+            <div class="col-md-6">
+              <label class="col-sm-3 title">{{ "Station Name" | translate }}</label>
+              <div class="col-sm-6">
+                <input class="form-control" [disabled]="true"
+                       [(ngModel)]="Tinfo.LandmarkName"
+                       placeholder=" {{Tinfo.LandmarkName}}" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="col-sm-3 title">{{ "Tanker Code" | translate }} </label>
+              <div class="col-sm-6">
+                <input class="form-control"
+                       [(ngModel)]="Tinfo.Code"
+                       placeholder=" {{Tinfo.Code}}" />
+              </div>
+            </div>
+          </div>
+          <div class="row form-row">
+            <div class="col-md-6">
+              <label class="col-sm-3 title"> {{ "Tanker Type" | translate }}</label>
+              <div class="col-sm-6">
+                <input class="form-control" [disabled]="true"
+                       [(ngModel)]="Tinfo.TransporterTypeName"
+                       placeholder=" {{Tinfo.TransporterTypeName}}" />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="col-sm-3 title">{{ "Tanker Size" | translate }}</label>
+              <div class="col-sm-6">
+                <input class="form-control" [disabled]="true"
+                       [(ngModel)]="Tinfo.Capacity"
+                       placeholder=" {{Tinfo.Capacity}}" />
+              </div>
+            </div>
+
+          </div>
+          <div class="row form-row">
+            <div class="col-md-6">
+              <label class="col-sm-3 title">{{ "Load" | translate }} </label>
+              <div class="col-sm-6">
+                <input class="form-control" [disabled]="true"
+                       [(ngModel)]="Tinfo.TransporterTypeName"
+                       placeholder=" {{Tinfo.TransporterTypeName}}" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="col-sm-3 title"> {{ "Plate Number" | translate }}</label>
+              <div class="col-sm-6">
+                <input class="form-control"
+                       [(ngModel)]="Tinfo.PlateNo"
+                       placeholder=" {{Tinfo.PlateNo}}" />
+              </div>
+            </div>
+          </div>
+          <div class="row form-row">
+            <div class="col-md-6">
+              <label class="col-sm-3 title">{{ "Frame No" | translate }} </label>
+              <div class="col-sm-6">
+                <input class="form-control"
+                       [(ngModel)]="Tinfo.PlateNo"
+                       placeholder=" {{Tinfo.PlateNo}}" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="col-sm-3 title"> {{ "Insurance Date" | translate }}</label>
+              <div class="col-sm-6">
+                <app-datepicker [(selecteddate)]="Tinfo.InsuranceStartDate"
+                                DateID="InsuranceStartDate"></app-datepicker>
+
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row form-row">
+            <div class="col-md-6">
+              <label class="col-sm-3 title">{{ "Tanker Licenses Expiration" | translate }} </label>
+              <div class="col-sm-6">
+                <app-datepicker [(selecteddate)]="Tinfo.LicenseExpiryDate"
+                                DateID="LicenseExpiryDate"></app-datepicker>
+              </div>
+            </div>
+            <!--<div class="col-md-6">
+              <label class="col-sm-3 title"> {{ "Owner ID" | translate }}</label>
+              <div class="col-sm-6">
+                <input class="form-control"
+                       [(ngModel)]="Tinfo.OwnerIDValue"
+                       placeholder=" {{Tinfo.OwnerIDValue}}" />
+              </div>
+            </div>-->
+          </div>
+          <div class="row form-row">
+            <!--<div class="col-md-6">
+              <label class="col-sm-3 title">{{ "Owner Name" | translate }} </label>
+              <div class="col-sm-6">
+                <input class="form-control"
+                       [(ngModel)]="Tinfo.OwnerFullNameAR"
+                       placeholder=" {{Tinfo.OwnerFullNameAR}}" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="col-sm-3 title"> {{ "ID expiration date" | translate }}</label>
+              <div class="col-sm-6">
+                <app-datepicker [(selecteddate)]="Tinfo.LicenseExpiryDate"
+                                DateID="Tinfo.LicenseExpiryDate"></app-datepicker>
+              </div>
+            </div>-->
+          </div>
+          <div class="row form-row">
+            <!--<div class="col-md-6">
+                      <label class="col-sm-3 title">{{ "ID source" | translate }} </label>
+                      <div class="col-sm-6">
+                        <input class="form-control" [disabled]="true"
+                               [(ngModel)]="Tinfo.IDSource"
+                               placeholder=" {{Tinfo.IDSource}}" />
+                      </div>
+                    </div>
+            -->
+          </div>
+          <div class="row form-row">
+            <div class="col-3"></div>
+            <div class="col-3">
+              <button class="btn btn-default" (click)="cancel()">
+                {{ "Cancel" | translate }}
+              </button>
+              <button class="btn btn-danger" (click)="UpdateTanker()">
+                {{ "Save" | translate }}
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </mat-tab>
+      <mat-tab label=' {{ "Driver Information" | translate }}'>
+        <div class="inner-div">
+          <div class="row form-row">
+            <div class="col-md-6">
+              <label class="col-sm-3 title">{{ "Driver ID" | translate }}</label>
+              <div class="col-sm-6">
+                <input class="form-control"
+                       [(ngModel)]="Dinfo.personalID"
+                       placeholder=" {{Dinfo.personalID}}" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="col-sm-3 title">{{ "Driver Mobile" | translate }} </label>
+              <div class="col-sm-6">
+                <input class="form-control"
+                       [(ngModel)]="Dinfo.mobileNumber"
+                       placeholder=" {{Dinfo.mobileNumber}}" />
+              </div>
+            </div>
+          </div>
+          <div class="row form-row">
+            <div class="col-md-6">
+              <label class="col-sm-3 title"> {{ "Driver name" | translate }}</label>
+              <div class="col-sm-6">
+                <input class="form-control"
+                       [(ngModel)]="Dinfo.FirstName"
+                       placeholder="{{Dinfo.FirstName}}" />
+              </div>
+            </div>
+
+            <!-- <div class="col-md-6">
+              <label class="col-sm-3 title">{{ "ID expiration date" | translate }}</label>
+              <div class="col-sm-6">
+                <app-datepicker [(selecteddate)]="Dinfo.LisenceExpiryDate"
+                                DateID="LisenceExpiryDate"></app-datepicker>
+              </div>
+            </div>-->
+
+          </div>
+          <!--  <div class="row form-row">
+            <div class="col-md-6">
+              <label class="col-sm-3 title">{{ "ID source" | translate }} </label>
+              <div class="col-sm-6">
+                <input class="form-control" [disabled]="true"
+                       [(ngModel)]="Dinfo.IDSource"
+                       placeholder="{{Dinfo.IDSource}}" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="col-sm-3 title"> {{ "Nationality" | translate }}</label>
+              <div class="col-sm-6">
+                <input class="form-control"
+                       [(ngModel)]="Dinfo.Nationality"
+                       placeholder="{{Dinfo.Nationality}}" />
+              </div>
+            </div>
+          </div>
+             <div class="row form-row">
+               <div class="col-md-6">
+                 <label class="col-sm-3 title">{{ "Health Certificate Number" | translate }} </label>
+                 <div class="col-sm-6">
+                   <input class="form-control"
+                          [(ngModel)]="Dinfo.InsuranceIssueDate" [disabled]="true"
+                          placeholder="{{Dinfo.InsuranceIssueDate}}" />
+                 </div>
+               </div>
+               <div class="col-md-6">
+                 <label class="col-sm-3 title"> {{ "Health Certificate expiration Date" | translate }}</label>
+                 <div class="col-sm-6">
+                   <input class="form-control" [disabled]="true"
+                          [(ngModel)]="Dinfo.HealthCertificateExpirationDate"
+                          placeholder="{{Dinfo.HealthCertificateExpirationDate}}" />
+                 </div>
+               </div>
+             </div>
+               -->
+          <!--    <div class="row form-row">
+            <div class="col-md-6">
+              <label class="col-sm-3 title">{{ "Comments" | translate }} </label>
+              <div class="col-sm-6">
+                <input class="form-control"
+                       [(ngModel)]="Dinfo.Comments"
+                       placeholder="{{Dinfo.Comments}}" />
+              </div>
+            </div>
+
+          </div> -->
+
+        </div>
+        <div class="row form-row">
+          <div class="col-3"></div>
+          <div class="col-3">
+            <button class="btn btn-default" (click)="cancel()">
+              {{ "Cancel" | translate }}
+            </button>
+            <button class="btn btn-danger" (click)="UpdateDriver()">
+              {{ "Save" | translate }}
+            </button>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label=' {{ "Permit Information" | translate }}'>
+        <div class="row form-row">
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Permit Number" | translate }}</label>
+            <div class="col-sm-6">
+              <input class="form-control"
+                     [(ngModel)]="Pinfo.PermitNumber"
+                     placeholder="{{ 'Permit Number' | translate }}" />
+            </div>
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Description" | translate }}</label>
+            <div class="col-sm-8">
+              <input class="form-control"
+                     [(ngModel)]="Pinfo.Discerption"
+                     placeholder="{{ 'Discerption' | translate }}" />
+            </div>
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Organization name" | translate }}</label>
+            <div class="col-sm-6">
+              <input class="form-control"
+                     [(ngModel)]="Pinfo.OrganizationName"
+                     placeholder="{{ 'Organization name' | translate }}" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "CR number" | translate }}</label>
+            <div class="col-sm-6">
+              <input class="form-control"
+                     [(ngModel)]="Pinfo.CRnumber"
+                     placeholder="{{ 'CR number' | translate }}" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row form-row">
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Start Date" | translate }}</label>
+            <div class="col-sm-6">
+              <app-datepicker [(selecteddate)]="Pinfo.StartDate"
+                              DateID="StartDate"></app-datepicker>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Expiration date" | translate }}</label>
+            <div class="col-sm-6">
+              <app-datepicker [(selecteddate)]="Pinfo.Expirationdate"
+                              DateID="Expirationdate"></app-datepicker>
+            </div>
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Available time from" | translate }}</label>
+            <div class="col-sm-6">
+              <app-amazing-timepicker id="Availabletimefrom"
+                                      [(selectedTime)]="Pinfo.Availabletimefrom"></app-amazing-timepicker>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Available time to" | translate }}</label>
+            <div class="col-sm-6">
+              <app-amazing-timepicker id="Availabletimeto"
+                                      [(selectedTime)]="Pinfo.Availabletimeto"></app-amazing-timepicker>
+            </div>
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Tanker Category" | translate }}</label>
+            <div class="col-sm-6">
+              <select class=" form-control"
+                      [(ngModel)]="Pinfo.TankerCategory">
+                <option value="-1" selected>{{ "Select" | translate }}</option>
+                <option value="1">{{ "Residential" | translate }}</option>
+                <option value="2">{{ "Commercial" | translate }}</option>
+                <option value="3">{{ "Governmental" | translate }}</option>
+                <option value="4">{{ "Corporation" | translate }}</option>
+                <option value="5">{{ "Cash" | translate }}</option>
+                <option value="6">{{ "Other" | translate }}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Last Validation Date" | translate }}</label>
+            <div class="col-sm-6">
+              <app-datepicker [(selecteddate)]="Pinfo.LastValidationDate"
+                              DateID="LastValidationDate"></app-datepicker>
+            </div>
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Last Maintenance Date" | translate }}</label>
+            <div class="col-sm-6">
+              <app-datepicker [(selecteddate)]="Pinfo.LastMaintenanceDate"
+                              DateID="LastMaintenanceDate"></app-datepicker>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Is maramy" | translate }}</label>
+            <div class="col-sm-6">
+              <input class="checkbox-input"
+                     type="checkbox"
+                     [(ngModel)]="Pinfo.Ismaramy" />
+            </div>
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Maramu" | translate }}</label>
+            <div class="col-sm-6">
+              <input class="form-control"
+                     [(ngModel)]="Pinfo.Maramu"
+                     placeholder="{{ 'Maramu' | translate }}" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Trips Number" | translate }}</label>
+            <div class="col-sm-6">
+              <input class="form-control"
+                     [(ngModel)]="Pinfo.TripsNumber"
+                     placeholder="{{ 'Trips Number' | translate }}" />
+            </div>
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "IsHold" | translate }} </label>
+            <div class="col-sm-6">
+              <input class="checkbox-input"
+                     type="checkbox"
+                     [(ngModel)]="Pinfo.IsHold" />
+            </div>
+          </div>
+
+        </div>
+        <div class="row form-row">
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Detection form" | translate }}</label>
+            <!-- <div class="col-sm-6">
+              <input type="file"
+                      id="DetectionformFile"
+                      (change)="handleDetectionformFileInput($event.target.files)">
+            </div> -->
+            <div class="box-upload">
+              <uploud-files [ListFiles]="Pinfo.DetectionformFileAttachments" [AttachmentType]="5" [IsAllowPdf]="true"></uploud-files>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Declaration & Undertaking Form" | translate }}</label>
+            <!-- <div class="col-sm-6">
+              <input type="file"
+                      id="DeclarationFile"
+                      (change)="handleDeclarationFileInput($event.target.files)">
+            </div> -->
+            <div class="box-upload">
+              <uploud-files2 [ListFiles]="Pinfo.DeclarationFileAttachments" [AttachmentType]="6" [IsAllowPdf]="true"></uploud-files2>
+            </div>
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Other Attachments" | translate }}</label>
+            <!-- <div class="col-sm-6">
+              <input type="file"
+                      id="OtherFile"
+                      (change)="handleOtherFileInput($event.target.files)">
+            </div> -->
+            <div class="box-upload">
+              <uploud-files3 [ListFiles]="Pinfo.OtherFileAttachments" [AttachmentType]="7" [IsAllowPdf]="true"></uploud-files3>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-3"></div>
+        <div class="col-3">
+          <button class="btn btn-default" (click)="cancel()">
+            {{ "Cancel" | translate }}
+          </button>
+          <button class="btn btn-danger" (click)="save()">
+            {{ "Save" | translate }}
+          </button>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+    <div class="col-sm-12">
+      <div class="row">
+        <div class="alert alert-warning" role="alert">
+          <h4> {{ "previewandprinting" | translate }}</h4>
+        </div>
+
+
+      </div>
+
+    </div>
+    <div class="row col-md-12 info-permits_ar print ltr" *ngIf="english" style="direction:ltr;" id="printsection2">
+
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
+        <div class="row">
+          <img alt="Logo" height="60" style="position:absolute;top:0px;" id="img_SubscriberLogo_" src="/assets/TMSBranding/styles/img/NWC-landscape.png">
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="row" style="text-align:center;">
+          <label style="text-align:center;font-weight:bold;">{{Pinfo.PermitNumber}}</label>
+
+        </div>
+        <div class="ltr row" style="text-align: right; direction: ltr;">
+          <label class="label-print">
+
+            {{ "Station Name" | translate }}
+          </label>
+          <label class="label-value">  {{Tinfo.LandmarkName}}</label>
+
+        </div>
+
+        <div class="ltr row" style="text-align: right; direction: ltr;">
+          <label class="label-print">
+            {{ "Driver name" | translate }}
+          </label>
+          <label class="label-value">
+            {{Dinfo.FirstName + ' '+Dinfo.MiddleName+' '+Dinfo.LastName}}
+          </label>
+
+        </div>
+
+       
+      
+
+        <div class="ltr row" style="text-align: right; direction: ltr;">
+          <label class=" label-print">
+            {{ "Tanker Type" | translate }}
+          </label>
+
+          <label class="label-value"> {{Tinfo.TransporterTypeName}}</label>
+
+        </div>
+
+        <div class="ltr row" style="text-align: right; direction: ltr;">
+          <label class="label-print">
+            {{ "Plate Number" | translate }}
+          </label>
+
+          <label class="label-value"
+                 style="text-align: right; display: inline-flex; justify-content: start; width: 50%"> {{Tinfo.PlateNo}}</label>
+
+        </div>
+        <div class="ltr row" style="text-align: right; direction: ltr;">
+          <label class="label-print">
+            {{ "Expiration date" | translate }}
+          </label>
+          <label class="label-value"> {{Pinfo.Expirationdate}}</label>
+        </div>
+      </div>
+
+      <div class="col-md-1"></div>
+    </div>
+
+    <div class="row col-md-12 info-permits_ar print rtl" *ngIf="arabic" style="direction:rtl;" id="printsection2">
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
+        <div class="row" style="text-align:center;">
+          <label style="text-align:center;font-weight:bold;">{{Pinfo.PermitNumber}}</label>
+
+        </div>
+        <div class="rtl row" style="text-align: right;direction:rtl;">
+          <label class="label-print">
+
+            {{ "Station Name" | translate }}
+          </label>
+          <label class="label-value">  {{Tinfo.LandmarkName}}</label>
+
+        </div>
+
+        <div class="rtl row" style="text-align: right;direction:rtl;">
+          <label class="label-print">
+            {{ "Driver name" | translate }}
+          </label>
+          <label class="label-value">
+            {{Dinfo.FirstName + ' '+Dinfo.MiddleName+' '+Dinfo.LastName}}
+          </label>
+
+        </div>
+
+        <div class="rtl row" style="text-align: right;direction:rtl;">
+          <label class=" label-print">
+            {{ "Tanker Type" | translate }}
+          </label>
+
+          <label class="label-value"> {{Tinfo.TransporterTypeName}}</label>
+
+        </div>
+
+        <div class="rtl row" style="text-align: right;direction:rtl;">
+          <label class="label-print">
+            {{ "Plate Number" | translate }}
+          </label>
+
+          <label class="label-value"
+                 style="text-align: right; display: inline-flex; justify-content: start; width: 50%"> {{Tinfo.PlateNo}}</label>
+
+        </div>
+        <div class="rtl row" style="text-align: right;direction:rtl;">
+          <label class="label-print">
+            {{ "Expiration date" | translate }}
+          </label>
+
+          <label class="label-value"> {{Pinfo.Expirationdate}}</label>
+
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="row">
+          <img alt="Logo" height="60" style="position:absolute;top:0px;" id="img_SubscriberLogo_" src="/assets/TMSBranding/styles/img/NWC-landscape.png">
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+</div>
+<style>
+  @media print {
+    .info-customer,
+    .info-driver {
+      width: 50%;
+    }
+
+    .rtl {
+      text-align: right;
+      direction: rtl;
+      float: right;
+    }
+
+    .ltr {
+      text-align: left;
+      direction: ltr;
+      float: left;
+    }
+
+    #printsection2 {
+      width: 50%;
+    }
+
+    .rtl .label-print {
+      display: inline-block;
+      float: right;
+    }
+
+    .rtl .label-value {
+      display: inline-block;
+      font-size: 9px;
+    }
+
+    .ltr .label-print {
+      display: inline-block;
+      float: left;
+    }
+
+    .ltr .label-value {
+      display: inline-block;
+      font-size: 9px;
+    }
+  }
+
+  .row {
+    display: block;
+  }
+
+  .rtl .label-print {
+    float: right;
+    text-align: right;
+    direction: rtl;
+  }
+
+  .rtl .label-value {
+    float: right;
+    text-align: right;
+    direction: rtl;
+  }
+
+  .ltr .label-print {
+    float: left;
+    text-align: left;
+    direction: ltr;
+  }
+
+  .ltr .label-value {
+    float: left;
+    text-align: left;
+    direction: ltr;
+  }
+</style>

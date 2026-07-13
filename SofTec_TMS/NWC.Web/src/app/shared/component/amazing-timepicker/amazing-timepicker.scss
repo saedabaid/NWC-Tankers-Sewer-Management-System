@@ -1,0 +1,59 @@
+.time {
+  table {
+    tbody {
+      tr {
+        td {
+          border: none !important;
+          .btn-default {
+            width: 45px;
+            text-transform: capitalize;
+          }
+          .btn-link {
+            color: #d8272d;
+          }
+        }
+      }
+    }
+  }
+}
+.time-control {
+  width: 80%;
+  display: inline-block;
+  position: relative;
+}
+
+.ico-time {
+  margin: 0 5px;
+  color: #d9534f;
+  position: absolute;
+  right: 22%;
+  left: auto;
+  top: 5px;
+}
+
+.time-control::-webkit-calendar-picker-indicator {
+  background: none;
+}
+
+// input[type="time"]::-webkit-calendar-picker-indicator {
+//   background: none;
+// }
+
+
+// app-amazing-timepicker {
+//     .calender-btn {
+//         right: 23px !important;
+
+//     }
+// }
+
+// .rtl {
+
+// app-amazing-timepicker {
+//     .calender-btn {
+//         left: 24px !important;
+
+//     }
+// }
+
+// }

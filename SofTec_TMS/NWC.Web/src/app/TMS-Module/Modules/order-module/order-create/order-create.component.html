@@ -1,0 +1,313 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6  padding-10">
+      <a (click)="cancel()">
+        <span class="page-title">{{ "listOrders" | translate }}</span>
+      </a>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title  currentpage">{{ (bulkCreate ? commercialOrder ? "CommercialOrder" : "SpectialOrders" : "createOrder")  | translate }}</span>
+    </div>
+
+    <div class="col-md-6 padding-10 text-right">
+      <a routerLink="/tms/customer/create" target="_blank" title="{{ 'NewCustomer' | translate }}">
+        <i class="glyphicon glyphicon-plus-sign margin-5" style="color: #00ae8d !important;"></i>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<div class="inner-div">
+  <div class="row form-row">
+    <div class="col-md-6  ">
+      <div class="row">
+        <div class="col-3">
+          <label class="title">{{ "customer" | translate }} <span class="required">*</span>
+          </label>
+
+        </div>
+        <div class="col-sm-6">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerNameList"
+            (SearchVAlue)="getCustomers($event)" (selectedListChange)="onCustomerDDLChanged($event)"
+            [options]="selectMenuOptions2" [loading]="Customer_Loading">
+          </select-menu>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-3">
+          <label class="title">{{ "CustomerAccount" | translate }} <span class="required">*</span>
+          </label>
+
+        </div>
+        <div class="col-sm-6">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerAccountsList"
+            (selectedListChange)="onCustomerAccountDDLChanged($event,bulkCreate)" [options]="selectMenuOptions3"
+            [selectedList]="bindingModel_CustomerAccounts" [loading]="CustomerAccount_Loading">
+          </select-menu>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- <div class="col-md-6">
+      <label class="col-sm-3 title"
+        >{{ "CustomerLocation" | translate }} <span class="required">*</span>
+      </label>
+      <div class="col-sm-6">
+        <select-menu
+          [label]="'Name'"
+          [itemKey]="'Id'"
+          [dropDownListInputs]="customerLocationsList"
+          (selectedListChange)="onCustomerlocationDDLChanged($event)"
+          [options]="selectMenuOptions3"
+          [selectedList]="bindingModel_CustomerLocations"
+          [loading]="CustomerAddress_Loading"
+          >
+        </select-menu>
+      </div>
+    </div> -->
+  </div>
+
+  <div class="row form-row">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-3">
+          <label class="title">{{ "NoOfOrdersWithinMonth" | translate }}
+          </label>
+          
+        </div>
+        <div class="col-sm-6">
+          <p class="title">
+            {{ OrdersNoPerMonth }}
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-3">
+          <label class=" title">{{ "Station" | translate }} <span class="required">*</span>
+          </label>
+
+        </div>
+        <div class="col-sm-6">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="lacationStationsList"
+            (selectedListChange)="onlocationStationDDLChanged($event)" [options]="selectMenuOptions3"
+            [selectedList]="bindingModel_lacationStations" [loading]="Station_Loading > 0">
+          </select-menu>
+        </div>
+
+      </div>
+    </div> </div>
+   
+ <div class="row form-row">
+  <div class="col-md-6">
+    <div class="row">
+      <label class="col-3"
+        >{{ "ServiceType" | translate }} <span class="required">*</span>
+      </label>
+      <div class="col-sm-6">
+        <select-menu
+          [label]="'Name'"
+          [itemKey]="'Id'"
+          [dropDownListInputs]="customerServiceList"
+          (selectedListChange)="onServiceTypeDDLChanged($event)" [options]="selectMenuOptions3"
+          [options]="selectMenuOptions3"
+        >
+        </select-menu>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="row form-row">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-3">
+          <label class="title">{{ "Quantity" | translate }} <span class="required">*</span>
+        </label>
+
+        </div>
+        <div class="col-sm-6">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="TanckerCapacityList"
+            (selectedListChange)="onTanckerCapacityDDLChanged($event)" [options]="selectMenuOptions3"
+            [selectedList]="bindingModel_TanckerCapacity" [loading]="Capacity_Loading">
+          </select-menu>
+          <!-- <input
+            type="number"
+            class="form-control"
+            placeholder="{{ 'Quantity' | translate }}"
+            [(ngModel)]="eventOrder.OrderQuantity"
+            (blur)="onQuantityChanged()"
+          /> -->
+        </div>
+      </div>
+    </div>
+
+   
+  </div>
+
+  <div class="row form-row" *ngIf="bulkCreate">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-3">
+          <label class="title">{{ "NoOfOrders" | translate }} </label>
+
+        </div>
+        <div class="col-sm-6">
+          <input type="number" class="form-control" [(ngModel)]="eventOrder.BC_NoOfOrders"
+            (blur)="onNoOfOrdersChanged()" />
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-3">
+          <label class=" title">{{ "MinutesDiffBetweenEachOrder" | translate }} </label>
+
+        </div>
+        <div class="col-sm-6">
+          <input type="number" class="form-control" [(ngModel)]="eventOrder.BC_HoldIntervalMin"
+            (blur)="onMinutesDiffBetweenEachOrderChanged()" />
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row form-row" *ngIf="bulkCreate">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-sm-3">
+          <label class="title">{{ "StartingTime" | translate }} </label>
+
+        </div>
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-md-6">
+              <app-datepicker [(selecteddate)]="eventOrder.BC_StartingTime" DateID="BC_StartingDate"></app-datepicker>
+
+            </div>
+            <div class="col-md-6 order-amazing">
+              <app-amazing-timepicker id="BC_StartingTime" [(selectedTime)]="BC_StartingTimeString">
+              </app-amazing-timepicker>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="col-md-3"></div>
+  </div>
+
+
+  <div class="row form-row">
+    <div  class="col-md-6">
+      <div class="row">
+        <div class="col-3">
+          <label class="title">{{ "OrderCategory" | translate }} </label>
+
+        </div>
+        <div class="col-sm-6">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="categoriesList"
+            (selectedListChange)="onCategoriesDDLChanged($event)" [options]="selectMenuOptions3"
+            [selectedList]="bindingModel_Category">
+          </select-menu>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- <div *ngIf="!isSewerServiceType" class="col-md-6">
+      <div class="row">
+        <div class="col-3">
+          <label class="title">{{ "Accessories" | translate }} </label>
+
+        </div>
+        <div class="col-sm-6">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="accessoriesList"
+            (selectedListChange)="onAccessoriesDDLChanged($event)" [options]="selectMenuOptions">
+          </select-menu>
+        </div>
+
+      </div>
+    </div> -->
+
+
+  </div>
+
+  <div class="row form-row">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-3">
+          <label class="title">{{ "RecieverName" | translate }} </label>
+
+        </div>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" placeholder="{{ 'RecieverName' | translate }}"
+            [(ngModel)]="eventOrder.RecieverName" />
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-3">
+          <label class="title">{{ "RecieverMobile" | translate }} </label>
+  
+        </div>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" placeholder="{{ 'RecieverMobile' | translate }}"
+            [(ngModel)]="eventOrder.RecieverMobile" />
+        </div>
+        <div class="col-3">
+          <label class="title">5xxxxxxxx</label>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row form-row">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-3">
+          <label class="title">{{ "Comments" | translate }} </label>
+
+        </div>
+        <div class="col-sm-6">
+          <textarea type="text" class="form-control" placeholder="{{ 'Comments' | translate }}"
+            [(ngModel)]="eventOrder.Comments">
+          </textarea>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="row form-row bottom-btn"> -->
+  <div class="row form-row">
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+      <button class="btn btn-default margin-5 pull-right" (click)="cancel()">
+        {{ "Cancel" | translate }}
+      </button>
+      <button class="btn btn-danger margin-5 pull-right" (click)="save()">
+        {{ "save" | translate }}
+      </button>
+    </div>
+  </div>
+</div>

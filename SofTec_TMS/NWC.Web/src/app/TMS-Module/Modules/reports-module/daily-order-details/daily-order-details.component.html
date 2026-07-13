@@ -1,0 +1,518 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6  padding-10">
+        <a routerLink="/tms/reports">
+            <span class="page-title">{{ "TMS_Reports" | translate }}</span>
+        </a>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title  currentpage">{{ "DailyOrdersDetails" | translate }}</span>
+    </div>
+
+    <div class="col-md-6">
+      
+      <a (click)="onexportOrders()"
+        class=" margin-5 pull-right"
+        title="{{ 'ExportOrders' | translate }}"
+        (mouseenter)="mouseEnterExcel()"
+        (mouseleave)="mouseLeaveExcel()"
+      >
+        <img
+          width="24px"
+          *ngIf="!HoverExcel; else excelHover"
+          src={{Excel_Img_Src}}
+        />
+        <ng-template #excelHover>
+          <img
+            width="24px"
+            src={{Excel_Img_Src}}
+          />
+        </ng-template>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="inner-div">
+  <div class="row  form-row">
+    <div class="col-md-12 custome-dropdown">
+      <label class="col-md-2 title wid-6">{{ "OrderNo" | translate }} </label>
+<div class="col-md-5 p-0">
+
+<search-component class="w-50 d-inline-block"
+        
+  (searchKeyword)="onWorkOrderDDLChanged($event)"
+  (searchClicked)="onWorkOrderDDLClicked($event)"
+  [isTypeahead]="true"
+  [typeaheadFunction]="getWorkOrderNumbers.bind(this)"
+  [field]="'Name'"
+  [(_value)]="SearchCriteria.FilterModel.SearchKeyword"
+>
+</search-component>
+  <a class="mr-2 ml-2 link-route" (click)="showAdvanced()">{{
+    advancedDiv
+      ? ("HideAdvancedSearch" | translate)
+      : ("AdvancedSearch" | translate)
+  }}</a>
+</div>
+     
+
+     
+
+      <button
+        class="btn btn-default margin-5 pull-right"
+        (click)="clearSearch()"
+      >
+        {{ "Clear" | translate }}
+      </button>
+      <button
+        class="btn btn-danger margin-5 pull-right"
+        (click)="onSearchSubmit()"
+      >
+        {{ "Search" | translate }}
+      </button>
+    </div>
+  </div>
+  <!-- Start Advanced Search box -->
+  <div [hidden]="!advancedDiv" id="advanced-search">
+    <!--row 1 -->
+    <div class="row form-row">
+      <!-- CustomerIdNumber -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "PersonIdValue" | translate }} </label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" [(ngModel)]="SearchCriteria.CustomerIdNumber" OnlyNumber="true"
+            placeholder="{{ 'CustomerPersonId' | translate}}"/>
+        </div>
+      </div>
+      <!-- Area -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "Area" | translate }} </label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="customerAreaList"
+            (SearchVAlue)="getAreas($event)"
+            (selectedListChange)="onAreaDDLChanged($event)"
+            [options]="selectMenuOptions"
+            [selectedList]="bindingModel_Areas"
+            [loading]="Area_loading"
+          >
+          </select-menu>
+        </div>
+      </div>
+      <!-- vehicle -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "Vehicle" | translate }}</label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="customerVehicleList"
+            (SearchVAlue)="getVehicles($event)"
+            (selectedListChange)="onVehicleDDLChanged($event)"
+            [options]="selectMenuOptions"
+            [selectedList]="bindingModel_Vehicles"
+            [loading]="Vehicle_Loading"
+          >
+          </select-menu>
+        </div>
+      </div>
+      <!-- Driver -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "Driver" | translate }}</label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="CustomerDriverList"
+            (SearchVAlue)="getDerivers($event)"
+            (selectedListChange)="onDeriverDDLChanged($event)"
+            [options]="selectMenuOptions"
+            [selectedList]="bindingModel_Drivers"
+            [loading]="Driver_Loading"
+          >
+          </select-menu>
+        </div>
+      </div>
+    </div>
+    <!-- row 2-->
+    <div class="row form-row">
+      <!-- CustomerMobile -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "MobileNumber" | translate }} </label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" [(ngModel)]="SearchCriteria.CustomerMobile" OnlyNumber="true"/>
+        </div>
+      </div>
+      <!-- city -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "City" | translate }}</label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="customerCityList"
+            (SearchVAlue)="getCity($event)"
+            (selectedListChange)="onCityDDLChanged($event)"
+            [options]="selectMenuOptions"
+            [selectedList]="bindingModel_Cities"
+            [loading]="City_Loading"
+          >
+          </select-menu>
+        </div>
+      </div>
+      <!-- period of -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "PeriodOf" | translate }}</label>
+        <div class="col-sm-8">
+          <select
+            class=" form-control"
+            [(ngModel)]="this.SearchCriteria.DatePeriod"
+          >
+            <option value="1">{{ "RequestDate" | translate }}</option>
+            <option value="2" selected>{{ "ScheduleDate" | translate }}</option>
+            <option value="3">{{
+              "LastStatusModificationDate" | translate
+            }}</option>
+          </select>
+        </div>
+      </div>
+      <!-- service -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "ServiceType" | translate }}</label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="customerServiceList"
+            (selectedListChange)="onServiceDDLChanged($event)"
+            [selectedList]="bindingModel_ServiceTypes"
+          >
+          </select-menu>
+        </div>
+      </div>
+    </div>
+    <!-- row 3 -->
+    <div class="row form-row">
+      <!-- customer Name | Code -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "Customer" | translate }} </label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="customerNameList"
+            (SearchVAlue)="getCustomers($event)"
+            (selectedListChange)="onCustomerDDLChanged($event)"
+            [options]="selectMenuOptions"
+            [selectedList]="bindingModel_Customers"
+            [loading]="Customer_Loading"
+          >
+          </select-menu>
+        </div>
+      </div>
+      <!-- zone -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "Zone" | translate }}</label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="customerZoneList"
+            (SearchVAlue)="getZones($event)"
+            (selectedListChange)="onZoneDDLChanged($event)"
+            [options]="selectMenuOptions"
+            [selectedList]="bindingModel_Zones"
+            [loading]="Zone_Loading"
+          >
+          </select-menu>
+        </div>
+      </div>
+      <!-- Date from -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "From" | translate }}</label>
+        <div class="col-sm-8">
+          <app-datepicker
+            [(selecteddate)]="SearchCriteria.DateTimeFrom"
+            DateID="dateFrom"
+          ></app-datepicker>
+          <!-- <datePicker-gregorian-hijri [(selectedDate)]="SearchCriteria.DateTimeFrom"></datePicker-gregorian-hijri> -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="col-sm-8 padding-0">
+          <app-amazing-timepicker
+            id="timeFrom"
+            [(selectedTime)]="timeFromStr"
+          ></app-amazing-timepicker>
+        </div>
+      </div>
+    </div>
+    <!-- row 4 -->
+    <div class="row form-row">
+      <!-- class -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "CustomerClass" | translate }}</label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="customerClassList"
+            (selectedListChange)="onClassDDLChanged($event)"
+            [selectedList]="bindingModel_Classes"
+          >
+          </select-menu>
+        </div>
+      </div>
+      <!-- station -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "Station" | translate }}</label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="customerStationList"
+            (SearchVAlue)="getStations($event)"
+            (selectedListChange)="onStationDDLChanged($event)"
+            [options]="selectMenuOptions"
+            [selectedList]="bindingModel_Stations"
+            [loading]="Station_Loading"
+          >
+          </select-menu>
+        </div>
+      </div>
+      <!-- Date To -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "To" | translate }}</label>
+        <div class="col-sm-8">
+          <app-datepicker
+            [(selecteddate)]="SearchCriteria.DateTimeTo"
+            DateID="dateTo"
+          ></app-datepicker>
+          <!-- <datePicker-gregorian-hijri [(selectedDate)]="SearchCriteria.DateTimeTo"></datePicker-gregorian-hijri> -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="col-sm-8 padding-0 ">
+          <app-amazing-timepicker
+            id="timeTo"
+            [(selectedTime)]="timeToStr"
+          ></app-amazing-timepicker>
+        </div>
+      </div>
+    </div>
+    <!-- row 3 -->
+    <div class="row form-row">
+      <!-- priority -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{
+          "CustomerPriority" | translate
+        }}</label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="customerPrioritiesList"
+            (selectedListChange)="onPriorityDDLChanged($event)"
+            [selectedList]="bindingModel_Priorities"
+          >
+          </select-menu>
+        </div>
+      </div>
+      <!-- status -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "OrderStatus" | translate }}</label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="CustomerStatusList"
+            (selectedListChange)="onStatusDDLChanged($event)"
+            [selectedList]="bindingModel_Statuses"
+          >
+          </select-menu>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+  <!-- End Advanced Search box -->
+
+  <!-- fixed header  -->
+  <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row'">
+    <div class="col-md-12 scroll-x-table">
+      <!--#region  table loading ********************************************** -->
+      <div [ngClass]="tableLoading ? 'container-gif show' : 'container-gif'">
+        <div class="uil-ring-css table-loader" style="transform:scale(0.6);">
+          <div></div>
+        </div>
+      </div>
+      <!--#endregion  table loading -->
+
+      <table class="table   table-striped scrollable-table">
+        <thead>
+          <tr>
+            <th class="wid130">{{'OrderNo' | translate}}</th>
+            <th class="wid100">{{'CurrentStatus' | translate}} </th>
+            <th class="wid200">{{'vehicle' | translate}} </th>
+            <th class="wid200">{{'Driver' | translate}} </th>
+            <th class="wid130">{{'Customer' | translate}} </th>
+            <th class="wid130">{{'CustomerClass' | translate}}</th>
+            <!-- <th class="wid130">{{'Priority' | translate}}</th> -->
+            <th class="wid130">{{'City' | translate}}</th>
+            <th class="wid130">{{'Zone' | translate}}</th>
+            <th class="wid130">{{'ZoneWithoutTanker' | translate}}</th>
+            <th class="wid100">{{'Station' | translate}} </th>
+            <th class="wid130">{{'ServiceType' | translate}} </th>
+            <th class="wid100">{{'QuantityReport' | translate}} ( m<sup>3</sup> )</th>
+            <th class="wid100">{{'CreateToDeliveredTime' | translate}}</th>
+            <th class="wid100">{{'CreateToOutTime' | translate}}</th>
+            <th class="wid100">{{'OutToDeliveredTime' | translate}}</th>
+            <th class="wid130">{{'ScheduledTime' | translate}}</th>
+            <!-- <th class="wid130">{{'RequestedAt' | translate}} </th> -->
+            <th class="wid130">{{'AssignedTime' | translate}} </th>
+            <th class="wid130">{{'OutForDeliveryTime' | translate}} </th>
+            <th class="wid130">{{'ArrivedTime' | translate}} </th>
+            <th class="wid130">{{'DeliveryTime' | translate}} </th>
+            <th class="wid130">{{'FailedToDeliverTime' | translate}} </th>
+            <th class="wid130">{{'CancelledTime' | translate}} </th>
+
+            <th class="wid100">{{'TotalCoast' | translate}}</th>
+            <th class="wid100">{{'Payment' | translate}}</th>
+            <th class="wid130">{{ 'SourceApplication' | translate }}</th>
+            <th class="wid100">{{ 'LastUpdate' | translate }}</th>
+            <th class="wid100">{{ 'InvoicNo' | translate }}</th>
+            <th class="wid130">{{'OrderCategory' | translate}} </th>
+            <th class="wid130">{{'ClosingMethod' | translate}} </th>
+            <th class="wid130">{{'CancelReason' | translate}} </th>
+
+
+
+            <!--<th class="wid130">{{'StatusTime' | translate}} </th> -->
+
+          </tr>
+        </thead>
+        <tbody [class]="advancedDiv ? ' mini' : ' '">
+          <tr class="text-center  d-block p-2 font-4 " *ngIf="!searchResult.Result">
+            {{"NoDataFound" | translate}}
+          </tr>
+          <tr *ngFor="let item of searchResult.Result; let i = index">
+            <td class="wid130"> {{ item.OrderNumber }} </td>
+            <td class="wid100">
+              <span [style.color]="item.StatusColor ? item.StatusColor : '#333'">
+                {{ item.LastStatusName }}
+              </span>
+            </td>
+            <td class="wid200">
+              {{ item.VehicleCodePlateNo }}
+            </td>
+            <td class="wid200">
+              {{ item.DriverName }}
+            </td>
+            <td class="wid130">
+              {{ item.CustomerName }}
+            </td>
+            <td class="wid130">
+              {{ item.ClassName }}
+            </td>
+            <!-- <td>
+    {{ item.PriorityName }}
+  </td> -->
+            <td class="wid130">
+              {{item.CityName}}
+            </td>
+            <td class="wid130">
+              {{item.ZoneName}}
+            </td>
+            <td class="wid130">
+              {{item.ZoneWithOutTankers | translate}}
+            </td>
+
+            <td class="wid100">{{ item.StationName }}</td>
+
+            <td class="wid130">
+              {{ item.ServiceType }}
+            </td>
+            <td class="wid100">
+              {{ item.OrderQuantity }}
+            </td>
+            <td class="wid100">
+              {{ item.CreateToDeliveredTime }}
+            </td>
+            <td class="wid100">
+              {{ item.CreateToOutTime }}
+            </td>
+            <td class="wid100">
+              {{ item.OutToDeliveredTime }}
+            </td>
+            <td class="wid130">
+              <date [date]="item.ScheduledDeliveryTime" [ShowTime]="true" [TimeUnderDate]="true"></date>
+            </td>
+            <!-- <td class="wid130">
+    <date [date]="item.CreatedOn" [ShowTime]="true" [TimeUnderDate]="true"></date>
+  </td> -->
+            <td class="wid130">
+              <date [date]="item.AssignedOn" [ShowTime]="true" [TimeUnderDate]="true"></date>
+            </td>
+            <td class="wid130">
+              <date [date]="item.OutForDeliveryOn" [ShowTime]="true" [TimeUnderDate]="true"></date>
+            </td>
+            <td class="wid130">
+              <date [date]="item.ArrivedOn" [ShowTime]="true" [TimeUnderDate]="true"></date>
+            </td>
+            <td class="wid130">
+              <date [date]="item.DeliverOn" [ShowTime]="true" [TimeUnderDate]="true"></date>
+            </td>
+            <td class="wid130">
+              <date [date]="item.FailedToDeliverOn" [ShowTime]="true" [TimeUnderDate]="true"></date>
+            </td>
+            <td class="wid130">
+              <date [date]="item.CancelledOn" [ShowTime]="true" [TimeUnderDate]="true"></date>
+            </td>
+
+            <td class="wid100">
+              {{ item.TotalCost }}
+            </td>
+            <td class="wid100">
+              {{ item.InvoiceStatusName }}
+            </td>
+            <td class="wid130">
+              {{ item.SourceApplication }}
+            </td>
+            <td class="wid100">
+              {{ item.LastStatusByCategory }}
+            </td>
+            <td class="wid100">
+              {{ item.InvoiceNo }}
+            </td>
+            <td class="wid130">
+              {{item.CategoryName}}
+            </td>
+            <td class="wid130">
+              {{item.ClosedByCode | translate}}
+            </td>
+            <td class="wid130">
+              {{item.LastStatusReason | translate}}
+            </td>
+
+            <!--<td class="wid130">
+    <date [date]="item.LastStatusTime" [ShowTime]="true" [TimeUnderDate]="true"></date>
+  </td> -->
+
+
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <app-pagination-component
+    [ItemsCount]="searchResult.TotalCount"
+    [(PageSize)]="this.SearchCriteria.FilterModel.PageFilter.PageSize"
+    [pageIndex]="this.SearchCriteria.FilterModel.PageFilter.PageIndex"
+    (PageSizeChange)="onPageSizeChanged($event)"
+    (pageNavigated)="onPageIndexChanged($event)"
+  >
+  </app-pagination-component>
+</div>

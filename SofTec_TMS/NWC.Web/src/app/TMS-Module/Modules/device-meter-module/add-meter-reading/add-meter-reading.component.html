@@ -1,0 +1,82 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-md-6  padding-10">
+            <a (click)="close()">
+                <span class="page-title">{{'MeterReading' | translate}}</span>
+            </a>
+            <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+            <span class="page-title  currentpage">{{ 'AddMeterReading' | translate}}</span>
+        </div>
+        <div class="col-md-6">
+
+        </div>
+    </div>
+</div>
+
+<!-- body & buttons-->
+<div class="inner-div">
+    <div class="row margin-0">
+
+        <div class="col-md-6 basic-info">
+            <div class="col-md-12">
+                <label class="col-sm-3 title">{{'Station' | translate}} <span class="required">*</span> </label>
+                <div class="pad-right col-sm-9">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="StationsList"
+                        (SearchVAlue)="getStations($event)" (selectedListChange)="onAreaDDLChanged($event)"
+                        [options]="selectMenuOptions" [selectedList]="bindingModel_Stations"
+                        [loading]="station_Loading">
+                    </select-menu>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <label class="col-sm-3 title">{{'MeterDeviceSN' | translate}} <span class="required">*</span> </label>
+                <div class="pad-right col-sm-9">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="DeviceMeterList"
+                        (SearchVAlue)="getMetersBasedOnStations($event)"
+                        (selectedListChange)="onDeviceMetersDDLChanged($event)" [options]="selectMenuOptions"
+                        [selectedList]="bindingModel_DeviceMeters"
+                        [loading]="Device_Loading">
+                    </select-menu>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <label class="col-sm-3 title">{{'MeterReading' | translate}} (m<sup>3</sup>)  <span class="required">*</span> </label>
+                <div class="pad-right col-sm-9">
+                    <input type="number" class="form-control" placeholder="{{'MeterReading' | translate}}"
+                        [(ngModel)]="meterReadingDTO.MeterReading" (blur)="onMeterReadingChanged()">
+
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <label class="col-sm-3 title">{{'ReadingTime' | translate}} <span class="required">*</span> </label>
+                <div class="pad-right col-sm-9">
+                    <app-datepicker class="col-xs-6   pr-ar-0" [(selecteddate)]="meterReadingDTO.ReadingTime" DateID=date1>
+                    </app-datepicker>
+                    <app-amazing-timepicker class="col-xs-6    pd-r0 pl-ar-0 w100" [(selectedTime)]="selectedTime">
+                    </app-amazing-timepicker>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <label class="col-sm-3 title">{{'Notes' | translate}}</label>
+                <div class="pad-right col-sm-9">
+                    <textarea type="text" class="form-control" placeholder="{{'Notes' | translate}}"
+                        [(ngModel)]="meterReadingDTO.ReadingComment">
+                        </textarea>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-6"></div>
+
+    </div>
+
+    <!-- buttons -->
+    <div class="col-md-12  bottom-btn">
+        <button class="btn btn-default margin-5 pull-right" (click)=close()>{{ 'cancel' | translate }}</button>
+        <button class="btn btn-danger margin-5 pull-right" (click)="save()">{{ 'Save' | translate }}</button>
+    </div>
+
+</div>

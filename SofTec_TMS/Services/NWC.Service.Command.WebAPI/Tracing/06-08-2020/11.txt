@@ -1,0 +1,154 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:06/08/2020 11:31:01 AM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:06/08/2020 11:31:01 AM
+
+CreateWorkOrder Time:06/08/2020 11:31:01 AM
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5540,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":"TMS","CISDivision":null,"TransactionID":null} Time:06/08/2020 11:31:01 AM
+
+Valid Time:06/08/2020 11:31:03 AM
+
+Create WorkOrder: Partially Success Time:06/08/2020 11:31:06 AM
+
+customerAccount: 5540 Time:06/08/2020 11:31:07 AM
+
+customerLocation: 5540 Time:06/08/2020 11:31:07 AM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:06/08/2020 11:31:07 AM
+
+OrderNumber: 1063024840 Time:06/08/2020 11:31:07 AM
+
+workOrderID: 46033 Time:06/08/2020 11:31:07 AM
+
+scheduledDeliveryTime: 06/08/2020 11:31:01 AM Time:06/08/2020 11:31:07 AM
+
+customerLocationClassID: 1 Time:06/08/2020 11:31:08 AM
+
+serviceTypeID: 2 Time:06/08/2020 11:31:08 AM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:06/08/2020 11:31:08 AM
+
+orderQuantity: 20 Time:06/08/2020 11:31:08 AM
+
+Net Cost: -1 Time:06/08/2020 11:31:08 AM
+
+SMS: عميلنا العزيز: تم فتح طلب صهريج مياه برقم 1063024840 وسيتم التواصل معكم لتأكيد استلام الصهريج Time:06/08/2020 11:31:10 AM
+
+Create WorkOrder: Success Time:06/08/2020 11:31:11 AM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:06/08/2020 11:32:06 AM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:06/08/2020 11:32:06 ص
+
+CreateWorkOrder Time:06/08/2020 11:32:06 ص
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5537,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":"TMS","CISDivision":null,"TransactionID":null} Time:06/08/2020 11:32:06 ص
+
+Valid Time:06/08/2020 11:32:06 ص
+
+Create WorkOrder: Partially Success Time:06/08/2020 11:32:07 ص
+
+customerAccount: 5537 Time:06/08/2020 11:32:07 AM
+
+customerLocation: 5537 Time:06/08/2020 11:32:07 AM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:06/08/2020 11:32:07 AM
+
+OrderNumber: 7898931763 Time:06/08/2020 11:32:07 AM
+
+workOrderID: 46034 Time:06/08/2020 11:32:07 AM
+
+scheduledDeliveryTime: 06/08/2020 11:32:06 AM Time:06/08/2020 11:32:07 AM
+
+customerLocationClassID: 1 Time:06/08/2020 11:32:07 AM
+
+serviceTypeID: 1 Time:06/08/2020 11:32:07 AM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:06/08/2020 11:32:07 AM
+
+orderQuantity: 20 Time:06/08/2020 11:32:07 AM
+
+Net Cost: -1 Time:06/08/2020 11:32:07 AM
+
+SMS: عميلنا العزيز: تم فتح طلب صهريج مياه برقم 7898931763 وسيتم التواصل معكم لتأكيد استلام الصهريج Time:06/08/2020 11:32:08 AM
+
+Create WorkOrder: Success Time:06/08/2020 11:32:08 AM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:06/08/2020 11:33:40 AM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:06/08/2020 11:33:40 ص
+
+CreateWorkOrder Time:06/08/2020 11:33:40 ص
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5454,"StationID":"cd26dc4e-6134-4ee6-adac-aab997046378","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":"TMS","CISDivision":null,"TransactionID":null} Time:06/08/2020 11:33:40 ص
+
+Valid Time:06/08/2020 11:33:40 ص
+
+Create WorkOrder: Partially Success Time:06/08/2020 11:33:41 ص
+
+customerAccount: 5454 Time:06/08/2020 11:33:41 AM
+
+customerLocation: 5454 Time:06/08/2020 11:33:41 AM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:06/08/2020 11:33:41 AM
+
+OrderNumber: 0377248028 Time:06/08/2020 11:33:41 AM
+
+workOrderID: 46035 Time:06/08/2020 11:33:41 AM
+
+scheduledDeliveryTime: 06/08/2020 11:33:40 AM Time:06/08/2020 11:33:41 AM
+
+customerLocationClassID: 1 Time:06/08/2020 11:33:41 AM
+
+serviceTypeID: 1 Time:06/08/2020 11:33:41 AM
+
+zoneStation: cd26dc4e-6134-4ee6-adac-aab997046378 Time:06/08/2020 11:33:41 AM
+
+orderQuantity: 20 Time:06/08/2020 11:33:41 AM
+
+contract == null: False Time:06/08/2020 11:33:42 AM
+
+contractID: 10040 Time:06/08/2020 11:33:42 AM
+
+contractStationTariaff == null: False Time:06/08/2020 11:33:42 AM
+
+contractStationTariaffID: 259 Time:06/08/2020 11:33:42 AM
+
+totalQuantityCost: 1000.0000 Time:06/08/2020 11:33:42 AM
+
+extraKMCost: 300.00000000 Time:06/08/2020 11:33:42 AM
+
+totalCost: 1300.00000000 Time:06/08/2020 11:33:42 AM
+
+Net Cost: 1300.00000000 Time:06/08/2020 11:33:42 AM
+
+SMS: عميلنا العزيز: تم فتح طلب صهريج مياه برقم 0377248028 وسيتم التواصل معكم لتأكيد استلام الصهريج Time:06/08/2020 11:33:42 AM
+
+Create WorkOrder: Success Time:06/08/2020 11:33:43 AM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:06/08/2020 11:44:36 AM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:06/08/2020 11:44:36 ص
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 1063024840 - TransporterID 5eff52fb-4e2a-4b98-a669-841886016273 - TransportrStatus: 0 Time:06/08/2020 11:44:38 ص
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:06/08/2020 11:44:38 ص
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:06/08/2020 11:44:38 AM
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 1063024840 - TransporterID: 5eff52fb-4e2a-4b98-a669-841886016273 - TransporterStatus: 11 Time:06/08/2020 11:44:39 AM
+
+Start Inserting Driver SMS: OrderNo:1063024840, VehicleId:5eff52fb-4e2a-4b98-a669-841886016273, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:06/08/2020 11:44:39 AM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 1063024840 - TransporterID: 5eff52fb-4e2a-4b98-a669-841886016273 - TransporterStatus: 11 Time:06/08/2020 11:44:40 ص
+
+SMS: تم تخصيص رقم الطلب 1063024840 ويمكن التواصل على جوال العميل 032453245345 موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:06/08/2020 11:44:40 AM
+
+Start Inserting Customer SMS: OrderNo:1063024840, VehicleId:5eff52fb-4e2a-4b98-a669-841886016273, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:06/08/2020 11:44:40 AM
+
+SMS: عميلنا العزيز: نفيدكم بتخصيص ناقلة مياه لطلبكم رقم 1063024840 Time:06/08/2020 11:44:40 AM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"1063024840","cisDivision":19,"orderStatus":4,"updateDateTime":"06-08-2020 11:44:41","parameters":[{"parameterName":"TMSID","parameterValue":"1063024840"},{"parameterName":"COMMENT","parameterValue":""}]} Time:06/08/2020 11:44:41 AM
+
+----------------------------------------AssignWorkOrder - Denormalizer - End---------------------------------------- Time:06/08/2020 11:45:02 AM
+

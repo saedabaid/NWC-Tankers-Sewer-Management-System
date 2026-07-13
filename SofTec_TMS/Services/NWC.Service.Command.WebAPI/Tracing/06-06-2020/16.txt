@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------------------------------------------- Time:06/06/2020 4:07:44 PM
+
+CreateWorkOrder Time:06/06/2020 4:07:44 PM
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":10,"CustomerLocationID":39,"ServiceTypeID":1,"StationID":"cd26dc4e-6134-4ee6-adac-aab997046378","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:06/06/2020 4:07:44 PM
+
+Valid Time:06/06/2020 4:07:45 PM
+
+Create WorkOrder: Partially Success Time:06/06/2020 4:07:46 PM
+
+customerLocation: 39 Time:06/06/2020 4:07:46 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:06/06/2020 4:07:46 PM
+
+OrderNumber: 3874029309 Time:06/06/2020 4:07:46 PM
+
+workOrderID: 45572 Time:06/06/2020 4:07:46 PM
+
+scheduledDeliveryTime: 06/06/2020 4:07:44 PM Time:06/06/2020 4:07:46 PM
+
+customerLocationClassID: 1 Time:06/06/2020 4:07:46 PM
+
+serviceTypeID: 1 Time:06/06/2020 4:07:46 PM
+
+zoneStation: cd26dc4e-6134-4ee6-adac-aab997046378 Time:06/06/2020 4:07:46 PM
+
+orderQuantity: 10 Time:06/06/2020 4:07:46 PM
+
+contract == null: False Time:06/06/2020 4:07:46 PM
+
+contractID: 10040 Time:06/06/2020 4:07:46 PM
+
+contractStationTariaff == null: False Time:06/06/2020 4:07:47 PM
+
+contractStationTariaffID: 259 Time:06/06/2020 4:07:47 PM
+
+totalQuantityCost: 500.0000 Time:06/06/2020 4:07:47 PM
+
+extraKMCost: 300.00000000 Time:06/06/2020 4:07:47 PM
+
+totalCost: 800.00000000 Time:06/06/2020 4:07:47 PM
+
+Net Cost: 800.00000000 Time:06/06/2020 4:07:47 PM
+
+Create WorkOrder: Success Time:06/06/2020 4:07:47 PM
+

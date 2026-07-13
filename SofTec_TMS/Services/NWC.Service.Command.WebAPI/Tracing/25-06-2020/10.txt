@@ -1,0 +1,110 @@
+--------------------------------------------------------------------------------------------------------------------------- Time:25/06/2020 10:09:50 ص
+
+CreateWorkOrder Time:25/06/2020 10:09:50 ص
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5538,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:25/06/2020 10:09:51 ص
+
+Valid Time:25/06/2020 10:09:51 ص
+
+Create WorkOrder: Partially Success Time:25/06/2020 10:09:52 ص
+
+customerAccount: 5538 Time:25/06/2020 10:09:52 AM
+
+customerLocation: 5538 Time:25/06/2020 10:09:52 AM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:25/06/2020 10:09:52 AM
+
+OrderNumber: 2355076774 Time:25/06/2020 10:09:52 AM
+
+workOrderID: 45948 Time:25/06/2020 10:09:52 AM
+
+scheduledDeliveryTime: 25/06/2020 10:09:51 AM Time:25/06/2020 10:09:52 AM
+
+customerLocationClassID: 1 Time:25/06/2020 10:09:52 AM
+
+serviceTypeID: 1 Time:25/06/2020 10:09:52 AM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:25/06/2020 10:09:52 AM
+
+orderQuantity: 20 Time:25/06/2020 10:09:52 AM
+
+Net Cost: -1 Time:25/06/2020 10:09:53 AM
+
+Create WorkOrder: Success Time:25/06/2020 10:09:53 AM
+
+start sending SMS: orderNo:2355076774, VehicleId:dfc6273b-505f-41cc-8b27-0b0507114dcc, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationId:61391 Time:25/06/2020 10:10:19 AM
+
+SMS: تم تخصيص رقم الطلب 2355076774 ويمكن التواصل على جوال العميل  موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:25/06/2020 10:10:19 AM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:25/06/2020 10:17:03 ص
+
+CreateWorkOrder Time:25/06/2020 10:17:03 ص
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5538,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:25/06/2020 10:17:03 ص
+
+Valid Time:25/06/2020 10:17:03 ص
+
+Create WorkOrder: Partially Success Time:25/06/2020 10:17:04 ص
+
+customerAccount: 5538 Time:25/06/2020 10:17:05 AM
+
+customerLocation: 5538 Time:25/06/2020 10:17:05 AM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:25/06/2020 10:17:06 AM
+
+OrderNumber: 7204118896 Time:25/06/2020 10:17:06 AM
+
+workOrderID: 45954 Time:25/06/2020 10:17:06 AM
+
+scheduledDeliveryTime: 25/06/2020 10:17:03 AM Time:25/06/2020 10:17:06 AM
+
+customerLocationClassID: 1 Time:25/06/2020 10:17:07 AM
+
+serviceTypeID: 1 Time:25/06/2020 10:17:07 AM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:25/06/2020 10:17:07 AM
+
+orderQuantity: 20 Time:25/06/2020 10:17:07 AM
+
+Net Cost: -1 Time:25/06/2020 10:17:07 AM
+
+Create WorkOrder: Success Time:25/06/2020 10:17:08 AM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:25/06/2020 10:34:43 ص
+
+CreateWorkOrder Time:25/06/2020 10:34:43 ص
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5537,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:25/06/2020 10:34:43 ص
+
+Valid Time:25/06/2020 10:34:43 ص
+
+Create WorkOrder: Partially Success Time:25/06/2020 10:34:44 ص
+
+customerAccount: 5537 Time:25/06/2020 10:34:44 AM
+
+customerLocation: 5537 Time:25/06/2020 10:34:44 AM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:25/06/2020 10:34:44 AM
+
+OrderNumber: 6024891779 Time:25/06/2020 10:34:44 AM
+
+workOrderID: 45955 Time:25/06/2020 10:34:44 AM
+
+scheduledDeliveryTime: 25/06/2020 10:34:43 AM Time:25/06/2020 10:34:44 AM
+
+customerLocationClassID: 1 Time:25/06/2020 10:34:44 AM
+
+serviceTypeID: 1 Time:25/06/2020 10:34:44 AM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:25/06/2020 10:34:44 AM
+
+orderQuantity: 20 Time:25/06/2020 10:34:44 AM
+
+Net Cost: -1 Time:25/06/2020 10:34:44 AM
+
+Create WorkOrder: Success Time:25/06/2020 10:34:45 AM
+
+start sending SMS: orderNo:6024891779, VehicleId:dfc6273b-505f-41cc-8b27-0b0507114dcc, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationId:61390 Time:25/06/2020 10:35:09 AM
+
+SMS: تم تخصيص رقم الطلب 6024891779 ويمكن التواصل على جوال العميل  موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:25/06/2020 10:35:09 AM
+

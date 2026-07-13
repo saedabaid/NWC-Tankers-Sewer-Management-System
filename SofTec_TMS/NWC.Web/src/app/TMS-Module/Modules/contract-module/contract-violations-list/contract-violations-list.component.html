@@ -1,0 +1,324 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-md-6  padding-10">
+            <a routerLink="/tms/contract/contractlist">
+                <span class="page-title">{{ "contract" | translate }}</span>
+            </a>
+            <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+            <span class="page-title  currentpage">{{ "TMS_contractTermsViolationslist" | translate }}</span>
+        </div>
+
+        <div class="col-md-6">
+            <a *ngIf="pagePermission == 'Full Control' || pagePermission == 'Add and Edit'"
+                routerLink="/tms/contract/violation/add" title="  {{ 'NewViolation' | translate }}">
+                <i class="glyphicon glyphicon-plus-sign margin-5 pull-right"></i>
+            </a>
+
+            <a (click)="onexportOrders()" class=" margin-5 pull-right"
+                title="{{ 'ExportContractViolations' | translate }}" (mouseenter)="mouseEnterExcel()"
+                (mouseleave)="mouseLeaveExcel()">
+                <img width="24" *ngIf="!HoverExcel; else excelHover" src={{Excel_Img_Src}} />
+                <ng-template #excelHover>
+                    <img width="24" src={{Excel_Img_Src}} />
+                </ng-template>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="inner-div">
+    <div class="row  form-row">
+        <div class="col-md-12 custome-dropdown">
+            <label class="col-sm-2 title">{{ "ViolationTicketNumber" | translate }}</label>
+            <div class="col-md-3">
+                <!-- <input class="form-control" [(ngModel)]="SearchCriteria.ViolationTicketNumber"
+                    (keyup.enter)="onSearchSubmit()" placeholder="{{ 'ViolationTicketNumber' | translate }}"> -->
+                <input class="form-control" [(ngModel)]="SearchCriteria.Id" (keyup.enter)="onSearchSubmit()"
+                    placeholder="{{ 'ViolationTicketNumber' | translate }}">
+
+            </div>
+
+            <div class="col-md-2">
+                <a class="mr-2 ml-2 link-route" (click)="showAdvanced()">
+                    {{advancedDiv? ("HideAdvancedSearch" | translate): ("AdvancedSearch" | translate)}}
+                </a>
+
+            </div>
+
+
+
+            <button class="btn btn-default margin-5 pull-right" (click)="clearSearch()">
+                {{ "Clear" | translate }}
+            </button>
+            <button class="btn btn-danger margin-5 pull-right" (click)="onSearchSubmit()">
+                {{ "Search" | translate }}
+            </button>
+        </div>
+    </div>
+    <!-- Start Advanced Search box -->
+    <div [hidden]="!advancedDiv" class="custom-form-silver">
+        <!--row 1 -->
+        <div class="row form-row">
+
+            <!-- Area -->
+            <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "Area" | translate }} </label>
+                <div class="col-sm-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerAreaList"
+                        (SearchVAlue)="getAreas($event)" (selectedListChange)="onAreaDDLChanged($event)"
+                        [options]="selectMenuOptions" [selectedList]="bindingModel_Areas" [loading]="Area_loading">
+                    </select-menu>
+                </div>
+            </div>
+
+            <!-- city -->
+            <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "City" | translate }}</label>
+                <div class="col-sm-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerCityList"
+                        (SearchVAlue)="getCity($event)" (selectedListChange)="onCityDDLChanged($event)"
+                        [options]="selectMenuOptions" [selectedList]="bindingModel_Cities" [loading]="City_Loading">
+                    </select-menu>
+                </div>
+            </div>
+
+            <!-- station -->
+            <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "Station" | translate }}</label>
+                <div class="col-sm-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerStationList"
+                        (SearchVAlue)="getStations($event)" (selectedListChange)="onStationDDLChanged($event)"
+                        [options]="selectMenuOptions" [selectedList]="bindingModel_Stations"
+                        [loading]="Station_Loading">
+                    </select-menu>
+                </div>
+            </div>
+        </div>
+        <!-- row 2-->
+        <div class="row form-row">
+
+            <!-- Category -->
+            <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "violationCategory" | translate }}</label>
+                <div class="col-sm-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="TermsCategoriesList"
+                        (selectedListChange)="onTermsCategoryDDLChanged($event)" [options]="selectMenuOptions"
+                        [selectedList]="bindingModel_TermsCategories">
+                    </select-menu>
+                </div>
+            </div>
+
+            <!-- Payment Status -->
+            <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "PaymentStatus" | translate }}</label>
+                <div class="col-sm-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="InvoiceStatusesList"
+                        (selectedListChange)="onInvoiceStatusDDLChanged($event)" [options]="selectMenuOptions"
+                        [selectedList]="bindingModel_InvoiceStatuses">
+                    </select-menu>
+                </div>
+            </div>
+
+            <!-- Status -->
+            <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "Status" | translate }}</label>
+                <div class="col-sm-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="ViolationStatusesList"
+                        (selectedListChange)="onViolationStatusDDLChanged($event)" [options]="selectMenuOptions"
+                        [selectedList]="bindingModel_ViolationStatuses">
+                    </select-menu>
+                </div>
+            </div>
+
+        </div>
+        <!-- row 3-->
+        <div class="row form-row">
+            <!-- Contract-->
+            <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "contract" | translate }}</label>
+                <div class="col-sm-8">
+                    <input class="form-control" [(ngModel)]="SearchCriteria.Contract" (keyup.enter)="onSearchSubmit()">
+                </div>
+            </div>
+            <!-- Term-->
+            <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "ContractTerm" | translate }}</label>
+                <div class="col-sm-8">
+                    <input class="form-control" [(ngModel)]="SearchCriteria.Term" (keyup.enter)="onSearchSubmit()">
+                </div>
+            </div>
+            <!-- Date from -->
+            <div class="col-md-6">
+                <label class="col-sm-2 title">{{ "From" | translate }}</label>
+                <div class="col-sm-8">
+                    <!-- <app-datepicker [(selecteddate)]="SearchCriteria.DateTimeFrom" DateID="dateFrom"></app-datepicker> -->
+                    <datePicker-gregorian-hijri [(selectedDate)]="SearchCriteria.ViolationDateFrom">
+                    </datePicker-gregorian-hijri>
+                </div>
+            </div>
+
+        </div>
+        <!-- row 4 -->
+        <div class="row form-row">
+            <!-- Vehicle-->
+            <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "Vehicle" | translate }}</label>
+                <div class="col-sm-8">
+                    <input class="form-control" [(ngModel)]="SearchCriteria.Vehicle" (keyup.enter)="onSearchSubmit()">
+                </div>
+            </div>
+            <!-- Driver-->
+            <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "Driver" | translate }}</label>
+                <div class="col-sm-8">
+                    <input class="form-control" [(ngModel)]="SearchCriteria.Driver" (keyup.enter)="onSearchSubmit()">
+                </div>
+            </div>
+            <!-- Date To -->
+            <div class="col-md-6">
+                <label class="col-sm-2 title">{{ "To" | translate }}</label>
+                <div class="col-sm-8">
+                    <!-- <app-datepicker [(selecteddate)]="SearchCriteria.DateTimeTo" DateID="dateTo"></app-datepicker> -->
+                    <datePicker-gregorian-hijri [(selectedDate)]="SearchCriteria.ViolationDateTo">
+                    </datePicker-gregorian-hijri>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- End Advanced Search box -->
+
+    <!-- fixed header  -->
+    <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row'">
+        <div class="col-md-12 scroll-x-table list-body scrollable-table">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th class="wid100">{{'#' | translate}}</th>
+                    <th class="wid100">{{'contract' | translate}} </th>
+                    <th class="wid100">{{'Station' | translate}} </th>
+                    <th class="wid100">{{'violationCategory' | translate}} </th>
+                    <th class="wid100">{{'termsNO' | translate}}</th>
+
+                    <th class="wid200">{{'termsName' | translate}}</th>
+                    <th class="wid100">{{'Vehicle' | translate}}</th>
+                    <th class="wid100">{{'Driver' | translate}} </th>
+                    <th class="wid100">{{'Total' | translate}} </th>
+                    <th class="wid100">{{'IssueDate' | translate}}</th>
+
+                    <!-- <th class="wid130">{{'PaymentDueDate' | translate}} </th> -->
+                    <th class="wid100">{{'PaymentStatus' | translate}} </th>
+                    <th class="wid100">{{'PaidOn' | translate}}</th>
+                    <th class="wid100">{{'Status' | translate}} </th>
+                    <th class="wid200">{{'CancellationReason' | translate}}</th>
+
+                    <th class="wid200">Decision</th>
+                    <th class="wid70">Edit</th>
+                    <th class="wid70">Delete</th>
+                  </tr>
+                </thead>
+                <tbody [class]="advancedDiv ? ' mini' : ' '" width="100%">
+                    <tr class="text-center  d-block p-2 font-4 " *ngIf="!searchResult.Result">
+                        {{"NoDataFound" | translate}}
+                    </tr>
+                    <tr *ngFor="let item of searchResult.Result; let i = index">
+                      <td class="wid100">
+                        {{ item.Id }}
+                        <!-- {{ item.ViolationTicketNumber }} -->
+                      </td>
+                      <td class="wid100">
+                        {{ item.ContractCode }}
+                      </td>
+                      <td class="wid100">
+                        {{ item.StationName }}
+                      </td>
+                      <td class="wid100">
+                        {{ (IsArabic ? item.CategoryAr : item.CategoryEn ) }}
+                      </td>
+                      <td class="wid100">
+                        {{ item.ContractTermCode }}
+                      </td>
+
+                      <td class="wid200">
+                        {{ item.ContractTermName }}
+                      </td>
+                      <td class="wid100">
+                        {{ item.VehicleCode }} {{ (item.VehicleCode? "|" : "") }} {{ item.VehiclePlateNo }}
+                      </td>
+                      <td class="wid100">
+                        {{ item.DriverName }}
+                      </td>
+                      <td class="wid100">
+                        {{ item.TotalPenalty }}
+                      </td>
+                      <td class="wid100">
+                        <datePicker-gregorian-hijri [selectedDate]="item.IssueDate" [viewOnly]="true">
+                        </datePicker-gregorian-hijri>
+                        <!-- <date [date]="item.CreateTime" [ShowTime]="true" [TimeUnderDate]="true"></date> -->
+                      </td>
+                      <!-- <td class="wid130">
+      <datePicker-gregorian-hijri [(selectedDate)]="item.PaymentDueDate" [viewOnly]="true">
+      </datePicker-gregorian-hijri>
+  </td> -->
+                      <td class="wid100">
+                        {{ (IsArabic ? item.PaymentStatusAr : item.PaymentStatusEn ) }}
+                      </td>
+                      <td class="wid100">
+                        <datePicker-gregorian-hijri [(selectedDate)]="item.PaymentStatusDate" [viewOnly]="true">
+                        </datePicker-gregorian-hijri>
+                      </td>
+                      <td class="wid100">
+                        {{ (IsArabic ? item.StatusNameAr : item.StatusNameEn ) }}
+                      </td>
+                      <td class="wid200">
+                        {{ (IsArabic ? item.CancelReasonAr : item.CancelReasonEn ) }}
+                      </td>
+
+                      <td class="wid200" *ngIf="item.Show">
+
+                        <button class="btn btn-sm btn-success" (click)="AddViolationDecision(item.Id,1)"><i class="fa fa-check"></i> {{'Approve' | translate}}</button>
+                        <button class="btn btn-sm red" (click)="AddViolationDecision(item.Id,0)"><i class="fa fa-times"></i> {{'Reject' | translate}}</button>
+                      </td>
+                      <td class="wid200" *ngIf="!item.Show && item.IsFinalDecision">
+
+                        <button class="disabled btn btn-sm btn-warning">{{'Closed' | translate}}</button>
+
+                      </td>
+                      <td class="wid200" *ngIf="!item.Show && !item.IsFinalDecision">
+
+                        <button class="disabled btn btn-sm btn-warning">Level:{{item.CurrentApprovalStatus}}</button>
+
+                      </td>
+                      <!--<td class="wid50" *ngIf="item.Show">
+    <a  title="  {{'Reject' | translate}}" (click)="AddViolationDecision(item.Id,0)"
+       *ngIf="pagePermission == 'Full Control'">
+      <i class="glyphicon glyphicon-remove"></i>
+    </a>
+  </td>-->
+
+                      <td class="wid70">
+                        <a class="btn btn-light" title="{{'Edit' | translate}}"
+                           routerLink="/tms/contract/violation/edit/{{item.Id}}"
+                           *ngIf="(pagePermission == 'Full Control') || (pagePermission == 'Add and Edit')">
+                          <i class="fa fa-edit fa-lg"></i>
+                        </a>
+                      </td>
+                      <td class="wid70">
+                        <a class="btn btn-light" (click)="deleteContract(item)" title="{{'Delete' | translate}}"
+                           *ngIf="pagePermission == 'Full Control'">
+                          <i class="fa fa-trash-alt fa-lg"></i>
+                        </a>
+                      </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <app-pagination-component [ItemsCount]="searchResult.TotalCount"
+        [(PageSize)]="this.SearchCriteria.PageFilter.PageSize" [pageIndex]="this.SearchCriteria.PageFilter.PageIndex"
+        (PageSizeChange)="onPageSizeChanged($event)" (pageNavigated)="onPageIndexChanged($event)">
+    </app-pagination-component>
+</div>

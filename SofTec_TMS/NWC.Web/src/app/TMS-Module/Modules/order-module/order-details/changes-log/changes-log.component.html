@@ -1,0 +1,182 @@
+<div class="hold-list">
+
+  <ul class="log-changes col-sm-12">
+    <li *ngFor="let item of Logs; let i = index">
+      <a type="button" (click)="isCollapsed[i] = !isCollapsed[i]" [attr.aria-expanded]="isCollapsed[i]"
+        aria-controls="collapseBasic" class="info-changes">
+        <i class="fa fa-user"></i>
+        <span class="planer-name">{{item.CreatedByName}} </span>
+
+        <span class="describe">
+          {{( (item.ActionLogTypeID == 1)? "PlacedOrder" :
+              (item.ActionLogTypeID == 4)? "DeAssignedTankerFromOrder":
+              (item.ActionLogTypeID == 2) ? "UpdateOrder" :
+              (item.ActionLogTypeID == eventTypesEnums.WO_AddComment) ? "Add Comment" :
+              this.changesEventTypes.includes(item.ActionLogTypeID) ? "ChangeOrderStatusTo"  : ''
+          )
+          | translate}}
+
+          {{this.changesEventTypes.includes(item.ActionLogTypeID) ? item.StatusName: ''}}
+        </span>
+
+        <span> 
+          <date [date]="item.CreateTime"  [ShowTime]="true"></date> 
+        </span>
+      </a>
+      <div id="collapseBasic" [collapse]="!isCollapsed[i]" class="col-sm-12 hold-tb">
+        <table class="table Dtable table-striped">
+          <thead>
+            <tr>
+              <th>{{'Field' | translate}}</th>
+              <th>{{'OldValue' | translate}}</th>
+              <th>{{'NewValue' | translate}} </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr [hidden]="item.ActionLogTypeID != 1">
+              <td>{{'OrderNo' | translate}}</td>
+              <td></td>
+              <td>{{OrderNo}}</td>
+            </tr>
+            <tr [hidden]="!this.commonEventTypes.includes(item.ActionLogTypeID)">
+              <td>{{'OrderStatus' | translate}}</td>
+              <td>{{item.PreviousStatusName}}</td>
+              <td>{{item.StatusName}}</td>
+            </tr>
+            <tr [hidden]="!this.commonEventTypes.includes(item.ActionLogTypeID)">
+              <td>{{'StatusTime' | translate}}</td>
+              <td>
+                <date [date]="item.PreviousStatusTime"  [ShowTime]="true"></date> 
+              </td>
+              <td>
+                <date [date]="item.StatusTime"  [ShowTime]="true"></date> 
+              </td>
+            </tr>
+            <tr [hidden]="!this.commonEventTypes.includes(item.ActionLogTypeID)">
+              <td>{{'Comments' | translate}}</td>
+              <td>{{item.PreviousStatusComment}}</td>
+              <td>{{item.StatusComment}}</td>
+            </tr>
+            <tr [hidden]="!this.vehicleEventTypes.includes(item.ActionLogTypeID)">
+              <td>{{'Vehicle' | translate}}</td>
+              <td>{{item.PreviousVehicleCodePlateNo}}</td>
+              <td>{{item.VehicleCodePlateNo}}</td>
+            </tr>
+            <tr [hidden]="!this.vehicleEventTypes.includes(item.ActionLogTypeID)">
+              <td>{{'VehicleStatus' | translate}}</td>
+              <td>{{item.PreviousVehicleStatusName}}</td>
+              <td>{{item.VehicleStatusName}}</td>
+            </tr>
+            <tr [hidden]="!this.vehicleEventTypes.includes(item.ActionLogTypeID)">
+              <td>{{'Driver' | translate}}</td>
+              <td>{{item.PreviousDriverName}}</td>
+              <td>{{item.DriverName}}</td>
+            </tr>
+            <tr [hidden]="!this.reasonEventTypes.includes(item.ActionLogTypeID)">
+              <td>{{'Reason' | translate}}</td>
+              <td>{{item.PreviousDeassignReasonName}}</td>
+              <td>{{item.DeassignReasonName}}</td>
+            </tr>
+
+            <tr [hidden]="!this.placedUpdateTypes.includes(item.ActionLogTypeID)">
+              <td>{{'OrderQuantity' | translate}}</td>
+              <td>{{item.ActionLogTypeID != 1? item.PreviousOrderQuantity : ''}}</td>
+              <td>{{item.OrderQuantity}}</td>
+            </tr>
+            <tr [hidden]="!this.placedUpdateTypes.includes(item.ActionLogTypeID)">
+              <td>{{'ScheduledTime' | translate}}</td>
+              <td>
+                <date *ngIf="item.ActionLogTypeID != 1" [date]="item.PreviousScheduledDeliveryTime"  [ShowTime]="true"></date> 
+                <!-- {{item.ActionLogTypeID != 1? (item.PreviousScheduledDeliveryTime | date: this.dateFormat) : ''}} -->
+              </td>
+              <td>
+                <date [date]="item.ScheduledDeliveryTime"  [ShowTime]="true"></date> 
+              </td>
+            </tr>
+            <tr [hidden]="!this.placedUpdateTypes.includes(item.ActionLogTypeID)">
+              <td>{{'CustomerLocation' | translate}}</td>
+              <td>{{item.PreviousCustomerAddress}}</td>
+              <td>{{item.CustomerAddress}}</td>
+            </tr>
+            <tr [hidden]="!this.placedUpdateTypes.includes(item.ActionLogTypeID)">
+              <td>{{'Zone' | translate}}</td>
+              <td>{{item.PreviousZoneName}}</td>
+              <td>{{item.ZoneName}}</td>
+            </tr>
+            <tr [hidden]="!this.placedUpdateTypes.includes(item.ActionLogTypeID)">
+              <td>{{'City' | translate}}</td>
+              <td>{{item.PreviousCityName}}</td>
+              <td>{{item.CityName}}</td>
+            </tr>
+            <tr [hidden]="!this.placedUpdateTypes.includes(item.ActionLogTypeID)">
+              <td>{{'Station' | translate}}</td>
+              <td>{{item.PreviousStationName}}</td>
+              <td>{{item.StationName}}</td>
+            </tr>
+            <tr [hidden]="!this.placedUpdateTypes.includes(item.ActionLogTypeID)">
+              <td>{{'necessary accessories' | translate}}</td>
+              <td>{{item.PreviousAccessories}}</td>
+              <td>{{item.Accessories}}</td>
+            </tr>
+            <tr [hidden]="!this.placedUpdateTypes.includes(item.ActionLogTypeID)">
+              <td>{{'ServiceType' | translate}}</td>
+              <td>{{item.PreviousServiceTypeName}}</td>
+              <td>{{item.ServiceTypeName}}</td>
+            </tr>
+            <tr [hidden]="!this.placedUpdateTypes.includes(item.ActionLogTypeID)">
+              <td>{{'Distance' | translate}}</td>
+              <td>{{item.PreviousDistance}}</td>
+              <td>{{item.Distance}}</td>
+            </tr>
+
+            <tr [hidden]="!this.placedUpdateTypes.includes(item.ActionLogTypeID)">
+              <td>{{'ThePrice' | translate}}</td>
+              <td>{{item.PreviousTotalCost}}</td>
+              <td>{{item.TotalCost}}</td>
+            </tr>
+
+            <!-- <tr [hidden]="true">
+              <td>{{'Distance' | translate}}</td>
+              <td>{{item.PreviousIsPaid}}</td>
+              <td>{{item.IsPaid}}</td>
+            </tr> -->
+            <tr [hidden]="true">
+              <td>{{'Distance' | translate}}</td>
+              <td>
+                <!-- <date [date]="item.CreateTime"  [ShowTime]="true"></date>  -->
+                <!-- {{item.CreateTime | date: this.dateFormat}} -->
+              </td>
+              <!-- <td>{{item.PreviousDistance}}</td> -->
+            </tr>
+
+            <tr [hidden]="item.ActionLogTypeID != eventTypesEnums.WO_AddComment">
+              <td>{{'Comment' | translate}}</td>
+              <td></td>
+              <td>{{item.Comment}}</td>
+            </tr>
+            <tr [hidden]="item.ActionLogTypeID != eventTypesEnums.WO_AddComment">
+              <td>{{'SubmittedBy' | translate}}</td>
+              <td></td>
+              <td>{{item.CreatedBy}}</td>
+            </tr>
+            <tr [hidden]="item.ActionLogTypeID != eventTypesEnums.WO_AddComment">
+              <td>{{'SubmittedBy' | translate}}</td>
+              <td></td>
+              <td>
+                <date [date]="item.CreateTime"  [ShowTime]="true"></date> 
+                <!-- {{item.CreateTime | date: this.dateFormat}} -->
+              </td>
+            </tr>
+            
+            <tr>
+            <tr>
+            <tr>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+  </ul>
+
+</div>

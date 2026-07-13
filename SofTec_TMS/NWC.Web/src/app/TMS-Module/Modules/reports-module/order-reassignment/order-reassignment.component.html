@@ -1,0 +1,175 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-md-6  padding-10">
+            <a routerLink="/tms/reports">
+                <span class="page-title">{{ "TMS_Reports" | translate }}</span>
+            </a>
+            <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+            <span class="page-title  currentpage">{{ "OrderReassignmentReport" | translate }}</span>
+        </div>
+    </div>
+</div>
+<div class="inner-div">
+    <!--row 1 -->
+    <div class="row form-row">
+        <!-- Area -->
+        <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "Area" | translate }}</label>
+            <div class="col-sm-8">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerAreaList"
+                    (SearchVAlue)="getAreas($event)" (selectedListChange)="onAreaDDLChanged($event)"
+                    [options]="selectMenuOptions" [selectedList]="bindingModel_Areas" [loading]="Area_loading">
+                </select-menu>
+            </div>
+        </div>
+        
+
+        <!-- city -->
+        <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "City" | translate }}</label>
+            <div class="col-sm-8">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerCityList"
+                    (SearchVAlue)="getCity($event)" (selectedListChange)="onCityDDLChanged($event)"
+                    [options]="selectMenuOptions" [selectedList]="bindingModel_Cities" [loading]="City_Loading">
+                </select-menu>
+            </div>
+        </div>
+
+        <!-- station -->
+        <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "Station" | translate }}</label>
+            <div class="col-sm-8">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerStationList"
+                    (SearchVAlue)="getStations($event)" (selectedListChange)="onStationDDLChanged($event)"
+                    [options]="selectMenuOptions" [selectedList]="bindingModel_Stations"
+                    [loading]="Station_Loading">
+                </select-menu>
+            </div>
+        </div>
+    </div>
+
+    <div class="row form-row">
+        <div class="col-md-3">
+          <label class="col-sm-4 title">{{ "order number" | translate }}</label>
+          <div class="col-sm-8">
+            <input
+              class="form-control"
+              [(ngModel)]="SearchCriteria.OrderNumber"
+              (keyup.enter)="onSearchSubmit()"
+              placeholder="{{ 'order number' | translate }}"
+            />
+          </div>
+        </div>
+        <!-- Date from -->
+        <div class="col-md-4">
+            <label class="col-sm-3 title">{{ "From" | translate }}</label>
+            <div class="col-sm-6">
+                <app-datepicker [(selecteddate)]="SearchCriteria.DateTimeFrom" DateID="dateFrom"></app-datepicker>
+                <!-- <datePicker-gregorian-hijri [(selectedDate)]="SearchCriteria.DateTimeFrom"></datePicker-gregorian-hijri> -->
+            </div>
+            <div class="col-sm-3 padding-0">
+                <app-amazing-timepicker id="timeFrom" [(selectedTime)]="timeFromStr"></app-amazing-timepicker>
+            </div>
+        </div>
+        <!-- Date To -->
+        <div class="col-md-4 pl-4">
+            <label class="col-sm-3 title">{{ "To" | translate }}</label>
+            <div class="col-sm-6">
+                <app-datepicker [(selecteddate)]="SearchCriteria.DateTimeTo" DateID="dateTo"></app-datepicker>
+                <!-- <datePicker-gregorian-hijri [(selectedDate)]="SearchCriteria.DateTimeTo"></datePicker-gregorian-hijri> -->
+            </div>
+            <div class="col-sm-3 padding-0">
+                <app-amazing-timepicker id="timeTo" [(selectedTime)]="timeToStr"></app-amazing-timepicker>
+            </div>
+        </div>
+    </div>
+
+    <div class="row form-row">
+        <div class="col-md-3">
+          <label class="col-sm-4 title">{{ "OldTankerNumber" | translate }}</label>
+          <div class="col-sm-8">
+            <input
+              class="form-control"
+              [(ngModel)]="SearchCriteria.OldTankerCode"
+              (keyup.enter)="onSearchSubmit()"
+              placeholder="{{ 'OldTankerNumber' | translate }}"
+            />
+          </div>
+        </div>
+            <div class="col-md-3">
+                <a
+                  (click)="onexportOrders()"
+                  class="margin-5 pull-right"
+                  title="{{ 'ExportOrders' | translate }}"
+                  (mouseenter)="mouseEnterExcel()"
+                  (mouseleave)="mouseLeaveExcel()"
+                >
+                    <img
+                      width="24px"
+                      *ngIf="!HoverExcel; else excelHover"
+                      src="{{ Excel_Img_Src }}"
+                    />
+                    <ng-template #excelHover>
+                      <img width="24px" src="{{ Excel_Img_Src }}" />
+                    </ng-template>
+                </a>
+                <button class="btn btn-default margin-5 pull-right" (click)="clearSearch()">
+                    {{ "Clear" | translate }}
+                </button>
+                <button class="btn btn-danger margin-5 pull-right" (click)="onSearchSubmit()">
+                    {{ "Search" | translate }}
+                </button>
+            </div>
+        </div>
+    <!-- End Advanced Search box -->
+
+    <!-- fixed header  -->
+    <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row'">
+        <div class="col-md-12 scroll-x-table list-body">
+
+
+            <table class="table   table-striped scrollable-table">
+                <thead>
+                    <tr>
+                        <th class="text-center wid50">{{'order number' | translate}}</th>
+                        <th class="text-center wid50">{{'Area' | translate}}</th>
+                        <th class="text-center wid50">{{'City' | translate}}</th>
+                        <th class="text-center wid50">{{'Station' | translate}}</th>
+                        <th class="text-center wid50">{{'OldTankerNumber' | translate}}</th>
+                        <th class="text-center wid50">{{'OldDriver' | translate}}</th>
+                        <th class="text-center wid100">{{'ReassignmentDate' | translate}}</th>
+                        <th class="text-center wid50">{{'NewTankerNumber' | translate}}</th>
+                        <th class="text-center wid50">{{'NewDriver' | translate}}</th>
+                        <th class="text-center wid50">{{'OrderStatusName' | translate}}</th>
+                        <th class="text-center wid50">{{'Reason' | translate}}</th>
+                        <th class="text-center wid100">{{'CreatedBy' | translate}}</th>
+                    </tr>
+                </thead>
+                <tbody [class]="advancedDiv ? ' mini' : ' '">
+                    <tr class="text-center  d-block p-2 font-4 " *ngIf="!searchResult.Result">
+                        {{"NoDataFound" | translate}}
+                    </tr>
+                    <tr *ngFor="let item of searchResult.Result; let i = index">
+                        <td class="text-center wid50">{{item.OrderNumber }}</td>
+                        <td class="text-center wid50">{{item.Area}}</td>
+                        <td class="text-center wid50">{{item.City}}</td>
+                        <td class="text-center wid50">{{item.Station}}</td>
+                        <td class="text-center wid50">{{item.OldTankerCode}}</td>
+                        <td class="text-center wid50">{{item.OldDriver}}</td>
+                        <td class="text-center wid100">{{item.ReassignmentDate | date: "dd/MM/yyyy hh:mm a"}}</td>
+                        <td class="text-center wid50">{{item.NewTankerCode}}</td>
+                        <td class="text-center wid50">{{item.NewDriver}}</td>
+                        <td class="text-center wid50">{{item.OrderStatusName}}</td>
+                        <td class="text-center wid50">{{item.Reason}}</td>
+                        <td class="text-center wid100">{{item.CreatedBy}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <app-pagination-component [ItemsCount]="searchResult.TotalCount"
+        [(PageSize)]="this.SearchCriteria.PageFilter.PageSize" [pageIndex]="this.SearchCriteria.PageFilter.PageIndex"
+        (PageSizeChange)="onPageSizeChanged($event)" (pageNavigated)="onPageIndexChanged($event)">
+    </app-pagination-component>
+</div>

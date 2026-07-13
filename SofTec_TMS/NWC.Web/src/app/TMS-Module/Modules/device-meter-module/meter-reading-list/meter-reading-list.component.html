@@ -1,0 +1,140 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6  padding-10">
+      <span class="page-title">{{'TMS' | translate}}</span>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title  currentpage">{{'MeterReading' | translate}}</span>
+    </div>
+
+    <div class="col-md-6">
+
+      <!--  -->
+      <a *ngIf="(pagePermission == 'Full Control') || (pagePermission == 'Add and Edit')"
+        title="  {{'AddMeterReading' | translate}}" routerLink="/tms/devicemeter/newReading"> <i
+          class="glyphicon glyphicon-plus-sign margin-5 pull-right"></i>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="inner-div">
+  <div class="row  form-row">
+    <div class="col-md-12 custome-dropdown">
+      <label class="col-md-2 title wid-6">{{'Station' | translate}} </label>
+
+      <search-component class="col-md-3" (searchKeyword)="onContractorNameDDLChanged($event)" [isTypeahead]="true"
+        [typeaheadFunction]='searchContractorsNames.bind(this)' [field]="'Name'"
+        [(_value)]="SearchCriteria.FilterModel.SearchKeyword">
+      </search-component>
+
+      <a class="margin-5 link-route"
+        (click)="showAdvanced()">{{ advancedDiv ?  ('HideAdvancedSearch' | translate) : ('AdvancedSearch'  | translate) }}</a>
+
+
+      <button class="btn btn-default margin-5 pull-right" (click)="clearSearch()">{{ 'Clear'| translate }}</button>
+      <button class="btn btn-danger margin-5 pull-right" (click)="onSearchSubmit()">{{ 'Search' | translate }}</button>
+    </div>
+
+  </div>
+  <!-- Start Advanced Search box -->
+  <div [hidden]="!advancedDiv" id="advanced-search">
+    <!--row 1 -->
+    <div class="row form-row">
+
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{'MeterDeviceSN' | translate }} </label>
+        <div class="col-sm-8">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="DeviceMeterList"
+            (SearchVAlue)="getMetersBasedOnStations($event)" (selectedListChange)="onDeviceMetersDDLChanged($event)"
+            [options]="selectMenuOptions" [selectedList]="bindingModel_DeviceMeters"
+            [loading]="DeviceLoading">
+          </select-menu>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <label class="col-sm-2 title">{{'Period' | translate}} </label>
+        <div class="col-sm-3">
+          <app-datepicker [(selecteddate)]="SearchCriteria.DateTimeFrom" DateID=dateTo placeHolder=From>
+          </app-datepicker>
+        </div>
+        <div class="col-sm-3">
+          <app-datepicker [(selecteddate)]="SearchCriteria.DateTimeTo" DateID=dateTo placeHolder=To>
+          </app-datepicker>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+  <!-- End Advanced Search box -->
+
+
+
+  <!-- table section -->
+  <!-- fixed header  -->
+  <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row' ">
+    <div class="col-md-12 scroll-x-table list-body">
+
+      <!--#region  table loading ********************************************** -->
+      <div [ngClass]="tableLoading ? 'container-gif show' : 'container-gif' ">
+        <div class="uil-ring-css table-loader" style="transform:scale(0.6);">
+          <div></div>
+        </div>
+      </div>
+      <!--#endregion  table loading -->
+
+      <table class="table   table-striped scrollable-table">
+        <thead>
+          <tr>
+            <th class="wid150">{{'stationName' | translate}} </th>
+            <th class="wid150">{{'ConnectorTypeNumber' | translate}}</th>
+            <th class="wid100">{{'MeterDeviceSN' | translate}}</th>
+            <th class="wid100">{{'MeterReading' | translate}}</th>
+            <th class="wid150">{{'ReadingDate' | translate}} </th>
+            <th class="wid100">{{'ReadingTime' | translate}}</th>
+            <th class="wid200">{{'Notes' | translate}}</th>
+            <th class="wid50"> </th>
+          </tr>
+        </thead>
+        <tbody [class]="advancedDiv ? ' mini' : ' '">
+
+          <tr class="text-center d-block p-2 font-4" *ngIf="!searchResult.Result">{{'NoDataFound' | translate}}</tr>
+          <tr *ngFor="let item of searchResult.Result; let i = index">
+
+            <td class="wid150">{{item.StationName}}</td>
+            <td class="wid150 ">{{item.ConnectorTubeNumber}} </td>
+            <td class="wid100">{{item.MeterSerialNumber}}</td>
+            <td class="wid100">{{item.MeterReading}}</td>
+            <td class="wid150">
+              <date [date]="item.ReadingTime"></date>
+            </td>
+            <td class="wid100">
+              <date [date]="item.ReadingTime" [ShowTime]="true" [ShowDate]="false"></date>
+            </td>
+            <td class="wid200">{{item.ReadingComment}}</td>
+
+            <td class="wid50">
+              <a (click)="deleteReading(item)" title="  {{'Delete' | translate}}"
+                *ngIf="pagePermission == 'Full Control'">
+                <i class="glyphicon glyphicon-trash"></i>
+              </a>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+
+  </div>
+  <app-pagination-component [ItemsCount]='searchResult.TotalCount'
+    [(PageSize)]="this.SearchCriteria.FilterModel.PageFilter.PageSize"
+    [pageIndex]="this.SearchCriteria.FilterModel.PageFilter.PageIndex" (PageSizeChange)="onPageSizeChanged($event)"
+    (pageNavigated)="onPageIndexChanged($event)">
+  </app-pagination-component>
+</div>

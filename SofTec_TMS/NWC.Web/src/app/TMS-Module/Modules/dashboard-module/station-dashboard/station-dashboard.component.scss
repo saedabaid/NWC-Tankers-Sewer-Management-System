@@ -1,0 +1,66 @@
+$green-color: forestgreen;
+$red-color: indianred;
+$blue-color: dodgerblue;
+
+.station-status {
+  font-size: small;
+  > span {
+    padding: 0 8px;
+  }
+  .online {
+    color: $green-color;
+  }
+  .offline {
+    color: gray;
+  }
+}
+.section-v-splitter {
+  width: 1px;
+  margin: -1px;
+  background-color: #000;
+}
+.section-h-splitter {
+  height: 1px;
+  background-color: #000;
+}
+.status-section {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  .status-div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 20px;
+    cursor: default;
+    .status-icon {
+      font-size: 15px;
+    }
+    .status-name {
+      padding: 3px 0;
+    }
+    .status-value {
+      font-size: 14px;
+      color: #000;
+    }
+  }
+}
+.table-section-title {
+  font-size: small;
+}
+.scrollable-table thead,
+.scrollable-table tfoot {
+  width: 100%;
+}
+.scrollable-table tbody {
+  height: unset;
+}
+.green-color {
+  color: $green-color;
+}
+.red-color {
+  color: $red-color;
+}
+.blue-color {
+  color: $blue-color;
+}

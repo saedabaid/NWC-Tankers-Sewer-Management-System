@@ -1,0 +1,12 @@
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:16/07/2020 6:31:52 PM
+
+----------------------------------------GetMatchedWorkOrderToAssign---------------------------------------- Time:16/07/2020 06:31:53 م
+
+Get available vehicle by ID - VehicleID: 1a5ff823-2f6b-4e45-b901-84d01356a144 - StationID: dcc5f6b2-9bd0-43ee-888c-37aab0f7dcc9 Time:16/07/2020 06:31:54 م
+
+Get vehicle classes - Classes Count: 1 Time:16/07/2020 06:31:54 م
+
+Get WorkOrder - dtFrom: 16/07/2020 06:31:54 م Time:16/07/2020 06:31:54 م
+
+Get WorkOrder - Order List: null or empty Time:16/07/2020 06:31:54 م
+

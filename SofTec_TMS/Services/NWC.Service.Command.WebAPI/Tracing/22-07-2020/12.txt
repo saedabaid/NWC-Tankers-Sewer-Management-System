@@ -1,0 +1,62 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:22/07/2020 12:48:26 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:22/07/2020 12:48:26 م
+
+CreateWorkOrder Time:22/07/2020 12:48:26 م
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5537,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:22/07/2020 12:48:26 م
+
+Valid Time:22/07/2020 12:48:27 م
+
+Create WorkOrder: Partially Success Time:22/07/2020 12:48:28 م
+
+customerAccount: 5537 Time:22/07/2020 12:48:29 PM
+
+customerLocation: 5537 Time:22/07/2020 12:48:29 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:22/07/2020 12:48:29 PM
+
+OrderNumber: 9076759917 Time:22/07/2020 12:48:29 PM
+
+workOrderID: 46016 Time:22/07/2020 12:48:29 PM
+
+scheduledDeliveryTime: 22/07/2020 12:48:26 PM Time:22/07/2020 12:48:29 PM
+
+customerLocationClassID: 1 Time:22/07/2020 12:48:29 PM
+
+serviceTypeID: 1 Time:22/07/2020 12:48:29 PM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:22/07/2020 12:48:29 PM
+
+orderQuantity: 20 Time:22/07/2020 12:48:29 PM
+
+Net Cost: -1 Time:22/07/2020 12:48:30 PM
+
+Create WorkOrder: Success Time:22/07/2020 12:48:30 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:22/07/2020 12:48:57 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:22/07/2020 12:48:57 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 9076759917 - TransporterID 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransportrStatus: 0 Time:22/07/2020 12:48:58 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:22/07/2020 12:48:58 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:22/07/2020 12:48:58 PM
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 9076759917 - TransporterID: 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransporterStatus: 11 Time:22/07/2020 12:48:58 PM
+
+Start Inserting Driver SMS: OrderNo:9076759917, VehicleId:4723c36e-f122-4b36-a24f-52f231afa4e5, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:22/07/2020 12:48:58 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 9076759917 - TransporterID: 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransporterStatus: 11 Time:22/07/2020 12:48:58 PM
+
+SMS: تم تخصيص رقم الطلب 9076759917 ويمكن التواصل على جوال العميل 032453245345 موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:22/07/2020 12:48:59 PM
+
+Start Inserting Customer SMS: OrderNo:9076759917, VehicleId:4723c36e-f122-4b36-a24f-52f231afa4e5, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:22/07/2020 12:48:59 PM
+
+SMS: عميلنا العزيز: نفيدكم بتخصيص ناقلة مياه لطلبكم رقم 9076759917 Time:22/07/2020 12:48:59 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"9076759917","cisDivision":19,"orderStatus":4,"updateDateTime":"22-07-2020 12:49:00","parameters":[{"parameterName":"TMSID","parameterValue":"9076759917"},{"parameterName":"COMMENT","parameterValue":""}]} Time:22/07/2020 12:49:00 PM
+
+----------------------------------------AssignWorkOrder - Denormalizer - End---------------------------------------- Time:22/07/2020 12:49:21 PM
+

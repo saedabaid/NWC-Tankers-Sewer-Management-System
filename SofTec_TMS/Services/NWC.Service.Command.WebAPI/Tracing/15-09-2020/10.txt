@@ -1,0 +1,24 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 10:17:56 AM
+
+----------------------------------------GetMatchedWorkOrderToAssign---------------------------------------- Time:15/09/2020 10:17:57 ص
+
+Get available vehicle by ID - VehicleID: d78b4cf2-dd7a-4dab-bc35-b9ae4a453c72 - StationID: b9f8082e-2add-4cc7-9aaa-3d95e88b0344 Time:15/09/2020 10:17:57 ص
+
+Get zone vehicle landmark - StationID: b9f8082e-2add-4cc7-9aaa-3d95e88b0344 - ZoneID: 1291 Time:15/09/2020 10:17:57 ص
+
+Check restricted zone vehicle type - VehicleTypeID: 0378b6b4-5430-ea11-80cf-00155d0bce06 - Is Restricted: False Time:15/09/2020 10:17:57 ص
+
+Get vehicle classes - Classes Count: 4 Time:15/09/2020 10:17:57 ص
+
+Get WorkOrder - dtFrom: 15/09/2020 10:14:57 ص Time:15/09/2020 10:17:57 ص
+
+Get WorkOrder - Order List: null or empty Time:15/09/2020 10:17:58 ص
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 10:19:04 AM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 10:19:17 AM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 10:19:33 AM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 10:19:46 AM
+

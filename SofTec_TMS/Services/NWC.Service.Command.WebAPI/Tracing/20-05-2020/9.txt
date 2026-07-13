@@ -1,0 +1,32 @@
+contract == null: False Time:20/05/2020 9:32:45 AM
+
+contractID: 10040 Time:20/05/2020 9:32:45 AM
+
+contractStationTariaff == null: False Time:20/05/2020 9:32:45 AM
+
+contractStationTariaffID: 226 Time:20/05/2020 9:32:45 AM
+
+totalQuantityCost: 500.0000 Time:20/05/2020 9:32:45 AM
+
+extraKMCost: 300.00000000 Time:20/05/2020 9:32:45 AM
+
+totalCost: 800.00000000 Time:20/05/2020 9:32:45 AM
+
+customerLocation: 104 Time:20/05/2020 9:33:25 AM
+
+workOrderID: 45514 Time:20/05/2020 9:33:25 AM
+
+scheduledDeliveryTime: 20/05/2020 9:33:24 AM Time:20/05/2020 9:33:25 AM
+
+customerLocationClassID: 1 Time:20/05/2020 9:33:25 AM
+
+serviceTypeID: 1 Time:20/05/2020 9:33:25 AM
+
+zoneStation: ae5e31c9-1ac4-4eb4-beec-f764e955628d Time:20/05/2020 9:33:25 AM
+
+orderQuantity: 10 Time:20/05/2020 9:33:25 AM
+
+contract == null: False Time:20/05/2020 9:33:25 AM
+
+contractID: 10039 Time:20/05/2020 9:33:25 AM
+

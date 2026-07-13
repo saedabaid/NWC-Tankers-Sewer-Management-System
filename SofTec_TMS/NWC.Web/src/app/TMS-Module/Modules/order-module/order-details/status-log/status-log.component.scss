@@ -1,0 +1,151 @@
+.status-list {
+  list-style: none;
+
+  .transition-arrow {
+    height: 20px;
+    position: relative;
+    top: 50%;
+    margin-top: -10px;
+    display: inline-block;
+    width: 10%;
+    margin-left: 10px;
+
+    .arrow-tail {
+      background-color: #71afe5;
+      height: 8px;
+      width: 100%;
+      margin-top: -4px;
+      float: left;
+      position: relative;
+      top: 50%;
+    }
+    .arrow-head {
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid #71afe5;
+      position: absolute;
+      margin-left: 0%;
+    }
+  }
+}
+
+.workitemlogcontrol .readonly-content-container {
+  position: relative;
+}
+
+.wit-state-transition-graph-unpinned-container {
+  position: relative;
+}
+
+.wit-state-transition-graph {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 4px;
+  z-index: 0;
+  position: relative;
+}
+
+.transition-and-state-container-main {
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.state-transition-graph-spacer {
+  width: 327px;
+}
+.transition-container {
+  margin-left: 30px;
+  color: #666;
+}
+.transition-arrow {
+  height: 20px;
+  position: relative;
+  top: 50%;
+  margin-top: -13px;
+}
+.arrow-tail {
+  background-color: #71afe5;
+  height: 8px;
+  width: 90%;
+  margin-top: -4px;
+  float: left;
+  position: relative;
+  top: 50%;
+}
+.arrow-head {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #71afe5;
+  position: absolute;
+  margin-left: 90%;
+}
+.transition-reason {
+  position: relative;
+  bottom: 20px;
+}
+.transition-change-info {
+  position: relative;
+}
+.identity-view-control {
+  position: relative;
+  height: 20px;
+}
+.transition-change-info > .identity-view-control > span {
+  position: relative;
+  left: 0;
+  max-width: 280px;
+  display: inline-block;
+  top: 10px;
+  font-size: 10px;
+  white-space: pre-line;
+}
+
+.transition-change-info-date {
+  left: 20px;
+  position: absolute;
+  bottom: 15px;
+  width: 150px;
+  text-align: left;
+}
+.transition-container,
+.state-container {
+  float: left;
+  height: 75px;
+  text-align: center;
+  padding: 4px;
+  position: relative;
+  width: 125px;
+}
+
+.state {
+  background-color: #deecf9;
+  padding: 5px 10px;
+  position: relative;
+  top: 50%;
+  margin-top: -17.5px;
+  width: 125px;
+}
+
+// .transition-and-state-container:last-of-type .transition-container {
+//   display: none;
+// }
+
+.rtl {
+  .transition-container {
+    margin-right: 30px !important;
+  }
+  .transition-container,
+  .state-container {
+    float: right !important;
+  }
+  .arrow-head {
+    border-right: 10px solid #71afe5 !important;
+    border-left: 0px solid #71afe5 !important;
+    margin-right: 95% !important;
+  }
+}

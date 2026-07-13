@@ -1,0 +1,23 @@
+﻿using System;
+
+namespace NWC.DTO.Models
+{
+    public class BranchSettingDTO
+    {
+        public System.Guid Id { get; set; }
+        public string name { get; set; }
+        public string code { get; set; }
+        //public bool IsSubBranch { get; set; }
+        //public System.Guid SubId { get; set; }
+        public Nullable<bool> ShowPrice { get; set; }
+        public Nullable<bool> ShowInvoice { get; set; }
+        public Nullable<int> TankerQuotaNo { get; set; }
+        public Nullable<bool> ShowCustomerClassEntryGate { get; set; }
+        public Nullable<int> AutoCancelationNewOrdersHours { get; set; }
+        public Nullable<int> AutoCancelationOnHoldOrdersHours { get; set; }
+        public Nullable<bool> ValidationApprovalRequired { get; set; }
+        public Nullable<int> ApprovalLevelsCount { get; set; }
+        public Nullable<bool> RequiresPayment { get; set; }
+        public Nullable<bool> ValidateConfermationCode { get; set; }
+    }
+}

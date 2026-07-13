@@ -1,0 +1,122 @@
+<div class="bg-gra p-3 col-lg-12">
+
+    <!-- Search row 1 -->
+    <div class="row bg-white pb-2  ">
+      <!-- Area -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "Area" | translate }} </label>
+        <div class="col-sm-8">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerAreaList"
+                       (SearchVAlue)="getAreas($event)" (selectedListChange)="onAreaDDLChanged($event)" [options]="selectMenuOptions"
+                       [selectedList]="bindingModel_Areas" [loading]="Area_loading">
+          </select-menu>
+        </div>
+      </div>
+  
+      <!-- city -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "City" | translate }}</label>
+        <div class="col-sm-8">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerCityList"
+                       (SearchVAlue)="getCity($event)" (selectedListChange)="onCityDDLChanged($event)" [options]="selectMenuOptions"
+                       [selectedList]="bindingModel_Cities" [loading]="City_Loading">
+          </select-menu>
+        </div>
+      </div>
+  
+      <!-- station -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "Station" | translate }}</label>
+        <div class="col-sm-8">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerStationList"
+                       (SearchVAlue)="getStations($event)" (selectedListChange)="onStationDDLChanged($event)"
+                       [options]="selectMenuOptions" [selectedList]="bindingModel_Stations" [loading]="Station_Loading">
+          </select-menu>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Search row 2 -->
+    <div class="row bg-white  pb-4">
+      <!-- Service type-->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "ServiceType" | translate }}</label>
+        <div class="col-sm-8">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerServiceList"
+                       (selectedListChange)="onServiceTypeDDLChanged($event)" [options]="selectMenuOptions2"
+                       [selectedList]="bindingModel_ServiceTypes">
+          </select-menu>
+        </div>
+      </div>
+  
+      <!-- Date from -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "From" | translate }}</label>
+        <div class="col-sm-8">
+          <app-datepicker [(selecteddate)]="SearchCriteria.DateFrom" DateID="dateFrom"></app-datepicker>
+        </div>
+      </div>
+      <!-- Date To -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "To" | translate }}</label>
+        <div class="col-sm-8">
+          <app-datepicker [(selecteddate)]="SearchCriteria.DateTo" DateID="dateTo"></app-datepicker>
+        </div>
+      </div>
+
+      <!-- buttons -->
+      <div class="col-md-3">
+        <button class="btn btn-default margin-5 pull-right" (click)="clearSearch()">
+          {{ "Clear" | translate }}
+        </button>
+        <button class="btn btn-danger margin-5 pull-right" (click)="onSearchSubmit()">
+          {{ "Search" | translate }}
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <!-- first row -->
+        <div class="row text-center p-3 mb-2">
+          <div class="col-6">
+            <app-amr-data></app-amr-data>
+          </div>
+          <div class="col-6 border-left border-dark">
+            <main-vehicle-data></main-vehicle-data>
+          </div>
+        </div>
+        <hr class="border-dark" />
+
+        <!-- second row -->
+        <div class="row text-center p-3 mb-2">
+          <div class="col-6">
+            <vehicle-inside-data></vehicle-inside-data>
+          </div>
+          <div class="col-6 border-left border-dark">
+            <vehicle-outside-data></vehicle-outside-data>
+          </div>
+        </div>
+        <hr class="border-dark" />
+
+        <!-- third row -->
+        <div class="row text-center p-3 mb-2">
+          <div class="col-8 offset-2">
+            <app-order-data></app-order-data>
+          </div>
+        </div>
+        <hr class="border-dark" />
+
+        <!-- data table -->
+        <div class="row text-center p-3 mb-2">
+          <div class="col-6">
+            <table-price-data></table-price-data>
+          </div>
+          <div class="col-6 border-left border-dark">
+            <table-day-order></table-day-order>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>

@@ -1,0 +1,94 @@
+SendAsync - Headers Count: 13 Time:31/08/2020 6:13:29 PM
+
+SendAsync - Headers Count: 13 Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers Token: haEXgDE-Y8veTPIx64X5E9_RdPMCPhCHH81KYFDZ_dNMxQ0QigfsArbXIVbBjLvMa8UHT5bl2UXn44MRW_LF7Qo096RIKGuofQmy3-WGO7Go56y2GO_pGGrxzS0sstRTnW9tmBDDyhgwNBYP_cm5FMZtwwq_ayYyRPqqPadwnAc Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers host: localhost:7295 Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers AcceptLanguage: en-US, en; q=0.9 Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers Token: en-US, en; q=0.9 Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers key: Connection Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers key: Accept Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers key: Accept-Encoding Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers key: Accept-Language Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers key: Authorization Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers key: Host Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers key: Referer Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers key: User-Agent Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers key: Accept-Language Time:31/08/2020 6:13:30 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers key: Authorization Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers key: Host Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers key: Referer Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers key: Sec-Fetch-Site Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers key: lang Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers key: Origin Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers key: Sec-Fetch-Site Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers key: Sec-Fetch-Mode Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers key: Sec-Fetch-Dest Time:31/08/2020 6:13:31 PM
+
+SendAsync - Headers valu: System.String[] Time:31/08/2020 6:13:31 PM
+
+SendAsync - Authorization Token: haEXgDE-Y8veTPIx64X5E9_RdPMCPhCHH81KYFDZ_dNMxQ0QigfsArbXIVbBjLvMa8UHT5bl2UXn44MRW_LF7Qo096RIKGuofQmy3-WGO7Go56y2GO_pGGrxzS0sstRTnW9tmBDDyhgwNBYP_cm5FMZtwwq_ayYyRPqqPadwnAc Time:31/08/2020 6:13:31 PM
+
+SendAsync - Authorization Token: haEXgDE-Y8veTPIx64X5E9_RdPMCPhCHH81KYFDZ_dNMxQ0QigfsArbXIVbBjLvMa8UHT5bl2UXn44MRW_LF7Qo096RIKGuofQmy3-WGO7Go56y2GO_pGGrxzS0sstRTnW9tmBDDyhgwNBYP_cm5FMZtwwq_ayYyRPqqPadwnAc Time:31/08/2020 6:13:31 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:31/08/2020 6:13:33 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:31/08/2020 6:13:33 PM
+

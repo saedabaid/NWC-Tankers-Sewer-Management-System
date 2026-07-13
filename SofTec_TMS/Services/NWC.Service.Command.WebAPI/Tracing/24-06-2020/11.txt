@@ -1,0 +1,48 @@
+--------------------------------------------------------------------------------------------------------------------------- Time:24/06/2020 11:16:40 ص
+
+CreateWorkOrder Time:24/06/2020 11:16:40 ص
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":5,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5491,"StationID":"ae5e31c9-1ac4-4eb4-beec-f764e955628d","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:24/06/2020 11:16:41 ص
+
+Valid Time:24/06/2020 11:16:41 ص
+
+Create WorkOrder: Partially Success Time:24/06/2020 11:16:43 ص
+
+customerAccount: 5491 Time:24/06/2020 11:16:46 AM
+
+customerLocation: 5491 Time:24/06/2020 11:16:46 AM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:24/06/2020 11:16:46 AM
+
+OrderNumber: 9854134661 Time:24/06/2020 11:16:46 AM
+
+workOrderID: 45934 Time:24/06/2020 11:16:46 AM
+
+scheduledDeliveryTime: 24/06/2020 11:16:41 AM Time:24/06/2020 11:16:46 AM
+
+customerLocationClassID: 1 Time:24/06/2020 11:16:46 AM
+
+serviceTypeID: 1 Time:24/06/2020 11:16:46 AM
+
+zoneStation: ae5e31c9-1ac4-4eb4-beec-f764e955628d Time:24/06/2020 11:16:46 AM
+
+orderQuantity: 5 Time:24/06/2020 11:16:46 AM
+
+contract == null: False Time:24/06/2020 11:16:46 AM
+
+contractID: 10040 Time:24/06/2020 11:16:46 AM
+
+contractStationTariaff == null: False Time:24/06/2020 11:16:47 AM
+
+contractStationTariaffID: 367 Time:24/06/2020 11:16:47 AM
+
+totalQuantityCost: 250.0000 Time:24/06/2020 11:16:47 AM
+
+extraKMCost: 2575.00000000 Time:24/06/2020 11:16:47 AM
+
+totalCost: 2825.00000000 Time:24/06/2020 11:16:47 AM
+
+Net Cost: 2825.00000000 Time:24/06/2020 11:16:47 AM
+
+Create WorkOrder: Success Time:24/06/2020 11:16:48 AM
+

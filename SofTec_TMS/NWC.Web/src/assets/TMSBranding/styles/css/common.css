@@ -1,0 +1,89 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+  white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+  max-width: 280px;
+}
+/*================================================*/
+
+.Dtable {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 0px;
+  display: table;
+  border: 1px solid #ccc; }
+  .Dtable thead {
+    font-size: 11pt; }
+  .Dtable td:last-child {
+    text-align: center; }
+  .Dtable td {
+    border-top: 1px solid #ccc;
+    padding: 15px;
+    font-size: 9pt;
+    font-size: 11pt;
+    font-weight: bold;
+    color: #666; }
+    .Dtable td.icon-link a {
+      font-size: 12pt;
+      color: #666; }
+    .Dtable td a {
+      font-size: 8pt; }
+    .Dtable td .table-link {
+      font-size: 16pt; }
+      .Dtable td .table-link .glyphicon {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        font-family: 'Glyphicons Halflings';
+        font-style: unset; }
+    .Dtable td .btn {
+      width: 100%; }
+  .Dtable thead tr:first-child {
+    background-color: #5f7583;
+    color: #fff;
+    vertical-align: middle; }
+  .Dtable thead th {
+    padding: 15px; }
+  .Dtable .border-none {
+    border: none; }
+  .Dtable .pop-link {
+    color: #00a8d4;
+    font-size: 9pt; }
+  .Dtable.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f7f7f7;
+    color: #333; }
+    .Dtable.table-striped > tbody > tr:nth-of-type(odd).icon-link a {
+      color: #333; }
+
+.pagination {
+  margin: 0;
+  background: #eee;
+  padding: 0 10px;
+  border-radius: 0 0 4px 4px;
+  width: 100%; }
+  .pagination .pagination-options {
+    float: right;
+    margin: 20px 0; }
+    .pagination .pagination-options select {
+      width: 60px;
+      display: inline-block; }
+
+/*# sourceMappingURL=common.css.map */

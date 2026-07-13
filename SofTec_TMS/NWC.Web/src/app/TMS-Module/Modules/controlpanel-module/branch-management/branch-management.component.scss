@@ -1,0 +1,137 @@
+.branch-management {
+  .btn {
+    position: relative;
+    display: flex;
+    padding-left: 0 !important;
+    &.collapsed{
+      & > .icon i.fa-minus {
+        top: 110%;
+      }
+    }
+    &:not(.collapsed) {
+      & > .icon i.fa-plus {
+        top: -20px;
+      }
+    }
+      .icon {
+      width: 30px;
+      position: relative;
+      height: 18px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      i {
+        position: absolute;
+        top: 10%;
+        transition: all ease-in-out 0.2s;
+      }
+    }
+  }
+  .level-areas {
+    border: 1px solid #000;
+    border-radius: 5px;
+
+    [class^="level"]{
+      padding-left: 10px;
+    }
+  }
+}
+
+
+.level-landmarks {
+  ul {
+    padding-left: 15px;
+    padding-right: 0px;
+    li {
+      font-size: 1rem;
+
+      list-style: none;
+      padding: 5px 0px 5px 10px;
+      margin-bottom: 10px;
+      position: relative;
+      border-left: 2px solid #000;
+      border-radius: 3px;
+      &:before {
+        content: "";
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        background: #000;
+        width: 3rem;
+        position: absolute;
+        opacity: 0;
+      }
+    }
+  }
+}
+.item {
+  background-color: white;
+  transition: background ease-in-out 0.2;
+  border-radius: 5px;
+  &:hover {
+    background-color: #f6f6f6;
+  }
+}
+.actions {
+  a {
+    padding: 3px 5px;
+    margin-left: 3px;
+    i {
+      padding: 0 5px 0 3px;
+    }
+  }
+}
+.delete-btn {
+  color: red;
+}
+.add-btn, .edit-btn {
+  color: white;
+}
+.add-btn {
+  background: blue;
+}
+.edit-btn {
+  background-color: green;
+}
+
+
+[dir="rtl"] {
+  .branch-management {
+    .btn {
+      padding-left: 10px !important;
+      padding-right: 0 !important;
+    }
+    .level-areas {
+      [class^="level"]{
+        padding-left: 0px;
+        padding-right: 10px;
+      }
+    }
+  }
+
+
+  .level-landmarks {
+    ul {
+      padding-left: 0px;
+      padding-right: 15px;
+      li {
+        padding: 5px 10px 5px 0px;
+        border-left-width: 0px;
+        border-right: 2px solid #000;
+        &:before {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+
+
+  .actions {
+    a {
+      margin-right: 3px;
+      margin-left: 0;
+    }
+  }
+}

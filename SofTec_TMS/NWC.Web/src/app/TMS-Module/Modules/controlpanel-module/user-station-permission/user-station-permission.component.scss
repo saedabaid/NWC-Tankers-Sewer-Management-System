@@ -1,0 +1,39 @@
+.scroll-x-table {
+  table {
+    th {
+      color: #fff;
+    }
+
+    tbody{
+      height: auto;
+      max-height: 355px;
+    }
+    // tbody {
+    //   height: 355px;
+    //   max-height: 355px;
+    // }  .... Haitham Changes
+  }
+
+  .table-loader {
+    margin: 9% auto;
+  }
+}
+
+.wid100 {
+  width: 100px;
+}
+.wid10 {
+  width: 10px;
+}
+
+.wid130 {
+  width: 130px;
+}
+
+.wid200 {
+  width: 250px;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}

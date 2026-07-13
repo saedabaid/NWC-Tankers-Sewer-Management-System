@@ -1,0 +1,137 @@
+@import "./../../../../../../assets/fmsBranding/styles/sass/rtl.scss";
+
+.title {
+  white-space: nowrap;
+
+  text-transform: capitalize;
+  padding-top: 7px;
+}
+.inner-div .form-row {
+  margin-bottom: 5px;
+}
+.box {
+  padding: 5px 25px;
+
+  h5 {
+    font-weight: 600;
+    color: #d8272d;
+  }
+
+  .box-body {
+    width: 100%;
+    background: #e8e8e8;
+    padding: 15px 25px;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    margin: 5px 0;
+
+    .pad-left-0 {
+      padding-left: 0;
+      padding-right: 15px;
+    }
+
+    .cs-input {
+      margin: 0 1px;
+      max-width: 79px !important;
+    }
+  }
+}
+.table-heigh {
+  margin-top: 5px;
+}
+.scroll-x-table {
+  overflow-x: auto;
+  flex: none;
+  max-width: none;
+
+  table {
+    width: auto;
+
+    tbody {
+      height: auto;
+      overflow: auto;
+      overflow-x: hidden;
+      display: block;
+      width: 100%;
+    }
+
+    td {
+      font-size: 9pt;
+      font-weight: bold;
+      white-space: pre-line;
+      padding: 8px 20px !important;
+
+      //   padding-bottom: 0px !important;
+      //   padding-top: 0px !important;
+      vertical-align: unset;
+      text-transform: capitalize;
+    }
+
+    th {
+      padding: 5px 20px !important;
+      background-color: #5f7583;
+      border-color: #5f7583;
+      color: #ffffff;
+    }
+  }
+
+  .wid200 {
+    width: 200px;
+    overflow: hidden;
+  }
+
+  .wid100 {
+    width: 104px;
+    overflow: hidden;
+  }
+
+  .wid50 {
+    width: 50px;
+    overflow: hidden;
+  }
+
+  .wid150 {
+    width: 150px;
+    overflow: hidden;
+  }
+}
+
+.mrg-top-5 {
+  margin-top: 4px;
+}
+@media (max-width: 1500px) {
+  .btn-default {
+    height: 29px !important;
+  }
+}
+@media (min-width: 1900px) {
+  .box {
+    .box-body {
+      .pad-left-0 {
+        padding-left: 0;
+        padding-right: 15px;
+      }
+
+      .cs-input {
+        max-width: 128px !important;
+      }
+    }
+  }
+  .table-heigh {
+    margin-top: 15px;
+  }
+  .scroll-x-table {
+    table {
+      tbody {
+        height: auto;
+      }
+    }
+  }
+}
+
+.rtl {
+  .box .box-body .pad-left-0 {
+    padding-right: 0;
+    padding-left: 15px;
+  }
+}

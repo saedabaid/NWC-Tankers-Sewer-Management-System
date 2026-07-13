@@ -1,0 +1,22 @@
+<div class="modal-header">
+    <h5>{{'Add Comment' | translate}}</h5>
+</div>
+
+<div class="modal-body ">
+
+    <div class="row inputs-data">
+        <div class="col-md-12">
+              <div class="form-group">
+                    <label>{{'comment' | translate}} <span class="required">*</span></label>
+                    <textarea class="form-control" rows="3" (change)="doTextareaValueChange($event)"></textarea>
+                </div>
+        </div>
+    </div>
+      
+</div>
+      
+<div class="modal-footer">
+    <button class="btn btn-danger" (click)="save()"> {{'save' | translate}} </button>
+    <button class="btn btn-default" (click)="closePopup()"> {{'cancel' | translate}}</button>
+</div>
+  

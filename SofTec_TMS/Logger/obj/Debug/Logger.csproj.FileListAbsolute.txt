@@ -1,0 +1,6 @@
+G:\SofTec_TMS\SofTec_TMS\Logger\bin\Debug\Logger.dll
+G:\SofTec_TMS\SofTec_TMS\Logger\bin\Debug\Logger.pdb
+G:\SofTec_TMS\SofTec_TMS\Logger\obj\Debug\Logger.csproj.AssemblyReference.cache
+G:\SofTec_TMS\SofTec_TMS\Logger\obj\Debug\Logger.csproj.CoreCompileInputs.cache
+G:\SofTec_TMS\SofTec_TMS\Logger\obj\Debug\Logger.dll
+G:\SofTec_TMS\SofTec_TMS\Logger\obj\Debug\Logger.pdb

@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.table td {
+  white-space: pre-line;
+}
+
+a {
+  font-size: 1.4em !important;
+}
+
+
+@page {
+  /* size: auto;  */
+  /* auto is the initial value */
+
+  /* this affects the margin in the printer settings */
+  margin: 0;
+}
+
+@media all {
+  .pageBreak {
+    display: none;
+  }
+}
+
+@media print {
+  .pageBreak {
+    display: block;
+    page-break-before: always;
+
+    /* ----- and add more propertys to Cutter Styling -------- */
+  }
+}
+
+   .list-area {
+
+    border-bottom: 0 !important;}
+
+
+
+
+
+
+
+
+ .fade.in {
+opacity: 1 !important;
+}
+
+.modal.in .modal-dialog {
+-webkit-transform: translate(0, 0) !important;
+-o-transform: translate(0, 0) !important;
+transform: translate(0, 0) !important;
+}
+
+.modal-backdrop .fade .in {
+opacity: 0.5 !important;
+}
+
+.modal-backdrop.fade {
+opacity: 0.5 !important;
+}
+
+.fade {
+    transition: opacity .15s linear;
+        transition: all 0.5s ease-in-out !important;
+
+    opacity: 1.5 !important;
+    z-index: 99 !important;
+}
+
+.bs-datepicker {
+   z-index: 100 !important;
+}
+angular2-multiselect .pure-checkbox label {
+   color: #212529 !important;
+}
+.pure-checkbox input[type=checkbox]:disabled+label {
+      color: #212529 !important;
+
+}
+.order-amazing .time-control{
+  width: 100%;
+}
+
+

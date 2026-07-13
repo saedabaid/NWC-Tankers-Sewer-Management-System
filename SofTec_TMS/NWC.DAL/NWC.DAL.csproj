@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C4462A1-46DC-45E8-A89C-9E885DCB3667}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NWC.DAL</RootNamespace>
+    <AssemblyName>NWC.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NWCEntities\aspnet_Membership.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\aspnet_Roles.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\aspnet_Users.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\Branch.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\ContactPerson.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\ELMTransaction.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\ELM_Tanker.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\Landmark.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\Modules.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWCContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NWCContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWCContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWCContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NWCContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_Accessory.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ActionLogType.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_BalanceUnit.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_BranchSetting.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ComplaintCategory.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ComplaintPriority.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ComplaintStatus.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContactPerson.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_Contract.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractAccessory.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractAttachment.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_Contractor.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractorAttachment.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractPrice.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractStations.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractStationViolation.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractStatus.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractTariff.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractTerminationReason.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractTerms.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractTermsViolationCancelReason.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractTermsViolations.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractTermsViolationsInvoices.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractTermsViolationsLogs.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractTermsViolationStatus.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractType.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ContractViolationAttachment.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_Customer.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_CustomerAccount.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_CustomerLocation.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_CustomerLocationBalance.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_CustomerLocationCategory.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_CustomerLocationClass.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_CustomerLocationPriority.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_CustomerLocationStatus.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_CustomerSMS.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_DeassignReason.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_DeferredWorkOrder.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_DeferredWorkOrderStatus.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_DeviceMeter.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_DeviceMeterReading.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_DriverSMS.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_Event.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_EventType.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_EventWorkOrder.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_Hayat_OrderStatusLog.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_PaymentType.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_PersonalIDType.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_RestrictedZoneVehicleType.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ServiceType.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_SoqyaSchedules.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_StateWorkOrder.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_StationCustomerLocationClass.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_StationDefaultTankers.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_StationOwnership.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_StationServiceType.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_StationStatus.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_StationWaterSource.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_StatusReason.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_TanckerCapacity.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_TermsCategory.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_TermsValueUnits.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_UserLandmarkPermission.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_UserServicePermission.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_VehicleAccessory.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_VehicleCustomerLocationClass.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_VehicleLog.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_VehicleLogType.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ViolationPaymentStatus.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ViolationsApprovals.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ViolationsApprovalsLogs.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_WorkOrderAccessory.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_WorkOrderCategory.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_WorkOrderComment.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_WorkOrderComplaint.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_WorkOrderInvoiceStatus.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_WorkOrderLog.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_WorkOrderPlannedRout.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_WorkOrderStatus.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_WorkOrderTransaction.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_Zone.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\NWC_ZoneStations.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\Pages.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\Permit.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\PermitDeclarationAttachment.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\PermitDetectionformAttachment.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\PermitOtherFIleAttachment.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\sp_NWC_DashboardOrdersCountsViceExcuteTime_Result.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\sp_NWC_GetAssignableVehicles_Result.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\sp_NWC_GetAssignableWorkOrders_Result.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\sp_NWC_Report_OrderReassignment_Result.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\sp_NWC_Report_VehiclePerformance_Result.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\sp_NWC_WorkOrderList_Result.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\Staff.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\StaffRoleCategory.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\StaffRoleModulePermissions.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\StaffRoles.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\SubscriberAdminSettings.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\Transporter.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\TransporterBrand.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\TransporterGroup.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\TransporterManufacturer.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\TransporterProductionYear.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\TransporterStatus.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\TransporterType.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\Transporter_Staff.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\UserBranchPermission.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_AssignableVehicles.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_AvailableTankerSizes.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_BranchSetting.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ChangesLogs.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ChangesLogsLocationData.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ContractAccessory.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ContractList.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ContractorList.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ContractPriceList.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ContractStations.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ContractTariff.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ContractTerms.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ContractTermsViolations.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ContractTermsViolationsInvoices.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ContractTermsViolationsLogs.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ContractWorkOrderAccessory.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_CustomerAccount.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_CustomerAccountCity.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_CustomerAccountZone.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_DeviceMeterReading.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_LandmarkNWCSettings.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_PrintCustomerInvoice.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_PrintDriverInvoice.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_PrintVehicleInvoice.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_Report_DailyOrderDetails.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_Report_DailyOrderSummary.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_Report_OrderReassignment.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_Report_OrdersPerZone.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_Report_SoqyaSchedule.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_Report_SoqyaScheduledQuantities.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_Report_StationOrderCapacitySummary.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_Report_StationServiceTimeSummary.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_Report_TankersPermissionsStatus.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_Report_VehicleData.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_Report_VehicleLog.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_SoqyaSchedule.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_StaffRoleModulePermissions.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_StateVehicle.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_StationSizes.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_UserLandmarkPermission.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_VehicleNWCSettings.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_VehicleViolation.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ViolationsApprovals.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ViolationsApprovalsLogs.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_WorkOrderBasicDetails.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_WorkOrderList.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_WorkOrderLogs.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_WorkOrderVehicle.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ZoneList.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_NWC_ZoneWithNoPrices.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NWCEntities\vw_permitList.cs">
+      <DependentUpon>NWCContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="NWCEntities\NWCContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NWCContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="NWCEntities\NWCContext.edmx.diagram">
+      <DependentUpon>NWCContext.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NWCEntities\NWCContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NWCContext.edmx</DependentUpon>
+      <LastGenOutput>NWCContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="NWCEntities\NWCContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NWCContext.edmx</DependentUpon>
+      <LastGenOutput>NWCContext.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,72 @@
+<div class="mrg-top-5">
+  <!-- fixed header  -->
+  <div class="table-heigh row">
+    <div class="col-md-12 scroll-x-table list-body">
+      <table class="table table-striped scrollable-table">
+        <thead>
+          <tr>
+            <th class="wid150">{{ "stationName" | translate }}</th>
+            <th class="wid150">{{ "ServiceType" | translate }}</th>
+            <th class="wid100">{{ "CustomerClass" | translate }}</th>
+            <th class="wid100">{{ "PriceCharge" | translate }}</th>
+          </tr>
+        </thead>
+        <tbody [class]="advancedDiv ? ' mini' : ' '">
+          <tr
+            class="text-center d-block p-2 font-4"
+            *ngIf="!contractPriceList.Result"
+          >
+            {{
+              "NoDataFound" | translate
+            }}
+          </tr>
+          <tr *ngFor="let station of contractPriceList.Result">
+            <td class="wid150">{{ station.StationName }}</td>
+            <td class="wid150">{{ station.ServiceTypeName }}</td>
+            <td class="wid100">{{ station.CustomerLocationClassName }}</td>
+            <td class="wid100">
+              <input
+                type="number"
+                min="0"
+                max="922337203685477.5807"
+                placeholder="{{ 'PriceCharge' | translate }}"
+                class="form-control"
+                [(value)]="station.PriceCharge"
+                (change)="onPriceChange(station, $event)"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <app-pagination-component
+    [ItemsCount]="contractPriceList.TotalCount"
+    [(PageSize)]="this.searchCriteriaContractDTO.PageFilter.PageSize"
+    [pageIndex]="this.searchCriteriaContractDTO.PageFilter.PageIndex"
+    (PageSizeChange)="onPageSizeChanged($event)"
+    (pageNavigated)="onPageIndexChanged($event)"
+  >
+  </app-pagination-component>
+</div>
+
+<div class="col-md-12 my-1 mrg-top-10">
+  <button class="btn btn-default margin-5 pull-right" (click)="clear()">
+    {{ "Clear" | translate }}
+  </button>
+  <button class="btn btn-danger margin-5 pull-right" (click)="save()">
+    {{ "save" | translate }}
+  </button>
+</div>
+
+<div class="col-md-12 mrg-top-10">
+  <button class="btn btn-default margin-5 pull-right" (click)="close()">
+    {{ "close" | translate }}
+  </button>
+  <button class="btn btn-danger margin-5 pull-right" (click)="nextBtn()">
+    {{ "next" | translate }}
+  </button>
+  <button class="btn btn-default margin-5 pull-right" (click)="backBtn()">
+    {{ "back" | translate }}
+  </button>
+</div>

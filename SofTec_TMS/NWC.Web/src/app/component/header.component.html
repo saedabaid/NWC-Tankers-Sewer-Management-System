@@ -1,0 +1,94 @@
+<div class="header">
+  <div
+    class="img_SubscriberLogo"
+    style="display: none;"
+    (click)="hideMenu()"
+  ></div>
+
+  <div *ngIf="logoSrc" class="navbar-header aside-md" (click)="hideMenu()">
+    <a routerLink="/" id="href_Default">
+   
+      <img
+        id="imglogo"
+        class="logo-nwc"
+        title="Dashboard"
+        src="{{ logoSrc }}"
+        alt="Fleet Management System"
+        style="width: 160px; margin: 0 20px;"
+      />
+    </a>
+  </div>
+  <div class="menu_icon">
+    <p>
+      <a id="trigger" class="menu-trigger" (click)="toggleMenu()"></a>
+    </p>
+  </div>
+
+  <ul class="navbar-right" (click)="hideMenu()">
+    <li>    
+      <a
+        id="lnk_ControlPanel"
+        title="Control Panel"
+        (click)="redirectToControlPanel()"
+      >
+        <i class="fa fa-cog fa-lg"></i>
+      </a>
+    </li>
+    <!-- <li>
+      <a id="imgInfo" href="">
+        <i class="fa fa-bell fa-lg"></i>
+      </a>
+    </li> -->
+    <li class="dropdown" dropdown>
+      <a
+        dropdownToggle
+        role="button"
+        aria-haspopup="true"
+        id="test"
+        aria-expanded="false"
+        class="dropdown-toggle hide-arrow"
+      >
+        <i class="fa fa-globe fa-lg"></i>
+      </a>
+      <ul id="test" class="dropdown-menu" *dropdownMenu>
+        <li>
+          <a id="lnk_English" (click)="changelang('en')">English</a>
+        </li>
+        <li>
+          <a id="lnk_Arabic" (click)="changelang('ar')">عربي</a>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown" dropdown>
+      <a
+        id="dLabel"
+        dropdownToggle
+        role="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+        class="dropdown-toggle"
+      >
+        <span class="thumb-sm avatar pull-right">
+          <!--<img id="img_SubscriberLogo_" src="/assets/fmsBranding/styles/img/logo_default.png" alt="Logo" width="60" height="60">-->
+          <!-- <img id="img_SubscriberLogo_" src="/assets/TMSBranding/styles/img/NWCfav.png" alt="Logo" width="70" height="60"> -->
+          <img
+            id="img_SubscriberLogo_"
+            src="/assets/TMSBranding/styles/img/NWCfav.png"
+            alt="Logo"
+            width="70"
+            height="60"
+          />
+        </span>
+        {{ userName }}
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a id="lnk_MyAccount" (click)="onMyAccountClicked()">My Account</a>       
+        </li>
+        <li>
+          <a id="LoginStatus1" (click)="logout()">Sign out</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

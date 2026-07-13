@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WL5G3N0:definitions xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:WL5G3N1="http://services.ws.linq2.is.com/" name="SmsWebServiceImplService" targetNamespace="http://services.ws.linq2.is.com/" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">
+  <WL5G3N0:types>
+    <xsd:schema xmlns:tns="http://services.ws.linq2.is.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://services.ws.linq2.is.com/" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="EAIMessage" type="tns:eaiMessage" />
+      <xs:complexType name="eaiMessage">
+        <xs:sequence>
+          <xs:element name="Evnt_Id" type="xs:string" />
+          <xs:element name="Evnt_Source" type="xs:string" />
+          <xs:element minOccurs="0" default="1" name="Evnt_Priority" type="xs:integer" />
+          <xs:element minOccurs="0" default="1" name="Org_Id" type="xs:string" />
+          <xs:element minOccurs="0" name="Due_Dt" type="xs:string" />
+          <xs:element minOccurs="0" name="Validity" type="xs:integer" />
+          <xs:element name="SMS_Type" type="xs:int" />
+          <xs:element minOccurs="0" name="SMS" type="xs:string" />
+          <xs:element minOccurs="0" name="SMSSender" type="xs:string" />
+          <xs:element name="Email_Type" type="xs:int" />
+          <xs:element minOccurs="0" name="Email" type="xs:string" />
+          <xs:element minOccurs="0" name="Fax_Invitation" type="xs:string" />
+          <xs:element minOccurs="0" name="Fax_File" type="xs:string" />
+          <xs:element name="Rcpnt_Lst" type="tns:rcpntLst" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="rcpntLst">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="Rcpnt_Dtls" type="tns:rcpntDtls" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="rcpntDtls">
+        <xs:sequence>
+          <xs:element name="Ntfctn_Mthd" type="xs:string" />
+          <xs:element name="Ntfctn_Lng" type="xs:string" />
+          <xs:element minOccurs="0" name="Ntfctn_Enc" type="xs:string" />
+          <xs:element minOccurs="0" name="Provider_Id" type="xs:string" />
+          <xs:element minOccurs="0" name="Group_Id" type="xs:string" />
+          <xs:element minOccurs="0" name="Contact_Id" type="xs:string" />
+          <xs:element minOccurs="0" name="Fax_Number" type="xs:string" />
+          <xs:element minOccurs="0" name="Mbl_Tel" type="xs:string" />
+          <xs:element minOccurs="0" name="Dlv_Ntfn" type="xs:string" />
+          <xs:element minOccurs="0" name="Email_To" type="xs:string" />
+          <xs:element minOccurs="0" name="Email_CC" type="xs:string" />
+          <xs:element minOccurs="0" name="Email_BCC" type="xs:string" />
+          <xs:element minOccurs="0" name="Email_server" type="xs:string" />
+          <xs:element minOccurs="0" name="Email_Sbjct" type="xs:string" />
+          <xs:element minOccurs="0" name="Att_Fl_Name" type="xs:string" />
+          <xs:element minOccurs="0" name="Att_Dp_Name" type="xs:string" />
+          <xs:element minOccurs="0" name="Additional_info" type="xs:string" />
+          <xs:element minOccurs="0" name="parameters" type="tns:parameters" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="parameters">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="parameter" type="tns:paramerter" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="paramerter">
+        <xs:sequence>
+          <xs:element name="param-name" type="xs:string" />
+          <xs:element name="param-value" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="xmlWsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Evnt_Id" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" type="xs:string" />
+          <xs:element minOccurs="0" name="Error_Code" type="xs:string" />
+          <xs:element minOccurs="0" name="Error_Description" type="xs:string" />
+          <xs:element minOccurs="0" name="Note" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="send">
+    <WL5G3N0:part name="EAIMessage" type="WL5G3N1:eaiMessage" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="sendResponse">
+    <WL5G3N0:part name="XmlResponse" type="WL5G3N1:xmlWsResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="SmsWebService">
+    <WL5G3N0:operation name="send">
+      <WL5G3N0:input name="send" message="WL5G3N1:send" />
+      <WL5G3N0:output name="sendResponse" message="WL5G3N1:sendResponse" />
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="SmsWebServiceImplServiceSoapBinding" type="WL5G3N1:SmsWebService">
+    <WL5G3N2:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <WL5G3N0:operation name="send">
+      <WL5G3N2:operation soapAction="" style="rpc" />
+      <WL5G3N0:input name="send">
+        <WL5G3N2:body use="literal" namespace="http://services.ws.linq2.is.com/" />
+      </WL5G3N0:input>
+      <WL5G3N0:output name="sendResponse">
+        <WL5G3N2:body use="literal" namespace="http://services.ws.linq2.is.com/" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="SmsWebServiceImplService">
+    <WL5G3N0:documentation>OSB Service</WL5G3N0:documentation>
+    <WL5G3N0:port name="SmsWebServiceImplPort" binding="WL5G3N1:SmsWebServiceImplServiceSoapBinding">
+      <WL5G3N2:address location="http://csitosbprt.dev.hq.nwc:21303/NwcCompass/CCBSMSSourceOSBProject/CcbSmsPSSmsServiceSourceHttp" />
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

@@ -1,0 +1,36 @@
+<div class="row">
+
+  <div class="col-md-12">
+    <span (click)="add()"><i class="fas fa-plus"></i></span>
+  </div>
+
+  <div class="col-lg-12">
+    <div class="holder-table">
+
+      <table class="table Dtable table-striped">
+        <thead>
+          <tr>
+            <th> {{'SubmittedBy' | translate}} </th>
+            <th> {{'StaffRole' | translate}} </th>
+            <th> {{'Date' | translate}} </th>
+            <th> {{'Comment' | translate}} </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let com of comment.listComments; let i =  index">
+            <td> {{com.CreatedByName}} </td>
+            <td> {{com.Role}} </td>
+            <td> 
+              <date [date]="com.CreatedTime" [ShowTime]="true"></date> 
+            </td>
+            <td> {{com.Comment}} </td>
+            <!-- <input type="text" readonly class="form-control" [value]='com.Comment' > -->
+          </tr>
+          <tr *ngIf="comment.listComments.length <= 0 ">
+            <td colspan="4">{{'NoData' | translate}} </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

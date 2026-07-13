@@ -1,0 +1,48 @@
+<div class="row">
+
+
+  <div class="col-sm-9 form-group">
+    <div class="input-group">
+      <input [disabled]="IsDisabled" type="type" name="uploadFileName" [(ngModel)]="_fileName" class="form-control" />
+      <span class="input-group-btn w-25">
+        <label for="fileUpload2" class="btn btn-secondary browse-btn"> {{ 'Browse'| translate}} </label>
+      </span>
+      <input [disabled]="IsDisabled" #fileUpload2 id="fileUpload2" type="file" (change)="fileChangeEvent($event)"
+        placeholder="{{'Upload a file...' | translate}} " class="hidden" />
+
+    </div>
+  </div>
+
+  <div class="col-sm-2   no-padding-l">
+
+    <button *ngIf="!Upload_Loading" type="button" class="btn btn-secondary btn-s up-btn" (click)="upload()"
+      [disabled]="!filesToUpload || filesToUpload.length<=0 || IsDisabled">
+      <!--<i class="glyphicon glyphicon-open-file"></i>&nbsp;-->
+      {{ 'Upload'| translate}}
+    </button>
+
+    <a *ngIf="Upload_Loading" class="btn btn-secondary btn-s up-btn">
+      <img width="24px" src='assets/TMSBranding/styles/img/loader.gif' />
+    </a>
+
+
+  </div>
+
+
+
+
+</div>
+
+<div class="row">
+  <div class="col-sm-12" *ngIf="ListFiles && ListFiles.length>0">
+    <span class="uploaded-file" *ngFor="let item of filterDeleted(ListFiles) ;let i = index">
+      <i class="file-icon glyphicon glyphicon-file"></i>
+      <a (click)="download(item.DocumentName, item.RelativePath , item.ID)" [attr.aria-controls]="item.Name" role="tab"
+        download data-toggle="tab" class="file-name">{{item.DocumentName}}</a>
+      <a *ngIf="!IsDisabled" class="glyphicon glyphicon-trash remove-icon" (click)="remove(item)"
+        title="{{'Delete' | translate}}">
+
+      </a>
+    </span>
+  </div>
+</div>

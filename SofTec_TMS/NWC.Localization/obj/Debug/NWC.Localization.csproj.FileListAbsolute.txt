@@ -1,0 +1,5 @@
+G:\SofTec_TMS\SofTec_TMS\NWC.Localization\bin\Debug\NWC.Localization.dll
+G:\SofTec_TMS\SofTec_TMS\NWC.Localization\bin\Debug\NWC.Localization.pdb
+G:\SofTec_TMS\SofTec_TMS\NWC.Localization\obj\Debug\NWC.Localization.csproj.CoreCompileInputs.cache
+G:\SofTec_TMS\SofTec_TMS\NWC.Localization\obj\Debug\NWC.Localization.dll
+G:\SofTec_TMS\SofTec_TMS\NWC.Localization\obj\Debug\NWC.Localization.pdb

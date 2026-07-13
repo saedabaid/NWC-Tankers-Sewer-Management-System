@@ -1,0 +1,40 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 4:42:58 PM
+
+----------------------------------------GetMatchedWorkOrderToAssign---------------------------------------- Time:15/09/2020 04:43:19 م
+
+Get available vehicle by ID - VehicleID: ea41e26d-8521-4f10-a5a8-2eaf5ba39d46 - StationID: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:15/09/2020 04:43:19 م
+
+Get zone vehicle landmark - StationID: 02e7a5d6-2540-489e-a51e-03755ed89da9 - ZoneID: 1043 Time:15/09/2020 04:43:19 م
+
+Check restricted zone vehicle type - VehicleTypeID: 0378b6b4-5430-ea11-80cf-00155d0bce06 - Is Restricted: False Time:15/09/2020 04:43:19 م
+
+Get vehicle classes - Classes Count: 2 Time:15/09/2020 04:43:19 م
+
+Get WorkOrder - dtFrom: 15/09/2020 04:40:19 م Time:15/09/2020 04:43:19 م
+
+Get WorkOrder - Order List: null or empty Time:15/09/2020 04:43:19 م
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 4:51:07 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"8145223566","cisDivision":19,"orderStatus":5,"updateDateTime":"15-09-2020 16:51:08","parameters":[{"parameterName":"TMSID","parameterValue":"8145223566"},{"parameterName":"COMMENT","parameterValue":""}]} Time:15/09/2020 4:51:08 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 4:51:38 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"8145223566","cisDivision":19,"orderStatus":3,"updateDateTime":"15-09-2020 16:51:39","parameters":[{"parameterName":"TMSID","parameterValue":"8145223566"},{"parameterName":"COMMENT","parameterValue":""}]} Time:15/09/2020 4:51:39 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 4:52:17 PM
+
+----------------------------------------GetMatchedWorkOrderToAssign---------------------------------------- Time:15/09/2020 04:53:50 م
+
+Get available vehicle by ID - VehicleID: c88cdb25-d245-443d-bae8-6f63ad3ee05a - StationID: c2316326-afb6-4f91-a59d-49bdafae332b Time:15/09/2020 04:53:50 م
+
+Get zone vehicle landmark - StationID: c2316326-afb6-4f91-a59d-49bdafae332b - ZoneID: 1334 Time:15/09/2020 04:53:50 م
+
+Check restricted zone vehicle type - VehicleTypeID: c96ee17c-5430-ea11-80cf-00155d0bce06 - Is Restricted: False Time:15/09/2020 04:53:50 م
+
+Get vehicle classes - Classes Count: 2 Time:15/09/2020 04:53:50 م
+
+Get WorkOrder - dtFrom: 15/09/2020 04:50:50 م Time:15/09/2020 04:53:50 م
+
+Get WorkOrder - Order List: null or empty Time:15/09/2020 04:53:50 م
+

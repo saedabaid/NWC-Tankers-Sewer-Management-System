@@ -1,0 +1,167 @@
+<div class="side-menu">
+  <h2 class="title-menu">
+    {{ "AllCategories" | translate }}
+    <i class="fa fa-angle-left"></i>
+  </h2>
+  <ul class="level-1-main">
+    <li id="Resources" *ngIf="show_Resources">
+      <a
+        class="lnk_Resources"
+        (click)="
+          onModuleClick({
+            icon: 'lnk_Resources_Selected',
+            name: 'Resources',
+            Key: 'Resources',
+            resKey: 'Resources'
+          })
+        "
+      >
+        {{ "Resources" | translate }}
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </li>
+    <li id="Maintenance" *ngIf="show_Maintenance">
+      <a
+        class="Maintenance"
+        (click)="
+          onModuleClick({
+            icon: 'lnk_Maintenance_Selected',
+            name: 'Maintenance',
+            Key: 'Maintenance',
+            resKey: 'Maintenance'
+          })
+        "
+      >
+        {{ "Maintenance" | translate }}
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </li>
+    <li id="Operations" *ngIf="show_Operations">
+      <a
+        class="Operations"
+        (click)="
+          onModuleClick({
+            icon: 'lnk_Operations_Selected',
+            name: 'Operations',
+            Key: 'Operations',
+            resKey: 'Operations'
+          })
+        "
+      >
+        {{ "Operations" | translate }}
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </li>
+    <li id="GPS" *ngIf="show_GPS">
+      <a
+        class="GPS"
+        (click)="
+          onModuleClick({
+            icon: 'lnk_GPS_Selected',
+            name: 'GPS',
+            Key: 'GPS',
+            resKey: 'GPS'
+          })
+        "
+      >
+        {{ "GPS" | translate }}
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </li>
+    <li id="Rent_Vehicles" *ngIf="show_RentCars">
+      <a
+        class="Rent_Vehicles"
+        (click)="
+          onModuleClick({
+            icon: 'lnk_Rent_Vehicles_Selected',
+            name: 'Rent Vehicles',
+            Key: 'RentCars',
+            resKey: 'RentCars'
+          })
+        "
+      >
+        {{ "RentCars" | translate }}
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </li>
+    <li id="Rent_Vehicles" *ngIf="show_Schools">
+      <a
+        class="Manage_Schools"
+        (click)="
+          onModuleClick({
+            icon: 'lnk_Manage_Schools_Selected',
+            name: 'Smart School Bus Management',
+            Key: 'Schools',
+            resKey: 'ManageSchool'
+          })
+        "
+      >
+        {{ "ManageSchool" | translate }}
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </li>
+    <li id="Rent_Vehicles" *ngIf="show_TMS">
+      <a
+        class="Manage_TMS"
+        (click)="
+          onModuleClick({
+            icon: 'lnk_Manage_TMS_Selected',
+            name: 'Tankers Management System',
+            Key: 'TMS',
+            resKey: 'TMS'
+          })
+        "
+      >
+        {{ "TMS" | translate }}
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </li>
+    <li id="Manage_Sewer" *ngIf="show_SEWER">
+      <a
+        class="Manage_Sewer"
+        (click)="
+          onModuleClick({
+            icon: 'lnk_Manage_SEWER_Selected',
+            name: 'Sewer',
+            Key: 'Sewer',
+            resKey: 'Sewer'
+          })
+        "
+      >
+        {{ "Sewer" | translate }}
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </li>
+    <li id="Reports" *ngIf="show_Reports">
+      <a
+        class="Reports"
+        (click)="
+          onModuleClick({
+            icon: 'lnk_Reports_Selected',
+            name: 'Reports',
+            Key: 'Reports',
+            resKey: 'Reports'
+          })
+        "
+      >
+        {{ "Reports" | translate }}
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </li>
+  </ul>
+  <div class="dropoff" (click)="hideSubmenu()"></div>
+  <div
+    class="side-menu"
+    [class]="isSubMenuOpend ? 'subMenu' : 'subMenu-hidden'"
+  >
+    <h2 [class]="subMenuHeader?.icon">{{ subMenuHeader?.name }}</h2>
+    <ul class="level-2-main">
+      <li *ngFor="let link of subMenuLinks">
+        <a (click)="menuHrefClicked(link.route)" >
+          {{ link.resKey | translate}}
+        </a>
+
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="modal-header">
+  <h3> {{'dispatch list' | translate}} </h3>
+
+</div>
+<div class="modal-body ">
+  <div class="order-info">
+    <span class="ordnum">{{'OrderNo' | translate}}  {{order.OrderNumber}}</span>
+    <span  class="margin-10"> {{'customer' | translate}} : {{order.CustomerName}} | {{order.CustomerCode}}</span>
+
+    <p class="extra">
+      <span >{{'quantity' | translate}}: {{order.OrderQuantity}} m<sup>3</sup></span>
+      <span   >{{'necessary accessories' | translate}} : {{order.AccessoryNames}}</span>
+    </p>
+  </div>
+  <div class="row pl-25">
+      <tr class="text-center d-block p-2 font-4" *ngIf="!AssignableVehicles" >{{'NoVehicleAvailable' | translate}}</tr>
+      <div  *ngFor="let item of AssignableVehicles; let i = index"  [ngClass]="(item.dispatch  ? ' active' : ' ') + '   data-dispatch '  ">
+            <span class="wid-80"><img src="/assets/fmsBranding/styles/img/truck.png"> </span>
+            <span class="wid-200"> {{item.VehicleCodePlateNo}} </span>
+            <span class="wid-50">{{item.Capacity}} m<sup>3</sup></span>
+            <span class="name-driver"> <i class="fa fa-user"></i> {{item.DriverName}}</span>
+          <a class="action" (click)="dispatchTanker(item)"> {{item.dispatch ? ('canceldispatch' | translate) : ('dispatch' | translate) }}</a>
+
+      </div>
+
+  </div>
+
+
+</div>
+
+<div class="modal-footer">
+  <button class="btn btn-danger margin-5" (click)="save()"> {{'save' | translate}} </button>
+  <button class="btn btn-default" (click)="closePopup()">  {{'cancel' | translate}} </button>
+</div>

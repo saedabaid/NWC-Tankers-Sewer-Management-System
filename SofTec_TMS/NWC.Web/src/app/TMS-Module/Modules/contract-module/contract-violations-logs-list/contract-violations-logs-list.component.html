@@ -1,0 +1,111 @@
+<!-- fixed header  -->
+<div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row'" >
+    <div class="col-md-12 scroll-x-table list-body">
+
+
+        <table class="table   table-striped scrollable-table">
+            <thead>
+                <tr>
+                    <th class="wid100">{{'UpdatedBy' | translate}} </th>
+                    <th class="wid100">{{'UpdatedOn' | translate}} </th>
+                    
+                    <th class="wid100">{{'#' | translate}}</th>
+                    <th class="wid100">{{'contract' | translate}} </th>
+                    <th class="wid100">{{'Station' | translate}} </th>
+                    <th class="wid100">{{'violationCategory' | translate}} </th>
+                    <th class="wid100">{{'termsNO' | translate}}</th>
+                    <th class="wid200">{{'termsName' | translate}}</th>
+                    <th class="wid100">{{'Vehicle' | translate}}</th>
+                    <th class="wid100">{{'Driver' | translate}} </th>
+                    <th class="wid100">{{'Total' | translate}} </th>
+                    <th class="wid130">{{'IssueDate' | translate}}</th>
+                    <!-- <th class="wid130">{{'PaymentDueDate' | translate}} </th> -->
+                    <th class="wid100">{{'PaymentStatus' | translate}} </th>
+                    <th class="wid130">{{'PaidOn' | translate}}</th>
+                    <th class="wid100">{{'Status' | translate}} </th>
+                    <th class="wid200">{{'CancellationReason' | translate}}</th>
+
+                    <th class="wid200">{{'Attachments' | translate}}</th>
+
+                </tr>
+            </thead>
+            <tbody [class]="advancedDiv ? ' mini' : ' '">
+                <tr class="text-center  d-block p-2 font-4 " *ngIf="!logs">
+                    {{"NoDataFound" | translate}}
+                </tr>
+                <tr *ngFor="let item of logs; let i = index">
+                    <td class="wid100">
+                        {{ item.CreatedByName }}
+                    </td>
+
+                    <td class="wid100">
+                        <date
+                            [date]="item.CreatedDate"
+                            [ShowTime]="true"
+                            [TimeUnderDate]="true"
+                        ></date>
+                    </td>
+
+                    <td class="wid100">
+                        {{ item.Id }}
+                        <!-- {{ item.ViolationTicketNumber }} -->
+                    </td>
+                    <td class="wid100">
+                        {{ item.ContractCode }}
+                    </td>
+                    <td class="wid100">
+                        {{ item.StationName }}
+                    </td>
+                    <td class="wid100">
+                        {{ (IsArabic ? item.CategoryAr : item.CategoryEn ) }}
+                    </td>
+                    <td class="wid100">
+                        {{ item.ContractTermCode }}
+                    </td>
+                    <td class="wid200">
+                        {{ item.ContractTermName }}
+                    </td>
+                    <td class="wid100">
+                        {{ item.VehicleCode }} | {{ item.VehiclePlateNo }} 
+                    </td>
+                    <td class="wid100">
+                        {{ item.DriverName }}
+                    </td>
+                    <td class="wid100">
+                        {{ item.TotalPenalty }}
+                    </td>
+
+                    <td class="wid130">
+                        <datePicker-gregorian-hijri [selectedDate]="item.IssueDate" [viewOnly]="true">
+                        </datePicker-gregorian-hijri>
+                        <!-- <date [date]="item.CreateTime" [ShowTime]="true" [TimeUnderDate]="true"></date> -->
+                    </td>
+                    <!-- <td class="wid130">
+                        <datePicker-gregorian-hijri [(selectedDate)]="item.PaymentDueDate" [viewOnly]="true">
+                        </datePicker-gregorian-hijri>
+                    </td> -->
+                    <td class="wid100">
+                        {{ (IsArabic ? item.PaymentStatusAr : item.PaymentStatusEn ) }}
+                    </td>
+                    <td class="wid130">
+                        <datePicker-gregorian-hijri [(selectedDate)]="item.PaymentStatusDate" [viewOnly]="true">
+                        </datePicker-gregorian-hijri>
+                    </td>
+
+                    <td class="wid100">
+                        {{ (IsArabic ? item.StatusNameAr : item.StatusNameEn ) }}
+                    </td>
+
+                    <td class="wid200">
+                        {{ (IsArabic ? item.CancelReasonAr : item.CancelReasonEn ) }}
+                    </td>
+
+                    <td class="wid200">
+                        {{ item.AttachementsDocumentsNames }}    
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

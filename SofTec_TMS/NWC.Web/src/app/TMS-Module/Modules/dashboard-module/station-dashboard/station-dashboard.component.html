@@ -1,0 +1,235 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6 padding-10">
+      <span class="page-title">{{ "NWC_Dashboard" | translate }}</span>
+      <span class="page-title"><i class="fa fa-chevron-right"></i></span>
+      <span class="page-title currentpage">{{ "Station" | translate }}</span>
+    </div>
+  </div>
+
+  <div class="row padding-10">
+    <div class="col-12 station-status">
+      Station status:
+      <span *ngIf="station.isOnline" class="online">
+        <i class="fas fa-power-off"></i> Online
+      </span>
+      <span *ngIf="!station.isOnline" class="offline">
+        <i class="fas fa-power-off"></i> Offline
+      </span>
+    </div>
+  </div>
+
+  <div class="d-none d-sm-block section-h-splitter"></div>
+
+  <div class="row padding-10">
+    <div class="col-sm-12 col-md-6 status-section">
+      <div class="status-div green-color">
+        <i class="status-icon fas fa-tint"></i>
+        <span class="status-name">AMR 1</span>
+        <span class="status-value">10 M2</span>
+      </div>
+      <div class="status-div green-color">
+        <i class="status-icon fas fa-tint"></i>
+        <span class="status-name">AMR 2</span>
+        <span class="status-value">10 M2</span>
+      </div>
+      <div class="status-div blue-color">
+        <i class="status-icon fas fa-tint"></i>
+        <span class="status-name">Exit Tanker</span>
+        <span class="status-value">9.5 M2</span>
+      </div>
+      <div class="status-div">
+        <i class="status-icon fas fa-tint"></i>
+        <span class="status-name">Total Tankers</span>
+        <span class="status-value red-color">-0.5 M2</span>
+      </div>
+      <div class="status-div">
+        <i class="status-icon fas fa-tint"></i>
+        <span class="status-name">Loss Ratio</span>
+        <span class="status-value red-color">0.5%</span>
+      </div>
+    </div>
+
+    <span class="d-none d-sm-block section-v-splitter"></span>
+
+    <div class="col-sm-12 col-md-6 status-section">
+      <div class="status-div">
+        <i class="status-icon fas fa-car"></i>
+        <span class="status-name">Total Tankers</span>
+        <span class="status-value">20</span>
+      </div>
+      <div class="status-div">
+        <i class="status-icon fas fa-car"></i>
+        <span class="status-name">Available Tankers</span>
+        <span class="status-value">20</span>
+      </div>
+      <div class="status-div">
+        <i class="status-icon fas fa-car"></i>
+        <span class="status-name">In-Service Tankers</span>
+        <span class="status-value">20</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-none d-sm-block section-h-splitter"></div>
+
+  <div class="row padding-10">
+    <div class="col-sm-12 col-md-6 status-section">
+      <div class="status-div green-color">
+        <i class="status-icon fas fa-car"></i>
+        <span class="status-name">Total Tankers In Station</span>
+        <span class="status-value">40</span>
+      </div>
+      <div class="status-div green-color">
+        <i class="status-icon fas fa-car"></i>
+        <span class="status-name">Residential Tankers In Station</span>
+        <span class="status-value">10</span>
+      </div>
+      <div class="status-div green-color">
+        <i class="status-icon fas fa-car"></i>
+        <span class="status-name">Commercial Tankers In Station</span>
+        <span class="status-value">10</span>
+      </div>
+      <div class="status-div green-color">
+        <i class="status-icon fas fa-car"></i>
+        <span class="status-name">Governmental Tankers In Station</span>
+        <span class="status-value">10</span>
+      </div>
+    </div>
+
+    <span class="d-none d-sm-block section-v-splitter"></span>
+
+    <div class="col-sm-12 col-md-6 status-section">
+      <div class="status-div blue-color">
+        <i class="status-icon fas fa-car"></i>
+        <span class="status-name">Total Tankers Exit Station</span>
+        <span class="status-value">10</span>
+      </div>
+      <div class="status-div blue-color">
+        <i class="status-icon fas fa-car"></i>
+        <span class="status-name">Residential Tankers Exit Station</span>
+        <span class="status-value">10</span>
+      </div>
+      <div class="status-div blue-color">
+        <i class="status-icon fas fa-car"></i>
+        <span class="status-name">Commercial Tankers Exit Station</span>
+        <span class="status-value">10</span>
+      </div>
+      <div class="status-div blue-color">
+        <i class="status-icon fas fa-car"></i>
+        <span class="status-name">Governmental Tankers Exit Station</span>
+        <span class="status-value">10</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-none d-sm-block section-h-splitter"></div>
+
+  <div class="row padding-10">
+    <div class="col-sm-12 col-md-12 status-section">
+      <div class="status-div">
+        <i class="status-icon fas fa-bell"></i>
+        <span class="status-name">Total Orders</span>
+        <span class="status-value">14</span>
+      </div>
+      <div class="status-div">
+        <i class="status-icon fas fa-bell"></i>
+        <span class="status-name">New</span>
+        <span class="status-value">2</span>
+      </div>
+      <div class="status-div">
+        <i class="status-icon fas fa-bell"></i>
+        <span class="status-name">Assigned</span>
+        <span class="status-value">3</span>
+      </div>
+      <div class="status-div blue-color">
+        <i class="status-icon fas fa-bell"></i>
+        <span class="status-name">Out for delivery</span>
+        <span class="status-value">1</span>
+      </div>
+      <div class="status-div">
+        <i class="status-icon fas fa-bell"></i>
+        <span class="status-name">Arrived</span>
+        <span class="status-value">3</span>
+      </div>
+      <div class="status-div green-color">
+        <i class="status-icon fas fa-bell"></i>
+        <span class="status-name">Delivered</span>
+        <span class="status-value">3</span>
+      </div>
+      <div class="status-div red-color">
+        <i class="status-icon fas fa-bell"></i>
+        <span class="status-name">On-Hold</span>
+        <span class="status-value">1</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-none d-sm-block section-h-splitter"></div>
+
+  <div class="row padding-10">
+    <div class="col-sm-12 col-md-6">
+      <div class="row">
+        <div class="col-12 table-section-title">Areas with no prices</div>
+        <div class="col-12 scroll-x-table">
+          <table class="table table-striped scrollable-table">
+            <thead>
+              <tr>
+                <th class="text-center wid100">Area</th>
+                <th class="text-center wid50">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr
+                class="text-center d-block p-2 font-4"
+                *ngIf="!searchResult"
+              >{{ "NoDataFound" | translate }}</tr> -->
+              <!-- <tr *ngFor="let item of searchResult; let i = index"> -->
+              <tr>
+                <td class="text-center wid100">Laban</td>
+                <td class="text-center wid50">0</td>
+              </tr>
+              <tr>
+                <td class="text-center wid100">Oeve</td>
+                <td class="text-center wid50">-1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <span class="d-none d-sm-block section-v-splitter"></span>
+
+    <div class="col-sm-12 col-md-6">
+      <div class="row">
+        <div class="col-12 table-section-title">24 Hours orders</div>
+        <div class="col-12 scroll-x-table">
+          <table class="table table-striped scrollable-table">
+            <thead>
+              <tr>
+                <th class="text-center wid50">Order number</th>
+                <th class="text-center wid50">Date</th>
+                <th class="text-center wid50">Time</th>
+                <th class="text-center wid50">Total daily time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr
+                class="text-center d-block p-2 font-4"
+                *ngIf="!searchResult"
+              >{{ "NoDataFound" | translate }}</tr> -->
+              <!-- <tr *ngFor="let item of searchResult; let i = index"> -->
+              <tr>
+                <td class="text-center wid50">15611</td>
+                <td class="text-center wid50">21/03/2021</td>
+                <td class="text-center wid50">01:55 AM</td>
+                <td class="text-center wid50">32:00 Hours</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

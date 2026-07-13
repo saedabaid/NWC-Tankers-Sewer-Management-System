@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="w-20 p-2 d-flex flex-column  align-self-center justify-content-center">
+        <img class="img" src="{{ImgAll}}" alt="">
+        <div class="font-10">{{'Dashboard_AllOrders' | translate}}</div>
+        <div *ngIf="loading_AllOrders" class="text-center">
+          <img class="loading-width" src={{ImageUrl}} />
+        </div>
+        <div *ngIf="!loading_AllOrders" class="text-center font-16 font-weight-bold">{{count_AllOrders}}</div>
+    </div>
+    
+    <div class="w-20 p-2 d-flex flex-column  align-self-center justify-content-center">
+      <img class="img" src="{{ImgNew}}" alt="">
+      <div class="font-10">{{'Dashboard_New' | translate}}</div>
+      <div *ngIf="loading_New" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+      <div *ngIf="!loading_New" class="text-center font-16 font-weight-bold">{{count_New}}</div>
+    </div>
+  
+    <div class="w-20 p-2 d-flex flex-column  align-self-center justify-content-center">
+      <img class="img" src="{{ImgAss}}" alt="">
+      <div class="font-10">{{'Dashboard_Assigned' | translate}}</div>
+      <div *ngIf="loading_Assigned" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+      <div *ngIf="!loading_Assigned" class="text-center font-16 font-weight-bold">{{count_Assigned}}</div>
+    </div>
+
+    <div class="w-20 p-2 d-flex flex-column  align-self-center justify-content-center">
+        <img class="img blue" src="{{ImgDlv}}" alt="">
+        <div class="font-10">{{'Dashboard_OutForDelivery' | translate}}</div>
+        <div *ngIf="loading_OutForDelivery" class="text-center">
+          <img class="loading-width" src={{ImageUrl}} />
+        </div>
+        <div *ngIf="!loading_OutForDelivery" class="text-center font-16 font-weight-bold">{{count_OutForDelivery}}</div>
+      </div>
+
+      <div class="w-20 p-2 d-flex flex-column  align-self-center justify-content-center">
+        <img class="img" src="{{ImgArr}}" alt="">
+        <div class="font-10">{{'Arrived' | translate}}</div>
+        <div *ngIf="loading_Arrived" class="text-center">
+          <img class="loading-width" src={{ImageUrl}} />
+        </div>
+        <div *ngIf="!loading_Arrived" class="text-center font-16 font-weight-bold">{{count_Arrived}}</div>
+      </div>
+
+      <div class="w-20 p-2 d-flex flex-column  align-self-center justify-content-center">
+        <img class="img green" src="{{ImgDvd}}" alt="">
+        <div class="font-10">{{'Dashboard_Delivered' | translate}}</div>
+        <div *ngIf="loading_Delivered" class="text-center">
+          <img class="loading-width" src={{ImageUrl}} />
+        </div>
+        <div *ngIf="!loading_Delivered" class="text-center font-16 font-weight-bold">{{count_Delivered}}</div>
+      </div>
+
+      <div class="w-20 p-2 d-flex flex-column  align-self-center justify-content-center">
+        <img class="img orange" src="{{ImgHld}}" alt="">
+        <div class="font-10">{{'Dashboard_Onhold' | translate}}</div>
+        <div *ngIf="loading_Onhold" class="text-center">
+          <img class="loading-width" src={{ImageUrl}} />
+        </div>
+        <div *ngIf="!loading_Onhold" class="text-center font-16 font-weight-bold">{{count_Onhold}}</div>
+      </div>
+  </div>

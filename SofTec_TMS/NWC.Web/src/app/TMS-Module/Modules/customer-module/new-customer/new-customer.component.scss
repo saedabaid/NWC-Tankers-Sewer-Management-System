@@ -1,0 +1,36 @@
+.scroll-x-table {
+    table {
+      th {
+        color: black;
+      }
+  
+      tbody {
+        height: 218px;
+        max-height: 375px;
+      }
+    }
+
+  }
+  
+  .mt-1 {
+    margin-top: 0.5rem;
+  }
+  
+  .mb-1 {
+    margin-bottom: 1rem;
+  }
+  
+  .row {
+    label {
+      margin-top: 5px;
+    }
+  }
+
+  .icon-style {
+    color: white !important;
+    width: 31px;
+    height: 19px;
+    font-size: 25px;
+    top: 5px;
+  }
+  

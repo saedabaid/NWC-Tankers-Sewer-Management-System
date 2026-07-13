@@ -1,0 +1,19 @@
+@media all {
+  .pageBreak {
+    display: none;
+  }
+}
+.qrcode {
+    width:50%;
+}
+@media print {
+  .pageBreak {
+    display: block;
+    page-break-before: always;
+    /* ----- and add more propertys to Cutter Styling -------- */
+  }
+  img {
+    width: 50%;
+  }
+}
+

@@ -1,0 +1,13 @@
+.noicon {
+    .hold-datepicker{
+        .glyphicon-calendar{
+            display: none;
+        }
+    }
+}
+
+.form-group {
+  label:last-of-type {
+    font-weight: normal;
+  }
+}

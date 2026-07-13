@@ -1,0 +1,28 @@
+contract == null: False Time:24/06/2020 12:45:54 PM
+
+contractID: 10040 Time:24/06/2020 12:45:54 PM
+
+contractStationTariaff == null: False Time:24/06/2020 12:45:54 PM
+
+contractStationTariaffID: 367 Time:24/06/2020 12:45:54 PM
+
+totalQuantityCost: 250.0000 Time:24/06/2020 12:45:54 PM
+
+extraKMCost: 2575.00000000 Time:24/06/2020 12:45:54 PM
+
+totalCost: 2825.00000000 Time:24/06/2020 12:45:54 PM
+
+contract == null: False Time:24/06/2020 12:47:22 PM
+
+contractID: 10040 Time:24/06/2020 12:47:22 PM
+
+contractStationTariaff == null: False Time:24/06/2020 12:47:22 PM
+
+contractStationTariaffID: 367 Time:24/06/2020 12:47:22 PM
+
+totalQuantityCost: 250.0000 Time:24/06/2020 12:47:22 PM
+
+extraKMCost: 2575.00000000 Time:24/06/2020 12:47:22 PM
+
+totalCost: 2825.00000000 Time:24/06/2020 12:47:22 PM
+

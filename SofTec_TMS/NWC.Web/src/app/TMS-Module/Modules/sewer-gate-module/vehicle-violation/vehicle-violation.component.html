@@ -1,0 +1,23 @@
+<div class="row m-2 " *ngIf="!violations?.Result">
+    {{ 'NoViolationsFound' | translate}}
+</div>
+
+<div class="row" *ngFor="let v of violations?.Result">
+
+    <div class="col-md-4">
+        {{ v.TermName }}
+    </div>
+    <div class="col-md-2">
+        <date [date]="v.IncidentTime" [ShowTime]="true" [TimeUnderDate]="true"></date>
+    </div>
+    <div class="col-md-2">
+        {{ v.ViolationTicketNumber }}
+    </div>
+    <div class="col-md-2">
+        {{ v.ViolationStatus }}
+    </div>
+    <div class="col-md-2">
+        {{ v.TotalPenalty }} {{ "SAR" | translate }}
+    </div>
+
+</div>

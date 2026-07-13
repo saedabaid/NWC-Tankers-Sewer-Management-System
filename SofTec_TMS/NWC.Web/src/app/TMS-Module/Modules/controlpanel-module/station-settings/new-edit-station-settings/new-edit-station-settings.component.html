@@ -1,0 +1,230 @@
+<div class="container-fluid main-div bg-light">
+  <div class="row">
+    <div class="col-md-12 padding-10">
+      <span class="page-title">{{ "ControlPanel" | translate }}</span>
+      <span class="page-title"><i class="fa fa-chevron-right"></i></span>
+      <a (click)="cancel()">
+        <span class="page-title">{{ "StationsSettings" | translate }}</span>
+      </a>
+      <span class="page-title"><i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title currentpage">
+        {{
+          (IsEditableMood ? "EditStationSettings" : "AddStationSettings")
+            | translate
+        }}
+      </span>
+    </div>
+  </div>
+</div>
+<div class="inner-div">
+  <div class="container-fluid">
+    <ngb-tabset [destroyOnHide]="false">
+      <ngb-tab title="Basic Settings">
+        <ng-template ngbTabContent>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-3 control-label">
+                    <label class="title"
+                      >{{ "Name" | translate }} <span class="required">*</span></label
+                    >
+                  </div>
+                  <div class="col-sm-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(value)]="stationSettingsDTO.StationName"
+                      (change)="StationNameChanged($event)"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-3 control-label">
+                    <label class="title">{{ "CityFeatures" | translate }}</label>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-check">
+                      <input
+                        [disabled]="stationSettingsDTO.StationId"
+                        class="form-check-input"
+                        type="checkbox"
+                        id="IsVirtual"
+                        [(ngModel)]="stationSettingsDTO.IsVirtual"
+                      />
+                      <label class="form-check-label mr-4 ml-4" for="IsVirtual">
+                        {{ "IsVirtual" | translate }}
+                        {{
+                          stationSettingsDTO.StationId
+                            ? "(" + ("ReadOnly" | translate) + ")"
+                            : ""
+                        }}
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-3 control-label">
+                    <label class="title">{{ "Status" | translate }}</label>
+                  </div>
+                  <div class="col-sm-6">
+                    <select-menu
+                      [label]="'Name'"
+                      [itemKey]="'Id'"
+                      [dropDownListInputs]="StatusList"
+                      (selectedListChange)="onStatusChanged($event)"
+                      [selectedList]="SelectedStatuses"
+                      [options]="selectMenuOptions2"
+                      (SearchVAlue)="getStatuses($event)"
+                      [loading]="Status_Loading"
+                    >
+                    </select-menu>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-3 control-label">
+                    <label class="title">{{ "Area" | translate }}</label>
+                  </div>
+                  <div class="col-sm-6">
+                    <select-menu
+                      [label]="'Name'"
+                      [itemKey]="'Id'"
+                      [dropDownListInputs]="BranchList"
+                      (selectedListChange)="onBranchChanged($event)"
+                      [selectedList]="SelectedBranches"
+                      [options]="selectMenuOptions2"
+                      (SearchVAlue)="getBranches($event)"
+                      [loading]="Branch_Loading"
+                    >
+                    </select-menu>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-3 control-label">
+                    <label class="title">{{ "City" | translate }}</label>
+                  </div>
+                  <div class="col-sm-6">
+                    <select-menu
+                      [label]="'Name'"
+                      [itemKey]="'Id'"
+                      [dropDownListInputs]="SubBranchList"
+                      (selectedListChange)="onSubBranchChanged($event)"
+                      [selectedList]="SelectedSubBranches"
+                      [options]="selectMenuOptions2"
+                      (SearchVAlue)="getSubBranches($event)"
+                      [loading]="SubBranch_Loading"
+                    >
+                    </select-menu>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-3 control-label">
+                    <label class="title">{{ "ServiceClass" | translate }}</label>
+                  </div>
+                  <div class="col-sm-6">
+                    <select-menu
+                      [label]="'Name'"
+                      [itemKey]="'Id'"
+                      [dropDownListInputs]="CustomerClassList"
+                      (selectedListChange)="onCustomerClassChanged($event)"
+                      [selectedList]="SelectedCustomerClasses"
+                      [options]="selectMenuOptions"
+                      (SearchVAlue)="getCustomerClasses($event)"
+                      [loading]="CustomerClass_Loading"
+                    >
+                    </select-menu>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-3 control-label">
+                    <label class="title">{{ "ServiceType" | translate }}</label>
+                  </div>
+                  <div class="col-sm-6">
+                    <select-menu
+                      [label]="'Name'"
+                      [itemKey]="'Id'"
+                      [dropDownListInputs]="ServiceTypeList"
+                      (selectedListChange)="onServiceTypeChanged($event)"
+                      [selectedList]="SelectedServiceTypes"
+                      [options]="selectMenuOptions"
+                      (SearchVAlue)="getServiceTypes($event)"
+                      [loading]="ServiceType_Loading"
+                    >
+                    </select-menu>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab>
+        <ng-template ngbTabTitle>Default Tanker List</ng-template>
+        <ng-template ngbTabContent>
+          <div class="card-body">
+            <div class="main-hold-list w-100 ">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="list-box">
+                    <h5>{{ 'allowed tanker list'| translate }}</h5>
+                    <ul>
+                      <li *ngFor="let truck of stationSettingsDTO?.AllCapacities; let i = index">
+                        {{truck.Name}}
+                        <span (click)="addRequest(i)">  <i class="fa fa-arrow-right"></i> </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="list-box">
+                    <h5> {{ 'restricted tanker list'| translate }}   </h5>
+      
+                    <ul>
+                      <li *ngFor="let reqL of  stationSettingsDTO?.SelectedCapacities; let i = index">
+                        {{reqL.Name}}
+                        <span (click)="removeRequest(i)">   <i class="fa fa-arrow-left"></i>  </span>
+      
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+      
+            </div>          
+          </div>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+
+    <div class="row card-footer bg-white">
+      <div class="col-md-12 text-center">
+        <button class="btn btn-default margin-5 pull-right" (click)="cancel()">
+          {{ "Cancel" | translate }}
+        </button>
+        <button class="btn btn-danger margin-5 pull-right" (click)="save()">
+          {{ "Save" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="input-group">
+  <div *ngIf="viewOnly">{{displayGerogrian}}</div>
+
+  <div class="hold-datepicker" *ngIf="!viewOnly">
+    <input
+      class="form-control hjri-input"
+      placeholder="{{'Gergorian' | translate}}"
+      [(ngModel)]="displayGerogrian"
+      (click)="dp.open()"
+      [disabled]="disabled"
+      [readonly]="true"
+    />
+
+    <input
+      class="form-control hjri-input"
+      [firstDayOfWeek]="7"
+      name="dp"
+      ngbDatepicker
+      [(ngModel)]="gergorianModel"
+      [disabled]="disabled"
+      #dp="ngbDatepicker"
+      (dateSelect)="onDateSelected($event)"
+      hidden
+    />
+  </div>
+
+  <!-- <input placeholder="{{'Gergorian' | translate}}" [firstDayOfWeek]="7" name="dp" ngbDatepicker
+        value={{displayGerogrian}} [disabled]="disabled" [readonly]="true" #dp="ngbDatepicker" (click)="dp.open()"
+        (dateSelect)="onDateSelected($event)"> -->
+
+  <datepicker-islamicumalqura
+    class="d-block hijri"
+    [(selectedDate)]="myDate"
+    [disabled]="disabled"
+    [viewOnly]="viewOnly"
+    (selectedDateChange)="hijriDateChanged($event)"
+    [InputIsHijri]="false"
+  ></datepicker-islamicumalqura>
+</div>

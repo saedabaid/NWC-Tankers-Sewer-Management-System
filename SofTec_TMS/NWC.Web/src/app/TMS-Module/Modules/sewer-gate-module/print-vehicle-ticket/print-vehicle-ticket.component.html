@@ -1,0 +1,172 @@
+<div id="printsection" class="print" style="width: 100%">
+  <div
+    [ngClass]="currentLang == 'ar' ? 'info-customer_ar' : ' info-customer'"
+    style="
+      page-break-after: always;
+      margin-bottom: 50px;
+      width: 100%;
+      text-align: right;
+    "
+  >
+    <div style="text-align: center; width: 100%; padding-bottom: 25px">
+      <label style="display: block"> {{ "LogOut" | translate }} </label>
+      <label style="display: block"> {{ invoice.StationName }} </label>
+    </div>
+
+    <div style="width: 100%">
+      <label
+        class="label-print"
+        style="width: 50%; display: inline-flex; justify-content: start"
+      >
+        {{ "VendorName" | translate }}
+      </label>
+      <label
+        class="label-value"
+        style="display: inline-flex; justify-content: start; width: 50%"
+        >{{ invoice.ContractorFullName }}</label
+      >
+    </div>
+
+    <div style="width: 100%">
+      <label
+        class="label-print"
+        style="width: 50%; display: inline-flex; justify-content: start"
+      >
+        {{ "ContractorAdress" | translate }}
+      </label>
+      <label
+        class="label-value"
+        style="display: inline-flex; justify-content: start; width: 50%"
+        >{{ invoice.ContractorAddress }}</label
+      >
+    </div>
+
+    <div style="width: 100%">
+      <label
+        class="label-print"
+        style="width: 50%; display: inline-flex; justify-content: start"
+      >
+        {{ "TaxNumber" | translate }}
+      </label>
+      <label
+        class="label-value"
+        style="display: inline-flex; justify-content: start; width: 50%"
+        >{{ invoice.ContractorTaxNumber }}</label
+      >
+    </div>
+
+    <div style="width: 100%">
+      <label
+        class="label-print"
+        style="width: 50%; display: inline-flex; justify-content: start"
+      >
+        {{ "Date" | translate }}
+      </label>
+      <label
+        class="label-value hijri"
+        style="display: inline-flex; justify-content: start; width: 50%"
+      >
+        <datePicker-gregorian-hijri [(selectedDate)]="myDate" [viewOnly]="true">
+        </datePicker-gregorian-hijri>
+      </label>
+    </div>
+
+    <div style="width: 100%">
+      <label
+        class="label-print"
+        style="width: 50%; display: inline-flex; justify-content: start"
+      >
+        {{ "Vehicle" | translate }}
+      </label>
+      <label
+        class="label-value"
+        style="width: 50%; display: inline-flex; justify-content: start"
+      >
+        {{ invoice.VehiclePlateNo }} | {{ invoice.VehicleCode }}
+      </label>
+    </div>
+
+    <div style="width: 100%">
+      <label
+        class="label-print"
+        style="width: 50%; display: inline-flex; justify-content: start"
+      >
+        {{ "Quantity" | translate }}
+      </label>
+      <label
+        class="label-value"
+        style="display: inline-flex; justify-content: start; width: 50%"
+      >
+        {{ invoice.VehicleCapacity }}
+      </label>
+    </div>
+
+    <hr />
+
+    <div style="width: 100%">
+      <label
+        class="label-print"
+        style="width: 50%; display: inline-flex; justify-content: start"
+      >
+        {{ "ThePrice" | translate }}
+      </label>
+      <label
+        class="label-value"
+        style="display: inline-flex; justify-content: start; width: 50%"
+      >
+        {{ invoice.NetCost > 0 ? invoice.NetCost : "NA" }}
+      </label>
+    </div>
+    <div style="width: 100%">
+      <label
+        class="label-print"
+        style="width: 50%; display: inline-flex; justify-content: start"
+      >
+        {{ "VAT" | translate }}
+      </label>
+      <label
+        class="label-value"
+        style="display: inline-flex; justify-content: start; width: 50%"
+      >
+        {{ invoice.NetCost > 0 ? invoice.VatValue : "NA" }}
+      </label>
+    </div>
+    <div style="width: 100%">
+      <label
+        class="label-print"
+        style="width: 50%; display: inline-flex; justify-content: start"
+      >
+        {{ "TotalCoast" | translate }}
+      </label>
+      <label
+        class="label-value"
+        style="display: inline-flex; justify-content: start; width: 50%"
+      >
+        {{
+          invoice.NetCost > 0 ? invoice.NetCost + invoice.VatValue : "NA"
+        }}</label
+      >
+    </div>
+
+    <hr />
+
+    <div style="width: 100%">
+      <label
+        class="label-print"
+        style="width: 50%; display: inline-flex; justify-content: start"
+      >
+        {{ "UserName" | translate }}
+      </label>
+      <label class="label-value"> {{ _auth.getCurrentuserName() }}</label>
+    </div>
+  </div>
+  <button
+    class="btn btn-primary"
+    printTitle="Driver Print"
+    printSectionId="printsection"
+    styleSheetFile="/assets/TMSBranding/styles/css/component.css"
+    ngxPrint
+  >
+    {{ "print" | translate }}
+  </button>
+</div>

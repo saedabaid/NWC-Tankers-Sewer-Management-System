@@ -1,0 +1,34 @@
+<h4>{{ 'FSD_24HoursOrder' | translate}}</h4>
+<div class="text-center">
+    <table class="table Dtable scrollable-table table-striped">
+      <thead>
+        <tr>
+          <th class="">{{ "OrderNo" | translate }}</th>
+          <th class="">{{ "Date" | translate }}</th>
+          <th class="">{{ "Time" | translate }}</th>
+          <th class="">{{ "TotalDelayTime" | translate }}</th>
+        </tr>
+      </thead>
+  
+      <tbody>
+        <tr class="text-center  d-block p-2 font-4 " *ngIf="!searchResult?.Result">
+            {{"NoDataFound" | translate}}
+        </tr>
+        <tr *ngFor="let workOrder of searchResult?.Result">
+          <th class="">{{ workOrder.OrderNumber }}</th>
+          <th class="">{{ workOrder.RequestTime | date:'mediumDate'}}</th>
+          <th class="">{{ workOrder.RequestTime | date:'mediumTime'}}</th>
+          <th class="">{{ calculateTime(workOrder.LastStatusTime, workOrder.RequestTime)}} {{'Hours'}}</th>
+        </tr>
+      </tbody>
+    </table>
+  
+    <app-pagination-component
+[ItemsCount]="searchResult?.TotalCount"
+[(PageSize)]="this.SearchCriteria.FilterModel.PageFilter.PageSize"
+[pageIndex]="this.SearchCriteria.FilterModel.PageFilter.PageIndex"
+(PageSizeChange)="onPageSizeChanged($event)"
+(pageNavigated)="onPageIndexChanged($event)"
+>
+</app-pagination-component>
+</div>

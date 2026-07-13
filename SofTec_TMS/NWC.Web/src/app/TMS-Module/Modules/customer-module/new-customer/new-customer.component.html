@@ -1,0 +1,204 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-md-6  padding-10">
+            <a (click)="cancel()">
+                <span class="page-title">{{ "TMS_CustomerList" | translate }}</span>
+            </a>
+            <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+            <span class="page-title  currentpage">{{( updateId ? "EditCustomer" : "NewCustomer" )| translate }}</span>
+        </div>
+    </div>
+</div>
+
+<div class="inner-div">
+    <div class="row form-row">
+        <div class="col-md-6  ">
+            <label class="col-sm-3 title">{{ "FullName" | translate }} <span class="required">*</span>
+            </label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="{{ 'FullName' | translate }}"
+                    [(ngModel)]="customer.FullName" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "IDtype" | translate }} <span class="required">*</span>
+            </label>
+            <div class="col-sm-6">
+                <select-menu [label]="'Name'" [itemKey]="'Id'"
+                    [dropDownListInputs]="PersonalIDTypes"
+                    (selectedListChange)="onPersonalIDTypeChanged($event)"
+                    [selectedList]="bindingModel_PersonalIdTypes"
+                    [options]="selectMenuOptions"
+                    >
+                </select-menu>
+               
+            </div>
+        </div>
+    </div>
+    <div class="row form-row">
+        <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "IDNumber" | translate }} <span class="required">*</span>
+            </label>
+            <div class="col-sm-6">
+                <input [(ngModel)]="customer.IDNumber"  type="text" 
+                    placeholder="{{'Enter ID'| translate}}" class="form-control ">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label class="col-sm-3 title">{{ "Mobile" | translate }} <span class="required">*</span>
+            </label>
+            <div class="col-sm-6">
+                <input [(ngModel)]="customer.Mobile" type="tel"
+                    placeholder="{{'Enter Mobile'| translate}}" class="form-control ">
+            </div>
+            <label class="col-sm-3 title">5xxxxxxxx</label>
+        </div>
+    </div>
+
+    <!-- <div class="row form-row">
+        <div class="col-md-3">
+            <label class="col-sm-4 title">{{'Address' | translate}} </label>
+            <div class="col-sm-8">
+               
+            </div>
+        </div>
+      
+        <div class="col-md-3">
+            <label class="col-sm-4 title">{{'Zone' | translate}} </label>
+            <div class="col-sm-8">
+               
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <label class="col-sm-4 title">{{'Class' | translate}} <span class="required">*</span></label>
+            <div class="col-sm-8">
+                
+            </div>
+        </div>
+
+        <div class="col-md-3">
+           
+        </div>
+
+    </div> -->
+
+    <div class="row form-row">
+        <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row' ">
+            <div class="col-md-12 scroll-x-table">
+        
+              <table class="table   table-striped scrollable-table">
+                <thead>
+                  <tr>
+                    <th class="wid100">
+                        <input [(ngModel)]="newlocation.CL_Address" type="text"
+                            placeholder="{{'Address'| translate}}" class="form-control ">
+
+                        <!-- {{'Address' | translate}}  -->
+                    
+                    </th>
+
+                    <th class="wid100" >
+                        <div class="col-md-12">
+                        <select-menu [label]="'Name'" [itemKey]="'Id'" 
+                            [dropDownListInputs]="zoneList"
+                            (SearchVAlue)="getZones($event)"
+                            [options]="selectMenuOptionsZone"
+                            (selectedListChange)="onZonesDDLChanged($event)"
+                            [selectedList]="bindingModel_Zones"
+                            [loading]="Zone_Loading"
+                        >
+                        </select-menu>
+                    </div>
+                        <!-- {{'Zone' | translate}} -->
+                    </th>
+
+                    <th class="wid100">
+                        <select-menu [label]="'Name'" [itemKey]="'Id'"
+                            [dropDownListInputs]="customerClassList"
+                            (selectedListChange)="onClassDDLChanged($event)"
+                            [selectedList]="bindingModel_Classes"
+                            [options]="selectMenuOptionsClass"
+                            >
+                        </select-menu>
+                        <!-- {{'Class' | translate}} -->
+                    </th>
+
+                    <th class="wid100">
+                        <select-menu [label]="'Name'" [itemKey]="'Id'"
+                            [dropDownListInputs]="serviceTypeList"
+                            (selectedListChange)="onServiceTypeDDLChanged($event)"
+                            [selectedList]="bindingModel_ServiceTypes"
+                            [options]="selectMenuOptionsServiceType"
+                            >
+                        </select-menu>
+                        <!-- {{'Class' | translate}} -->
+                    </th>
+
+                    <th class="wid100">
+                        <input [(ngModel)]="newlocation.AccountId_Integration" type="text"
+                            placeholder="{{'CustomerAccount'| translate}}" class="form-control ">                    
+                    </th>
+
+                    <th class="wid50">
+                        <a title="{{ 'AddLocation' | translate }}" (click)="addLocation()">
+                            <i [ngClass]="newlocation.ID ? 'glyphicon glyphicon-floppy-disk': 'glyphicon glyphicon-plus-sign' "
+                            class="margin-5 icon-style"  ></i>
+                        </a>    
+                    </th>
+
+                    <th class="wid50">
+                        <a *ngIf="newlocation.ID" 
+                            title="{{ 'cancel' | translate }}" (click)="clearNewLoction()">
+                            <i class="glyphicon glyphicon-remove-sign margin-5 icon-style" ></i>
+                        </a>    
+                    </th>
+
+                  </tr>
+                </thead>
+                <tbody [class]="advancedDiv ? ' mini' : ' '">
+        
+                  <tr *ngFor="let item of filterDeleted(customer.customerAccounts); let i = index">
+        
+                    <td class="wid100"> {{item.CL_Address}} </td>
+                    <td class="wid100 ">{{item.CL_ZoneName}} </td>
+                    <td class="wid100"> {{ (IsArabic ? item.CL_ClassAr : item.CL_ClassEn) }} </td>
+                    <td class="wid100"> {{ (IsArabic ? item.ServiceTypeAr : item.ServiceTypeEn) }} </td>
+                    <td class="wid100"> {{item.AccountId_Integration}} </td>
+        
+                    <td class="wid50">
+                      <a *ngIf="item.ID" 
+                        (click)="editLocation(item)" title="  {{'Edit' | translate}}">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                      </a>
+                    </td>
+
+                    <td class="wid50">
+                        <a (click)="deleteLocation(item)" title="  {{'Delete' | translate}}" [hidden]="item.ID" >
+                          <i class="glyphicon glyphicon-trash"></i>
+                        </a>
+                      </td>
+                  </tr>
+                </tbody>
+              </table>
+        
+            </div>
+        
+        
+          </div>
+    </div>
+
+    <div class="row form-row bottom-btn">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+            <button class="btn btn-default margin-5 pull-right" (click)="cancel()">
+                {{ "Cancel" | translate }}
+            </button>
+            <button class="btn btn-danger margin-5 pull-right" (click)="save()">
+                {{ "save" | translate }}
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+textarea {
+    resize: none;
+
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+
+.bottom-btn {
+  position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.disabled {
+    background: #ccc !important;
+}
+
+option:hover,
+option:focus,
+option:active,
+option:checked { 
+  background-color: #00ae8d;
+  color: #fff; 
+}
+
+
+.margin-16{
+  margin: 0 16px;
+}
+
+.content-map {
+  height: 385px;
+}
+.padding-0 {
+  padding: 0;
+}
+
+.margin-23-minus {
+  margin-left: -23px;
+  margin-right: -23px;
+}
+

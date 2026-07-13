@@ -1,0 +1,341 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-md-6  padding-10">
+            <a>
+                <span class="page-title">{{ "TMS_Integration" | translate }}</span>
+            </a>
+            <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+            <a (click)="cancel()">
+                <span class="page-title">{{ "DeferredOrders" | translate }}</span>
+            </a>
+
+            <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+            <span class="page-title  currentpage">{{ "EditDeferredOrder" | translate }}</span>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="inner-div">
+
+    <div class="row">
+
+        <div class="col-md-8">
+
+            <div class="row form-row">
+                <div class="col-md-6  ">
+                    <label class="col-sm-3 title">{{ "OrderNo" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <label class="form-control disabled">{{DeferredOrder.ORDERNUMBER}}</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label class="col-sm-3 title">{{ "PremiseID" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <label class="form-control disabled">{{DeferredOrder.PREMISEID}}</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row form-row">
+                <div class="col-md-6  ">
+                    <label class="col-sm-3 title">{{ "TransactionID" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <label class="form-control disabled">{{DeferredOrder.TRANSACTIONID}}</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label class="col-sm-3 title">{{ "SourceApplication" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <label class="form-control disabled">{{DeferredOrder.SOURCEAPPLICATION}}</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-row">
+
+                <div class="col-md-6">
+                    <label class="col-sm-3 title">{{ "AccountId" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <label class="form-control disabled">{{DeferredOrder.ACCOUNTID}}</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6  ">
+                    <label class="col-sm-3 title">{{ "CISDivision" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <label class="form-control disabled">{{DeferredOrder.CISDIVISION}}</label>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row form-row">
+
+                <div class="col-md-6">
+                    <label class="col-sm-3 title">{{ "ServiceType" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerServiceList"
+                            (selectedListChange)="onServiceDDLChanged($event)"
+                            [selectedList]="bindingModel_CustomerService" [options]="selectMenuOptions">
+                        </select-menu>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="col-sm-3 title">{{ "TanckerCapacity" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="TanckerCapacityList"
+                            (selectedListChange)="onTanckerCapacityDDLChanged($event)"
+                            [selectedList]="bindingModel_TanckerCapacities" [options]="selectMenuOptions">
+                        </select-menu>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row form-row">
+
+                <div class="col-md-6">
+                    <label class="col-sm-3 title">{{ "CustomerClass" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerClassList"
+                            (selectedListChange)="onClassDDLChanged($event)" [selectedList]="bindingModel_Classes"
+                            [options]="selectMenuOptions">
+                        </select-menu>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row form-row">
+                <div class="col-md-6  ">
+                    <label class="col-sm-3 title">{{ "longitude" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" [(ngModel)]="DeferredOrder.helper_longitude" />
+                    </div>
+                </div>
+
+                <div class="col-md-6  ">
+                    <label class="col-sm-3 title">{{ "latitude" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" [(ngModel)]="DeferredOrder.helper_latitude" />
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row form-row">
+                <div class="col-md-6  ">
+
+                    <div class="col-sm-3">
+                        <a class="btn btn-default" (click)="GetZoneByGIS()">
+                            <span *ngIf="!gisLoading">{{ "GetZone" | translate }}</span>
+                            <img *ngIf="gisLoading" width="24px" src="assets/TMSBranding/styles/img/loader.gif" />
+                        </a>
+                    </div>
+
+                    <label class="col-sm-9 title margin-16">
+                        {{DeferredOrder.helper_ZoneName}}
+                    </label>
+
+                </div>
+
+                <div class="col-md-6" [hidden]="!showZoneDDL">
+                    <label class="col-sm-3 title">{{ "Zone" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="zoneList"
+                            (SearchVAlue)="getZones($event)" [options]="selectMenuOptionsZone"
+                            (selectedListChange)="onZonesDDLChanged($event)" [selectedList]="bindingModel_Zones"
+                            [loading]="Zone_Loading">
+                        </select-menu>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row form-row">
+                <div class="col-md-6  ">
+                    <label class="col-sm-3 title">{{ "ScheduledTime" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <app-datepicker [(selecteddate)]="DeferredOrder.helper_scheduleTime" DateID=date1>
+                        </app-datepicker>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class="col-sm-6 padding-0">
+                        <app-amazing-timepicker id="scehuleTime" [(selectedTime)]="scheduleTimeStr">
+                        </app-amazing-timepicker>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+            <div class="row form-row">
+
+                <div class="col-md-6">
+                    <label class="col-sm-3 title">{{ "PersonId" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" [(ngModel)]="DeferredOrder.PERSONID" />
+                    </div>
+                </div>
+
+                <div class="col-md-6  ">
+                    <label class="col-sm-3 title">{{ "PersonPrimaryName" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" [(ngModel)]="DeferredOrder.PERSONPRIMARYNAME" />
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row form-row">
+
+                <div class="col-md-6">
+                    <label class="col-sm-3 title">{{ "PersonIdType" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+
+                        <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="PersonalIDList"
+                            (selectedListChange)="onIdtypeDDLChanged($event)"
+                            [selectedList]="bindingModel_PersonalIdType" [options]="selectMenuOptions">
+                        </select-menu>
+
+                        <!-- <input type="text" class="form-control" [(ngModel)]="DeferredOrder.PERSONIDTYPE" /> -->
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="col-sm-3 title">{{ "PersonIdValue" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" [(ngModel)]="DeferredOrder.PERSONIDVALUE" />
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row form-row">
+
+                <div class="col-md-6  ">
+                    <label class="col-sm-3 title">{{ "MobileNumber" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" [(ngModel)]="DeferredOrder.MOBILENUMBER" />
+                    </div>
+                </div>
+
+                <div class="col-md-6  ">
+                    <label class="col-sm-3 title">{{ "OrderConfirmationCode" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" [(ngModel)]="DeferredOrder.CONFIRMATIONCODE" />
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row form-row">
+                <div class="col-md-6  ">
+                    <label class="col-sm-3 title">{{ "ContactName" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" [(ngModel)]="DeferredOrder.CONTACTNAME" />
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="col-sm-3 title">{{ "ContactMoblie" | translate }}
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" [(ngModel)]="DeferredOrder.CONTACTMOBILE" />
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row form-row">
+
+
+                <label class="col-sm-2 title">{{ "Comment" | translate }}
+                </label>
+                <div class="col-sm-9 margin-23-minus">
+                    <textarea type="text" class="form-control" rows="3" [(ngModel)]="DeferredOrder.COMMENT">
+                </textarea>
+                </div>
+
+            </div>
+
+            <div class="row form-row">
+
+                <label class="col-sm-2 title">{{ "ErrorMSG" | translate }}
+                </label>
+                <div class="col-sm-9 margin-23-minus">
+                    <label class="form-control disabled">{{DeferredOrder.ErrorMSG}}</label>
+                </div>
+
+            </div>
+
+
+            <!--buttons-->
+            <div class="row form-row">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <button class="btn btn-default margin-5 pull-right" (click)="cancel()">
+                        {{ "Cancel" | translate }}
+                    </button>
+                    <button class="btn btn-danger margin-5 pull-right" (click)="save()">
+                        {{ "save" | translate }}
+                    </button>
+                </div>
+            </div>
+
+            <div class="row form-row">
+            </div>
+
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="content-map">
+                <common-map></common-map>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>

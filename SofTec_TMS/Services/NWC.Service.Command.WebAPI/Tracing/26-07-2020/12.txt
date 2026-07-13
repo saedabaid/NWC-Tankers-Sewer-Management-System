@@ -1,0 +1,76 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:26/07/2020 12:52:10 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:26/07/2020 12:52:10 م
+
+CreateWorkOrder Time:26/07/2020 12:52:10 م
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5537,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":"TMS","CISDivision":null,"TransactionID":null} Time:26/07/2020 12:52:10 م
+
+Valid Time:26/07/2020 12:52:11 م
+
+Create WorkOrder: Partially Success Time:26/07/2020 12:52:12 م
+
+customerAccount: 5537 Time:26/07/2020 12:52:13 PM
+
+customerLocation: 5537 Time:26/07/2020 12:52:13 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:26/07/2020 12:52:13 PM
+
+OrderNumber: 5014556141 Time:26/07/2020 12:52:13 PM
+
+workOrderID: 46028 Time:26/07/2020 12:52:13 PM
+
+scheduledDeliveryTime: 26/07/2020 12:52:10 PM Time:26/07/2020 12:52:13 PM
+
+customerLocationClassID: 1 Time:26/07/2020 12:52:13 PM
+
+serviceTypeID: 1 Time:26/07/2020 12:52:13 PM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:26/07/2020 12:52:13 PM
+
+orderQuantity: 20 Time:26/07/2020 12:52:13 PM
+
+Net Cost: -1 Time:26/07/2020 12:52:13 PM
+
+SMS: عميلنا العزيز: تم فتح طلب صهريج مياه برقم 5014556141 وسيتم التواصل معكم لتأكيد استلام الصهريج Time:26/07/2020 12:52:45 PM
+
+Create WorkOrder: Success Time:26/07/2020 12:53:31 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:26/07/2020 12:56:05 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:26/07/2020 12:56:05 م
+
+CreateWorkOrder Time:26/07/2020 12:56:05 م
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5537,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":"TMS","CISDivision":null,"TransactionID":null} Time:26/07/2020 12:56:05 م
+
+Valid Time:26/07/2020 12:56:06 م
+
+Create WorkOrder: Partially Success Time:26/07/2020 12:56:08 م
+
+customerAccount: 5537 Time:26/07/2020 12:56:10 PM
+
+customerLocation: 5537 Time:26/07/2020 12:56:10 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:26/07/2020 12:56:10 PM
+
+OrderNumber: 8788279388 Time:26/07/2020 12:56:10 PM
+
+workOrderID: 46029 Time:26/07/2020 12:56:10 PM
+
+scheduledDeliveryTime: 26/07/2020 12:56:05 PM Time:26/07/2020 12:56:10 PM
+
+customerLocationClassID: 1 Time:26/07/2020 12:56:10 PM
+
+serviceTypeID: 1 Time:26/07/2020 12:56:10 PM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:26/07/2020 12:56:10 PM
+
+orderQuantity: 20 Time:26/07/2020 12:56:10 PM
+
+Net Cost: -1 Time:26/07/2020 12:56:10 PM
+
+SMS: عميلنا العزيز: تم فتح طلب صهريج مياه برقم 8788279388 وسيتم التواصل معكم لتأكيد استلام الصهريج Time:26/07/2020 12:56:16 PM
+
+Create WorkOrder: Success Time:26/07/2020 12:56:25 PM
+

@@ -1,0 +1,34 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 12:31:28 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:15/09/2020 12:31:28 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 0413814970 - TransporterID 5f38a5cb-e16a-4931-8c02-83be929122dc - TransportrStatus: 0 Time:15/09/2020 12:31:29 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:15/09/2020 12:31:29 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:15/09/2020 12:31:29 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 0413814970 - TransporterID: 5f38a5cb-e16a-4931-8c02-83be929122dc - TransporterStatus: 11 Time:15/09/2020 12:31:29 م
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 0413814970 - TransporterID: 5f38a5cb-e16a-4931-8c02-83be929122dc - TransporterStatus: 11 Time:15/09/2020 12:31:29 PM
+
+Start Inserting Driver SMS: OrderNo:0413814970, VehicleId:5f38a5cb-e16a-4931-8c02-83be929122dc, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:15/09/2020 12:31:30 PM
+
+SMS: تم تخصيص رقم الطلب 0413814970 ويمكن التواصل على جوال العميل 032453245345 موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:15/09/2020 12:31:30 PM
+
+Start Inserting Customer SMS: OrderNo:0413814970, VehicleId:5f38a5cb-e16a-4931-8c02-83be929122dc, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:15/09/2020 12:31:30 PM
+
+SMS: عميلنا العزيز: نفيدكم بتخصيص ناقلة مياه لطلبكم رقم 0413814970 Time:15/09/2020 12:31:30 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"0413814970","cisDivision":19,"orderStatus":4,"updateDateTime":"15-09-2020 12:31:30","parameters":[{"parameterName":"TMSID","parameterValue":"0413814970"},{"parameterName":"COMMENT","parameterValue":""}]} Time:15/09/2020 12:31:30 PM
+
+----------------------------------------AssignWorkOrder - Denormalizer - End---------------------------------------- Time:15/09/2020 12:31:52 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 12:32:37 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"2286690540","cisDivision":19,"orderStatus":5,"updateDateTime":"15-09-2020 12:32:38","parameters":[{"parameterName":"TMSID","parameterValue":"2286690540"},{"parameterName":"COMMENT","parameterValue":""}]} Time:15/09/2020 12:32:38 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 12:34:28 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"2286690540","cisDivision":19,"orderStatus":3,"updateDateTime":"15-09-2020 12:34:29","parameters":[{"parameterName":"TMSID","parameterValue":"2286690540"},{"parameterName":"COMMENT","parameterValue":""}]} Time:15/09/2020 12:34:29 PM
+

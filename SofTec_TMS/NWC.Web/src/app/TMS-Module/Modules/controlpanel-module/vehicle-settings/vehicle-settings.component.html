@@ -1,0 +1,328 @@
+<!-- Search -->
+<div class="row mb-1">
+  <!-- Area -->
+  <div class="col-md-3">
+    <label class="col-sm-4 title">{{ "Area" | translate }} </label>
+    <div class="col-sm-8">
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="customerAreaList"
+        (SearchVAlue)="getAreas($event)"
+        (selectedListChange)="onAreaDDLChanged($event)"
+        [options]="selectMenuOptions2"
+        [selectedList]="bindingModel_Areas"
+        [loading]="Area_loading"
+      >
+      </select-menu>
+    </div>
+  </div>
+
+  <!-- city -->
+  <div class="col-md-3">
+    <label class="col-sm-4 title">{{ "City" | translate }}</label>
+    <div class="col-sm-8">
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="customerCityList"
+        (SearchVAlue)="getCity($event)"
+        (selectedListChange)="onCityDDLChanged($event)"
+        [options]="selectMenuOptions2"
+        [selectedList]="bindingModel_Cities"
+        [loading]="City_Loading"
+      >
+      </select-menu>
+    </div>
+  </div>
+
+  <!-- station -->
+  <div class="col-md-3">
+    <label class="col-sm-4 title">{{ "Station" | translate }}</label>
+    <div class="col-sm-8">
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="customerStationList"
+        (SearchVAlue)="getStations($event)"
+        (selectedListChange)="onStationDDLChanged($event)"
+        [options]="selectMenuOptions2"
+        [selectedList]="bindingModel_Stations"
+        [loading]="Station_Loading"
+      >
+      </select-menu>
+    </div>
+  </div>
+
+  <!-- Vehicle -->
+  <div class="col-md-3">
+    <label class="col-sm-4 title">{{ "vehicle" | translate }}</label>
+    <div class="col-sm-8">
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="vehicleList"
+        (SearchVAlue)="getVehicles($event)"
+        (selectedListChange)="onVehicleDDLChanged($event)"
+        [options]="selectMenuOptions2"
+        [selectedList]="bindingModel_Vehicles"
+        [loading]="Vehicle_Loading"
+      >
+      </select-menu>
+    </div>
+  </div>
+
+</div>
+<div class="row mb-1">
+  
+  <!-- Vehicle type -->
+  <div class="col-md-3">
+    <label class="col-sm-4 title">{{ "TankerType" | translate }}</label>
+    <div class="col-sm-8">
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="vehicleTypeList"
+        (selectedListChange)="onVehicleTypeDDLChanged($event)"
+        [options]="selectMenuOptions"
+        [selectedList]="bindingModel_vehicleType"
+      >
+      </select-menu>
+    </div>
+  </div>
+
+  <!-- buttons -->
+  <div class="col-md-3">
+    <button class="btn btn-default margin-5 pull-right" (click)="clearSearch()">
+      {{ "Clear" | translate }}
+    </button>
+    <button
+      class="btn btn-danger margin-5 pull-right"
+      (click)="onSearchSubmit()"
+    >
+      {{ "Search" | translate }}
+    </button>
+  </div>
+
+  <div class="col-md-2">
+    <a class="mr-2 ml-2 link-route" (click)="bulkUpdate = !bulkUpdate">
+        {{bulkUpdate? ("HideBulkUpdate" | translate): ("BulkUpdate" | translate)}}
+    </a>
+  </div>
+
+</div>
+
+<div [hidden]="!bulkUpdate" id="bulk-update">
+  <!--row 1 -->
+  <div class="row form-row">
+    <!-- Customer Class -->
+    <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "CustomerClass" | translate }} </label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="customerClassList"
+            [(selectedList)]="bindingModel_BulkUpdate_CustomerClasses"
+            (selectedListChange)="onBulkUpdate_ClassDDLChange($event)"
+          >
+          </select-menu>
+        </div>
+    </div>
+
+    <!-- Accessories -->
+    <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "necessary accessories" | translate }} </label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="accessoriesList"
+            [(selectedList)]="bindingModel_BulkUpdate_Accessories"
+            (selectedListChange)="onBulkUpdate_AccessoryDDLChange($event)"
+          >
+          </select-menu>
+        </div>
+    </div>
+
+    <!-- Service Type -->
+    <div class="col-md-3">
+      <label class="col-sm-4 title">{{ "ServiceType" | translate }} </label>
+      <div class="col-sm-8">
+        <select-menu
+          [label]="'Name'"
+          [itemKey]="'Id'"
+          [dropDownListInputs]="customerServiceList"
+          [(selectedList)]="bindingModel_BulkUpdate_ServiceTypes"
+          (selectedListChange)="onBulkUpdate_ServiceTypeDDLChange($event)"
+        >
+        </select-menu>
+      </div>
+    </div>
+
+    <!-- Station -->
+    <div class="col-md-3">
+      <label class="col-sm-4 title">{{ "Station" | translate }} </label>
+      <div class="col-sm-8">
+        <select-menu
+          [label]="'Name'"
+          [itemKey]="'Id'"
+          [dropDownListInputs]="bulkUpdate_StationList"
+          (SearchVAlue)="SearchPermittedStations($event)"
+          (selectedListChange)="onBulkUpdate_StationDDLChange($event)"
+          [options]="selectMenuOptions2"
+          [selectedList]="bindingModel_BulkUpdate_Station"
+          [loading]="bulkUpdate_Station_Loading"
+        >
+        </select-menu>
+      </div>
+    </div>
+    
+  </div>
+
+  <!--row 2 -->
+  <div class="row form-row">
+    <!-- Capacity -->
+    <div class="col-md-3">
+      <label class="col-sm-4 title">{{ "TanckerCapacity" | translate }} </label>
+      <div class="col-md-8">
+        <input type="number" class="form-control" [(ngModel)]="bulkUpdateModel.Capacity">
+      </div>
+    </div>
+
+    <!-- Option DDL -->
+    <div class="col-md-3">
+      <label class="col-sm-4 title">{{ "AppliedOn" | translate }} </label>
+      <div class="col-md-8">
+        <select class="form-control" [(ngModel)]="bulkUpdateModel.ApplyOption" >
+          <option value="1" >كل النتائج</option>
+          <option value="2" >الصفحة الحالية</option>
+          <option value="3" >المحدد</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="col-md-3">
+      <button class="btn btn-default margin-5 pull-right" (click)="clearBulkUpdateSearch()">
+        {{ "Clear" | translate }}
+      </button>
+      <button
+        class="btn btn-danger margin-5 pull-right"
+        (click)="onBulkUpdateSubmit()"
+      >
+        {{ "Submit" | translate }}
+      </button>
+    </div>
+
+  </div>
+
+
+</div>
+
+<!-- table -->
+<div [class]="bulkUpdate ? 'table-advans' : 'table-heigh' + ' row'">
+  <div class="col-md-12 scroll-x-table list-body">
+
+    <!--#region  table loading ********************************************** -->
+    <div [ngClass]="tableLoading ? 'container-gif show' : 'container-gif' ">
+      <div class="uil-ring-css table-loader" style="transform:scale(0.6);">
+        <div></div>
+      </div>
+    </div>
+    <!--#endregion  table loading -->
+
+
+    <table class="table   table-striped scrollable-table">
+      <thead>
+        <tr>
+          <th class="wid10"></th>
+          <th class="wid130">{{ "vehicle" | translate }}</th>
+          <th class="wid130">{{ "CustomerClass" | translate }}</th>
+          <th class="wid130">{{ "necessary accessories" | translate }}</th>
+          <th class="wid130">{{ "ServiceType" | translate }}</th>
+          <th class="wid130">{{ "Station" | translate }}</th>
+          <th class="wid100">{{ "TanckerCapacity" | translate }}</th>
+          <th class="wid130">{{ "TankerType" | translate }}</th>
+
+        </tr>
+      </thead>
+      <tbody [class]="bulkUpdate ? ' mini' : ' '">
+        <tr class="text-center d-block p-2 font-4"  *ngIf="!searchResult.Result">
+          {{
+            "NoDataFound" | translate
+          }}
+        </tr>
+        <tr *ngFor="let item of searchResult.Result; let i = index">
+          <td class="wid10">
+            <input type="checkbox" [(ngModel)]="item.CheckToSave" />
+          </td>
+          <td class="wid130">{{ item.CodePlateNumber }}</td>
+          <td class="wid130">
+            <select-menu
+              [label]="'Name'"
+              [itemKey]="'Id'"
+              [dropDownListInputs]="customerClassList"
+              [(selectedList)]="item.CustLocationClasses"
+              (selectedListChange)="onClassDDLChange($event, item)"
+            >
+            </select-menu>
+          </td>
+
+          <td class="wid130">
+            <select-menu
+              [label]="'Name'"
+              [itemKey]="'Id'"
+              [dropDownListInputs]="accessoriesList"
+              [(selectedList)]="item.Accessories"
+              (selectedListChange)="onAccessoryDDLChange($event, item)"
+            >
+            </select-menu>
+          </td>
+
+          <td class="wid130">
+              <select-menu
+                [label]="'Name'"
+                [itemKey]="'Id'"
+                [dropDownListInputs]="customerServiceList"
+                [(selectedList)]="item.ServiceTypes"
+                (selectedListChange)="onServiceDDLChange($event, item)"
+                [options]="selectMenuOptions"
+              >
+              </select-menu>
+          </td>
+
+          <td class="wid130">
+            {{ item.StationName }}
+          </td>
+          <td class="wid100">
+            {{ item.Capacity }}
+          </td>
+          <td class="wid130">
+            {{ (IsArabic ? item.transporterTypeNameAr : item.transporterTypeNameEn) }}
+          </td>
+
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Paging -->
+<app-pagination-component
+  [ItemsCount]="searchResult.TotalCount"
+  [(PageSize)]="this.SearchCriteria.PageFilter.PageSize"
+  [pageIndex]="this.SearchCriteria.PageFilter.PageIndex"
+  (PageSizeChange)="onPageSizeChanged($event)"
+  (pageNavigated)="onPageIndexChanged($event)"
+>
+</app-pagination-component>
+
+<!-- submit -->
+<div class="row mt-1">
+  <div class="col-md-6">
+    <button class="btn btn-primary" (click)="save()">save</button>
+  </div>
+  <div class="col-md-6"></div>
+</div>

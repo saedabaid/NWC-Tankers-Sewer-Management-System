@@ -1,0 +1,19 @@
+2021-07-13 16:45:11.3847 ERROR -- AuthenticationManager.AuthenticateUser : One or more errors occurred. -- System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:43238
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace --- 
+
+----------------------------------------------------------------------------
+ 
+2021-07-13 16:45:11.3970 ERROR -- ***** Sewer_Win_Services Login failed At 13/07/21 4:45:11 PM --  
+
+----------------------------------------------------------------------------
+ 
+2021-07-13 16:45:11.3970 ERROR -- ***** Error At  :13/07/21 4:45:11 PM - Login failed. --  
+
+----------------------------------------------------------------------------
+ 

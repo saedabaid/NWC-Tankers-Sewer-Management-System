@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664986D0-09C1-4508-811E-623362A95C47}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NWC.DTO</RootNamespace>
+    <AssemblyName>NWC.DTO</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Logger">
+      <HintPath>..\..\..\LTS_TMS\SofTec_TMS\packages\Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="Logger">
+      <HintPath>..\packages\Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AddItemsResponse.cs" />
+    <Compile Include="Common\ContractPrice.cs" />
+    <Compile Include="Common\DashboardXYChartDTO.cs" />
+    <Compile Include="Common\DescriptiveObject.cs" />
+    <Compile Include="Common\DescriptiveResponse.cs" />
+    <Compile Include="Common\DirectionsResponse.cs" />
+    <Compile Include="Common\DirectionsServiceRequestObject.cs" />
+    <Compile Include="Common\AttachmentDTO.cs" />
+    <Compile Include="Common\ELM\DescriptiveObject.cs" />
+    <Compile Include="Common\ELM\DescriptiveResponse.cs" />
+    <Compile Include="Common\Filters.cs" />
+    <Compile Include="Common\LookUpDTO.cs" />
+    <Compile Include="Common\PageFilter.cs" />
+    <Compile Include="Common\PrintDTO.cs" />
+    <Compile Include="Common\FilterResult.cs" />
+    <Compile Include="Common\StationSizesDTO.cs" />
+    <Compile Include="Common\WorkOrderFilter.cs" />
+    <Compile Include="Common\SearchResult.cs" />
+    <Compile Include="Constants\RequestHeaderKeys.cs" />
+    <Compile Include="Constants\LanguagesKeys.cs" />
+    <Compile Include="DomainModels\LoggedInUser.cs" />
+    <Compile Include="Enums\AttachmentType.cs" />
+    <Compile Include="Enums\ErrorStatus.cs" />
+    <Compile Include="Enums\Operator.cs" />
+    <Compile Include="Enums\SubscriberConfigurationEnum.cs" />
+    <Compile Include="Enums\ValidationMode.cs" />
+    <Compile Include="Extentions\LambdaEqualityComparer.cs" />
+    <Compile Include="Helpers\AesOperation.cs" />
+    <Compile Include="Helpers\CryptoEngine.cs" />
+    <Compile Include="Helpers\DateTimeHelper.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Helpers\Security.cs" />
+    <Compile Include="Helpers\Utilities.cs" />
+    <Compile Include="Logger\LoggerManager.cs" />
+    <Compile Include="Models\AccessoryDTO.cs" />
+    <Compile Include="Models\AccountDTO.cs" />
+    <Compile Include="Models\AuthenticationDTO.cs" />
+    <Compile Include="Models\BranchDTO.cs" />
+    <Compile Include="Models\BranchSettingDTO.cs" />
+    <Compile Include="Models\CityDTO.cs" />
+    <Compile Include="Models\ContactPersonDTO.cs" />
+    <Compile Include="Models\ContractStationDTO.cs" />
+    <Compile Include="Models\ContractAccessoryDTO.cs" />
+    <Compile Include="Models\ContractTariffDTO.cs" />
+    <Compile Include="Models\ContractTermDTO.cs" />
+    <Compile Include="Models\ContractTermsViolationsDTO.cs" />
+    <Compile Include="Models\ContractTermsViolationsInVoiceDTO.cs" />
+    <Compile Include="Models\ContractTermsViolationsLogsDTO.cs" />
+    <Compile Include="Models\CostDTO.cs" />
+    <Compile Include="Models\CustomerAccountDTO.cs" />
+    <Compile Include="Models\DriverWorkOrdersPerTime.cs" />
+    <Compile Include="Models\ELMLoginDTO.cs" />
+    <Compile Include="Models\ELM\ElmAccountDTO.cs" />
+    <Compile Include="Models\ELM\ELMDriverDTO.cs" />
+    <Compile Include="Models\ELM\ELMTransactionDTO.cs" />
+    <Compile Include="Models\PagesDTO.cs" />
+    <Compile Include="Models\PermitDTO.cs" />
+    <Compile Include="Models\RoleDTO.cs" />
+    <Compile Include="Models\StaffExcelDTO.cs" />
+    <Compile Include="Models\TankerAccessDTO.cs" />
+    <Compile Include="Models\TankerDTO.cs" />
+    <Compile Include="Models\TMS\AreaDTO.cs" />
+    <Compile Include="Models\TMS\EditTransporterStatusDTO.cs" />
+    <Compile Include="Models\TMS\LandmarkDto.cs" />
+    <Compile Include="Models\TMS\LandmarkListDto.cs" />
+    <Compile Include="Models\TMS\SignalRWorkOrderEvent.cs" />
+    <Compile Include="Models\TMS\StationDefaultTankersDTO.cs" />
+    <Compile Include="Models\TransporterExcelDTO.cs" />
+    <Compile Include="Models\TransporterDTO.cs" />
+    <Compile Include="Models\CustomerLocationDTO.cs" />
+    <Compile Include="Models\CustomerSMSDTO.cs" />
+    <Compile Include="Models\DailyOrderSummaryDTO.cs" />
+    <Compile Include="Models\DeassignDTO.cs" />
+    <Compile Include="Models\DeferredOrderDTO.cs" />
+    <Compile Include="Models\DriverSMSDTO.cs" />
+    <Compile Include="Models\HayatWorkOrderLogDTO.cs" />
+    <Compile Include="Models\DeviceMeterDTO.cs" />
+    <Compile Include="Models\MeterReadingDTO.cs" />
+    <Compile Include="Models\DispatchWorkOrderDTO.cs" />
+    <Compile Include="Models\EventWorkOrderVehicleDTO.cs" />
+    <Compile Include="Models\LoginDTO.cs" />
+    <Compile Include="Models\MembershipContext.cs" />
+    <Compile Include="Models\MobileAccountDTO.cs" />
+    <Compile Include="Models\PersonalIDTypeDTO.cs" />
+    <Compile Include="Models\PrintCustomerInvoice.cs" />
+    <Compile Include="Models\PrintDriverInvoice.cs" />
+    <Compile Include="Models\PrintVehicleInvoice.cs" />
+    <Compile Include="Models\ProfileDTO.cs" />
+    <Compile Include="Models\Report_OrderPerZone.cs" />
+    <Compile Include="Models\Report_SoqyaScheduledPerDay.cs" />
+    <Compile Include="Models\Report_TankersPermissionsStatus.cs" />
+    <Compile Include="Models\SoqyaBalanceDTO.cs" />
+    <Compile Include="Models\SoqyaCustomerBalanceDTO.cs" />
+    <Compile Include="Models\SoqyaScheduleDTO.cs" />
+    <Compile Include="Models\SoqyaScheduleReportDTO.cs" />
+    <Compile Include="Models\StateVehicleDTO.cs" />
+    <Compile Include="Models\EventWorkOrderDTO.cs" />
+    <Compile Include="Models\StateWorkOrderVehicleDTO.cs" />
+    <Compile Include="Models\ContractStationListDTO.cs" />
+    <Compile Include="Models\StationNWCSettingsDTO.cs" />
+    <Compile Include="Models\AvailableTankerSizesDTO.cs" />
+    <Compile Include="Models\TMS\StaffDTO.cs" />
+    <Compile Include="Models\TMS\StaffListDTO.cs" />
+    <Compile Include="Models\UserServicePermission.cs" />
+    <Compile Include="Models\VehicleDataDTO.cs" />
+    <Compile Include="Models\VehiclePerformanceDTO.cs" />
+    <Compile Include="Models\OrderReassignmentDTO.cs" />
+    <Compile Include="Models\VehicleLogsDTO.cs" />
+    <Compile Include="Models\VehicleNWCSettingsBulkUpdateDTO.cs" />
+    <Compile Include="Models\VehicleNWCSettingsDTO.cs" />
+    <Compile Include="Models\UserLandmarkPermissionDTO.cs" />
+    <Compile Include="Models\VehicleTypeDTO.cs" />
+    <Compile Include="Models\VehicleViolationDTO.cs" />
+    <Compile Include="Models\vw_NWC_ContractTermsDTO.cs" />
+    <Compile Include="Models\WorkOrderChangeLogDTO.cs" />
+    <Compile Include="Models\WorkOrderWithZoneDto.cs" />
+    <Compile Include="Models\WorkOrderTransactionDTO.cs" />
+    <Compile Include="Models\WorkOrderComplaintDTO.cs" />
+    <Compile Include="Models\ContractCustomerTariffDTO.cs" />
+    <Compile Include="Models\ContractDTO.cs" />
+    <Compile Include="Models\ContractorDTO.cs" />
+    <Compile Include="Models\ContractViolationDTO.cs" />
+    <Compile Include="Models\CustomerDTO.cs" />
+    <Compile Include="Models\LocationDTO.cs" />
+    <Compile Include="Models\WorkOrderDTO.cs" />
+    <Compile Include="Models\WorkOrderCommentDTO.cs" />
+    <Compile Include="Models\WorkOrderPlannedRoutDTO.cs" />
+    <Compile Include="Models\WorkOrderStatusLogDTO.cs" />
+    <Compile Include="Models\WorkOrderVehicleDTO.cs" />
+    <Compile Include="Models\WOVArrivedStationDTO.cs" />
+    <Compile Include="Models\UserListDTO.cs" />
+    <Compile Include="Models\UserInfo.cs" />
+    <Compile Include="Models\ChangePasswordDTO.cs" />
+    <Compile Include="Models\ZoneListDTO.cs" />
+    <Compile Include="Models\ZonePriceDTO.cs" />
+    <Compile Include="Resources\CustomConstants.cs" />
+    <Compile Include="Resources\ValidationMessagesKeys.cs" />
+    <Compile Include="SearchCriteria\ContractorSearchCriteriaDTO.cs" />
+    <Compile Include="SearchCriteria\ContractSearchCriteriaDTO.cs" />
+    <Compile Include="SearchCriteria\ContractAccessorySC.cs" />
+    <Compile Include="SearchCriteria\ContractTariffSc.cs" />
+    <Compile Include="SearchCriteria\ContractViolationSC.cs" />
+    <Compile Include="SearchCriteria\CustomerAccountSC.cs" />
+    <Compile Include="SearchCriteria\PermitListSC.cs" />
+    <Compile Include="SearchCriteria\TMS\BranchSearchCriteriaDTO.cs" />
+    <Compile Include="SearchCriteria\TMS\SearchDto.cs" />
+    <Compile Include="SearchCriteria\TMS\LandmarkSearchDto.cs" />
+    <Compile Include="SearchCriteria\TMS\UserListSearchCriteriaDTO.cs" />
+    <Compile Include="SearchCriteria\TransporterSC.cs" />
+    <Compile Include="SearchCriteria\HayatWorkOrderLogsSC.cs" />
+    <Compile Include="SearchCriteria\CustomerSC.cs" />
+    <Compile Include="SearchCriteria\CustomerSMSSearchCriteria.cs" />
+    <Compile Include="SearchCriteria\DailyOrderReportSC.cs" />
+    <Compile Include="SearchCriteria\DeferredOrderSC.cs" />
+    <Compile Include="SearchCriteria\DriverSMSSearchCriteria.cs" />
+    <Compile Include="SearchCriteria\DeviceMeterSC.cs" />
+    <Compile Include="SearchCriteria\MeterReadingSC.cs" />
+    <Compile Include="SearchCriteria\ReportSC.cs" />
+    <Compile Include="SearchCriteria\ReportScheduledPerDaySC.cs" />
+    <Compile Include="SearchCriteria\ReportTankersPermissionsStatusSC.cs" />
+    <Compile Include="SearchCriteria\searchCriteriaContractStationDTO.cs" />
+    <Compile Include="SearchCriteria\searchCriteriaContractDTO.cs" />
+    <Compile Include="SearchCriteria\SoqyaScheduleReportSC.cs" />
+    <Compile Include="SearchCriteria\SoqyaScheduleSC.cs" />
+    <Compile Include="SearchCriteria\StateVehicleSearchCriteriaDTO.cs" />
+    <Compile Include="SearchCriteria\StationSettingsSC.cs" />
+    <Compile Include="SearchCriteria\TMS\StaffSCDTO.cs" />
+    <Compile Include="SearchCriteria\StaffRolesSearchCriteriaDTO.cs" />
+    <Compile Include="SearchCriteria\UserStationPermissionSC.cs" />
+    <Compile Include="SearchCriteria\VehicleDataReportSC.cs" />
+    <Compile Include="SearchCriteria\VehiclePerformanceReportSC.cs" />
+    <Compile Include="SearchCriteria\VehicleLogReportSC.cs" />
+    <Compile Include="SearchCriteria\VehicleSettingsSC.cs" />
+    <Compile Include="SearchCriteria\DashboardSC.cs" />
+    <Compile Include="SearchCriteria\WorkOrderSearchCriteriaDTO.cs" />
+    <Compile Include="SearchCriteria\OrderReassignmentReportSC.cs" />
+    <Compile Include="SearchCriteria\WorkOrderVehicleSearchCriteriaDTO.cs" />
+    <Compile Include="SearchCriteria\UserSearchCriteriaDTO.cs" />
+    <Compile Include="SearchCriteria\ZonePriceSCDTO.cs" />
+    <Compile Include="SearchCriteria\ZoneSearchCriteriaDTO.cs" />
+    <Compile Include="Models\StateWorkOrderDTO.cs" />
+    <Compile Include="Models\NotificationDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\LandmarkDTO.cs" />
+    <Compile Include="User\StaffPermissionDTO.cs" />
+    <Compile Include="Models\VehicleDTO.cs" />
+    <Compile Include="Models\VehicleOwnerTypeDTO.cs" />
+    <Compile Include="Models\ViolationTypeDTO.cs" />
+    <Compile Include="Models\ZoneDTO.cs" />
+    <Compile Include="Models\ZoneRestrictedVehicleTypeDTO.cs" />
+    <Compile Include="User\StaffRolesDTO.cs" />
+    <Compile Include="Wrapper\AreaWrapper.cs" />
+    <Compile Include="Wrapper\ControlPanelWapper.cs" />
+    <Compile Include="Wrapper\CustomerSMSWrapper.cs" />
+    <Compile Include="Wrapper\ContractorWrapper.cs" />
+    <Compile Include="Wrapper\ContractWrapper.cs" />
+    <Compile Include="Wrapper\TMS\LandmarkWrapper.cs" />
+    <Compile Include="Wrapper\TransporterWrapper.cs" />
+    <Compile Include="Wrapper\CustomerWrapper.cs" />
+    <Compile Include="Wrapper\DeviceMeterWrapper.cs" />
+    <Compile Include="Wrapper\DriverSMSWrapper.cs" />
+    <Compile Include="Wrapper\ReportWrapper.cs" />
+    <Compile Include="Wrapper\SoqyaWrapper.cs" />
+    <Compile Include="Wrapper\StateVehicleWrapper.cs" />
+    <Compile Include="Wrapper\StationWrapper.cs" />
+    <Compile Include="Wrapper\TMS\StaffWrapper.cs" />
+    <Compile Include="Wrapper\ViolationWrapper.cs" />
+    <Compile Include="Wrapper\VehicleWrapper.cs" />
+    <Compile Include="Wrapper\UserWrapper.cs" />
+    <Compile Include="Wrapper\WorkOrderVehicleWrapper.cs" />
+    <Compile Include="Wrapper\WorkOrderWrapper.cs" />
+    <Compile Include="Wrapper\ZonePriceWrapper.cs" />
+    <Compile Include="Wrapper\ZoneWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Infrastructure\Common.Infrastructure.csproj">
+      <Project>{EE8886EA-48BD-4FC9-A454-49C48D979AD0}</Project>
+      <Name>Common.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NWC.DAL\NWC.DAL.csproj">
+      <Project>{4c4462a1-46dc-45e8-a89c-9e885dcb3667}</Project>
+      <Name>NWC.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NWC.Localization\NWC.Localization.csproj">
+      <Project>{68B007DD-FCA0-440B-80B2-8C3EF430178C}</Project>
+      <Name>NWC.Localization</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

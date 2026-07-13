@@ -1,0 +1,91 @@
+import { statusLogs } from "./status-log";
+
+export class OrderDetails {
+    WorkOrderID: number;
+    OrderNumber: string;
+    RequestTime: Date;
+    Status: string;
+    IsAssigned: boolean
+    orderPlacedOn: Date;
+    CustomerName: string;
+    CustomerMobile: string;
+    CustomerCode: string;
+    CustomerAddress: string;
+    ClassID: number;
+    ClassName: string;
+    PriorityID: number;
+    PriorityName: string;
+    ZoneID: number;
+  ZoneName: string;
+  ZoneWithOutTankers: string;
+    CityID: string;
+    CityName: string;
+  paymentType: string;
+  Comments: string;
+    TotalCost: number;
+    OrderQuantity: number;
+    ScheduledDeliveryTime: Date;
+    StationName: string;
+    ServiceType: string;
+    TankerPlateNo: string;
+    // driverName: string;
+    AccessoryID: number;
+    AccessoryNames: string;
+    AssignedDriverID: string;
+    AssignedStationID: string;
+    LandmarkID: string;
+    AssignedVehicleID: string;
+    VehicleCodePlateNo: string;
+    CustomerLocationID: number;
+    CustomerAccountID: number;
+    PaymentTypeID: number;
+    ServiceTypeID: number;
+    CustomerID: number;
+    transporterID: string;
+    DriverName: string;
+    LastStatusID: number;
+    LastStatusName: string;
+    LastStatusBy: string;
+    LastStatusByUserName: string;
+    LastStatusTime: Date;
+    customerLocationLat: string;
+    customerLocationLng: string;
+    StationLat: string;
+    StationLng: string;
+    RouteLatLngString: string;
+    VehicleStatusName: string;
+    LastStatusTimeVehicle: Date;
+    VehicleCapacity: number;
+    VehicleCapacityUnit: number;
+    CustomerLocationPriority: string;
+    ConfirmationCode: string;
+    LastStatusReason: string;
+    DriverMobileNumber: string;
+    DriverCode: string;
+    WorkOrderInvoiceStatus: string;
+    StatusColor: string;
+    
+    NetCost: number;
+    CreatedOn: Date;
+    AssignedOn: Date;
+    OutForDeliveryOn: Date;
+    ArrivedOn: Date;
+    DeliverOn: Date;
+    FailedToDeliverOn: Date;
+    CancelledOn: Date;
+    InvoiceStatusID: number;
+    InvoiceStatusName: string;
+
+  CreateToDeliveredTime: string;
+  CreateToOutTime: string;
+  OutToDeliveredTime: string;
+
+    SourceApplication: string;
+    LastStatusByCategory: string;
+
+    WorkOrderStatusLogs: statusLogs[]=[];
+    CategoryName: string;
+  InvoiceNo: string;
+  ClosedByCode: string;
+  IsVirtualStation:boolean;
+}

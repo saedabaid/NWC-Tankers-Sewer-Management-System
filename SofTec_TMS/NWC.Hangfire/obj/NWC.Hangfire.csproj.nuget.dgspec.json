@@ -1,0 +1,210 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Hangfire\\NWC.Hangfire.csproj": {}
+  },
+  "projects": {
+    "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BL.Denormalizer\\NWC.BL.Denormalizer.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BL.Denormalizer\\NWC.BL.Denormalizer.csproj",
+        "projectName": "NWC.BL.Denormalizer",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BL.Denormalizer\\NWC.BL.Denormalizer.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DTO\\NWC.DTO.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DTO\\NWC.DTO.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BLL\\NWC.BLL.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BLL\\NWC.BLL.csproj",
+        "projectName": "NWC.BLL",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BLL\\NWC.BLL.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BL.Denormalizer\\NWC.BL.Denormalizer.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BL.Denormalizer\\NWC.BL.Denormalizer.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DTO\\NWC.DTO.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DTO\\NWC.DTO.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Web\\NWC.Web.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Web\\NWC.Web.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj",
+        "projectName": "Common.Infrastructure",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj",
+        "projectName": "NWC.DAL",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DTO\\NWC.DTO.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DTO\\NWC.DTO.csproj",
+        "projectName": "NWC.DTO",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DTO\\NWC.DTO.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Hangfire\\NWC.Hangfire.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Hangfire\\NWC.Hangfire.csproj",
+        "projectName": "NWC.Hangfire",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Hangfire\\NWC.Hangfire.csproj",
+        "packagesPath": "C:\\Users\\saed\\.nuget\\packages\\",
+        "outputPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Hangfire\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\saed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BLL\\NWC.BLL.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BLL\\NWC.BLL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Hangfire": {
+              "target": "Package",
+              "version": "[1.7.24, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj",
+        "projectName": "NWC.Localization",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Web\\NWC.Web.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Web\\NWC.Web.csproj",
+        "projectName": "NWC.Web",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Web\\NWC.Web.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    }
+  }
+}

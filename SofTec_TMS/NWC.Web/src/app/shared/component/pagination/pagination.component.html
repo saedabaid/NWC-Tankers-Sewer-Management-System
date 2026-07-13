@@ -1,0 +1,26 @@
+<!-- <div class="col-sm-12 no-records" *ngIf='!_isListDisplayed'>
+  <p class="text-center">{{'norecordsToDisplay'| translate }}</p>
+</div> -->
+
+<div class="row hold-pagination">
+  <div class="col-sm-7">
+    <pagination [boundaryLinks]="true" [rotate]="true"
+      previousText="{{'Previous' | translate}}" nextText="{{'Next' | translate}}" [maxSize]="10"
+      firstText="{{'First' | translate}}" lastText="{{'Last' | translate}}" [totalItems]="_itemsCount"
+      [itemsPerPage]="PageSize" (pageChanged)="getPage($event)" (numPages)="pagescount = $event"
+      [(ngModel)]="pageIndex"></pagination>
+  </div>
+  <div class="col-sm-5">
+        <!-- *ngIf='_isListDisplayed' -->
+    <div class="pagination-options" >
+      <span>{{_itemsCount}} {{ 'itemsin'| translate }} {{pagescount}} {{ 'page'| translate }}</span>
+      <select class="form-control" (change)="getPage({page:1, itemsPerPage: 10})" [(ngModel)]="PageSize"
+        (ngModelChange)="PageSizeChange.emit($event)">
+        <option [ngValue]="5">5</option>
+        <option [ngValue]="10">10</option>
+        <option [ngValue]="20">20</option>
+        <option [ngValue]="50">50</option>
+      </select>
+    </div>
+  </div>
+</div>

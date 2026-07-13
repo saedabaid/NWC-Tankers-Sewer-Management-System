@@ -1,0 +1,162 @@
+@import './../../../../../assets/fmsBranding/styles/sass/rtl.scss';
+
+
+.newzone{
+    font-size: 18pt;
+    color: #555;
+    vertical-align: middle;
+}
+
+.title  {
+    white-space: nowrap;
+
+    text-transform: capitalize;
+    padding-top: 7px;}
+
+    .wid-6 {
+        width: 10%;
+    }
+     
+#advanced-search {
+    background-color: #f2f2f2;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-bottom: 1px dotted #5f7583;
+
+    .col-sm-9 {
+padding: 0;
+    }
+}
+.Dtable {
+    max-height: 366px;
+    min-height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+.table-heigh {
+  overflow-x: hidden;
+   
+  overflow-y: auto;
+  margin-bottom: 10px;
+
+  td {
+    white-space: pre-line;
+
+  }
+
+ 
+}
+
+.table-advans {
+   
+
+    
+    td {
+        white-space: nowrap;
+
+    }
+    .orange{
+        color: orange;
+    }
+    .green {
+        color : green;
+    }
+    
+    .red {
+        color: red;
+    }
+}
+.scrollable-table {
+    tbody {
+        height: 335px;
+         
+    }
+}
+
+
+.table-advans{
+    .scrollable-table {
+        tbody {
+            height: 265px;
+
+             
+        }
+    }
+}
+ 
+.fa-pencil-alt{
+    color: #5f7583;
+
+}
+
+
+.wid200 {
+  width: 180px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.wid100 {
+  width: 110px;
+}
+
+.wid50 {
+  width: 50px;
+}
+
+.wid130 {
+  width: 130px;
+}
+
+
+.rtl {
+    .custome-dropdown {
+        .cuppa-dropdown {
+           
+            margin: 0 10px 0 10px;
+        }
+    }
+    .open {
+        .wo-dropdown-menu {
+           
+            right: -150px;
+           left: unset;
+        }
+    }
+
+   
+}
+//**************************************************************
+@media(min-width:1900px ) {
+
+    .scroll-x-table {
+        table  {
+          th {
+            padding: 5px 15px 5px 5px !important;
+        }
+        }
+      }
+
+    .table-heigh {
+        min-height: 400px;
+    
+    overflow-y: auto;
+    }
+
+    .table-advans{
+        min-height: 400px;
+    max-height: 495px;
+    overflow-y: auto;
+    }
+
+    .rtl{
+        .open {
+            .wo-dropdown-menu {
+               
+                right: -150px;
+               left: unset;
+            }
+        } 
+    }
+}

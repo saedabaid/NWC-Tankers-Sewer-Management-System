@@ -1,0 +1,138 @@
+--------------------------------------------------------------------------------------------------------------------------- Time:01/06/2020 6:21:39 PM
+
+CreateWorkOrder Time:01/06/2020 6:21:39 PM
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":10,"CustomerLocationID":38,"ServiceTypeID":1,"StationID":"725dce85-5268-4972-9f89-852136c38952","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:01/06/2020 6:21:40 PM
+
+Valid Time:01/06/2020 6:21:40 PM
+
+Create WorkOrder: Partially Success Time:01/06/2020 6:21:41 PM
+
+customerLocation: 38 Time:01/06/2020 6:21:42 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:01/06/2020 6:21:42 PM
+
+OrderNumber: 0814684211 Time:01/06/2020 6:21:42 PM
+
+workOrderID: 45550 Time:01/06/2020 6:21:42 PM
+
+scheduledDeliveryTime: 01/06/2020 6:21:40 PM Time:01/06/2020 6:21:42 PM
+
+customerLocationClassID: 1 Time:01/06/2020 6:21:42 PM
+
+serviceTypeID: 1 Time:01/06/2020 6:21:42 PM
+
+zoneStation: 725dce85-5268-4972-9f89-852136c38952 Time:01/06/2020 6:21:42 PM
+
+orderQuantity: 10 Time:01/06/2020 6:21:42 PM
+
+contract == null: False Time:01/06/2020 6:21:42 PM
+
+contractID: 10040 Time:01/06/2020 6:21:42 PM
+
+contractStationTariaff == null: False Time:01/06/2020 6:21:42 PM
+
+contractStationTariaffID: 319 Time:01/06/2020 6:21:42 PM
+
+totalQuantityCost: 23.0000 Time:01/06/2020 6:21:42 PM
+
+extraKMCost: 0.0000 Time:01/06/2020 6:21:42 PM
+
+totalCost: 23.0000 Time:01/06/2020 6:21:42 PM
+
+Net Cost: 23.0000 Time:01/06/2020 6:21:42 PM
+
+Create WorkOrder: Success Time:01/06/2020 6:21:42 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:01/06/2020 6:26:57 PM
+
+CreateWorkOrder Time:01/06/2020 6:26:57 PM
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":10,"CustomerLocationID":38,"ServiceTypeID":1,"StationID":"725dce85-5268-4972-9f89-852136c38952","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:01/06/2020 6:26:57 PM
+
+Valid Time:01/06/2020 6:26:59 PM
+
+Create WorkOrder: Partially Success Time:01/06/2020 6:27:01 PM
+
+customerLocation: 38 Time:01/06/2020 6:27:02 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:01/06/2020 6:27:02 PM
+
+OrderNumber: 0597807444 Time:01/06/2020 6:27:02 PM
+
+workOrderID: 45552 Time:01/06/2020 6:27:02 PM
+
+scheduledDeliveryTime: 01/06/2020 6:26:57 PM Time:01/06/2020 6:27:02 PM
+
+customerLocationClassID: 1 Time:01/06/2020 6:27:02 PM
+
+serviceTypeID: 1 Time:01/06/2020 6:27:02 PM
+
+zoneStation: 725dce85-5268-4972-9f89-852136c38952 Time:01/06/2020 6:27:02 PM
+
+orderQuantity: 10 Time:01/06/2020 6:27:02 PM
+
+contract == null: False Time:01/06/2020 6:27:02 PM
+
+contractID: 10040 Time:01/06/2020 6:27:02 PM
+
+contractStationTariaff == null: False Time:01/06/2020 6:27:03 PM
+
+contractStationTariaffID: 319 Time:01/06/2020 6:27:03 PM
+
+totalQuantityCost: 23.0000 Time:01/06/2020 6:27:03 PM
+
+extraKMCost: 0.0000 Time:01/06/2020 6:27:03 PM
+
+totalCost: 23.0000 Time:01/06/2020 6:27:03 PM
+
+Net Cost: 23.0000 Time:01/06/2020 6:27:03 PM
+
+Create WorkOrder: Success Time:01/06/2020 6:27:03 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:01/06/2020 6:34:32 PM
+
+CreateWorkOrder Time:01/06/2020 6:34:32 PM
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":10,"CustomerLocationID":38,"ServiceTypeID":1,"StationID":"725dce85-5268-4972-9f89-852136c38952","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:01/06/2020 6:34:32 PM
+
+Valid Time:01/06/2020 6:34:32 PM
+
+Create WorkOrder: Partially Success Time:01/06/2020 6:34:33 PM
+
+customerLocation: 38 Time:01/06/2020 6:34:33 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:01/06/2020 6:34:33 PM
+
+OrderNumber: 6192071715 Time:01/06/2020 6:34:33 PM
+
+workOrderID: 45554 Time:01/06/2020 6:34:33 PM
+
+scheduledDeliveryTime: 01/06/2020 6:34:32 PM Time:01/06/2020 6:34:33 PM
+
+customerLocationClassID: 1 Time:01/06/2020 6:34:33 PM
+
+serviceTypeID: 1 Time:01/06/2020 6:34:33 PM
+
+zoneStation: 725dce85-5268-4972-9f89-852136c38952 Time:01/06/2020 6:34:33 PM
+
+orderQuantity: 10 Time:01/06/2020 6:34:33 PM
+
+contract == null: False Time:01/06/2020 6:34:33 PM
+
+contractID: 10040 Time:01/06/2020 6:34:33 PM
+
+contractStationTariaff == null: False Time:01/06/2020 6:34:33 PM
+
+contractStationTariaffID: 319 Time:01/06/2020 6:34:33 PM
+
+totalQuantityCost: 23.0000 Time:01/06/2020 6:34:33 PM
+
+extraKMCost: 0.0000 Time:01/06/2020 6:34:33 PM
+
+totalCost: 23.0000 Time:01/06/2020 6:34:33 PM
+
+Net Cost: 23.0000 Time:01/06/2020 6:34:33 PM
+
+Create WorkOrder: Success Time:01/06/2020 6:34:34 PM
+

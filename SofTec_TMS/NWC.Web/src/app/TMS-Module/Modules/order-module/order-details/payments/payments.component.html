@@ -1,0 +1,25 @@
+<div class="row">        
+          <div class="col-lg-12">
+            <div class="holder-table">
+                <table class="table Dtable table-striped">
+                    <thead>
+                      <tr>                
+                        <th>{{'Total' | translate}}</th>
+                        <th>{{'Date' | translate}}</th>
+                        <th>{{'Comment' | translate}}</th>
+                      </tr>
+                    </thead>                
+                    <tbody>
+                      <tr *ngFor="let pay of orderPaymentSearchResult; let i = index">                
+                         <td> {{pay.TotalPaid | currency}} </td>
+                        <td> <date [date]="pay.PaymentTime"  [ShowTime]="true"></date> </td>
+                        <td> {{pay.PaymentComment}} </td>
+                      </tr>        
+                      <tr *ngIf="orderPaymentSearchResult.length ==0">
+                    <td colspan="4">{{'NoData' | translate}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+      </div>

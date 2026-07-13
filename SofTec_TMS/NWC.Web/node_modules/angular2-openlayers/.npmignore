@@ -1,0 +1,25 @@
+src
+example
+tsconfig.json
+tslint.json
+*.tgz
+node_modules/*
+npm-debug.log
+
+# editors files
+.idea
+.project
+.settings
+.idea/*
+*.iml
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+**/.DS_Store
+
+# Angular
+/aot

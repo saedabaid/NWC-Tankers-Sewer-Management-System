@@ -1,0 +1,105 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6 padding-10">
+      <span class="page-title">{{ "ControlPanel" | translate }}</span>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title currentpage">{{
+        "CitySettings" | translate
+      }}</span>
+    </div>
+    <div class="col-md-6 text-right padding-10">
+      <a
+        *ngIf="
+          pagePermission == 'Full Control' || pagePermission == 'Add and Edit'
+        "
+        class="newvehicle"
+        title="{{ 'NewCity' | translate }}"
+        routerLink="/tms/controlpanel/city-settings/new"
+      >
+        <i class="fa fa-plus-circle"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Search -->
+<div class="row mb-1">
+  <div class="col-md-3">
+      <label class="col-sm-4 title">{{ "City" | translate }}</label>
+      <div class="col-sm-8">
+          <input type="text" [(ngModel)]="searchCriteriaDTO.SearchKeyword" class="form-control" (keyup.enter)="Search()" />
+      </div>
+  </div>
+
+  <div class="col-md-3">
+      <button class="btn btn-danger margin-5 " (click)="Search()">
+          {{ "Search" | translate }}
+      </button>
+      <button class="btn btn-default margin-5 " (click)="Clear()">
+        {{ "Clear" | translate }}
+    </button>
+  </div>
+</div>
+
+<div [class]="'table-heigh'">
+  <table class="table Dtable scrollable-table table-striped">
+    <thead>
+      <tr>
+        <th class="wid50">{{ "Name" | translate }}</th>
+        <th class="wid50">{{ "SMSCode" | translate}}</th> 
+        <th class="wid50">{{ "ShowPrice" | translate}}</th>
+        <th class="wid50">{{ "ShowInvoice" | translate}}</th>
+        <th class="wid50">{{ "RequiresPayment" | translate}}</th> 
+        <th class="wid10"></th>
+        <!-- <th class="wid10"></th> -->
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr
+        class="text-center d-block p-2 font-4"
+        *ngIf="!searchResult || searchResult.length < 1"
+      >
+        {{
+          "NoDataFound" | translate
+        }}
+      </tr>
+      <tr *ngFor="let city of searchResult">
+        <th class="wid50">{{ city.name }}</th>
+        <th class="wid50">{{ city.ValidateConfermationCode }}</th> 
+        <th class="wid50">{{ city.ShowPrice }}</th>
+        <th class="wid50">{{ city.ShowInvoice }}</th>
+        <th class="wid50">{{ city.RequiresPayment }}</th> 
+        <th class="wid10">
+          <a
+            class="fas fa-pencil-alt"
+            title="{{ 'edit' | translate }}"
+            routerLink="/tms/controlpanel/city-settings/{{ city.Id }}"
+            *ngIf="
+              pagePermission == 'Full Control' ||
+              pagePermission == 'Add and Edit'
+            "
+          ></a>
+        </th>
+        <!-- <th class="wid10">
+          <a
+            class="fa fa-trash"
+            *ngIf="pagePermission == 'Full Control'"
+            title="{{ 'Delete' | translate }}"
+            (click)="delete(city.Id)"
+          ></a>
+        </th> -->
+      </tr>
+    </tbody>
+  </table>
+
+  <app-pagination-component
+    [ItemsCount]="TotalCount"
+    [(PageSize)]="searchCriteriaDTO.PageFilter.PageSize"
+    [pageIndex]="searchCriteriaDTO.PageFilter.PageIndex"
+    (PageSizeChange)="onPageSizeChanged($event)"
+    (pageNavigated)="onPageIndexChanged($event)"
+  >
+  </app-pagination-component>
+</div>

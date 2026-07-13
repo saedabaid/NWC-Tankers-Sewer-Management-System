@@ -1,0 +1,26 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:09/09/2020 11:32:20 AM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:09/09/2020 11:32:20 ص
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 1624353408 - TransporterID c8bc398c-f5b1-46e5-a8f0-d29462233a57 - TransportrStatus: 0 Time:09/09/2020 11:32:21 ص
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:09/09/2020 11:32:21 ص
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:09/09/2020 11:32:21 AM
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 1624353408 - TransporterID: c8bc398c-f5b1-46e5-a8f0-d29462233a57 - TransporterStatus: 11 Time:09/09/2020 11:32:22 AM
+
+Start Inserting Driver SMS: OrderNo:1624353408, VehicleId:c8bc398c-f5b1-46e5-a8f0-d29462233a57, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:09/09/2020 11:32:22 AM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 1624353408 - TransporterID: c8bc398c-f5b1-46e5-a8f0-d29462233a57 - TransporterStatus: 11 Time:09/09/2020 11:32:22 AM
+
+SMS: تم تخصيص رقم الطلب 1624353408 ويمكن التواصل على جوال العميل 032453245345 موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:09/09/2020 11:32:22 AM
+
+Start Inserting Customer SMS: OrderNo:1624353408, VehicleId:c8bc398c-f5b1-46e5-a8f0-d29462233a57, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:09/09/2020 11:32:23 AM
+
+SMS: عميلنا العزيز: نفيدكم بتخصيص ناقلة مياه لطلبكم رقم 1624353408 Time:09/09/2020 11:32:23 AM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"1624353408","cisDivision":19,"orderStatus":4,"updateDateTime":"09-09-2020 11:32:23","parameters":[{"parameterName":"TMSID","parameterValue":"1624353408"},{"parameterName":"COMMENT","parameterValue":""}]} Time:09/09/2020 11:32:23 AM
+
+----------------------------------------AssignWorkOrder - Denormalizer - End---------------------------------------- Time:09/09/2020 11:32:45 AM
+

@@ -1,0 +1,152 @@
+<div class="bg-gra col-lg-12">
+
+  <!-- Search row 1 -->
+  <div class="row bg-white pb-2  ">
+    <!-- Area -->
+    <div class="col-md-3">
+      <label class="col-sm-4 title">{{ "Area" | translate }} </label>
+      <div class="col-sm-8">
+        <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerAreaList"
+                     (SearchVAlue)="getAreas($event)" (selectedListChange)="onAreaDDLChanged($event)" [options]="selectMenuOptions"
+                     [selectedList]="bindingModel_Areas" [loading]="Area_loading">
+        </select-menu>
+      </div>
+    </div>
+
+    <!-- city -->
+    <div class="col-md-3">
+      <label class="col-sm-4 title">{{ "City" | translate }}</label>
+      <div class="col-sm-8">
+        <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerCityList"
+                     (SearchVAlue)="getCity($event)" (selectedListChange)="onCityDDLChanged($event)" [options]="selectMenuOptions"
+                     [selectedList]="bindingModel_Cities" [loading]="City_Loading">
+        </select-menu>
+      </div>
+    </div>
+
+    <!-- station -->
+    <div class="col-md-3">
+      <label class="col-sm-4 title">{{ "Station" | translate }}</label>
+      <div class="col-sm-8">
+        <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerStationList"
+                     (SearchVAlue)="getStations($event)" (selectedListChange)="onStationDDLChanged($event)"
+                     [options]="selectMenuOptions" [selectedList]="bindingModel_Stations" [loading]="Station_Loading">
+        </select-menu>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search row 2 -->
+  <div class="row bg-white  pb-4">
+    <!-- Service type-->
+    <div class="col-md-3">
+      <label class="col-sm-4 title">{{ "ServiceType" | translate }}</label>
+      <div class="col-sm-8">
+        <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerServiceList"
+                     (selectedListChange)="onServiceTypeDDLChanged($event)" [options]="selectMenuOptions2"
+                     [selectedList]="bindingModel_ServiceTypes">
+        </select-menu>
+      </div>
+    </div>
+
+    <!-- Date from -->
+    <div class="col-md-3">
+      <label class="col-sm-4 title">{{ "From" | translate }}</label>
+      <div class="col-sm-8">
+        <app-datepicker [(selecteddate)]="SearchCriteria.DateFrom" DateID="dateFrom"></app-datepicker>
+      </div>
+    </div>
+    <!-- <div class="col-md-2">
+      <div class="col-sm-11 padding-0">
+        <app-amazing-timepicker
+          id="timeFrom"
+          [(selectedTime)]="timeFromStr"
+        ></app-amazing-timepicker>
+      </div>
+    </div> -->
+    <!-- Date To -->
+    <div class="col-md-3">
+      <label class="col-sm-4 title">{{ "To" | translate }}</label>
+      <div class="col-sm-8">
+        <app-datepicker [(selecteddate)]="SearchCriteria.DateTo" DateID="dateTo"></app-datepicker>
+      </div>
+    </div>
+
+    <!-- <div class="col-md-2">
+      <div class="col-sm-11 padding-0">
+        <app-amazing-timepicker
+          id="timeTo"
+          [(selectedTime)]="timeToStr"
+        ></app-amazing-timepicker>
+      </div>
+    </div> -->
+    <!-- buttons -->
+    <div class="col-md-3">
+      <button class="btn btn-default margin-5 pull-right" (click)="clearSearch()">
+        {{ "Clear" | translate }}
+      </button>
+      <button class="btn btn-danger margin-5 pull-right" (click)="onSearchSubmit()">
+        {{ "Search" | translate }}
+      </button>
+    </div>
+  </div>
+
+  <div class="row mb-2 ">
+    <div class="col-md-12 pr-2 pl-2 pt-3">
+      <app-dashboard-tiles-cards></app-dashboard-tiles-cards>
+
+    </div>
+  </div>
+  <div class="row mb-2 ">
+    <div class="col-md-12 pr-2 pl-2 pt-3">
+      <app-dashboard-vehicle-cards></app-dashboard-vehicle-cards>
+
+    </div>
+  </div>
+
+  <!-- charts -->
+  <div class="row p-3 mb-2">
+    <div class="col-md-12 p-0">
+
+      <app-orders-date-chart></app-orders-date-chart>
+
+    </div>
+  </div>
+
+
+  <div class="row p-3 mb-2 ">
+    <div class="col-md-6 pr-0">
+
+      <app-orders-statuses-chart></app-orders-statuses-chart>
+    </div>
+
+    <div class="col-md-6 pl-0">
+
+      <app-orders-zones-chart></app-orders-zones-chart>
+    </div>
+  </div>
+
+
+  <div class="row p-3 mb-2">
+    <div class="col-md-12 p-0">
+
+      <app-orders-day-hours-chart></app-orders-day-hours-chart>
+
+    </div>
+  </div>
+
+
+  <div class="row p-3 mb-2 ">
+    <div class="col-md-6 pr-0">
+
+      <app-orders-execute-time-chart></app-orders-execute-time-chart>
+    </div>
+    <div class="col-md-6 pl-0">
+
+      <!--<app-vehicle-count-chart></app-vehicle-count-chart>-->
+    </div>
+
+  </div>
+
+
+</div>

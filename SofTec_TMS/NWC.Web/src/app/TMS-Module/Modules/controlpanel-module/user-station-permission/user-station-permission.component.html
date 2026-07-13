@@ -1,0 +1,118 @@
+
+<div class="inner-div">
+
+  <div class="row  form-row">
+    <div class="col-md-12 custome-dropdown">
+      <label class="col-md-2 title wid-6">{{ "UserName" | translate }} </label>
+      <div class="col-md-4 p-0">
+
+        <search-component class="w-75 d-inline-block" (searchKeyword)="onWorkOrderDDLChanged($event)" [isTypeahead]="true"
+                          [typeaheadFunction]="getWorkOrderNumbers.bind(this)" [field]="'Name'"
+                          [(_value)]="searchCriteria.UserName">
+        </search-component>
+
+      </div>
+
+      <button class="btn btn-default margin-5 pull-right" (click)="clearSearch()">
+        {{ "Clear" | translate }}
+      </button>
+      <button class="btn btn-danger margin-5 pull-right" (click)="onSearchSubmit()">
+        {{ "Search" | translate }}
+      </button>
+    </div>
+  </div>
+
+  <!--scroll-x-table list-body-->
+  <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' +  ' row' ">
+    <div class="col-md-12">
+      <table class="table Dtable table-striped">
+        <thead>
+          <tr>
+            <th class="wid10"></th>
+            <th class="wid200">{{ 'UserName'| translate }}</th>
+            <th class="wid200"> {{ 'Service'| translate }}</th>
+            <th class="wid200"> {{ 'Station'| translate }}</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="text-center d-block p-2 font-4" *ngIf="!searchResult.Result || searchResult.Result.length < 1">{{'NoDataFound' | translate}}</tr>
+          <tr *ngFor="let userLandmark of searchResult.Result">
+            <td class="wid10">
+              <input type="checkbox" [(ngModel)]="userLandmark.CheckToSave" />
+            </td>
+            <td>{{ userLandmark.FullName }}</td>
+            <td>
+              <select-menu [label]="'Name'"
+                           [itemKey]="'Id'"
+                           [dropDownListInputs]="serviceList"
+                           [options]="selectMenuOptions2"
+                           [(selectedList)]="userLandmark.PermittedServices"
+                           (selectedListChange)="onServiceDDLChange($event, userLandmark)">
+              </select-menu>
+            </td>
+
+            <td>
+              <select-menu [label]="'Name'"
+                           [itemKey]="'Id'"
+                           [dropDownListInputs]="stationList"
+                           [options]="selectMenuOptions"
+                           (SearchVAlue)="getStations($event)"
+                           [(selectedList)]="userLandmark.bindingModel_Landmarks">
+              </select-menu>
+            </td>
+            <td>
+
+              <div class="col-md-1">
+                <a title="  {{ 'Clear' | translate }}"
+                   (click)="removeStations(userLandmark)">
+                  <!-- <i class="glyphicon glyphicon-remove-circle mt-2 " style="font-size: 20px;"></i> -->
+                  <i class="glyphicon "
+                     [ngClass]="{ 'glyphicon-circle-arrow-right': IsArabic, 'glyphicon-circle-arrow-left': !IsArabic}"
+                     style="font-size: 20px;"></i>
+                </a>
+              </div>
+            </td>
+            <td>
+              <div class="col-md-1">
+                <a title="  {{ 'Add' | translate }}"
+                   (click)="addStations(userLandmark)">
+                  <i class="glyphicon "
+                     [ngClass]="{ 'glyphicon-circle-arrow-right': !IsArabic, 'glyphicon-circle-arrow-left': IsArabic}"
+                     style="font-size: 20px;"></i>
+                </a>
+              </div>
+            </td>
+            <td>
+              <select-menu [label]="'Name'"
+                           [itemKey]="'Id'"
+                           [dropDownListInputs]="userLandmark.PermittedLandmarks"
+                           [options]="selectMenuOptionsSelectedLandmarks"
+                           [(selectedList)]="userLandmark.bindingModel_SelectedLandmarks">
+              </select-menu>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+
+      <app-pagination-component [ItemsCount]='searchResult.TotalCount' [(PageSize)]="this.searchCriteria.PageFilter.PageSize"
+                                [pageIndex]="this.searchCriteria.PageFilter.PageIndex" (PageSizeChange)="onPageSizeChanged($event)"
+                                (pageNavigated)="onPageIndexChanged($event)">
+      </app-pagination-component>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+
+      </div>
+      <div class="col-md-6 text-right ">
+        <button class="btn btn-primary  mt-1" (click)="onSave()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+

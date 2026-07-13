@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="w-20 p-2 d-flex flex-column  align-self-center justify-content-center">
+        <img class="img green" src="{{dropImageUrl}}" alt="">
+        <div class="font-10">{{'AMR 1'}}</div>
+        <div *ngIf="loading_amr1" class="text-center">
+          <img class="loading-width" src={{ImageUrl}} />
+        </div>
+        <div *ngIf="!loading_amr1" class="text-center font-16 font-weight-bold">{{count_amr1}} M<sup>2</sup></div>
+    </div>
+    
+    <div class="w-20 p-2 d-flex flex-column  align-self-center justify-content-center">
+      <img class="img green" src="{{dropImageUrl}}" alt="">
+      <div class="font-10">{{'AMR 2'}}</div>
+      <div *ngIf="loading_amr2" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+      <div *ngIf="!loading_amr2" class="text-center font-16 font-weight-bold">{{count_amr2}} M<sup>2</sup></div>
+    </div>
+  
+    <div class="w-20 p-2 d-flex flex-column  align-self-center justify-content-center">
+      <img class="img blue" src="{{dropImageUrl}}" alt="">
+      <div class="font-10">{{'FSD_EXITTankers' | translate}}</div>
+      <div *ngIf="loading_exitTankers" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+      <div *ngIf="!loading_exitTankers" class="text-center font-16 font-weight-bold">{{count_exitTankers}}</div>
+    </div>
+
+    <div class="w-20 p-2 d-flex flex-column  align-self-center justify-content-center">
+        <img class="img" src="{{dropImageUrl}}" alt="">
+        <div class="font-10">{{'FSD_TotalTankers' | translate}}</div>
+        <div *ngIf="loading_totalTankers" class="text-center">
+          <img class="loading-width" src={{ImageUrl}} />
+        </div>
+        <div *ngIf="!loading_totalTankers" class="text-center font-16 font-weight-bold">{{count_totalTankers}}</div>
+      </div>
+
+      <div class="w-20 p-2 d-flex flex-column  align-self-center justify-content-center">
+        <img class="img" src="{{dropImageUrl}}" alt="">
+        <div class="font-10">{{'FSD_LossRatio' | translate}}</div>
+        <div *ngIf="loading_lossTankers" class="text-center">
+          <img class="loading-width" src={{ImageUrl}} />
+        </div>
+        <div *ngIf="!loading_lossTankers" class="text-center font-16 font-weight-bold">{{count_lossTankers}}</div>
+      </div>
+  </div>

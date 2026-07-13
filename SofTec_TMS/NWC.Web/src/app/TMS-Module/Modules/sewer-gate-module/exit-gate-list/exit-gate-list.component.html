@@ -1,0 +1,90 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6  padding-10">
+      <span class="page-title">{{'gates' | translate}}</span>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+      <span class="page-title  currentpage">{{'exit gate' | translate}}</span>
+    </div>
+  </div>
+</div>
+<div class="inner-div">
+  <div class="row form-row">
+    <div class="col-md-6">
+      <label class="col-sm-3 title">{{'vehicle' | translate}}</label>
+      <div class="col-sm-6">
+        <input class="form-control" 
+          [(ngModel)]="vehicleSearchText" 
+          (keyup.enter)="this.onSearchSubmit()" 
+          placeholder="{{ 'Search...' | translate }}" >
+        
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label class="col-sm-3 title">{{'order number' | translate}} </label>
+      <div class="col-sm-6">
+      <input class="form-control" 
+        [(ngModel)]="searchCriteria.WorkOrderNumber" 
+        (keyup.enter)="this.onSearchSubmit()" 
+        placeholder="{{ 'Search...' | translate }}" >
+      
+      
+    </div>
+    </div>
+  </div>
+  <div class="row form-row">
+    <div class="col-md-6">
+      <label class="col-sm-3 title"> {{'permission' | translate}}</label>
+      <div class="col-sm-6">
+        <input class=" form-control" 
+          [(ngModel)]="driverSearchText" 
+          (keyup.enter)="this.onSearchSubmit()" 
+          placeholder="{{ 'Search...' | translate }}" >
+
+      </div>
+    </div>
+   
+    <div class="col-md-6">
+      <button class="btn btn-default margin-5 pull-right" (click)="clearSearch()">{{ 'Clear'| translate }}</button>
+      <button class="btn btn-danger margin-5 pull-right" (click)="onSearchSubmit()">{{ 'Search' | translate }}</button>
+    </div>
+  </div>
+  <h4 class="ttl">{{'out for parking' | translate}} <span>{{'exit' | translate}}</span></h4>
+  <div class="row form-row holder-list-vehicles">
+    <div class="col-md-12">
+    
+      <!-- available vehicles -->
+      <div class="col-md-12 flot-ar">
+        <ul class="list-tankers">
+          <li *ngFor="let item of AvailableVehicles.Result; let i = index">
+            <div class="box-data" [style.border-right-color]= "'#ff0000'"
+            [style.border-left-color]= "'#ff0000'"  >
+            <!-- <div class="box-data" [style.border-right-color]= "item.VehicleStatusColorCode"
+            [style.border-left-color]= "item.VehicleStatusColorCode"  > -->
+              <div class="row">
+                <div class="col-md-9">
+                  <label class="tanker">
+                    <i class="fa fa-truck"></i>
+                    <span class="tanker-plt">{{item.VehicleCode}} | {{item.VehicleCodePlateNo}} - </span>
+                    <span> {{item.Capacity}} {{'M'| translate}}<sup>3</sup> - </span>
+                    <span class="stat">{{ (IsArabic ? item.VehicleStatusNameAr : item.VehicleStatusName) }}</span>
+                  </label>
+                  <label class="tanker-name">
+                    <i class="fa fa-user"></i> <span class="name">{{item.DriverName}} | {{item.DriverCode}}</span>
+                    <span class="mob">{{item.DriverMobileNumber}}</span>
+                  </label>
+                </div>
+                <div class="col-md-3">
+                  <button class="btn btn-default wid100" 
+                    (click)="onOutForParking(item.VehicleID)">
+                    {{'OutForParking' | translate}}</button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</div>

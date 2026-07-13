@@ -1,0 +1,95 @@
+@import './../../../../../../assets/fmsBranding/styles/sass/rtl.scss';
+
+ 
+.title {
+  white-space: nowrap;
+
+  text-transform: capitalize;
+  padding-top: 7px;
+}
+
+ 
+.table-heigh{
+  margin-top: 5px;
+
+}
+.scroll-x-table {
+  overflow-x: auto;
+  flex: none;
+  max-width: none;
+
+  table {
+    width: auto;
+
+    tbody {
+      height: auto;
+      overflow: auto;
+      overflow-x: hidden;
+      display: block;
+      width: 100%;
+    }
+
+    td {
+      font-size: 9pt;
+      font-weight: bold;
+      //   padding-bottom: 0px !important;
+      //   padding-top: 0px !important;
+      vertical-align: unset;
+      text-transform: capitalize;
+    }
+
+    th {
+      padding: 5px 15px !important;
+      background-color: #5f7583;
+      border-color: #5f7583;
+      color: #ffffff;
+    }
+  }
+
+  .wid200 {
+    width: 200px;
+  }
+
+  .wid100 {
+    width: 104px;
+  }
+
+  .wid50 {
+    width: 50px;
+  }
+
+  .wid150 {
+    width: 150px;
+  }
+
+  .wid130 {
+    width: 130px;
+  }
+}
+.mrg-top-5 {
+  margin-top: 4px;
+}
+@media(min-width: 1900px) {
+
+  .scroll-x-table {
+   
+
+    table {
+      width: auto;
+
+      tbody {
+        height: auto;
+        overflow: auto;
+        overflow-x: hidden;
+        display: block;
+        width: 100%;
+      }
+
+      
+       
+    }
+ 
+    }
+  
+
+}

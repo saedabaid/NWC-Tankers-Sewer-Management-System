@@ -1,0 +1,74 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6  padding-10">
+      <a (click)="close()">
+        <span class="page-title">{{'contract' | translate}}</span>
+      </a>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title  currentpage">{{ (updateMode ? 'UpdateContract' : 'NewContract') | translate}}</span>
+
+
+    </div>
+    <div class="col-md-6 text-right padding-10">
+
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="inner-div">
+  <div class="card">
+    <div class="card-body">
+      <div class="tabs">
+        <a [ngClass]="(activeTab == 'contract' ? ' active' : ' ' )"> {{'contract' | translate}}</a>
+        <a [ngClass]="(activeTab == 'stations' ? ' active'  : ' ' )"> {{'Stations' | translate}}</a>
+        <a [ngClass]="(activeTab == 'price' ? ' active' : ' ' )"> {{'Price' | translate}}</a>
+        <a [ngClass]="(activeTab == 'traiff' ? ' active' : ' ' )"> {{'traiff' | translate}}</a>
+        <a [ngClass]="(activeTab == 'accessories' ? ' active' : ' ' )"> {{'accessoriescharges' | translate}}</a>
+        <a [ngClass]="(activeTab == 'violation' ? ' active' : ' ') "> {{'contractviolationterms' | translate}}</a>
+      </div>
+
+      <div class="content">
+        <div *ngIf="(activeTab == 'contract')" class="contract">
+          <contract-details></contract-details>
+        </div>
+        <div *ngIf="(activeTab == 'stations')" class="stations">
+          <stations-details></stations-details>
+        </div>
+        <div *ngIf="(activeTab == 'price')" class="price">
+          <price-details></price-details>
+        </div>
+        <div *ngIf="(activeTab == 'traiff')" class="traiff">
+          <tariff-details></tariff-details>
+        </div>
+        <div *ngIf="(activeTab == 'accessories')" class="accessories">
+          <accessories-charges-details></accessories-charges-details>
+        </div>
+        <div *ngIf="(activeTab == 'violation')" class="violation">
+          <violation-terms-details></violation-terms-details>
+
+
+        </div>
+
+
+        <!-- <div class="col-md-12 mrg-top-10">
+    <button class="btn btn-default margin-5 pull-right"  >{{ 'close'| translate }}</button>
+      <button #next class="btn btn-danger margin-5 pull-right" (click)="obs.next(this.activeTab)" >{{ 'next' | translate }}</button>
+      <button class="btn btn-default margin-5 pull-right"  >{{ 'back'| translate }}</button>
+
+</div> -->
+      </div>
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>

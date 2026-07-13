@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="75f4c280-3f13-4023-8dc7-8468ed6b4169" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://csitosbprt.dev.hq.nwc:21303/NwcCompass/eChannelCheckPersonInBlacklistProject/eChannelCheckPersonInBlacklist?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="eChannelGetRequestCount.wsdl" MetadataType="Wsdl" ID="080c6681-17a1-4160-b12f-c042254c2ff4" SourceId="1" SourceUrl="http://csitosbprt.dev.hq.nwc:21303/NwcCompass/eChannelCheckPersonInBlacklistProject/eChannelCheckPersonInBlacklist?wsdl" />
+    <MetadataFile FileName="eChannelCheckPersonInBlacklist.xsd" MetadataType="Schema" ID="be4bf5f9-10e5-411f-9f2d-afb6e8ce3496" SourceId="1" SourceUrl="http://csitosbprt.dev.hq.nwc:21303/NwcCompass/eChannelCheckPersonInBlacklistProject/eChannelCheckPersonInBlacklist?SCHEMA%2FeChannelCommonServices%2FResources%2FSchemas%2FeChannelService" />
+    <MetadataFile FileName="eChannelCheckPersonInBlacklist1.xsd" MetadataType="Schema" ID="02f354cc-eeca-4581-9c7e-9fa844fde78e" SourceId="1" SourceUrl="http://csitosbprt.dev.hq.nwc:21303/NwcCompass/eChannelCheckPersonInBlacklistProject/eChannelCheckPersonInBlacklist?SCHEMA%2FeChannelCheckPersonInBlacklistProject%2FResources%2FSchemas%2FechannelCheckAccPerInBlackList" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

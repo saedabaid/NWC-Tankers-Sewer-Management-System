@@ -1,0 +1,128 @@
+<div class="col-md-9">
+  <div class="form-group col-sm-4">
+    <label class="custome-label"> {{ "CustomerLocation" | translate }} </label>
+    <!-- <label *ngIf="!isEditmode; else CustomerLocation"
+      >{{ SelectedCustomerLocationName }}
+    </label>
+    <ng-template #CustomerLocation>
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [(selectedList)]="SelectedCustomerLocation"
+        [dropDownListInputs]="CustomerLocations"
+        (selectedListChange)="onCustomerLocationChanged($event)"
+        [options]="selectMenuOptions2"
+      >
+      </select-menu>
+    </ng-template> -->
+    <label *ngIf="!isEditmode; else CustomerLocation"
+      >{{ SelectedCustomerAccountName }}
+    </label>
+    <ng-template #CustomerLocation>
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [(selectedList)]="SelectedCustomerAccount"
+        [dropDownListInputs]="CustomerAccounts"
+        (selectedListChange)="onCustomerAccountChanged($event)"
+        [options]="selectMenuOptions2"
+      >
+      </select-menu>
+    </ng-template>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="custome-label"> {{ "AssignedStation" | translate }}</label>
+    <label *ngIf="!isEditmode; else AssignedStations"
+      >{{ AssignedStationName }}
+    </label>
+    <ng-template #AssignedStations>
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="Stations"
+        (selectedListChange)="onAssignedStationChanged($event)"
+        [options]="selectMenuOptions2"
+        [(selectedList)]="AssignedStation"
+        [loading]="Station_loading"
+      >
+      </select-menu>
+    </ng-template>
+  </div>
+
+  <div class="form-group col-sm-4">
+    <label class="custome-label">
+      {{ "ScheduledDeliveryDate" | translate }}</label
+    >
+    <app-datepicker
+      [ngClass]="!isEditmode ? ' noicon' : ' '"
+      [viewOnly]="!isEditmode"
+      DateID="dateID"
+      [selecteddate]="shipmentData.ScheduledDeliveryTime"
+      (selecteddateChange)="onselecteddateChange($event)"
+      [dateFormat]="'D MMM YYYY, h:mm a'"
+    ></app-datepicker>
+    <!-- <datePicker-gregorian-hijri [ngClass]="!isEditmode ? ' noicon' : ' '"   [selectedDate]="shipmentData.ScheduledDeliveryTime"
+    (selectedDateChange)="onselecteddateChange($event)" [disabled]="!isEditmode"
+    ></datePicker-gregorian-hijri> -->
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="custome-label"> {{ "QuantityM3" | translate }}</label>
+    <input
+      class="form-control"
+      type="text"
+      [disabled]="!isEditmode"
+      [ngModel]="shipmentData.OrderQuantity"
+      (change)="onQuantityChange($event)"
+    />
+  </div>
+
+  <div class="form-group col-sm-4">
+    <label class="custome-label"
+      >{{ "tanker necessary accessories" | translate }}
+    </label>
+    <label *ngIf="!isEditmode; else accessories">{{ AccessoryNames }} </label>
+    <ng-template #accessories>
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="Accessories"
+        [(selectedList)]="AccessoryselectedItems"
+        (selectedListChange)="onNecessaryAccessoriesChanged($event)"
+        [options]="selectMenuOptions"
+      >
+      </select-menu>
+    </ng-template>
+  </div>
+
+  <div class="form-group col-sm-4">
+    <label class="custome-label">{{ "OperationType" | translate }}</label>
+    <label>
+      {{ selectedServicesTypeName }}
+    </label>
+    <!-- <label *ngIf="!isEditmode; else OperationType"
+      >{{ selectedServicesTypeName }}
+    </label>
+    <ng-template #OperationType>
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="ServicesTypes"
+        [(selectedList)]="selectedServicesType"
+        (selectedListChange)="onOperationTypeChanged($event)"
+        [options]="selectMenuOptions2"
+      >
+      </select-menu>
+    </ng-template> -->
+  </div>
+</div>
+<div
+  class="col-md-3"
+  *ngIf="pagePermission == 'Full Control' || pagePermission == 'Add and Edit'"
+>
+  <a (click)="allowEdit()" *ngIf="!isEditmode" class="edit-form">
+    <i class="fas fa-pencil-alt"></i> {{ "Edit" | translate }}</a
+  >
+  <a (click)="save()" *ngIf="isEditmode" class="edit-form">
+    <i class="fa fa-save"></i> {{ "save" | translate }}</a
+  >
+</div>

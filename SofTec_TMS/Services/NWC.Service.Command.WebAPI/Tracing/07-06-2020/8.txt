@@ -1,0 +1,54 @@
+--------------------------------------------------------------------------------------------------------------------------- Time:07/06/2020 8:30:48 AM
+
+CreateWorkOrder Time:07/06/2020 8:30:48 AM
+
+{"WorkOrderID":0,"OrderNumber":"5890188674","CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"2020-06-02T05:22:24Z","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":31,"CustomerLocationID":61384,"ServiceTypeID":1,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":"1520","IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":"طلب صهريج مياه حجم - 31 m3,رقم الهويه :1070936016 , المدينة:أحد رفيدة","VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":"HAYAT","CISDivision":"AS","TransactionID":"a0975ac1-ca56-4b83-aa84-50c9eef35dd7"} Time:07/06/2020 8:30:48 AM
+
+Not-Valid - Errors: ["StationDoesNotAssignedToContract"] Time:07/06/2020 8:30:49 AM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:07/06/2020 8:31:25 AM
+
+CreateWorkOrder Time:07/06/2020 8:31:25 AM
+
+{"WorkOrderID":0,"OrderNumber":"5890188674","CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"2020-06-02T05:22:24Z","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":31,"CustomerLocationID":61385,"ServiceTypeID":1,"StationID":"725dce85-5268-4972-9f89-852136c38952","ConfirmationCode":"1520","IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":"طلب صهريج مياه حجم - 31 m3,رقم الهويه :1070936016 , المدينة:أحد رفيدة","VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":"HAYAT","CISDivision":"AS","TransactionID":"a0975ac1-ca56-4b83-aa84-50c9eef35dd7"} Time:07/06/2020 8:31:25 AM
+
+Valid Time:07/06/2020 8:31:25 AM
+
+Create WorkOrder: Partially Success Time:07/06/2020 8:31:26 AM
+
+customerLocation: 61385 Time:07/06/2020 8:31:26 AM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:07/06/2020 8:31:26 AM
+
+OrderNumber: 5890188674 Time:07/06/2020 8:31:26 AM
+
+workOrderID: 45573 Time:07/06/2020 8:31:26 AM
+
+scheduledDeliveryTime: 02/06/2020 5:22:24 AM Time:07/06/2020 8:31:26 AM
+
+customerLocationClassID: 1 Time:07/06/2020 8:31:27 AM
+
+serviceTypeID: 1 Time:07/06/2020 8:31:27 AM
+
+zoneStation: 725dce85-5268-4972-9f89-852136c38952 Time:07/06/2020 8:31:27 AM
+
+orderQuantity: 31 Time:07/06/2020 8:31:27 AM
+
+contract == null: False Time:07/06/2020 8:31:27 AM
+
+contractID: 10040 Time:07/06/2020 8:31:27 AM
+
+contractStationTariaff == null: False Time:07/06/2020 8:31:27 AM
+
+contractStationTariaffID: 319 Time:07/06/2020 8:31:27 AM
+
+totalQuantityCost: 71.3000 Time:07/06/2020 8:31:27 AM
+
+extraKMCost: 0.0000 Time:07/06/2020 8:31:27 AM
+
+totalCost: 71.3000 Time:07/06/2020 8:31:27 AM
+
+Net Cost: 71.3000 Time:07/06/2020 8:31:27 AM
+
+Create WorkOrder: Success Time:07/06/2020 8:31:27 AM
+

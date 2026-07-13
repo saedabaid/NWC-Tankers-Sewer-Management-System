@@ -1,0 +1,37 @@
+<div class="hold-upload">
+  <label for="file"> <i class="fas fa-plus"></i></label>
+  <input class="hidden" type="file" id="file" multiple (change)="getFileDetails($event)">
+  <i class="fas fa-file-download"></i>
+  <!-- <i (click)="deleteAttachment()" class="fas fa-times"></i>  -->
+
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="holder-table ">
+        <table class="table Dtable table-striped">
+            <thead>
+              <tr>
+                <th>{{'Name' |  translate}}</th>
+                <th>{{'Size' | translate}} </th>
+                <th>{{'DateAttached' | translate}} </th>
+                <th>{{'Description' | translate}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let attach of listForAttachments">
+                <td> {{attach.name}} </td>
+                <td> {{attach.size}} KB</td>
+                <td> {{attach.modifiedDate |  date:'dd MMM yyyy hh:mm a' }} </td>
+                <td> {{attach.type}} </td>
+              </tr>
+              <tr *ngIf="listForAttachments.length <= 0 ">
+                <td colspan="4">{{'NoFilesAttached' | translate}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  
+
+  </div>
+</div>

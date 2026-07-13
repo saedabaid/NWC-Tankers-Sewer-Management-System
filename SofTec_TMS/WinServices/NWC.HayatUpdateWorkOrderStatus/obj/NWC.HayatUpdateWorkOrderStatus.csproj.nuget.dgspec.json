@@ -1,0 +1,202 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\SofTec_TMS\\SofTec_TMS\\WinServices\\NWC.HayatUpdateWorkOrderStatus\\NWC.HayatUpdateWorkOrderStatus.csproj": {}
+  },
+  "projects": {
+    "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BL.Denormalizer\\NWC.BL.Denormalizer.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BL.Denormalizer\\NWC.BL.Denormalizer.csproj",
+        "projectName": "NWC.BL.Denormalizer",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BL.Denormalizer\\NWC.BL.Denormalizer.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DTO\\NWC.DTO.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DTO\\NWC.DTO.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BLL\\NWC.BLL.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BLL\\NWC.BLL.csproj",
+        "projectName": "NWC.BLL",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BLL\\NWC.BLL.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BL.Denormalizer\\NWC.BL.Denormalizer.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BL.Denormalizer\\NWC.BL.Denormalizer.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DTO\\NWC.DTO.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DTO\\NWC.DTO.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Web\\NWC.Web.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Web\\NWC.Web.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj",
+        "projectName": "Common.Infrastructure",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj",
+        "projectName": "NWC.DAL",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DTO\\NWC.DTO.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DTO\\NWC.DTO.csproj",
+        "projectName": "NWC.DTO",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DTO\\NWC.DTO.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\Common\\Infrastructure\\Common.Infrastructure.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj",
+        "projectName": "NWC.Localization",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Localization\\NWC.Localization.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Web\\NWC.Web.csproj": {
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Web\\NWC.Web.csproj",
+        "projectName": "NWC.Web",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.Web\\NWC.Web.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "G:\\SofTec_TMS\\SofTec_TMS\\WinServices\\NWC.HayatUpdateWorkOrderStatus\\NWC.HayatUpdateWorkOrderStatus.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\SofTec_TMS\\SofTec_TMS\\WinServices\\NWC.HayatUpdateWorkOrderStatus\\NWC.HayatUpdateWorkOrderStatus.csproj",
+        "projectName": "NWC.HayatUpdateWorkOrderStatus",
+        "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\WinServices\\NWC.HayatUpdateWorkOrderStatus\\NWC.HayatUpdateWorkOrderStatus.csproj",
+        "packagesPath": "C:\\Users\\saed\\.nuget\\packages\\",
+        "outputPath": "G:\\SofTec_TMS\\SofTec_TMS\\WinServices\\NWC.HayatUpdateWorkOrderStatus\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\saed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BLL\\NWC.BLL.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\Business\\NWC.BLL\\NWC.BLL.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DAL\\NWC.DAL.csproj"
+              },
+              "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DTO\\NWC.DTO.csproj": {
+                "projectPath": "G:\\SofTec_TMS\\SofTec_TMS\\NWC.DTO\\NWC.DTO.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

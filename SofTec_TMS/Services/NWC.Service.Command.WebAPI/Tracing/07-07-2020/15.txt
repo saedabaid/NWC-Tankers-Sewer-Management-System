@@ -1,0 +1,8 @@
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 3:56:43 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:07/07/2020 03:56:43 م
+
+AssignWorkOrder - Validate Vehicle Status Workflow Fail - TransporterID: dfc6273b-505f-41cc-8b27-0b0507114dcc - TransporterStatus: 0 Time:07/07/2020 03:56:44 م
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 3:59:42 PM
+

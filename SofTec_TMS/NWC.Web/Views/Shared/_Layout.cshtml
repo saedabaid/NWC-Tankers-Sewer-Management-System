@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <title>@ViewBag.Title - My ASP.NET Application </title> -->
+  <title>@ViewBag.Title </title>
+  <base href="/" />
+  <style>
+    #toastr-container > div {
+      width: auto !important;
+      min-width: 345px;
+    }
+
+    .toastr-messages-en {
+      text-align: left;
+      line-height: 25px !important;
+      text-transform: none;
+    }
+
+    .toastr-messages-ar {
+      text-align: right;
+      line-height: 25px !important;
+      text-transform: none;
+    }
+
+    .text-original {
+      text-transform: none;
+    }
+  </style>
+  @Styles.Render("~/Content/css")
+  @Scripts.Render("~/bundles/modernizr")
+
+  <link href="~/Content/bootstrap.css" rel="stylesheet" />
+  <link href="~/Content/Site.css" rel="stylesheet" />
+
+  @{ if (System.Configuration.ConfigurationManager.AppSettings["TMS"] == "true")
+    {
+      <!-- Production -->
+      @*<link rel="stylesheet" href="dist/styles.a0181ddddf627510300f.css">*@
+
+
+      <link rel="stylesheet" type="text/css" href="/assets/TMSBranding/styles/css/component.css">
+      <link rel="stylesheet" type="text/css" href="/assets/TMSBranding/styles/css/Branding_en.css">
+      <link rel="stylesheet" type="text/css" href="/assets/TMSBranding/styles/css/font-awesome.min.css">
+      <script type="text/javascript" src="/assets/TMSBranding/styles/js/classie.js"></script>
+      <script type="text/javascript" src="/assets/TMSBranding/styles/js/mlpushmenu.js"></script>
+
+
+    }
+    else
+    {
+
+      <link rel="stylesheet" type="text/css" href="/assets/fmsBranding/styles/css/component.css">
+      <link rel="stylesheet" type="text/css" href="/assets/fmsBranding/styles/css/Branding_en.css">
+      <link rel="stylesheet" type="text/css" href="/assets/fmsBranding/styles/css/font-awesome.min.css">
+      <script type="text/javascript" src="/assets/fmsBranding/styles/js/classie.js"></script>
+      <script type="text/javascript" src="/assets/fmsBranding/styles/js/mlpushmenu.js"></script>
+
+    }
+
+  }
+
+  <link rel="icon" type="image/x-icon" href="@System.Configuration.ConfigurationManager.AppSettings["favicon"] ">
+
+
+</head>
+<body>
+  @*<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("About", "About", "Home")</li>
+            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+          </ul>
+        </div>
+      </div>
+    </div>*@
+  @*<div class="container body-content">*@
+  @RenderBody()
+  @*<hr />
+      <footer>
+        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+      </footer>
+    </div>*@
+
+  @Scripts.Render("~/bundles/jquery")
+  @Scripts.Render("~/bundles/bootstrap")
+  @RenderSection("scripts", required: false)
+
+  <!-- Development -->
+  <script type="text/javascript" src="/dist/runtime.js"></script>
+    <script type="text/javascript" src="/dist/polyfills.js"></script>
+    <script type="text/javascript" src="/dist/styles.js"></script>
+    <script type="text/javascript" src="/dist/vendor.js"></script>
+    <script type="text/javascript" src="/dist/main.js"></script>
+
+  <!-- Production -->
+  @*<script src="dist/runtime.28465c4b09be6476e5e0.js" defer></script>
+  <script src="dist/polyfills-es5.6bed83da796c7a566370.js" nomodule defer></script>
+  <script src="dist/polyfills.f8c0de3867e296d952dd.js" defer></script>
+  <script src="dist/scripts.97a227d270b314c9a028.js" defer></script>
+  <script src="dist/main.5cf71bad03a22527c178.js" defer></script>*@
+
+</body>
+</html>

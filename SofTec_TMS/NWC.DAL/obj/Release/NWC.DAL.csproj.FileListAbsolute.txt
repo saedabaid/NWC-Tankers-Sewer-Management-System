@@ -1,0 +1,12 @@
+G:\SofTec_TMS\SofTec_TMS\NWC.DAL\bin\Release\NWC.DAL.dll.config
+G:\SofTec_TMS\SofTec_TMS\NWC.DAL\bin\Release\NWC.DAL.dll
+G:\SofTec_TMS\SofTec_TMS\NWC.DAL\bin\Release\NWC.DAL.pdb
+G:\SofTec_TMS\SofTec_TMS\NWC.DAL\bin\Release\EntityFramework.dll
+G:\SofTec_TMS\SofTec_TMS\NWC.DAL\bin\Release\EntityFramework.SqlServer.dll
+G:\SofTec_TMS\SofTec_TMS\NWC.DAL\bin\Release\EntityFramework.xml
+G:\SofTec_TMS\SofTec_TMS\NWC.DAL\bin\Release\EntityFramework.SqlServer.xml
+G:\SofTec_TMS\SofTec_TMS\NWC.DAL\obj\Release\NWC.DAL.csproj.CoreCompileInputs.cache
+G:\SofTec_TMS\SofTec_TMS\NWC.DAL\obj\Release\NWC.DAL.csproj.CopyComplete
+G:\SofTec_TMS\SofTec_TMS\NWC.DAL\obj\Release\NWC.DAL.dll
+G:\SofTec_TMS\SofTec_TMS\NWC.DAL\obj\Release\NWC.DAL.pdb
+G:\SofTec_TMS\SofTec_TMS\NWC.DAL\obj\Release\NWC.DAL.csproj.AssemblyReference.cache

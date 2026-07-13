@@ -1,0 +1,159 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-md-6  padding-10">
+            <a routerLink="/tms/reports">
+                <span class="page-title">{{ "TMS_Reports" | translate }}</span>
+            </a>
+            <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+            <span class="page-title  currentpage">{{ "DailyOrdersSummary" | translate }}</span>
+        </div>
+    </div>
+</div>
+
+<div class="inner-div">
+
+<!-- Search row 1 -->
+<div class="row bg-white pb-2  ">
+    <!-- Area -->
+    <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "Area" | translate }} </label>
+        <div class="col-sm-8">
+            <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerAreaList"
+                (SearchVAlue)="getAreas($event)" (selectedListChange)="onAreaDDLChanged($event)"
+                [options]="selectMenuOptions" [selectedList]="bindingModel_Areas" [loading]="Area_loading">
+            </select-menu>
+        </div>
+    </div>
+
+    <!-- city -->
+    <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "City" | translate }}</label>
+        <div class="col-sm-8">
+            <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerCityList"
+                (SearchVAlue)="getCity($event)" (selectedListChange)="onCityDDLChanged($event)"
+                [options]="selectMenuOptions" [selectedList]="bindingModel_Cities" [loading]="City_Loading">
+            </select-menu>
+        </div>
+    </div>
+
+    <!-- station -->
+    <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "Station" | translate }}</label>
+        <div class="col-sm-8">
+            <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerStationList"
+                (SearchVAlue)="getStations($event)" (selectedListChange)="onStationDDLChanged($event)"
+                [options]="selectMenuOptions" [selectedList]="bindingModel_Stations" [loading]="Station_Loading">
+            </select-menu>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+    <a (click)="onexportOrders()" class=" margin-5 pull-right" title="{{ 'ExportOrders' | translate }}"
+        (mouseenter)="mouseEnterExcel()" (mouseleave)="mouseLeaveExcel()">
+        <img width="24px" *ngIf="!HoverExcel; else excelHover" src={{Excel_Img_Src}} />
+        <ng-template #excelHover>
+            <img width="24px" src={{Excel_Img_Src}} />
+        </ng-template>
+    </a>
+    </div>
+</div>
+
+<!-- Search row 2 -->
+<div class="row bg-white  pb-4">
+    <!-- Service type-->
+    <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "ServiceType" | translate }}</label>
+        <div class="col-sm-8">
+            <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerServiceList"
+                (selectedListChange)="onServiceTypeDDLChanged($event)" [options]="selectMenuOptions"
+                [selectedList]="bindingModel_ServiceTypes">
+            </select-menu>
+        </div>
+    </div>
+
+    <!-- Date from -->
+    <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "From" | translate }}</label>
+        <div class="col-sm-8">
+            <app-datepicker [(selecteddate)]="SearchCriteria.DateFrom" DateID="dateFrom"></app-datepicker>
+        </div>
+    </div>
+
+    <!-- Date To -->
+    <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "To" | translate }}</label>
+        <div class="col-sm-8">
+            <app-datepicker [(selecteddate)]="SearchCriteria.DateTo" DateID="dateTo"></app-datepicker>
+        </div>
+    </div>
+
+    <!-- buttons -->
+    <div class="col-md-3">
+        <button class="btn btn-default margin-5 pull-right" (click)="clearSearch()">
+            {{ "Clear" | translate }}
+        </button>
+        <button class="btn btn-danger margin-5 pull-right" (click)="onSearchSubmit()">
+            {{ "Search" | translate }}
+        </button>
+    </div>
+</div>
+
+<!-- table -->
+<div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row'">
+    <div class="col-md-12 scroll-x-table list-body">
+
+        <!--#region  table loading ********************************************** -->
+        <div [ngClass]="tableLoading ? 'container-gif show' : 'container-gif' ">
+            <div class="uil-ring-css table-loader" style="transform:scale(0.6);">
+                <div></div>
+            </div>
+        </div>
+        <!--#endregion  table loading -->
+
+        <table class="table   table-striped scrollable-table">
+            <thead>
+                <tr>
+                    <th class="wid130">{{ "Station" | translate }}</th>
+                    <th class="wid130">{{ "ServiceType" | translate }}</th>
+                    <th class="wid100">{{ "Date" | translate }}</th>
+                    <th class="wid70">{{ "TotalOrdersCount" | translate }}</th>
+                    <th class="wid70">{{ "TotalOrdersSum" | translate }}</th>
+                    <th class="wid100">{{ "DeliveredCount" | translate }}</th>
+                    <th class="wid100">{{ "DeliveredSum" | translate }}</th>
+                    <th class="wid130">{{ "FailedToDeliverCount" | translate }}</th>
+                    <th class="wid100">{{ "FailedToDeliverSum" | translate }}</th>
+                    <th class="wid100">{{ "CancelledCount" | translate }}</th>
+                </tr>
+            </thead>
+            <tbody [class]="advancedDiv ? ' mini' : ' '">
+                <tr class="text-center d-block p-2 font-4" *ngIf="!searchResult.Result">
+                    {{ "NoDataFound" | translate }}
+                </tr>
+                <tr *ngFor="let item of searchResult.Result; let i = index">
+                    <td class="wid130">{{ item.StationName }}</td>
+                    <td class="wid130">{{ item.ServiceTypeName }}</td>
+                    <td class="wid100">
+                        <date [date]="item.CreateDate"></date>
+                    </td>
+                    <td class="wid70"> {{ item.TotalCount }} </td>
+                    <td class="wid70"> {{ item.TotalSum }} </td>
+                    <td class="wid100"> {{ item.DeliveredCount }} </td>
+                    <td class="wid100"> {{ item.DeliveredSum }} </td>
+                    <td class="wid130"> {{ item.FailedToDeliverCount }} </td>
+                    <td class="wid100"> {{ item.FailedToDeliverSum }} </td>
+                    <td class="wid100"> {{ item.CancelledCount }} </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Paging -->
+<app-pagination-component [ItemsCount]="searchResult.TotalCount" [(PageSize)]="this.SearchCriteria.PageFilter.PageSize"
+    [pageIndex]="this.SearchCriteria.PageFilter.PageIndex" (PageSizeChange)="onPageSizeChanged($event)"
+    (pageNavigated)="onPageIndexChanged($event)">
+</app-pagination-component>
+
+</div>

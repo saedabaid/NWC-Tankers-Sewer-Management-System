@@ -1,0 +1,14 @@
+@page {
+  margin: 0;
+}
+img {
+  width: 50%;
+}
+.qrcode  {
+}
+@media print {
+  img {
+    width: 50%;
+  }
+}
+

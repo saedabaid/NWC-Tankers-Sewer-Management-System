@@ -1,0 +1,38 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:08/09/2020 11:32:15 AM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:08/09/2020 11:32:15 ص
+
+CreateWorkOrder Time:08/09/2020 11:32:15 ص
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5537,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":"TMS","CISDivision":null,"TransactionID":null} Time:08/09/2020 11:32:15 ص
+
+Valid Time:08/09/2020 11:32:16 ص
+
+Create WorkOrder: Partially Success Time:08/09/2020 11:32:17 ص
+
+customerAccount: 5537 Time:08/09/2020 11:32:17 AM
+
+customerLocation: 5537 Time:08/09/2020 11:32:17 AM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:08/09/2020 11:32:17 AM
+
+OrderNumber: 1624353408 Time:08/09/2020 11:32:17 AM
+
+workOrderID: 56038 Time:08/09/2020 11:32:17 AM
+
+scheduledDeliveryTime: 08/09/2020 11:32:15 AM Time:08/09/2020 11:32:17 AM
+
+customerLocationClassID: 1 Time:08/09/2020 11:32:17 AM
+
+serviceTypeID: 1 Time:08/09/2020 11:32:17 AM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:08/09/2020 11:32:17 AM
+
+orderQuantity: 20 Time:08/09/2020 11:32:17 AM
+
+Net Cost: -1 Time:08/09/2020 11:32:18 AM
+
+SMS: عميلنا العزيز: تم فتح طلب صهريج مياه برقم 1624353408 وسيتم التواصل معكم لتأكيد استلام الصهريج Time:08/09/2020 11:32:18 AM
+
+Create WorkOrder: Success Time:08/09/2020 11:32:18 AM
+

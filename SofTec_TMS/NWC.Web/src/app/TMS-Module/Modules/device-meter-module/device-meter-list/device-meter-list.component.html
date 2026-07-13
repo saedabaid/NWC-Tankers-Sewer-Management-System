@@ -1,0 +1,85 @@
+<div class="container-fluid main-div">
+    <div class="row">
+      <div class="col-md-6  padding-10">
+        <span class="page-title">{{'TMS' | translate}}</span>
+        <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+  
+        <span class="page-title currentpage">{{'DeviceMeter' | translate}}</span>
+      </div>
+  
+      <div class="col-md-6">
+  
+        <!--  -->
+        <a *ngIf="(pagePermission == 'Full Control') || (pagePermission == 'Add and Edit')"
+          title="  {{'AddDeviceMeter' | translate}}" routerLink="/tms/devicemeter/AddDevice"> <i
+            class="glyphicon glyphicon-plus-sign margin-5 pull-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="inner-div">
+    <div class="row  form-row">
+      <div class="col-md-12 custome-dropdown">
+        <label class="col-md-2 title wid-6">{{'Station' | translate}} </label>
+  
+        <search-component class="col-md-3" (searchKeyword)="onContractorNameDDLChanged($event)" [isTypeahead]="true"
+          [typeaheadFunction]='searchContractorsNames.bind(this)' [field]="'Name'"
+          [(_value)]="SearchCriteria.FilterModel.SearchKeyword">
+        </search-component>
+    
+        <button class="btn btn-default margin-5 pull-right" (click)="clearSearch()">{{ 'Clear'| translate }}</button>
+        <button class="btn btn-danger margin-5 pull-right" (click)="onSearchSubmit()">{{ 'Search' | translate }}</button>
+      </div>  
+    </div>
+  
+    <!-- table section -->
+    <!-- fixed header  -->
+    <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row' ">
+      <div class="col-md-12 scroll-x-table list-body">
+  
+        <!--#region  table loading ********************************************** -->
+        <div [ngClass]="tableLoading ? 'container-gif show' : 'container-gif' ">
+          <div class="uil-ring-css table-loader" style="transform:scale(0.6);">
+            <div></div>
+          </div>
+        </div>
+        <!--#endregion  table loading -->
+  
+        <table class="table   table-striped scrollable-table">
+          <thead>
+            <tr>
+              <th class="wid150">{{'ID' | translate}} </th>
+              <th class="wid150">{{'stationName' | translate}} </th>
+              <th class="wid150">{{'ConnectorTubeNumber' | translate}}</th>
+              <th class="wid100">{{'MeterSerialNumber' | translate}}</th>
+              <th class="wid150">{{'ManholeNumber' | translate}} </th>
+              <th class="wid100">{{'ReadingTime' | translate}}</th>
+              <th class="wid200">{{'Notes' | translate}}</th>
+              <th class="wid50"> </th>
+            </tr>
+          </thead>
+          <tbody [class]="advancedDiv ? ' mini' : ' '">
+  
+            <tr class="text-center d-block p-2 font-4" *ngIf="!searchResult.Result">{{'NoDataFound' | translate}}</tr>
+            <tr *ngFor="let item of searchResult.Result; let i = index">
+  
+              <td class="wid150">{{item.StationName}}</td>
+              <td class="wid150 ">{{item.ConnectorTubeNumber}} </td>
+              <td class="wid100">{{item.MeterSerialNumber}}</td>
+              <td class="wid100">{{item.ManholeNumber}}</td>
+             
+            </tr>
+          </tbody>
+        </table>
+  
+      </div>
+  
+  
+    </div>
+    <app-pagination-component [ItemsCount]='searchResult.TotalCount'
+      [(PageSize)]="this.SearchCriteria.FilterModel.PageFilter.PageSize"
+      [pageIndex]="this.SearchCriteria.FilterModel.PageFilter.PageIndex" (PageSizeChange)="onPageSizeChanged($event)"
+      (pageNavigated)="onPageIndexChanged($event)">
+    </app-pagination-component>
+  </div>
+  

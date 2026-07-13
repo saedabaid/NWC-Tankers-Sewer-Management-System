@@ -1,0 +1,305 @@
+
+.multiselect-dropdown .dropdown-btn  {
+
+  padding: 0px 5px !important;
+  height: 30px;
+}
+
+.single-search {
+  .pure-checkbox {
+    padding: 0 !important;
+  }
+
+  input {
+    & + label {
+      padding: 10px;
+      padding-left: 1em;
+      width: 100%;
+
+      &:after,
+      &:before {
+        display: none;
+      }
+    }
+
+    &:checked {
+      & + label {
+        background: #00ae8d !important;
+        color: white !important;
+
+
+        &:after,
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.inline-display {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+
+  .cuppa-dropdown {
+    height: 100%;
+  }
+
+  .selected-list {
+    display: none;
+  }
+
+  .dropdown-list {
+    display: inline-block !important;
+    position: relative !important;
+    padding-top: 0 !important;
+    z-index: 1 !important;
+    height: 100%;
+
+    .arrow-up {
+      display: none !important;
+    }
+
+    .list-area {
+      border-radius: 0;
+      box-shadow: none;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      background: transparent;
+      border: none;
+    border-bottom: 0 !important;
+
+      ul {
+        position: relative;
+        max-height: calc( 100% - 74px ) !important;
+
+        li {
+          &:hover {
+            &:first-of-type {
+              border-top-left-radius: 5px;
+              border-top-right-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.no-search {
+    .dropdown-list {
+
+      .list-area {
+
+        ul {
+          max-height: calc( 100% - 35px ) !important;
+        }
+      }
+    }
+  }
+
+  &.no-selectall {
+    .dropdown-list {
+
+      .list-area {
+
+        ul {
+          max-height: calc( 100% - 35px ) !important;
+        }
+      }
+    }
+  }
+
+  &.no-search.no-selectall {
+    .dropdown-list {
+
+      .list-area {
+
+        ul {
+          max-height: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+input {
+  & + label {
+    &:before {
+      border-color: #00ae8d !important;
+    }
+  }
+
+  &:checked {
+    & + label {
+      &:before {
+        background: #00ae8d !important;
+      }
+    }
+  }
+}
+
+.c-btn {
+  box-shadow: none !important;
+  padding: 5px 10px;
+  line-height: 1;
+  height: 30px;
+  font-size: 11pt !important;
+  border: 1px solid #ced4da;
+  min-height: 30px !important;
+
+  & > span {
+    line-height: 18px;
+    font-size: 10pt;
+  }
+}
+
+.selected-list {
+  .c-token {
+    background: #00ae8d !important;
+    max-width: 70%;
+
+    .c-label {
+      font-size: 9pt;
+      white-space: nowrap;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 3px;
+
+    }
+
+    .c-remove {
+      right: 5px !important;
+      width: 6px !important;
+      line-height: 0;
+    }
+  }
+
+  .c-angle-down,
+  .c-angle-up {
+    width: 8px !important;
+  }
+}
+
+.list-filter {
+  line-height: 1;
+}
+
+.pure-checkbox {
+  line-height: 1;
+}
+
+.rtl {
+  .selected-list {
+    .c-angle-down,
+    .c-angle-up {
+      right: auto !important;
+      left: 10px;
+    }
+    .c-label {
+      font-size: 9pt;
+      white-space: nowrap;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 3px !important;
+
+    }
+  }
+
+  .arrow-up,
+  .arrow-down {
+    margin-left: auto !important;
+    margin-right: 15px;
+  }
+
+  .list-filter {
+    padding-right: 10px;
+
+    input {
+      padding-right: 5px !important;
+    }
+  }
+
+  .dropdown-list {
+    ul {
+      li {
+        text-align: right !important;
+
+        label {
+          padding-left: 0;
+          padding-right: 2em;
+
+          &:before {
+            left: auto;
+            right: 0;
+          }
+
+          &:after {
+            left: auto;
+            right: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.rtl {
+  angular2-multiselect  {
+    .c-btn {
+
+      padding: 4px !important;
+
+  }
+  }
+}
+
+.loading-DropDownList {
+  background-image: url(src\assets\TMSBranding\styles\img\loader.gif);
+  background-size: 25px 25px;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 30px;
+}
+
+.rtl {
+  .loading-DropDownList {
+    background-position: left;
+  }
+}
+
+
+.loading-DropDownList-container {
+  width: 75%;
+  background: none;
+}
+.selected-list .c-angle-down, .selected-list .c-angle-up {
+     height: 20px !important;
+   
+}
+
+
+label[for=selectAll] {
+  pointer-events:none;
+}
+
+.loading-z-index{
+  z-index: 50;
+}
+
+
+// .rtl {
+//     .clear-all {
+//             left: 50px;
+// right: unset;
+//   }
+// }
+
+
+.clear-all {
+  display: none;
+}

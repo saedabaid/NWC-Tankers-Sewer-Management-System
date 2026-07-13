@@ -1,0 +1,33 @@
+.map-component{
+  margin-bottom: 10px;
+  height: 100%;
+}
+.ol-overlaycontainer-stopevent {
+  position: absolute;
+  z-index: 10;
+  top: 5px; 
+  right: 5px;
+   
+  button {
+    background: #00a8d4;
+    color: white;
+    padding: 3px 8px;
+    margin: 5px;
+  }
+  #map {
+    position: relative;
+  }
+  
+//   .popover-content {
+//     padding: 9px 14px;
+//     background-color: #5f7583 !important;
+//     border: 1px solid #5f7583;
+//     color: #fff;
+// }
+
+}
+.popover.top {
+  margin-top: -10px;
+  width: 315px !important;
+  max-width: 500px !important;
+}

@@ -1,0 +1,406 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-6  padding-10">
+            <a (click)="closeRedirectToContracts()">
+                <span class="page-title">{{ "contract" | translate }}</span>
+            </a>
+            <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+            <a (click)="close()">
+                <span class="page-title">{{ "TMS_contractTermsViolationslist" | translate }}</span>
+            </a>
+            <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+            <span class="page-title  currentpage">{{ (editMode ? 'EditViolation': 'NewViolation') | translate }}</span>
+        </div>
+
+        <div class="col-6">
+            <!-- <a *ngIf="enablePrint" routerLink="/tms/contract/violation/print/{{violation.Id}}" target="_blank"
+                title="  {{ 'print' | translate }}">
+                <i class="glyphicon glyphicon-print margin-5 pull-right"></i>
+            </a> -->
+
+        </div>
+
+    </div>
+</div>
+
+<div class="tabs-links">
+
+  <a (click)="switchTab(1)" [ngClass]="currentTab == 1 ? ' active' : '  '   ">
+    {{ (editMode ? 'EditViolation': 'NewViolation') | translate }}
+  </a>
+  <a (click)="switchTab(2)" *ngIf="updateId"
+     [ngClass]="currentTab == 2 ? ' active' : '  '  ">{{'Logs' | translate}}</a>
+  <a (click)="switchTab(3)" *ngIf="updateId"
+     [ngClass]="currentTab == 3 ? ' active' : '  '  ">{{'ApprovalLogs' | translate}}</a>
+</div>
+
+<div class="content-tab-data">
+
+  <div *ngIf="currentTab == 1">
+
+
+
+    <div class="inner-div">
+
+      <div class="row">
+        <div class="col-6">
+
+          <!-- Contract -->
+          <div class="row form-row">
+            <div class="col-3">
+              <label class="title">
+                {{'contract' | translate}} <span class="required">*</span>
+              </label>
+            </div>
+            <div class="col-6">
+              <div *ngIf="!editMode">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="ContractList"
+                             (SearchVAlue)="getContracts($event)"
+                             (selectedListChange)="onContractDDLChanged($event)" [options]="selectMenuOptions"
+                             [selectedList]="bindingModel_Contracts" [loading]="Contract_Loading">
+                </select-menu>
+              </div>
+
+              <label *ngIf="editMode" class="form-control disabled">
+                {{violation?.ContractCode}}
+              </label>
+            </div>
+          </div>
+
+          <!-- Station -->
+          <div class="row form-row">
+            <div class="col-3">
+              <label class="title">
+                {{'Station' | translate}} <span class="required">*</span>
+              </label>
+            </div>
+            <div class="col-6">
+              <div *ngIf="!editMode">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="StationList"
+                             (selectedListChange)="onStationDDLChanged($event)"
+                             [options]="selectMenuOptionsDisableSearch" [selectedList]="bindingModel_Stations"
+                             [loading]="Contract_Loading">
+                </select-menu>
+              </div>
+              <label *ngIf="editMode" class="col-6 form-control disabled">
+                {{violation?.StationName}}
+              </label>
+            </div>
+
+          </div>
+
+          <!-- Term Category -->
+          <div class="row form-row">
+            <div class="col-3">
+              <label class="title">
+                {{'violationCategory' | translate}} <span class="required">*</span>
+              </label>
+            </div>
+            <div class="col-6">
+              <div *ngIf="!editMode">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="TermCategoryList"
+                             (selectedListChange)="onCategoryDDLChanged($event)"
+                             [options]="selectMenuOptionsDisableSearch" [selectedList]="bindingModel_Categories">
+                </select-menu>
+              </div>
+              <label *ngIf="editMode" class="col-6 form-control disabled">
+                {{(IsArabic ? violation?.CategoryAr : violation?.CategoryEn )}}
+              </label>
+            </div>
+
+          </div>
+
+          <!-- Term -->
+          <div class="row form-row">
+            <div class="col-3">
+              <label class="title">
+                {{'ContractTerm' | translate}} <span class="required">*</span>
+              </label>
+            </div>
+            <div class="col-6">
+              <div *ngIf="!editMode">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="TermList"
+                             (selectedListChange)="onTermDDLChanged($event)"
+                             [options]="selectMenuOptionsDisableSearch" [selectedList]="bindingModel_Terms"
+                             [loading]="Term_Loading">
+                </select-menu>
+              </div>
+              <label *ngIf="editMode" class="col-6 form-control disabled">
+                {{violation?.ContractTermName}}
+                - {{violation?.ContractTermCode}}
+              </label>
+            </div>
+          </div>
+
+          <div class="row form-row"></div>
+
+          <div class="row form-row">
+            <div class="col-3 ">
+              <label class="title"> {{'ViolationResources' | translate}} </label>
+            </div>
+          </div>
+
+          <!-- Vehicle -->
+          <div class="row form-row">
+            <div class="col-3">
+              <label class="title"> {{'Vehicle' | translate}} </label>
+            </div>
+            <div *ngIf="!editMode" class="col-6">
+              <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="vehicleList"
+                           (SearchVAlue)="getVehicles($event)" (selectedListChange)="onVehicleDDLChanged($event)"
+                           [options]="selectMenuOptions" [selectedList]="bindingModel_Vehicles"
+                           [loading]="Vehicle_loading">
+              </select-menu>
+            </div>
+            <label *ngIf="editMode" class="col-6 form-control disabled">
+              {{violation?.VehicleCode}}
+            </label>
+            <div *ngIf="!editMode" class="col-3">
+              <div *ngIf="violation.VehicleId">
+                <input type="checkbox" id="AddVehicleToBlacklist" name="AddVehicleToBlacklist"
+                       class="check" [(ngModel)]="violation.AddVehicleToBlacklist">
+                <label class=" title"
+                       for="AddVehicleToBlacklist">{{'AddVehicleToBlacklist' | translate}}</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Driver -->
+          <div class="row form-row">
+            <div class="col-3">
+              <label class="title"> {{'Driver' | translate}} </label>
+            </div>
+            <div *ngIf="!editMode" class="col-6">
+              <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="driverList"
+                           (SearchVAlue)="getDrivers($event)" (selectedListChange)="onDriverDDLChanged($event)"
+                           [options]="selectMenuOptions" [selectedList]="bindingModel_Drivers"
+                           [loading]="Driver_Loading">
+              </select-menu>
+            </div>
+            <label *ngIf="editMode" class="col-6 form-control disabled">
+              {{violation?.DriverName}}
+            </label>
+          </div>
+
+          <!-- Description -->
+          <div class="row form-row">
+            <div class="col-3">
+              <label class="title"> {{'Description' | translate}} </label>
+            </div>
+            <div class="col-6">
+              <textarea [attr.disabled]="editMode ? '' : null" class="form-control" [(ngModel)]="violation.ViolationDescription">
+                            </textarea>
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <div class="col-6">
+          <!-- violation Ticket No -->
+          <div class="row form-row">
+            <div class="col-3">
+              <label class="title">
+                {{'ViolationTicketNumber' | translate}}
+              </label>
+            </div>
+            <div class="col-6">
+              <label class="form-control disabled">{{ violation.Id }}</label>
+
+              <!-- <input class="form-control" [(ngModel)]="violation.ViolationTicketNumber"> -->
+            </div>
+          </div>
+
+          <!-- violation Location -->
+          <div class="row form-row">
+            <div class="col-3">
+              <label class="title">
+                {{'ViolationLocation' | translate}}
+              </label>
+            </div>
+            <div class="col-6">
+              <input [attr.disabled]="editMode ? '' : null" class="form-control" [(ngModel)]="violation.ViolationLocation">
+            </div>
+          </div>
+
+          <!-- Incident Time -->
+          <div class="row form-row">
+            <div class="col-3">
+              <label class="title">
+                {{'IncidentTime' | translate}} <span class="required">*</span>
+              </label>
+            </div>
+            <div class="col-9">
+              <div class="row">
+                <div class="col-12 d-flex">
+                  <datePicker-gregorian-hijri  [(selectedDate)]="violation.IncidentTime">
+                  </datePicker-gregorian-hijri>
+                  <div>
+                    <div>
+                      <input type="time"  class="form-control"
+                             [(ngModel)]="incidentTimeStr" />
+                    </div>
+                    <!-- <app-amazing-timepicker id="incidentTime" [(selectedTime)]="incidentTimeStr">
+                        </app-amazing-timepicker> -->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Term Value & value Unit -->
+          <div class="row form-row">
+            <div class="col-3">
+              <label class="title"> {{'PenaltyType' | translate}} </label>
+            </div>
+            <div class="col-2">
+              <label class="form-control disabled"> {{myTerm?.TotalValueUnitName}} </label>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-1">
+              <label class="title"> {{'Value' | translate}} </label>
+            </div>
+            <div class="col-2">
+              <label class="form-control disabled"> {{myTerm?.TotalValue}} </label>
+            </div>
+          </div>
+
+          <!-- No Of Days -->
+          <div class="row form-row" *ngIf="myTerm && (myTerm?.TotalValueUnitId == 2)">
+            <div class="col-3">
+              <label class="title"> {{'NoOfDays' | translate}} </label>
+            </div>
+            <div class="col-2 p-0">
+              <input type="number" [(ngModel)]="violation.TermUnitNoOfDays" class="form-control"
+                     (change)="onNoOfDaysChanged()">
+            </div>
+          </div>
+
+          <!-- Total Penalty -->
+          <div class="row form-row">
+            <div class="col-3">
+              <label class="title"> {{'TotalPenalty' | translate}} </label>
+            </div>
+            <div class="col-6">
+              <label class="form-control disabled"> {{violation.TotalPenalty}} </label>
+            </div>
+          </div>
+
+          <!-- Issue Date -->
+          <div class="row form-row">
+            <div class="col-3">
+              <label class="title">
+                {{'IssueDate' | translate}} <span class="required">*</span>
+              </label>
+            </div>
+            <div class="col-6">
+              <datePicker-gregorian-hijri [(selectedDate)]="violation.IssueDate">
+              </datePicker-gregorian-hijri>
+            </div>
+          </div>
+
+          <!-- Payment Due Date -->
+          <!-- <div class="row form-row">
+              <label class="col-3 title"> {{'PaymentDueDate' | translate}} <span class="required">*</span>
+              </label>
+              <div class="col-6">
+                  <datePicker-gregorian-hijri [(selectedDate)]="violation.PaymentDueDate">
+                  </datePicker-gregorian-hijri>
+              </div>
+          </div> -->
+          <!-- Payment Status - Invoice Status -->
+          <div class="row form-row">
+            <div class="col-3">
+              <label class="title">
+                {{'PaymentStatus' | translate}} <span class="required">*</span>
+              </label>
+            </div>
+            <div class="col-6">
+              <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="InvoiceStatusList"
+                           (selectedListChange)="onInvoiceStatusDDLChanged($event)"
+                           [options]="selectMenuOptionsDisableSearch" [selectedList]="bindingModel_InvoiceStatues">
+              </select-menu>
+            </div>
+          </div>
+          <div class="row form-row">
+            <div class="col-3">
+              <label class="title">{{'PaidOn' | translate}}</label>
+            </div>
+            <div class="col-6">
+              <datePicker-gregorian-hijri [(selectedDate)]="violation.PaymentStatusDate">
+              </datePicker-gregorian-hijri>
+            </div>
+          </div>
+
+          <!-- Violation Status -->
+          <div class="row form-row">
+            <div class="col-3">
+              <label class="col-3 title">
+                {{'Status' | translate}} <span class="required">*</span>
+              </label>
+            </div>
+            <div class="col-6">
+              <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="ViolationStatusesList"
+                           (selectedListChange)="onViolationStatusDDLChanged($event)"
+                           [options]="selectMenuOptionsDisableSearch"
+                           [selectedList]="bindingModel_ViolationStatuses">
+              </select-menu>
+            </div>
+          </div>
+
+          <!-- Cancel Reason -->
+          <div class="row form-row" *ngIf="violation.StatusId == 3">
+            <div class="col-3">
+              <label class="title">
+                {{'CancellationReason' | translate}} <span class="required">*</span>
+              </label>
+            </div>
+            <div class="col-6">
+              <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="CancelReasonsList"
+                           (selectedListChange)="onCancelReasonDDLChanged($event)"
+                           [options]="selectMenuOptionsDisableSearch" [selectedList]="bindingModel_CancelReasons">
+              </select-menu>
+            </div>
+          </div>
+
+
+          <div class="box-upload">
+            <uploud-files [ListFiles]="ListFiles" [AttachmentType]="4" [IsAllowPdf]="true"></uploud-files>
+          </div>
+
+
+          <div class="col-12 d-flex justify-content-end">
+            <button class="btn btn-danger" (click)="save()">{{ 'Save' | translate }}</button>
+            <button class="btn btn-default" (click)="close()">{{ 'Cancel' | translate }}</button>
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+
+
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <div class="inner-div" *ngIf="currentTab == 2">
+
+    <app-contract-violations-logs-list [ViolationId]="updateId"></app-contract-violations-logs-list>
+
+  </div>
+  <div class="inner-div" *ngIf="currentTab == 3">
+
+    <app-contract-violations-approval-logs-list [ViolationId]="updateId"></app-contract-violations-approval-logs-list>
+
+  </div>
+
+</div>

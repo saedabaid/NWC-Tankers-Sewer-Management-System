@@ -1,0 +1,171 @@
+<div class="container-fluid main-div">
+    <div class="row">
+      <div class="col-md-6  padding-10">
+        <span class="page-title">{{'TMS' | translate}}</span>
+        <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+        <span class="page-title  currentpage">{{'Zones' | translate}}</span>
+
+
+      </div>
+      <div class="col-md-6 text-right padding-10">
+
+        <label class="btn btn-icon margin-5 pull-right" (click)="uploadExcel()">
+          <span class="fas fa-file-upload"></span>    {{'ImportZones' | translate }}
+      </label>
+
+        <a *ngIf="(pagePermission == 'Full Control') || (pagePermission == 'Add and Edit')" 
+          class="newzone" title="{{'NewZone' | translate}}" routerLink="/tms/zone/new">  
+          <i class="fa fa-plus-circle"></i>
+        </a>
+      </div>
+    </div>
+  
+  
+  </div>
+  
+ 
+    <div class="row  mb-1 form-row">
+       <div class="col-md-12 custome-dropdown">
+          <label class="col-md-2 title wid-6">{{'zone name | code' | translate }} </label>
+   
+          <search-component class="col-md-3" (searchKeyword)="onZoneDDLChanged($event)" [isTypeahead]="true"
+          [typeaheadFunction]='searchZonesByNameOrCode.bind(this)' [field]="'Name'"
+          [(_value)]="ZoneSearchCriteriaDTO.NameOrCode">
+        </search-component>  
+
+    
+ 
+   
+  
+        <a class="margin-5 link-route"
+          (click)="showAdvanced()">{{ advancedDiv ?  ('HideAdvancedSearch' | translate) : ('AdvancedSearch'  | translate) }}</a>
+  
+  
+        <button class="btn btn-default margin-5 pull-right" (click)="Clear()">{{ 'Clear'| translate }}</button>
+        <button class="btn btn-danger margin-5 pull-right" (click)="Search()" >{{ 'Search' | translate }}</button>
+      </div>
+  
+    </div>
+  
+    <!-- Start Advanced Search box -->
+    <div *ngIf="advancedDiv" id="advanced-search">
+       
+        <div class="row mb-1 form-row">
+          <div class="col-md-4">
+      
+                <label class="col-sm-4 pr-0 title">{{ 'area'| translate }} <span class="required">*</span></label>
+                <div class="col-sm-8">
+          
+                  <select-menu [label]="'Name'" [itemKey]="'Id'" 
+                  [dropDownListInputs]="AreaList"
+                  (selectedListChange)="onAreaChanged($event)"
+                  [selectedList]="SelectedAreas"
+                  [options]="selectMenuOptions"
+                  (SearchVAlue)="getArea($event)"
+                  [loading]="Area_Loading"
+                   >
+                </select-menu>
+               
+                </div>
+          </div>
+          <div class="col-md-4">
+      
+            <label class="col-sm-4 title">{{ 'city'| translate }} <span class="required">*</span></label>
+            <div class="col-sm-8">
+      
+              <select-menu [label]="'Name'" [itemKey]="'Id'" 
+              [dropDownListInputs]="CityList"
+              (selectedListChange)="onCityChanged($event)"
+              [selectedList]="SelectedCites"
+              [options]="selectMenuOptions"
+              (SearchVAlue)="getCityBasedOnArea($event)"
+              [loading]="City_Loading"
+               >
+            </select-menu>
+           
+            </div>
+          </div>
+          <div class="col-md-4">
+  
+            <label class="col-sm-4 title">{{ 'station name|code'| translate }}  <span class="required">*</span></label>
+            <div class="col-sm-8">
+      
+                <select-menu [label]="'Name'" [itemKey]="'Id'" 
+                [dropDownListInputs]="StationList"
+                (selectedListChange)="onStationChanged($event)"
+                [selectedList]="SelectedStation"
+                [options]="selectMenuOptions"
+                (SearchVAlue)="GetStationBasedOnCity($event)"
+                [loading]="Station_Loading"
+                 >
+              </select-menu>
+            </div>
+          </div>
+      
+      
+        </div>
+  
+    </div>
+    <!-- End Advanced Search box -->
+  
+  
+  
+  
+  
+    <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' ">
+      <div class="col-md-12 scroll-x-table list-body p-0">
+            <table class="table Dtable scrollable-table table-striped">
+              <thead>
+                <tr>
+      
+                  <th class="wid100">{{ 'zone name'| translate }}</th>
+                  <th class="wid100"> {{ 'zone code'| translate }}</th>
+                  <th class="wid100">{{ 'city'| translate }}</th>
+                  
+                  <th class="wid100">{{ 'main staion name'| translate }}</th>
+                  <th class="wid100">{{ 'main staion code'| translate }}  </th>
+                  <th class="wid100">{{ 'Count Of Backup Stations'| translate }}</th>
+                  <th class="wid200">{{ 'Count Of Restricted tanker types'| translate }} </th>
+                  <th class="wid50"> </th>
+                  <th class="wid50">  </th>
+               
+                </tr>
+              </thead>
+            
+              <tbody>
+                <tr class="text-center d-block p-2 font-4" *ngIf="!zonesList || zonesList.length < 1" >{{'NoDataFound' | translate}}</tr> 
+                <tr *ngFor="let zone of zonesList">
+      
+                  <td class="wid100">{{zone.Name}}</td>
+                  <td class="wid100">{{zone.Code}}</td>
+                  <td class="wid100">{{zone.CityName}}</td>
+                  
+                  <td class="wid100">{{zone.MainStationName}}</td>  
+                  <td class="wid100">{{zone.MainStationCode}}</td>
+                  <td class="wid100">{{zone.CountOfBackupStations}}</td>
+                  <td class="wid200">{{zone.RestrictedZoneVehicleTypes}}</td>
+                  <td class="wid50"> 
+                    <a class="fas fa-pencil-alt " title="{{'edit' | translate}}" routerLink="/tms/zone/edit/{{zone.Id}}"
+                       *ngIf="(pagePermission == 'Full Control') || (pagePermission == 'Add and Edit')" ></a>
+                  </td>
+                  <td class="wid50"> <a class="fa fa-trash" *ngIf="pagePermission == 'Full Control'" title="{{'Delete' | translate}}" (click)="delete(zone.Id)"></a></td>
+                  
+                </tr>
+              </tbody>
+            </table>
+    
+            <app-pagination-component [ItemsCount]='TotalCount'
+            [(PageSize)]="this.ZoneSearchCriteriaDTO.PageFilter.PageSize"
+            [pageIndex]="this.ZoneSearchCriteriaDTO.PageFilter.PageIndex" (PageSizeChange)="onPageSizeChanged($event)"
+            (pageNavigated)="onPageIndexChanged($event)">
+          </app-pagination-component>
+          </div>
+        </div>
+        
+    
+ 
+  
+
+  
+  

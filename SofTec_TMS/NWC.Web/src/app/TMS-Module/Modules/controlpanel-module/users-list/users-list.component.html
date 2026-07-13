@@ -1,0 +1,78 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6  padding-10">
+      <span class="page-title">{{'TMS' | translate}}</span>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title  currentpage">{{'Users' | translate}}</span>
+    </div>
+
+  </div>
+</div>
+
+<div class="row  mb-1 form-row">
+  <div class="col-md-12 custome-dropdown">
+    <label class="col-md-2 title wid-6">{{'user name' | translate }} </label>
+    <input type="text" [(ngModel)]="Name" class="col-md-3" placeholder="Search By Username">
+    <button class="btn btn-default margin-5 pull-right" (click)="Clear()">{{ 'Clear'| translate }}</button>
+    <button class="btn btn-danger margin-5 pull-right" (click)="Search(Name)">{{ 'Search' | translate }}</button>
+  </div>
+
+</div>
+
+
+<div class="table-heigh">
+  <div class="col-md-12 scroll-x-table list-body p-0">
+    <table class="table scrollable-table table-striped">
+      <thead>
+        <tr>
+          <th>{{ 'user name'| translate }}</th>
+          <th>{{ 'Email'| translate }}</th>
+          <th>{{ 'MobilePIN'| translate }}</th>
+          <th>Lock/Unlock</th>
+          <th> </th>
+          <th> </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr class="text-center d-block p-2 font-4" *ngIf="!userList || userList.length < 1">{{'NoDataFound' | translate}}</tr>
+        <tr *ngFor="let user of userList">
+
+          <td>{{user.Name}}</td>
+          <td>{{user.Email}}</td>
+          <td>{{user.MobilePIN}}</td>
+          <td>
+            <a *ngIf='user.IsLockedOut' (click)="unlockUser(user.Name)">
+              <!--<img src="/assets/TMSBranding/styles/img/Block.png"
+      title="unlock User" />-->
+              <span>Unlock User</span>
+            </a>
+            <a *ngIf='!user.IsLockedOut' (click)="lockUser(user.Name)">
+              <!--<img src="/assets/TMSBranding/styles/img/Block.png"
+      title="unlock User" />-->
+              <span>lock User</span>
+            </a>
+          </td>
+          <td> <a class="fa fa-trash" title="{{'Delete' | translate}}" (click)="deleteUser(user.Name)"></a></td>
+          <td>
+            <a (click)="customRoute('controlpanel/change-password',user.Id)">
+              Change Password
+            </a>
+          </td>
+          <td>
+            <a (click)="customRoute('controlpanel/forgot-password',user.Name)">
+              Password Recovery
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <app-pagination-component [ItemsCount]='TotalCount'
+                              [(PageSize)]="this.UserSearchCriteriaDTO.PageFilter.PageSize"
+                              [pageIndex]="this.UserSearchCriteriaDTO.PageFilter.PageIndex" (PageSizeChange)="onPageSizeChanged($event)"
+                              (pageNavigated)="onPageIndexChanged($event)">
+    </app-pagination-component>
+  </div>
+</div>

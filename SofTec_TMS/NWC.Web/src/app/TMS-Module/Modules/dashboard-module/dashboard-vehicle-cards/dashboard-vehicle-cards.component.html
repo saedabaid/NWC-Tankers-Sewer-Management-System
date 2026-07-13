@@ -1,0 +1,55 @@
+<div class="d-flex bd-highlight  justify-content-between w-100  ">
+  <div class="p-2 bd-highlight w-100 ml-2 mr-2 bg-light flex-fill d-flex  justify-content-center btn" (click)="tileClicked(0)">
+    <div class="  d-flex flex-column  align-self-center justify-content-center">
+      <div *ngIf="!loading_AllVehicle" class="text-center font-16 font-weight-bold">{{count_AllVehicle}}</div>
+      <div *ngIf="loading_AllVehicle" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+
+      <div class="font-12">{{'AllVehicles' | translate}}</div>
+    </div>
+  </div>
+  <div class="p-2 bd-highlight w-100 ml-2 mr-2 bg-nwc flex-fill d-flex  justify-content-center btn" (click)="tileClicked(4)">
+    <div class="  d-flex flex-column  align-self-center justify-content-center">
+      <div *ngIf="!loading_commercial" class="text-center font-16 font-weight-bold">{{count_commercial}}</div>
+      <div *ngIf="loading_commercial" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+      <div class="font-12">{{'Dashboard_commercialVehicle' | translate}}</div>
+    </div>
+  </div>
+
+
+  <div class="p-2 bd-highlight w-100 ml-2 mr-2 bg-nwc flex-fill d-flex  justify-content-center btn" (click)="tileClicked(2)">
+    <div class="  d-flex flex-column  align-self-center justify-content-center">
+      <div *ngIf="!loading_assigned" class="text-center font-16 font-weight-bold">{{count_assigned}}</div>
+      <div *ngIf="loading_assigned" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+      <div class="font-12">{{'Dashboard_AssignedVehicle' | translate}}</div>
+    </div>
+  </div>
+  <div class="p-2 bd-highlight w-100 ml-2 mr-2 bg-nwc flex-fill d-flex  justify-content-center btn" (click)="tileClicked(1)">
+    <div class="  d-flex flex-column  align-self-center justify-content-center">
+      <div *ngIf="!loading_avalaible" class="text-center font-16 font-weight-bold">{{count_avalaible}}</div>
+      <div *ngIf="loading_avalaible" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+      <div class="font-12">{{'Dashboard_AvalaibleVehicle' | translate}}</div>
+    </div>
+  </div>
+  <!--<div class="p-2 bd-highlight w-100 ml-2 mr-2 bg-nwc flex-fill d-flex  justify-content-center btn" (click)="tileClicked(3)">
+    <div class="  d-flex flex-column  align-self-center justify-content-center">
+      <div *ngIf="!loading_residential" class="text-center font-16 font-weight-bold">{{count_residential}}</div>
+      <div *ngIf="loading_residential" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+      <div class="font-12">{{'Dashboard_residentialVehicle' | translate}}</div>
+    </div>
+  </div>-->
+
+
+
+
+
+</div>

@@ -1,0 +1,188 @@
+<div class="container-fluid main-div   ">
+  <div class="row">
+    <div class="col-md-6  padding-10">
+      <!-- <span class="page-title">{{'TMS' | translate }}</span>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span> -->
+      <a (click)="cancel()">
+        <span class="page-title">{{'Zones' | translate}}</span>
+      </a>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+      <span class="page-title  currentpage">{{ ( IsEditableMood ? 'edit': 'create new zone' ) | translate }}</span><br>
+
+    </div>
+    <div class="col-md-6 text-right padding-10">
+
+    </div>
+  </div>
+  <div class="inner-div">
+
+    <div class="row form-row">
+      <div class="col-md-5">
+
+        <label class="col-sm-2 title">{{ 'zone name'| translate }} <span class="required">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class=" form-control  " [(value)]="ZoneDTO.Name" (change)="ZoneNameChanged($event)" />
+
+        </div>
+      </div>
+      <div class="col-md-5">
+        <label class="col-sm-2 title">{{ 'zone code'| translate }}  <span class="required">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class=" form-control  " [(value)]="ZoneDTO.Code" (change)="ZoneCodeChanged($event)" />
+        </div>
+
+
+      </div>
+    </div>
+    <div class="row form-row">
+      <div class="col-md-5">
+        <label class="col-sm-2 title">{{ 'area'| translate }} <span class="required">*</span></label>
+        <div class="col-sm-8">
+
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="AreaList"
+                       (SearchVAlue)="getAreas($event)" (selectedListChange)="onAreaDDLChanged($event)"
+                       [options]="selectMenuOptions" [selectedList]="bindingModel_Areas">
+          </select-menu>
+
+          <!-- <select class=" form-control" [(ngModel)]="ZoneDTO.AreaID"  (change)="onAreaChanged($event)">
+            <option value="null" selected>{{'Select' | translate}}</option>
+            <option *ngFor="let item of AreaList; let i = index" value="{{item.Id}}">{{item.Name}}
+            </option>
+          </select> -->
+
+
+        </div>
+      </div>
+      <div class="col-md-5">
+        <label class="col-sm-2 title">{{ 'city'| translate }} <span class="required">*</span></label>
+        <div class="col-sm-8">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="CityList"
+                       (SearchVAlue)="getCityBasedOnArea($event)" (selectedListChange)="onCityDDLChanged($event)"
+                       [options]="selectMenuOptions" [selectedList]="bindingModel_Cities"
+                       [loading]="loading_City">
+          </select-menu>
+
+          <!-- <select class=" form-control" [(ngModel)]="ZoneDTO.CityID"  (change)="onCityChanged($event)">
+            <option value="null" selected>{{'Select' | translate}}</option>
+            <option *ngFor="let item of CityList; let i = index" value="{{item.Id}}">{{item.Name}}
+            </option>
+          </select> -->
+        </div>
+      </div>
+
+
+    </div>
+
+    <div  class="row form-row">
+      <input id="ZoneWithoutTanker" type="checkbox" class="check" [checked]="ZoneDTO.ZoneWithoutTanker" (change)="zoneWithoutTanker()"  >
+      <label for="ZoneWithoutTanker" class=" title">{{'ZoneWithoutTanker'| translate }}</label>  
+    </div>
+
+    <div class="row form-row">
+      <div class="col-md-5">
+        <label class="col-sm-2 title">{{ 'main station name|code'| translate }} <span class="required">*</span></label>
+        <div class="col-sm-8">
+          <!-- <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="MainStationList"
+            (SearchVAlue)="getStations($event)" (selectedListChange)="onMainStationChanged($event)"
+            [options]="selectMenuOptions" [selectedList]="bindingModel_Stations">
+          </select-menu> -->
+          <select class=" form-control" [(ngModel)]="ZoneDTO.MainStation.ID" (change)="onMainStationChanged($event)">
+            <option value="null" selected>{{'Select' | translate}}</option>
+            <option *ngFor="let item of MainStationList; let i = index" value="{{item.Id}}">
+              {{item.Name}}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <label class="col-sm-2 title">{{ 'DistanceKM'| translate }}<span class="required">*</span></label>
+        <div class="col-sm-8">
+          <input type="number" min=0 class=" form-control " [(value)]="ZoneDTO.MainStation.Distance" (change)="MainStationDistanceChanged($event)" />
+        </div>
+
+      </div>
+    </div>
+    <div class="station-list" *ngFor="let st of  ZoneDTO.BackupStations; let i = index">
+      <div class="row form-row">
+        <div class="col-md-5">
+
+          <label class="col-sm-2 title">{{ 'backup station name|code'| translate }} <span class="required">*</span></label>
+          <div class="col-sm-8">
+
+            <select class=" form-control" [(ngModel)]="st.ID" (change)="onBackupStationChanged($event, i)">
+              <option value="null" selected>{{'Select' | translate}}</option>
+              <option *ngFor="let item of BackupStationList; let i = index" value="{{item.Id}}">
+                {{item.Name}}
+              </option>
+            </select>
+          </div>
+
+        </div>
+        <div class="col-md-5">
+          <label class="col-sm-2 title">{{ 'DistanceKM'| translate }}<span class="required">*</span></label>
+          <div class="col-sm-8">
+
+            <input type="number" min=0 class=" form-control  " [(value)]="st.Distance" (change)="BackupStationDistanceChanged($event ,i )" />
+          </div>
+        </div>
+        <div class="col-md-2">
+
+          <i class="glyphicon glyphicon-trash" (click)="DeleteStation(i)" title="{{ 'Delete'| translate }}"></i>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+      </div>
+      <div class="col-md-5">
+
+      </div>
+      <div class="col-md-2">
+
+        <span class="add-station" (click)="AddBackupStation()">{{ 'Add Backup Station'| translate }} <i class="glyphicon glyphicon-plus"></i> </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="main-hold-list w-100 ">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="list-box">
+              <h5>{{ 'allowed tanker types'| translate }}</h5>
+              <ul>
+                <li *ngFor="let   truck of ZoneDTO.AllowedTankerTypes; let i = index">
+                  {{truck.Name}}
+                  <span (click)="addRequest(i)">  <i class="fa fa-arrow-right"></i> </span>
+                </li>
+
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="list-box">
+              <h5> {{ 'restricted tanker types'| translate }}   </h5>
+
+              <ul>
+                <li *ngFor="let reqL of  ZoneDTO.RestrictedTankerTypes; let i = index">
+                  {{reqL.Name}}
+                  <span (click)="removeRequest(i)">   <i class="fa fa-arrow-left"></i>  </span>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="col-md-12 text-center">
+
+        <!-- <a class="btn btn-default margin-5 pull-right" routerLink="/tms/zone/zonelist">{{ 'Cancel'| translate }} </a>  -->
+        <button class="btn btn-default margin-5 pull-right" (click)="cancel()">{{ 'Cancel'| translate }}</button>
+        <button class="btn btn-danger margin-5 pull-right" (click)="saveZone()">{{ 'Save'| translate }}</button>
+      </div>
+
+    </div>
+  </div>
+</div>

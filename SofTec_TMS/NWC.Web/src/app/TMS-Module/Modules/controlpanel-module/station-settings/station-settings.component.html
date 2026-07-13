@@ -1,0 +1,172 @@
+<div class="inner-div" style="padding:25px">
+<!-- Search -->
+<div class="row mb-1">
+  <!-- Area -->
+  <div class="col-md-3">
+    <label class="col-sm-4 title">{{ "Area" | translate }} </label>
+    <div class="col-sm-8">
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="customerAreaList"
+        (SearchVAlue)="getAreas($event)"
+        (selectedListChange)="onAreaDDLChanged($event)"
+        [options]="selectMenuOptions"
+        [selectedList]="bindingModel_Areas"
+        [loading]="Area_loading"
+      >
+      </select-menu>
+    </div>
+  </div>
+
+  <!-- city -->
+  <div class="col-md-3">
+    <label class="col-sm-4 title">{{ "City" | translate }}</label>
+    <div class="col-sm-8">
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="customerCityList"
+        (SearchVAlue)="getCity($event)"
+        (selectedListChange)="onCityDDLChanged($event)"
+        [options]="selectMenuOptions"
+        [selectedList]="bindingModel_Cities"
+        [loading]="City_Loading"
+      >
+      </select-menu>
+    </div>
+  </div>
+
+  <!-- station -->
+  <div class="col-md-3">
+    <label class="col-sm-4 title">{{ "Station" | translate }}</label>
+    <div class="col-sm-8">
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="customerStationList"
+        (SearchVAlue)="getStations($event)"
+        (selectedListChange)="onStationDDLChanged($event)"
+        [options]="selectMenuOptions"
+        [selectedList]="bindingModel_Stations"
+        [loading]="Station_Loading"
+      >
+      </select-menu>
+    </div>
+  </div>
+
+  <!-- buttons -->
+  <div class="col-md-3">
+    <button class="btn btn-default margin-5 pull-right" (click)="clearSearch()">
+      {{ "Clear" | translate }}
+    </button>
+    <button
+      class="btn btn-danger margin-5 pull-right"
+      (click)="onSearchSubmit()"
+    >
+      {{ "Search" | translate }}
+    </button>
+  </div>
+</div>
+
+<!-- table -->
+<div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row'">
+  <div class="col-md-12 scroll-x-table list-body">
+
+    <!--#region  table loading ********************************************** -->
+    <div [ngClass]="tableLoading ? 'container-gif show' : 'container-gif' ">
+      <div class="uil-ring-css table-loader" style="transform:scale(0.6);">
+        <div></div>
+      </div>
+    </div>
+    <!--#endregion  table loading -->
+
+    <table class="table   table-striped">
+      <thead>
+        <tr>
+          <th class="wid10"></th>
+          <th class="wid130">{{ "Station" | translate }}</th>
+          <th class="wid130">{{ "IsVirtualStation" | translate }}</th>
+          <th class="wid130">{{ "CustomerClass" | translate }}</th>
+          <th class="wid130">{{ "ServiceType" | translate }}</th>
+          <th class="wid130">{{ "Status" | translate }}</th>
+        </tr>
+      </thead>
+      <tbody [class]="advancedDiv ? ' mini' : ' '">
+        <tr class="text-center d-block p-2 font-4" *ngIf="!searchResult.Result">
+          {{
+            "NoDataFound" | translate
+          }}
+        </tr>
+
+        <tr *ngFor="let item of searchResult.Result; let i = index">
+          <td class="wid10">
+            <input type="checkbox" [(ngModel)]="item.CheckToSave" />
+          </td>
+          
+          <td class="wid130">{{ item.StationName }}</td>
+          <td class="wid130">{{ item.IsVirtualStation }}</td>
+          <td class="wid130">
+            <select-menu
+              [label]="'Name'"
+              [itemKey]="'Id'"
+              [dropDownListInputs]="customerClassList"
+              [(selectedList)]="item.CustLocationClasses"
+              (selectedListChange)="onClassDDLChange($event, item)"
+            >
+            </select-menu>
+          </td>
+          <td class="wid130">
+            <div class="col-sm-8">
+              <select-menu
+                [label]="'Name'"
+                [itemKey]="'Id'"
+                [dropDownListInputs]="customerServiceList"
+                [(selectedList)]="item.ServiceTypes"
+                (selectedListChange)="onServiceDDLChange($event, item)"
+              >
+              </select-menu>
+            </div>
+          </td>
+
+          <td class="wid130">
+            <div class="col-sm-8">
+              <select-menu
+                [label]="'Name'"
+                [itemKey]="'Id'"
+                [dropDownListInputs]="stationStatusesList"
+                [(selectedList)]="item.StationStatuses"
+                (selectedListChange)="onStationStatusDDLChange($event, item)"
+                [options]="selectMenuOptionsSingleSelect"
+              >
+              </select-menu>
+            </div>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Paging -->
+<app-pagination-component
+  [ItemsCount]="searchResult.TotalCount"
+  [(PageSize)]="this.SearchCriteria.PageFilter.PageSize"
+  [pageIndex]="this.SearchCriteria.PageFilter.PageIndex"
+  (PageSizeChange)="onPageSizeChanged($event)"
+  (pageNavigated)="onPageIndexChanged($event)"
+>
+</app-pagination-component>
+
+<!-- submit button -->
+<div class="row mt-1">
+    <div class="col-md-6">
+      
+    </div>
+    <div class="col-md-6 text-right">
+        <button class="btn btn-primary" (click)="save()">save</button>
+    </div>
+</div>
+
+</div>

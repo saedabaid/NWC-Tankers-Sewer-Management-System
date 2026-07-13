@@ -1,0 +1,181 @@
+<div class="violation_page mrg-top-5">
+
+  <div class="row form-row">
+    <div class="col-md-3">
+      <div class="row">
+        <div class="col-3 per-0">
+          <label class="title violation_title">{{'Station' | translate }} <span class="required">*</span> </label>
+
+        </div>
+        <div class="col-sm-9">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="contractStations"
+            (selectedListChange)="onStationChanged($event)" [selectedList]="selectedStations"
+            [options]="selectMenuOptions" [singleSelect]="IsEditMood">
+          </select-menu>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-3">
+      <div class="row">
+        <div class="col-3 per-0">
+          <label class="title violation_title">{{'termsNO' | translate}} <span class="required">*</span> </label>
+
+        </div>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" [(ngModel)]="ContractTermDTO.ContractTermCode">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row">
+        <div class="col-3 per-0">
+          <label class="title violation_title">{{'violationCategory' | translate}} <span class="required">*</span>
+          </label>
+
+        </div>
+        <div class="col-sm-9">
+
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="TermsCategoryList"
+            (selectedListChange)="onTermsChanged($event)" [selectedList]="selectedTermsCategory"
+            [options]="selectMenuOptions2">
+          </select-menu>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="row">
+        <div class="col-3 per-0">
+          <label class="title violation_title">{{'termsName' | translate}}<span class="required">*</span> </label>
+        </div>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" [(ngModel)]="ContractTermDTO.ContractTermName">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row form-row">
+    <div class="col-md-3">
+      <div class="row">
+        <div class="col-3 per-0">
+          <label class="title violation_title">{{'TotalValueContractTerm' | translate }} </label>
+
+        </div>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" [(ngModel)]="ContractTermDTO.TotalValue" OnlyNumber="true">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="row">
+        <div class="col-3 per-0">
+          <label class="title violation_title">{{'Unit' | translate }} </label>
+
+        </div>
+        <div class="col-sm-9">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="TermsValueUnits"
+            [(selectedList)]="selectedValueUnit" [options]="selectMenuOptions2">
+          </select-menu>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3">
+      <div class="row">
+        <div class="col-3 per-0">
+
+          <label class="title violation_title">{{'termsDescription' | translate }} </label>
+        </div>
+
+        <div class="col-sm-9">
+          <input type="text" class="form-control" [(ngModel)]="ContractTermDTO.Description">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3">
+      <div class="row">
+        <div class="col-12 text-center">
+          <button class="btn btn-default margin-5 pull-right" (click)="clear()">{{ 'Clear'| translate }}</button>
+
+          <button class="btn btn-danger margin-5 pull-right" (click)="save()">{{ 'Save' | translate }}</button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Table -->
+
+  <!-- fixed header  -->
+  <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row' ">
+    <div class="col-md-12 scroll-x-table list-body">
+      <table class="table   table-striped scrollable-table">
+        <thead>
+          <tr>
+            <th class="wid150">{{'stationName' | translate}}</th>
+            <th class="wid150">{{'StationCode' | translate}} </th>
+            <th class="wid100">{{'violationCategory' | translate}}</th>
+            <th class="wid100">{{'termsNO' | translate}}</th>
+            <th class="wid200">{{'termsName' | translate}}</th>
+            <th class="wid200">{{'termsDescription' | translate}}</th>
+
+            <th class="wid100">{{'TotalValueContractTerm' | translate}}</th>
+            <th class="wid100">{{'Unit' | translate}}</th>
+
+
+
+            <th class="wid50"></th>
+            <th class="wid50"> </th>
+
+          </tr>
+        </thead>
+        <tbody [class]="advancedDiv ? ' mini' : ' '">
+
+          <!-- <tr class="text-center d-block p-2 font-4" *ngIf=" " >{{'NoDataFound' | translate}}</tr> -->
+          <tr *ngFor="let term of ContractTermsList.Result">
+            <td class="wid150"> {{term.stationName}} </td>
+            <td class="wid150"> {{term.stationCode}} </td>
+            <td class="wid100"> {{term.Category}}</td>
+            <td class="wid100"> {{term.ContractTermCode}} </td>
+            <td class="wid200"> {{term.ContractTermName}} </td>
+            <td class="wid200">{{term.Description}}</td>
+
+            <td class="wid100"> {{term.TotalValue}} </td>
+            <td class="wid100"> {{term.TotalValueUnitName}} </td>
+
+            <td class="wid50">
+              <i class="glyphicon glyphicon-pencil" (click)="edit(term)"></i>
+            </td>
+            <td class="wid50">
+
+              <i class="glyphicon glyphicon-trash" (click)="delete(term)"></i>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+
+  </div>
+  <app-pagination-component [ItemsCount]='ContractTermsList.TotalCount'
+    [(PageSize)]="this.searchCriteriaContractDTO.PageFilter.PageSize"
+    [pageIndex]="this.searchCriteriaContractDTO.PageFilter.PageIndex" (PageSizeChange)="onPageSizeChanged($event)"
+    (pageNavigated)="onPageIndexChanged($event)">
+  </app-pagination-component>
+</div>
+
+<div class="col-md-12 mrg-top-10">
+  <button class="btn btn-default margin-5 pull-right" (click)="close()">{{ 'close'| translate }}</button>
+  <button class="btn btn-default margin-5 pull-right" (click)="backBtn()">{{ 'back'| translate }}</button>
+
+</div>

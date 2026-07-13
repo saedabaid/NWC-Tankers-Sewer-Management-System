@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.eChannelService.nwc.com.sa" elementFormDefault="qualified" targetNamespace="http://www.eChannelService.nwc.com.sa" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="cisDivison">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="NA" />
+      <xsd:enumeration value="RCBU" />
+      <xsd:enumeration value="JCBU" />
+      <xsd:enumeration value="TCBU" />
+      <xsd:enumeration value="MCBU" />
+      <xsd:enumeration value="JZBU" />
+      <xsd:enumeration value="SH" />
+      <xsd:enumeration value="RI" />
+      <xsd:enumeration value="MD" />
+      <xsd:enumeration value="TB" />
+      <xsd:enumeration value="RC" />
+      <xsd:enumeration value="JC" />
+      <xsd:enumeration value="MC" />
+      <xsd:enumeration value="TC" />
+      <xsd:enumeration value="MK" />
+      <xsd:enumeration value="QS" />
+      <xsd:enumeration value="HS" />
+      <xsd:enumeration value="HA" />
+      <xsd:enumeration value="JF" />
+      <xsd:enumeration value="AS" />
+      <xsd:enumeration value="BA" />
+      <xsd:enumeration value="NJ" />
+      <xsd:enumeration value="JZ" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="sourceTypes">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="EBRANCH" />
+      <xsd:enumeration value="MOBAPP" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="booleanTypes">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="true" />
+      <xsd:enumeration value="false" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="nidTypes">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="IQAMA" />
+      <xsd:enumeration value="NID" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="languageTypes">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ARA" />
+      <xsd:enumeration value="ENG" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

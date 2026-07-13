@@ -1,0 +1,381 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6 padding-10">
+      <!-- <span class="page-title">{{'TMS' | translate }}</span>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span> -->
+      <a (click)="cancel()">
+        <span class="page-title">{{ "Vehicles" | translate }}</span>
+      </a>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+      <span class="page-title currentpage">
+        {{ (IsEditableMood ? "EditVehicle" : "NewVehicle") | translate }}
+      </span>
+      <br />
+    </div>
+    <div class="col-md-6 text-right padding-10"></div>
+  </div>
+  <div class="inner-div">
+    <div class="row form-row">
+      <div class="col-md-4">
+        <label class="col-sm-2 title">
+          {{ "Code" | translate }} <span class="required">*</span>
+        </label>
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            [(value)]="VehicleDTO.Code"
+            (change)="VehicleCodeChanged($event)"
+          />
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label class="col-sm-2 title">
+          {{ "PlateNo" | translate }} <span class="required">*</span>
+        </label>
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            [(value)]="VehicleDTO.PlateNo"
+            (change)="VehiclePlateNoChanged($event)"
+          />
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label class="col-sm-2 title"
+          >{{ "Branch" | translate }} <span class="required">*</span></label
+        >
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="BranchList"
+            (selectedListChange)="onBranchChanged($event)"
+            [selectedList]="SelectedBranches"
+            [options]="selectMenuOptions"
+            (SearchVAlue)="getBranches($event)"
+            [loading]="Branch_Loading"
+          >
+          </select-menu>
+        </div>
+      </div>
+    </div>
+    <div class="row form-row">
+      <div class="col-md-4">
+        <label class="col-sm-2 title">
+          {{ "SubBranch" | translate }}
+        </label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="SubBranchList"
+            (selectedListChange)="onSubBranchChanged($event)"
+            [selectedList]="SelectedSubBranches"
+            [options]="selectMenuOptions"
+            (SearchVAlue)="getSubBranches($event)"
+            [loading]="SubBranch_Loading"
+          >
+          </select-menu>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label class="col-sm-2 title"
+          >{{ "Landmark" | translate }} <span class="required">*</span></label
+        >
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="LandmarkList"
+            (selectedListChange)="onLandmarkChanged($event)"
+            [selectedList]="SelectedLandmarks"
+            [options]="selectMenuOptions"
+            (SearchVAlue)="getLandmarks($event)"
+            [loading]="Landmark_Loading"
+          >
+          </select-menu>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label class="col-sm-2 title">
+          {{ "Brand" | translate }} <span class="required">*</span>
+        </label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="BrandList"
+            (selectedListChange)="onBrandChanged($event)"
+            [selectedList]="SelectedBrands"
+            [options]="selectMenuOptions"
+            (SearchVAlue)="getBrands($event)"
+            [loading]="Brand_Loading"
+          >
+          </select-menu>
+        </div>
+      </div>
+    </div>
+    <div class="row form-row">
+      <div class="col-md-4">
+        <label class="col-sm-2 title">
+          {{ "Model" | translate }} <span class="required">*</span>
+        </label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="ModelList"
+            (selectedListChange)="onModelChanged($event)"
+            [selectedList]="SelectedModels"
+            [options]="selectMenuOptions"
+            (SearchVAlue)="getModels($event)"
+            [loading]="Model_Loading"
+          >
+          </select-menu>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label class="col-sm-2 title">
+          {{ "ProductionYear" | translate }}
+          <span class="required">*</span>
+        </label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="YearList"
+            (selectedListChange)="onYearChanged($event)"
+            [selectedList]="SelectedYears"
+            [options]="selectMenuOptions"
+            (SearchVAlue)="getYears($event)"
+            [loading]="Year_Loading"
+          >
+          </select-menu>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label class="col-sm-2 title">
+          {{ "VehicleType" | translate }}
+          <span class="required">*</span>
+        </label>
+        <div class="col-sm-8">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="VehicleTypeList"
+            (selectedListChange)="onVehicleTypeChanged($event)"
+            [selectedList]="SelectedVehicleTypes"
+            [options]="selectMenuOptions"
+            (SearchVAlue)="getVehicleTypes($event)"
+            [loading]="VehicleType_Loading"
+          >
+          </select-menu>
+        </div>
+      </div>
+    </div>
+    <div class="row form-row">
+      <div class="col-md-4">
+        <label class="col-sm-2 title">
+          {{ "ChassisNo" | translate }} 
+        </label>
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            [(value)]="VehicleDTO.ChassisNo"
+            (change)="VehicleChassisNoChanged($event)"
+          />
+        </div>
+      </div>
+      
+
+      <div class="col-md-4">
+        <label class="col-sm-2 title">
+          {{ "DeviceCode" | translate }} 
+        </label>
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            [(value)]="VehicleDTO.DeviceCode"
+            (change)="VehicleDeviceCodeChanged($event)"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row form-row">
+      <div class="col-md-4">
+        <label class="col-sm-2 title">
+          {{ "SIMCardNo" | translate }}
+        </label>
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            [(value)]="VehicleDTO.SIMCardNo"
+            (change)="VehicleSIMCardNoChanged($event)"
+          />
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label class="col-sm-2 title">
+          {{ "CapacityM" | translate }}
+        </label>
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            [(value)]="VehicleDTO.Capacity"
+            (change)="VehicleCapacityChanged($event)"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="card bg-light">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4 text-right">
+            <label class="col-sm-2 title">
+              {{ "Status" | translate }} <span class="required">*</span>
+            </label>
+            <div class="col-sm-7">
+              <select-menu
+                [label]="'Name'"
+                [itemKey]="'Id'"
+                [dropDownListInputs]="StatusList"
+                (selectedListChange)="onStatusChanged($event)"
+                [selectedList]="SelectedStatuses"
+                [options]="selectMenuOptions"
+                (SearchVAlue)="getStatuses($event)"
+                [loading]="Status_Loading"
+              >
+              </select-menu>
+            </div>
+            <div class="col-md-1">
+              <button *ngIf="IsEditableMood" class="btn btn-info" (click)="changeVehicleStatus()"><i class="fas fa-retweet"></i> Change Status</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row form-row">
+      <div class="col-md-12">
+        <div class="tabs-links">
+          <a
+            (click)="switchTab(1)"
+            [ngClass]="currentTab == 1 ? ' active' : '  '"
+          >
+            {{ "AssignStaff" | translate }}
+          </a>
+        </div>
+
+        <div class="content-tab-data">
+          <div class="row form-row">
+            <div class="col-md-5">
+              <label class="col-sm-2 title">
+                {{ "StaffRole" | translate }} <span class="required">*</span>
+              </label>
+              <div class="col-sm-8">
+                <select-menu
+                  [label]="'Name'"
+                  [itemKey]="'Id'"
+                  [dropDownListInputs]="staffRoleCategoryList"
+                  (SearchVAlue)="getStaffRoleCategory($event)"
+                  (selectedListChange)="onStaffRoleCategoryDDLChanged($event)"
+                  [options]="selectMenuOptions2"
+                  [loading]="Staff_Loading"
+                ></select-menu>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <label class="col-sm-2 title">
+                {{ "StaffName" | translate }} <span class="required">*</span>
+              </label>
+              <div class="col-sm-8">
+                <select-menu
+                  [label]="'Name'"
+                  [itemKey]="'Id'"
+                  [dropDownListInputs]="staffList"
+                  (SearchVAlue)="getStaff($event)"
+                  (selectedListChange)="SelectedStaff = $event"
+                  [selectedList]="SelectedStaff"
+                  [options]="selectMenuOptions"
+                  [loading]="Staff_Loading"
+                >
+                </select-menu>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <button
+                class="btn btn-danger margin-5 pull-right"
+                (click)="addStaff()"
+              >
+                {{ "Add" | translate }}
+              </button>
+            </div>
+          </div>
+          <table class="table Dtable table-striped" *ngIf="currentTab == 1">
+            <thead>
+              <tr>
+                <th class="wid200">{{ "StaffName" | translate }}</th>
+                <th class="wid100">{{ "GMobileNumber" | translate }}</th>
+                <th class="wid100">{{ "StaffRole" | translate }}</th>
+                <th class="wid200">{{ "VehicleReceivingDate" | translate }}</th>
+                <th class="wid200">{{ "OwnershipDate" | translate }}</th>
+                <th class="wid50"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr
+                class="text-center d-block p-2 font-4"
+                *ngIf="!VehicleDTO.Staff || VehicleDTO.Staff.length < 1"
+              >
+                {{
+                  "NoDataFound" | translate
+                }}
+              </tr>
+              <tr *ngFor="let staff of VehicleDTO.Staff">
+                <th class="wid200 text-center">{{ staff.StaffName }}</th>
+                <th class="wid100 text-center">{{ staff.MobileNumber }}</th>
+                <th class="wid100 text-center">{{ staff.StaffRole }}</th>
+                <th class="wid200 text-center">
+                  {{ staff.VehicleReceivingDate | date: "dd/MM/yyyy" }}
+                </th>
+                <th class="wid200 text-center">
+                  {{ staff.OwnershipDate | date: "dd/MM/yyyy" }}
+                </th>
+                <th class="wid50">
+                  <a
+                    class="fa fa-trash"
+                    *ngIf="pagePermission == 'Full Control'"
+                    title="{{ 'Delete' | translate }}"
+                    (click)="deleteStaff(staff.Id)"
+                  ></a>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="row form-row">
+      <div class="col-md-12 text-center">
+        <!-- <a class="btn btn-default margin-5 pull-right" routerLink="/tms/vehicle/vehiclelist">{{ 'Cancel'| translate }} </a>  -->
+        <button class="btn btn-default margin-5 pull-right" (click)="cancel()">
+          {{ "Cancel" | translate }}
+        </button>
+        <button
+          class="btn btn-danger margin-5 pull-right"
+          (click)="saveVehicle()"
+        >
+          {{ "Save" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

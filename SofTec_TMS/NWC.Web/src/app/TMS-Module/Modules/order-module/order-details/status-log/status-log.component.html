@@ -1,0 +1,33 @@
+<div class="readonly-content-container">
+  <div class="wit-state-transition-graph-unpinned-container">
+    <div  class="wit-state-transition-graph">
+      <div class="transition-and-state-container-main">
+        <div  class="state-transition-graph-spacer" style="width: 100%;">
+          <div *ngFor=" let st of listStatus" class="transition-and-state-container">
+            
+            <div class="transition-container">
+              <div class="transition-arrow">
+                <div class="arrow-tail"></div>
+                <div class="arrow-head"></div>
+                <div class="transition-change-info">
+                  <div   class="identity-view-control">
+                        <span>{{'BY' | translate }}:  {{st.ChangedByName}}</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="state-container">
+                  <div class="state">{{st.Status}}</div>
+                  <span class="transition-change-info-date">
+                    {{st.ChangedTime | date: 'dd/MM/yyyy HH:mm'}}
+                    <!-- <date [date]="st.ChangedTime"  [ShowTime]="true"></date> -->
+                  </span>
+                </div>
+            
+          </div>
+        </div>
+       </div>
+    </div>
+  </div> 
+</div>

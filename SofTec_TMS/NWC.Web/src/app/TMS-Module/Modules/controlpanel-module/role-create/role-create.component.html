@@ -1,0 +1,161 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6 padding-10">
+      <a          routerLink="/tms/controlpanel/staff-role">
+        <span class="page-title">{{ "RoleList" | translate }}</span>
+      </a>
+      <span class="page-title"><i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title currentpage">
+        {{ "CreateNewRole" | translate }}
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="inner-div">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-sm-2 control-label">
+            <label class="title">{{ "StaffRoleName" | translate }}</label>
+          </div>
+          <div class="col-sm-6">
+            <input type="text"
+                   class="form-control"
+                   placeholder="{{ 'personalID' | translate }}"
+                   [(ngModel)]="roleModel.roleName" />
+          </div>
+        </div>
+      </div>
+
+      <!-- START -->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-sm-2 control-label">
+            <label class="title">
+              {{ "staffRoleCategory" | translate }}
+              <span class="required">*</span>
+            </label>
+          </div>
+          <div class="col-sm-6">
+            <select-menu [label]="'Name'"  [selectedList]="StaffSelectedCategory"
+                         [itemKey]="'Id'" [dropDownListInputs]="staffRoleCategoryList"
+                         (SearchVAlue)="getStaffRoleCategory($event)"
+                         (selectedListChange)="onStaffRoleCategoryDDLChanged($event)"
+                         [options]="selectMenuOptions3" 
+                         [loading]="Customer_Loading"></select-menu>
+          </div>
+        </div>
+      </div>
+      <!-- END -->
+
+
+    </div>
+
+    <div class="row">
+      <!-- START -->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-sm-2 control-label">
+            <label class="title">
+              {{ "DefaultPage" | translate }}
+              <span class="required">*</span>
+            </label>
+          </div>
+          <div class="col-sm-6">
+            <select-menu [label]="'Name'"
+                         [itemKey]="'Id'"
+                         [dropDownListInputs]="pagesList"
+                         (SearchVAlue)="getPagesList($event)"
+                         (selectedListChange)="onPagesListDDLChanged($event)"
+                         [options]="selectMenuOptions2" [selectedList]="this.SelectedPages"
+                         [loading]="Customer_Loading"></select-menu>
+          </div>
+        </div>
+      </div>
+      <!-- END -->
+      <!-- START -->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-sm-2 control-label">
+            <label class="title">{{ "Description" | translate }}</label>
+          </div>
+          <div class="col-sm-6">
+            <textarea type="text"
+                      class="form-control"
+                      placeholder="{{ 'Description' | translate }}"
+                      [(ngModel)]="roleModel.descr"></textarea>
+          </div>
+        </div>
+      </div>
+      <!-- END -->
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <!--  <li class="nav-item">
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+  </li>--> 
+          <li class="nav-item">
+            <a class="nav-link active btn btn-danger" id="permissions-tab" data-toggle="pill" href="#permissions" role="tab" aria-controls="permissions" aria-selected="false">{{ 'Permission' | translate }}</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade active" id="permissions" role="tabpanel" aria-labelledby="permissions-tab">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+              <!--  <pre>
+    {{ form.value | json }}
+  </pre>-->
+              <div>
+                <ul>
+
+                  <li *ngFor="let fg of form.controls; index as i;">
+                    <p> {{fg.value.ModuleName}}</p>
+                    <ul>
+                      <!-- let Page of Module.Pages;let i = index-->
+                      <li class="col-md-12">
+                        <div class="col-md-3">
+                          <input type="checkbox" [formControl]="fg.get('exist')" [checked]="fg.value.exist" />
+                          {{fg.value.Name}}
+
+                        </div>
+                        <div class="col-md-6">
+                          <div *ngFor="let stat of player[i].status; index as i">
+                            <label class="col-md-2">
+                              {{stat.RoleName}}
+                              <input type="radio" ng-checked="fg.value.status==stat.RoleId" id="{{fg.value.pageid}}" value="{{stat.RoleId}}" name="{{fg.value.pageid}}"
+                                     [formControl]="fg.get('status')">
+                            </label>
+
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+                </ul>
+                <div class="row ">
+                  <div class="text-center">
+
+                    <button class="btn btn-danger margin-5">
+                      {{ "save" | translate }}
+                    </button>
+                  </div>
+                </div>
+
+
+              </div>
+            </form>
+
+          <!-- <div class="row form-row bottom-btn"> -->
+  
+</div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>

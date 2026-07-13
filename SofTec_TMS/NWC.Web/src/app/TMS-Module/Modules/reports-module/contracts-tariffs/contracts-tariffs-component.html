@@ -1,0 +1,216 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-md-6  padding-10">
+            <a routerLink="/tms/reports">
+                <span class="page-title">{{ "TMS_Reports" | translate }}</span>
+            </a>
+            <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+            <span class="page-title  currentpage">{{ "ContractTariffReport" | translate }}</span>
+        </div>
+
+        <div class="col-md-6">
+
+            <a (click)="onexportOrders()" class=" margin-5 pull-right" title="{{ 'ExportOrders' | translate }}"
+                (mouseenter)="mouseEnterExcel()" (mouseleave)="mouseLeaveExcel()">
+                <img width="24px" *ngIf="!HoverExcel; else excelHover" src={{Excel_Img_Src}} />
+                <ng-template #excelHover>
+                    <img width="24px" src={{Excel_Img_Src}} />
+                </ng-template>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="inner-div">
+
+    <!--row 1 -->
+    <div class="row form-row">
+
+        <!-- area -->
+        <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "Area" | translate }} </label>
+            <div class="col-sm-8">
+                <select-menu
+                  [label]="'Name'"
+                  [itemKey]="'Id'"
+                  [dropDownListInputs]="customerAreaList"
+                  (SearchVAlue)="getAreas($event)"
+                  (selectedListChange)="onAreaDDLChanged($event)"
+                  [options]="selectMenuOptionsMulti"
+                  [selectedList]="bindingModel_Areas"
+                  [loading]="Area_loading">
+                </select-menu>
+            </div>
+        </div>
+
+        <!-- city -->
+        <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "City" | translate }}</label>
+            <div class="col-sm-8">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerCityList"
+                    (SearchVAlue)="getCity($event)" (selectedListChange)="onCityDDLChanged($event)"
+                    [options]="selectMenuOptionsMulti" [selectedList]="bindingModel_Cities" [loading]="City_Loading">
+                </select-menu>
+            </div>
+        </div>
+
+        <!-- zone -->
+        <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "Zone" | translate }}</label>
+            <div class="col-sm-8">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerZoneList"
+                    (SearchVAlue)="getZones($event)" (selectedListChange)="onZoneDDLChanged($event)"
+                    [selectedList]="bindingModel_Zones" [loading]="Zone_Loading">
+                </select-menu>
+            </div>
+        </div>
+
+        <!-- station -->
+        <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "Station" | translate }}</label>
+            <div class="col-sm-8">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerStationList"
+                    (SearchVAlue)="getStations($event)" (selectedListChange)="onStationDDLChanged($event)"
+                    [options]="selectMenuOptionsMulti" [selectedList]="bindingModel_Stations" [loading]="Station_Loading">
+                </select-menu>
+            </div>
+        </div>
+
+    </div>
+
+    <!--row 2 -->
+    <div class="row form-row">
+
+      <!-- Capacities -->
+      <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "TanckerCapacity" | translate }}</label>
+        <div class="col-sm-8">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="CapacitiesList"
+                       (SearchVAlue)="getCapacities($event)" (selectedListChange)="onCapacityDDLChanged($event)"
+                       [options]="selectMenuOptionsMulti" [selectedList]="bindingModel_Capacities" [loading]="Capacities_Loading">
+          </select-menu>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-4">
+            <label class="title">{{ "TariffStatus" | translate }}</label>
+          </div>
+          <div class="col-8">
+            <select-menu [label]="'Name'" [itemKey]="'Id'"
+                         [dropDownListInputs]="tariffStatusList"
+                         (selectedListChange)="onTariffStatusDDLChanged($event)"
+                       
+                         [options]="selectMenuOptionsSingle">
+            </select-menu>
+          </div>
+        </div>
+      </div>
+
+      <!-- service -->
+      <!-- <div class="col-md-3">
+      <label class="col-sm-4 title">{{ "ServiceType" | translate }}</label>
+      <div class="col-sm-8">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerServiceList"
+              (selectedListChange)="onServiceDDLChanged($event)" [selectedList]="bindingModel_ServiceTypes">
+          </select-menu>
+      </div>
+  </div> -->
+      <!-- status -->
+      <!-- <div class="col-md-3">
+      <label class="col-sm-4 title">{{ "OrderStatus" | translate }}</label>
+      <div class="col-sm-8">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="CustomerStatusList"
+              (selectedListChange)="onStatusDDLChanged($event)" [selectedList]="bindingModel_Statuses">
+          </select-menu>
+      </div>
+  </div> -->
+
+
+      <div class="col-md-6">
+
+        <button class="btn btn-default margin-5 pull-right" (click)="clearSearch()">
+          {{ "Clear" | translate }}
+        </button>
+        <button class="btn btn-danger margin-5 pull-right" (click)="onSearchSubmit()">
+          {{ "Search" | translate }}
+        </button>
+      </div>
+
+
+    </div>
+
+
+    <!-- fixed header  -->
+    <div class="table-heigh row">
+        <div class="col-md-12 scroll-x-table list-body">
+
+            <table class="table table-striped scrollable-table">
+                <thead>
+                  <tr>
+                    <th class="wid70">{{'City' | translate}}</th>
+                    <th class="wid70">{{'Zone' | translate}} </th>
+                    <th class="wid70">{{'Station' | translate}}</th>
+                    <th>{{'TanckerCapacity' | translate}}</th>
+                    <th>{{'CubicMeterCharge' | translate}}</th>
+                    <th>{{'DistanceCharge' | translate}}</th>
+                    <th>{{'AfterFirstKM' | translate}}</th>
+                    <th>{{'From' | translate}}</th>
+                    <th>{{'To' | translate}}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center p-2 font-4 " *ngIf="!searchResult.Result || searchResult.Result.length < 1">
+                        <td colspan="12">
+                            {{"NoDataFound" | translate}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let item of searchResult.Result; let i = index">
+
+                      <td class="wid70 text-center">
+                        {{item.CityName}}
+                      </td>
+                      <td  class="wid70">
+                        {{ item.ZoneName }}
+                      </td>
+                      <td class="wid70">
+                        {{ item.StationName }}
+                      </td>
+                      <td class="text-center"  >
+                        {{ item.TanckerCapacityId }}
+                      </td>
+                      <td class="text-center">
+                        {{ item.CubicMeterCharge }}
+                      </td>
+                      <td class="text-center">
+                        {{ item.DistanceCharge }}
+                      </td>
+                      <td class="text-center">
+                        {{ item.AfterFirstKM }}
+                      </td>
+                      <td class="wid70">
+                        <datepicker-islamicumalqura [selectedDate]="item.DateFromHijri" [viewOnly]="true"></datepicker-islamicumalqura>
+
+                      </td>
+                      <td class="wid70">
+                        <datepicker-islamicumalqura [selectedDate]="item.DateToHijri" [viewOnly]="true"></datepicker-islamicumalqura>
+                      </td>
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <app-pagination-component [ItemsCount]="searchResult.TotalCount"
+        [(PageSize)]="this.SearchCriteria.PageFilter.PageSize" [pageIndex]="this.SearchCriteria.PageFilter.PageIndex"
+        (PageSizeChange)="onPageSizeChanged($event)" (pageNavigated)="onPageIndexChanged($event)">
+    </app-pagination-component>
+
+
+
+</div>

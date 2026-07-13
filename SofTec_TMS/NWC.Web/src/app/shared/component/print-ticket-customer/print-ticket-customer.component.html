@@ -1,0 +1,217 @@
+<div style="width: 100%; height: 100%" id="printsection" class="prnt">
+ <div class="row" style="">
+    <ngx-qrcode qrc-class="qrcode" [value]='value'></ngx-qrcode>
+  </div>
+  <br/>
+  <div class="row" [ngClass]="currentLang == 'ar' ? 'info-customer_ar' : ' info-customer'"
+       style="page-break-after: always; width: 100%; text-align: right;display:block;clear:both">
+    <div>
+    </div>
+    <div style="text-align: center; width: 100%; padding-bottom: 25px">
+
+      <!-- <label style="display: block"> {{PrintCustomerInvoice.ContractorFullName}}</label> -->
+      <label style="display: block"> {{ "InvoicNo" | translate }}</label>
+      <label style="display: block">
+        {{ PrintCustomerInvoice.InvoiceNo }}
+      </label>
+    </div>
+
+    <div style="width: 100%">
+      <label style="width: 50%; display: inline-flex; justify-content: start"
+             class="label-print">
+        {{ "ContractorName" | translate }}
+      </label>
+      <label class="label-value"
+             style="display: inline-flex; justify-content: start; width: 50%">{{ PrintCustomerInvoice.ContractorFullName }}</label>
+    </div>
+    <div style="width: 100%">
+      <label style="width: 50%; display: inline-flex; justify-content: start"
+             class="label-print">
+        {{ "ContractorAdress" | translate }}
+      </label>
+      <label class="label-value"
+             style="display: inline-flex; justify-content: start; width: 50%">{{ PrintCustomerInvoice.CustomerAddress }}</label>
+    </div>
+    <div style="width: 100%">
+      <label style="width: 50%; display: inline-flex; justify-content: start"
+             class="label-print">
+        {{ "TaxNumber" | translate }}
+      </label>
+      <label class="label-value"
+             style="display: inline-flex; justify-content: start; width: 50%">
+        {{ PrintCustomerInvoice.TaxNumber }}
+      </label>
+    </div>
+    <div style="width: 100%">
+      <label style="width: 50%; display: inline-flex; justify-content: start"
+             class="label-print">
+        {{ "OrderNo" | translate }}
+      </label>
+      <label class="label-value"
+             style="display: inline-flex; justify-content: start; width: 50%">
+        {{ PrintCustomerInvoice.OrderNumber }}
+      </label>
+    </div>
+    <!-- <div style="width: 100%">
+    <label
+      class="label-print"
+      style="width: 50%; display: inline-flex; justify-content: start"
+    >
+      {{ "VehiclePlateNo" | translate }}
+    </label>
+    <label
+      class="label-value"
+      style="display: inline-flex; justify-content: start; width: 50%"
+    >
+      {{ PrintCustomerInvoice.plateNo }}
+    </label>
+  </div> -->
+    <div style="width: 100%">
+      <label class="label-print"
+             style="width: 50%; display: inline-flex; justify-content: start">
+        {{ "Vehicle" | translate }}
+      </label>
+      <label class="label-value"
+             style="display: inline-flex; justify-content: start; width: 50%">
+        {{ PrintCustomerInvoice.plateNo }} | {{ PrintCustomerInvoice.TransporterCode }}
+      </label>
+    </div>
+    <div style="width: 100%">
+      <label class="label-print"
+             style="width: 50%; display: inline-flex; justify-content: start">
+        {{ "ScheduledDate/Time" | translate }}
+      </label>
+      <label class="label-value"
+             style="display: inline-flex; justify-content: start; width: 50%">
+        <date [date]="PrintCustomerInvoice.ScheduledDeliveryTime"
+              [ShowTime]="true"></date>
+      </label>
+    </div>
+    <div style="width: 100%">
+      <label style="width: 50%; display: inline-flex; justify-content: start"
+             class="label-print">
+        {{ "CustomerName" | translate }}
+      </label>
+      <label class="label-value"
+             style="display: inline-flex; justify-content: start; width: 50%">
+        <span>{{ PrintCustomerInvoice.CustomerName }}</span>
+      </label>
+    </div>
+    <div style="width: 100%">
+      <label style="width: 50%; display: inline-flex; justify-content: start"
+             class="label-print">
+        {{ "CustomerMobile" | translate }}
+      </label>
+      <label class="label-value"
+             style="display: inline-flex; justify-content: start; width: 50%">
+        {{ PrintCustomerInvoice.CustomerMobile }}
+      </label>
+    </div>
+    <div style="width: 100%">
+      <label style="width: 50%; display: inline-flex; justify-content: start"
+             class="label-print">
+        {{ "Quantity" | translate }}
+      </label>
+      <label class="label-value"
+             style="display: inline-flex; justify-content: start; width: 50%">
+        {{ PrintCustomerInvoice.OrderQuantity }}
+      </label>
+    </div>
+    <div style="width: 100%">
+      <label class="label-print"
+             style="width: 50%; display: inline-flex; justify-content: start">
+        {{ "Zone" | translate }}
+      </label>
+      <label class="label-value"
+             style="display: inline-flex; justify-content: start; width: 50%">
+        {{ PrintCustomerInvoice.ZoneName }}
+      </label>
+    </div>
+    <div style="width: 100%">
+      <label style="width: 50%; display: inline-flex; justify-content: start"
+             class="label-print">
+        {{ "OrderConfirmationCode" | translate }}
+      </label>
+      <label class="label-value"
+             style="display: inline-flex; justify-content: start; width: 50%">
+        {{ PrintCustomerInvoice.EncryptedConfirmationCode }}
+      </label>
+    </div>
+
+
+    <div style="width: 100%">
+      <label style="width: 50%; display: inline-flex; justify-content: start"
+             class="label-print">
+        {{ "Category" | translate }}
+      </label>
+      <label class="label-value"
+             style="display: inline-flex; justify-content: start; width: 50%">
+        {{ PrintCustomerInvoice.Category }}
+      </label>
+    </div>
+
+    <hr />
+
+    <div style="width: 100%">
+      <label style="width: 50%; display: inline-flex; justify-content: start"
+             class="label-print">
+        {{ "ThePrice" | translate }}
+      </label>
+      <label class="label-value"
+             style="display: inline-flex; justify-content: start; width: 50%">
+        {{ customRound(PrintCustomerInvoice.NetCost, 2) }}
+      </label>
+    </div>
+    <div style="width: 100%">
+      <label style="width: 50%; display: inline-flex; justify-content: start"
+             class="label-print">
+        {{ "VAT" | translate }}
+      </label>
+      <label class="label-value"
+             style="display: inline-flex; justify-content: start; width: 50%">
+        {{
+          customRound(
+            PrintCustomerInvoice.TotalCost - PrintCustomerInvoice.NetCost,
+            2
+          )
+        }}
+      </label>
+    </div>
+    <div style="width: 100%">
+      <label style="width: 50%; display: inline-flex; justify-content: start"
+             class="label-print">
+        {{ "TotalCoast" | translate }}
+      </label>
+      <label class="label-value"
+             style="display: inline-flex; justify-content: start; width: 50%">
+        {{ customRound(PrintCustomerInvoice.TotalCost, 2) }}
+      </label>
+    </div>
+
+    <hr />
+
+    <div style="width: 100%">
+      <label style="width: 50%; display: inline-flex; justify-content: start"
+             class="label-print">
+        {{ "UserName" | translate }}
+      </label>
+      <label class="label-value"
+             style="display: inline-flex; justify-content: start; width: 50%">
+        {{ _auth.getCurrentuserName() }}
+      </label>
+    </div>
+  </div>
+  <div class="pageBreak"></div>
+</div>
+<button class="btn btn-primary"
+        printTitle="Driver Print"
+        printSectionId="printsection"
+        styleSheetFile="/assets/TMSBranding/styles/css/component.css"
+        ngxPrint>
+  {{ "print" | translate }}
+</button>
+<style>
+  img {
+    width: 50%
+  }
+</style>

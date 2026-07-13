@@ -1,0 +1,54 @@
+.not-logged {
+  main-header, footer {
+    display: none;
+  }
+  .parent {
+    height: 100vh;
+    max-height: none;
+  }
+}
+.text-original {
+  font-size: 11pt;
+}
+
+.dropdown-menu > li > a {
+  font-size: 10pt !important;
+}
+.modal-content {
+  font-size: 1.3em;
+}
+
+/* Date Printed */
+.label-value.hijri .hijri{
+  margin: 0px 20px;
+}
+
+.fade.in {
+opacity: 1 !important;
+}
+
+.modal.in .modal-dialog {
+-webkit-transform: translate(0, 0) !important;
+-o-transform: translate(0, 0) !important;
+transform: translate(0, 0) !important;
+}
+
+.modal-backdrop .fade .in {
+opacity: 0.5 !important;
+}
+
+.modal-backdrop.fade {
+opacity: 0.5 !important;
+}
+angular2-multiselect .pure-checkbox label {
+   color: #212529 !important;
+}
+.fade {
+    transition: opacity .15s linear;
+    transition: all 0.5s ease-in-out !important;
+    opacity: 1.5 !important;
+    z-index: 99 !important;
+}
+.order-amazing .time-control{
+  width: 100%;
+}

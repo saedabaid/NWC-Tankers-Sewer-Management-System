@@ -1,0 +1,162 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6  padding-10">
+      <!-- <span class="page-title">{{'Resources' | translate}}</span>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span> -->
+      <a routerLink="/tms/order/orderlist">
+        <span class="page-title">{{'listOrders' | translate}}</span>
+      </a>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+      <span class="page-title  currentpage">{{'OrderDetails' | translate}}</span>
+    </div>
+
+    <div class="col-md-6">
+    
+    </div>
+  </div>
+</div>
+<div class="box-all-information">
+
+  <!-- start basic details  -->
+  <div class="row padding-10">
+    <div class="col-md-8">
+      <h4 class="head-title">{{'OrderNo' | translate }}<span class="no-order">{{OrderBasicDetails.OrderNumber}}</span>
+        <span  class="status" >{{OrderBasicDetails.Status}}</span>
+        <span >{{OrderBasicDetails.LastStatusReason}}</span>
+       
+      </h4>
+      <div class="content-data">
+
+        <div class="form-group col-sm-4">
+          <label class="custome-label">{{'OrderPlacedON' | translate}}</label>
+          <date [date]="orderPlacedOnDate"  [ShowTime]="true"></date> 
+
+        </div>
+        <div class="form-group col-sm-4">
+          <label class="custome-label">{{'Total' | translate}}</label>
+          <span class="val">{{OrderBasicDetails.TotalCost}} {{'SAR' | translate}} </span>
+        </div>
+        
+        <div class="form-group col-sm-4">
+          <label class="custome-label">{{'PaymentStatus' | translate}}</label>
+          <span class="val"> {{OrderBasicDetails.WorkOrderInvoiceStatus ? OrderBasicDetails.WorkOrderInvoiceStatus  : 'NA' | translate }}</span>
+        </div>
+        <div class="form-group col-sm-4">
+          <label class="custome-label">{{'Customer' | translate}}</label>
+          <span class="val"> {{OrderBasicDetails.CustomerName}}  | code {{OrderBasicDetails.CustomerCode}}</span>
+        </div>
+        <div class="form-group col-sm-4">
+          <label class="custome-label">{{'Mobile' | translate}}</label>
+          <span class="val">{{OrderBasicDetails.CustomerMobile}} </span>
+        </div>
+        
+        <div class="form-group col-sm-4">
+          <label class="custome-label">{{'Zone' | translate}}</label>
+          <span class="val"> {{OrderBasicDetails.CustomerAddress}}</span>
+-
+          <span class="val"> {{OrderBasicDetails.ZoneName}}</span>
+          
+        </div>
+
+       
+
+        <div *ngIf="!OrderBasicDetails.IsVirtualStation">
+          <hr>
+        <h5 class="resorces-title">{{'Resources' | translate}}</h5>
+        <div class="form-group col-sm-6">
+          <label class="custome-label">{{'Vehicle' | translate}}</label>
+          
+          <span *ngIf="OrderBasicDetails.VehicleCodePlateNo  ;else second" class="val" >
+            <!-- {{'AssignedVehiclePlateNo' | translate}} :  -->
+            {{OrderBasicDetails.VehicleCodePlateNo}}</span>
+        <ng-template #second>
+          <span  class="val" >{{'NotAssigned' | translate}}</span>
+        </ng-template>
+
+        </div>
+        <div class="form-group col-sm-3">
+          <label class="custome-label">{{'Driver' | translate}}</label>
+          <span *ngIf="OrderBasicDetails.DriverName  ;else second" class="val" >
+            {{OrderBasicDetails.DriverName}}</span>
+            
+          <ng-template #second>
+            <span  class="val" >{{'NotAssigned' | translate}}</span>
+          </ng-template>
+        </div>
+        <div class="form-group col-sm-3" *ngIf="OrderBasicDetails.DriverName" >
+          <label class="custome-label">{{'DriverMobile' | translate}}</label>
+          <span class="val">{{OrderBasicDetails.DriverMobileNumber}}</span>        
+        </div>
+      </div>
+      </div>
+
+
+      <div class="   tabs-links" >
+          
+            <a (click)="switchTab(1)" [ngClass]="currentTab == 1 ? ' active' : '  '   ">{{'Shipment' | translate}}</a>
+            <!-- <a (click)="switchTab(2)" [ngClass]="currentTab == 2 ? ' active' : '  '  ">{{'Complains' | translate}}</a> -->
+            <!--<a (click)="switchTab(3)" [ngClass]="currentTab == 3 ? ' active' : '  '  ">{{'Payments' | translate}}</a> -->
+            <a (click)="switchTab(4)" [ngClass]="currentTab == 4 ? ' active' : '  '  ">{{'StatusLog' | translate}}</a>
+            <a (click)="switchTab(5)" [ngClass]="currentTab == 5 ? ' active' : '  '  ">{{'ChangesLog' | translate}}</a>
+            <a (click)="switchTab(6)" [ngClass]="currentTab == 6 ? ' active' : '  '  ">{{'Comments' | translate}}</a>
+            <!-- <a (click)="switchTab(7)" [ngClass]="currentTab == 7 ? ' active' : '  '  ">{{'Attachments' | translate}}</a> -->
+         
+        </div>
+
+         <!-- start tabs orders -->
+  <div class="content-tab-data" >
+      <shipment-data *ngIf="currentTab == 1" [shipmentData] = 'OrderBasicDetails'></shipment-data>
+      <!-- <complains *ngIf="currentTab == 2"[OrderComplaints] = 'OrderComplaints' ></complains>  -->
+      <!-- <payments  *ngIf="currentTab == 3"></payments> -->
+      <status-log  *ngIf="currentTab == 4"></status-log>
+      <changes-log  *ngIf="currentTab == 5" [Logs]="ChangesLogs" (LogsChanged)="onLogsChanged($event)" [OrderNo]="OrderBasicDetails.OrderNumber" ></changes-log>
+      <comments  *ngIf="currentTab == 6"  [OrderComments] = 'OrderComments'  (addComment) = addComment()>  </comments>
+      <attachments *ngIf="currentTab == 7">  </attachments>
+    </div>
+  <!-- end tabd orders -->
+    </div>
+
+    <div class="col-md-4">
+        <div class="btn-group hold-option" dropdown>
+            <i id="button-basic" dropdownToggle aria-controls="dropdown-basic" class="fa fa-ellipsis-v"></i>
+  
+  
+  
+            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+              <!-- <li role="menuitem"><a class="dropdown-item"  >{{'print ticket' | translate}}</a></li>
+              <li role="menuitem"><a class="dropdown-item"  (click)="changeOrderStatus()" class="dropdown-item" >{{'change status' | translate}}</a></li>
+              <li role="menuitem"><a class="dropdown-item"  >{{'monitor & track' | translate}}</a></li>
+              <li role="menuitem"><a class="dropdown-item"  >{{'de-assign' | translate}} </a></li> -->
+              <li  *ngIf="!OrderBasicDetails.IsVirtualStation"  role="menuitem"><a (click)="deAssignTanker()"  [ngClass]="{'dimmed': !(OrderBasicDetails.IsAssigned && OrderBasicDetails.LastStatusID != 4 && OrderBasicDetails.LastStatusID != 3)}"
+                class="dropdown-item">{{'deassign tanker' | translate}}</a></li>
+
+              <li role="menuitem"><a class="dropdown-item" [ngClass]="{'dimmed': ![1,2, 5].includes(OrderBasicDetails.LastStatusID)}"
+                  (click)="cancelWorkOrder()">{{'CancelOrder' | translate}}</a></li>
+
+              <li role="menuitem"><a (click)="changeOrderStatus()" [ngClass]="{'dimmed': [3,4,8].includes(OrderBasicDetails.LastStatusID)}"
+                  class="dropdown-item">{{'ChangeStatus' | translate}}</a></li>
+
+              <li  *ngIf="!OrderBasicDetails.IsVirtualStation" role="menuitem"><a (click)="dispatchTanker()" class="dropdown-item"
+                  [ngClass]="{'dimmed': OrderBasicDetails.LastStatusID != 1}">{{'Dispatch' | translate}}</a></li>
+
+              <li  *ngIf="!OrderBasicDetails.IsVirtualStation" role="menuitem"><a class="dropdown-item" routerLink="/tms/gate/print/{{OrderBasicDetails.AssignedVehicleID}}/{{OrderBasicDetails.WorkOrderID}}" target="_blank"
+                  [ngClass]="{'dimmed': !OrderBasicDetails.AssignedVehicleID}">{{'print ticket' | translate}}</a></li>
+  
+              <!-- <li role="menuitem"><a class="dropdown-item" 
+                 [ngClass]="{'dimmed': ![3 , 4 , 6].includes(OrderBasicDetails.LastStatusID)}" >{{'Monitor' | translate}}</a></li> -->
+
+        <!--  <li role="menuitem"><a class="dropdown-item">{{'PrintTicket' | translate}}</a></li> -->
+  
+            </ul>
+          </div>
+       
+
+      <div class="content-map">
+        <common-map></common-map>
+      </div>
+    </div>
+   </div>
+  <!-- end basic details  -->
+
+ 
+</div>

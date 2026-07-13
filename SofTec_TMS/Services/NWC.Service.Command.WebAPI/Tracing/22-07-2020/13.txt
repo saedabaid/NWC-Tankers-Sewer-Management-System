@@ -1,0 +1,90 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:22/07/2020 1:36:57 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"9076759917","cisDivision":19,"orderStatus":5,"updateDateTime":"22-07-2020 13:37:02","parameters":[{"parameterName":"TMSID","parameterValue":"9076759917"},{"parameterName":"COMMENT","parameterValue":""}]} Time:22/07/2020 1:37:02 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:22/07/2020 1:38:21 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"9076759917","cisDivision":19,"orderStatus":3,"updateDateTime":"22-07-2020 13:38:22","parameters":[{"parameterName":"TMSID","parameterValue":"9076759917"},{"parameterName":"COMMENT","parameterValue":""}]} Time:22/07/2020 1:38:22 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:22/07/2020 1:39:12 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"5390503274","cisDivision":19,"orderStatus":5,"updateDateTime":"22-07-2020 13:39:13","parameters":[{"parameterName":"TMSID","parameterValue":"5390503274"},{"parameterName":"COMMENT","parameterValue":""}]} Time:22/07/2020 1:39:13 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:22/07/2020 1:42:19 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"5390503274","cisDivision":19,"orderStatus":3,"updateDateTime":"22-07-2020 13:42:20","parameters":[{"parameterName":"TMSID","parameterValue":"5390503274"},{"parameterName":"COMMENT","parameterValue":""}]} Time:22/07/2020 1:42:20 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:22/07/2020 1:43:30 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:22/07/2020 01:43:30 م
+
+CreateWorkOrder Time:22/07/2020 01:43:30 م
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5537,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:22/07/2020 01:43:30 م
+
+Valid Time:22/07/2020 01:43:31 م
+
+Create WorkOrder: Partially Success Time:22/07/2020 01:43:32 م
+
+customerAccount: 5537 Time:22/07/2020 1:43:32 PM
+
+customerLocation: 5537 Time:22/07/2020 1:43:32 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:22/07/2020 1:43:32 PM
+
+OrderNumber: 4489211605 Time:22/07/2020 1:43:32 PM
+
+workOrderID: 46022 Time:22/07/2020 1:43:32 PM
+
+scheduledDeliveryTime: 22/07/2020 1:43:30 PM Time:22/07/2020 1:43:32 PM
+
+customerLocationClassID: 1 Time:22/07/2020 1:43:32 PM
+
+serviceTypeID: 1 Time:22/07/2020 1:43:32 PM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:22/07/2020 1:43:32 PM
+
+orderQuantity: 20 Time:22/07/2020 1:43:32 PM
+
+Net Cost: -1 Time:22/07/2020 1:43:33 PM
+
+Create WorkOrder: Success Time:22/07/2020 1:43:33 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:22/07/2020 1:43:49 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:22/07/2020 01:43:49 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 4489211605 - TransporterID eb83735f-f141-4adb-b9d9-5e28379c1f3b - TransportrStatus: 0 Time:22/07/2020 01:43:50 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:22/07/2020 01:43:50 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:22/07/2020 1:43:50 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 4489211605 - TransporterID: eb83735f-f141-4adb-b9d9-5e28379c1f3b - TransporterStatus: 11 Time:22/07/2020 01:43:50 م
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 4489211605 - TransporterID: eb83735f-f141-4adb-b9d9-5e28379c1f3b - TransporterStatus: 11 Time:22/07/2020 1:43:50 PM
+
+Start Inserting Driver SMS: OrderNo:4489211605, VehicleId:eb83735f-f141-4adb-b9d9-5e28379c1f3b, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:22/07/2020 1:43:50 PM
+
+SMS: تم تخصيص رقم الطلب 4489211605 ويمكن التواصل على جوال العميل 032453245345 موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:22/07/2020 1:43:51 PM
+
+Start Inserting Customer SMS: OrderNo:4489211605, VehicleId:eb83735f-f141-4adb-b9d9-5e28379c1f3b, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:22/07/2020 1:43:51 PM
+
+SMS: عميلنا العزيز: نفيدكم بتخصيص ناقلة مياه لطلبكم رقم 4489211605 Time:22/07/2020 1:43:51 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"4489211605","cisDivision":19,"orderStatus":4,"updateDateTime":"22-07-2020 13:43:52","parameters":[{"parameterName":"TMSID","parameterValue":"4489211605"},{"parameterName":"COMMENT","parameterValue":""}]} Time:22/07/2020 1:43:52 PM
+
+----------------------------------------AssignWorkOrder - Denormalizer - End---------------------------------------- Time:22/07/2020 1:44:13 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:22/07/2020 1:44:44 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"4489211605","cisDivision":19,"orderStatus":5,"updateDateTime":"22-07-2020 13:44:45","parameters":[{"parameterName":"TMSID","parameterValue":"4489211605"},{"parameterName":"COMMENT","parameterValue":""}]} Time:22/07/2020 1:44:45 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:22/07/2020 1:45:42 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"6627669463","cisDivision":19,"orderStatus":5,"updateDateTime":"22-07-2020 13:45:43","parameters":[{"parameterName":"TMSID","parameterValue":"6627669463"},{"parameterName":"COMMENT","parameterValue":""}]} Time:22/07/2020 1:45:43 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:22/07/2020 1:47:54 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"2166857096","cisDivision":19,"orderStatus":5,"updateDateTime":"22-07-2020 13:47:55","parameters":[{"parameterName":"TMSID","parameterValue":"2166857096"},{"parameterName":"COMMENT","parameterValue":""}]} Time:22/07/2020 1:47:55 PM
+

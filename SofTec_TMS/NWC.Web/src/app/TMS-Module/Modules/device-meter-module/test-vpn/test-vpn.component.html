@@ -1,0 +1,22 @@
+<p>test-vpn works!</p>
+
+
+<label> text </label>
+<input [(ngModel)]="userText" >
+<br>
+
+<label> dom </label>
+<input [(ngModel)]="userDom" >
+
+
+<button (click)="saveC()">save cookie</button>
+<button (click)="saveL()">save local</button>
+
+<br>
+<button (click)="getC()">get cookie</button>
+<label >{{cookieReturn}}</label>
+
+<br>
+<button (click)="getL()">get local</button>
+<label >{{localReturn}}</label>
+

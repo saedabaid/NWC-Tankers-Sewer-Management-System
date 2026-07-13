@@ -1,0 +1,185 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-md-6  padding-10">
+            <a routerLink="/tms/reports">
+                <span class="page-title">{{ "TMS_Reports" | translate }}</span>
+            </a>
+            <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+            <span class="page-title  currentpage">{{ "ReportStationOrderCapacity" | translate }}</span>
+        </div>
+
+        <div class="col-md-6">
+
+            <a (click)="onexportOrders()" class=" margin-5 pull-right" title="{{ 'ExportOrders' | translate }}"
+                (mouseenter)="mouseEnterExcel()" (mouseleave)="mouseLeaveExcel()">
+                <img width="24px" *ngIf="!HoverExcel; else excelHover" src={{Excel_Img_Src}} />
+                <ng-template #excelHover>
+                    <img width="24px" src={{Excel_Img_Src}} />
+                </ng-template>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="inner-div">
+
+    <!--row 1 -->
+    <div class="row form-row">
+
+        <!-- area -->
+        <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "Area" | translate }} </label>
+            <div class="col-sm-8">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerAreaList"
+                    (SearchVAlue)="getAreas($event)" (selectedListChange)="onAreaDDLChanged($event)"
+                    [options]="selectMenuOptions2" [selectedList]="bindingModel_Areas" [loading]="Area_loading">
+                </select-menu>
+            </div>
+        </div>
+
+        <!-- city -->
+        <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "City" | translate }}</label>
+            <div class="col-sm-8">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerCityList"
+                    (SearchVAlue)="getCity($event)" (selectedListChange)="onCityDDLChanged($event)"
+                    [options]="selectMenuOptions2" [selectedList]="bindingModel_Cities" [loading]="City_Loading">
+                </select-menu>
+            </div>
+        </div>
+
+        <!-- zone -->
+        <!-- <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "Zone" | translate }}</label>
+            <div class="col-sm-8">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerZoneList"
+                    (SearchVAlue)="getZones($event)" (selectedListChange)="onZoneDDLChanged($event)"
+                    [selectedList]="bindingModel_Zones" [loading]="Zone_Loading">
+                </select-menu>
+            </div>
+        </div> -->
+
+        <!-- station -->
+        <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "Station" | translate }}</label>
+            <div class="col-sm-8">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerStationList"
+                    (SearchVAlue)="getStations($event)" (selectedListChange)="onStationDDLChanged($event)"
+                    [options]="selectMenuOptions2" [selectedList]="bindingModel_Stations" [loading]="Station_Loading">
+                </select-menu>
+            </div>
+        </div>
+
+    </div>
+
+    <!--row 2 -->
+    <div class="row form-row">
+
+        <!-- Date from -->
+        <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "From" | translate }}</label>
+            <div class="col-sm-8">
+                <app-datepicker [(selecteddate)]="SearchCriteria.DateFrom" DateID="dateFrom"></app-datepicker>
+            </div>
+        </div>
+
+        <!-- Date To -->
+        <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "To" | translate }}</label>
+            <div class="col-sm-8">
+                <app-datepicker [(selecteddate)]="SearchCriteria.DateTo" DateID="dateTo"></app-datepicker>
+            </div>
+        </div>
+
+        <!-- service -->
+        <!-- <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "ServiceType" | translate }}</label>
+            <div class="col-sm-8">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerServiceList"
+                    (selectedListChange)="onServiceDDLChanged($event)" [selectedList]="bindingModel_ServiceTypes">
+                </select-menu>
+            </div>
+        </div> -->
+
+        <!-- status -->
+        <!-- <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "OrderStatus" | translate }}</label>
+            <div class="col-sm-8">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="CustomerStatusList"
+                    (selectedListChange)="onStatusDDLChanged($event)" [selectedList]="bindingModel_Statuses">
+                </select-menu>
+            </div>
+        </div> -->
+
+
+        <div class="col-md-6">
+
+            <button class="btn btn-default margin-5 pull-right" (click)="clearSearch()">
+                {{ "Clear" | translate }}
+            </button>
+            <button class="btn btn-danger margin-5 pull-right" (click)="onSearchSubmit()">
+                {{ "Search" | translate }}
+            </button>
+        </div>
+
+
+    </div>
+
+
+    <!-- fixed header  -->
+    <div class="table-heigh row">
+        <div class="col-md-12 scroll-x-table list-body">
+
+            <table class="table table-striped scrollable-table">
+                <thead>
+                    <tr>
+                        <th>{{'City' | translate}}</th>
+                        <!-- <th class="wid130">{{'Zone' | translate}} </th> -->
+                        <th>{{'Station' | translate}}</th>
+                        <th>{{'TotalOrdersCount' | translate}}</th>
+                        <th>{{'TotalQuantity' | translate}} ( {{'M' | translate}}<sup>3</sup> )</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center p-2 font-4 " *ngIf="!searchResult.Result || searchResult.Result.length < 1">
+                        <td colspan="12">
+                            {{"NoDataFound" | translate}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let item of searchResult.Result; let i = index">
+
+                        <td>
+                            {{item.CityName}}
+                        </td>
+                        <!-- <td class="wid130">
+                            <span [style.color]="item.StatusColor ? item.StatusColor : '#333'">
+                                {{ item.ZoneName }}
+                            </span>
+                        </td> -->
+                        <td>
+                            {{ item.StationName }}
+                        </td>
+                        <td>
+                            {{ item.TotalNoOfOrders }}
+                        </td>
+                        <td>
+                            {{ item.TotalQuantity }}
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <app-pagination-component [ItemsCount]="searchResult.TotalCount"
+        [(PageSize)]="this.SearchCriteria.PageFilter.PageSize" [pageIndex]="this.SearchCriteria.PageFilter.PageIndex"
+        (PageSizeChange)="onPageSizeChanged($event)" (pageNavigated)="onPageIndexChanged($event)">
+    </app-pagination-component>
+
+
+
+</div>

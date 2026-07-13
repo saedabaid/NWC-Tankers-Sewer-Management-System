@@ -1,0 +1,257 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-md-6  padding-10">
+            <a routerLink="/tms/reports">
+                <span class="page-title">{{ "TMS_Reports" | translate }}</span>
+            </a>
+            <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+            <span class="page-title  currentpage">{{ "TankerDataReport" | translate }}</span>
+        </div>
+
+        <div class="col-md-6">
+
+            <a (click)="onexportOrders()" class=" margin-5 pull-right" title="{{ 'ExportTankerMovements' | translate }}"
+                (mouseenter)="mouseEnterExcel()" (mouseleave)="mouseLeaveExcel()">
+                <img width="24px" *ngIf="!HoverExcel; else excelHover" src={{Excel_Img_Src}} />
+                <ng-template #excelHover>
+                    <img width="24px" src={{Excel_Img_Src}} />
+                </ng-template>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="inner-div">
+    <div class="row  form-row">
+        <div class="col-md-12 custome-dropdown">
+            <!-- <div class="col-md-2">
+                <input class="form-control" [(ngModel)]="SearchCriteria.OrderNumber" (keyup.enter)="onSearchSubmit()"
+                    placeholder="{{ 'OrderNo' | translate }}">
+            </div> -->
+
+            <div class="col-md-2">
+                <input class="form-control" [(ngModel)]="SearchCriteria.Vehicle" (keyup.enter)="onSearchSubmit()"
+                    placeholder="{{ 'Vehicle' | translate }}">
+            </div>
+
+            <div class="col-md-2">
+                <input class="form-control" [(ngModel)]="SearchCriteria.Driver" (keyup.enter)="onSearchSubmit()"
+                    placeholder="{{ 'Driver' | translate }}">
+            </div>
+
+            <div class="col-md-2">
+                <a class="mr-2 ml-2 link-route" (click)="showAdvanced()">
+                    {{advancedDiv? ("HideAdvancedSearch" | translate): ("AdvancedSearch" | translate)}}
+                </a>
+
+            </div>
+
+
+
+            <button class="btn btn-default margin-5 pull-right" (click)="clearSearch()">
+                {{ "Clear" | translate }}
+            </button>
+            <button class="btn btn-danger margin-5 pull-right" (click)="onSearchSubmit()">
+                {{ "Search" | translate }}
+            </button>
+        </div>
+    </div>
+    <!-- Start Advanced Search box -->
+    <div [hidden]="!advancedDiv" class="custom-form-silver">
+        <!--row 1 -->
+        <div class="row form-row">
+            <!-- Area -->
+            <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "Area" | translate }} </label>
+                <div class="col-sm-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerAreaList"
+                        (SearchVAlue)="getAreas($event)" (selectedListChange)="onAreaDDLChanged($event)"
+                        [options]="selectMenuOptions" [selectedList]="bindingModel_Areas" [loading]="Area_loading">
+                    </select-menu>
+                </div>
+            </div>
+
+            <!-- city -->
+            <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "City" | translate }}</label>
+                <div class="col-sm-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerCityList"
+                        (SearchVAlue)="getCity($event)" (selectedListChange)="onCityDDLChanged($event)"
+                        [options]="selectMenuOptions" [selectedList]="bindingModel_Cities" [loading]="City_Loading">
+                    </select-menu>
+                </div>
+            </div>
+
+            <!-- station -->
+            <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "Station" | translate }}</label>
+                <div class="col-sm-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerStationList"
+                        (SearchVAlue)="getStations($event)" (selectedListChange)="onStationDDLChanged($event)"
+                        [options]="selectMenuOptions" [selectedList]="bindingModel_Stations"
+                        [loading]="Station_Loading">
+                    </select-menu>
+                </div>
+            </div>
+        </div>
+        <!-- row 2-->
+        <div class="row form-row">
+            <!-- Service type-->
+            <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "ServiceType" | translate }}</label>
+                <div class="col-sm-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerServiceList"
+                        (selectedListChange)="onServiceTypeDDLChanged($event)" [options]="selectMenuOptions"
+                        [selectedList]="bindingModel_ServiceTypes">
+                    </select-menu>
+                </div>
+            </div>
+            <!-- Action Log Type -->
+            <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "EventType" | translate }}</label>
+                <div class="col-sm-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="TransporterStatuses"
+                        (selectedListChange)="onTransporterStatusDDLChanged($event)" [options]="selectMenuOptions"
+                        [selectedList]="bindingModel_TransporterStatuses">
+                    </select-menu>
+                </div>
+            </div>
+
+            <!-- Date from -->
+            <!-- <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "From" | translate }}</label>
+                <div class="col-sm-8">
+                    <app-datepicker [(selecteddate)]="SearchCriteria.DateTimeFrom" DateID="dateFrom"></app-datepicker>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="col-sm-8 padding-0">
+                    <app-amazing-timepicker id="timeFrom" [(selectedTime)]="timeFromStr"></app-amazing-timepicker>
+                </div>
+            </div> -->
+        </div>
+        <!-- row 3 -->
+        <div class="row form-row">
+            <!-- Action Log Type -->
+            <!-- <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "EventType" | translate }}</label>
+                <div class="col-sm-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="ActionLogTypes"
+                        (selectedListChange)="onActionLogTypeDDLChanged($event)" [options]="selectMenuOptions2"
+                        [selectedList]="bindingModel_ActionLogTypes">
+                    </select-menu>
+                </div>
+            </div> -->
+            <!-- Date To -->
+            <!-- <div class="col-md-3">
+                <label class="col-sm-4 title">{{ "To" | translate }}</label>
+                <div class="col-sm-8">
+                    <app-datepicker [(selecteddate)]="SearchCriteria.DateTimeTo" DateID="dateTo"></app-datepicker>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="col-sm-8 padding-0 ">
+                    <app-amazing-timepicker id="timeTo" [(selectedTime)]="timeToStr"></app-amazing-timepicker>
+                </div>
+            </div> -->
+
+        </div>
+
+
+    </div>
+    <!-- End Advanced Search box -->
+
+    <!-- fixed header  -->
+    <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row'">
+        <div class="col-md-12 scroll-x-table list-body">
+
+
+            <table class="table table-striped scrollable-table">
+                <thead>
+                    <tr>
+                        <th class="wid100">{{'code' | translate}}</th>
+                        <th class="wid100">{{'VehiclePlateNo' | translate}} </th>
+                        <th class="wid100">{{'CapacityM' | translate}}<sup>3</sup> </th>
+                        <th class="wid100">{{'Area' | translate}}</th>
+                        <th class="wid100">{{'City' | translate}}</th>
+                        <th class="wid100">{{'Station' | translate}}</th>
+                        <th class="wid100">{{'ServiceType' | translate}} </th>
+                        
+                        <th class="wid130">{{'Driver' | translate}} </th>
+                        <th class="wid100">{{'DriverCode' | translate}} </th>
+                        <th class="wid100">{{'DriverMobile' | translate}}</th>
+                        <th class="wid100">{{'DriverPersonalId' | translate}}</th>
+
+                        <th class="wid130">{{'Manufacturer' | translate}} </th>
+                        <th class="wid100">{{'Brand' | translate}} </th>
+                        <th class="wid100">{{'Type' | translate}} </th>
+                        <th class="wid100">{{'ProductionYear' | translate}} </th>
+                        
+                        <th class="wid130">{{'PermissionExpiryDate' | translate}} </th>
+                        <th class="wid200">{{'ChassisNo' | translate}} </th>
+                        <th class="wid130">{{'LicenseExpiryDate' | translate}} </th>
+                        <th class="wid100">{{'Status' | translate}} </th>  
+                        
+                        <th class="wid200">{{'Class' | translate}} </th>  
+
+                    </tr>
+                </thead>
+                <tbody [class]="advancedDiv ? ' mini' : ' '">
+                    <tr class="text-center p-2 font-4 " *ngIf="!searchResult.Result">
+                        <td colspan="12">
+                            {{"NoDataFound" | translate}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let item of searchResult.Result; let i = index">
+                        <td class="wid100">{{ item.Code }}</td>
+                        <td class="wid100">{{ item.PlateNo }}</td>
+                        <td class="wid100">{{ item.Capacity }}</td>
+                        <td class="wid100">{{ item.AreaName }}</td>
+                        <td class="wid100">{{ item.CityName }}</td>
+                        <td class="wid100">{{ item.StationName }}</td>
+                        <td class="wid100">
+                            {{ (IsArabic ? item.ServiceTypeAR : item.ServiceTypeEN ) }}
+                        </td>
+
+                        <td class="wid130">{{ item.DriverName }}</td>
+                        <td class="wid100">{{ item.DriverCode }}</td>
+                        <td class="wid100">{{ item.DriverMobile }}</td>
+                        <td class="wid100">{{ item.DriverPersonalId }}</td>
+                                                
+                        <td class="wid130">
+                            {{ (IsArabic ? item.ManufacturerNameAr : item.ManufacturerName ) }}
+                        </td>
+                        <td class="wid100">
+                            {{ (IsArabic ? item.BrandNameAr : item.BrandName ) }}
+                        </td>
+                        <td class="wid100">
+                            {{ (IsArabic ? item.TypeNameAr : item.TypeName ) }}
+                        </td>
+                        <td class="wid100">{{item.ProductionYearName}}</td>
+                        
+
+                        <td class="wid130">
+                            <date [date]="item.PermissionExpiryDate"></date>
+                        </td>
+                        <td class="wid200">{{item.chassisNo}}</td>
+                        <td class="wid130">
+                            <date [date]="item.licenseExpiryDate"></date>
+                        </td>
+                        <td class="wid100">
+                            {{ (IsArabic ? item.StatusNameAr : item.StatusName ) }}
+                        </td>
+
+                        <td class="wid200">
+                            {{ (IsArabic ? item.ClassesAr : item.ClassesEn ) }}
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <app-pagination-component [ItemsCount]="searchResult.TotalCount"
+        [(PageSize)]="this.SearchCriteria.PageFilter.PageSize" [pageIndex]="this.SearchCriteria.PageFilter.PageIndex"
+        (PageSizeChange)="onPageSizeChanged($event)" (pageNavigated)="onPageIndexChanged($event)">
+    </app-pagination-component>
+</div>

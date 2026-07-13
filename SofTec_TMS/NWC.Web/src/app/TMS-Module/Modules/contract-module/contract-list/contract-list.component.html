@@ -1,0 +1,247 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6  padding-10">
+      <span class="page-title">{{'TMS' | translate}}</span>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title  currentpage">{{'contract' | translate}}</span>
+    </div>
+
+    <div class="col-md-6">
+      <a *ngIf="(pagePermission == 'Full Control') || (pagePermission == 'Add and Edit')" 
+          routerLink="/tms/contract/new" title="  {{'NewContract' | translate}}"> <i
+          class="glyphicon glyphicon-plus-sign margin-5 pull-right"></i>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="inner-div">
+  <div class="row  form-row">
+    <div class="col-md-12 custome-dropdown">
+      <label class="col-md-2 title wid-6">{{'contract' | translate}} </label>
+
+      <search-component class="col-md-3" (searchKeyword)="onContractCodeDDLChanged($event)" [isTypeahead]="true"
+        [typeaheadFunction]='searchContractsCodes.bind(this)' [field]="'Name'"
+        [(_value)]="SearchCriteria.FilterModel.SearchKeyword">
+      </search-component>
+
+      <!-- <a class="margin-5 link-route"
+        (click)="showAdvanced()">{{ advancedDiv ?  ('HideAdvancedSearch' | translate) : ('AdvancedSearch'  | translate) }}</a> -->
+
+
+      <button class="btn btn-default margin-5 pull-right" (click)="clearSearch()">{{ 'Clear'| translate }}</button>
+      <button class="btn btn-danger margin-5 pull-right" (click)="onSearchSubmit()">{{ 'Search' | translate }}</button>
+    </div>
+
+  </div>
+  <!-- Start Advanced Search box -->
+  <div [hidden]="!advancedDiv" id="advanced-search">
+    <!--row 1 -->
+    <div class="row form-row">
+      <!-- contractor Name | Code -->
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{'contractor' | translate }} </label>
+        <div class="col-sm-8">
+          <select-menu>
+          </select-menu>
+        </div>
+      </div>
+      <!-- contract duration -->
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{'contractduration' | translate}} </label>
+        <div class="col-sm-8">
+           <app-datepicker DateID=date1></app-datepicker> 
+          <!-- <datePicker-gregorian-hijri  ></datePicker-gregorian-hijri> -->
+        </div>
+      </div>
+      <!-- Date to -->
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{'To' | translate}}</label>
+        <div class="col-sm-8">
+           <app-datepicker DateID=date2></app-datepicker> 
+          <!-- <datePicker-gregorian-hijri   ></datePicker-gregorian-hijri> -->
+        </div>
+      </div>
+    </div>
+    <!-- row 2-->
+    <div class="row form-row">
+      <!-- area -->
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{'Area' | translate}}</label>
+        <div class="col-sm-8">
+          <select-menu>
+          </select-menu>
+        </div>
+      </div>
+      <!-- contract type -->
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{'contracttype' | translate}}</label>
+        <div class="col-sm-8">
+          <select-menu>
+          </select-menu>
+        </div>
+      </div>
+      <!-- city -->
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{'City' | translate}}</label>
+        <div class="col-sm-8">
+          <select-menu>
+          </select-menu>
+        </div>
+      </div>
+    </div>
+    <!-- row 3 -->
+    <div class="row form-row">
+      <!-- contract status  -->
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{'contractstatus' | translate}}</label>
+        <div class="col-sm-8">
+          <select-menu>
+          </select-menu>
+        </div>
+      </div>
+      <!-- service -->
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{'confirmationNo' | translate}}</label>
+        <div class="col-sm-8">
+          <select-menu>
+          </select-menu>
+        </div>
+      </div>
+      <!-- Zone -->
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{'Zone' | translate}}</label>
+        <div class="col-sm-8">
+          <select-menu>
+          </select-menu>
+        </div>
+      </div>
+    </div>
+    <!-- row 4 -->
+    <div class="row form-row">
+      <!-- termination reason -->
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{'terminationreason' | translate}}</label>
+        <div class="col-sm-8">
+          <select-menu>
+          </select-menu>
+        </div>
+      </div>
+      <!-- award Letter No  -->
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{'awardLetter' | translate}}</label>
+        <div class="col-sm-8">
+          <select-menu>
+          </select-menu>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{'Station' | translate}}</label>
+        <div class="col-sm-8">
+          <select-menu>
+          </select-menu>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Advanced Search box -->
+
+
+
+  <!-- table section -->
+  <!-- fixed header  -->
+  <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row' ">
+    <div class="col-md-12 scroll-x-table list-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="wid100">{{'contractCode' | translate}}</th>
+            <th class="wid200">{{'contractorName' | translate}} </th>
+            <th class="wid100">{{'contracttype' | translate}}</th>
+            <th class="wid150">{{'confirmationNo' | translate}}</th>
+            <th class="wid150">{{'awardLetter' | translate}} </th>
+            <th class="wid120">{{'StationCount' | translate}}</th>
+            <th class="wid100">{{'startDate' | translate}}</th>
+            <th class="wid120">{{'endDate' | translate}} </th>
+            <th class="wid100">{{'Status' | translate}} </th>
+            <!-- <th class="wid100">{{'Terminated' | translate}}</th> -->
+            <th class="wid50"> </th>
+            <th class="wid50"> </th>
+            <th class="wid50"> </th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class="text-center d-block p-2 font-4" *ngIf="!searchResult.Result">
+            <td colspan="12">  {{'NoDataFound' | translate}}</td>
+     </tr>
+          <tr *ngFor="let item of searchResult.Result; let i = index">
+            <td class="wid100 text-center">
+              <a >
+                {{item.Code}}
+              </a>
+            </td>
+            <td class="wid200">
+              {{item.ContractorFullName}}
+            </td>
+            <td class="wid100">
+            {{item.ContractTypeName}}
+            </td>
+            <td class="wid150">
+              {{item.ConfirmationNo}}
+            </td>
+            <td class="wid150">
+              {{item.AwardLetterNo}}
+            </td>
+            <td class="wid120">
+              {{item.StationsCount}}
+            </td>
+            <td class="wid100">
+           
+              <date [date]="item.ContractStartDate" ></date> 
+            </td>
+            <td class="wid120">
+       
+              <date [date]="item.ContractEndDate" ></date> 
+            </td>
+            <td class="wid100">
+              {{item.ContractStatusName}}
+            </td>
+            <!-- <td class="wid100">
+              <input class="form-check-input" type="checkbox" [(ngModel)]="item.IsTerminated" disabled>
+
+            </td> -->
+
+            <td class="wid50">
+              <a (click)="editContract(item)" title="  {{'Edit' | translate}}"
+                  *ngIf="(pagePermission == 'Full Control') || (pagePermission == 'Add and Edit')">
+                <i class="glyphicon glyphicon-pencil margin-5 pull-right"></i>
+              </a>
+            </td>
+            <td class="wid50">
+              <a (click)="deleteContract(item)" title="  {{'Delete' | translate}}" 
+                  *ngIf="pagePermission == 'Full Control'">
+                <i class="glyphicon glyphicon-trash"></i>
+              </a>
+            </td>
+            <td class="wid50">
+              <a (click)="TerminateContract(item)" title="  {{'Terminate' | translate}}"
+                  *ngIf="pagePermission == 'Full Control'">
+                <i class="glyphicon glyphicon-ban-circle"></i>
+              </a>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+
+  </div>
+  <app-pagination-component [ItemsCount]='searchResult.TotalCount'
+    [(PageSize)]="this.SearchCriteria.FilterModel.PageFilter.PageSize"
+    [pageIndex]="this.SearchCriteria.FilterModel.PageFilter.PageIndex" (PageSizeChange)="onPageSizeChanged($event)"
+    (pageNavigated)="onPageIndexChanged($event)">
+  </app-pagination-component>
+</div>

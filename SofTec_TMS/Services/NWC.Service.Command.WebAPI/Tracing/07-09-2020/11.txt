@@ -1,0 +1,64 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/09/2020 11:47:05 AM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:07/09/2020 11:47:05 ص
+
+CreateWorkOrder Time:07/09/2020 11:47:05 ص
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5537,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":"TMS","CISDivision":null,"TransactionID":null} Time:07/09/2020 11:47:05 ص
+
+Valid Time:07/09/2020 11:47:06 ص
+
+Create WorkOrder: Partially Success Time:07/09/2020 11:47:07 ص
+
+customerAccount: 5537 Time:07/09/2020 11:47:08 AM
+
+customerLocation: 5537 Time:07/09/2020 11:47:08 AM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:07/09/2020 11:47:08 AM
+
+OrderNumber: 7511849812 Time:07/09/2020 11:47:08 AM
+
+workOrderID: 56036 Time:07/09/2020 11:47:08 AM
+
+scheduledDeliveryTime: 07/09/2020 11:47:05 AM Time:07/09/2020 11:47:08 AM
+
+customerLocationClassID: 1 Time:07/09/2020 11:47:08 AM
+
+serviceTypeID: 1 Time:07/09/2020 11:47:08 AM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:07/09/2020 11:47:08 AM
+
+orderQuantity: 20 Time:07/09/2020 11:47:08 AM
+
+Net Cost: -1 Time:07/09/2020 11:47:08 AM
+
+SMS: عميلنا العزيز: تم فتح طلب صهريج مياه برقم 7511849812 وسيتم التواصل معكم لتأكيد استلام الصهريج Time:07/09/2020 11:47:09 AM
+
+Create WorkOrder: Success Time:07/09/2020 11:47:09 AM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/09/2020 11:58:20 AM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:07/09/2020 11:58:20 AM
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 7511849812 - TransporterID 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransportrStatus: 0 Time:07/09/2020 11:58:21 AM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:07/09/2020 11:58:21 AM
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:07/09/2020 11:58:21 AM
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 7511849812 - TransporterID: 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransporterStatus: 11 Time:07/09/2020 11:58:22 AM
+
+Start Inserting Driver SMS: OrderNo:7511849812, VehicleId:4723c36e-f122-4b36-a24f-52f231afa4e5, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:07/09/2020 11:58:22 AM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 7511849812 - TransporterID: 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransporterStatus: 11 Time:07/09/2020 11:58:22 AM
+
+SMS: تم تخصيص رقم الطلب 7511849812 ويمكن التواصل على جوال العميل 032453245345 موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:07/09/2020 11:58:22 AM
+
+Start Inserting Customer SMS: OrderNo:7511849812, VehicleId:4723c36e-f122-4b36-a24f-52f231afa4e5, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:07/09/2020 11:58:22 AM
+
+SMS: عميلنا العزيز: نفيدكم بتخصيص ناقلة مياه لطلبكم رقم 7511849812 Time:07/09/2020 11:58:23 AM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"7511849812","cisDivision":19,"orderStatus":4,"updateDateTime":"07-09-2020 11:58:23","parameters":[{"parameterName":"TMSID","parameterValue":"7511849812"},{"parameterName":"COMMENT","parameterValue":""}]} Time:07/09/2020 11:58:23 AM
+
+----------------------------------------AssignWorkOrder - Denormalizer - End---------------------------------------- Time:07/09/2020 11:58:44 AM
+

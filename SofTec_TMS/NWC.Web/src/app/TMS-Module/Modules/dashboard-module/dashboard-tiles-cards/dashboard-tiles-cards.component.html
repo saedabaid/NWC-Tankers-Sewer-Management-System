@@ -1,0 +1,74 @@
+<div class="d-flex bd-highlight  justify-content-between w-100  ">
+  <div class="p-2 bd-highlight w-100 ml-2 mr-2 bg-light flex-fill d-flex  justify-content-center btn" (click)="tileClicked(0)">
+    <div class="  d-flex flex-column  align-self-center justify-content-center">
+      <div *ngIf="!loading_AllOrders" class="text-center font-16 font-weight-bold">{{count_AllOrders}}</div>
+      <div *ngIf="loading_AllOrders" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+      <div class="font-12">{{'Dashboard_AllOrders' | translate}}</div>
+    </div>
+  </div>
+  <div class="p-2 bd-highlight w-100 ml-2 mr-2 bg-nwc flex-fill d-flex  justify-content-center btn" (click)="tileClicked(1)">
+    <div class="  d-flex flex-column  align-self-center justify-content-center">
+      <div *ngIf="!loading_New" class="text-center font-16 font-weight-bold">{{count_New}}</div>
+      <div *ngIf="loading_New" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+      <div class="font-12">{{'Dashboard_New' | translate}}</div>
+    </div>
+  </div>
+  <div class="p-2 bd-highlight w-100 ml-2 mr-2 bg-nwc flex-fill d-flex  justify-content-center btn" (click)="tileClicked(5)">
+    <div class="  d-flex flex-column  align-self-center justify-content-center">
+      <div class="text-center font-16 font-weight-bold" *ngIf="!loading_Assigned">{{count_Assigned}}</div>
+      <div *ngIf="loading_Assigned" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+      <div class="font-12">{{'Dashboard_Assigned' | translate }}</div>
+    </div>
+  </div>
+  <div class="p-2 bd-highlight w-100 ml-2 mr-2 bg-nwc flex-fill d-flex  justify-content-center btn" (click)="tileClicked(6)">
+    <div class="  d-flex flex-column  align-self-center justify-content-center">
+      <div *ngIf="!loading_OutForDelivery" class="text-center font-16 font-weight-bold">{{count_OutForDelivery}}</div>
+      <div *ngIf="loading_OutForDelivery" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+      <div class="font-12">{{'Dashboard_OutForDelivery' | translate }}</div>
+    </div>
+  </div>
+  <div class="p-2 bd-highlight w-100 ml-2 mr-2 bg-nwc flex-fill d-flex  justify-content-center btn" (click)="tileClicked(4)">
+    <div class="  d-flex flex-column  align-self-center justify-content-center">
+      <div *ngIf="!loading_Delivered" class="text-center font-16 font-weight-bold">{{count_Delivered}}</div>
+      <div *ngIf="loading_Delivered" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+      <div class="font-12">{{'Dashboard_Delivered'| translate }}</div>
+    </div>
+  </div>
+  <div class="p-2 bd-highlight w-100 ml-2 mr-2 bg-nwc flex-fill d-flex  justify-content-center btn" (click)="tileClicked(2)">
+    <div class="  d-flex flex-column  align-self-center justify-content-center">
+      <div *ngIf="!loading_Onhold" class="text-center font-16 font-weight-bold">{{count_Onhold}}</div>
+      <div *ngIf="loading_Onhold" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+      <div class="font-12">{{'Dashboard_Onhold' | translate }}</div>
+    </div>
+  </div>
+  <div class="p-2 bd-highlight w-100 ml-2 mr-2 bg-nwc flex-fill d-flex  justify-content-center btn" (click)="tileClicked(8)">
+    <div class="  d-flex flex-column  align-self-center justify-content-center">
+      <div *ngIf="!loading_Cancelled" class="text-center font-16 font-weight-bold">{{count_Cancelled}}</div>
+      <div *ngIf="loading_Cancelled" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+      <div class="font-12">{{'Dashboard_Cancelled' | translate }}</div>
+    </div>
+  </div>
+  <div class="p-2 bd-highlight w-100 ml-2 mr-2 bg-nwc flex-fill d-flex  justify-content-center btn" (click)="tileClicked(3)">
+    <div class="  d-flex flex-column  align-self-center justify-content-center">
+      <div *ngIf="!loading_FailedToDeliver" class="text-center font-16 font-weight-bold">{{count_FailedToDeliver}}</div>
+      <div *ngIf="loading_FailedToDeliver" class="text-center">
+        <img class="loading-width" src={{ImageUrl}} />
+      </div>
+      <div class="font-12">{{'Dashboard_FailedToDeliver' | translate }}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.search-parent {
+  display: block;
+  position: relative;
+
+  .search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 11px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+
+    &:hover {
+      background: none;
+    }
+  }
+}
+
+
+.rtl {
+  .search-parent {
+    
+  .search-btn {
+    left: 0;
+    right: unset;
+  }
+  }
+
+
+}

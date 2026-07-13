@@ -1,0 +1,354 @@
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:00:22 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:00:39 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:00:56 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:01:06 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:03:15 PM
+
+fire from (Contractor-EditContractor) service-Lang: ar, thread lang: ar-EG Time:07/07/2020 04:03:15 م
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:03:33 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"21103723263882","cisDivision":19,"orderStatus":5,"updateDateTime":"07-07-2020 16:03:34","parameters":[{"parameterName":"TMSID","parameterValue":"21103723263882"},{"parameterName":"COMMENT","parameterValue":""}]} Time:07/07/2020 4:03:34 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:04:04 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:07/07/2020 04:04:04 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 0009172107 - TransporterID dfc6273b-505f-41cc-8b27-0b0507114dcc - TransportrStatus: 0 Time:07/07/2020 04:04:04 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:07/07/2020 04:04:04 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:07/07/2020 4:04:04 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 0009172107 - TransporterID: dfc6273b-505f-41cc-8b27-0b0507114dcc - TransporterStatus: 11 Time:07/07/2020 04:04:05 م
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 0009172107 - TransporterID: dfc6273b-505f-41cc-8b27-0b0507114dcc - TransporterStatus: 11 Time:07/07/2020 4:04:05 PM
+
+AssignWorkOrder - Error Time:07/07/2020 4:04:05 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:05:18 PM
+
+----------------------------------------GetMatchedWorkOrderToAssign---------------------------------------- Time:07/07/2020 04:05:20 م
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:06:36 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:07/07/2020 04:06:36 م
+
+CreateWorkOrder Time:07/07/2020 04:06:36 م
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5537,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:07/07/2020 04:06:36 م
+
+Valid Time:07/07/2020 04:06:36 م
+
+Create WorkOrder: Partially Success Time:07/07/2020 04:06:37 م
+
+customerAccount: 5537 Time:07/07/2020 4:06:37 PM
+
+customerLocation: 5537 Time:07/07/2020 4:06:37 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:07/07/2020 4:06:38 PM
+
+OrderNumber: 3441207872 Time:07/07/2020 4:06:38 PM
+
+workOrderID: 45973 Time:07/07/2020 4:06:38 PM
+
+scheduledDeliveryTime: 07/07/2020 4:06:36 PM Time:07/07/2020 4:06:38 PM
+
+customerLocationClassID: 1 Time:07/07/2020 4:06:38 PM
+
+serviceTypeID: 1 Time:07/07/2020 4:06:38 PM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:07/07/2020 4:06:38 PM
+
+orderQuantity: 20 Time:07/07/2020 4:06:38 PM
+
+Net Cost: -1 Time:07/07/2020 4:06:38 PM
+
+Create WorkOrder: Success Time:07/07/2020 4:06:38 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:06:47 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:07/07/2020 04:06:47 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 3441207872 - TransporterID 4a28d977-5f1e-4e96-b95e-1a64f5758fab - TransportrStatus: 0 Time:07/07/2020 04:06:48 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:07/07/2020 04:06:48 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:07/07/2020 4:06:48 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 3441207872 - TransporterID: 4a28d977-5f1e-4e96-b95e-1a64f5758fab - TransporterStatus: 11 Time:07/07/2020 04:06:48 م
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 3441207872 - TransporterID: 4a28d977-5f1e-4e96-b95e-1a64f5758fab - TransporterStatus: 11 Time:07/07/2020 4:06:48 PM
+
+AssignWorkOrder - Error Time:07/07/2020 4:06:48 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:08:45 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"0009172107","cisDivision":19,"orderStatus":5,"updateDateTime":"07-07-2020 16:08:46","parameters":[{"parameterName":"TMSID","parameterValue":"0009172107"},{"parameterName":"COMMENT","parameterValue":""}]} Time:07/07/2020 4:08:46 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:09:33 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"0009172107","cisDivision":19,"orderStatus":3,"updateDateTime":"07-07-2020 16:09:34","parameters":[{"parameterName":"TMSID","parameterValue":"0009172107"},{"parameterName":"COMMENT","parameterValue":""}]} Time:07/07/2020 4:09:34 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:10:40 PM
+
+----------------------------------------GetMatchedWorkOrderToAssign---------------------------------------- Time:07/07/2020 04:10:41 م
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:16:08 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:17:19 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:20:48 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:21:03 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:31:31 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:07/07/2020 04:31:31 م
+
+CreateWorkOrder Time:07/07/2020 04:31:31 م
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5537,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:07/07/2020 04:31:31 م
+
+Valid Time:07/07/2020 04:31:32 م
+
+Create WorkOrder: Partially Success Time:07/07/2020 04:31:33 م
+
+customerAccount: 5537 Time:07/07/2020 4:31:33 PM
+
+customerLocation: 5537 Time:07/07/2020 4:31:33 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:07/07/2020 4:31:33 PM
+
+OrderNumber: 8823672942 Time:07/07/2020 4:31:33 PM
+
+workOrderID: 45979 Time:07/07/2020 4:31:33 PM
+
+scheduledDeliveryTime: 07/07/2020 4:31:31 PM Time:07/07/2020 4:31:33 PM
+
+customerLocationClassID: 1 Time:07/07/2020 4:31:33 PM
+
+serviceTypeID: 1 Time:07/07/2020 4:31:34 PM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:07/07/2020 4:31:34 PM
+
+orderQuantity: 20 Time:07/07/2020 4:31:34 PM
+
+Net Cost: -1 Time:07/07/2020 4:31:34 PM
+
+Create WorkOrder: Success Time:07/07/2020 4:31:34 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:31:43 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:07/07/2020 04:31:43 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 8823672942 - TransporterID 0f46ecf1-040d-4a2b-a9a8-07521e2aa93b - TransportrStatus: 0 Time:07/07/2020 04:31:44 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:07/07/2020 04:31:44 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:07/07/2020 4:31:45 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 8823672942 - TransporterID: 0f46ecf1-040d-4a2b-a9a8-07521e2aa93b - TransporterStatus: 11 Time:07/07/2020 04:31:46 م
+
+AssignWorkOrder - Error Time:07/07/2020 4:31:46 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:39:14 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"8823672942","cisDivision":19,"orderStatus":5,"updateDateTime":"07-07-2020 16:39:15","parameters":[{"parameterName":"TMSID","parameterValue":"8823672942"},{"parameterName":"COMMENT","parameterValue":""}]} Time:07/07/2020 4:39:15 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:39:46 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"8823672942","cisDivision":19,"orderStatus":3,"updateDateTime":"07-07-2020 16:39:47","parameters":[{"parameterName":"TMSID","parameterValue":"8823672942"},{"parameterName":"COMMENT","parameterValue":""}]} Time:07/07/2020 4:39:47 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:40:23 PM
+
+----------------------------------------GetMatchedWorkOrderToAssign---------------------------------------- Time:07/07/2020 04:40:24 م
+
+Get available vehicle by ID - VehicleID: 0f46ecf1-040d-4a2b-a9a8-07521e2aa93b - StationID: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:07/07/2020 04:40:25 م
+
+Get vehicle classes - Classes Count: 5 Time:07/07/2020 04:40:25 م
+
+Get WorkOrder - dtFrom: 07/07/2020 04:40:25 م Time:07/07/2020 04:40:25 م
+
+Get WorkOrder - Order Number: 7204118896 Time:07/07/2020 04:40:25 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:07/07/2020 04:40:26 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 7204118896 - TransporterID 0f46ecf1-040d-4a2b-a9a8-07521e2aa93b - TransportrStatus: 0 Time:07/07/2020 04:40:26 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:07/07/2020 04:40:26 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:07/07/2020 4:40:26 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 7204118896 - TransporterID: 0f46ecf1-040d-4a2b-a9a8-07521e2aa93b - TransporterStatus: 11 Time:07/07/2020 04:40:26 م
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 7204118896 - TransporterID: 0f46ecf1-040d-4a2b-a9a8-07521e2aa93b - TransporterStatus: 11 Time:07/07/2020 4:40:26 PM
+
+AssignWorkOrder - Error Time:07/07/2020 4:40:26 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:41:19 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"3441207872","cisDivision":19,"orderStatus":7,"updateDateTime":"07-07-2020 16:41:20","parameters":[{"parameterName":"TMSID","parameterValue":"3441207872"},{"parameterName":"COMMENT","parameterValue":""},{"parameterName":"CANREASON","parameterValue":"4"}]} Time:07/07/2020 4:41:20 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:42:27 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:07/07/2020 04:42:27 م
+
+CreateWorkOrder Time:07/07/2020 04:42:27 م
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5537,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:07/07/2020 04:42:27 م
+
+Valid Time:07/07/2020 04:42:31 م
+
+Create WorkOrder: Partially Success Time:07/07/2020 04:42:32 م
+
+customerAccount: 5537 Time:07/07/2020 4:42:36 PM
+
+customerLocation: 5537 Time:07/07/2020 4:42:36 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:07/07/2020 4:42:36 PM
+
+OrderNumber: 6627669463 Time:07/07/2020 4:42:36 PM
+
+workOrderID: 45987 Time:07/07/2020 4:42:36 PM
+
+scheduledDeliveryTime: 07/07/2020 4:42:30 PM Time:07/07/2020 4:42:36 PM
+
+customerLocationClassID: 1 Time:07/07/2020 4:42:36 PM
+
+serviceTypeID: 1 Time:07/07/2020 4:42:36 PM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:07/07/2020 4:42:36 PM
+
+orderQuantity: 20 Time:07/07/2020 4:42:36 PM
+
+Net Cost: -1 Time:07/07/2020 4:42:37 PM
+
+Create WorkOrder: Success Time:07/07/2020 4:42:37 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:42:58 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:07/07/2020 04:43:07 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 6627669463 - TransporterID dfc6273b-505f-41cc-8b27-0b0507114dcc - TransportrStatus: 0 Time:07/07/2020 04:43:08 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:07/07/2020 04:43:08 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:07/07/2020 4:43:56 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 6627669463 - TransporterID: dfc6273b-505f-41cc-8b27-0b0507114dcc - TransporterStatus: 11 Time:07/07/2020 04:44:07 م
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 6627669463 - TransporterID: dfc6273b-505f-41cc-8b27-0b0507114dcc - TransporterStatus: 11 Time:07/07/2020 4:44:08 PM
+
+AssignWorkOrder - Error Time:07/07/2020 4:45:12 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:45:42 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:07/07/2020 04:45:42 م
+
+CreateWorkOrder Time:07/07/2020 04:45:42 م
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5537,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:07/07/2020 04:45:42 م
+
+Valid Time:07/07/2020 04:45:43 م
+
+Create WorkOrder: Partially Success Time:07/07/2020 04:45:43 م
+
+customerAccount: 5537 Time:07/07/2020 4:45:44 PM
+
+customerLocation: 5537 Time:07/07/2020 4:45:44 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:07/07/2020 4:45:44 PM
+
+OrderNumber: 5390503274 Time:07/07/2020 4:45:44 PM
+
+workOrderID: 45989 Time:07/07/2020 4:45:44 PM
+
+scheduledDeliveryTime: 07/07/2020 4:45:42 PM Time:07/07/2020 4:45:44 PM
+
+customerLocationClassID: 1 Time:07/07/2020 4:45:44 PM
+
+serviceTypeID: 1 Time:07/07/2020 4:45:44 PM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:07/07/2020 4:45:44 PM
+
+orderQuantity: 20 Time:07/07/2020 4:45:44 PM
+
+Net Cost: -1 Time:07/07/2020 4:45:44 PM
+
+Create WorkOrder: Success Time:07/07/2020 4:45:44 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:45:56 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:07/07/2020 04:45:57 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 5390503274 - TransporterID 4a28d977-5f1e-4e96-b95e-1a64f5758fab - TransportrStatus: 0 Time:07/07/2020 04:45:57 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:07/07/2020 04:45:57 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:07/07/2020 4:46:00 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 5390503274 - TransporterID: 4a28d977-5f1e-4e96-b95e-1a64f5758fab - TransporterStatus: 11 Time:07/07/2020 04:46:00 م
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 5390503274 - TransporterID: 4a28d977-5f1e-4e96-b95e-1a64f5758fab - TransporterStatus: 11 Time:07/07/2020 4:46:01 PM
+
+Start Inserting Driver SMS: OrderNo:5390503274, VehicleId:4a28d977-5f1e-4e96-b95e-1a64f5758fab, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:07/07/2020 4:46:01 PM
+
+Start Inserting Customer SMS: OrderNo:5390503274, VehicleId:4a28d977-5f1e-4e96-b95e-1a64f5758fab, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:07/07/2020 4:46:44 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:49:44 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"6627669463","cisDivision":19,"orderStatus":1,"updateDateTime":"07-07-2020 16:49:46","parameters":[{"parameterName":"TMSID","parameterValue":"6627669463"},{"parameterName":"COMMENT","parameterValue":""}]} Time:07/07/2020 4:49:47 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:50:49 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:51:02 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:07/07/2020 04:51:03 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 6627669463 - TransporterID dfc6273b-505f-41cc-8b27-0b0507114dcc - TransportrStatus: 0 Time:07/07/2020 04:51:04 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:07/07/2020 04:51:04 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:07/07/2020 4:51:10 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 6627669463 - TransporterID: dfc6273b-505f-41cc-8b27-0b0507114dcc - TransporterStatus: 11 Time:07/07/2020 04:51:11 م
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 6627669463 - TransporterID: dfc6273b-505f-41cc-8b27-0b0507114dcc - TransporterStatus: 11 Time:07/07/2020 4:51:11 PM
+
+Start Inserting Driver SMS: OrderNo:6627669463, VehicleId:dfc6273b-505f-41cc-8b27-0b0507114dcc, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:07/07/2020 4:51:13 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:58:07 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"6627669463","cisDivision":19,"orderStatus":1,"updateDateTime":"07-07-2020 16:58:10","parameters":[{"parameterName":"TMSID","parameterValue":"6627669463"},{"parameterName":"COMMENT","parameterValue":""}]} Time:07/07/2020 4:58:10 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:59:00 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 4:59:13 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:07/07/2020 04:59:14 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 6627669463 - TransporterID dfc6273b-505f-41cc-8b27-0b0507114dcc - TransportrStatus: 0 Time:07/07/2020 04:59:15 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:07/07/2020 04:59:15 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:07/07/2020 4:59:17 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 6627669463 - TransporterID: dfc6273b-505f-41cc-8b27-0b0507114dcc - TransporterStatus: 11 Time:07/07/2020 04:59:17 م
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 6627669463 - TransporterID: dfc6273b-505f-41cc-8b27-0b0507114dcc - TransporterStatus: 11 Time:07/07/2020 4:59:18 PM
+
+Start Inserting Driver SMS: OrderNo:6627669463, VehicleId:dfc6273b-505f-41cc-8b27-0b0507114dcc, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:07/07/2020 4:59:19 PM
+
+SMS: تم تخصيص رقم الطلب 6627669463 ويمكن التواصل على جوال العميل 032453245345 موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:07/07/2020 4:59:28 PM
+
+Start Inserting Customer SMS: OrderNo:6627669463, VehicleId:dfc6273b-505f-41cc-8b27-0b0507114dcc, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:07/07/2020 4:59:34 PM
+
+SMS: عميلنا العزيز: نفيدكم بتخصيص ناقلة مياه لطلبكم رقم 6627669463 Time:07/07/2020 4:59:38 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"6627669463","cisDivision":19,"orderStatus":4,"updateDateTime":"07-07-2020 16:59:41","parameters":[{"parameterName":"TMSID","parameterValue":"6627669463"},{"parameterName":"COMMENT","parameterValue":""}]} Time:07/07/2020 4:59:41 PM
+

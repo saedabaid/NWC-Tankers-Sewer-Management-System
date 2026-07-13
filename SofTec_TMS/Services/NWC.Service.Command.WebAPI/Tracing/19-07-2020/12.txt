@@ -1,0 +1,14 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:19/07/2020 12:58:14 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:19/07/2020 12:58:42 PM
+
+----------------------------------------GetMatchedWorkOrderToAssign---------------------------------------- Time:19/07/2020 12:58:42 م
+
+Get available vehicle by ID - VehicleID: 2f50b37d-17bc-4925-9d6c-9d292930ecc1 - StationID: ba0e5aeb-8104-4a04-823e-8d41c922c647 Time:19/07/2020 12:58:42 م
+
+Get vehicle classes - Classes Count: 4 Time:19/07/2020 12:58:42 م
+
+Get WorkOrder - dtFrom: 19/07/2020 12:58:42 م Time:19/07/2020 12:58:42 م
+
+Get WorkOrder - Order List: null or empty Time:19/07/2020 12:58:43 م
+

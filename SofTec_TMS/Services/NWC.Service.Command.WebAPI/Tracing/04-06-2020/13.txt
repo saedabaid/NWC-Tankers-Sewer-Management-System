@@ -1,0 +1,152 @@
+--------------------------------------------------------------------------------------------------------------------------- Time:04/06/2020 1:46:55 PM
+
+CreateWorkOrder Time:04/06/2020 1:46:55 PM
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":10,"CustomerLocationID":105,"ServiceTypeID":1,"StationID":"4e9af4ae-998f-48d3-9aaf-00414a13bb41","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":"123434","Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:04/06/2020 1:46:55 PM
+
+Not-Valid - Errors: ["StationDoesNotAssignedToContract"] Time:04/06/2020 1:46:57 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:04/06/2020 1:47:12 PM
+
+CreateWorkOrder Time:04/06/2020 1:47:12 PM
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":10,"CustomerLocationID":39,"ServiceTypeID":1,"StationID":"cd26dc4e-6134-4ee6-adac-aab997046378","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":"123434","Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:04/06/2020 1:47:12 PM
+
+Valid Time:04/06/2020 1:47:12 PM
+
+Create WorkOrder: Partially Success Time:04/06/2020 1:47:14 PM
+
+customerLocation: 39 Time:04/06/2020 1:47:14 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:04/06/2020 1:47:14 PM
+
+OrderNumber: 8391082505 Time:04/06/2020 1:47:14 PM
+
+workOrderID: 45566 Time:04/06/2020 1:47:14 PM
+
+scheduledDeliveryTime: 04/06/2020 1:47:12 PM Time:04/06/2020 1:47:14 PM
+
+customerLocationClassID: 1 Time:04/06/2020 1:47:14 PM
+
+serviceTypeID: 1 Time:04/06/2020 1:47:14 PM
+
+zoneStation: cd26dc4e-6134-4ee6-adac-aab997046378 Time:04/06/2020 1:47:14 PM
+
+orderQuantity: 10 Time:04/06/2020 1:47:14 PM
+
+contract == null: False Time:04/06/2020 1:47:14 PM
+
+contractID: 10040 Time:04/06/2020 1:47:14 PM
+
+contractStationTariaff == null: False Time:04/06/2020 1:47:15 PM
+
+contractStationTariaffID: 259 Time:04/06/2020 1:47:15 PM
+
+totalQuantityCost: 500.0000 Time:04/06/2020 1:47:15 PM
+
+extraKMCost: 300.00000000 Time:04/06/2020 1:47:15 PM
+
+totalCost: 800.00000000 Time:04/06/2020 1:47:15 PM
+
+Net Cost: 800.00000000 Time:04/06/2020 1:47:15 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:04/06/2020 1:51:19 PM
+
+CreateWorkOrder Time:04/06/2020 1:51:19 PM
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":10,"CustomerLocationID":39,"ServiceTypeID":1,"StationID":"cd26dc4e-6134-4ee6-adac-aab997046378","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":"123434","Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:04/06/2020 1:51:19 PM
+
+Valid Time:04/06/2020 1:51:20 PM
+
+Create WorkOrder: Partially Success Time:04/06/2020 1:51:22 PM
+
+customerLocation: 39 Time:04/06/2020 1:51:23 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:04/06/2020 1:51:23 PM
+
+OrderNumber: 4457027332 Time:04/06/2020 1:51:23 PM
+
+workOrderID: 45567 Time:04/06/2020 1:51:23 PM
+
+scheduledDeliveryTime: 04/06/2020 1:51:19 PM Time:04/06/2020 1:51:23 PM
+
+customerLocationClassID: 1 Time:04/06/2020 1:51:23 PM
+
+serviceTypeID: 1 Time:04/06/2020 1:51:23 PM
+
+zoneStation: cd26dc4e-6134-4ee6-adac-aab997046378 Time:04/06/2020 1:51:23 PM
+
+orderQuantity: 10 Time:04/06/2020 1:51:23 PM
+
+contract == null: False Time:04/06/2020 1:51:23 PM
+
+contractID: 10040 Time:04/06/2020 1:51:23 PM
+
+contractStationTariaff == null: False Time:04/06/2020 1:51:23 PM
+
+contractStationTariaffID: 259 Time:04/06/2020 1:51:23 PM
+
+totalQuantityCost: 500.0000 Time:04/06/2020 1:51:23 PM
+
+extraKMCost: 300.00000000 Time:04/06/2020 1:51:23 PM
+
+totalCost: 800.00000000 Time:04/06/2020 1:51:24 PM
+
+Net Cost: 800.00000000 Time:04/06/2020 1:51:24 PM
+
+start sending SMS: orderNo:4457027332, VehicleId:00000000-0000-0000-0000-000000000000, DriverId:00000000-0000-0000-0000-000000000000, CustomerLocationId:39 Time:04/06/2020 1:51:32 PM
+
+SMS: تم تخصيص رقم الطلب 4457027332 ويمكن التواصل على جوال العميل  موقع العميل  Time:04/06/2020 1:52:01 PM
+
+Create WorkOrder: Fail, Exception: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. Time:04/06/2020 1:52:01 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:04/06/2020 1:52:59 PM
+
+CreateWorkOrder Time:04/06/2020 1:52:59 PM
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":10,"CustomerLocationID":39,"ServiceTypeID":1,"StationID":"cd26dc4e-6134-4ee6-adac-aab997046378","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":"123434","Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:04/06/2020 1:52:59 PM
+
+Valid Time:04/06/2020 1:53:00 PM
+
+Create WorkOrder: Partially Success Time:04/06/2020 1:53:02 PM
+
+customerLocation: 39 Time:04/06/2020 1:53:02 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:04/06/2020 1:53:02 PM
+
+OrderNumber: 4754706600 Time:04/06/2020 1:53:02 PM
+
+workOrderID: 45568 Time:04/06/2020 1:53:02 PM
+
+scheduledDeliveryTime: 04/06/2020 1:52:59 PM Time:04/06/2020 1:53:02 PM
+
+customerLocationClassID: 1 Time:04/06/2020 1:53:02 PM
+
+serviceTypeID: 1 Time:04/06/2020 1:53:02 PM
+
+zoneStation: cd26dc4e-6134-4ee6-adac-aab997046378 Time:04/06/2020 1:53:02 PM
+
+orderQuantity: 10 Time:04/06/2020 1:53:02 PM
+
+contract == null: False Time:04/06/2020 1:53:03 PM
+
+contractID: 10040 Time:04/06/2020 1:53:03 PM
+
+contractStationTariaff == null: False Time:04/06/2020 1:53:03 PM
+
+contractStationTariaffID: 259 Time:04/06/2020 1:53:03 PM
+
+totalQuantityCost: 500.0000 Time:04/06/2020 1:53:03 PM
+
+extraKMCost: 300.00000000 Time:04/06/2020 1:53:03 PM
+
+totalCost: 800.00000000 Time:04/06/2020 1:53:03 PM
+
+Net Cost: 800.00000000 Time:04/06/2020 1:53:03 PM
+
+start sending SMS: orderNo:4754706600, VehicleId:00000000-0000-0000-0000-000000000000, DriverId:00000000-0000-0000-0000-000000000000, CustomerLocationId:39 Time:04/06/2020 1:53:08 PM
+
+SMS: تم تخصيص رقم الطلب 4754706600 ويمكن التواصل على جوال العميل  موقع العميل  Time:04/06/2020 1:53:29 PM
+
+Create WorkOrder: Fail, Exception: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. Time:04/06/2020 1:53:29 PM
+

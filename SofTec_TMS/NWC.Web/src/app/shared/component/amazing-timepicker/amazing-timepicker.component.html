@@ -1,0 +1,11 @@
+<input  class="form-control time-control" id={{id}} type="time"  [disabled]="viewOnly"
+[(ngModel)]="selectedTime"  (blur)="onBlurMethod($event)"/> 
+<a (click)="OpenTime()" class="ico-time"><i class="far fa-clock"></i></a>
+
+<!-- 
+<input class="form-control" id={{id}} type="time" (click)="OpenTime()" [disabled]="viewOnly"
+[(ngModel)]="selectedTime"/> -->
+
+<!-- <label  id={{id}}   class="glyphicon glyphicon-time calender-btn time-btn" ></label> -->
+<!-- <timepicker  [showSpinners]="showSpinners" class="time" type="time" [disabled]="viewOnly"
+[(ngModel)]="selectedTime"></timepicker> -->

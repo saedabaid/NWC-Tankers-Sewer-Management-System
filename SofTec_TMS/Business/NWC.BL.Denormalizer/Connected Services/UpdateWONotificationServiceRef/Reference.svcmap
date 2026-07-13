@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9d47d0ba-0ca4-408d-9856-42d33b5ef058" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.56.59.80:21303/NwcCompass/TMSNwcUpdateWONotificationProject/TMSNwcUpdateWONotification?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TMSNwcUpdateWONotification.wsdl" MetadataType="Wsdl" ID="091f9024-e62f-42cf-9c6c-d2a278579d4d" SourceId="1" SourceUrl="http://10.56.59.80:21303/NwcCompass/TMSNwcUpdateWONotificationProject/TMSNwcUpdateWONotification?wsdl" />
+    <MetadataFile FileName="TMSNwcUpdateWONotification.xsd" MetadataType="Schema" ID="816f66b1-6529-4a94-9aa8-842e014f5781" SourceId="1" SourceUrl="http://10.56.59.80:21303/NwcCompass/TMSNwcUpdateWONotificationProject/TMSNwcUpdateWONotification?SCHEMA%2FTMSNwcUpdateWONotificationProject%2FResources%2FSchemas%2FTMSNwcUpdateWONotification" />
+    <MetadataFile FileName="TMSNwcUpdateWONotification1.xsd" MetadataType="Schema" ID="a1b91690-0ee6-42c5-8d4b-715f7b53d820" SourceId="1" SourceUrl="http://10.56.59.80:21303/NwcCompass/TMSNwcUpdateWONotificationProject/TMSNwcUpdateWONotification?SCHEMA%2FeChannelCommonServices%2FResources%2FSchemas%2FeChannelService" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

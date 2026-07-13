@@ -1,0 +1,17 @@
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\bin\Debug\Infrastructure.dll.config
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\bin\Debug\Infrastructure.dll
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\bin\Debug\Infrastructure.pdb
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\bin\Debug\EntityFramework.dll
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\bin\Debug\System.Linq.Dynamic.dll
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\bin\Debug\System.Web.Mvc.dll
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\bin\Debug\Microsoft.Web.Infrastructure.dll
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\bin\Debug\EntityFramework.xml
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\bin\Debug\System.Web.Mvc.xml
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\bin\Debug\Microsoft.Web.Infrastructure.xml
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\obj\Debug\Common.Infrastructure.csproj.AssemblyReference.cache
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\obj\Debug\Common.Infrastructure.csproj.CoreCompileInputs.cache
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\obj\Debug\Common.Infrastructure.csproj.CopyComplete
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\obj\Debug\Infrastructure.dll
+G:\SofTec_TMS\SofTec_TMS\Common\Infrastructure\obj\Debug\Infrastructure.pdb

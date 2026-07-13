@@ -1,0 +1,332 @@
+<div class="container">
+  <div class="row landing__page">
+    <div *ngIf="show_Dashboard" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('dashboard')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/dashboard.svg"
+                   alt="dashboard" />
+            </div>
+            <h5 class="text-capitalize">{{ "TMS_Dashboard" | translate }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div *ngIf="show_OrderList" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('order/orderlist')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/list.svg"
+                   alt="Order List" />
+            </div>
+            <h5 class="text-capitalize">{{ "TMS_orderlist" | translate }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+    <div *ngIf="show_Reports" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('reports')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/report.svg"
+                   alt="report" />
+            </div>
+            <h5 class="text-capitalize">{{ "Reports" | translate }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+
+
+
+    <div *ngIf="show_EntryGate" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('gate/entry')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/entry.svg" alt="entry" />
+            </div>
+            <h5 class="text-capitalize">{{ "TMS_entrygate" | translate }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div *ngIf="show_ExitGate" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('gate/exit')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/exit.svg" alt="exit" />
+            </div>
+            <h5 class="text-capitalize">{{ "TMS_exitgate" | translate }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div *ngIf="show_DeferredOrders" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('integration/deferredorderslist')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/refund.svg"
+                   alt="DeferredOrders" />
+            </div>
+            <h5 class="text-capitalize">{{ "DeferredOrders" | translate }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+    <div *ngIf="show_MassOrderTransfer" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('order/massTransfer')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/refund.svg"
+                   alt="DeferredOrders" />
+            </div>
+            <h5 class="text-capitalize">
+              {{ "MassOrderTransferStation" | translate }}
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div *ngIf="show_Customers" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('customer/customerlist')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/contract.svg"
+                   alt="contract" />
+            </div>
+            <h5 class="text-capitalize">
+              {{ "TMS_CustomerList" | translate }}
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+    <div *ngIf="show_SoqyaScheduling" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('soqya/SoqyaScheduling')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/calendar.svg"
+                   alt="SoqyaScheduling" />
+            </div>
+            <h5 class="text-capitalize">{{ "SoqyaScheduling" | translate }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div *ngIf="show_ContractTermsViolations" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('contract/violationslist')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/contract.svg"
+                   alt="contract" />
+            </div>
+            <h5 class="text-capitalize">
+              {{ "TMS_contractTermsViolationslist" | translate }}
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div *ngIf="show_Zone" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('zone/zonelist')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/time-zone.svg"
+                   alt="time-zone" />
+            </div>
+            <h5 class="text-capitalize">{{ "TMS_zonelist" | translate }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div *ngIf="show_Vehicle" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('vehicle/vehiclelist')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/speedometer.svg"
+                   alt="vehicles" />
+            </div>
+            <h5 class="text-capitalize">{{ "Vehicles" | translate }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div *ngIf="show_Contracts" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('contract/contractlist')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/contract.svg"
+                   alt="contract" />
+            </div>
+            <h5 class="text-capitalize">
+              {{ "TMS_contractlist" | translate }}
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div *ngIf="show_Contractors" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('contractor/contractorlist')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/engineer.svg"
+                   alt="ContractorList" />
+            </div>
+            <h5 class="text-capitalize">{{ "ContractorList" | translate }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div *ngIf="show_DeviceReadings" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('devicemeter/readingslist')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/speedometer.svg"
+                   alt="MeterReading" />
+            </div>
+            <h5 class="text-capitalize">{{ "MeterReading" | translate }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div *ngIf="show_StationSettings" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('controlpanel/station-settings')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/studio.svg"
+                   alt="StationsSettings" />
+            </div>
+            <h5 class="text-capitalize">
+              {{ "StationsSettings" | translate }}
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div *ngIf="show_VehicleSettings" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('controlpanel/vehicle-settings')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/bus-stop.svg"
+                   alt="VehiclesSettings" />
+            </div>
+            <h5 class="text-capitalize">
+              {{ "VehiclesSettings" | translate }}
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div *ngIf="show_UserStationPermissions" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('controlpanel/user-landmark-permission')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/login.svg"
+                   alt="UserStationPermission" />
+            </div>
+            <h5 class="text-capitalize">
+              {{ "UserStationPermission" | translate }}
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div *ngIf="show_BranchSettings" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('controlpanel/branch-settings')">
+        <div class="each__item">
+          <div class="title__item">
+
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/login.svg"
+                   alt="UserStationPermission" />
+            </div>
+            <h5 class="text-capitalize">
+              {{ "BranchSettings" | translate }}
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div *ngIf="show_SewerEntryGate" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('sewer-gate/entry')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/entry.svg" alt="entry" />
+            </div>
+            <h5 class="text-capitalize">{{ "LandingSewerEntryGate" | translate }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div *ngIf="show_SewerExitGate" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('sewer-gate/exit')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/exit.svg" alt="exit" />
+            </div>
+            <h5 class="text-capitalize">{{ "LandingSewerExitGate" | translate }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div *ngIf="show_Permits" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('permits/list')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/report.svg"
+                   alt="permits" />
+            </div>
+            <h5 class="text-capitalize">{{ "Permits" | translate }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div *ngIf="show_StationDashboard" class="col-md-4 col-sm-6 col-xs-12">
+      <a (click)="customRoute('station-dashboard')">
+        <div class="each__item">
+          <div class="title__item">
+            <div class="icon__item">
+              <img src="/assets/TMSBranding/styles/img/dashboard.svg"
+                   alt="Station Dashboard" />
+            </div>
+            <h5 class="text-capitalize">{{ "StationManagerDashboard" | translate }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

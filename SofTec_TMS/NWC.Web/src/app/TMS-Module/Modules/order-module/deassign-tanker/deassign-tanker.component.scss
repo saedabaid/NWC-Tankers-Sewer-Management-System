@@ -1,0 +1,155 @@
+.assigntanker {
+  width: 850px;
+max-width: 850px;
+
+
+  .order-info {
+    padding: 5px 10px;
+    .margin-10 {
+      margin: 0 10px;
+    }
+    span {
+    
+      text-transform: capitalize;
+
+      .fa-truck-moving {
+        font-size: 20pt;
+        vertical-align: bottom;
+        color: #a2a2a2;
+      }
+    }
+
+    .ordnum {
+      background: #eaeaea;
+      padding: 5px 15px;
+    }
+
+
+
+    .extra {
+      padding: 10px 15px;
+      background: #eaeaea;
+      margin-top: 5px;
+      color: black;
+    }
+  }
+
+  .inputs-data {
+    padding: 5px 0px;
+
+    span {
+      margin: 0 25px;
+
+      img {
+        vertical-align: middle;
+        width: 40px;
+      }
+
+      &.status {
+        color: #00a8d4;
+        width: 50px;
+      }
+      &.wid-100 {
+        width: 100px;
+        margin-right: 5px;
+      }
+      &.wid-50 {
+        width: 50px;
+        margin-right: 5px;
+      }
+      &.wid-150 {
+        width: 150px;
+        margin-right: 5px;
+      }
+      &.wid-200 {
+        width: 200px;
+      }
+
+    }
+
+
+
+
+  }
+
+  .question {
+    padding: 0 10px;
+
+    .required {
+      margin: 0;
+    }
+
+    h4 {
+      padding: 0 15px;
+
+    }
+  }
+
+  .input-radio-label {
+    background-color: #eee;
+    padding: 5px 10px;
+    margin: 5px 0;
+
+    .form-check-label {
+      width: 95%;
+      span {
+        display: inline-block;
+        &.type {
+          width: 100px;
+          // float: right;
+          margin-right: 10px;
+          text-transform: uppercase;
+        }
+        &.cod {
+          width: 100px;
+          margin-right: 10px;
+        }
+        &.adress {
+          width: 200px;
+          margin-right: 10px;
+        }
+        &.distance {
+          width: 60px;
+    margin-right: 10px;
+        }
+        &.time {
+          width: 120px;
+    margin-right: 10px;
+        }
+        &.quantity {
+          width: 50px;
+    margin-right: 5px;
+        }
+      }
+    }
+
+    .form-check-input {
+      margin: 0;
+      height: 24px !important;
+      float: right;
+      cursor: pointer;
+      vertical-align: bottom;
+    }
+
+    .action {
+      background-color: #00a8d4;
+      color: #fff;
+      padding: 5px 15px;
+      width: 140px;
+      text-align: center;
+      float: right;
+    }
+  }
+}
+
+
+
+.rtl {
+  .modal-footer {
+    text-align: left !important;
+  }
+}
+
+.h-7 {
+  height: 7px;
+}

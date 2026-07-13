@@ -1,0 +1,42 @@
+customerLocation: 65 Time:19/05/2020 6:17:00 PM
+
+workOrderID: 45482 Time:19/05/2020 6:17:00 PM
+
+scheduledDeliveryTime: 19/05/2020 6:16:58 PM Time:19/05/2020 6:17:00 PM
+
+customerLocationClassID: 2 Time:19/05/2020 6:17:00 PM
+
+serviceTypeID: 1 Time:19/05/2020 6:17:00 PM
+
+zoneStation: 1996ab0c-98fd-4822-a5d7-27dbf3cd9e05 Time:19/05/2020 6:17:00 PM
+
+orderQuantity: 10 Time:19/05/2020 6:17:00 PM
+
+contract == null: False Time:19/05/2020 6:17:00 PM
+
+contractID: 10040 Time:19/05/2020 6:17:00 PM
+
+contractStationTariaff == null: False Time:19/05/2020 6:17:00 PM
+
+contractStationTariaffID: 226 Time:19/05/2020 6:17:00 PM
+
+totalQuantityCost: 500.0000 Time:19/05/2020 6:17:00 PM
+
+extraKMCost: 300.00000000 Time:19/05/2020 6:17:00 PM
+
+totalCost: 800.00000000 Time:19/05/2020 6:17:00 PM
+
+contract == null: False Time:19/05/2020 6:18:17 PM
+
+contractID: 10040 Time:19/05/2020 6:18:17 PM
+
+contractStationTariaff == null: False Time:19/05/2020 6:18:17 PM
+
+contractStationTariaffID: 226 Time:19/05/2020 6:18:17 PM
+
+totalQuantityCost: 350.0000 Time:19/05/2020 6:18:17 PM
+
+extraKMCost: 300.00000000 Time:19/05/2020 6:18:17 PM
+
+totalCost: 650.00000000 Time:19/05/2020 6:18:17 PM
+

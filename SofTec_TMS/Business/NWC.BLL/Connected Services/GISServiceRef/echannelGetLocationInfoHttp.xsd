@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.echannelGetLocationInfoProject.org" elementFormDefault="qualified" targetNamespace="http://www.echannelGetLocationInfoProject.org" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="echannelGetLocationInfoRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" name="transactionId" type="xsd:string" />
+        <xsd:element minOccurs="1" name="sourceApplication">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:enumeration value="EBRANCH" />
+              <xsd:enumeration value="MOBAPP" />
+              <xsd:enumeration value="CCB" />
+              <xsd:enumeration value="TMS" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element minOccurs="1" name="orgCode">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:minLength value="1" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element minOccurs="1" name="locType">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:minLength value="1" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element minOccurs="1" name="locValue">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:minLength value="1" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element minOccurs="1" name="outputinfoType">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:minLength value="1" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="echannelGetLocationInfoResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" name="transactionId" type="xsd:string" />
+        <xsd:element minOccurs="0" name="sourceApplication" type="xsd:string" />
+        <xsd:element minOccurs="0" name="outputType" type="xsd:string" />
+        <xsd:element minOccurs="0" name="outputValue" type="xsd:string" />
+        <xsd:element minOccurs="0" name="status" type="xsd:string" />
+        <xsd:element minOccurs="0" name="responseCode" type="xsd:string" />
+        <xsd:element minOccurs="0" name="responseDescription" type="xsd:string" />
+        <xsd:element minOccurs="0" name="errorCode" type="xsd:string" />
+        <xsd:element minOccurs="0" name="errorDescription" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

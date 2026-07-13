@@ -1,0 +1,36 @@
+<div [class]=" (isLogged ? 'logged-in' : 'not-logged') ">
+  <div [ngClass]="displayLoader ? 'container-gif loading show' : 'container-gif loading'">
+    <div class="uil-ring-css" style="transform: scale(0.6);">
+      <div></div>
+    </div>
+  </div>
+  <div [class]=" 'container_fluid ' + (translateService.currentLang == 'ar' ? ' rtl' : '')">
+    <main-header
+      (menuStatus)="toggleMenu()"
+      (hideMenustate)="hideMenu()"
+    ></main-header>
+    <div [class]="(menuState ? 'showenMenu' : '') + (submenuState ? ' submenu-open' : '') + ' main-body'">
+      <side-menu
+        (subMenuState)="toggleSubmenu($event)"
+        (menuState)="toggleMenu()"
+        [isSubMenuOpend]="submenuState"
+        [isMenuState]="menuState"
+      ></side-menu>
+      <div [class]="' parent'" (click)="hideMenu()">
+        <div class="row h-100">
+          <div class="col-md-12" >
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="row footer-text">
+          <div class="col-md-12 text-center text-original">
+            &copy; 2021 {{ "productCopyright" | translate }}
+            <a href="https://lts.sa/" target="_blank"> LTS</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>

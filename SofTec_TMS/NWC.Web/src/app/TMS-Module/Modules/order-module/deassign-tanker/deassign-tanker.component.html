@@ -1,0 +1,113 @@
+<div class="modal-header">
+  <h3>{{'Deassign Tanker' | translate}} </h3>
+</div>
+<div class="modal-body ">
+  <div class="order-info">
+    <span class="ordnum">{{'order number' | translate}} #{{order.OrderNumber}}</span>
+    <span class="margin-10"> {{'customer' | translate}} : {{order.CustomerName}} | {{order.CustomerCode}}</span>
+    <p class="extra">
+      <span>{{'status' | translate}} : {{order.Status}}</span>
+
+      <date [date]="order.LastStatusTime" [ShowTime]="true" ></date>
+    </p>
+  </div>
+  <div class="row inputs-data">
+
+
+    <span class="wid-200"> {{order.VehicleCodePlateNo}}</span>
+    <span class="wid-50">{{order.VehicleCapacity}} ( {{'M' | translate}}<sup>3</sup> ) </span>
+    <span class="wid-100"> <i class="fa fa-user"></i> {{order.DriverName}}</span>
+
+    <span class="wid-50">
+      <img src="/assets/fmsBranding/styles/img/truck.png">
+    </span>
+
+    <span class="status"> {{order.VehicleStatusName}} </span>
+    <span class="wid-150">
+      <date [date]="order.LastStatusTimeVehicle" [ShowTime]="true" [TimeUnderDate]="true"></date>
+    </span>
+
+  </div>
+  <hr>
+  <div class="row question">
+    <!-- <h4 class="col-md-6">{{'ConfirmDeassignTancker' | translate}} </h4> -->
+<!--
+    <div class="col-md-6" *ngIf="this.SelectedOrderStatusId == 3 || this.SelectedOrderStatusId == 8">
+      <label class="col-sm-4 title">{{'reason' | translate}} <span class="required">*</span></label>
+      <div class="col-sm-8">
+        <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="DeassignReasonList"
+          (selectedListChange)="onReasonChanged($event)" [options]="selectMenuOptions2" [loading]="Loading_Reasons">
+        </select-menu>
+      </div>
+    </div> -->
+
+    <!-- <div class="col-md-12 h-7"></div> -->
+
+    <div class="col-md-6">
+      <label class="col-sm-4 title">{{'TankerNextStatus' | translate}} <span class="required">*</span></label>
+      <div class="col-sm-8">
+        <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="TankerStatuses"
+          (selectedListChange)="onTankerStatusDDLChanged($event)" [options]="selectMenuOptions2"
+          [loading]="loading_TankerStatus">
+        </select-menu>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <label class="col-sm-4 title">{{'OrderNextStatus' | translate}} <span class="required">*</span></label>
+      <div class="col-sm-8">
+        <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="OrderStatuses"
+          (selectedListChange)="onOrderStatusDDLChanged($event)" [options]="selectMenuOptions2"
+          [loading]="Loading_OrderStatus">
+        </select-menu>
+      </div>
+    </div>
+
+    <div class="col-md-12 h-7"></div>
+
+    <div class="col-md-6"></div>
+
+    <div class="col-md-6" *ngIf="this.SelectedOrderStatusId == 3 || this.SelectedOrderStatusId == 8">
+      <label class="col-sm-4 title">{{'reason' | translate}} <span class="required">*</span></label>
+      <div class="col-sm-8">
+        <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="DeassignReasonList"
+          (selectedListChange)="onReasonChanged($event)" [options]="selectMenuOptions2" [loading]="Loading_Reasons">
+        </select-menu>
+      </div>
+    </div>
+
+    <div class="col-md-12 h-7"></div>
+
+    <div class="col-lg-12" *ngIf="SelectedTankerStatusId == 0">
+      <h5>{{'select another order to serve' | translate}} </h5>
+      <div *ngIf="IsNoOrders else orders " style="text-align: center;"> {{ 'NoSuitablesOrderFound' | translate}} </div>
+      <ng-template #orders>
+        <div *ngFor="let itemOrder of orderList" class="form-check form-check-inline input-radio-label">
+          <label class="form-check-label" for="normal">
+            <span class="cod">#{{itemOrder.OrderNumber}} </span>
+            <span class="adress">{{itemOrder.CustomerAddress}}, {{itemOrder.ZoneName}}</span>
+            <!-- <span class="distanc">30 km</span> -->
+            <span class="time">
+              <date [date]="itemOrder.RequestTime" [ShowTime]="true" [TimeUnderDate]="true"></date>
+            </span>
+            <span class="quantity">{{itemOrder.OrderQuantity}} ( {{'M' | translate}}<sup>3</sup> )</span>
+            <span class="type">{{itemOrder.CustomerLocationPriority}}</span>
+          </label>
+          <a class="action" (click)="selectOrder(itemOrder)">
+            {{ (itemOrder.IsAssigned ? 'de-assign' : 'Dispatch') | translate }}
+          </a>
+
+          <!-- <input class="form-check-input" type="radio" name="normal" id="normal" value="option2"
+            (change)="selectOrder($event ,itemOrder )"> -->
+        </div>
+      </ng-template>
+
+    </div>
+  </div>
+
+
+  <div class="modal-footer">
+    <button class="btn btn-danger margin-5" (click)="deassign()">{{'save' | translate}} </button>
+    <button class="btn btn-default" (click)="closePopup()"> {{'cancel' | translate}} </button>
+  </div>
+</div>

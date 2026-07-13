@@ -1,0 +1,41 @@
+.disabled {
+  background: #e9ecef;
+}
+
+.tabs-links {
+  border-bottom: 2px solid #00a8d4;
+  margin: 5px 0;
+
+  a {
+    display: inline-block;
+    margin-right: 5px;
+
+    padding: 5px 15px;
+    background-color: #e8e8e8;
+    width: 13%;
+    color: #525252;
+    font-size: 9pt;
+    font-weight: 600;
+
+    &.active {
+      background-color: #00a8d4;
+      color: #fff;
+    }
+  }
+}
+
+.glyphicon-print {
+  font-size: 20px;
+  color: #00ae8d;
+}
+
+.check{
+  margin: 10px !important;
+}
+
+.title {
+  white-space: nowrap;
+
+  text-transform: capitalize;
+  padding-top: 7px;
+}

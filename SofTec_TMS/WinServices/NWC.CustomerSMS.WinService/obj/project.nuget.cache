@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "1PXlDbwVidqFwGxhTAzy8LJyWnktdGUuU8/XlP5sFCG+Q02qpT0Gi/3Y9dsiZ9Q7V0QpGARreSYXHvgm2Shiaw==",
+  "success": true,
+  "projectFilePath": "G:\\SofTec_TMS\\SofTec_TMS\\WinServices\\NWC.CustomerSMS.WinService\\NWC.CustomerSMS.WinService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\saed\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\saed\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
+    "C:\\Users\\saed\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

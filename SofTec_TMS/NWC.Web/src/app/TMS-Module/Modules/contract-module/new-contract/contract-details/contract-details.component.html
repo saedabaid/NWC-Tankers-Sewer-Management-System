@@ -1,0 +1,156 @@
+<div class="mrg-top-5">
+  <div class="row">
+    <div class="col-md-6 p-0 basic-info">
+      <div class="col-md-12 p-0 ">
+        <label class="col-sm-3 title">{{'contractCode' | translate}} <span class="required">*</span> </label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" placeholder="{{'contractCode' | translate}}"
+            [(ngModel)]="contract.Code">
+        </div>
+      </div>
+      <div class="col-md-12 p-0">
+        <label class="col-sm-3 title">{{'contracttype' | translate}} <span class="required">*</span> </label>
+        <div class="col-sm-6">
+          <select class=" form-control" [(ngModel)]="contract.ContractTypeID">
+            <option value="null" selected>{{'Select' | translate}}</option>
+            <option *ngFor="let item of contractTypesList; let i = index" value="{{item.Id}}">{{item.Name}}</option>
+          </select>
+          <!-- <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="contractTypesList"
+          (selectedListChange)="onContractTypeIDChanged($event)"
+          [options]="selectMenuOptionsDisableSearch"
+          [selectedList]="bindingModel_ContractTypes">
+        </select-menu>  -->
+        </div>
+      </div>
+      <div class="col-md-12 p-0">
+        <label class="col-sm-3 title">{{'awardLetter' | translate}} </label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" placeholder="{{'awardLetter' | translate}}"
+            [(ngModel)]="contract.AwardLetterNo">
+
+        </div>
+      </div>
+
+      <div class="col-md-12 p-0">
+        <label class="col-sm-3 title">{{'confirmationNo' | translate}} </label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" placeholder="{{'confirmationNo' | translate}}"
+            [(ngModel)]="contract.ConfirmationNo">
+
+        </div>
+      </div>
+
+      <div class="col-md-12 p-0">
+        <label class="col-sm-3 title">{{'contractor' | translate}} <span class="required">*</span> </label>
+        <div class="col-sm-6">
+          <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="contractorsList"
+            (SearchVAlue)="getContractors($event)" (selectedListChange)="onContractorDDLChanged($event)"
+            [options]="selectMenuOptions" [selectedList]="bindingModel_Contrcators" [loading]="Contractor_Loading">
+          </select-menu>
+        </div>
+      </div>
+
+
+      <div class="col-md-12 p-0">
+        <label class="col-sm-3 title">{{'startDate' | translate}} <span class="required">*</span> </label>
+        <div class="col-sm-6">
+          <app-datepicker [(selecteddate)]="contract.ContractStartDate" placeHolder="{{'startDate' | translate}} "
+            DateID=date1></app-datepicker>
+          <!-- <datePicker-gregorian-hijri [(selectedDate)]="contract.ContractStartDate" ></datePicker-gregorian-hijri> -->
+        </div>
+      </div>
+      <div class="col-md-12 p-0">
+        <label class="col-sm-3 title">{{'endDate' | translate}} <span class="required">*</span> </label>
+        <div class="col-sm-6">
+          <app-datepicker [(selecteddate)]="contract.ContractEndDate" placeHolder="{{'endDate'|translate }}"
+            DateID=date2></app-datepicker>
+          <!-- <datePicker-gregorian-hijri [(selectedDate)]="contract.ContractEndDate"></datePicker-gregorian-hijri> -->
+          <!-- <datepicker-islamicumalqura [(selectedDate)]="contract.ContractEndDate"></datepicker-islamicumalqura> -->
+        </div>
+      </div>
+
+      <div class="col-md-12 p-0">
+        <label class="col-sm-3 title">{{'description' | translate}} </label>
+        <div class="col-sm-6">
+          <textarea type="text" class="form-control" placeholder="{{'description' | translate}}"
+            [(ngModel)]="contract.Description">
+                              </textarea>
+        </div>
+      </div>
+
+      <div class="col-md-12 p-0" *ngIf="editMode">
+        <label class="col-sm-3 title">{{'contractstatus' | translate}} <span class="required">*</span> </label>
+        <div class="col-sm-6">
+          <label class="col-sm-3 title">{{contract.ContractStatusName}} </label>
+          <!-- <select class=" form-control" [(ngModel)]="contract.ContractStatusID">
+            <option value="null" selected>{{'Select' | translate}}</option>
+            <option *ngFor="let item of contractStatusesList; let i = index" value="{{item.Id}}">{{item.Name}}</option>
+          </select> -->
+
+        </div>
+      </div>
+
+      <!-- Developed in the popup in List Page
+
+        <div class="col-md-12 p-0" *ngIf="editMode">
+        <label class="col-sm-3 title">{{'terminateContract' | translate}} </label>
+        <div class="col-sm-6">
+            <input class="form-check-input" type="checkbox" value="" id="terminateContract" [(ngModel)]="contract.IsTerminated">
+        </div>
+      </div>
+
+      <div class="col-md-12 p-0" *ngIf="contract.IsTerminated">
+        <label class="col-sm-3 title">{{'terminationdate' | translate}} <span class="required">*</span></label>
+        <div class="col-sm-6">
+           <app-datepicker [(selecteddate)]="contract.TerminatedDate" placeHolder="{{'terminationdate' | translate }}"></app-datepicker>
+        </div>
+      </div>
+
+      <div class="col-md-12 p-0" *ngIf="contract.IsTerminated">
+        <label class="col-sm-3 title">{{'terminationreason' | translate}} <span class="required">*</span></label>
+        <div class="col-sm-6">
+          <select class=" form-control" [(ngModel)]="contract.TerminationReasonID">
+            <option value="null" selected>{{'Select' | translate}}</option>
+            <option *ngFor="let item of contractTerminationReasonsList; let i = index" value="{{item.Id}}">{{item.Name}}
+            </option>
+          </select>
+        </div>
+      </div> -->
+
+
+
+    </div>
+
+    <div class="col-md-6">
+
+      <div class="box-upload">
+        <uploud-files [ListFiles]="ListFiles" [AttachmentType]="1"></uploud-files>
+
+      </div>
+
+      <div class="col-md-12 p-0 h30 mrg-top-5"> </div>
+      <div class="col-md-12 p-0 h30 mrg-top-5"> </div>
+      <div class="col-md-12 p-0 h30 mrg-top-5"> </div>
+
+      <div class="col-md-12 p-0 h30 mrg-top-5"> </div>
+      <div class="col-md-12 p-0 h30 mrg-top-5"> </div>
+      <div class="col-md-12 p-0  h30 mrg-top-5"> </div>
+      <div class="col-md-12 p-0 h30 mrg-top-5"> </div>
+
+
+      <div class="col-md-12 p-0 mrg-top-5">
+        <button class="btn btn-default margin-5 pull-right" (click)="clear()">{{ 'Clear' | translate }}</button>
+        <button class="btn btn-danger margin-5 pull-right" (click)="save(false)">{{ 'Save' | translate }}</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="col-md-12 p-0 mrg-top-5">
+    <button class="btn btn-default margin-5 pull-right" (click)="close()">{{ 'close'| translate }}</button>
+    <button class="btn btn-danger margin-5 pull-right" (click)="save(true)"
+      [disabled]="!editMode">{{ 'next' | translate }}</button>
+  </div>
+
+</div>

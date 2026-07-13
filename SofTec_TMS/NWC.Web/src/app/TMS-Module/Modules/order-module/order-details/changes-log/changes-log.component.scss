@@ -1,0 +1,34 @@
+.hold-tb {
+   
+   
+    
+    max-height: 100px;
+    overflow-y: auto !important;
+    height: 100px;
+    /* z-index: 9999; */
+    overflow-x: hidden !important;
+
+}
+
+.hold-list{
+    min-height: 150px;
+    overflow-y: auto !important ;
+    overflow-x: hidden !important;
+
+}
+
+
+@media(min-width: 1900px) {
+
+    .hold-tb {
+ 
+        max-height: 170px !important;
+        height: 150px !important;
+        overflow-x: hidden !important;
+
+    }
+    .hold-list {
+        min-height: 400px !important;
+      
+    }
+}

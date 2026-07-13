@@ -1,0 +1,128 @@
+--------------------------------------------------------------------------------------------------------------------------- Time:23/06/2020 05:24:41 م
+
+CreateWorkOrder Time:23/06/2020 05:24:41 م
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":10,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5491,"StationID":"ae5e31c9-1ac4-4eb4-beec-f764e955628d","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:23/06/2020 05:24:41 م
+
+Valid Time:23/06/2020 05:24:42 م
+
+Create WorkOrder: Partially Success Time:23/06/2020 05:24:45 م
+
+customerAccount: 5491 Time:23/06/2020 5:24:45 PM
+
+customerLocation: 104 Time:23/06/2020 5:24:45 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:23/06/2020 5:24:45 PM
+
+OrderNumber: 2500003764 Time:23/06/2020 5:24:45 PM
+
+workOrderID: 45926 Time:23/06/2020 5:24:45 PM
+
+scheduledDeliveryTime: 23/06/2020 5:24:41 PM Time:23/06/2020 5:24:45 PM
+
+customerLocationClassID: 1 Time:23/06/2020 5:24:45 PM
+
+Create WorkOrder: Fail, Exception: Nullable object must have a value. Time:23/06/2020 5:24:45 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:23/06/2020 05:28:31 م
+
+CreateWorkOrder Time:23/06/2020 05:28:31 م
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":5,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5491,"StationID":"ae5e31c9-1ac4-4eb4-beec-f764e955628d","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:23/06/2020 05:28:33 م
+
+Valid Time:23/06/2020 05:28:49 م
+
+Create WorkOrder: Partially Success Time:23/06/2020 05:29:21 م
+
+customerAccount: 5491 Time:23/06/2020 5:29:30 PM
+
+customerLocation: 104 Time:23/06/2020 5:29:31 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:23/06/2020 5:29:37 PM
+
+OrderNumber: 2751716200 Time:23/06/2020 5:29:37 PM
+
+workOrderID: 45927 Time:23/06/2020 5:29:37 PM
+
+scheduledDeliveryTime: 23/06/2020 5:28:35 PM Time:23/06/2020 5:29:37 PM
+
+customerLocationClassID: 1 Time:23/06/2020 5:29:38 PM
+
+Create WorkOrder: Fail, Exception: Nullable object must have a value. Time:23/06/2020 5:31:36 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:23/06/2020 05:31:47 م
+
+CreateWorkOrder Time:23/06/2020 05:31:47 م
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":5,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5491,"StationID":"ae5e31c9-1ac4-4eb4-beec-f764e955628d","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:23/06/2020 05:31:47 م
+
+Valid Time:23/06/2020 05:31:47 م
+
+Create WorkOrder: Partially Success Time:23/06/2020 05:31:49 م
+
+customerAccount: 5491 Time:23/06/2020 5:31:53 PM
+
+customerLocation: 104 Time:23/06/2020 5:31:53 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:23/06/2020 5:31:54 PM
+
+OrderNumber: 0783418930 Time:23/06/2020 5:31:56 PM
+
+workOrderID: 45928 Time:23/06/2020 5:31:56 PM
+
+scheduledDeliveryTime: 23/06/2020 5:31:47 PM Time:23/06/2020 5:31:57 PM
+
+customerLocationClassID: 1 Time:23/06/2020 5:31:57 PM
+
+zoneStation: ae5e31c9-1ac4-4eb4-beec-f764e955628d Time:23/06/2020 5:31:58 PM
+
+orderQuantity: 5 Time:23/06/2020 5:31:58 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:23/06/2020 05:35:35 م
+
+CreateWorkOrder Time:23/06/2020 05:35:35 م
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":5,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5491,"StationID":"ae5e31c9-1ac4-4eb4-beec-f764e955628d","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:23/06/2020 05:35:35 م
+
+Valid Time:23/06/2020 05:35:35 م
+
+Create WorkOrder: Partially Success Time:23/06/2020 05:35:37 م
+
+customerAccount: 5491 Time:23/06/2020 5:35:40 PM
+
+customerLocation: 5491 Time:23/06/2020 5:35:41 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:23/06/2020 5:35:42 PM
+
+OrderNumber: 9627718092 Time:23/06/2020 5:35:42 PM
+
+workOrderID: 45929 Time:23/06/2020 5:35:42 PM
+
+scheduledDeliveryTime: 23/06/2020 5:35:35 PM Time:23/06/2020 5:35:42 PM
+
+customerLocationClassID: 1 Time:23/06/2020 5:35:43 PM
+
+serviceTypeID: 1 Time:23/06/2020 5:35:43 PM
+
+zoneStation: ae5e31c9-1ac4-4eb4-beec-f764e955628d Time:23/06/2020 5:35:43 PM
+
+orderQuantity: 5 Time:23/06/2020 5:35:44 PM
+
+contract == null: False Time:23/06/2020 5:35:46 PM
+
+contractID: 10040 Time:23/06/2020 5:35:46 PM
+
+contractStationTariaff == null: False Time:23/06/2020 5:35:46 PM
+
+contractStationTariaffID: 367 Time:23/06/2020 5:35:46 PM
+
+totalQuantityCost: 250.0000 Time:23/06/2020 5:35:46 PM
+
+extraKMCost: 2575.00000000 Time:23/06/2020 5:35:46 PM
+
+totalCost: 2825.00000000 Time:23/06/2020 5:35:46 PM
+
+Net Cost: 2825.00000000 Time:23/06/2020 5:35:47 PM
+
+Create WorkOrder: Success Time:23/06/2020 5:35:56 PM
+

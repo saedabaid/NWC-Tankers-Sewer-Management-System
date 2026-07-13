@@ -1,0 +1,4 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:09/09/2020 1:41:09 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"7511849812","cisDivision":19,"orderStatus":7,"updateDateTime":"09-09-2020 13:41:10","parameters":[{"parameterName":"TMSID","parameterValue":"7511849812"},{"parameterName":"COMMENT","parameterValue":""},{"parameterName":"CANREASON","parameterValue":"4"}]} Time:09/09/2020 1:41:10 PM
+

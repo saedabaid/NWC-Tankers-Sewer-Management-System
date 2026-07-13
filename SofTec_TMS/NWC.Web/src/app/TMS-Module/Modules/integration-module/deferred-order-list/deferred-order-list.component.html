@@ -1,0 +1,166 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-md-6  padding-10">
+            <a >
+                <span class="page-title">{{ "TMS_Integration" | translate }}</span>
+            </a>
+            <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+            <span class="page-title  currentpage">{{ "DeferredOrders" | translate }}</span>
+        </div>
+
+        
+        <div class="col-md-6">
+            <a (click)="onexportOrders()" class=" margin-5 pull-right" title="{{ 'ExportOrders' | translate }}"
+                (mouseenter)="mouseEnterExcel()" (mouseleave)="mouseLeaveExcel()">
+                <img width="24px" *ngIf="!HoverExcel; else excelHover" src={{Excel_Img_Src}} />
+                <ng-template #excelHover>
+                    <img width="24px" src={{Excel_Img_Src}} />
+                </ng-template>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="inner-div">
+
+<!-- Search row 1 -->
+<div class="row bg-white  pb-2">
+    <!-- OrderNo -->
+    <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "OrderNo" | translate }}</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" [(ngModel)]="SearchCriteria.OrderNo" >
+        </div>
+    </div>
+
+    <!-- IDNumber -->
+    <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "IDNumber" | translate }}</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" [(ngModel)]="SearchCriteria.PersonIdValue" >
+        </div>
+    </div>
+
+    <!-- MobileNo -->
+    <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "MobileNumber" | translate }}</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" [(ngModel)]="SearchCriteria.MobileNo" >
+        </div>
+    </div>
+
+</div>
+
+<!-- Search row 2 -->
+<div class="row bg-white  pb-2">
+    
+    <!-- StatusIds -->
+    <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "Status" | translate }}</label>
+        <div class="col-sm-8">
+            <select-menu
+                [label]="'Name'"
+                [itemKey]="'Id'"
+                [dropDownListInputs]="statusesList"
+                (selectedListChange)="onStatusDDLChanged($event)"
+                [selectedList]="bindingModel_Statuses"
+                >
+            </select-menu>
+        </div>
+
+    </div>
+
+    <!-- Date from -->
+    <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "From" | translate }}</label>
+        <div class="col-sm-8">
+            <app-datepicker [(selecteddate)]="SearchCriteria.DateTimeFrom" DateID="dateFrom"></app-datepicker>
+        </div>
+    </div>
+
+    <!-- Date To -->
+    <div class="col-md-3">
+        <label class="col-sm-4 title">{{ "To" | translate }}</label>
+        <div class="col-sm-8">
+            <app-datepicker [(selecteddate)]="SearchCriteria.DateTimeTo" DateID="dateTo"></app-datepicker>
+        </div>
+    </div>
+
+    <!-- buttons -->
+    <div class="col-md-3">
+        <button class="btn btn-default margin-5 pull-right" (click)="clearSearch()">
+            {{ "Clear" | translate }}
+        </button>
+        <button class="btn btn-danger margin-5 pull-right" (click)="onSearchSubmit()">
+            {{ "Search" | translate }}
+        </button>
+    </div>
+</div>
+
+<!-- table -->
+<div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row'">
+    <div class="col-md-12 scroll-x-table list-body">
+
+        <table class="table   table-striped scrollable-table">
+            <thead>
+                <tr>
+                    <th class="wid100">{{ "OrderNo" | translate }}</th>
+                    <th class="wid100">{{ "CreateTime" | translate }}</th>
+                    <th class="wid100">{{ "PersonPrimaryName" | translate }}</th>
+                    <th class="wid100">{{ "PersonIdValue" | translate }}</th>
+                    <th class="wid100">{{ "MobileNumber" | translate }}</th>
+                    <th class="wid100">{{ "TanckerCapacity" | translate }}</th>
+                    <th class="wid100">{{ "ServiceType" | translate }}</th>
+                    <th class="wid100">{{ "Status" | translate }}</th>
+                    
+                    <th class="wid50"></th>
+                    <th class="wid50"></th>
+
+                </tr>
+            </thead>
+            <tbody [class]="advancedDiv ? ' mini' : ' '">
+                <tr class="text-center d-block p-2 font-4" *ngIf="!searchResult.Result">
+                    {{ "NoDataFound" | translate }}
+                </tr>
+                <tr *ngFor="let item of searchResult.Result; let i = index">
+                    <td class="wid100">{{ item.ORDERNUMBER }}</td>
+                    <td class="wid100">
+                        <date [date]="item.CreateTime"></date>
+                    </td>
+                    <td class="wid100">{{ item.PERSONPRIMARYNAME }}</td>
+                    <td class="wid100">{{ item.PERSONIDVALUE }}</td>
+                    <td class="wid100">{{ item.MOBILENUMBER }}</td>
+                    <td class="wid100">{{ item.TANKERSIZE }}</td>
+                    <td class="wid100">{{ item.SERVICETYPE }}</td>                    
+                    <td class="wid100">{{ item.StatusName }}</td>                    
+
+                    <td class="wid50"> 
+                        <a class="fas fa-pencil-alt " title="{{'edit' | translate}}" 
+                        *ngIf="((pagePermission == 'Full Control') || (pagePermission == 'Add and Edit')) && (item.StatusId == 1 || item.StatusId == 3) " 
+                        routerLink="/tms/integration/deferredorderedit/{{item.ID}}"
+                        ></a>
+                    </td>
+                    
+                    <td class="wid50"> 
+                        <a class="fas fa-trash " 
+                        *ngIf="(pagePermission == 'Full Control') && (item.StatusId == 1) "
+                        title="{{'CancelOrder' | translate}}" 
+                        (click)="CancelOrder(item.ID)"
+                        ></a>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Paging -->
+<app-pagination-component [ItemsCount]="searchResult.TotalCount" [(PageSize)]="this.SearchCriteria.PageFilter.PageSize"
+    [pageIndex]="this.SearchCriteria.PageFilter.PageIndex" (PageSizeChange)="onPageSizeChanged($event)"
+    (pageNavigated)="onPageIndexChanged($event)">
+</app-pagination-component>
+
+</div>

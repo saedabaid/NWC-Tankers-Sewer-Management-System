@@ -1,0 +1,14 @@
+<div    class="po-sticky bg-white p-2">
+  <h3>{{ 'Dashboard_OrderDayChart' | translate}}</h3>
+  <!--#region loading  ********************************************** -->
+  <div [ngClass]="loading_OrdersDateChart ? 'container-gif show':'container-gif' " >
+   <div class='loading-chart'>
+   </div>
+  </div>
+  <!--#endregion   -->
+
+ <div  style="height: 300px;" id="OrdersDateChart"></div>
+
+
+</div>
+

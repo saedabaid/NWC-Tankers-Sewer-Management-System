@@ -1,0 +1,79 @@
+<div class="modal-header">
+  <h3>{{'ChangeOrderStatus' | translate}}</h3>
+</div>
+
+<div class="modal-body ">
+
+  <div class="order-info">
+    <span class="ordnum">{{'OrderNo' | translate}} {{currentWorkOrder.OrderNumber}}</span>
+    <span class="margin-10"> {{'Customer' | translate}}:   </span>
+    <span class="margin-10">  {{currentWorkOrder.CustomerName}} | {{currentWorkOrder.CustomerCode}}  </span>
+
+    <span  class="margin-10"><i class="fas fa-truck-moving"></i> {{currentWorkOrder.VehicleCodePlateNo}} </span>
+    
+    <span class="status">{{currentWorkOrder.VehicleStatusName}}</span>
+    <p class="extra">
+      <span>{{'Status' | translate}}: {{currentWorkOrder.LastStatusName}}</span>
+      <span  class="margin-10">  <date [date]="currentWorkOrder.LastStatusTime"  [ShowTime]="true"></date>   
+      </span>
+    </p>
+  </div>
+
+  <div class="row inputs-data">
+    <div class="col-md-6">
+      <!-- status DDL -->
+      <div class="form-group">
+        <label>{{'Status' | translate}} <span class="required">*</span></label>
+        <select class=" form-control" [(ngModel)]="targetStatusId" (change)="onStatusDDLChange()" [disabled]="cancelMode">
+          <option *ngFor="let item of StatusDDL; let i = index" value="{{item.Id}}">{{item.Name}}</option>
+        </select>
+      </div>
+      <!-- confirmation code -->
+      <!-- <div class="form-group" *ngIf="targetStatusId == 4">
+        <label>{{'OrderConfirmationCode' | translate}}</label>
+        <input type="text" class="form-control" [(ngModel)]="confirmationCode">
+      </div> -->
+    </div>
+
+    <div class="col-md-6">
+      <!-- time -->
+      <div class="form-group">
+        <label class="block">{{'Time' | translate}} <span class="required">*</span></label>
+         <app-datepicker class="col-xs-6 pd-l0" [(selecteddate)]="selectedDate" [DateID]="'date1'" [MinDate]="currentWorkOrder.LastStatusTime"></app-datepicker> 
+        <!-- <datePicker-gregorian-hijri  class="col-xs-6 pd-l0" [(selectedDate)]="selectedDate"></datePicker-gregorian-hijri> -->
+        <app-amazing-timepicker class="col-xs-6 pd-l0 pd-r0" [(selectedTime)]="selectedTime"></app-amazing-timepicker>
+      </div>
+    </div>
+  </div>
+
+  <!-- reason -->
+  <div class="row inputs-data" *ngIf="(targetStatusId == 8) || (targetStatusId == 3)">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>{{'Reason' | translate}} <span class="required">*</span></label>
+        <!-- <input type="text " class="form-control"> -->
+        <select class=" form-control" [(ngModel)]="reasonId">
+          <option *ngFor="let item of reasonsDDL; let i = index" value="{{item.Id}}">{{item.Name}}</option>
+        </select>
+
+      </div>
+    </div>
+    <div class="col-md-6">
+    </div>
+  </div>
+
+  <!-- comment -->
+  <div class="row inputs-data">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label>{{'Comment' | translate}} </label>
+        <textarea class="form-control" [(ngModel)]="comment" rows="3"></textarea>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="modal-footer">
+  <button class="btn btn-danger margin-5" (click)="save()"> {{'Save' | translate}} </button>
+  <button class="btn btn-default" (click)="closePopup()"> {{closeBtnName | translate}} </button>
+</div>

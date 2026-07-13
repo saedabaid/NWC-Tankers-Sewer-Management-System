@@ -1,0 +1,36 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 3:01:15 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 3:03:57 PM
+
+----------------------------------------GetMatchedWorkOrderToAssign---------------------------------------- Time:15/09/2020 03:04:27 م
+
+Get available vehicle by ID - VehicleID: ec6984d8-a823-4d0c-b74b-0007f814d32d - StationID: 44eda143-fc43-4f07-a4bd-2d2ab8759c80 Time:15/09/2020 03:04:27 م
+
+Get zone vehicle landmark - StationID: 44eda143-fc43-4f07-a4bd-2d2ab8759c80 - ZoneID: 1218 Time:15/09/2020 03:04:27 م
+
+Check restricted zone vehicle type - VehicleTypeID: 5cc3b9ab-5430-ea11-80cf-00155d0bce06 - Is Restricted: False Time:15/09/2020 03:04:27 م
+
+Get vehicle classes - Classes Count: 5 Time:15/09/2020 03:04:27 م
+
+Get WorkOrder - dtFrom: 15/09/2020 03:01:27 م Time:15/09/2020 03:04:27 م
+
+Get WorkOrder - Order List: null or empty Time:15/09/2020 03:04:27 م
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 3:08:46 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:15/09/2020 3:13:38 PM
+
+----------------------------------------GetMatchedWorkOrderToAssign---------------------------------------- Time:15/09/2020 03:14:36 م
+
+Get available vehicle by ID - VehicleID: 2f50b37d-17bc-4925-9d6c-9d292930ecc1 - StationID: ba0e5aeb-8104-4a04-823e-8d41c922c647 Time:15/09/2020 03:14:37 م
+
+Get zone vehicle landmark - StationID: ba0e5aeb-8104-4a04-823e-8d41c922c647 - ZoneID: 1616 Time:15/09/2020 03:14:37 م
+
+Check restricted zone vehicle type - VehicleTypeID: d020b474-5430-ea11-80cf-00155d0bce06 - Is Restricted: False Time:15/09/2020 03:14:37 م
+
+Get vehicle classes - Classes Count: 1 Time:15/09/2020 03:14:37 م
+
+Get WorkOrder - dtFrom: 15/09/2020 03:11:37 م Time:15/09/2020 03:14:37 م
+
+Get WorkOrder - Order List: null or empty Time:15/09/2020 03:14:37 م
+

@@ -1,0 +1,36 @@
+.bg-nwc {
+    height: 90px;
+     background-color: #00ae8d;
+    color: white;
+    
+  }
+  .loading-width {
+    width: 30px;
+  }
+  
+  .font-12 {
+    font-size: 10pt;
+  }
+  
+  .font-16 {
+    font-size: 16pt;
+  }
+
+  .img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 32px;
+}
+.green{
+    filter: invert(0.4) sepia(1) saturate(20) hue-rotate(79.2deg) brightness(0.82);
+}
+.blue{
+    filter: invert(0.4) sepia(1) saturate(20) hue-rotate(172.8deg) brightness(0.82);
+}
+.orange{
+    filter: invert(0.4) sepia(1) saturate(20) hue-rotate(360deg) brightness(0.82);
+}
+.w-20 {
+  width: 14%;
+}

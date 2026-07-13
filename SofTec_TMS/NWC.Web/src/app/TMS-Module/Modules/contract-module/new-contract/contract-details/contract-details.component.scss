@@ -1,0 +1,67 @@
+@import "./../../../../../../assets/fmsBranding/styles/sass/rtl.scss";
+
+option:hover,
+option:focus,
+option:active,
+option:checked {
+  background-color: #00ae8d;
+  color: #fff;
+}
+
+.h30 {
+  height: 25px;
+}
+.select-items div:hover,
+.same-as-selected {
+  background-color: #00ae8d;
+}
+
+input,
+select,
+textarea {
+  max-width: 100% !important;
+}
+.title {
+  white-space: nowrap;
+
+  text-transform: capitalize;
+  padding-top: 7px;
+}
+textarea {
+  resize: none;
+}
+.basic-info {
+  .col-md-12 {
+    margin-bottom: 5px;
+  }
+  .form-check {
+    margin: 0 10px;
+    display: inline-block;
+    letter-spacing: 1px;
+    .form-check-input {
+      vertical-align: middle;
+      margin: 0 2px;
+    }
+  }
+}
+
+.box-upload {
+  background-color: #e8e8e8;
+  padding: 10px 20px;
+  width: 70%;
+}
+
+.mrg-top-5 {
+  margin-top: 4px;
+}
+
+button {
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none;
+    &.up-btn {
+      color: #fff;
+    }
+  }
+}

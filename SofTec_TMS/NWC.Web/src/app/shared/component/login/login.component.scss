@@ -1,0 +1,35 @@
+
+
+.authentication-wrapper.authentication-2.ui-bg-cover.ui-bg-overlay-container.px-4 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.authentication-wrapper.authentication-2 .authentication-inner {
+    background-color: #fff;
+    padding: 65px;
+    border-radius: 22px;
+}
+.border-right-1 {
+    border-right: 1px solid rgba(20, 20, 21, 0.62) !important;
+}
+.form-control {
+    padding: 10px;
+}
+.btn-login {
+    padding: 10px 50px 10px 50px;
+    background-color: #003461;
+    color: white;
+    border-radius: 5px;
+}
+.info-login {
+    padding-top: 30px !important;
+}
+.info-login a{
+    font-weight: bold;
+    color: #ffa409;
+}

@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="main-body">
+    <div class="row gutters-sm">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex flex-column align-items-center text-center">
+              <div *ngIf="userProfile.ProfileImage==null">
+                <img src="/assets/TMSBranding/styles/img/defImage.png" alt="{{userProfile.FullName}}" class="rounded-circle" width="150">
+              </div>
+              <div *ngIf="userProfile.ProfileImage!=null">
+                <img src={{userProfile.ProfileImage}} alt="{{userProfile.FullName}}" class="rounded-circle" width="150">
+              </div>
+              <div class="mt-3">
+                <h4>{{userProfile.FullName}}</h4>
+                <p class="text-secondary mb-1">{{userProfile.StaffRoleName}}</p>
+                <button class="btn btn-outline-primary" (click)="customRoute('controlpanel/change-password',userProfile.ID)">Change Password</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Full Name</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{userProfile.FullName}}
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Email</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{userProfile.Email}}
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Mobile</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{userProfile.MobileNumber}}
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Code</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{userProfile.Code}}
+              </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,86 @@
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 2:01:10 PM
+
+--------------------------------------------------------------------------------------------------------------------------- Time:07/07/2020 02:01:10 م
+
+CreateWorkOrder Time:07/07/2020 02:01:10 م
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5537,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":null,"VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":null,"CISDivision":null,"TransactionID":null} Time:07/07/2020 02:01:10 م
+
+Valid Time:07/07/2020 02:01:10 م
+
+Create WorkOrder: Partially Success Time:07/07/2020 02:01:11 م
+
+customerAccount: 5537 Time:07/07/2020 2:01:12 PM
+
+customerLocation: 5537 Time:07/07/2020 2:01:12 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:07/07/2020 2:01:12 PM
+
+OrderNumber: 0009172107 Time:07/07/2020 2:01:12 PM
+
+workOrderID: 45968 Time:07/07/2020 2:01:12 PM
+
+scheduledDeliveryTime: 07/07/2020 2:01:10 PM Time:07/07/2020 2:01:12 PM
+
+customerLocationClassID: 1 Time:07/07/2020 2:01:12 PM
+
+serviceTypeID: 1 Time:07/07/2020 2:01:12 PM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:07/07/2020 2:01:12 PM
+
+orderQuantity: 20 Time:07/07/2020 2:01:12 PM
+
+Net Cost: -1 Time:07/07/2020 2:01:12 PM
+
+Create WorkOrder: Success Time:07/07/2020 2:01:13 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 2:01:23 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:07/07/2020 02:01:23 م
+
+AssignWorkOrder - Validate Vehicle Status Workflow Fail - TransporterID: dfc6273b-505f-41cc-8b27-0b0507114dcc - TransporterStatus: 0 Time:07/07/2020 02:01:24 م
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 2:01:41 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 2:01:57 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 2:03:18 PM
+
+----------------------------------------GetMatchedWorkOrderToAssign---------------------------------------- Time:07/07/2020 02:03:19 م
+
+Get available vehicle by ID - VehicleID: 56ea5f3e-4361-4a3b-811a-000f1f27ddf7 - StationID: dcc5f6b2-9bd0-43ee-888c-37aab0f7dcc9 Time:07/07/2020 02:03:19 م
+
+Get vehicle classes - Classes Count: 5 Time:07/07/2020 02:03:19 م
+
+Get WorkOrder - dtFrom: 07/07/2020 02:03:19 م Time:07/07/2020 02:03:19 م
+
+Get WorkOrder - Order List: null or empty Time:07/07/2020 02:03:19 م
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 2:03:32 PM
+
+----------------------------------------GetMatchedWorkOrderToAssign---------------------------------------- Time:07/07/2020 02:03:32 م
+
+Get available vehicle by ID - VehicleID: 0b1432a4-0bd5-4bfb-b468-1c2a23bdf6c0 - StationID: 4e9af4ae-998f-48d3-9aaf-00414a13bb41 Time:07/07/2020 02:03:32 م
+
+Get vehicle classes - Classes Count: 5 Time:07/07/2020 02:03:32 م
+
+Get WorkOrder - dtFrom: 07/07/2020 02:03:32 م Time:07/07/2020 02:03:32 م
+
+Get WorkOrder - Order List: null or empty Time:07/07/2020 02:03:32 م
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 2:03:43 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 2:03:58 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:07/07/2020 02:03:58 م
+
+AssignWorkOrder - Validate Vehicle Status Workflow Fail - TransporterID: 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransporterStatus: 0 Time:07/07/2020 02:03:58 م
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 2:04:30 PM
+
+Autentication by Headers StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:07/07/2020 2:09:39 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:07/07/2020 02:10:20 م
+
+AssignWorkOrder - Validate Vehicle Status Workflow Fail - TransporterID: dfc6273b-505f-41cc-8b27-0b0507114dcc - TransporterStatus: 0 Time:07/07/2020 02:10:40 م
+

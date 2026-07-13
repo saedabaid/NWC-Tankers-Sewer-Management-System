@@ -1,0 +1,183 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6 padding-10">
+      <!-- <span class="page-title">{{'TMS' | translate }}</span>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span> -->
+      <a (click)="cancel()">
+        <span class="page-title">{{ "CitySettings" | translate }}</span>
+      </a>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+      <span class="page-title currentpage">
+        {{
+          (IsEditableMood ? "EditCitySettings" : "AddCitySettings") | translate
+        }}
+      </span>
+      <br />
+    </div>
+    <div class="col-md-6 text-right padding-10"></div>
+  </div>
+  <div class="inner-div">
+    <div class="row form-row">
+      <div class="col-md-4">
+        <label class="col-sm-2 title">
+          {{ "Name" | translate }} <span class="required">*</span>
+        </label>
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            [(value)]="branchSettingsDTO.name"
+            (change)="BranchSettingsNameChanged($event)"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row form-row">
+      <div class="col-md-1">
+        <label class="title">{{ "CityFeatures" | translate }}</label>
+      </div>
+      <div class="col-md-11">
+        <div class="row form-row">
+          <div class="col-md-4">
+            <div class="form-check">
+              <input class="form-check-input"
+                     type="checkbox"
+                     id="ShowPrice"
+                     [(ngModel)]="branchSettingsDTO.ShowPrice" />
+              <label class="form-check-label mr-4 ml-4" for="ShowPrice">
+                {{ "ShowPrice" | translate }}
+              </label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label class="col-sm-6 title">
+              {{ "TankerQuotaNo" | translate }}
+            </label>
+            <div class="col-sm-6">
+              <input type="text"
+                     class="form-control"
+                     [(value)]="branchSettingsDTO.TankerQuotaNo"
+                     (change)="BranchSettingsTankerQuotaNoChanged($event)" />
+            </div>
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="col-md-4">
+            <div class="form-check">
+              <input class="form-check-input"
+                     type="checkbox"
+                     id="ShowCustomerClassEntryGate"
+                     [(ngModel)]="branchSettingsDTO.ShowCustomerClassEntryGate" />
+              <label class="form-check-label mr-4 ml-4"
+                     for="ShowCustomerClassEntryGate">
+                {{ "ShowCustomerClassEntryGate" | translate }}
+              </label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label class="col-sm-6 title">
+              {{ "AutoCancelationNewOrdersHours" | translate }}
+            </label>
+            <div class="col-sm-6">
+              <input type="text"
+                     class="form-control"
+                     [(value)]="branchSettingsDTO.AutoCancelationNewOrdersHours"
+                     (change)="
+                  BranchSettingsAutoCancelationNewOrdersHoursChanged($event)
+                " />
+            </div>
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="col-md-4">
+            <div class="form-check">
+              <input class="form-check-input"
+                     type="checkbox"
+                     id="ShowInvoice"
+                     [(ngModel)]="branchSettingsDTO.ShowInvoice" />
+              <label class="form-check-label mr-4 ml-4" for="ShowInvoice">
+                {{ "ShowInvoice" | translate }}
+              </label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label class="col-sm-6 title">
+              {{ "AutoCancelationOnHoldOrdersHours" | translate }}
+            </label>
+            <div class="col-sm-6">
+              <input type="text"
+                     class="form-control"
+                     [(value)]="branchSettingsDTO.AutoCancelationOnHoldOrdersHours"
+                     (change)="
+                  BranchSettingsAutoCancelationOnHoldOrdersHoursChanged($event)
+                " />
+            </div>
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="col-md-4">
+            <div class="form-check">
+              <input class="form-check-input"
+                     type="checkbox"
+                     id="SMSCode"
+                     [(ngModel)]="branchSettingsDTO.ValidateConfermationCode" />
+              <label class="form-check-label mr-4 ml-4" for="ValidateConfermationCode">
+                {{ "SMSCode" | translate }}
+              </label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-check">
+              <input class="form-check-input"
+                     type="checkbox"
+                     id="RequiresPayment"
+                     [(ngModel)]="branchSettingsDTO.RequiresPayment" />
+              <label class="form-check-label mr-4 ml-4" for="RequiresPayment">
+                {{ "RequiresPayment" | translate }}
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row form-row">
+          <div class="col-md-4">
+            <div class="form-check">
+              <input class="form-check-input"
+                     type="checkbox"
+                     id="SMSCode"
+                     [(ngModel)]="branchSettingsDTO.ValidationApprovalRequired" />
+              <label class="form-check-label mr-4 ml-4" for="ValidationApprovalRequired">
+                {{ "ValidationApprovalRequired" | translate }}
+              </label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label class="col-sm-6 title">
+              {{ "ApprovalLevelsCount" | translate }}
+            </label>
+            <div class="col-sm-6">
+              <input type="text"
+                     class="form-control"
+                     [(value)]="branchSettingsDTO.ApprovalLevelsCount"
+                     (change)="ApprovalLevelsCountChanged($event)" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row form-row">
+      <div class="col-md-12 text-center">
+        <!-- <a class="btn btn-default margin-5 pull-right" routerLink="/tms/vehicle/vehiclelist">{{ 'Cancel'| translate }} </a>  -->
+        <button class="btn btn-default margin-5 pull-right" (click)="cancel()">
+          {{ "Cancel" | translate }}
+        </button>
+        <button
+          class="btn btn-danger margin-5 pull-right"
+          (click)="save()"
+        >
+          {{ "Save" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

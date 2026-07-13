@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="512px" viewBox="0 0 512 512" width="512px" class=""><g><script xmlns="" id="metastreaminitscript" class="active-path" style="">(function() {
+    document.getElementById('metastreaminitscript').remove()
+
+    const INIT_TIMEOUT = 5e3
+    const isFirefox = navigator.userAgent.toLowerCase().includes('firefox')
+
+    //=========================================================================
+    // document.createElement proxy
+    //=========================================================================
+
+    window.__metastreamMediaElements = new Set()
+
+    // Proxy document.createElement to trap media elements created in-memory
+    const origCreateElement = document.createElement
+    const proxyCreateElement = function() {
+      const element = origCreateElement.apply(document, arguments)
+      if (window.__metastreamMediaElements &amp;&amp; element instanceof HTMLMediaElement) {
+        window.__metastreamMediaElements.add(element)
+      }
+      return element
+    }
+    proxyCreateElement.toString = origCreateElement.toString.bind(origCreateElement)
+    document.createElement = proxyCreateElement
+
+    setTimeout(() =&gt; {
+      if (window.__metastreamMediaElements) {
+        window.__metastreamMediaElements.clear()
+        window.__metastreamMediaElements = undefined
+      }
+    }, INIT_TIMEOUT)
+
+    //=========================================================================
+    // navigator.mediaSession proxy (Firefox)
+    //=========================================================================
+
+    if (isFirefox) {
+      // stub out MediaSession API until Firefox supports this natively
+      if (!navigator.mediaSession) {
+        const noop = () =&gt; {}
+        const mediaSessionStub = {
+          __installedByMetastreamRemote__: true,
+          setActionHandler: noop
+        }
+        Object.defineProperty(window.navigator, 'mediaSession', {
+          value: mediaSessionStub,
+          enumerable: false,
+          writable: true
+        })
+
+        function MediaMetadata(metadata) {
+          Object.assign(this, metadata)
+        }
+        window.MediaMetadata = MediaMetadata
+      }
+
+      const { mediaSession } = navigator
+
+      // Capture action handlers for player.js proxy
+      mediaSession._handlers = {}
+
+      const _setActionHandler = mediaSession.setActionHandler
+      mediaSession.setActionHandler = function(name, handler) {
+        mediaSession._handlers[name] = handler
+        _setActionHandler.apply(mediaSession, arguments)
+      }
+    }
+
+    //=========================================================================
+    // document.domain fix (Firefox)
+    //=========================================================================
+
+    if (isFirefox) {
+      const domains = ['twitch.tv', 'crunchyroll.com']
+
+      // Fix for setting document.domain in sandboxed iframe
+      try {
+        const { domain } = document
+        if (domain &amp;&amp; domains.some(d =&gt; domain.includes(d))) {
+          Object.defineProperty(document, 'domain', {
+            value: domain,
+            writable: true
+          })
+        }
+      } catch (e) {}
+    }
+
+    //=========================================================================
+    // Inline script embed prevention fix
+    //=========================================================================
+
+    const observeScripts = () =&gt; {
+      const scriptSnippets = [
+        { code: 'window.top !== window.self', replacement: 'false' },
+        { code: 'self == top', replacement: 'true' },
+        { code: 'top.location != window.location', replacement: 'false' }
+      ]
+
+      const getAddedScripts = mutationList =&gt;
+        mutationList.reduce((scripts, mutation) =&gt; {
+          if (mutation.type !== 'childList') return scripts
+          const inlineScripts = Array.from(mutation.addedNodes).filter(
+            node =&gt; node instanceof HTMLScriptElement &amp;&amp; node.textContent.length &gt; 0
+          )
+          return inlineScripts.length &gt; 0 ? [...scripts, ...inlineScripts] : scripts
+        }, [])
+
+      // Modifies inline scripts to allow embedding content in iframe
+      const inlineScriptModifier = mutationsList =&gt; {
+        const scripts = getAddedScripts(mutationsList)
+        for (let script of scripts) {
+          for (let snippet of scriptSnippets) {
+            if (script.textContent.includes(snippet.code)) {
+              script.textContent = script.textContent.split(snippet.code).join(snippet.replacement)
+            }
+          }
+        }
+      }
+
+      const observer = new MutationObserver(inlineScriptModifier)
+      observer.observe(document.documentElement, { childList: true, subtree: true })
+
+      // Stop watching for changes after we finish loading
+      window.addEventListener('load', () =&gt; observer.disconnect())
+    }
+
+    observeScripts()
+  }());</script><g id="outline"><path d="m488 152h-24v-72a8 8 0 0 0 -8-8h-16v-16h16a8 8 0 0 0 0-16h-160q-.414 0-.818.041a55.874 55.874 0 0 0 -78.364 0q-.403-.041-.818-.041h-160a8 8 0 0 0 0 16h16v16h-16a8 8 0 0 0 -8 8v72h-24a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8h16v80h-16a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8h16v16h-16a8 8 0 0 0 -8 8v112a8 8 0 0 0 8 8h16v8h-24v16h480v-16h-8v-72a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-16v-32h16a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-16v-80h16a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8zm-80-96h16v16h-16zm-32 0h16v16h-16zm-32 0h16v16h-16zm-16 0v16h-16.581a55.52 55.52 0 0 0 -4.833-16zm-72-16a40 40 0 1 1 -40 40 40.045 40.045 0 0 1 40-40zm-72 16h21.414a55.52 55.52 0 0 0 -4.833 16h-16.581zm-32 0h16v16h-16zm-32 0h16v16h-16zm-32 0h16v16h-16zm-24 32h136.581a55.992 55.992 0 0 0 110.838 0h136.581v64h-384zm0 384a8 8 0 1 1 8-8 8.009 8.009 0 0 1 -8 8zm17.869 8a24.015 24.015 0 0 0 4.755-8h130.752a24.015 24.015 0 0 0 4.755 8zm158.131-8a8 8 0 1 1 8-8 8.009 8.009 0 0 1 -8 8zm0-32a24.039 24.039 0 0 0 -22.624 16h-130.752a24 24 0 0 0 -45.248 0h-9.376v-96h230a10.011 10.011 0 0 1 10 10v11.754l-22.06-5.515a7.977 7.977 0 0 0 -1.94-.239h-192a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8h191.015l24.985 6.246v25.754h-9.376a24.039 24.039 0 0 0 -22.624-16zm32-41.754v15.508l-16-4v-15.508zm-32-6.246v16h-32v-16zm-48 0v16h-32v-16zm-48 0v16h-32v-16zm-48 0v16h-32v-16zm224 40a8 8 0 1 1 8-8 8.009 8.009 0 0 1 -8 8zm32-24v72h-24v-33.376a24 24 0 1 0 -16 0v33.376h-54.131a24.015 24.015 0 0 0 4.755-8h17.376a8 8 0 0 0 8-8v-94a26.029 26.029 0 0 0 -26-26h-206v-16h400v32h-104a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm88 72h-40v-16h40zm32 0h-16v-24a8 8 0 0 0 -8-8h-56a8 8 0 0 0 -8 8v24h-16v-72h104zm8-104v16h-120v-16zm0-80v16h-448v-16zm-64-80a24.028 24.028 0 0 0 -24 24v40h-32v-40a24 24 0 0 0 -48 0v40h-32v-40a24 24 0 0 0 -48 0v40h-32v-40a24 24 0 0 0 -48 0v40h-32v-40a24 24 0 0 0 -48 0v40h-16v-80h400v80h-16v-40a24.028 24.028 0 0 0 -24-24zm8 24v40h-16v-40a8 8 0 0 1 16 0zm-80 0v40h-16v-40a8 8 0 0 1 16 0zm-80 0v40h-16v-40a8 8 0 0 1 16 0zm-80 0v40h-16v-40a8 8 0 0 1 16 0zm-80 0v40h-16v-40a8 8 0 0 1 16 0zm376-56h-448v-16h448z" data-original="#000000" class="active-path" fill="#FFFFFF"/><path d="m266.343 101.657 11.314-11.314-13.657-13.656v-20.687h-16v24a8 8 0 0 0 2.343 5.657z" data-original="#000000" class="active-path" fill="#FFFFFF"/><path d="m80 120h16v16h-16z" data-original="#000000" class="active-path" fill="#FFFFFF"/><path d="m128 120h16v16h-16z" data-original="#000000" class="active-path" fill="#FFFFFF"/><path d="m176 120h16v16h-16z" data-original="#000000" class="active-path" fill="#FFFFFF"/><path d="m320 120h16v16h-16z" data-original="#000000" class="active-path" fill="#FFFFFF"/><path d="m368 120h16v16h-16z" data-original="#000000" class="active-path" fill="#FFFFFF"/><path d="m416 120h16v16h-16z" data-original="#000000" class="active-path" fill="#FFFFFF"/></g></g> </svg>

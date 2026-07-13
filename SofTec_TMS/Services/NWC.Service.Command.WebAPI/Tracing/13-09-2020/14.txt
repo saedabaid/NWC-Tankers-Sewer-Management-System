@@ -1,0 +1,54 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:13/09/2020 2:02:53 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:13/09/2020 2:03:19 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:13/09/2020 02:03:19 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 2409879678 - TransporterID 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransportrStatus: 0 Time:13/09/2020 02:03:20 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:13/09/2020 02:03:20 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:13/09/2020 2:03:20 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 2409879678 - TransporterID: 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransporterStatus: 11 Time:13/09/2020 02:03:20 م
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 2409879678 - TransporterID: 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransporterStatus: 11 Time:13/09/2020 2:03:20 PM
+
+Start Inserting Driver SMS: OrderNo:2409879678, VehicleId:4723c36e-f122-4b36-a24f-52f231afa4e5, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:13/09/2020 2:03:20 PM
+
+SMS: تم تخصيص رقم الطلب 2409879678 ويمكن التواصل على جوال العميل 032453245345 موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:13/09/2020 2:03:21 PM
+
+Start Inserting Customer SMS: OrderNo:2409879678, VehicleId:4723c36e-f122-4b36-a24f-52f231afa4e5, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:13/09/2020 2:03:21 PM
+
+SMS: عميلنا العزيز: نفيدكم بتخصيص ناقلة مياه لطلبكم رقم 2409879678 Time:13/09/2020 2:03:21 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"2409879678","cisDivision":19,"orderStatus":4,"updateDateTime":"13-09-2020 14:03:21","parameters":[{"parameterName":"TMSID","parameterValue":"2409879678"},{"parameterName":"COMMENT","parameterValue":""}]} Time:13/09/2020 2:03:21 PM
+
+----------------------------------------AssignWorkOrder - Denormalizer - End---------------------------------------- Time:13/09/2020 2:03:42 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:13/09/2020 2:04:13 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:13/09/2020 02:04:14 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 9158761398 - TransporterID 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransportrStatus: 0 Time:13/09/2020 02:04:15 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:13/09/2020 02:04:15 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:13/09/2020 2:04:15 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 9158761398 - TransporterID: 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransporterStatus: 11 Time:13/09/2020 02:04:15 م
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 9158761398 - TransporterID: 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransporterStatus: 11 Time:13/09/2020 2:04:15 PM
+
+Start Inserting Driver SMS: OrderNo:9158761398, VehicleId:4723c36e-f122-4b36-a24f-52f231afa4e5, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:13/09/2020 2:04:15 PM
+
+SMS: تم تخصيص رقم الطلب 9158761398 ويمكن التواصل على جوال العميل 032453245345 موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:13/09/2020 2:04:15 PM
+
+Start Inserting Customer SMS: OrderNo:9158761398, VehicleId:4723c36e-f122-4b36-a24f-52f231afa4e5, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:13/09/2020 2:04:15 PM
+
+SMS: عميلنا العزيز: نفيدكم بتخصيص ناقلة مياه لطلبكم رقم 9158761398 Time:13/09/2020 2:04:16 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"9158761398","cisDivision":19,"orderStatus":4,"updateDateTime":"13-09-2020 14:04:16","parameters":[{"parameterName":"TMSID","parameterValue":"9158761398"},{"parameterName":"COMMENT","parameterValue":""}]} Time:13/09/2020 2:04:16 PM
+
+----------------------------------------AssignWorkOrder - Denormalizer - End---------------------------------------- Time:13/09/2020 2:04:37 PM
+

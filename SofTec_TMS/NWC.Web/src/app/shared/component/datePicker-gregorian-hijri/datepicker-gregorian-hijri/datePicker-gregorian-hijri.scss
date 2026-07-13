@@ -1,0 +1,41 @@
+ngb-datepicker {
+  // width: 19vw;
+  font-size: 1.4em !important;
+}
+
+.custom-control-label::before,
+.custom-file-label,
+.custom-select {
+  width: 90px;
+}
+.ngb-dp-day,
+.ngb-dp-week-number,
+.ngb-dp-weekday {
+  width: 3.6rem !important;
+
+  height: 2rem;
+}
+
+.custom-select {
+  background: none !important;
+}
+
+.hold-datepicker {
+  margin: 0px 1px;
+}
+.rtl {
+  .right .ngb-dp-navigation-chevron {
+    -webkit-transform: rotate(225deg) !important;
+    transform: rotate(225deg) !important;
+  }
+
+  .ngb-dp-navigation-chevron {
+    -webkit-transform: rotate(45deg) !important;
+    transform: rotate(45deg) !important;
+  }
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: #ffffff;
+}

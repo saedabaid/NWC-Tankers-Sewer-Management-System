@@ -1,0 +1,263 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-md-6  padding-10">
+            <a routerLink="/tms/reports">
+                <span class="page-title">{{ "TMS_Reports" | translate }}</span>
+            </a>
+            <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+            <span class="page-title  currentpage">{{ "SoqyaCustomerBalanceReport" | translate }}</span>
+        </div>
+
+        <div class="col-md-6">
+
+            <a (click)="onexportOrders()" class="" title="{{ 'ExportOrders' | translate }}"
+                (mouseenter)="mouseEnterExcel()" (mouseleave)="mouseLeaveExcel()">
+                <img width="24px" *ngIf="!HoverExcel; else excelHover" src={{Excel_Img_Src}} />
+                <ng-template #excelHover>
+                    <img width="24px" src={{Excel_Img_Src}} />
+                </ng-template>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="inner-div">
+
+    <!-- Search row 1 -->
+    <div class="row bg-white  pb-4">
+        <!-- Date from -->
+        <div class="col-md-3 ">
+            <div class="row">
+                <div class="col-4">
+                    <label class="title">{{ "From" | translate }}</label>
+                </div>
+                <div class="col-8">
+                    <app-datepicker [(selecteddate)]="SearchCriteria.DateFrom" DateID="dateFrom" PickerType="month"
+                        dateFormat="MMM YYYY"></app-datepicker>
+                </div>
+            </div>
+        </div>
+
+        <!-- Date To -->
+        <div class="col-3">
+            <div class="row">
+                <div class="col-4">
+                    <label class="title">{{ "To" | translate }}</label>
+                </div>
+                <div class="col-8">
+                    <app-datepicker [(selecteddate)]="SearchCriteria.DateTo" DateID="dateTo" PickerType="month"
+                        dateFormat="MMM YYYY"></app-datepicker>
+                </div>
+            </div>
+        </div>
+
+        <!-- customer -->
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-4">
+                    <label class="title">{{ "customer" | translate }}</label>
+                </div>
+                <div class="col-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerNameList"
+                        (SearchVAlue)="getCustomers($event)" (selectedListChange)="onCustomerDDLChanged($event)"
+                        [options]="selectMenuOptions2" [loading]="Customer_Loading">
+                    </select-menu>
+                </div>
+            </div>
+        </div>
+
+        <!-- customer Account -->
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-4">
+                    <label class="title">{{ "CustomerAccount" | translate }}</label>
+                </div>
+                <div class="col-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerAccountsList"
+                        (selectedListChange)="onCustomerAccountDDLChanged($event)"
+                        [selectedList]="bindingModel_CustomerAccounts" [loading]="CustomerAccount_Loading">
+                    </select-menu>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Search row 2 -->
+    <div class="row bg-white pb-4  ">
+        <!-- Area -->
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-4">
+                    <label class="title">{{ "Area" | translate }} </label>
+                </div>
+                <div class="col-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerAreaList"
+                        (SearchVAlue)="getAreas($event)" (selectedListChange)="onAreaDDLChanged($event)"
+                        [options]="selectMenuOptions" [selectedList]="bindingModel_Areas" [loading]="Area_loading">
+                    </select-menu>
+                </div>
+            </div>
+        </div>
+
+        <!-- city -->
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-4">
+                    <label class="title">{{ "City" | translate }}</label>
+                </div>
+                <div class="col-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerCityList"
+                        (SearchVAlue)="getCity($event)" (selectedListChange)="onCityDDLChanged($event)"
+                        [options]="selectMenuOptions" [selectedList]="bindingModel_Cities" [loading]="City_Loading">
+                    </select-menu>
+                </div>
+            </div>
+        </div>
+
+        <!-- zone -->
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-4">
+                    <label class="title">{{ "Zone" | translate }}</label>
+                </div>
+                <div class="col-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerZoneList"
+                        (SearchVAlue)="getZones($event)" (selectedListChange)="onZoneDDLChanged($event)"
+                        [options]="selectMenuOptions" [selectedList]="bindingModel_Zones" [loading]="Zone_Loading">
+                    </select-menu>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schedule Status -->
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-4">
+                    <label class="title">{{ "ScheduleStatus" | translate }}</label>
+                </div>
+                <div class="col-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" 
+                    [dropDownListInputs]="scheduleStatusList"
+                    (selectedListChange)="onScheduleStatusDDLChanged($event)"
+                    [selectedList]="bindingModel_scheduleStatuses" 
+                    [options]="selectMenuOptions">
+                </select-menu>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Search row 3 -->
+    <div class="row bg-white pb-2">
+
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-4">
+                    <label class="title">{{ "Balance" | translate }}</label>
+                </div>
+                <div class="col-4">
+                    <select-menu  [label]="'Name'" [itemKey]="'Id'"
+                        [dropDownListInputs]="Balance_OperatorList"
+                        (selectedListChange)="onBalanceOperatorDDLChanged($event)"
+                        [options]="selectMenuOptions2"
+                       
+                        >
+                    </select-menu>
+                </div>
+                <div class="col-4">
+                    <input type="number" [(ngModel)]="SearchCriteria.Balance" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-4">
+                    <label class="title">{{ "NoScheduledQTY" | translate }}</label>
+                </div>
+                <div class="col-4">
+                    <select-menu  [label]="'Name'" [itemKey]="'Id'"
+                        [dropDownListInputs]="NSQ_OperatorList"
+                        (selectedListChange)="onNSQOperatorDDLChanged($event)"
+                        [options]="selectMenuOptions2">
+                    </select-menu>
+                </div>
+                <div class="col-4">
+                    <input type="number" [(ngModel)]="SearchCriteria.NotScheduledQty" class="form-control">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row bg-white pb-2  ">
+
+        <!-- buttons -->
+        <div class="col-md-12 d-flex justify-content-end">
+            <button class="btn btn-danger" (click)="onSearchSubmit()">
+                {{ "Search" | translate }}
+            </button>
+            <button class="btn btn-default" (click)="clearSearch()">
+                {{ "Clear" | translate }}
+            </button>
+        </div>
+
+    </div>
+    
+
+    <!-- table -->
+    <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row'">
+        <div class="col-md-12 scroll-x-table list-body">
+
+            <table id="excel-table" class="table table-striped scrollable-table">
+                <thead>
+                    <tr>
+                        <th class="wid130">{{ "customer" | translate }}</th>
+                        <th class="wid130">{{ "CustomerAccount" | translate }}</th>
+                        <th class="wid100">{{ "Month/Year" | translate }}</th>
+                        <th class="wid70">{{ "Balance" | translate }} ( {{'M' | translate}}<sup>3</sup> )</th>
+                        <th class="wid100">{{ "ScheduledQTY" | translate }} ( {{'M' | translate}}<sup>3</sup> )</th>
+                        <th class="wid100">{{ "NoScheduledQTY" | translate }} ( {{'M' | translate}}<sup>3</sup> )</th>
+                        <th class="wid100">{{ "DeliveredQTY" | translate }} ( {{'M' | translate}}<sup>3</sup> )</th>
+                        <th class="wid70">{{ "Remaining" | translate }} ( {{'M' | translate}}<sup>3</sup> )</th>
+                        <!-- <th class="wid70"></th> -->
+                    </tr>
+                </thead>
+                <tbody [class]="advancedDiv ? ' mini' : ' '">
+                    <tr class="text-center d-block p-2 font-4" *ngIf="!searchResult.Result">
+                        {{ "NoDataFound" | translate }}
+                    </tr>
+                    <tr *ngFor="let item of searchResult.Result; let i = index">
+                        <td class="wid130">{{ item.CustomerName }}</td>
+                        <td class="wid130">
+                            {{item.CustomerLocationAddress}}, {{item.ZoneName}}, {{item.CityName}}
+                        </td>
+                        <td class="wid100">
+                            <!-- {{item.Month}}-{{item.Year}}  -->
+                            <date [date]="item.helper_scheduleDate" DateFormat="MMMM yyyy"></date>
+
+                        </td>
+                        <td class="wid70 text-center"> {{ item.SoqyaBalance | number }} </td>
+                        <td class="wid100 text-center"> {{ item.ScheduledSum | number}} </td>
+                        <td class="wid100 text-center"> {{ item.SoqyaBalance }} </td>
+                        <td class="wid100 text-center"> {{ item.DeliveredSum | number}} </td>
+                        <td class="wid70 text-center"> {{ item.SoqyaBalance - item.ScheduledSum | number }} </td>
+                        <!-- <td class="wid70"> </td> -->
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Paging -->
+    <app-pagination-component [ItemsCount]="searchResult.TotalCount"
+        [(PageSize)]="this.SearchCriteria.PageFilter.PageSize" [pageIndex]="this.SearchCriteria.PageFilter.PageIndex"
+        (PageSizeChange)="onPageSizeChanged($event)" (pageNavigated)="onPageIndexChanged($event)">
+    </app-pagination-component>
+
+</div>

@@ -1,0 +1,118 @@
+@import './../../../../../assets/fmsBranding/styles/sass/rtl.scss';
+
+.dispatchTanker {
+  max-width: 940px;
+  width: 940px;
+
+
+  .order-info {
+    padding: 5px 10px;
+
+    .margin-10 {
+      margin: 0 10px;
+    }
+
+    span {
+      text-transform: capitalize;
+
+      .fa-truck-moving {
+        font-size: 20pt;
+        vertical-align: bottom;
+        color: #a2a2a2;
+      }
+    }
+
+    .ordnum {
+      background: #eaeaea;
+      padding: 5px 15px;
+    }
+
+
+
+    .extra {
+      padding: 0px 15px 5px;
+      background: #eaeaea;
+      margin-bottom: 5px;
+      color: black;
+
+      span {
+        display: block;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .pl-25 {
+    padding: 0 25px;
+  }
+
+  .data-dispatch {
+    padding: 0px;
+    height: 30px;
+    border-bottom: 1px solid #00a8d4;
+    margin-bottom: 5px;
+
+    &.active {
+      background-color: #c6e7f1;
+    }
+
+    .action {
+      background-color: #00a8d4;
+      color: #fff;
+      padding: 5px 15px;
+      width: 140px;
+      text-align: center;
+      float: right;
+    }
+.wid-50 {
+  width: 50px;
+}
+
+.wid-80 {
+  width: 80px;
+}
+
+.wid-200 {
+  width: 200px;
+}
+    span {
+      margin: 0 5px;
+      display: inline-block;
+      vertical-align: middle;
+     
+
+      img {
+        vertical-align: middle;
+        width: 50px;
+      }
+
+      &.status {
+        color: #00a8d4;
+      }
+
+      &.name-driver {
+        width: 250px;
+      }
+    }
+  }
+}
+
+.armodal {
+  .data-dispatch {
+    .action {
+      background-color: #00a8d4;
+      color: #fff;
+      padding: 5px 15px;
+      width: 140px;
+      text-align: center;
+      float: left;
+  }
+  }
+
+}
+
+.rtl {
+  .modal-footer {
+    text-align: left !important;
+  }
+}

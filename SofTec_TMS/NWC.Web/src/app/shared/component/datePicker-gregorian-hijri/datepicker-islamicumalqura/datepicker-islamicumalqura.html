@@ -1,0 +1,19 @@
+<div *ngIf="viewOnly">
+  {{displayHijri}}
+</div>
+
+<div class="hold-datepicker" *ngIf="!viewOnly">
+  <input class="col-md-12 p-0 hjri-input form-control" placeholder="{{'Hijri' | translate}}" [(ngModel)]="displayHijri"
+    (click)="dp.open()" [disabled]="disabled" [readonly]="true">
+
+
+  <input [firstDayOfWeek]="7" name="dp" ngbDatepicker [(ngModel)]="hijriModel" [disabled]="disabled" #dp="ngbDatepicker"
+    (dateSelect)="onDateSelected($event)" hidden>
+
+</div>
+<!--   
+<input placeholder="{{'Hijri' | translate}}" [firstDayOfWeek]="7" name="dp"  ngbDatepicker
+value={{displayHijri}} [disabled]="disabled"  [readonly]="true"
+#dp="ngbDatepicker" (click)="dp.open()" (dateSelect)="onDateSelected($event)" 
+hidden
+> -->

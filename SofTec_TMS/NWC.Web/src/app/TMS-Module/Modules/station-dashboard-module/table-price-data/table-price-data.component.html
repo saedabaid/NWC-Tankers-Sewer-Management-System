@@ -1,0 +1,32 @@
+<h4>{{ 'FSD_AreasWithNoPrice' | translate }}</h4>
+<div class="text-center">
+        <table class="table Dtable scrollable-table table-striped">
+          <thead>
+            <tr>
+              <th class="">{{ "Area" | translate }}</th>
+              <th class="">{{ "CustomerClass" | translate }}</th>
+              <th class="">{{ "Price" | translate }}</th>
+            </tr>
+          </thead>
+      
+          <tbody>
+            <tr class="text-center  d-block p-2 font-4 " *ngIf="!zonePriceList?.Result">
+                {{"NoDataFound" | translate}}
+            </tr>
+            <tr *ngFor="let zonePrice of zonePriceList?.Result">
+              <th class="">{{ zonePrice.Zone }}</th>
+              <th class="">{{ zonePrice.CustomerClassName }}</th>
+              <th class="">{{ zonePrice.PriceCharge }}</th>
+            </tr>
+          </tbody>
+        </table>
+      
+        <app-pagination-component
+    [ItemsCount]="zonePriceList?.TotalCount"
+    [(PageSize)]="this.SearchCriteria.PageFilter.PageSize"
+    [pageIndex]="this.SearchCriteria.PageFilter.PageIndex"
+    (PageSizeChange)="onPageSizeChanged($event)"
+    (pageNavigated)="onPageIndexChanged($event)"
+  >
+  </app-pagination-component>
+</div>

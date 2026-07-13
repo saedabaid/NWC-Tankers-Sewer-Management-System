@@ -1,0 +1,35 @@
+<div>
+
+<!--#region  table dropdown ********************************************** -->
+<div [ngClass]="_loading ? 'show':'' "
+  class="container-gif loading-DropDownList-container loading-z-index" >
+  <div class='loading-DropDownList'>
+  </div>
+</div>
+<!--#endregion  table dropdown -->
+
+
+<angular2-multiselect
+  [data]="dropDownListInputs"
+  [(ngModel)]="selectedList"
+  [settings]="dropdownSettings"
+  (onSelect)="onItemSelect($event)"
+  (onDeSelect)="OnItemDeSelect($event)"
+  (onSelectAll)="onSelectAll($event)"
+  (onDeSelectAll)="onDeSelectAll($event)"
+  >
+  <c-search>
+    <ng-template>
+      <input type="text" (keyup)="onSearchEvent($event)"
+          style="border: none;width: 100%; height: 100%;outline: none;" />
+
+        <!-- <input type="text" (keyup)="onSearchEvent($event)"
+          [ngClass]="_loading ? 'loading-DropDownList':'' "
+          style="border: none;width: 100%; height: 100%;outline: none;" /> -->
+
+    </ng-template>
+</c-search>
+</angular2-multiselect>
+
+
+</div>

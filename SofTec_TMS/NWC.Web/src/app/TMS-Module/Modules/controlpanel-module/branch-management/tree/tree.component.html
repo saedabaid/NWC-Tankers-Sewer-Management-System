@@ -1,0 +1,114 @@
+<ul *ngIf="treeData">
+    <li *ngFor="let node of treeData">
+        <div class="row alert alert-{{ node.color}}">
+            <div class="col-sm-8">
+                <span (click)="toggleChild(node)" >
+                    <b><i *ngIf="node.children?.length > 0" class="fa fa-angle-{{ node.isExpanded ? 'down' : currLang == 'ar' ? 'left' : 'right'}} fa-lg"></i></b> {{ node.name }}
+                </span>
+            </div>
+            <div class="col-sm-4 text-right">
+                <div class="btn-group" role="group">
+                    <button *ngIf="node.btnName != null" class="btn btn-{{ node.color}}" (click)="onClick(node, modaleTemplate)">{{ node.btnName | translate }}</button>
+                    <button class="btn btn-dark" (click)="onEdit(node, modaleTemplate)"><i class="fa fa-edit"></i></button>
+                    <button class="btn btn-primary" (click)="onDelete(node)"><i class="fa fa-times"></i></button>
+                </div>
+            </div>
+        </div>
+        <app-tree *ngIf="node.isExpanded" [treeData]="node.children"></app-tree>
+    </li>  
+  </ul>
+
+  <ng-template #modaleTemplate>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Modal</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body text-center">
+      <div class="d-flex justify-content-center">
+        <div class="w-50">
+          <input
+          class="form-control shadow-sm bg-white rounded"
+          [(ngModel)]="areaModel.name"
+          placeholder="{{ 'Name' | translate }}"
+        />
+        </div>
+        <div class="w-50" *ngIf="showTypes">
+          <select-menu
+          [label]="'landmarkType'"
+          [itemKey]="'Id'"
+          [dropDownListInputs]="landmarkList"
+          (SearchVAlue)="getLandmarkType($event)"
+          (selectedListChange)="onLandmarkDDLChanged($event)"
+          [options]="selectMenuOptions"
+        ></select-menu>
+        </div>
+      </div>
+  
+  
+  
+  
+      <div class="pt-5">
+        <tabset>
+          <tab heading="Location" class="py-3" id="tab1">
+            <input
+              class="w-100 d-inline-block form-control shadow-sm bg-white rounded"
+              [(ngModel)]="areaModel.location"
+              placeholder="{{ 'Name' | translate }}"
+            />
+          </tab>
+          <tab heading="MoreDetails" class="py-3">
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="description">{{"Description" | translate}}</label>
+                  <input type="text" class="form-control shadow-sm bg-white rounded" [(ngModel)]="areaModel.description" placeholder="{{ 'Description' | translate }}" id="description">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="telephone1">{{"Telephone #1" | translate}}</label>
+                  <input type="text" class="form-control shadow-sm bg-white rounded" [(ngModel)]="areaModel.telephone1" placeholder="{{ 'Telephone #1' | translate }}" id="telephone1">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="telephone2">{{"Telephone #2" | translate}}</label>
+                  <input type="text" class="form-control shadow-sm bg-white rounded" [(ngModel)]="areaModel.telephone2" placeholder="{{ 'Telephone #2' | translate }}" id="telephone2">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="Mobile">{{"Mobile" | translate}}</label>
+                  <input type="text" class="form-control shadow-sm bg-white rounded" [(ngModel)]="areaModel.mobile" placeholder="{{ 'Mobile' | translate }}" id="Mobile">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="Fax">{{"Fax" | translate}}</label>
+                  <input type="text" class="form-control shadow-sm bg-white rounded" [(ngModel)]="areaModel.fax" placeholder="{{ 'Fax' | translate }}" id="Fax">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="Website">{{"Website" | translate}}</label>
+                  <input type="text" class="form-control shadow-sm bg-white rounded" [(ngModel)]="areaModel.website" placeholder="{{ 'Website' | translate }}" id="Website">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" [(ngModel)]="areaModel.isLive" id="isLive">
+                  <label class="custom-control-label" for="isLive">{{ "IsLive" | translate }}</label>
+                </div>
+              </div>
+            </div>
+          </tab>
+        </tabset>
+      </div>
+    </div>
+    <div class="d-flex p-3 justify-content-end">
+      <button type="button" class="btn btn-link" (click)="modalRef.hide()">{{ "cancel" | translate }}</button>
+      <button type="button" class="btn btn-success" (click)="save()">{{ "save" | translate }}</button>
+    </div>
+  </ng-template>

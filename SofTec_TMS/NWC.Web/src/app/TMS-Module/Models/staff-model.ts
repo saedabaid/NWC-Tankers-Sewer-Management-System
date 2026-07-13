@@ -1,0 +1,31 @@
+export class StaffModel {
+  FirstName: string;
+  descr: string;
+  code: string;
+  staffRoleID: string;
+  staffRoleCategoryID: number;
+  isAllocated: number;
+  personalID: string;
+  AllocatedBranch: string;
+  AllocatedSubBranch: string;
+  AllocatedLandmark: string;
+  mobileNumber: string;
+  MonitorFlag: number;
+  LaborRate: number;
+  Gender: number;
+  MiddleName: string;
+  LastName: string;
+  Email: string;
+  username: string;
+  password: string;
+  PermittedBranch: [''];
+  PermittedSubBranch: string[];
+  ID: string;
+  Comments: string;
+  Nationality: string;
+  HealthCertificateExpirationDate: Date;
+  IDSource: string;
+  LisenceExpiryDate:Date;
+  InsuranceNumber:string;
+  InsuranceIssueDate: Date;
+}

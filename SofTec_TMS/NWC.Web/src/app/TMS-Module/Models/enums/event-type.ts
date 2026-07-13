@@ -1,0 +1,21 @@
+export enum EventTypeEnum {
+    WorkOrder_Create = 1,
+    WorkOrder_Update = 2,
+    WorkOrder_UpdatePaymentStatus = 5,
+    WO_Vehicle_Assign = 6,
+    WO_Vehicle_Deassign = 7,
+    WorkOrder_OutForDelivery = 16,
+    WorkOrder_Arrived = 17,
+    WorkOrder_Delivered = 18,
+    WorkOrder_Cancelled = 19,
+    WorkOrder_FailedToDeliver = 20,
+    WorkOrder_OnHold = 21,
+    WorkOrder_NotAssigned = 22,
+    WO_Vehicle_ArrivedToStation = 23,
+    WO_AddComment = 24,
+    WO_AddAttachment = 25,
+    WO_DeleteAttachment = 26,
+    WO_AddComplaint = 27,
+    WO_UpdateComplaint = 28,
+
+}

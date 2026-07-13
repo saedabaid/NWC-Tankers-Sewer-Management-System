@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------------------------------------------- Time:11/10/2020 6:04:24 PM
+
+CreateWorkOrder Time:11/10/2020 6:04:24 PM
+
+{"WorkOrderID":0,"OrderNumber":null,"CreatedBy":"00000000-0000-0000-0000-000000000000","ScheduledDeliveryTime":"0001-01-01T00:00:00","StatusID":0,"StatusReasonID":0,"StatusComment":null,"StatusTime":null,"OrderQuantity":20,"CustomerLocationID":0,"ServiceTypeID":0,"CustomerAccountId":5537,"StationID":"02e7a5d6-2540-489e-a51e-03755ed89da9","ConfirmationCode":null,"IsPaid":false,"Accessories":[],"RecieverName":null,"RecieverMobile":null,"Comments":"","VehicleID":"00000000-0000-0000-0000-000000000000","DriverID":null,"VehicleStatusID":0,"VehicleLatitude":null,"VehicleLongitude":null,"SourceApplication":"TMS","CISDivision":null,"TransactionID":null} Time:11/10/2020 6:04:24 PM
+
+Valid Time:11/10/2020 6:04:24 PM
+
+Create WorkOrder: Partially Success Time:11/10/2020 6:04:25 PM
+
+customerAccount: 5537 Time:11/10/2020 6:04:25 PM
+
+customerLocation: 5537 Time:11/10/2020 6:04:25 PM
+
+Denormalizer--------------------------------------------------------------------------------------------------------------------------- Time:11/10/2020 6:04:26 PM
+
+OrderNumber: 3771011263 Time:11/10/2020 6:04:26 PM
+
+workOrderID: 66109 Time:11/10/2020 6:04:26 PM
+
+scheduledDeliveryTime: 11/10/2020 6:04:24 PM Time:11/10/2020 6:04:26 PM
+
+customerLocationClassID: 1 Time:11/10/2020 6:04:26 PM
+
+serviceTypeID: 1 Time:11/10/2020 6:04:26 PM
+
+zoneStation: 02e7a5d6-2540-489e-a51e-03755ed89da9 Time:11/10/2020 6:04:26 PM
+
+orderQuantity: 20 Time:11/10/2020 6:04:26 PM
+
+Net Cost: -1 Time:11/10/2020 6:04:26 PM
+
+SMS: عميلنا العزيز: تم فتح طلب صهريج مياه برقم 3771011263 وسيتم التواصل معكم لتأكيد استلام الصهريج Time:11/10/2020 6:04:26 PM
+
+Create WorkOrder: Success Time:11/10/2020 6:04:26 PM
+

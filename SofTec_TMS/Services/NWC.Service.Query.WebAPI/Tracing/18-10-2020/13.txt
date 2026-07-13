@@ -1,0 +1,4 @@
+IsCustomerBlacklisted accountId: 5537 Time:18/10/2020 01:24:15 م
+
+IsCustomerBlacklisted CISDivision: , IdNumber: 65446 Time:18/10/2020 01:24:15 م
+

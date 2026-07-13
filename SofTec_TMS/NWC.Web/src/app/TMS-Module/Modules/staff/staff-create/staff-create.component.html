@@ -1,0 +1,429 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6 padding-10">
+      <a (click)="cancel()">
+        <span class="page-title">{{ 'StaffList' | translate }}</span>
+      </a>
+      <span class="page-title"><i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title currentpage">
+        {{ 'CreateNewStaffMember' | translate }}
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="inner-div">
+  <div class="container-fluid">
+
+    <div class="row">
+  <div class="col-md-6">
+    <div class="row">
+      <div class="col-sm-2 control-label">
+        <label class="title">{{ 'StaffName' | translate }}</label>
+      </div>
+      <div class="col-sm-6">
+        <input
+        type="text"
+        class="form-control"
+        placeholder="{{ 'FirstName' | translate }}"
+        [(ngModel)]="staffModel.FirstName"
+      />
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="row">
+      <div class="col-md-6">
+        <input
+        type="text"
+        class="form-control"
+        placeholder="{{ 'MiddleName' | translate }}"
+        [(ngModel)]="staffModel.MiddleName"
+      />
+      </div>
+      <div class="col-md-6">
+        <input
+        type="text"
+        class="form-control"
+        placeholder="{{ 'LastName' | translate }}"
+        [(ngModel)]="staffModel.LastName"
+      />
+      </div>
+    </div>
+  </div>
+
+    </div>
+
+
+  <div class="row">
+  <div class="col-md-6">
+    <div class="row">
+      <div class="col-sm-2 control-label">
+        <label class="title">{{ 'personalID' | translate }}</label>
+      </div>
+      <div class="col-sm-6">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="{{ 'personalID' | translate }}"
+          [(ngModel)]="staffModel.personalID"
+        />
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-md-6">
+    <div class="row">
+      <div class="col-sm-2 control-label">
+        <label class="title">{{ 'StaffCode' | translate }}</label>
+      </div>
+      <div class="col-sm-6">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="{{ 'code' | translate }}"
+          [(ngModel)]="staffModel.code"
+        />
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+  <div class="row">
+
+
+
+      <!-- START -->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-sm-2 control-label">
+            <label class="title">
+              {{ 'staffRoleCategory' | translate }}
+              <span class="required">*</span>
+            </label>
+          </div>
+          <div class="col-sm-6">
+            <select-menu
+              [label]="'Name'"
+              [itemKey]="'Id'"
+              [dropDownListInputs]="staffRoleCategoryList"
+              (SearchVAlue)="getStaffRoleCategory($event)"
+              [selectedList]='staffRoleCategoryListSelected'
+              (selectedListChange)="onStaffRoleCategoryDDLChanged($event)"
+              [options]="selectMenuOptions3"
+              [loading]="Customer_Loading"
+            ></select-menu>
+          </div>
+        </div>
+      </div>
+      <!-- END -->
+
+      <!-- START -->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-sm-2 control-label">
+            <label class="title">
+              {{ 'staffRole' | translate }}
+              <span class="required">*</span>
+            </label>
+          </div>
+          <div class="col-sm-6">
+            <select-menu
+              [label]="'Name'"
+              [itemKey]="'Id'"
+              [dropDownListInputs]="staffRoleList"
+              (SearchVAlue)="getStaffRoles($event)"
+              [selectedList]='staffRoleListSelected'
+              (selectedListChange)="onStaffRolesDDLChanged($event)"
+              [options]="selectMenuOptions2"
+              [loading]="Customer_Loading"
+            ></select-menu>
+          </div>
+        </div>
+      </div>
+      <!-- END -->
+
+  </div>
+
+
+
+
+  <div class="row">
+
+
+      <!-- START -->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-sm-2 control-label">
+            <label class="title">{{ 'MobileNumber' | translate }}</label>
+          </div>
+          <div class="col-sm-6">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="{{ 'MobileNumber' | translate }}"
+              [(ngModel)]="staffModel.mobileNumber"
+            />
+            <span id="helpBlock" class="help-block">5xxxxxxxx</span>
+          </div>
+
+        </div>
+      </div>
+      <!-- END -->
+
+      <!-- START -->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-sm-2 control-label">
+            <label class="title">{{ 'Email' | translate }}</label>
+          </div>
+          <div class="col-sm-6">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="{{ 'Email' | translate }}"
+              [(ngModel)]="staffModel.Email"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- END -->
+
+
+  </div>
+
+
+
+  <div class="row">
+
+
+
+      <!-- START -->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-sm-2 control-label">
+            <label class="title">
+              {{ 'Branch' | translate }}
+              <span class="required">*</span>
+            </label>
+          </div>
+          <div class="col-sm-6">
+            <select-menu
+              [label]="'Name'"
+              [itemKey]="'Id'"
+              [dropDownListInputs]="staffBranchList"
+              (SearchVAlue)="getStaffBranch($event)"
+              [selectedList]='staffBranchListSelected'
+              (selectedListChange)="ongetStaffBranchDDLChanged($event)"
+              [options]="selectMenuOptions2"
+              [loading]="Customer_Loading"
+            ></select-menu>
+          </div>
+        </div>
+      </div>
+      <!-- END -->
+
+      <!-- START -->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-sm-2 control-label">
+            <label class="title">
+              {{ 'SubBranch' | translate }}
+              <span class="required">*</span>
+            </label>
+          </div>
+          <div class="col-sm-6">
+            <select-menu
+              [label]="'Name'"
+              [itemKey]="'Id'"
+              [dropDownListInputs]="staffSubBranchList"
+              (SearchVAlue)="getStaffSubBranch($event)"
+              [selectedList]='staffSubBranchListSelected'
+              (selectedListChange)="ongetStaffSubBranchDDLChanged($event)"
+              [options]="selectMenuOptions2"
+              [loading]="Customer_Loading"
+            ></select-menu>
+          </div>
+        </div>
+      </div>
+      <!-- END -->
+
+  </div>
+
+
+  <div class="row">
+
+    <!-- START -->
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-sm-2 control-label">
+          <label class="title">
+            {{ 'PermittedBranch' | translate }}
+            <span class="required">*</span>
+          </label>
+        </div>
+        <div class="col-sm-6">
+          <select-menu
+            [label]="'Name'"
+            [itemKey]="'Id'"
+            [dropDownListInputs]="staffPermittedBranchList"
+            [selectedList]='staffPermittedBranchSelectedList'
+            (SearchVAlue)="getStaffBranch($event)"
+            (selectedListChange)="
+              ongetStaffPermittedBranchhDDLChanged($event)
+            "
+            [options]="selectMenuOptions"
+            [loading]="Customer_Loading"
+          ></select-menu>
+        </div>
+      </div>
+    </div>
+    <!-- END -->
+
+      <!-- START -->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-sm-2 control-label">
+            <label class="title">
+              {{ 'Landmark' | translate }}
+              <span class="required">*</span>
+            </label>
+          </div>
+          <div class="col-sm-6">
+            <select-menu
+              [label]="'Name'"
+              [itemKey]="'Id'"
+              [dropDownListInputs]="staffLandmarkList"
+              (SearchVAlue)="getStaffLandmark($event)"
+              [selectedList]='staffLandmarkListSelected'
+              (selectedListChange)="ongetStaffLandmarkDDLChanged($event)"
+              [options]="selectMenuOptions2"
+              [loading]="Customer_Loading"
+            ></select-menu>
+          </div>
+        </div>
+      </div>
+      <!-- END -->
+
+
+  </div>
+
+  <div class="row">
+
+      <!-- START -->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-sm-2 control-label">
+            <label class="title">
+              {{ 'PermittedSubBranch' | translate }}
+              <span class="required">*</span>
+            </label>
+          </div>
+          <div class="col-sm-6">
+            <select-menu
+              [label]="'Name'"
+              [itemKey]="'Id'"
+              [dropDownListInputs]="staffPermittedSubBranchList"
+              (SearchVAlue)="getStaffPermittedSubBranch($event)"
+              [selectedList]='staffPermittedSubBranchListSelected'
+              (selectedListChange)="
+                ongetStaffPermittedSubBranchhDDLChanged($event)
+              "
+              [options]="selectMenuOptions"
+              [loading]="Customer_Loading"
+            ></select-menu>
+          </div>
+        </div>
+      </div>
+      <!-- END -->
+
+  </div>
+
+  <div class="row">
+
+      <!-- START -->
+
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-sm-2 control-label">
+            <label class="title">{{ 'Description' | translate }}</label>
+          </div>
+          <div class="col-sm-6">
+            <textarea
+              type="text"
+              class="form-control"
+              placeholder="{{ 'Description' | translate }}"
+              [(ngModel)]="staffModel.descr"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <!-- END -->
+  </div>
+
+
+  <div class="row" *ngIf="this.staffModel.ID == null ">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">{{ 'CreateAUserAccount' | translate}}</div>
+      <div class="panel-body">
+        <div class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-2 control-label">{{ 'UserName' | translate}}</label>
+            <div class="col-sm-5">
+              <input
+                  type="text"
+                  readonly
+                  class="form-control"
+                  placeholder="{{ 'UserName' | translate }}"
+                  [(ngModel)]="staffModel.personalID"
+                />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">{{ 'CurrentPassword' | translate}}</label>
+            <div class="col-sm-5">
+              <input
+                  type="password"
+                  class="form-control"
+                  placeholder="{{ 'CurrentPassword' | translate }}"
+                  [(ngModel)]="staffModel.password"
+                />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">{{ 'ConfirmPassword' | translate}}</label>
+            <div class="col-sm-5">
+              <input
+                  type="password"
+                  class="form-control"
+                  placeholder="{{ 'ConfirmPassword' | translate }}"
+                  [(ngModel)]="staffModel.password"
+                />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+    <!-- <div class="row form-row bottom-btn"> -->
+    <div class="row ">
+      <div class="text-center">
+        <button class="btn btn-default margin-5" (click)="cancel()">
+          {{ 'Cancel' | translate }}
+        </button>
+        <button class="btn btn-danger margin-5" (click)="save()">
+          {{ 'save' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>

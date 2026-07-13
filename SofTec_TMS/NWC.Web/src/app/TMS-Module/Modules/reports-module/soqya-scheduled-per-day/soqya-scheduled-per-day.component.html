@@ -1,0 +1,195 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-md-6  padding-10">
+            <a routerLink="/tms/reports">
+                <span class="page-title">{{ "TMS_Reports" | translate }}</span>
+            </a>
+            <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+            <span class="page-title  currentpage">{{ "ReportSoqyaScheduledPerDay" | translate }}</span>
+        </div>
+
+        <div class="col-md-6">
+
+            <a (click)="onexportOrders()" class=" margin-5 pull-right" title="{{ 'ExportOrders' | translate }}"
+                (mouseenter)="mouseEnterExcel()" (mouseleave)="mouseLeaveExcel()">
+                <img width="24px" *ngIf="!HoverExcel; else excelHover" src={{Excel_Img_Src}} />
+                <ng-template #excelHover>
+                    <img width="24px" src={{Excel_Img_Src}} />
+                </ng-template>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="inner-div">
+
+    <!--row 1 -->
+    <div class="row form-row">
+
+        <!-- area -->
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-4">
+                    <label class="title">{{ "Area" | translate }} </label>
+                </div>
+                <div class="col-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerAreaList"
+                        (SearchVAlue)="getAreas($event)" (selectedListChange)="onAreaDDLChanged($event)"
+                        [options]="selectMenuOptions2" [selectedList]="bindingModel_Areas" [loading]="Area_loading">
+                    </select-menu>
+                </div>
+            </div>
+        </div>
+
+        <!-- city -->
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-4">
+                    <label class="title">{{ "City" | translate }}</label>
+                </div>
+                <div class="col-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerCityList"
+                        (SearchVAlue)="getCity($event)" (selectedListChange)="onCityDDLChanged($event)"
+                        [options]="selectMenuOptions2" [selectedList]="bindingModel_Cities" [loading]="City_Loading">
+                    </select-menu>
+                </div>
+            </div>
+        </div>
+
+        <!-- zone -->
+        <!-- <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "Zone" | translate }}</label>
+            <div class="col-sm-8">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerZoneList"
+                    (SearchVAlue)="getZones($event)" (selectedListChange)="onZoneDDLChanged($event)"
+                    [selectedList]="bindingModel_Zones" [loading]="Zone_Loading">
+                </select-menu>
+            </div>
+        </div> -->
+
+        <!-- station -->
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-4">
+                    <label class="title">{{ "Station" | translate }}</label>
+                </div>
+                <div class="col-8">
+                    <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerStationList"
+                        (SearchVAlue)="getStations($event)" (selectedListChange)="onStationDDLChanged($event)"
+                        [options]="selectMenuOptions2" [selectedList]="bindingModel_Stations"
+                        [loading]="Station_Loading">
+                    </select-menu>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Selected Date -->
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-4">
+                    <label class="title">{{ "Month" | translate }}</label>
+                </div>
+                <div class="col-sm-8">
+                    <app-datepicker [(selecteddate)]="SearchCriteria.SelectedDate" DateID="SelectedDate"
+                        PickerType="month" dateFormat="MMM YYYY"></app-datepicker>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--row 2 -->
+    <div class="row form-row">
+
+
+
+        <!-- service -->
+        <!-- <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "ServiceType" | translate }}</label>
+            <div class="col-sm-8">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="customerServiceList"
+                    (selectedListChange)="onServiceDDLChanged($event)" [selectedList]="bindingModel_ServiceTypes">
+                </select-menu>
+            </div>
+        </div> -->
+
+        <!-- status -->
+        <!-- <div class="col-md-3">
+            <label class="col-sm-4 title">{{ "OrderStatus" | translate }}</label>
+            <div class="col-sm-8">
+                <select-menu [label]="'Name'" [itemKey]="'Id'" [dropDownListInputs]="CustomerStatusList"
+                    (selectedListChange)="onStatusDDLChanged($event)" [selectedList]="bindingModel_Statuses">
+                </select-menu>
+            </div>
+        </div> -->
+
+
+        <div class="col-md-12 d-flex justify-content-end">
+            
+            <button class="btn btn-danger" (click)="onSearchSubmit()">
+                {{ "Search" | translate }}
+            </button>
+            <button class="btn btn-default" (click)="clearSearch()">
+                {{ "Clear" | translate }}
+            </button>
+            
+        </div>
+
+    </div>
+
+
+    <!-- fixed header  -->
+    <div class="table-heigh row">
+        <div class="col-md-12 scroll-x-table list-body">
+
+            <table class="table table-striped scrollable-table">
+                <thead>
+                    <tr>
+                        <th>{{ 'stationName' | translate }}</th>
+                        <th>{{'Day' | translate}}</th>
+                        <th>{{'TotalSoqyaCounts' | translate}}</th>
+                        <th>{{'TotalQuantity' | translate}} ( {{'M' | translate}}<sup>3</sup> )</th>
+
+                        <th *ngFor="let thItem of searchResult[0]?.CapacityList; let i = index">
+                            {{ thItem.Quantity }}
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center p-2 font-4 " *ngIf="!searchResult || searchResult.length < 1">
+                        <td colspan="12">
+                            {{"NoDataFound" | translate}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let item of searchResult; let i = index">
+                        <td>
+                            {{ item.StationName }}
+                        </td>
+                        <td>
+                            <date [date]="item.DayOfMonth" [ShowDayOfWeek]="true"></date>
+                        </td>
+                        <td>
+                            {{ item.TotalCounts }}
+                        </td>
+                        <td>
+                            {{ item.SumQuantities }}
+                        </td>
+
+                        <td *ngFor="let tdItem of item?.CapacityList; let i = index">
+                            {{ tdItem.SchedulesCount }}
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+</div>

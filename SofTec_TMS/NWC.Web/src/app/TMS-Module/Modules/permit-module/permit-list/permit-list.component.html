@@ -1,0 +1,208 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6 padding-10">
+      <span class="page-title">{{ "ControlPanel" | translate }}</span>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title currentpage">{{
+        "PermitList" | translate
+      }}</span>
+    </div>
+    <div class="col-md-6 text-right padding-10">
+      <a
+        *ngIf="
+          pagePermission == 'Full Control' || pagePermission == 'Add and Edit'
+        "
+        class="newvehicle"
+        title="{{ 'NewStation' | translate }}"
+        routerLink="/tms/controlpanel/station-settings/new"
+      >
+        <i class="fa fa-plus-circle"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Search -->
+<div class="row mb-2">
+  <div class="col-md-4">
+    <label class="col-sm-2 title">{{ "Station" | translate }}</label>
+    <div class="col-sm-8">
+      <input
+        type="text"
+        [(ngModel)]="searchCriteriaDTO.SearchKeyword"
+        class="form-control"
+        (keyup.enter)="Search()"
+      />
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label class="col-sm-2 title">{{ "Area" | translate }}</label>
+    <div class="col-sm-8">
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="BranchList"
+        (selectedListChange)="onBranchChanged($event)"
+        [selectedList]="SelectedBranches"
+        [options]="selectMenuOptions"
+        (SearchVAlue)="getBranches($event)"
+        [loading]="Branch_Loading"
+      >
+      </select-menu>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label class="col-sm-2 title">
+      {{ "City" | translate }}
+    </label>
+    <div class="col-sm-8">
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="SubBranchList"
+        (selectedListChange)="onSubBranchChanged($event)"
+        [selectedList]="SelectedSubBranches"
+        [options]="selectMenuOptions"
+        (SearchVAlue)="getSubBranches($event)"
+        [loading]="SubBranch_Loading"
+      >
+      </select-menu>
+    </div>
+  </div>
+</div>
+
+<div class="row mb-2">
+  <div class="col-md-4">
+    <label class="col-sm-2 title">
+      {{ "Status" | translate }}
+    </label>
+    <div class="col-sm-8">
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="StatusList"
+        (selectedListChange)="onStatusChanged($event)"
+        [selectedList]="SelectedStatuses"
+        [options]="selectMenuOptions2"
+        (SearchVAlue)="getStatuses($event)"
+        [loading]="Status_Loading"
+      >
+      </select-menu>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label class="col-sm-2 title">
+      {{ "ServiceClass" | translate }}
+    </label>
+    <div class="col-sm-8">
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="CustomerClassList"
+        (selectedListChange)="onCustomerClassChanged($event)"
+        [selectedList]="SelectedCustomerClasses"
+        [options]="selectMenuOptions2"
+        (SearchVAlue)="getCustomerClasses($event)"
+        [loading]="CustomerClass_Loading"
+      >
+      </select-menu>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label class="col-sm-2 title">
+      {{ "ServiceType" | translate }}
+    </label>
+    <div class="col-sm-8">
+      <select-menu
+        [label]="'Name'"
+        [itemKey]="'Id'"
+        [dropDownListInputs]="ServiceTypeList"
+        (selectedListChange)="onServiceTypeChanged($event)"
+        [selectedList]="SelectedServiceTypes"
+        [options]="selectMenuOptions2"
+        (SearchVAlue)="getServiceTypes($event)"
+        [loading]="ServiceType_Loading"
+      >
+      </select-menu>
+    </div>
+  </div>
+</div>
+
+<div class="row my-2">
+  <div class="col-md-9"></div>
+  <div class="col-md-3">
+    <button class="btn btn-default margin-5 pull-right" (click)="Clear()">
+      {{ "Clear" | translate }}
+    </button>
+    <button class="btn btn-danger margin-5 pull-right" (click)="Search()">
+      {{ "Search" | translate }}
+    </button>
+  </div>
+</div>
+
+<div [class]="'table-heigh'">
+  <table class="table Dtable scrollable-table table-striped">
+    <thead>
+      <tr>
+        <th class="wid50">{{ "Name" | translate }}</th>
+        <th class="wid50">{{ "Area" | translate }}</th>
+        <th class="wid50">{{ "City" | translate }}</th>
+        <th class="wid50">{{ "CustomerClass" | translate }}</th>
+        <th class="wid50">{{ "StationServices" | translate }}</th>
+        <th class="wid50">{{ "Status" | translate }}</th>
+        <th class="wid10"></th>
+        <!-- <th class="wid10"></th> -->
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr
+        class="text-center d-block p-2 font-4"
+        *ngIf="!searchResult || searchResult.length < 1"
+      >
+        {{
+          "NoDataFound" | translate
+        }}
+      </tr>
+      <tr *ngFor="let station of searchResult">
+        <th class="wid50">{{ station.StationName }}</th>
+        <th class="wid50">{{ station.AreaName }}</th>
+        <th class="wid50">{{ station.CityName }}</th>
+        <th class="wid50">{{ station.CustomerClassNames }}</th>
+        <th class="wid50">{{ station.StationServiceNames }}</th>
+        <th class="wid50">{{ station.StatusName }}</th>
+        <th class="wid10">
+          <a
+            class="fas fa-pencil-alt"
+            title="{{ 'edit' | translate }}"
+            routerLink="/tms/controlpanel/station-settings/{{
+              station.StationId
+            }}"
+            *ngIf="
+              pagePermission == 'Full Control' ||
+              pagePermission == 'Add and Edit'
+            "
+          ></a>
+        </th>
+        <!-- <th class="wid10">
+          <a
+            class="fa fa-trash"
+            *ngIf="pagePermission == 'Full Control'"
+            title="{{ 'Delete' | translate }}"
+            (click)="delete(station.StationId)"
+          ></a>
+        </th> -->
+      </tr>
+    </tbody>
+  </table>
+
+  <app-pagination-component
+    [ItemsCount]="TotalCount"
+    [(PageSize)]="searchCriteriaDTO.PageFilter.PageSize"
+    [pageIndex]="searchCriteriaDTO.PageFilter.PageIndex"
+    (PageSizeChange)="onPageSizeChanged($event)"
+    (pageNavigated)="onPageIndexChanged($event)"
+  >
+  </app-pagination-component>
+</div>

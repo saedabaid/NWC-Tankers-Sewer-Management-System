@@ -1,0 +1,225 @@
+<div class="mrg-top-5">
+        <div class="row form-row">
+          <div class="col-md-3">
+            <label class="col-sm-3 title">{{'Area' | translate }} </label>
+            <div class="col-sm-9">
+              <select-menu [label]="'Name'" [itemKey]="'Id'"
+              [dropDownListInputs]="AreaList"
+              (selectedListChange)="onAreaChanged($event)"
+              [selectedList]="SelectedAreas"
+              [options]="selectMenuOptions"
+              [disabled] = "editMoode"
+              (SearchVAlue)="getArea($event)"
+              [loading]="Area_Loading"
+               >
+            </select-menu>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label class="col-sm-3 title">{{'City' | translate}} </label>
+            <div class="col-sm-9">
+              <select-menu [label]="'Name'" [itemKey]="'Id'"
+              [dropDownListInputs]="CityList"
+              (selectedListChange)="onCityChanged($event)"
+              [selectedList]="SelectedCites"
+              [options]="selectMenuOptions"
+              [disabled] = "editMoode"
+              (SearchVAlue)="getCityBasedOnArea($event)"
+              [loading]="City_Loading"
+               >
+            </select-menu>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label class="col-sm-3 title">{{'Station' | translate}} <span class="required">*</span></label>
+            <div class="col-sm-9">
+
+              <select-menu [label]="'Name'" [itemKey]="'Id'"
+              [dropDownListInputs]="StationList"
+              (selectedListChange)="onStationChanged($event)"
+              [selectedList]="SelectedStation"
+              [options]="selectMenuOptions"
+              [disabled] = "editMoode"
+              (SearchVAlue)="GetStationBasedOnCity($event)"
+              [loading]="Station_Loading"
+               >
+            </select-menu>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="box row">
+
+          <div class="box-body col-12 p-2">
+            <h5> {{'Contactperson' | translate}}</h5>
+            <div class="row  form-row">
+
+
+              <div class="col-md-4">
+                <label class="col-sm-3 title">{{'Name' | translate}} </label>
+                <div class="col-sm-9">
+
+                  <input [(ngModel)]="this.searchCriteriaContractStationDTO.ContractStationDTO.ContactPerson.FirstName" type="text" placeholder="{{'first' | translate}}" class="form-control col-md-4 cs-input">
+                  <input [(ngModel)]="this.searchCriteriaContractStationDTO.ContractStationDTO.ContactPerson.SecondName" type="text" placeholder="{{'middle'| translate}}" class="form-control col-md-4 cs-input">
+                  <input [(ngModel)]="this.searchCriteriaContractStationDTO.ContractStationDTO.ContactPerson.LastName" type="text" placeholder="{{'family'| translate}}" class="form-control col-md-4 cs-input">
+
+                </div>
+              </div>
+
+
+
+
+
+
+            </div>
+            <div class="row form-row">
+              <div class="col-md-4">
+                <label class="col-sm-3 title">{{'Position' | translate}} </label>
+                <div class="col-sm-9">
+
+                  <input [(ngModel)]="searchCriteriaContractStationDTO.ContractStationDTO.ContactPerson.Position"  type="text" placeholder="{{'Position'| translate}}" class="form-control ">
+
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <label class="col-sm-3 title">{{'IDtype' | translate}} </label>
+                <div class="col-sm-9">
+
+            <select class=" form-control" [(ngModel)]="searchCriteriaContractStationDTO.ContractStationDTO.ContactPerson.PersonalIDType"  (change)="onPersonalIDTypeChanged($event)">
+              <option value="null" selected>{{'Select' | translate}}</option>
+              <option *ngFor="let item of PersonalIDTypes; let i = index" value="{{item.Id}}">{{item.Name}}
+              </option>
+            </select>
+
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <label class="col-sm-3 title">{{'Mobile' | translate}} </label>
+                <div class="col-sm-9">
+
+                  <input [(ngModel)]="searchCriteriaContractStationDTO.ContractStationDTO.ContactPerson.Mobile"  type="tel" placeholder="{{'Enter Mobile'| translate}}" class="form-control ">
+
+                </div>
+              </div>
+            </div>
+            <div class="row form-row">
+              <div class="col-md-4">
+                <label class="col-sm-3 title">{{'Email' | translate}} </label>
+                <div class="col-sm-9">
+                  <input [(ngModel)]="searchCriteriaContractStationDTO.ContractStationDTO.ContactPerson.Email"  type="email" placeholder="{{'Email'| translate}}" class="form-control ">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label class="col-sm-3 title">{{'IDNumber' | translate}} </label>
+                <div class="col-sm-9">
+                  <input [(ngModel)]="searchCriteriaContractStationDTO.ContractStationDTO.ContactPerson.PersonalIDNumber"  type="text" placeholder="{{'Enter ID'| translate}}" class="form-control ">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label class="col-sm-3 title">{{'Landline' | translate}} </label>
+                <div class="col-sm-9">
+                  <input [(ngModel)]="searchCriteriaContractStationDTO.ContractStationDTO.ContactPerson.LandlineNumber"  type="text" placeholder="{{'Enter landline phone'| translate}}" class="form-control ">
+                </div>
+              </div>
+            </div>
+
+            <div class="row form-row">
+                  <div class="col-md-4">
+                          <label class="col-sm-3 title">{{'Adress' | translate}} </label>
+                          <div class="col-sm-9">
+                            <input [(ngModel)]="searchCriteriaContractStationDTO.ContractStationDTO.ContactPerson.PersonAddressPostalCode"  type="text" placeholder="{{'Postal Code'|translate }}" class="form-control ">
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 pad-left-0">
+
+                              <div class="col-sm-12">
+                                <input [(ngModel)]="searchCriteriaContractStationDTO.ContractStationDTO.ContactPerson.PersonAddress"  type="text" placeholder="{{'Enter building, street , area name' | translate}}" class="form-control ">
+                              </div>
+                            </div>
+            </div>
+          </div>
+         
+        </div>
+       <div class="row">
+         <div class="col-6 p-0  ">
+        
+         </div>
+
+         <div class="col-6 text-right">
+          <button class="btn btn-default  ml-4 mr-4  "  (click)="Clear()">{{ 'Clear'| translate }}</button>
+          <!-- <button class="btn btn-danger margin-5 pull-right" (click)="Search()">{{ 'Search' | translate }}</button> -->
+          <button class="btn btn-danger  ml-4 mr-4  " (click)="Save()">{{ 'Save' | translate }}</button>
+
+         </div>
+       </div>
+
+      <!-- Table -->
+
+        <!-- fixed header  -->
+        <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row w-100 mt-3' ">
+              <div class="col-md-12 scroll-x-table list-body">
+                <table class="table   table-striped scrollable-table">
+                  <thead>
+                    <tr>
+                      <th class="wid150">{{'stationName' | translate}}</th>
+                      <th class="wid100">{{'StationCode' | translate}} </th>
+                      <th class="wid200">{{'ContactPersonName' | translate}}</th>
+                      <th class="wid100">{{'Mobile' | translate}}</th>
+                      <th class="wid100">{{'landline' | translate}} </th>
+                      <th class="wid150">{{'Email' | translate}} </th>
+                      <th class="wid50"></th>
+                      <th class="wid50"> </th>
+
+                    </tr>
+                  </thead>
+                  <tbody [class]="advancedDiv ? ' mini' : ' '">
+                    <tr class="text-center d-block p-2 font-4" *ngIf="!StationListResult.Result || StationListResult.Result.length < 1 " >{{'NoDataFound' | translate}}</tr>
+                    <tr *ngFor="let station of StationListResult.Result">
+                      <td class="wid150"> {{station.stationName}} </td>
+                      <td class="wid100">  {{station.stationCode}} </td>
+                      <td class="wid200">{{station.FullName}} </td>
+                      <td class="wid100">
+                        {{station.Mobile}}
+                      </td>
+                      <td class="wid100">
+                        {{station.LandlineNumber}}
+                      </td>
+                      <td class="wid150">
+                       {{station.Email}}
+
+                      </td>
+
+
+                      <td class="wid50 text-center">
+                              <i class="glyphicon glyphicon-pencil" (click)="edit(station)"  ></i>
+                      </td>
+                      <td class="wid50 text-center">
+
+                              <i class="glyphicon glyphicon-trash" (click)="delete(station)" ></i>
+                      </td>
+
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+
+
+            </div>
+            <app-pagination-component [ItemsCount]='StationListResult.TotalCount'
+            [(PageSize)]="this.searchCriteriaContractStationDTO.PageFilter.PageSize"
+            [pageIndex]="this.searchCriteriaContractStationDTO.PageFilter.PageIndex" (PageSizeChange)="onPageSizeChanged($event)"
+            (pageNavigated)="onPageIndexChanged($event)">
+          </app-pagination-component>
+            </div>
+
+    <div class="col-md-12 mrg-top-10">
+        <button class="btn btn-default margin-5 pull-right" (click)="close()" >{{ 'close'| translate }}</button>
+        <button class="btn btn-danger margin-5 pull-right" (click)="nextBtn()" >{{ 'next' | translate }}</button>
+        <button class="btn btn-default margin-5 pull-right" (click)="backBtn()" >{{ 'back'| translate }}</button>
+
+  </div>

@@ -1,0 +1,159 @@
+<div class="container-fluid main-div bg-light">
+  <div class="row">
+    <div class="col-md-6 padding-10">
+      <span class="page-title">{{ "Staff" | translate }}</span>
+      <span class="page-title"><i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title currentpage">{{
+        "StaffRolesList" | translate
+      }}</span>
+    </div>
+
+    <div class="col-md-6">
+      <a
+        routerLink="/tms/controlpanel/role-create"
+        title="  {{ 'NewRole' | translate }}">
+        <i class="glyphicon glyphicon-plus-sign margin-5 pull-right"></i>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="inner-div">
+  <!-- fixed header  -->
+  <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row'">
+    <div class="col-md-12 scroll-x-table list-body">
+      <!--#region  table loading ********************************************** -->
+      <div>
+        <div class="uil-ring-css table-loader" style="transform: scale(0.6)">
+          <div></div>
+        </div>
+      </div>
+      <!--#endregion  table loading -->
+      <h5>{{ "customerCreatedStaffRoles" | translate }}</h5>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th class="wid100">{{ "Name" | translate }}</th>
+            <th class="wid130">{{ "Category" | translate }}</th>
+            <th class="wid130">{{ "Description" | translate }}</th>
+
+            <th class="wid100"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let staff of staffRoleList">
+            <td><a (click)="customRoute('controlpanel/role-create',staff.ID)">{{staff.Name}}</a></td>
+            <td>{{staff.Category}}</td>
+            <td>{{staff.Description}}</td>
+            <td class="wid130">
+              <button class="btn btn-link" (click)="customRoute('controlpanel/role-create',staff.ID)">
+                <i class="fas fa-pen"></i>
+              </button>
+            </td>
+          </tr>
+          <!--<tr>
+            <td class="wid100">Full Control Admin</td>
+            <td class="wid130">Manager</td>
+            <td class="wid130">Super Admin</td>
+
+            <td class="wid130">
+              <button class="btn btn-link" (click)="editRoleItem(item.Id)">
+                <i class="fas fa-pen"></i>
+              </button>
+            </td>
+            <td class="wid130">
+              <button class="btn btn-link" (click)="deleteRoleItem(item.Id)">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </td>
+          </tr>-->
+          <!-- <tr class="text-center p-2 font-4" *ngIf="!searchResult.Result">
+    <td colspan="13">
+      {{ 'NoDataFound' | translate }}
+    </td>
+  </tr> -->
+          <!-- <tr *ngFor="let item of searchResult.Result; let i = index">
+    <td class="wid50"><input type="checkbox" name="" id="" /></td>
+    <td class="wid50"></td>
+    <td class="wid130">{{ item.StaffCode }}</td>
+    <td class="wid100">{{ item.StaffName }}</td>
+    <td class="wid130">{{ item.Allocation }}</td>
+    <td class="wid130">{{ item.StaffRole }}</td>
+
+    <td class="wid100">
+      <button class="btn btn-link">
+        <i class="fas fa-calendar-alt"></i>
+      </button>
+    </td>
+    <td class="wid130">
+      <button class="btn btn-link" (click)="editStaffItem(item.Id)">
+        <i class="fas fa-pen"></i>
+      </button>
+    </td>
+    <td class="wid130">
+      <button class="btn btn-link" (click)="deleteStaffItem(item.Id)">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    </td>
+  </tr> -->
+        </tbody>
+      </table>
+
+      <hr />
+
+      <h5>{{ "systemPredefinedStaffRoles" | translate }}</h5>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th class="wid100">{{ "Name" | translate }}</th>
+            <th class="wid130">{{ "Category" | translate }}</th>
+            <th class="wid130">{{ "Description" | translate }}</th>
+
+            <th class="wid100"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let staff of staffSecondRoleList">
+            <td>{{staff.Name}}</td>
+            <td>{{staff.Category}}</td>
+            <td>{{staff.Description}}</td>
+            <td class="wid130">
+              <button class="btn btn-link" (click)="customRoute('controlpanel/role-create',staff.ID)">
+                <i class="fas fa-pen"></i>
+              </button>
+            </td>
+          </tr>
+          <!-- <tr class="text-center p-2 font-4" *ngIf="!searchResult.Result">
+    <td colspan="13">
+      {{ 'NoDataFound' | translate }}
+    </td>
+  </tr> -->
+          <!-- <tr *ngFor="let item of searchResult.Result; let i = index">
+    <td class="wid50"><input type="checkbox" name="" id="" /></td>
+    <td class="wid50"></td>
+    <td class="wid130">{{ item.StaffCode }}</td>
+    <td class="wid100">{{ item.StaffName }}</td>
+    <td class="wid130">{{ item.Allocation }}</td>
+    <td class="wid130">{{ item.StaffRole }}</td>
+
+    <td class="wid100">
+      <button class="btn btn-link">
+        <i class="fas fa-calendar-alt"></i>
+      </button>
+    </td>
+    <td class="wid130">
+      <button class="btn btn-link" (click)="editStaffItem(item.Id)">
+        <i class="fas fa-pen"></i>
+      </button>
+    </td>
+    <td class="wid130">
+      <button class="btn btn-link" (click)="deleteStaffItem(item.Id)">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    </td>
+  </tr> -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

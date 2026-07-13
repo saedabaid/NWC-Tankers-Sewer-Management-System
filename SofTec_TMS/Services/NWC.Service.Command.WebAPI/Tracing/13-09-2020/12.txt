@@ -1,0 +1,86 @@
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:13/09/2020 12:37:33 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:13/09/2020 12:37:33 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 7861601621 - TransporterID 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransportrStatus: 0 Time:13/09/2020 12:37:34 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:13/09/2020 12:37:34 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:13/09/2020 12:37:34 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 7861601621 - TransporterID: 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransporterStatus: 11 Time:13/09/2020 12:37:35 م
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 7861601621 - TransporterID: 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransporterStatus: 11 Time:13/09/2020 12:37:35 PM
+
+Start Inserting Driver SMS: OrderNo:7861601621, VehicleId:4723c36e-f122-4b36-a24f-52f231afa4e5, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:13/09/2020 12:37:35 PM
+
+SMS: تم تخصيص رقم الطلب 7861601621 ويمكن التواصل على جوال العميل 032453245345 موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:13/09/2020 12:37:35 PM
+
+Start Inserting Customer SMS: OrderNo:7861601621, VehicleId:4723c36e-f122-4b36-a24f-52f231afa4e5, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:13/09/2020 12:37:36 PM
+
+SMS: عميلنا العزيز: نفيدكم بتخصيص ناقلة مياه لطلبكم رقم 7861601621 Time:13/09/2020 12:37:36 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"7861601621","cisDivision":19,"orderStatus":4,"updateDateTime":"13-09-2020 12:37:36","parameters":[{"parameterName":"TMSID","parameterValue":"7861601621"},{"parameterName":"COMMENT","parameterValue":""}]} Time:13/09/2020 12:37:36 PM
+
+----------------------------------------AssignWorkOrder - Denormalizer - End---------------------------------------- Time:13/09/2020 12:37:57 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:13/09/2020 12:38:35 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"7861601621","cisDivision":19,"orderStatus":1,"updateDateTime":"13-09-2020 12:38:37","parameters":[{"parameterName":"TMSID","parameterValue":"7861601621"},{"parameterName":"COMMENT","parameterValue":""}]} Time:13/09/2020 12:38:37 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:13/09/2020 12:42:13 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:13/09/2020 12:42:42 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:13/09/2020 12:42:42 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 7861601621 - TransporterID 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransportrStatus: 0 Time:13/09/2020 12:42:43 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:13/09/2020 12:42:43 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:13/09/2020 12:42:43 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 7861601621 - TransporterID: 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransporterStatus: 11 Time:13/09/2020 12:42:44 م
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 7861601621 - TransporterID: 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransporterStatus: 11 Time:13/09/2020 12:42:44 PM
+
+Start Inserting Driver SMS: OrderNo:7861601621, VehicleId:4723c36e-f122-4b36-a24f-52f231afa4e5, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:13/09/2020 12:42:44 PM
+
+SMS: تم تخصيص رقم الطلب 7861601621 ويمكن التواصل على جوال العميل 032453245345 موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:13/09/2020 12:42:44 PM
+
+Start Inserting Customer SMS: OrderNo:7861601621, VehicleId:4723c36e-f122-4b36-a24f-52f231afa4e5, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:13/09/2020 12:42:45 PM
+
+SMS: عميلنا العزيز: نفيدكم بتخصيص ناقلة مياه لطلبكم رقم 7861601621 Time:13/09/2020 12:42:45 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"7861601621","cisDivision":19,"orderStatus":4,"updateDateTime":"13-09-2020 12:42:45","parameters":[{"parameterName":"TMSID","parameterValue":"7861601621"},{"parameterName":"COMMENT","parameterValue":""}]} Time:13/09/2020 12:42:45 PM
+
+----------------------------------------AssignWorkOrder - Denormalizer - End---------------------------------------- Time:13/09/2020 12:43:06 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:13/09/2020 12:45:05 PM
+
+Autentication by Token UserName: nwc, UserId: 76c0be8e-d6c1-43ec-922f-81d5c6c32448, StaffId: 4f7227e1-2b2a-474a-8d51-b0c5b166ee60 Time:13/09/2020 12:46:30 PM
+
+----------------------------------------AssignWorkOrder - WorkOrderService - Start---------------------------------------- Time:13/09/2020 12:46:30 م
+
+AssignWorkOrder - Event Assign Inserted Successfully - Order Number: 7861601621 - TransporterID 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransportrStatus: 0 Time:13/09/2020 12:46:30 م
+
+----------------------------------------AssignWorkOrder - WorkOrderService - End---------------------------------------- Time:13/09/2020 12:46:30 م
+
+----------------------------------------AssignWorkOrder - Denormalizer - Start---------------------------------------- Time:13/09/2020 12:46:31 PM
+
+AssignWorkOrder - Vehicle Denormalizer - Assign Successfully - OrderNumber: 7861601621 - TransporterID: 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransporterStatus: 11 Time:13/09/2020 12:46:31 م
+
+AssignWorkOrder - WorkOrder Denormalizer - Assign Successfully - OrderNumber: 7861601621 - TransporterID: 4723c36e-f122-4b36-a24f-52f231afa4e5 - TransporterStatus: 11 Time:13/09/2020 12:46:31 PM
+
+Start Inserting Driver SMS: OrderNo:7861601621, VehicleId:4723c36e-f122-4b36-a24f-52f231afa4e5, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:13/09/2020 12:46:31 PM
+
+SMS: تم تخصيص رقم الطلب 7861601621 ويمكن التواصل على جوال العميل 032453245345 موقع العميل https://www.google.com/maps/search/?api=1&query=, Time:13/09/2020 12:46:31 PM
+
+Start Inserting Customer SMS: OrderNo:7861601621, VehicleId:4723c36e-f122-4b36-a24f-52f231afa4e5, DriverId:43a6211c-97c2-4457-85ac-b546e74da630, CustomerLocationID:61390 Time:13/09/2020 12:46:31 PM
+
+SMS: عميلنا العزيز: نفيدكم بتخصيص ناقلة مياه لطلبكم رقم 7861601621 Time:13/09/2020 12:46:32 PM
+
+Calling update service request: {"transactionId":null,"sourceApplication":0,"orderNumber":"7861601621","cisDivision":19,"orderStatus":4,"updateDateTime":"13-09-2020 12:46:32","parameters":[{"parameterName":"TMSID","parameterValue":"7861601621"},{"parameterName":"COMMENT","parameterValue":""}]} Time:13/09/2020 12:46:32 PM
+
+----------------------------------------AssignWorkOrder - Denormalizer - End---------------------------------------- Time:13/09/2020 12:46:53 PM
+

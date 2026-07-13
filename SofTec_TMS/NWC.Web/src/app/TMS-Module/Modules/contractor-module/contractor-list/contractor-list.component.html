@@ -1,0 +1,187 @@
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-md-6 padding-10">
+      <span class="page-title">{{ "TMS" | translate }}</span>
+      <span class="page-title"> <i class="fa fa-chevron-right"></i></span>
+
+      <span class="page-title currentpage">{{ "contractor" | translate }}</span>
+    </div>
+
+    <div class="col-md-6">
+      <!--  -->
+      <a
+        *ngIf="
+          pagePermission == 'Full Control' || pagePermission == 'Add and Edit'
+        "
+        title="{{ 'NewContractor' | translate }}"
+        routerLink="/tms/contractor/new"
+      >
+        <i class="glyphicon glyphicon-plus-sign margin-5 pull-right"></i>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="inner-div">
+  <div class="row form-row">
+    <div class="col-md-12 custome-dropdown">
+      <label class="col-md-2 title wid-6"
+        >{{ "contractor" | translate }}
+      </label>
+
+      <search-component
+        class="col-md-3"
+        (searchKeyword)="onContractorNameDDLChanged($event)"
+        [isTypeahead]="true"
+        [typeaheadFunction]="searchContractorsNames.bind(this)"
+        [field]="'Name'"
+        [(_value)]="SearchCriteria.FilterModel.SearchKeyword"
+      >
+      </search-component>
+
+      <a class="margin-5 link-route" *ngIf="false" (click)="showAdvanced()">{{
+        advancedDiv
+          ? ("HideAdvancedSearch" | translate)
+          : ("AdvancedSearch" | translate)
+      }}</a>
+
+      <button
+        class="btn btn-default margin-5 pull-right"
+        (click)="clearSearch()"
+      >
+        {{ "Clear" | translate }}
+      </button>
+      <button
+        class="btn btn-danger margin-5 pull-right"
+        (click)="onSearchSubmit()"
+      >
+        {{ "Search" | translate }}
+      </button>
+    </div>
+  </div>
+  <!-- Start Advanced Search box -->
+  <div [hidden]="!advancedDiv" id="advanced-search">
+    <!--row 1 -->
+    <div class="row form-row">
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{ "commercialid" | translate }} </label>
+        <div class="col-sm-8">
+          <select-menu> </select-menu>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{ "TaxNumber" | translate }} </label>
+        <div class="col-sm-8">
+          <select-menu> </select-menu>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{ "moi" | translate }}</label>
+        <div class="col-sm-8">
+          <select-menu> </select-menu>
+        </div>
+      </div>
+    </div>
+    <!-- row 2-->
+    <div class="row form-row">
+      <!-- area -->
+      <div class="col-md-4">
+        <label class="col-sm-4 title">{{
+          "ContactPersonName" | translate
+        }}</label>
+        <div class="col-sm-8">
+          <select-menu> </select-menu>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Advanced Search box -->
+
+  <!-- table section -->
+  <!-- fixed header  -->
+  <div [class]="advancedDiv ? 'table-advans' : 'table-heigh' + ' row'">
+    <div class="col-md-12 scroll-x-table list-body">
+      <!--#region  table loading ********************************************** -->
+      <div [ngClass]="tableLoading ? 'container-gif show' : 'container-gif'">
+        <div class="uil-ring-css table-loader" style="transform: scale(0.6);">
+          <div></div>
+        </div>
+      </div>
+      <!--#endregion  table loading -->
+
+      <table class="table table-striped scrollable-table">
+        <thead>
+          <tr>
+            <th class="wid200">{{ "contractorName" | translate }}</th>
+            <th class="wid150">{{ "code" | translate }}</th>
+            <th class="wid200">{{ "commercialid" | translate }}</th>
+            <th class="wid150">{{ "moi" | translate }}</th>
+            <th class="wid150">{{ "TaxNumber" | translate }}</th>
+            <th class="wid200">{{ "Contactperson" | translate }}</th>
+            <th class="wid100">{{ "blacklisted" | translate }}</th>
+            <th class="wid100"></th>
+            <th class="wid50"></th>
+          </tr>
+        </thead>
+        <tbody [class]="advancedDiv ? ' mini' : ' '">
+          <tr
+            class="text-center d-block p-2 font-4"
+            *ngIf="!searchResult.Result"
+          >
+            {{
+              "NoDataFound" | translate
+            }}
+          </tr>
+          <tr *ngFor="let item of searchResult.Result; let i = index">
+            <td class="wid200">{{ item.ContractorFullName }}</td>
+            <td class="wid150">{{ item.Code }}</td>
+            <td class="wid200">{{ item.CommercialIDNumber }}</td>
+            <td class="wid150">{{ item.MOI }}</td>
+            <td class="wid150">{{ item.TaxNumber }}</td>
+            <td class="wid200">{{ item.FullName }}</td>
+            <td class="wid100">
+              <a
+                (click)="AddRemoveBlackListed(item)"
+                *ngIf="pagePermission == 'Full Control'"
+                class="btn-link"
+              >
+                <span class="page-title">{{
+                  (item.IsBlackListed ? "Yes" : "No") | translate
+                }}</span>
+              </a>
+            </td>
+            <td class="wid100">
+              <a
+                (click)="ActivateDeactivateContractor(item)"
+                *ngIf="pagePermission == 'Full Control'"
+                class="btn-link"
+              >
+                <span class="page-title">{{
+                  (item.IsActive ? "Deactivate" : "Activate") | translate
+                }}</span>
+              </a>
+            </td>
+
+            <td class="wid50">
+              <a
+                title="  {{ 'Edit' | translate }}"
+                routerLink="/tms/contractor/edit/{{ item.ID }}"
+              >
+                <i class="glyphicon glyphicon-pencil margin-5 pull-right"></i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <app-pagination-component
+    [ItemsCount]="searchResult.TotalCount"
+    [(PageSize)]="this.SearchCriteria.FilterModel.PageFilter.PageSize"
+    [pageIndex]="this.SearchCriteria.FilterModel.PageFilter.PageIndex"
+    (PageSizeChange)="onPageSizeChanged($event)"
+    (pageNavigated)="onPageIndexChanged($event)"
+  >
+  </app-pagination-component>
+</div>
